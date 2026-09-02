@@ -1,0 +1,52 @@
+name: Evaluate Predictions
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/predictions/**"
+      - "src/evaluation/**"
+      - "src/market_data/**"
+      - "config/instruments.yaml"
+      - "requirements.txt"
+      - ".github/workflows/evaluate-predictions.yml"
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Evaluate all predictions against Yahoo
+        run: python -m src.evaluation.evaluate_all
+
+      - name: Commit evaluation results
+        run: |
+          if git diff --quiet -- data/evaluations; then
+            echo "No evaluation changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/evaluations
+          git commit -m "Update Yahoo prediction evaluations"
+          git push
