@@ -68,11 +68,18 @@ def _window(frame: pd.DataFrame, start: datetime, end: datetime, include_start: 
 def _baseline_range_pct(frame: pd.DataFrame, decision_time: datetime, minutes: int, ref_price: float) -> float | None:
     start = decision_time - timedelta(minutes=minutes)
     pre = frame[(frame.index >= pd.Timestamp(start)) & (frame.index < pd.Timestamp(decision_time))]
-    if pre.empty:
-        # Closed-market fallback: use the most recent traded bars rather than an
-        # empty clock-time window. This keeps MIXED/VOLATILITY scoring usable.
-        pre = frame[frame.index < pd.Timestamp(decision_time)].tail(max(1, minutes))
-    return _range_pct(pre, ref_price)
+    baseline = _range_pct(pre, ref_price)
+
+    # Around closed markets a clock-time window can contain no bars or only a
+    # single stale bar, producing a zero range. Fall back to recent traded bars
+    # so MIXED/VOLATILITY are not judged against a meaningless zero envelope.
+    if len(pre) < 2 or baseline is None or baseline <= 0:
+        fallback = frame[frame.index < pd.Timestamp(decision_time)].tail(max(60, minutes))
+        baseline = _range_pct(fallback, ref_price)
+
+    if baseline is None or baseline <= 0:
+        return None
+    return baseline
 
 
 def _mfe_mae(frame: pd.DataFrame, ref_time: datetime, target_time: datetime, ref_price: float, predicted: str) -> tuple[float | None, float | None]:
@@ -107,7 +114,7 @@ def _score_non_directional(predicted: str, change_pct: float, post_range_pct: fl
         }
 
     if predicted == "MIXED":
-        if baseline_range_pct is None:
+        if baseline_range_pct is None or baseline_range_pct <= 0:
             return {
                 "score_type": "mixed_neutral",
                 "correct": None,
