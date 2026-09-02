@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-02T21:07:44.946808+00:00",
-  "profile_version": "1.3.0",
+  "generated_at_utc": "2026-09-02T21:10:50.301850+00:00",
+  "profile_version": "1.3.1",
   "purpose": "Compact evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
   "guardrails": {
     "minimum_sample_actionable": 30,
@@ -15,8 +15,9 @@
       "alpha": 2.0,
       "beta": 2.0
     },
+    "event_independence_unit": "event_id; prediction_id only as fallback",
     "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT segments are omitted from this compact profile and cause no change.",
-    "anti_overfit": "Both observation count and independent prediction/event count must pass thresholds. Correlated instruments from one news event cannot by themselves make a segment actionable.",
+    "anti_overfit": "Both observation count and independent clustered event count must pass thresholds. Correlated instruments or multiple stories from one event cannot by themselves make a segment actionable.",
     "anti_leakage": "Market context and evaluation anchors use only information available at or before the prediction decision time."
   },
   "audit": {
