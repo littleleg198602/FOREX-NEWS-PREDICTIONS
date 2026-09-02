@@ -5,14 +5,26 @@ from datetime import datetime, timezone
 import json
 import math
 
-from src.config import ROOT
+from src.config import ROOT, load_yaml
 from src.market_data.context_snapshot import context_signature
 
-HORIZONS = ("15m", "1h", "4h")
-MIN_SAMPLE_ACTIONABLE = 20
-MIN_SAMPLE_WARNING = 8
+HORIZONS = ("15m", "1h", "4h", "next_session")
 PRIOR_ALPHA = 2.0
 PRIOR_BETA = 2.0
+
+
+def _learning_config() -> dict:
+    return load_yaml("config/market_context.yaml").get("learning", {})
+
+
+def _thresholds() -> tuple[int, int, int, float, float]:
+    cfg = _learning_config()
+    early = int(cfg.get("minimum_sample_early_signal", 10))
+    actionable = int(cfg.get("minimum_sample_actionable", 30))
+    strong = int(cfg.get("strong_sample", 75))
+    good = float(cfg.get("actionable_min_hit_rate_pct", 58.0))
+    bad = float(cfg.get("actionable_max_hit_rate_pct", 42.0))
+    return early, actionable, strong, good, bad
 
 
 def _confidence_bucket(value: int | float | None) -> str:
@@ -52,6 +64,7 @@ def _add(counter: dict, correct: bool, change_pct: float) -> None:
 def _finalize(counter: dict) -> dict:
     n = counter["n"]
     correct = counter["correct"]
+    early, actionable, strong, _, _ = _thresholds()
     if n == 0:
         return {
             "n": 0,
@@ -68,12 +81,12 @@ def _finalize(counter: dict) -> dict:
     bayes = (correct + PRIOR_ALPHA) / (n + PRIOR_ALPHA + PRIOR_BETA)
     wilson = _wilson_lower_bound(correct, n)
 
-    if n >= MIN_SAMPLE_ACTIONABLE:
+    if n >= actionable:
         sample_status = "ACTIONABLE"
-        learning_weight = min(1.0, n / 50.0)
-    elif n >= MIN_SAMPLE_WARNING:
+        learning_weight = min(1.0, n / max(strong, 1))
+    elif n >= early:
         sample_status = "EARLY_SIGNAL"
-        learning_weight = min(0.35, n / 50.0)
+        learning_weight = min(0.35, n / max(strong, 1))
     else:
         sample_status = "INSUFFICIENT"
         learning_weight = 0.0
@@ -93,14 +106,18 @@ def _finalize(counter: dict) -> dict:
 def _recommendation(stats: dict) -> str:
     if stats["sample_status"] == "INSUFFICIENT":
         return "NO_CHANGE"
-    rate = stats["bayesian_hit_rate_pct"]
-    lower = stats["wilson_lower_95_pct"]
-    if stats["sample_status"] == "ACTIONABLE" and lower is not None and lower >= 55.0:
-        return "BOOST_CONFIDENCE"
-    if stats["sample_status"] == "ACTIONABLE" and rate is not None and rate < 45.0:
-        return "REDUCE_OR_AVOID"
     if stats["sample_status"] == "EARLY_SIGNAL":
         return "WATCH_ONLY"
+    if stats["sample_status"] != "ACTIONABLE":
+        return "KEEP_NEUTRAL"
+
+    _, _, _, good, bad = _thresholds()
+    rate = stats["bayesian_hit_rate_pct"]
+    lower = stats["wilson_lower_95_pct"]
+    if lower is not None and lower >= good:
+        return "BOOST_CONFIDENCE"
+    if rate is not None and rate <= bad:
+        return "REDUCE_OR_AVOID"
     return "KEEP_NEUTRAL"
 
 
@@ -135,6 +152,7 @@ def main() -> int:
         "evaluation_files": 0,
         "eligible_evaluation_files": 0,
         "excluded_ineligible": 0,
+        "excluded_examples": 0,
         "scored_items": 0,
         "scored_items_with_context": 0,
         "scored_items_without_context": 0,
@@ -153,6 +171,10 @@ def main() -> int:
         if not prediction:
             continue
 
+        if bool(prediction.get("is_example", False)) or bool(evaluation.get("is_example", False)):
+            audit["excluded_examples"] += 1
+            continue
+
         eligible = bool(evaluation.get("eligible_for_hit_rate", prediction.get("eligible_for_hit_rate", True)))
         if not eligible or bool(prediction.get("backfilled", False)):
             audit["excluded_ineligible"] += 1
@@ -166,20 +188,21 @@ def main() -> int:
             if item.get("instrument")
         }
         market_context = evaluation.get("market_context") or prediction.get("market_context_at_prediction") or {}
-        regimes = market_context.get("regimes", {})
-        signature = context_signature(market_context) if market_context else "NO_CONTEXT"
+        all_regimes = market_context.get("regimes", {})
+        regimes = {name: regime for name, regime in all_regimes.items() if regime and regime != "UNKNOWN"}
+        signature = context_signature(market_context) if regimes else "NO_CONTEXT"
 
         for result in evaluation.get("results", []):
             instrument = result.get("instrument")
             pred_item = pred_by_instrument.get(instrument, {})
-            immediate = pred_item.get("immediate", {})
-            confidence_bucket = _confidence_bucket(immediate.get("confidence"))
 
             for horizon in HORIZONS:
                 scored = result.get("evaluations", {}).get(horizon, {})
                 if scored.get("status") != "DONE" or scored.get("correct") is None:
                     continue
 
+                confidence_source = pred_item.get("next_session", {}) if horizon == "next_session" else pred_item.get("immediate", {})
+                confidence_bucket = _confidence_bucket(confidence_source.get("confidence"))
                 correct = bool(scored["correct"])
                 change_pct = float(scored.get("change_pct", 0.0))
                 score_type = scored.get("score_type", "directional")
@@ -197,7 +220,6 @@ def main() -> int:
                     audit["scored_items_with_context"] += 1
                     _add(by_context_signature_horizon[(signature, horizon)], correct, change_pct)
                     for context_name, regime in regimes.items():
-                        context_key = f"{context_name}={regime}"
                         _add(by_context_horizon[(context_name, regime, horizon)], correct, change_pct)
                         _add(by_instrument_context_horizon[(instrument, context_name, regime, horizon)], correct, change_pct)
                         for category in categories:
@@ -221,17 +243,21 @@ def main() -> int:
             rows.append(row)
         return rows
 
+    early, actionable, strong, good, bad = _thresholds()
     profile = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "profile_version": "1.1.0",
+        "profile_version": "1.2.0",
         "purpose": "Evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
         "guardrails": {
-            "minimum_sample_actionable": MIN_SAMPLE_ACTIONABLE,
-            "minimum_sample_early_signal": MIN_SAMPLE_WARNING,
+            "minimum_sample_actionable": actionable,
+            "minimum_sample_early_signal": early,
+            "strong_sample": strong,
+            "actionable_min_hit_rate_pct": good,
+            "actionable_max_hit_rate_pct": bad,
             "bayesian_prior": {"alpha": PRIOR_ALPHA, "beta": PRIOR_BETA},
             "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT causes no change.",
             "anti_overfit": "Use learned evidence as one input, not as a deterministic direction override. New macro facts and market context remain primary.",
-            "anti_leakage": "Market context must contain only values known at or strictly before the prediction/event timestamp.",
+            "anti_leakage": "Market context and evaluation anchors use only information available at or before the prediction decision time.",
         },
         "audit": audit,
         "confidence_calibration": pack(by_confidence_horizon, ("confidence_bucket", "horizon")),
