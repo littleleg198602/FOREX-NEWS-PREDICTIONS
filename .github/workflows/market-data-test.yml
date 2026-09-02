@@ -1,0 +1,36 @@
+name: Market Data Test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/instruments.yaml"
+      - "src/market_data/**"
+      - "src/evaluation/**"
+      - "tests/**"
+      - "requirements.txt"
+      - ".github/workflows/market-data-test.yml"
+
+jobs:
+  market-data-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Test all Yahoo 1m symbols and E2E calculation
+        run: python -m src.market_data.smoke_test
