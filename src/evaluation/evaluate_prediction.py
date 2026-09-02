@@ -8,6 +8,7 @@ import sys
 import pandas as pd
 
 from src.config import ROOT
+from src.market_data.context_snapshot import fetch_pre_event_context
 from src.market_data.yahoo_provider import fetch_1m_window, last_complete_bar_before, first_bar_at_or_after
 
 VOLATILITY_RATIO_THRESHOLD = 1.25
@@ -141,6 +142,7 @@ def evaluate_one_instrument(prediction_id: str, event_time: datetime, item: dict
         "reference_price": ref.close,
         "reference_price_time_utc": ref.timestamp_utc,
         "predicted_immediate_direction": predicted_immediate,
+        "predicted_confidence": item.get("immediate", {}).get("confidence"),
         "evaluations": {},
     }
 
@@ -210,6 +212,14 @@ def evaluate_prediction(path: Path) -> dict:
     event_time = _parse_utc(event_time_value)
     prediction_id = prediction["prediction_id"]
 
+    stored_context = prediction.get("market_context_at_prediction")
+    if stored_context:
+        market_context = stored_context
+        context_origin = "captured_at_prediction"
+    else:
+        market_context = fetch_pre_event_context(event_time)
+        context_origin = "reconstructed_pre_event_from_yahoo"
+
     return {
         "prediction_id": prediction_id,
         "event_id": prediction.get("event_id"),
@@ -218,6 +228,8 @@ def evaluate_prediction(path: Path) -> dict:
         "model_version": prediction.get("model_version"),
         "backfilled": bool(prediction.get("backfilled", False)),
         "eligible_for_hit_rate": bool(prediction.get("eligible_for_hit_rate", True)),
+        "market_context_origin": context_origin,
+        "market_context": market_context,
         "results": [
             evaluate_one_instrument(prediction_id, event_time, item)
             for item in prediction.get("predictions", [])
