@@ -38,7 +38,16 @@ classification:
     - VOLATILITY
   threshold_mode: "instrument_volatility_based"
   fixed_thresholds_enabled: false
-  volatility_reference: "ATR_or_historical_realized_volatility"
+  volatility_reference: "pre_event_realized_range_same_horizon"
+  mixed_rule: "correct when absolute close change stays inside the pre-event same-horizon range"
+  volatility_rule: "correct when post-event range / pre-event same-horizon range >= 1.25"
+  volatility_ratio_threshold: 1.25
+  directional_hit_rate_scope:
+    - UP
+    - DOWN
+  non_directional_scores_reported_separately:
+    - MIXED
+    - VOLATILITY
 
 integrity:
   prediction_immutable_after_creation: true
