@@ -56,23 +56,25 @@ def _wilson_lower_bound(correct: int, n: int, z: float = 1.96) -> float | None:
 
 
 def _new_counter() -> dict:
-    return {"n": 0, "correct": 0, "sum_change_pct": 0.0, "prediction_ids": set()}
+    return {"n": 0, "correct": 0, "sum_change_pct": 0.0, "event_ids": set()}
 
 
-def _add(counter: dict, correct: bool, change_pct: float, prediction_id: str | None = None) -> None:
+def _add(counter: dict, correct: bool, change_pct: float, event_id: str | None = None) -> None:
     counter["n"] += 1
     counter["correct"] += int(bool(correct))
     counter["sum_change_pct"] += change_pct
-    if prediction_id is not None:
-        counter.setdefault("prediction_ids", set()).add(prediction_id)
+    if event_id is not None:
+        counter.setdefault("event_ids", set()).add(event_id)
 
 
 def _finalize(counter: dict) -> dict:
     n = counter["n"]
     correct = counter["correct"]
     t = _thresholds()
-    ids = counter.get("prediction_ids")
-    unique_events = len(ids) if ids is not None else n
+    ids = counter.get("event_ids")
+    # Unit-test/manual counters without IDs are treated as independent samples;
+    # production counters always receive the prediction's clustered event_id.
+    unique_events = len(ids) if ids is not None and len(ids) > 0 else n
 
     if n == 0:
         return {
@@ -200,6 +202,10 @@ def main() -> int:
             continue
         audit["eligible_evaluation_files"] += 1
 
+        # Multiple stories may belong to the same macro/geopolitical event.
+        # event_id is therefore the independence unit; prediction_id is only a
+        # fallback for records that predate event clustering.
+        learning_event_id = str(prediction.get("event_id") or prediction_id)
         categories = prediction.get("categories") or ["UNKNOWN"]
         pred_by_instrument = {
             item.get("instrument"): item
@@ -227,27 +233,27 @@ def main() -> int:
                 score_type = scored.get("score_type", "directional")
                 audit["scored_items"] += 1
 
-                _add(by_instrument_horizon[(instrument, horizon)], correct, change_pct, prediction_id)
-                _add(by_confidence_horizon[(confidence_bucket, horizon)], correct, change_pct, prediction_id)
-                _add(by_score_type_horizon[(score_type, horizon)], correct, change_pct, prediction_id)
+                _add(by_instrument_horizon[(instrument, horizon)], correct, change_pct, learning_event_id)
+                _add(by_confidence_horizon[(confidence_bucket, horizon)], correct, change_pct, learning_event_id)
+                _add(by_score_type_horizon[(score_type, horizon)], correct, change_pct, learning_event_id)
 
                 for category in categories:
-                    _add(by_category_horizon[(category, horizon)], correct, change_pct, prediction_id)
-                    _add(by_instrument_category_horizon[(instrument, category, horizon)], correct, change_pct, prediction_id)
+                    _add(by_category_horizon[(category, horizon)], correct, change_pct, learning_event_id)
+                    _add(by_instrument_category_horizon[(instrument, category, horizon)], correct, change_pct, learning_event_id)
 
                 if regimes:
                     audit["scored_items_with_context"] += 1
-                    _add(by_context_signature_horizon[(signature, horizon)], correct, change_pct, prediction_id)
+                    _add(by_context_signature_horizon[(signature, horizon)], correct, change_pct, learning_event_id)
                     for context_name, regime in regimes.items():
-                        _add(by_context_horizon[(context_name, regime, horizon)], correct, change_pct, prediction_id)
-                        _add(by_instrument_context_horizon[(instrument, context_name, regime, horizon)], correct, change_pct, prediction_id)
+                        _add(by_context_horizon[(context_name, regime, horizon)], correct, change_pct, learning_event_id)
+                        _add(by_instrument_context_horizon[(instrument, context_name, regime, horizon)], correct, change_pct, learning_event_id)
                         for category in categories:
-                            _add(by_category_context_horizon[(category, context_name, regime, horizon)], correct, change_pct, prediction_id)
+                            _add(by_category_context_horizon[(category, context_name, regime, horizon)], correct, change_pct, learning_event_id)
                             _add(
                                 by_instrument_category_context_horizon[(instrument, category, context_name, regime, horizon)],
                                 correct,
                                 change_pct,
-                                prediction_id,
+                                learning_event_id,
                             )
                 else:
                     audit["scored_items_without_context"] += 1
@@ -273,7 +279,7 @@ def main() -> int:
     t = _thresholds()
     profile = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "profile_version": "1.3.0",
+        "profile_version": "1.3.1",
         "purpose": "Compact evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
         "guardrails": {
             "minimum_sample_actionable": t["actionable"],
@@ -285,8 +291,9 @@ def main() -> int:
             "actionable_min_hit_rate_pct": t["good"],
             "actionable_max_hit_rate_pct": t["bad"],
             "bayesian_prior": {"alpha": PRIOR_ALPHA, "beta": PRIOR_BETA},
+            "event_independence_unit": "event_id; prediction_id only as fallback",
             "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT segments are omitted from this compact profile and cause no change.",
-            "anti_overfit": "Both observation count and independent prediction/event count must pass thresholds. Correlated instruments from one news event cannot by themselves make a segment actionable.",
+            "anti_overfit": "Both observation count and independent clustered event count must pass thresholds. Correlated instruments or multiple stories from one event cannot by themselves make a segment actionable.",
             "anti_leakage": "Market context and evaluation anchors use only information available at or before the prediction decision time.",
         },
         "audit": audit,
