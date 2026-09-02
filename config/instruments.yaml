@@ -4,17 +4,23 @@ version: 1
 # - yahoo = primary provider in the initial free phase
 # - twelvedata = optional secondary/paid provider
 # Provider symbols must be validated by integration tests before production use.
+# - XAUUSD/XAGUSD currently use Yahoo futures proxies because Yahoo does not
+#   reliably expose usable 1m spot symbols for XAUUSD/XAGUSD.
 
 instruments:
   XAUUSD:
     asset_class: metal
-    yahoo_symbol: "XAUUSD=X"
+    yahoo_symbol: "GC=F"
+    yahoo_proxy_for: "XAUUSD"
+    yahoo_proxy_type: "COMEX gold futures"
     twelvedata_symbol: "XAU/USD"
     timezone: "UTC"
 
   XAGUSD:
     asset_class: metal
-    yahoo_symbol: "XAGUSD=X"
+    yahoo_symbol: "SI=F"
+    yahoo_proxy_for: "XAGUSD"
+    yahoo_proxy_type: "COMEX silver futures"
     twelvedata_symbol: "XAG/USD"
     timezone: "UTC"
 
