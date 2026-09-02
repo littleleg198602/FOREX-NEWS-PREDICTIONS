@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: "pip"
@@ -30,7 +30,7 @@ jobs:
         run: python -m pip install --upgrade pip && pip install -r requirements.txt
 
       - name: Run unit tests
-        run: python -m unittest discover -s tests -v
+        run: python -m pytest tests -v
 
       - name: Test all Yahoo 1m symbols and E2E calculation
         run: python -m src.market_data.smoke_test
