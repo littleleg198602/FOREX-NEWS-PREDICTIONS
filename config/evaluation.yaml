@@ -1,0 +1,47 @@
+version: 1
+
+timezone_storage: UTC
+
+reference_price:
+  preferred_interval: "1m"
+  rule: "last_complete_bar_before_event"
+  allow_post_event_bar: false
+  fallback_to_coarser_interval: true
+  closed_market_behavior: "defer_to_first_relevant_traded_price"
+
+evaluation_horizons:
+  - id: "15m"
+    minutes: 15
+  - id: "1h"
+    minutes: 60
+  - id: "4h"
+    minutes: 240
+  - id: "next_session"
+    session_based: true
+
+providers:
+  primary: "yahoo"
+  secondary: "twelvedata"
+  require_source_on_every_price: true
+  do_not_mix_sources_within_one_evaluation_if_avoidable: true
+
+movement:
+  formula: "((evaluation_price - reference_price) / reference_price) * 100"
+  calculate_mfe: true
+  calculate_mae: true
+
+classification:
+  directions:
+    - UP
+    - DOWN
+    - MIXED
+    - VOLATILITY
+  threshold_mode: "instrument_volatility_based"
+  fixed_thresholds_enabled: false
+  volatility_reference: "ATR_or_historical_realized_volatility"
+
+integrity:
+  prediction_immutable_after_creation: true
+  evaluation_separate_from_prediction: true
+  preserve_failed_predictions: true
+  hindsight_edits_forbidden: true
