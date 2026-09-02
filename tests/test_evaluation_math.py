@@ -56,6 +56,13 @@ def test_mixed_scoring_outside_neutral_envelope():
     assert scored["correct"] is False
 
 
+def test_mixed_zero_baseline_is_unscored_not_false():
+    scored = _score_non_directional("MIXED", 0.1, 0.2, 0.0)
+    assert scored["score_type"] == "mixed_neutral"
+    assert scored["correct"] is None
+    assert scored["neutral_envelope_pct"] is None
+
+
 def test_evaluation_anchor_never_precedes_prediction_creation():
     event = datetime(2026, 9, 2, 13, 0, tzinfo=timezone.utc)
     anchor, created, latency = _decision_time(event, "2026-09-02T13:15:00Z")
