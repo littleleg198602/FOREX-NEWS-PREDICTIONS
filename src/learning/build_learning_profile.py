@@ -6,6 +6,7 @@ import json
 import math
 
 from src.config import ROOT
+from src.market_data.context_snapshot import context_signature
 
 HORIZONS = ("15m", "1h", "4h")
 MIN_SAMPLE_ACTIONABLE = 20
@@ -123,6 +124,11 @@ def main() -> int:
     by_category_horizon = defaultdict(_new_counter)
     by_confidence_horizon = defaultdict(_new_counter)
     by_score_type_horizon = defaultdict(_new_counter)
+    by_context_horizon = defaultdict(_new_counter)
+    by_context_signature_horizon = defaultdict(_new_counter)
+    by_instrument_context_horizon = defaultdict(_new_counter)
+    by_category_context_horizon = defaultdict(_new_counter)
+    by_instrument_category_context_horizon = defaultdict(_new_counter)
 
     audit = {
         "prediction_files": len(predictions),
@@ -130,6 +136,8 @@ def main() -> int:
         "eligible_evaluation_files": 0,
         "excluded_ineligible": 0,
         "scored_items": 0,
+        "scored_items_with_context": 0,
+        "scored_items_without_context": 0,
     }
 
     for path in evaluations_root.glob("*.json"):
@@ -157,6 +165,9 @@ def main() -> int:
             for item in prediction.get("predictions", [])
             if item.get("instrument")
         }
+        market_context = evaluation.get("market_context") or prediction.get("market_context_at_prediction") or {}
+        regimes = market_context.get("regimes", {})
+        signature = context_signature(market_context) if market_context else "NO_CONTEXT"
 
         for result in evaluation.get("results", []):
             instrument = result.get("instrument")
@@ -182,6 +193,23 @@ def main() -> int:
                     _add(by_category_horizon[(category, horizon)], correct, change_pct)
                     _add(by_instrument_category_horizon[(instrument, category, horizon)], correct, change_pct)
 
+                if regimes:
+                    audit["scored_items_with_context"] += 1
+                    _add(by_context_signature_horizon[(signature, horizon)], correct, change_pct)
+                    for context_name, regime in regimes.items():
+                        context_key = f"{context_name}={regime}"
+                        _add(by_context_horizon[(context_name, regime, horizon)], correct, change_pct)
+                        _add(by_instrument_context_horizon[(instrument, context_name, regime, horizon)], correct, change_pct)
+                        for category in categories:
+                            _add(by_category_context_horizon[(category, context_name, regime, horizon)], correct, change_pct)
+                            _add(
+                                by_instrument_category_context_horizon[(instrument, category, context_name, regime, horizon)],
+                                correct,
+                                change_pct,
+                            )
+                else:
+                    audit["scored_items_without_context"] += 1
+
     def pack(mapping: dict, key_names: tuple[str, ...]) -> list[dict]:
         rows = []
         for key, counter in sorted(mapping.items(), key=lambda x: tuple(str(v) for v in x[0])):
@@ -195,7 +223,7 @@ def main() -> int:
 
     profile = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "profile_version": "1.0.0",
+        "profile_version": "1.1.0",
         "purpose": "Evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
         "guardrails": {
             "minimum_sample_actionable": MIN_SAMPLE_ACTIONABLE,
@@ -203,15 +231,21 @@ def main() -> int:
             "bayesian_prior": {"alpha": PRIOR_ALPHA, "beta": PRIOR_BETA},
             "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT causes no change.",
             "anti_overfit": "Use learned evidence as one input, not as a deterministic direction override. New macro facts and market context remain primary.",
+            "anti_leakage": "Market context must contain only values known at or strictly before the prediction/event timestamp.",
         },
         "audit": audit,
         "confidence_calibration": pack(by_confidence_horizon, ("confidence_bucket", "horizon")),
         "by_instrument": pack(by_instrument_horizon, ("instrument", "horizon")),
         "by_category": pack(by_category_horizon, ("category", "horizon")),
         "by_score_type": pack(by_score_type_horizon, ("score_type", "horizon")),
-        "by_instrument_category": pack(
-            by_instrument_category_horizon,
-            ("instrument", "category", "horizon"),
+        "by_instrument_category": pack(by_instrument_category_horizon, ("instrument", "category", "horizon")),
+        "by_context": pack(by_context_horizon, ("context", "regime", "horizon")),
+        "by_context_signature": pack(by_context_signature_horizon, ("context_signature", "horizon")),
+        "by_instrument_context": pack(by_instrument_context_horizon, ("instrument", "context", "regime", "horizon")),
+        "by_category_context": pack(by_category_context_horizon, ("category", "context", "regime", "horizon")),
+        "by_instrument_category_context": pack(
+            by_instrument_category_context_horizon,
+            ("instrument", "category", "context", "regime", "horizon"),
         ),
     }
 
