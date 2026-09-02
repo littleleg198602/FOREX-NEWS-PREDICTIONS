@@ -1,0 +1,104 @@
+{
+  "prediction_id": "20260902_FF_ECB_PREVIEW_RATE_HIKE_001",
+  "event_id": "ECB_PREVIEW_RATE_HIKE_2026_09_03",
+  "created_at_utc": "2026-09-02T23:50:24Z",
+  "event_time_utc": null,
+  "published_at_utc": null,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories / Fundamental Analysis",
+  "source_url": "https://www.forexfactory.com/news/1416082-ecb-preview-how-to-hike-rates-without-creating",
+  "headline_original": "ECB preview: How to hike rates without creating more market turmoil",
+  "headline_cs": "Výhled ECB: Jak zvýšit sazby bez dalšího rozkolísání trhů",
+  "summary_cs": "Analýza ING uvádí, že podmínky se stále více skládají pro další zvýšení sazeb ECB na příštím zasedání. Eurozóna zatím navzdory válce na Blízkém východě vykazuje překvapivou odolnost, což zvyšuje prostor ECB k utažení politiky, ale zároveň roste riziko dalšího tlaku na dluhopisy a akciové valuace.",
+  "categories": ["CENTRAL_BANK", "RATES", "INFLATION"],
+  "region": ["EU"],
+  "model_version": "1.1.0",
+  "backfilled": true,
+  "eligible_for_hit_rate": false,
+  "eligibility_note": "Forex Factory showed only a relative publication time during this run; exact publication timestamp could not be reliably verified, therefore the item is excluded from normal hit-rate evaluation.",
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_adjustment": false,
+    "reason": "The latest learning profile contains no ACTIONABLE segments; no historical/context evidence was allowed to change confidence."
+  },
+  "market_context_at_prediction": {
+    "captured_for_prediction_time_utc": "2026-09-02T23:50:24Z",
+    "information_cutoff": "at_or_before_prediction",
+    "note": "Values are the freshest verifiable public observations available during the run. Where a reliable intrahour move was not available, short_term_regime is UNKNOWN rather than inferred.",
+    "series": {
+      "DXY": {
+        "value": 99.58,
+        "timestamp_utc": "2026-09-02T22:04:58Z",
+        "short_term_regime": "UNKNOWN",
+        "source": "Yahoo Finance DX-Y.NYB"
+      },
+      "US2Y": {
+        "value": 4.40,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "RISING",
+        "source": "Barron's / MarketWatch intraday reports, approximately 4.4%"
+      },
+      "US10Y": {
+        "value": 4.79,
+        "timestamp_utc": "2026-09-02T13:41:33Z",
+        "short_term_regime": "FLAT",
+        "source": "Yahoo Finance ^TNX"
+      },
+      "VIX": {
+        "value": 16.47,
+        "timestamp_utc": "2026-09-02T11:25:31Z",
+        "short_term_regime": "LOW",
+        "source": "Yahoo Finance ^VIX"
+      },
+      "WTI": {
+        "value": 90.02,
+        "timestamp_utc": "2026-09-02T14:31:27Z",
+        "short_term_regime": "FALLING",
+        "source": "Yahoo Finance CL=F"
+      },
+      "BRENT": {
+        "value": 94.31,
+        "timestamp_utc": "2026-09-02T13:04:30Z",
+        "short_term_regime": "FALLING",
+        "source": "Yahoo Finance BZ=F"
+      }
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 6},
+      "mechanism": "Vyšší pravděpodobnost dalšího zvýšení sazeb ECB zvyšuje diskontní sazbu a cenu financování, což je negativní pro valuace evropských akcií.",
+      "invalidation": "Výnosy eurozóny po otevření neklesnou/růst sazeb je již plně započten, nebo ECB komunikaci trh interpretuje jako důvěru v růst bez dalšího utažení nad očekávání."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 6},
+      "mechanism": "Německé akcie jsou citlivé na vyšší evropské výnosy a přísnější finanční podmínky; hawkish očekávání ECB proto vytváří tlak na valuace.",
+      "invalidation": "Pokles výnosů, výrazné zlepšení geopolitického sentimentu nebo jasný signál, že zvýšení sazeb je už plně v cenách."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Vyšší sazby ECB jsou protivětrem pro evropské akcie přes dražší financování a nižší současnou hodnotu budoucích zisků.",
+      "invalidation": "Pokud výnosy po zprávě nepokračují výše nebo převáží pozitivní růstový výhled."
+    },
+    {
+      "instrument": "SPA35",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Další utažení ECB může zhoršit finanční podmínky a zvýšit tlak na evropské rizikové aktivum, včetně španělských akcií.",
+      "invalidation": "Bankovní sektor pozitivně zareaguje na vyšší sazby natolik, že převáží negativní valuace širšího trhu."
+    },
+    {
+      "instrument": "UK100",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "ECB není přímou centrální bankou pro UK, ale evropské výnosy a risk sentiment mohou FTSE ovlivnit; vysoká váha komoditních firem však dopad tlumí.",
+      "invalidation": "Výrazný pohyb ropy, libry nebo globálního risk sentimentu převáží evropský sazební kanál."
+    }
+  ]
+}
