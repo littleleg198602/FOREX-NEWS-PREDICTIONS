@@ -1,0 +1,79 @@
+version: 1
+
+# Provider policy:
+# - yahoo = primary provider in the initial free phase
+# - twelvedata = optional secondary/paid provider
+# Provider symbols must be validated by integration tests before production use.
+
+instruments:
+  XAUUSD:
+    asset_class: metal
+    yahoo_symbol: "XAUUSD=X"
+    twelvedata_symbol: "XAU/USD"
+    timezone: "UTC"
+
+  XAGUSD:
+    asset_class: metal
+    yahoo_symbol: "XAGUSD=X"
+    twelvedata_symbol: "XAG/USD"
+    timezone: "UTC"
+
+  NI225:
+    asset_class: index
+    yahoo_symbol: "^N225"
+    twelvedata_symbol: null
+    timezone: "Asia/Tokyo"
+
+  AUS200:
+    asset_class: index
+    yahoo_symbol: "^AXJO"
+    twelvedata_symbol: null
+    timezone: "Australia/Sydney"
+
+  GDAXI:
+    asset_class: index
+    yahoo_symbol: "^GDAXI"
+    twelvedata_symbol: null
+    timezone: "Europe/Berlin"
+
+  FCHI40:
+    asset_class: index
+    yahoo_symbol: "^FCHI"
+    twelvedata_symbol: null
+    timezone: "Europe/Paris"
+
+  STOXX50:
+    asset_class: index
+    yahoo_symbol: "^STOXX50E"
+    twelvedata_symbol: null
+    timezone: "Europe/Berlin"
+
+  UK100:
+    asset_class: index
+    yahoo_symbol: "^FTSE"
+    twelvedata_symbol: null
+    timezone: "Europe/London"
+
+  SPA35:
+    asset_class: index
+    yahoo_symbol: "^IBEX"
+    twelvedata_symbol: null
+    timezone: "Europe/Madrid"
+
+  NDX:
+    asset_class: index
+    yahoo_symbol: "^NDX"
+    twelvedata_symbol: null
+    timezone: "America/New_York"
+
+  WS30:
+    asset_class: index
+    yahoo_symbol: "^DJI"
+    twelvedata_symbol: null
+    timezone: "America/New_York"
+
+  SP500:
+    asset_class: index
+    yahoo_symbol: "^GSPC"
+    twelvedata_symbol: null
+    timezone: "America/New_York"
