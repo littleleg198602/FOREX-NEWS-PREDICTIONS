@@ -17,14 +17,18 @@ def _learning_config() -> dict:
     return load_yaml("config/market_context.yaml").get("learning", {})
 
 
-def _thresholds() -> tuple[int, int, int, float, float]:
+def _thresholds() -> dict:
     cfg = _learning_config()
-    early = int(cfg.get("minimum_sample_early_signal", 10))
-    actionable = int(cfg.get("minimum_sample_actionable", 30))
-    strong = int(cfg.get("strong_sample", 75))
-    good = float(cfg.get("actionable_min_hit_rate_pct", 58.0))
-    bad = float(cfg.get("actionable_max_hit_rate_pct", 42.0))
-    return early, actionable, strong, good, bad
+    return {
+        "early": int(cfg.get("minimum_sample_early_signal", 10)),
+        "actionable": int(cfg.get("minimum_sample_actionable", 30)),
+        "strong": int(cfg.get("strong_sample", 75)),
+        "unique_early": int(cfg.get("minimum_unique_events_early_signal", 5)),
+        "unique_actionable": int(cfg.get("minimum_unique_events_actionable", 15)),
+        "unique_strong": int(cfg.get("strong_unique_events", 30)),
+        "good": float(cfg.get("actionable_min_hit_rate_pct", 58.0)),
+        "bad": float(cfg.get("actionable_max_hit_rate_pct", 42.0)),
+    }
 
 
 def _confidence_bucket(value: int | float | None) -> str:
@@ -52,22 +56,28 @@ def _wilson_lower_bound(correct: int, n: int, z: float = 1.96) -> float | None:
 
 
 def _new_counter() -> dict:
-    return {"n": 0, "correct": 0, "sum_change_pct": 0.0}
+    return {"n": 0, "correct": 0, "sum_change_pct": 0.0, "prediction_ids": set()}
 
 
-def _add(counter: dict, correct: bool, change_pct: float) -> None:
+def _add(counter: dict, correct: bool, change_pct: float, prediction_id: str | None = None) -> None:
     counter["n"] += 1
     counter["correct"] += int(bool(correct))
     counter["sum_change_pct"] += change_pct
+    if prediction_id is not None:
+        counter.setdefault("prediction_ids", set()).add(prediction_id)
 
 
 def _finalize(counter: dict) -> dict:
     n = counter["n"]
     correct = counter["correct"]
-    early, actionable, strong, _, _ = _thresholds()
+    t = _thresholds()
+    ids = counter.get("prediction_ids")
+    unique_events = len(ids) if ids is not None else n
+
     if n == 0:
         return {
             "n": 0,
+            "unique_events": 0,
             "correct": 0,
             "raw_hit_rate_pct": None,
             "bayesian_hit_rate_pct": None,
@@ -81,18 +91,27 @@ def _finalize(counter: dict) -> dict:
     bayes = (correct + PRIOR_ALPHA) / (n + PRIOR_ALPHA + PRIOR_BETA)
     wilson = _wilson_lower_bound(correct, n)
 
-    if n >= actionable:
+    if n >= t["actionable"] and unique_events >= t["unique_actionable"]:
         sample_status = "ACTIONABLE"
-        learning_weight = min(1.0, n / max(strong, 1))
-    elif n >= early:
+        learning_weight = min(
+            1.0,
+            n / max(t["strong"], 1),
+            unique_events / max(t["unique_strong"], 1),
+        )
+    elif n >= t["early"] and unique_events >= t["unique_early"]:
         sample_status = "EARLY_SIGNAL"
-        learning_weight = min(0.35, n / max(strong, 1))
+        learning_weight = min(
+            0.35,
+            n / max(t["strong"], 1),
+            unique_events / max(t["unique_strong"], 1),
+        )
     else:
         sample_status = "INSUFFICIENT"
         learning_weight = 0.0
 
     return {
         "n": n,
+        "unique_events": unique_events,
         "correct": correct,
         "raw_hit_rate_pct": round(raw * 100.0, 2),
         "bayesian_hit_rate_pct": round(bayes * 100.0, 2),
@@ -111,12 +130,12 @@ def _recommendation(stats: dict) -> str:
     if stats["sample_status"] != "ACTIONABLE":
         return "KEEP_NEUTRAL"
 
-    _, _, _, good, bad = _thresholds()
+    t = _thresholds()
     rate = stats["bayesian_hit_rate_pct"]
     lower = stats["wilson_lower_95_pct"]
-    if lower is not None and lower >= good:
+    if lower is not None and lower >= t["good"]:
         return "BOOST_CONFIDENCE"
-    if rate is not None and rate <= bad:
+    if rate is not None and rate <= t["bad"]:
         return "REDUCE_OR_AVOID"
     return "KEEP_NEUTRAL"
 
@@ -208,72 +227,89 @@ def main() -> int:
                 score_type = scored.get("score_type", "directional")
                 audit["scored_items"] += 1
 
-                _add(by_instrument_horizon[(instrument, horizon)], correct, change_pct)
-                _add(by_confidence_horizon[(confidence_bucket, horizon)], correct, change_pct)
-                _add(by_score_type_horizon[(score_type, horizon)], correct, change_pct)
+                _add(by_instrument_horizon[(instrument, horizon)], correct, change_pct, prediction_id)
+                _add(by_confidence_horizon[(confidence_bucket, horizon)], correct, change_pct, prediction_id)
+                _add(by_score_type_horizon[(score_type, horizon)], correct, change_pct, prediction_id)
 
                 for category in categories:
-                    _add(by_category_horizon[(category, horizon)], correct, change_pct)
-                    _add(by_instrument_category_horizon[(instrument, category, horizon)], correct, change_pct)
+                    _add(by_category_horizon[(category, horizon)], correct, change_pct, prediction_id)
+                    _add(by_instrument_category_horizon[(instrument, category, horizon)], correct, change_pct, prediction_id)
 
                 if regimes:
                     audit["scored_items_with_context"] += 1
-                    _add(by_context_signature_horizon[(signature, horizon)], correct, change_pct)
+                    _add(by_context_signature_horizon[(signature, horizon)], correct, change_pct, prediction_id)
                     for context_name, regime in regimes.items():
-                        _add(by_context_horizon[(context_name, regime, horizon)], correct, change_pct)
-                        _add(by_instrument_context_horizon[(instrument, context_name, regime, horizon)], correct, change_pct)
+                        _add(by_context_horizon[(context_name, regime, horizon)], correct, change_pct, prediction_id)
+                        _add(by_instrument_context_horizon[(instrument, context_name, regime, horizon)], correct, change_pct, prediction_id)
                         for category in categories:
-                            _add(by_category_context_horizon[(category, context_name, regime, horizon)], correct, change_pct)
+                            _add(by_category_context_horizon[(category, context_name, regime, horizon)], correct, change_pct, prediction_id)
                             _add(
                                 by_instrument_category_context_horizon[(instrument, category, context_name, regime, horizon)],
                                 correct,
                                 change_pct,
+                                prediction_id,
                             )
                 else:
                     audit["scored_items_without_context"] += 1
 
-    def pack(mapping: dict, key_names: tuple[str, ...]) -> list[dict]:
+    omitted: dict[str, int] = {}
+
+    def pack(name: str, mapping: dict, key_names: tuple[str, ...]) -> list[dict]:
         rows = []
+        omitted_count = 0
         for key, counter in sorted(mapping.items(), key=lambda x: tuple(str(v) for v in x[0])):
             values = key if isinstance(key, tuple) else (key,)
             stats = _finalize(counter)
-            row = {name: value for name, value in zip(key_names, values)}
+            if stats["sample_status"] == "INSUFFICIENT":
+                omitted_count += 1
+                continue
+            row = {key_name: value for key_name, value in zip(key_names, values)}
             row.update(stats)
             row["recommendation"] = _recommendation(stats)
             rows.append(row)
+        omitted[name] = omitted_count
         return rows
 
-    early, actionable, strong, good, bad = _thresholds()
+    t = _thresholds()
     profile = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "profile_version": "1.2.0",
-        "purpose": "Evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
+        "profile_version": "1.3.0",
+        "purpose": "Compact evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
         "guardrails": {
-            "minimum_sample_actionable": actionable,
-            "minimum_sample_early_signal": early,
-            "strong_sample": strong,
-            "actionable_min_hit_rate_pct": good,
-            "actionable_max_hit_rate_pct": bad,
+            "minimum_sample_actionable": t["actionable"],
+            "minimum_sample_early_signal": t["early"],
+            "strong_sample": t["strong"],
+            "minimum_unique_events_early_signal": t["unique_early"],
+            "minimum_unique_events_actionable": t["unique_actionable"],
+            "strong_unique_events": t["unique_strong"],
+            "actionable_min_hit_rate_pct": t["good"],
+            "actionable_max_hit_rate_pct": t["bad"],
             "bayesian_prior": {"alpha": PRIOR_ALPHA, "beta": PRIOR_BETA},
-            "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT causes no change.",
-            "anti_overfit": "Use learned evidence as one input, not as a deterministic direction override. New macro facts and market context remain primary.",
+            "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT segments are omitted from this compact profile and cause no change.",
+            "anti_overfit": "Both observation count and independent prediction/event count must pass thresholds. Correlated instruments from one news event cannot by themselves make a segment actionable.",
             "anti_leakage": "Market context and evaluation anchors use only information available at or before the prediction decision time.",
         },
         "audit": audit,
-        "confidence_calibration": pack(by_confidence_horizon, ("confidence_bucket", "horizon")),
-        "by_instrument": pack(by_instrument_horizon, ("instrument", "horizon")),
-        "by_category": pack(by_category_horizon, ("category", "horizon")),
-        "by_score_type": pack(by_score_type_horizon, ("score_type", "horizon")),
-        "by_instrument_category": pack(by_instrument_category_horizon, ("instrument", "category", "horizon")),
-        "by_context": pack(by_context_horizon, ("context", "regime", "horizon")),
-        "by_context_signature": pack(by_context_signature_horizon, ("context_signature", "horizon")),
-        "by_instrument_context": pack(by_instrument_context_horizon, ("instrument", "context", "regime", "horizon")),
-        "by_category_context": pack(by_category_context_horizon, ("category", "context", "regime", "horizon")),
+        "omitted_insufficient_segments": omitted,
+        "confidence_calibration": pack("confidence_calibration", by_confidence_horizon, ("confidence_bucket", "horizon")),
+        "by_instrument": pack("by_instrument", by_instrument_horizon, ("instrument", "horizon")),
+        "by_category": pack("by_category", by_category_horizon, ("category", "horizon")),
+        "by_score_type": pack("by_score_type", by_score_type_horizon, ("score_type", "horizon")),
+        "by_instrument_category": pack("by_instrument_category", by_instrument_category_horizon, ("instrument", "category", "horizon")),
+        "by_context": pack("by_context", by_context_horizon, ("context", "regime", "horizon")),
+        "by_context_signature": pack("by_context_signature", by_context_signature_horizon, ("context_signature", "horizon")),
+        "by_instrument_context": pack("by_instrument_context", by_instrument_context_horizon, ("instrument", "context", "regime", "horizon")),
+        "by_category_context": pack("by_category_context", by_category_context_horizon, ("category", "context", "regime", "horizon")),
         "by_instrument_category_context": pack(
+            "by_instrument_category_context",
             by_instrument_category_context_horizon,
             ("instrument", "category", "context", "regime", "horizon"),
         ),
     }
+
+    # pack() populates omitted while the profile is being built, so assign the
+    # final copy after all sections have been produced.
+    profile["omitted_insufficient_segments"] = dict(omitted)
 
     out_path = out_root / "learning_profile.json"
     with out_path.open("w", encoding="utf-8") as f:
