@@ -1,0 +1,55 @@
+version: 1
+
+# Context is captured at prediction time and must only use information available
+# at or before the event timestamp. This prevents future-data leakage.
+context_series:
+  DXY:
+    yahoo_symbol: "DX-Y.NYB"
+    kind: "index"
+    role: "usd_strength"
+  US2Y:
+    yahoo_symbol: "^UST2Y"
+    kind: "yield"
+    role: "front_end_rates"
+  US10Y:
+    yahoo_symbol: "^TNX"
+    kind: "yield"
+    role: "long_rates"
+  VIX:
+    yahoo_symbol: "^VIX"
+    kind: "index"
+    role: "risk_aversion"
+  WTI:
+    yahoo_symbol: "CL=F"
+    kind: "commodity"
+    role: "oil"
+  BRENT:
+    yahoo_symbol: "BZ=F"
+    kind: "commodity"
+    role: "oil"
+
+lookbacks_minutes:
+  short: 60
+  long: 240
+
+regimes:
+  VIX:
+    low_below: 18.0
+    high_at_or_above: 25.0
+  DXY:
+    trend_threshold_pct_60m: 0.15
+  US2Y:
+    trend_threshold_abs_60m: 0.03
+  US10Y:
+    trend_threshold_abs_60m: 0.03
+  WTI:
+    trend_threshold_pct_60m: 0.75
+  BRENT:
+    trend_threshold_pct_60m: 0.75
+
+learning:
+  minimum_sample_early_signal: 10
+  minimum_sample_actionable: 30
+  strong_sample: 75
+  actionable_min_hit_rate_pct: 58.0
+  actionable_max_hit_rate_pct: 42.0
