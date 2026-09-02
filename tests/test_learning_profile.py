@@ -28,13 +28,13 @@ def test_twenty_nine_samples_are_not_actionable():
     assert _recommendation(stats) == "WATCH_ONLY"
 
 
-def test_correlated_observations_from_few_events_are_not_actionable():
+def test_correlated_observations_from_few_event_clusters_are_not_actionable():
     stats = _finalize(
         {
             "n": 40,
             "correct": 35,
             "sum_change_pct": 5.0,
-            "prediction_ids": {"event-a", "event-b", "event-c"},
+            "event_ids": {"iran-conflict", "fed-meeting", "oil-shock"},
         }
     )
     assert stats["unique_events"] == 3
