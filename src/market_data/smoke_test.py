@@ -2,23 +2,24 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 import math
-import sys
 
 import pandas as pd
+import yaml
 import yfinance as yf
 
-from src.config import load_instruments
+from src.config import ROOT, load_instruments
+from src.market_data.context_snapshot import _candidate_list
 from src.market_data.yahoo_provider import _normalize_frame, last_complete_bar_before, first_bar_at_or_after
 
 REQUIRED_COLUMNS = {"open", "high", "low", "close"}
 HORIZONS = {"15m": 15, "1h": 60, "4h": 240}
 
 
-def _download_recent(symbol: str) -> pd.DataFrame:
+def _download_recent(symbol: str, interval: str = "1m") -> pd.DataFrame:
     df = yf.download(
         symbol,
         period="5d",
-        interval="1m",
+        interval=interval,
         progress=False,
         auto_adjust=False,
         prepost=True,
@@ -31,7 +32,7 @@ def _download_recent(symbol: str) -> pd.DataFrame:
 
 def _validate_frame(df: pd.DataFrame) -> tuple[bool, str]:
     if df.empty:
-        return False, "no 1m data"
+        return False, "no data"
     missing = REQUIRED_COLUMNS - set(df.columns)
     if missing:
         return False, f"missing columns: {sorted(missing)}"
@@ -54,9 +55,6 @@ def _pct(start: float, end: float) -> float:
 def _pick_event_time(df: pd.DataFrame) -> datetime | None:
     if len(df) < 300:
         return None
-
-    # Prefer a timestamp with enough actual bars after it. This avoids picking a point
-    # at the very end of the data set and makes the test independent of current time.
     for idx in range(len(df) - 241, 60, -1):
         ts = df.index[idx]
         later = df[df.index >= ts + pd.Timedelta(minutes=240)]
@@ -89,6 +87,45 @@ def _end_to_end_check(instrument: str, df: pd.DataFrame) -> tuple[bool, str]:
     return True, f"ref={ref.close:.4f}; " + ", ".join(parts)
 
 
+def _load_context_config() -> dict:
+    with (ROOT / "config" / "market_context.yaml").open("r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def _test_context_candidates() -> int:
+    config = _load_context_config()
+    failures = 0
+    print("\n=== Yahoo market-context smoke test ===")
+
+    for name, meta in config.get("context_series", {}).items():
+        candidate_errors: list[str] = []
+        passed = False
+        for candidate in _candidate_list(meta):
+            symbol = candidate.get("symbol")
+            if not symbol:
+                continue
+            for interval in ("1m", "5m"):
+                try:
+                    frame = _download_recent(symbol, interval=interval)
+                    ok, detail = _validate_frame(frame)
+                    if ok:
+                        proxy = f" proxy_for={candidate.get('proxy_for')}" if candidate.get("proxy_for") else ""
+                        inverse = " inverse=true" if candidate.get("inverse_to_role") else ""
+                        print(f"[OK] {name:<7} {symbol:<12} {interval:<3} {detail}{proxy}{inverse}")
+                        passed = True
+                        break
+                    candidate_errors.append(f"{symbol}/{interval}: {detail}")
+                except Exception as exc:
+                    candidate_errors.append(f"{symbol}/{interval}: {type(exc).__name__}: {exc}")
+            if passed:
+                break
+
+        if not passed:
+            print(f"[FAIL] {name:<7} no usable candidate; {'; '.join(candidate_errors)}")
+            failures += 1
+    return failures
+
+
 def main() -> int:
     instruments = load_instruments()
     failures = 0
@@ -114,13 +151,11 @@ def main() -> int:
             print(f"[{status}] {instrument:<8} {symbol:<12} {detail}")
             if not ok:
                 failures += 1
-        except Exception as exc:  # network/provider errors must be visible in Actions log
+        except Exception as exc:
             print(f"[FAIL] {instrument:<8} {symbol:<12} {type(exc).__name__}: {exc}")
             failures += 1
 
     print("\n=== End-to-end calculation test ===")
-    # Use XAUUSD first because it trades nearly continuously. If unavailable, try any
-    # instrument that passed the data test.
     ordered = ["XAUUSD"] + [x for x in instruments if x != "XAUUSD"]
     e2e_done = False
     for instrument in ordered:
@@ -138,12 +173,14 @@ def main() -> int:
         print("[FAIL] No instrument had enough data for the end-to-end test")
         failures += 1
 
+    failures += _test_context_candidates()
+
     print("\n=== Result ===")
     if failures:
         print(f"FAILED: {failures} problem(s) detected")
         return 1
 
-    print("PASSED: all configured Yahoo symbols returned usable 1m data and E2E calculation worked")
+    print("PASSED: tracked instruments and all market-context series have usable Yahoo data")
     return 0
 
 
