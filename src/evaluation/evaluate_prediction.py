@@ -10,6 +10,8 @@ import pandas as pd
 from src.config import ROOT
 from src.market_data.yahoo_provider import fetch_1m_window, last_complete_bar_before, first_bar_at_or_after
 
+VOLATILITY_RATIO_THRESHOLD = 1.25
+
 
 def _parse_utc(value: str) -> datetime:
     dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
@@ -37,6 +39,34 @@ def _direction_correct(predicted: str, actual: str) -> bool | None:
     return None
 
 
+def _safe_series(frame: pd.DataFrame, column: str) -> pd.Series:
+    if column not in frame.columns:
+        raise KeyError(f"Missing OHLC column: {column}")
+    return frame[column].astype(float)
+
+
+def _range_pct(frame: pd.DataFrame, ref_price: float) -> float | None:
+    if frame.empty or ref_price == 0:
+        return None
+    high = float(_safe_series(frame, "high").max())
+    low = float(_safe_series(frame, "low").min())
+    return ((high - low) / ref_price) * 100.0
+
+
+def _window(frame: pd.DataFrame, start: datetime, end: datetime, include_start: bool = False) -> pd.DataFrame:
+    start_ts = pd.Timestamp(start)
+    end_ts = pd.Timestamp(end)
+    if include_start:
+        return frame[(frame.index >= start_ts) & (frame.index <= end_ts)]
+    return frame[(frame.index > start_ts) & (frame.index <= end_ts)]
+
+
+def _baseline_range_pct(frame: pd.DataFrame, event_time: datetime, minutes: int, ref_price: float) -> float | None:
+    start = event_time - timedelta(minutes=minutes)
+    pre = frame[(frame.index >= pd.Timestamp(start)) & (frame.index < pd.Timestamp(event_time))]
+    return _range_pct(pre, ref_price)
+
+
 def _mfe_mae(frame: pd.DataFrame, ref_time: datetime, target_time: datetime, ref_price: float, predicted: str) -> tuple[float | None, float | None]:
     window = frame[(frame.index > pd.Timestamp(ref_time)) & (frame.index <= pd.Timestamp(target_time))]
     if window.empty or predicted not in {"UP", "DOWN"}:
@@ -50,17 +80,49 @@ def _mfe_mae(frame: pd.DataFrame, ref_time: datetime, target_time: datetime, ref
     return float(-lows.min()), float(-highs.max())
 
 
-def _safe_series(frame: pd.DataFrame, column: str) -> pd.Series:
-    if column not in frame.columns:
-        raise KeyError(f"Missing OHLC column: {column}")
-    return frame[column].astype(float)
+def _score_non_directional(predicted: str, change_pct: float, post_range_pct: float | None, baseline_range_pct: float | None) -> dict:
+    predicted = predicted.upper()
+
+    if predicted == "VOLATILITY":
+        if post_range_pct is None or baseline_range_pct is None or baseline_range_pct <= 0:
+            return {
+                "score_type": "volatility",
+                "correct": None,
+                "volatility_ratio": None,
+            }
+        ratio = post_range_pct / baseline_range_pct
+        return {
+            "score_type": "volatility",
+            "correct": ratio >= VOLATILITY_RATIO_THRESHOLD,
+            "volatility_ratio": round(ratio, 6),
+            "volatility_ratio_threshold": VOLATILITY_RATIO_THRESHOLD,
+        }
+
+    if predicted == "MIXED":
+        if baseline_range_pct is None:
+            return {
+                "score_type": "mixed_neutral",
+                "correct": None,
+                "neutral_envelope_pct": None,
+            }
+        envelope = baseline_range_pct
+        return {
+            "score_type": "mixed_neutral",
+            "correct": abs(change_pct) <= envelope,
+            "neutral_envelope_pct": round(envelope, 6),
+        }
+
+    return {
+        "score_type": "directional",
+        "correct": _direction_correct(predicted, _actual_direction(change_pct)),
+    }
 
 
 def evaluate_one_instrument(prediction_id: str, event_time: datetime, item: dict) -> dict:
     instrument = item["instrument"]
     predicted_immediate = item["immediate"]["direction"].upper()
 
-    frame = fetch_1m_window(instrument, event_time, before_minutes=60, after_minutes=300)
+    frame = fetch_1m_window(instrument, event_time, before_minutes=240, after_minutes=300)
     ref = last_complete_bar_before(frame, event_time)
     if ref is None:
         return {
@@ -102,7 +164,13 @@ def evaluate_one_instrument(prediction_id: str, event_time: datetime, item: dict
 
         actual_change = _pct_change(ref.close, point.close)
         actual_direction = _actual_direction(actual_change)
-        mfe, mae = _mfe_mae(frame, ref_time, _parse_utc(point.timestamp_utc), ref.close, predicted_immediate)
+        actual_point_time = _parse_utc(point.timestamp_utc)
+        mfe, mae = _mfe_mae(frame, ref_time, actual_point_time, ref.close, predicted_immediate)
+
+        post = _window(frame, event_time, actual_point_time, include_start=True)
+        post_range_pct = _range_pct(post, ref.close)
+        baseline_range_pct = _baseline_range_pct(frame, event_time, minutes, ref.close)
+        score = _score_non_directional(predicted_immediate, actual_change, post_range_pct, baseline_range_pct)
 
         result["evaluations"][horizon_id] = {
             "status": "DONE",
@@ -111,9 +179,13 @@ def evaluate_one_instrument(prediction_id: str, event_time: datetime, item: dict
             "price": point.close,
             "change_pct": round(actual_change, 6),
             "actual_direction": actual_direction,
-            "correct": _direction_correct(predicted_immediate, actual_direction),
+            "correct": score.get("correct"),
+            "score_type": score.get("score_type"),
+            "baseline_range_pct": None if baseline_range_pct is None else round(baseline_range_pct, 6),
+            "post_event_range_pct": None if post_range_pct is None else round(post_range_pct, 6),
             "mfe_pct": None if mfe is None else round(mfe, 6),
             "mae_pct": None if mae is None else round(mae, 6),
+            **{k: v for k, v in score.items() if k not in {"correct", "score_type"}},
         }
         completed += 1
 
