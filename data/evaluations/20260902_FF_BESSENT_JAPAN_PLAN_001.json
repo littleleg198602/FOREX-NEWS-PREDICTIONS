@@ -1,0 +1,195 @@
+{
+  "prediction_id": "20260902_FF_BESSENT_JAPAN_PLAN_001",
+  "event_id": "JPY_INTERVENTION_2026_09_02",
+  "event_time_utc": "2026-09-02T17:46:00+00:00",
+  "evaluated_at_utc": "2026-09-02T20:54:53.890898+00:00",
+  "model_version": "1.0.0",
+  "backfilled": true,
+  "eligible_for_hit_rate": false,
+  "market_context_origin": "reconstructed_pre_event_from_yahoo",
+  "market_context": {
+    "captured_for_event_time_utc": "2026-09-02T17:46:00+00:00",
+    "information_cutoff": "strictly_before_event",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "value": 99.5530014038086,
+        "timestamp_utc": "2026-09-02T17:45:00+00:00",
+        "change_pct_60m": 0.005028,
+        "change_pct_240m": 0.006032,
+        "change_abs_60m": 0.005005,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "^UST2Y",
+        "source": "yahoo",
+        "value": null,
+        "timestamp_utc": null,
+        "change_pct_60m": null,
+        "change_pct_240m": null,
+        "change_abs_60m": null,
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "value": 4.788000106811523,
+        "timestamp_utc": "2026-09-02T17:45:00+00:00",
+        "change_pct_60m": -0.208415,
+        "change_pct_240m": 0.0,
+        "change_abs_60m": -0.01,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "value": 15.289999961853027,
+        "timestamp_utc": "2026-09-02T17:45:00+00:00",
+        "change_pct_60m": -0.907326,
+        "change_pct_240m": -3.957287,
+        "change_abs_60m": -0.14,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "value": 91.16000366210938,
+        "timestamp_utc": "2026-09-02T17:45:00+00:00",
+        "change_pct_60m": 0.032927,
+        "change_pct_240m": 1.854753,
+        "change_abs_60m": 0.030006,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "value": 95.77999877929688,
+        "timestamp_utc": "2026-09-02T17:45:00+00:00",
+        "change_pct_60m": -0.052179,
+        "change_pct_240m": 1.677284,
+        "change_abs_60m": -0.050003,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260902_FF_BESSENT_JAPAN_PLAN_001",
+      "instrument": "NI225",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo"
+    },
+    {
+      "prediction_id": "20260902_FF_BESSENT_JAPAN_PLAN_001",
+      "instrument": "NDX",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 29123.1640625,
+      "reference_price_time_utc": "2026-09-02T17:45:00+00:00",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T18:01:00+00:00",
+          "actual_price_time_utc": "2026-09-02T18:01:00+00:00",
+          "price": 29091.884765625,
+          "change_pct": -0.107403,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.15013,
+          "post_event_range_pct": 0.111488,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 0.742607,
+          "volatility_ratio_threshold": 1.25
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T18:46:00+00:00",
+          "actual_price_time_utc": "2026-09-02T18:46:00+00:00",
+          "price": 29085.5859375,
+          "change_pct": -0.129032,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.179042,
+          "post_event_range_pct": 0.211031,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 1.178672,
+          "volatility_ratio_threshold": 1.25
+        },
+        "4h": {
+          "status": "PENDING"
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902_FF_BESSENT_JAPAN_PLAN_001",
+      "instrument": "SP500",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 7668.33984375,
+      "reference_price_time_utc": "2026-09-02T17:45:00+00:00",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T18:01:00+00:00",
+          "actual_price_time_utc": "2026-09-02T18:01:00+00:00",
+          "price": 7663.89013671875,
+          "change_pct": -0.058027,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.108235,
+          "post_event_range_pct": 0.070284,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 0.649371,
+          "volatility_ratio_threshold": 1.25
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T18:46:00+00:00",
+          "actual_price_time_utc": "2026-09-02T18:46:00+00:00",
+          "price": 7662.490234375,
+          "change_pct": -0.076283,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.145141,
+          "post_event_range_pct": 0.185963,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 1.281258,
+          "volatility_ratio_threshold": 1.25
+        },
+        "4h": {
+          "status": "PENDING"
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    }
+  ]
+}

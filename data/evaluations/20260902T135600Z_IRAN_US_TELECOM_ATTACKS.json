@@ -1,0 +1,631 @@
+{
+  "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+  "event_id": "US_IRAN_CONFLICT_2026_09_02",
+  "event_time_utc": "2026-09-02T13:56:00+00:00",
+  "evaluated_at_utc": "2026-09-02T20:54:52.331199+00:00",
+  "model_version": "1.0.0",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_origin": "reconstructed_pre_event_from_yahoo",
+  "market_context": {
+    "captured_for_event_time_utc": "2026-09-02T13:56:00+00:00",
+    "information_cutoff": "strictly_before_event",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "value": 99.48799896240234,
+        "timestamp_utc": "2026-09-02T13:55:00+00:00",
+        "change_pct_60m": -0.266655,
+        "change_pct_240m": -0.331601,
+        "change_abs_60m": -0.265999,
+        "regime": "FALLING"
+      },
+      "US2Y": {
+        "symbol": "^UST2Y",
+        "source": "yahoo",
+        "value": null,
+        "timestamp_utc": null,
+        "change_pct_60m": null,
+        "change_pct_240m": null,
+        "change_abs_60m": null,
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "value": 4.789999961853027,
+        "timestamp_utc": "2026-09-02T13:55:00+00:00",
+        "change_pct_60m": -0.041733,
+        "change_pct_240m": null,
+        "change_abs_60m": -0.002,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "value": 15.899999618530273,
+        "timestamp_utc": "2026-09-02T13:55:00+00:00",
+        "change_pct_60m": -2.513794,
+        "change_pct_240m": -5.18784,
+        "change_abs_60m": -0.41,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "value": 89.48999786376953,
+        "timestamp_utc": "2026-09-02T13:55:00+00:00",
+        "change_pct_60m": -0.478203,
+        "change_pct_240m": -1.050425,
+        "change_abs_60m": -0.43,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "value": 94.18000030517578,
+        "timestamp_utc": "2026-09-02T13:55:00+00:00",
+        "change_pct_60m": -0.465021,
+        "change_pct_240m": -0.863158,
+        "change_abs_60m": -0.440002,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "XAUUSD",
+      "status": "DONE",
+      "market_data_source": "yahoo",
+      "reference_price": 4421.7998046875,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 4442.0,
+          "change_pct": 0.456832,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.293998,
+          "post_event_range_pct": 0.565381,
+          "mfe_pct": 0.511106,
+          "mae_pct": -0.054274
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 4423.60009765625,
+          "change_pct": 0.040714,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.123981,
+          "post_event_range_pct": 0.565381,
+          "mfe_pct": 0.511106,
+          "mae_pct": -0.054274
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:56:00+00:00",
+          "price": 4423.0,
+          "change_pct": 0.027143,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.761724,
+          "post_event_range_pct": 0.753083,
+          "mfe_pct": 0.511106,
+          "mae_pct": -0.241976
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "XAGUSD",
+      "status": "DONE",
+      "market_data_source": "yahoo",
+      "reference_price": 65.9000015258789,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 66.04499816894531,
+          "change_pct": 0.220025,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.493167,
+          "post_event_range_pct": 0.45524,
+          "mfe_pct": 0.417301,
+          "mae_pct": -0.037939
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 65.66999816894531,
+          "change_pct": -0.349019,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.99544,
+          "post_event_range_pct": 0.796664,
+          "mfe_pct": 0.417301,
+          "mae_pct": -0.379363
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:56:00+00:00",
+          "price": 65.65499877929688,
+          "change_pct": -0.37178,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 2.959024,
+          "post_event_range_pct": 1.145683,
+          "mfe_pct": 0.417301,
+          "mae_pct": -0.728381
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "NI225",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo"
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "AUS200",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo"
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "GDAXI",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 25853.130859375,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 25878.0390625,
+          "change_pct": 0.096345,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.153096,
+          "post_event_range_pct": 0.133605,
+          "mfe_pct": -0.000922,
+          "mae_pct": -0.134526
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 25829.640625,
+          "change_pct": -0.09086,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.316323,
+          "post_event_range_pct": 0.277257,
+          "mfe_pct": 0.103666,
+          "mae_pct": -0.173592
+        },
+        "4h": {
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00"
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "FCHI40",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 8288.33984375,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 8296.5498046875,
+          "change_pct": 0.099054,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.15938,
+          "post_event_range_pct": 0.20076,
+          "mfe_pct": 0.022681,
+          "mae_pct": -0.178079
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 8283.400390625,
+          "change_pct": -0.059595,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.297764,
+          "post_event_range_pct": 0.292698,
+          "mfe_pct": 0.059595,
+          "mae_pct": -0.233102
+        },
+        "4h": {
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00"
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "STOXX50",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 6357.2099609375,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 6366.0498046875,
+          "change_pct": 0.139052,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.154314,
+          "post_event_range_pct": 0.164537,
+          "mfe_pct": -0.003618,
+          "mae_pct": -0.168155
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 6359.77001953125,
+          "change_pct": 0.04027,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.344489,
+          "post_event_range_pct": 0.277167,
+          "mfe_pct": -0.003618,
+          "mae_pct": -0.280785
+        },
+        "4h": {
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00"
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "UK100",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 10759.23046875,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 10760.9501953125,
+          "change_pct": 0.015984,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.190171,
+          "post_event_range_pct": 0.179933,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.190171
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 10767.8095703125,
+          "change_pct": 0.079737,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.373172,
+          "post_event_range_pct": 0.179933,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.373172
+        },
+        "4h": {
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00"
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "SPA35",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 19804.900390625,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 19828.599609375,
+          "change_pct": 0.119663,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.166625,
+          "post_event_range_pct": 0.164604,
+          "mfe_pct": 0.01212,
+          "mae_pct": -0.152484
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 19784.900390625,
+          "change_pct": -0.100985,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.404453,
+          "post_event_range_pct": 0.377175,
+          "mfe_pct": 0.100985,
+          "mae_pct": -0.27619
+        },
+        "4h": {
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00"
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "NDX",
+      "status": "DONE",
+      "market_data_source": "yahoo",
+      "reference_price": 28981.109375,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 29063.642578125,
+          "change_pct": 0.284783,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.31978,
+          "post_event_range_pct": 0.310352,
+          "mfe_pct": -0.003114,
+          "mae_pct": -0.313465
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 29080.294921875,
+          "change_pct": 0.342242,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.31978,
+          "post_event_range_pct": 0.626937,
+          "mfe_pct": -0.003114,
+          "mae_pct": -0.630051
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:56:00+00:00",
+          "price": 29110.447265625,
+          "change_pct": 0.446283,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.31978,
+          "post_event_range_pct": 0.626937,
+          "mfe_pct": -0.003114,
+          "mae_pct": -0.630051
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "WS30",
+      "status": "DONE",
+      "market_data_source": "yahoo",
+      "reference_price": 53010.1484375,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 53083.96875,
+          "change_pct": 0.139257,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.182932,
+          "post_event_range_pct": 0.186418,
+          "mfe_pct": 0.003692,
+          "mae_pct": -0.182726
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 53186.0,
+          "change_pct": 0.331732,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.4469,
+          "post_event_range_pct": 0.413711,
+          "mfe_pct": 0.003692,
+          "mae_pct": -0.410019
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:56:00+00:00",
+          "price": 53012.1015625,
+          "change_pct": 0.003684,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.4469,
+          "post_event_range_pct": 0.53554,
+          "mfe_pct": 0.125521,
+          "mae_pct": -0.410019
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T135600Z_IRAN_US_TELECOM_ATTACKS",
+      "instrument": "SP500",
+      "status": "DONE",
+      "market_data_source": "yahoo",
+      "reference_price": 7639.56982421875,
+      "reference_price_time_utc": "2026-09-02T13:55:00+00:00",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:11:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:11:00+00:00",
+          "price": 7656.27001953125,
+          "change_pct": 0.218601,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.129332,
+          "post_event_range_pct": 0.250533,
+          "mfe_pct": 0.00209,
+          "mae_pct": -0.248443
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:56:00+00:00",
+          "price": 7670.919921875,
+          "change_pct": 0.410365,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.16768,
+          "post_event_range_pct": 0.5444,
+          "mfe_pct": 0.00209,
+          "mae_pct": -0.54231
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:56:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:56:00+00:00",
+          "price": 7667.10986328125,
+          "change_pct": 0.360492,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.16768,
+          "post_event_range_pct": 0.546887,
+          "mfe_pct": 0.00209,
+          "mae_pct": -0.544797
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "prediction_id": "EXAMPLE_20260902_001",
+  "event_id": "EXAMPLE_EVENT",
+  "event_time_utc": "2026-09-02T11:59:30+00:00",
+  "evaluated_at_utc": "2026-09-02T20:54:57.912974+00:00",
+  "model_version": "1.0.0",
+  "backfilled": true,
+  "eligible_for_hit_rate": false,
+  "market_context_origin": "reconstructed_pre_event_from_yahoo",
+  "market_context": {
+    "captured_for_event_time_utc": "2026-09-02T11:59:30+00:00",
+    "information_cutoff": "strictly_before_event",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "value": 99.76000213623047,
+        "timestamp_utc": "2026-09-02T11:59:00+00:00",
+        "change_pct_60m": -0.062107,
+        "change_pct_240m": 0.028075,
+        "change_abs_60m": -0.061996,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "^UST2Y",
+        "source": "yahoo",
+        "value": null,
+        "timestamp_utc": null,
+        "change_pct_60m": null,
+        "change_pct_240m": null,
+        "change_abs_60m": null,
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "value": null,
+        "timestamp_utc": null,
+        "change_pct_60m": null,
+        "change_pct_240m": null,
+        "change_abs_60m": null,
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "value": 16.209999084472656,
+        "timestamp_utc": "2026-09-02T11:59:00+00:00",
+        "change_pct_60m": -2.759454,
+        "change_pct_240m": -1.518834,
+        "change_abs_60m": -0.460001,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "value": 89.11000061035156,
+        "timestamp_utc": "2026-09-02T11:59:00+00:00",
+        "change_pct_60m": -1.241275,
+        "change_pct_240m": -1.153634,
+        "change_abs_60m": -1.120003,
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "value": 93.66999816894531,
+        "timestamp_utc": "2026-09-02T11:59:00+00:00",
+        "change_pct_60m": -1.431128,
+        "change_pct_240m": -1.337691,
+        "change_abs_60m": -1.360001,
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "EXAMPLE_20260902_001",
+      "instrument": "XAUUSD",
+      "status": "DONE",
+      "market_data_source": "yahoo",
+      "reference_price": 4379.60009765625,
+      "reference_price_time_utc": "2026-09-02T11:59:00+00:00",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T12:14:30+00:00",
+          "actual_price_time_utc": "2026-09-02T12:15:00+00:00",
+          "price": 4379.89990234375,
+          "change_pct": 0.006845,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.2192,
+          "post_event_range_pct": 0.168963,
+          "mfe_pct": 0.084476,
+          "mae_pct": -0.084487
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T12:59:30+00:00",
+          "actual_price_time_utc": "2026-09-02T13:00:00+00:00",
+          "price": 4383.10009765625,
+          "change_pct": 0.079916,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.577685,
+          "post_event_range_pct": 0.388163,
+          "mfe_pct": 0.269427,
+          "mae_pct": -0.118737
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T15:59:30+00:00",
+          "actual_price_time_utc": "2026-09-02T16:00:00+00:00",
+          "price": 4420.89990234375,
+          "change_pct": 0.943004,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.710113,
+          "post_event_range_pct": 1.598319,
+          "mfe_pct": 1.479583,
+          "mae_pct": -0.118737
+        },
+        "next_session": {
+          "status": "NOT_IMPLEMENTED",
+          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+        }
+      }
+    }
+  ]
+}
