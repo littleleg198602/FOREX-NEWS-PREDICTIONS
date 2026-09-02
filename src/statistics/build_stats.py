@@ -3,17 +3,34 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime, timezone
 import json
-from pathlib import Path
 
 from src.config import ROOT
 
 HORIZONS = ("15m", "1h", "4h")
+SCORE_TYPES = ("directional", "mixed_neutral", "volatility")
 
 
 def _safe_rate(correct: int, scored: int) -> float | None:
     if scored == 0:
         return None
     return round((correct / scored) * 100.0, 2)
+
+
+def _empty_block() -> dict:
+    return {h: {"scored": 0, "correct": 0, "sum_change_pct": 0.0} for h in HORIZONS}
+
+
+def _finalize(block: dict) -> dict:
+    out = {}
+    for horizon, stats in block.items():
+        scored = stats["scored"]
+        out[horizon] = {
+            "n": scored,
+            "correct": stats["correct"],
+            "hit_rate_pct": _safe_rate(stats["correct"], scored),
+            "mean_change_pct": None if scored == 0 else round(stats["sum_change_pct"] / scored, 6),
+        }
+    return out
 
 
 def main() -> int:
@@ -35,10 +52,15 @@ def main() -> int:
         except Exception:
             continue
 
-    totals = {h: {"scored": 0, "correct": 0, "sum_change_pct": 0.0} for h in HORIZONS}
-    by_instrument = defaultdict(lambda: {h: {"scored": 0, "correct": 0, "sum_change_pct": 0.0} for h in HORIZONS})
-    by_category = defaultdict(lambda: {h: {"scored": 0, "correct": 0, "sum_change_pct": 0.0} for h in HORIZONS})
-    audit = {"evaluation_files": 0, "eligible_prediction_files": 0, "excluded_backfilled_or_ineligible": 0}
+    overall_by_score_type = {score_type: _empty_block() for score_type in SCORE_TYPES}
+    by_instrument = defaultdict(lambda: {score_type: _empty_block() for score_type in SCORE_TYPES})
+    by_category = defaultdict(lambda: {score_type: _empty_block() for score_type in SCORE_TYPES})
+    audit = {
+        "evaluation_files": 0,
+        "eligible_prediction_files": 0,
+        "excluded_backfilled_or_ineligible": 0,
+        "unscored_done_items": 0,
+    }
 
     for path in evaluations_root.glob("*.json"):
         try:
@@ -54,6 +76,7 @@ def main() -> int:
         if not eligible:
             audit["excluded_backfilled_or_ineligible"] += 1
             continue
+
         audit["eligible_prediction_files"] += 1
         categories = meta.get("categories", []) or ["UNKNOWN"]
 
@@ -64,43 +87,43 @@ def main() -> int:
                 item = evaluations.get(horizon, {})
                 if item.get("status") != "DONE":
                     continue
+
                 correct = item.get("correct")
-                if correct is None:
+                score_type = item.get("score_type", "directional")
+                if correct is None or score_type not in SCORE_TYPES:
+                    audit["unscored_done_items"] += 1
                     continue
+
                 change_pct = float(item.get("change_pct", 0.0))
 
-                totals[horizon]["scored"] += 1
-                totals[horizon]["correct"] += int(bool(correct))
-                totals[horizon]["sum_change_pct"] += change_pct
-
-                by_instrument[instrument][horizon]["scored"] += 1
-                by_instrument[instrument][horizon]["correct"] += int(bool(correct))
-                by_instrument[instrument][horizon]["sum_change_pct"] += change_pct
-
+                targets = [
+                    overall_by_score_type[score_type][horizon],
+                    by_instrument[instrument][score_type][horizon],
+                ]
                 for category in categories:
-                    by_category[category][horizon]["scored"] += 1
-                    by_category[category][horizon]["correct"] += int(bool(correct))
-                    by_category[category][horizon]["sum_change_pct"] += change_pct
+                    targets.append(by_category[category][score_type][horizon])
 
-    def finalize(block: dict) -> dict:
-        out = {}
-        for horizon, stats in block.items():
-            scored = stats["scored"]
-            out[horizon] = {
-                "n": scored,
-                "correct": stats["correct"],
-                "hit_rate_pct": _safe_rate(stats["correct"], scored),
-                "mean_change_pct": None if scored == 0 else round(stats["sum_change_pct"] / scored, 6),
-            }
-        return out
+                for stats in targets:
+                    stats["scored"] += 1
+                    stats["correct"] += int(bool(correct))
+                    stats["sum_change_pct"] += change_pct
 
     summary = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "scope": "eligible_for_hit_rate only; MIXED/VOLATILITY are currently unscored",
+        "scope": "eligible_for_hit_rate only; directional, MIXED and VOLATILITY are reported separately",
         "audit": audit,
-        "overall": finalize(totals),
-        "by_instrument": {name: finalize(block) for name, block in sorted(by_instrument.items())},
-        "by_category": {name: finalize(block) for name, block in sorted(by_category.items())},
+        "overall_by_score_type": {
+            score_type: _finalize(block)
+            for score_type, block in overall_by_score_type.items()
+        },
+        "by_instrument": {
+            name: {score_type: _finalize(block) for score_type, block in score_blocks.items()}
+            for name, score_blocks in sorted(by_instrument.items())
+        },
+        "by_category": {
+            name: {score_type: _finalize(block) for score_type, block in score_blocks.items()}
+            for name, score_blocks in sorted(by_category.items())
+        },
     }
 
     out_path = out_root / "summary.json"
