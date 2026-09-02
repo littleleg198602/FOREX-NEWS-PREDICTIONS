@@ -2,11 +2,15 @@
   "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
   "event_id": "FED_WILLIAMS_2026_09_02",
   "event_time_utc": "2026-09-02T13:20:00+00:00",
-  "evaluated_at_utc": "2026-09-02T20:56:35.139983+00:00",
+  "prediction_time_utc": "2026-09-02T13:20:00+00:00",
+  "evaluation_anchor_time_utc": "2026-09-02T13:20:00+00:00",
+  "prediction_latency_seconds": 0.0,
+  "evaluated_at_utc": "2026-09-02T21:01:00.971508+00:00",
   "model_version": "1.0.0",
+  "is_example": false,
   "backfilled": false,
   "eligible_for_hit_rate": true,
-  "market_context_origin": "reconstructed_pre_event_from_yahoo",
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
   "market_context": {
     "captured_for_time_utc": "2026-09-02T13:20:00+00:00",
     "captured_for_event_time_utc": "2026-09-02T13:20:00+00:00",
@@ -141,28 +145,11 @@
     {
       "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
       "instrument": "NDX",
-      "status": "NO_REFERENCE_PRICE",
-      "market_data_source": "yahoo"
-    },
-    {
-      "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
-      "instrument": "SP500",
-      "status": "NO_REFERENCE_PRICE",
-      "market_data_source": "yahoo"
-    },
-    {
-      "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
-      "instrument": "WS30",
-      "status": "NO_REFERENCE_PRICE",
-      "market_data_source": "yahoo"
-    },
-    {
-      "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
-      "instrument": "XAUUSD",
-      "status": "DONE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
-      "reference_price": 4389.0,
-      "reference_price_time_utc": "2026-09-02T13:19:00+00:00",
+      "reference_price": 29077.22,
+      "reference_price_time_utc": "2026-09-01T21:16:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 6,
       "evaluations": {
@@ -170,6 +157,205 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T13:35:00+00:00",
           "actual_price_time_utc": "2026-09-02T13:35:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29020.15234375,
+          "change_pct": -0.196262,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.121498,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.0
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:20:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:20:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29109.564453125,
+          "change_pct": 0.111236,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.501325,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.0
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:20:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:20:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29086.81640625,
+          "change_pct": 0.033003,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.53708,
+          "post_event_range_pct": 0.651176,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.53708
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-02",
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
+      "instrument": "SP500",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 7631.47,
+      "reference_price_time_utc": "2026-09-01T20:45:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T13:35:00+00:00",
+          "actual_price_time_utc": "2026-09-02T13:35:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 7637.2998046875,
+          "change_pct": 0.076392,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.114522,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.0
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:20:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:20:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 7664.669921875,
+          "change_pct": 0.43504,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.141523,
+          "post_event_range_pct": 0.437788,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.141523
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:20:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:20:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 7662.0,
+          "change_pct": 0.400054,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.471072,
+          "post_event_range_pct": 0.623338,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.471072
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-02",
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
+      "instrument": "WS30",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 52766.88,
+      "reference_price_time_utc": "2026-09-01T20:45:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T13:35:00+00:00",
+          "actual_price_time_utc": "2026-09-02T13:35:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 52994.6484375,
+          "change_pct": 0.43165,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.376131,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.0
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:20:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:20:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 53136.21875,
+          "change_pct": 0.699944,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.128701,
+          "post_event_range_pct": 0.632425,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.128701
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:20:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:20:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 52973.08984375,
+          "change_pct": 0.390794,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.360208,
+          "post_event_range_pct": 0.754113,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.360208
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-02",
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
+      "instrument": "XAUUSD",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 4389.0,
+      "reference_price_time_utc": "2026-09-02T13:19:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T13:35:00+00:00",
+          "actual_price_time_utc": "2026-09-02T13:35:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 4414.2001953125,
           "change_pct": 0.574167,
           "actual_direction": "UP",
@@ -185,6 +371,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T14:20:00+00:00",
           "actual_price_time_utc": "2026-09-02T14:20:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 4441.5,
           "change_pct": 1.196172,
           "actual_direction": "UP",
@@ -200,6 +387,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T17:20:00+00:00",
           "actual_price_time_utc": "2026-09-02T17:20:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 4411.7001953125,
           "change_pct": 0.517207,
           "actual_direction": "UP",
@@ -212,18 +400,20 @@
           "neutral_envelope_pct": 0.966049
         },
         "next_session": {
-          "status": "NOT_IMPLEMENTED",
-          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         }
       }
     },
     {
       "prediction_id": "20260902T132000Z_FED_WILLIAMS_INFLATION",
       "instrument": "XAGUSD",
-      "status": "DONE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 65.2750015258789,
       "reference_price_time_utc": "2026-09-02T13:19:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
@@ -231,6 +421,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T13:35:00+00:00",
           "actual_price_time_utc": "2026-09-02T13:35:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 65.875,
           "change_pct": 0.919186,
           "actual_direction": "UP",
@@ -246,6 +437,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T14:20:00+00:00",
           "actual_price_time_utc": "2026-09-02T14:20:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 66.01499938964844,
           "change_pct": 1.133662,
           "actual_direction": "UP",
@@ -261,6 +453,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T17:20:00+00:00",
           "actual_price_time_utc": "2026-09-02T17:20:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 65.45500183105469,
           "change_pct": 0.275757,
           "actual_direction": "UP",
@@ -273,8 +466,9 @@
           "neutral_envelope_pct": 1.80007
         },
         "next_session": {
-          "status": "NOT_IMPLEMENTED",
-          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         }
       }
     }

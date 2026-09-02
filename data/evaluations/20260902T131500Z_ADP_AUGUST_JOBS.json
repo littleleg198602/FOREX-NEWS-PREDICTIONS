@@ -2,11 +2,15 @@
   "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
   "event_id": "US_LABOR_ADP_2026_09_02",
   "event_time_utc": "2026-09-02T13:15:00+00:00",
-  "evaluated_at_utc": "2026-09-02T20:56:31.801518+00:00",
+  "prediction_time_utc": "2026-09-02T13:15:00+00:00",
+  "evaluation_anchor_time_utc": "2026-09-02T13:15:00+00:00",
+  "prediction_latency_seconds": 0.0,
+  "evaluated_at_utc": "2026-09-02T21:00:56.720672+00:00",
   "model_version": "1.0.0",
+  "is_example": false,
   "backfilled": false,
   "eligible_for_hit_rate": true,
-  "market_context_origin": "reconstructed_pre_event_from_yahoo",
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
   "market_context": {
     "captured_for_time_utc": "2026-09-02T13:15:00+00:00",
     "captured_for_event_time_utc": "2026-09-02T13:15:00+00:00",
@@ -141,28 +145,11 @@
     {
       "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
       "instrument": "NDX",
-      "status": "NO_REFERENCE_PRICE",
-      "market_data_source": "yahoo"
-    },
-    {
-      "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
-      "instrument": "SP500",
-      "status": "NO_REFERENCE_PRICE",
-      "market_data_source": "yahoo"
-    },
-    {
-      "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
-      "instrument": "WS30",
-      "status": "NO_REFERENCE_PRICE",
-      "market_data_source": "yahoo"
-    },
-    {
-      "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
-      "instrument": "XAUUSD",
-      "status": "DONE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
-      "reference_price": 4386.5,
-      "reference_price_time_utc": "2026-09-02T13:14:00+00:00",
+      "reference_price": 29077.22,
+      "reference_price_time_utc": "2026-09-01T21:16:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 6,
       "evaluations": {
@@ -170,6 +157,199 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T13:30:00+00:00",
           "actual_price_time_utc": "2026-09-02T13:30:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29022.568359375,
+          "change_pct": -0.187953,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.042035,
+          "mfe_pct": -0.187953,
+          "mae_pct": -0.229989
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:15:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:15:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29080.216796875,
+          "change_pct": 0.010306,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.378081,
+          "mfe_pct": 0.024338,
+          "mae_pct": -0.353743
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:15:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:15:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29098.228515625,
+          "change_pct": 0.072251,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.53708,
+          "post_event_range_pct": 0.651176,
+          "mfe_pct": 0.297432,
+          "mae_pct": -0.353743
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-02",
+          "predicted_direction": "UP"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
+      "instrument": "SP500",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 7631.47,
+      "reference_price_time_utc": "2026-09-01T20:45:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T13:30:00+00:00",
+          "actual_price_time_utc": "2026-09-02T13:30:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 7638.2900390625,
+          "change_pct": 0.089367,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.101943,
+          "mfe_pct": 0.142697,
+          "mae_pct": 0.040753
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:15:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:15:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 7659.22998046875,
+          "change_pct": 0.363757,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.141523,
+          "post_event_range_pct": 0.357861,
+          "mfe_pct": 0.386035,
+          "mae_pct": 0.028174
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:15:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:15:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 7665.7099609375,
+          "change_pct": 0.448668,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.471072,
+          "post_event_range_pct": 0.623338,
+          "mfe_pct": 0.651512,
+          "mae_pct": 0.028174
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-02",
+          "predicted_direction": "UP"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
+      "instrument": "WS30",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 52766.88,
+      "reference_price_time_utc": "2026-09-01T20:45:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T13:30:00+00:00",
+          "actual_price_time_utc": "2026-09-02T13:30:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 52954.37109375,
+          "change_pct": 0.35532,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.0,
+          "post_event_range_pct": 0.293064,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.0
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T14:15:00+00:00",
+          "actual_price_time_utc": "2026-09-02T14:15:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 53111.859375,
+          "change_pct": 0.65378,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.128701,
+          "post_event_range_pct": 0.576348,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.128701
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T17:15:00+00:00",
+          "actual_price_time_utc": "2026-09-02T17:15:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 53005.58984375,
+          "change_pct": 0.452386,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.360208,
+          "post_event_range_pct": 0.754113,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.360208
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-02",
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
+      "instrument": "XAUUSD",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "reference_price": 4386.5,
+      "reference_price_time_utc": "2026-09-02T13:14:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T13:30:00+00:00",
+          "actual_price_time_utc": "2026-09-02T13:30:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 4408.39990234375,
           "change_pct": 0.499257,
           "actual_direction": "UP",
@@ -184,6 +364,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T14:15:00+00:00",
           "actual_price_time_utc": "2026-09-02T14:15:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 4434.2001953125,
           "change_pct": 1.087432,
           "actual_direction": "UP",
@@ -198,6 +379,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T17:15:00+00:00",
           "actual_price_time_utc": "2026-09-02T17:15:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 4415.0,
           "change_pct": 0.649721,
           "actual_direction": "UP",
@@ -209,18 +391,20 @@
           "mae_pct": -0.068392
         },
         "next_session": {
-          "status": "NOT_IMPLEMENTED",
-          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         }
       }
     },
     {
       "prediction_id": "20260902T131500Z_ADP_AUGUST_JOBS",
       "instrument": "XAGUSD",
-      "status": "DONE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 65.2699966430664,
       "reference_price_time_utc": "2026-09-02T13:14:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
@@ -228,6 +412,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T13:30:00+00:00",
           "actual_price_time_utc": "2026-09-02T13:30:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 65.69499969482422,
           "change_pct": 0.651146,
           "actual_direction": "UP",
@@ -243,6 +428,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T14:15:00+00:00",
           "actual_price_time_utc": "2026-09-02T14:15:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 65.91500091552734,
           "change_pct": 0.988209,
           "actual_direction": "UP",
@@ -258,6 +444,7 @@
           "status": "DONE",
           "target_time_utc": "2026-09-02T17:15:00+00:00",
           "actual_price_time_utc": "2026-09-02T17:15:00+00:00",
+          "market_delay_minutes": 0.0,
           "price": 65.5199966430664,
           "change_pct": 0.383024,
           "actual_direction": "UP",
@@ -270,8 +457,9 @@
           "neutral_envelope_pct": 1.800208
         },
         "next_session": {
-          "status": "NOT_IMPLEMENTED",
-          "note": "Requires exchange-calendar aware session logic; planned for next phase."
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         }
       }
     }
