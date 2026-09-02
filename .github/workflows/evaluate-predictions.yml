@@ -11,6 +11,7 @@ on:
       - "src/market_data/**"
       - "tests/**"
       - "config/instruments.yaml"
+      - "config/market_context.yaml"
       - "requirements.txt"
       - ".github/workflows/evaluate-predictions.yml"
   schedule:
@@ -48,7 +49,7 @@ jobs:
       - name: Build performance statistics
         run: python -m src.statistics.build_stats
 
-      - name: Build learning profile
+      - name: Build context-aware learning profile
         run: python -m src.learning.build_learning_profile
 
       - name: Commit evaluation results and statistics
@@ -60,5 +61,5 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update Yahoo evaluations, statistics and learning profile"
+          git commit -m "Update Yahoo evaluations, statistics and context learning profile"
           git push
