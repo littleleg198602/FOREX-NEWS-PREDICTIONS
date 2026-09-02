@@ -6,6 +6,7 @@ on:
     paths:
       - "data/predictions/**"
       - "src/evaluation/**"
+      - "src/statistics/**"
       - "src/market_data/**"
       - "config/instruments.yaml"
       - "requirements.txt"
@@ -39,14 +40,17 @@ jobs:
       - name: Evaluate all predictions against Yahoo
         run: python -m src.evaluation.evaluate_all
 
-      - name: Commit evaluation results
+      - name: Build performance statistics
+        run: python -m src.statistics.build_stats
+
+      - name: Commit evaluation results and statistics
         run: |
-          if git diff --quiet -- data/evaluations; then
-            echo "No evaluation changes to commit."
+          if git diff --quiet -- data/evaluations data/statistics; then
+            echo "No evaluation/statistics changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/evaluations
-          git commit -m "Update Yahoo prediction evaluations"
+          git add data/evaluations data/statistics
+          git commit -m "Update Yahoo evaluations and prediction statistics"
           git push
