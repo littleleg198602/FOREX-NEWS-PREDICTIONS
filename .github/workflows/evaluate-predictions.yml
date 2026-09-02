@@ -45,12 +45,12 @@ jobs:
 
       - name: Commit evaluation results and statistics
         run: |
-          if git diff --quiet -- data/evaluations data/statistics; then
+          git add data/evaluations data/statistics
+          if git diff --cached --quiet; then
             echo "No evaluation/statistics changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/evaluations data/statistics
           git commit -m "Update Yahoo evaluations and prediction statistics"
           git push
