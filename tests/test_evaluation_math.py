@@ -1,7 +1,13 @@
+from datetime import datetime, timezone
+
+import pandas as pd
+
 from src.evaluation.evaluate_prediction import (
     _pct_change,
     _actual_direction,
+    _decision_time,
     _direction_correct,
+    _next_session_frame,
     _score_non_directional,
 )
 
@@ -48,3 +54,42 @@ def test_mixed_scoring_inside_neutral_envelope():
 def test_mixed_scoring_outside_neutral_envelope():
     scored = _score_non_directional("MIXED", 0.8, 1.0, 0.5)
     assert scored["correct"] is False
+
+
+def test_evaluation_anchor_never_precedes_prediction_creation():
+    event = datetime(2026, 9, 2, 13, 0, tzinfo=timezone.utc)
+    anchor, created, latency = _decision_time(event, "2026-09-02T13:15:00Z")
+    assert anchor == datetime(2026, 9, 2, 13, 15, tzinfo=timezone.utc)
+    assert created == anchor
+    assert latency == 900.0
+
+
+def test_pre_open_prediction_uses_same_day_as_next_relevant_session():
+    decision = datetime(2026, 9, 2, 13, 0, tzinfo=timezone.utc)  # 09:00 New York
+    now = datetime(2026, 9, 2, 22, 0, tzinfo=timezone.utc)
+    index = pd.DatetimeIndex([
+        "2026-09-01T20:00:00Z",
+        "2026-09-02T13:30:00Z",
+        "2026-09-02T20:00:00Z",
+    ])
+    frame = pd.DataFrame({"close": [100.0, 101.0, 102.0]}, index=index)
+    status, session, session_date = _next_session_frame(frame, "NDX", decision, now)
+    assert status == "DONE"
+    assert session_date.isoformat() == "2026-09-02"
+    assert session is not None and len(session) == 2
+
+
+def test_intraday_prediction_waits_for_next_trading_date():
+    decision = datetime(2026, 9, 2, 15, 0, tzinfo=timezone.utc)
+    now = datetime(2026, 9, 3, 22, 0, tzinfo=timezone.utc)
+    index = pd.DatetimeIndex([
+        "2026-09-02T13:30:00Z",
+        "2026-09-02T20:00:00Z",
+        "2026-09-03T13:30:00Z",
+        "2026-09-03T20:00:00Z",
+    ])
+    frame = pd.DataFrame({"close": [100.0, 101.0, 102.0, 103.0]}, index=index)
+    status, session, session_date = _next_session_frame(frame, "NDX", decision, now)
+    assert status == "DONE"
+    assert session_date.isoformat() == "2026-09-03"
+    assert session is not None and len(session) == 2
