@@ -28,6 +28,20 @@ def test_twenty_nine_samples_are_not_actionable():
     assert _recommendation(stats) == "WATCH_ONLY"
 
 
+def test_correlated_observations_from_few_events_are_not_actionable():
+    stats = _finalize(
+        {
+            "n": 40,
+            "correct": 35,
+            "sum_change_pct": 5.0,
+            "prediction_ids": {"event-a", "event-b", "event-c"},
+        }
+    )
+    assert stats["unique_events"] == 3
+    assert stats["sample_status"] == "INSUFFICIENT"
+    assert _recommendation(stats) == "NO_CHANGE"
+
+
 def test_actionable_strong_segment_can_boost_confidence():
     stats = _finalize({"n": 40, "correct": 30, "sum_change_pct": 5.0})
     assert stats["sample_status"] == "ACTIONABLE"
