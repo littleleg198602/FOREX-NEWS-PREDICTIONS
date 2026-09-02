@@ -6,7 +6,7 @@ import json
 
 from src.config import ROOT
 
-HORIZONS = ("15m", "1h", "4h")
+HORIZONS = ("15m", "1h", "4h", "next_session")
 SCORE_TYPES = ("directional", "mixed_neutral", "volatility")
 
 
@@ -48,6 +48,7 @@ def main() -> int:
                 "categories": raw.get("categories", []),
                 "eligible_for_hit_rate": bool(raw.get("eligible_for_hit_rate", True)),
                 "backfilled": bool(raw.get("backfilled", False)),
+                "is_example": bool(raw.get("is_example", False)),
             }
         except Exception:
             continue
@@ -59,6 +60,7 @@ def main() -> int:
         "evaluation_files": 0,
         "eligible_prediction_files": 0,
         "excluded_backfilled_or_ineligible": 0,
+        "excluded_examples": 0,
         "unscored_done_items": 0,
     }
 
@@ -72,8 +74,12 @@ def main() -> int:
         audit["evaluation_files"] += 1
         prediction_id = evaluation.get("prediction_id")
         meta = prediction_meta.get(prediction_id, {})
+        if bool(evaluation.get("is_example", meta.get("is_example", False))):
+            audit["excluded_examples"] += 1
+            continue
+
         eligible = bool(evaluation.get("eligible_for_hit_rate", meta.get("eligible_for_hit_rate", True)))
-        if not eligible:
+        if not eligible or bool(meta.get("backfilled", False)):
             audit["excluded_backfilled_or_ineligible"] += 1
             continue
 
@@ -110,7 +116,7 @@ def main() -> int:
 
     summary = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "scope": "eligible_for_hit_rate only; directional, MIXED and VOLATILITY are reported separately",
+        "scope": "eligible ex-ante predictions only; examples/backfills excluded; directional, MIXED and VOLATILITY reported separately",
         "audit": audit,
         "overall_by_score_type": {
             score_type: _finalize(block)
