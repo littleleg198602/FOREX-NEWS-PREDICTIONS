@@ -1,36 +1,63 @@
-version: 1
+version: 2
 
-# Context is captured at prediction time and must only use information available
-# at or before the event timestamp. This prevents future-data leakage.
+# Context must only use information available strictly before the prediction
+# decision time. Candidate symbols are tried in order; a fresh fallback may be
+# preferred when the primary cash-market series is stale or unavailable.
 context_series:
   DXY:
-    yahoo_symbol: "DX-Y.NYB"
     kind: "index"
     role: "usd_strength"
+    candidates:
+      - symbol: "DX-Y.NYB"
+      - symbol: "DX=F"
+        proxy_for: "US Dollar Index"
+
   US2Y:
-    yahoo_symbol: "^UST2Y"
     kind: "yield"
     role: "front_end_rates"
+    candidates:
+      - symbol: "ZT=F"
+        proxy_for: "US 2Y Treasury yield"
+        inverse_to_role: true
+        trend_metric: "pct"
+
   US10Y:
-    yahoo_symbol: "^TNX"
     kind: "yield"
     role: "long_rates"
+    candidates:
+      - symbol: "^TNX"
+        trend_metric: "abs"
+      - symbol: "ZN=F"
+        proxy_for: "US 10Y Treasury yield"
+        inverse_to_role: true
+        trend_metric: "pct"
+
   VIX:
-    yahoo_symbol: "^VIX"
     kind: "index"
     role: "risk_aversion"
+    max_staleness_minutes: 1440
+    candidates:
+      - symbol: "^VIX"
+
   WTI:
-    yahoo_symbol: "CL=F"
     kind: "commodity"
     role: "oil"
+    candidates:
+      - symbol: "CL=F"
+
   BRENT:
-    yahoo_symbol: "BZ=F"
     kind: "commodity"
     role: "oil"
+    candidates:
+      - symbol: "BZ=F"
 
 lookbacks_minutes:
   short: 60
   long: 240
+  history: 5760
+
+freshness:
+  default_max_staleness_minutes: 180
 
 regimes:
   VIX:
@@ -40,8 +67,10 @@ regimes:
     trend_threshold_pct_60m: 0.15
   US2Y:
     trend_threshold_abs_60m: 0.03
+    trend_threshold_pct_60m: 0.02
   US10Y:
     trend_threshold_abs_60m: 0.03
+    trend_threshold_pct_60m: 0.02
   WTI:
     trend_threshold_pct_60m: 0.75
   BRENT:
