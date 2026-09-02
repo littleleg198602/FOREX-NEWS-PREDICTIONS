@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 from src.config import ROOT
 from src.evaluation.evaluate_prediction import evaluate_prediction
@@ -20,6 +19,11 @@ def main() -> int:
         try:
             with path.open("r", encoding="utf-8") as f:
                 raw = json.load(f)
+
+            if bool(raw.get("is_example", False)):
+                print(f"[SKIP] {path}: example/test fixture")
+                skipped += 1
+                continue
 
             event_time = raw.get("event_time_utc") or raw.get("published_at_utc")
             if not event_time:
