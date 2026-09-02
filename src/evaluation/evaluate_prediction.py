@@ -7,7 +7,7 @@ import sys
 
 import pandas as pd
 
-from src.config import ROOT, load_evaluation_config
+from src.config import ROOT
 from src.market_data.yahoo_provider import fetch_1m_window, last_complete_bar_before, first_bar_at_or_after
 
 
@@ -34,7 +34,6 @@ def _direction_correct(predicted: str, actual: str) -> bool | None:
     predicted = predicted.upper()
     if predicted in {"UP", "DOWN"}:
         return predicted == actual
-    # MIXED/VOLATILITY require dedicated scoring rules, so MVP leaves them unscored.
     return None
 
 
@@ -132,14 +131,21 @@ def evaluate_prediction(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
         prediction = json.load(f)
 
-    event_time = _parse_utc(prediction["created_at_utc"])
+    event_time_value = prediction.get("event_time_utc") or prediction.get("published_at_utc")
+    if not event_time_value:
+        raise ValueError(f"Prediction {prediction.get('prediction_id', path.name)} has no event_time_utc/published_at_utc")
+
+    event_time = _parse_utc(event_time_value)
     prediction_id = prediction["prediction_id"]
 
     return {
         "prediction_id": prediction_id,
         "event_id": prediction.get("event_id"),
+        "event_time_utc": event_time.isoformat(),
         "evaluated_at_utc": datetime.now(timezone.utc).isoformat(),
         "model_version": prediction.get("model_version"),
+        "backfilled": bool(prediction.get("backfilled", False)),
+        "eligible_for_hit_rate": bool(prediction.get("eligible_for_hit_rate", True)),
         "results": [
             evaluate_one_instrument(prediction_id, event_time, item)
             for item in prediction.get("predictions", [])
