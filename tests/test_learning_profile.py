@@ -10,10 +10,22 @@ def test_confidence_buckets():
 
 
 def test_small_sample_does_not_change_model():
-    stats = _finalize({"n": 7, "correct": 7, "sum_change_pct": 1.0})
+    stats = _finalize({"n": 9, "correct": 9, "sum_change_pct": 1.0})
     assert stats["sample_status"] == "INSUFFICIENT"
     assert stats["learning_weight"] == 0.0
     assert _recommendation(stats) == "NO_CHANGE"
+
+
+def test_ten_samples_are_only_early_signal():
+    stats = _finalize({"n": 10, "correct": 10, "sum_change_pct": 1.0})
+    assert stats["sample_status"] == "EARLY_SIGNAL"
+    assert _recommendation(stats) == "WATCH_ONLY"
+
+
+def test_twenty_nine_samples_are_not_actionable():
+    stats = _finalize({"n": 29, "correct": 29, "sum_change_pct": 2.0})
+    assert stats["sample_status"] == "EARLY_SIGNAL"
+    assert _recommendation(stats) == "WATCH_ONLY"
 
 
 def test_actionable_strong_segment_can_boost_confidence():
