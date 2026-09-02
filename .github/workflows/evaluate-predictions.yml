@@ -12,10 +12,15 @@ on:
       - "tests/**"
       - "config/instruments.yaml"
       - "config/market_context.yaml"
+      - ".gitignore"
       - "requirements.txt"
       - ".github/workflows/evaluate-predictions.yml"
   schedule:
     - cron: "17 * * * *"
+
+concurrency:
+  group: evaluate-predictions-main
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -62,4 +67,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update Yahoo evaluations, statistics and context learning profile"
+          git pull --rebase origin main
           git push
