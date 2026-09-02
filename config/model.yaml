@@ -1,0 +1,13 @@
+version: 1
+
+prediction_model_version: "1.1.0"
+methodology_version: "1.1.0"
+effective_from_utc: "2026-09-02T21:10:00Z"
+
+notes:
+  - "Decision-time anchoring prevents evaluation from starting before the prediction exists."
+  - "MIXED and VOLATILITY use separate scoring logic."
+  - "next_session evaluation is enabled."
+  - "Pre-prediction context includes DXY, US2Y, US10Y, VIX, WTI and Brent."
+  - "Learning uses context-aware segments and independent event_id guardrails."
+  - "Backfilled, example and ineligible predictions are excluded from normal learning/hit-rate."
