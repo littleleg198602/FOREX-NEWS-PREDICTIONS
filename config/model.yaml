@@ -1,8 +1,8 @@
 version: 1
 
-prediction_model_version: "1.1.0"
-methodology_version: "1.1.0"
-effective_from_utc: "2026-09-02T21:10:00Z"
+prediction_model_version: "1.1.1"
+methodology_version: "1.1.1"
+effective_from_utc: "2026-09-03T05:35:00Z"
 
 notes:
   - "Decision-time anchoring prevents evaluation from starting before the prediction exists."
@@ -11,3 +11,5 @@ notes:
   - "Pre-prediction context includes DXY, US2Y, US10Y, VIX, WTI and Brent."
   - "Learning uses context-aware segments and independent event_id guardrails."
   - "Backfilled, example and ineligible predictions are excluded from normal learning/hit-rate."
+  - "Forex Factory relative timestamps such as '6 min ago' are converted to derived UTC publication times and retain source text, observation time and uncertainty metadata."
+  - "Monitoring uses an overlap window and deduplication so rounded relative timestamps do not cause missed stories."
