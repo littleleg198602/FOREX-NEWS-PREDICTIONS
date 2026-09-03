@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-03T05:51:50+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T05:51:50+00:00",
   "prediction_latency_seconds": 2750.0,
-  "evaluated_at_utc": "2026-09-03T05:55:04.306248+00:00",
+  "evaluated_at_utc": "2026-09-03T08:08:37.626878+00:00",
   "model_version": "1.1.1",
   "is_example": false,
   "backfilled": false,
@@ -64,19 +64,45 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
-      "reference_price": 4477.89990234375,
-      "reference_price_time_utc": "2026-09-03T05:45:00+00:00",
+      "reference_price": 4482.89990234375,
+      "reference_price_time_utc": "2026-09-03T05:51:00+00:00",
       "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T06:07:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 4478.7001953125,
+          "change_pct": -0.093683,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.287758,
+          "post_event_range_pct": 0.243144,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.287758
         },
         "1h": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00",
+          "actual_price_time_utc": "2026-09-03T06:52:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 4469.2998046875,
+          "change_pct": -0.303377,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.39706,
+          "post_event_range_pct": 0.501907,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.39706
         },
         "4h": {
           "status": "PENDING"
@@ -91,19 +117,43 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "XAGUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
-      "reference_price": 66.33999633789062,
-      "reference_price_time_utc": "2026-09-03T05:45:00+00:00",
+      "reference_price": 66.3949966430664,
+      "reference_price_time_utc": "2026-09-03T05:51:00+00:00",
       "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T06:07:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 66.57499694824219,
+          "change_pct": 0.271105,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.368996,
+          "post_event_range_pct": 0.527157,
+          "mfe_pct": 0.082838,
+          "mae_pct": -0.444319
         },
         "1h": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00",
+          "actual_price_time_utc": "2026-09-03T06:52:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 66.31500244140625,
+          "change_pct": -0.120482,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.926271,
+          "post_event_range_pct": 0.625048,
+          "mfe_pct": 0.180729,
+          "mae_pct": -0.444319
         },
         "4h": {
           "status": "PENDING"
@@ -118,19 +168,32 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "NI225",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
-      "reference_price": 64109.6015625,
-      "reference_price_time_utc": "2026-09-03T05:39:00+00:00",
+      "reference_price": 64184.3984375,
+      "reference_price_time_utc": "2026-09-03T05:51:00+00:00",
       "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T06:07:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 64402.87109375,
+          "change_pct": 0.340383,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.222589,
+          "post_event_range_pct": 0.391822,
+          "mfe_pct": -0.010444,
+          "mae_pct": -0.402265
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00"
         },
         "4h": {
           "status": "PENDING"
@@ -145,19 +208,32 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "AUS200",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
-      "reference_price": 9009.099609375,
-      "reference_price_time_utc": "2026-09-03T05:34:00+00:00",
+      "reference_price": 9014.7001953125,
+      "reference_price_time_utc": "2026-09-03T05:51:00+00:00",
       "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T06:07:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 9014.599609375,
+          "change_pct": -0.001116,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.065453,
+          "post_event_range_pct": 0.047698,
+          "mfe_pct": 0.027732,
+          "mae_pct": -0.019965
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00"
         },
         "4h": {
           "status": "PENDING"
@@ -172,7 +248,7 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 25839.33,
       "reference_price_time_utc": "2026-09-02T16:00:00+00:00",
@@ -181,17 +257,41 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 53.17,
+          "price": 25854.759765625,
+          "change_pct": 0.059714,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.239241,
+          "post_event_range_pct": 0.097288,
+          "mfe_pct": 0.036221,
+          "mae_pct": -0.061067
         },
         "1h": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 8.17,
+          "price": 25854.759765625,
+          "change_pct": 0.059714,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.239241,
+          "post_event_range_pct": 0.097288,
+          "mfe_pct": 0.036221,
+          "mae_pct": -0.061067
         },
         "4h": {
           "status": "PENDING"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "DOWN"
         }
       }
@@ -199,7 +299,7 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "FCHI40",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 8282.509765625,
       "reference_price_time_utc": "2026-09-02T15:29:00+00:00",
@@ -208,17 +308,41 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 53.17,
+          "price": 8275.150390625,
+          "change_pct": -0.088854,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.281431,
+          "post_event_range_pct": 0.002653,
+          "mfe_pct": 0.088854,
+          "mae_pct": 0.086202
         },
         "1h": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 8.17,
+          "price": 8275.150390625,
+          "change_pct": -0.088854,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.281431,
+          "post_event_range_pct": 0.002653,
+          "mfe_pct": 0.088854,
+          "mae_pct": 0.086202
         },
         "4h": {
           "status": "PENDING"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "DOWN"
         }
       }
@@ -226,7 +350,7 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 6361.7099609375,
       "reference_price_time_utc": "2026-09-02T15:29:00+00:00",
@@ -235,17 +359,41 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 53.17,
+          "price": 6364.81005859375,
+          "change_pct": 0.048731,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.219598,
+          "post_event_range_pct": 0.027984,
+          "mfe_pct": -0.020746,
+          "mae_pct": -0.048731
         },
         "1h": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 8.17,
+          "price": 6364.81005859375,
+          "change_pct": 0.048731,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.219598,
+          "post_event_range_pct": 0.027984,
+          "mfe_pct": -0.020746,
+          "mae_pct": -0.048731
         },
         "4h": {
           "status": "PENDING"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "DOWN"
         }
       }
@@ -253,7 +401,7 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "UK100",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 10756.45,
       "reference_price_time_utc": "2026-09-02T15:35:00+00:00",
@@ -262,17 +410,43 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 53.17,
+          "price": 10763.0703125,
+          "change_pct": 0.061547,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.221352,
+          "post_event_range_pct": 0.09994,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.221352
         },
         "1h": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 8.17,
+          "price": 10763.0703125,
+          "change_pct": 0.061547,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.221352,
+          "post_event_range_pct": 0.09994,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.221352
         },
         "4h": {
           "status": "PENDING"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "MIXED"
         }
       }
@@ -280,7 +454,7 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "SPA35",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 19781.80078125,
       "reference_price_time_utc": "2026-09-02T15:29:00+00:00",
@@ -289,17 +463,41 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 53.17,
+          "price": 19819.69921875,
+          "change_pct": 0.191582,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.360436,
+          "post_event_range_pct": 0.011621,
+          "mfe_pct": -0.179961,
+          "mae_pct": -0.191582
         },
         "1h": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 8.17,
+          "price": 19819.69921875,
+          "change_pct": 0.191582,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.360436,
+          "post_event_range_pct": 0.011621,
+          "mfe_pct": -0.179961,
+          "mae_pct": -0.191582
         },
         "4h": {
           "status": "PENDING"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "DOWN"
         }
       }
@@ -316,10 +514,12 @@
       "predicted_confidence": 7,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00"
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00"
         },
         "4h": {
           "status": "PENDING"
@@ -343,10 +543,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00"
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00"
         },
         "4h": {
           "status": "PENDING"
@@ -370,10 +572,12 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:06:50+00:00"
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T06:51:50+00:00"
         },
         "4h": {
           "status": "PENDING"

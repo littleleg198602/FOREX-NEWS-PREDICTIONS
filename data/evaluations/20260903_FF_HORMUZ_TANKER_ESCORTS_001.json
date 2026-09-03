@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-03T04:01:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T04:01:33+00:00",
   "prediction_latency_seconds": 2553.0,
-  "evaluated_at_utc": "2026-09-03T05:55:01.469308+00:00",
+  "evaluated_at_utc": "2026-09-03T08:08:36.105544+00:00",
   "model_version": "1.1.0",
   "is_example": false,
   "backfilled": false,
@@ -103,7 +103,8 @@
           "mae_pct": -0.250295
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -156,7 +157,8 @@
           "neutral_envelope_pct": 0.690741
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -207,7 +209,8 @@
           "mae_pct": -0.285389
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -258,7 +261,8 @@
           "mae_pct": -0.117482
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -270,7 +274,7 @@
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 25839.33,
       "reference_price_time_utc": "2026-09-02T16:00:00+00:00",
@@ -279,19 +283,42 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T04:16:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T04:16:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 163.45,
+          "price": 25854.759765625,
+          "change_pct": 0.059714,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.239241,
+          "post_event_range_pct": 0.097288,
+          "mfe_pct": 0.061067,
+          "mae_pct": -0.036221
         },
         "1h": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T05:01:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T05:01:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 118.45,
+          "price": 25854.759765625,
+          "change_pct": 0.059714,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.239241,
+          "post_event_range_pct": 0.097288,
+          "mfe_pct": 0.061067,
+          "mae_pct": -0.036221
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "UP"
         }
       }
@@ -299,7 +326,7 @@
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "FCHI40",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 8282.509765625,
       "reference_price_time_utc": "2026-09-02T15:29:00+00:00",
@@ -308,19 +335,42 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T04:16:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T04:16:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 163.45,
+          "price": 8275.150390625,
+          "change_pct": -0.088854,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.281431,
+          "post_event_range_pct": 0.002653,
+          "mfe_pct": -0.086202,
+          "mae_pct": -0.088854
         },
         "1h": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T05:01:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T05:01:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 118.45,
+          "price": 8275.150390625,
+          "change_pct": -0.088854,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.281431,
+          "post_event_range_pct": 0.002653,
+          "mfe_pct": -0.086202,
+          "mae_pct": -0.088854
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "UP"
         }
       }
@@ -328,7 +378,7 @@
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 6361.7099609375,
       "reference_price_time_utc": "2026-09-02T15:29:00+00:00",
@@ -337,19 +387,42 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T04:16:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T04:16:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 163.45,
+          "price": 6364.81005859375,
+          "change_pct": 0.048731,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.219598,
+          "post_event_range_pct": 0.027984,
+          "mfe_pct": 0.048731,
+          "mae_pct": 0.020746
         },
         "1h": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T05:01:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T05:01:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 118.45,
+          "price": 6364.81005859375,
+          "change_pct": 0.048731,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.219598,
+          "post_event_range_pct": 0.027984,
+          "mfe_pct": 0.048731,
+          "mae_pct": 0.020746
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "UP"
         }
       }
@@ -357,7 +430,7 @@
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "UK100",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 10756.45,
       "reference_price_time_utc": "2026-09-02T15:35:00+00:00",
@@ -366,19 +439,44 @@
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T04:16:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T04:16:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 163.45,
+          "price": 10763.0703125,
+          "change_pct": 0.061547,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.221352,
+          "post_event_range_pct": 0.09994,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.221352
         },
         "1h": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T05:01:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T05:01:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 118.45,
+          "price": 10763.0703125,
+          "change_pct": 0.061547,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.221352,
+          "post_event_range_pct": 0.09994,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.221352
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "MIXED"
         }
       }
@@ -386,7 +484,7 @@
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "SPA35",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 19781.80078125,
       "reference_price_time_utc": "2026-09-02T15:29:00+00:00",
@@ -395,19 +493,42 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T04:16:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T04:16:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 163.45,
+          "price": 19819.69921875,
+          "change_pct": 0.191582,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.360436,
+          "post_event_range_pct": 0.011621,
+          "mfe_pct": 0.191582,
+          "mae_pct": 0.179961
         },
         "1h": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-03T05:01:33+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T05:01:33+00:00",
+          "actual_price_time_utc": "2026-09-03T07:00:00+00:00",
+          "market_delay_minutes": 118.45,
+          "price": 19819.69921875,
+          "change_pct": 0.191582,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.360436,
+          "post_event_range_pct": 0.011621,
+          "mfe_pct": 0.191582,
+          "mae_pct": 0.179961
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "UP"
         }
       }
@@ -432,7 +553,8 @@
           "target_time_utc": "2026-09-03T05:01:33+00:00"
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -461,7 +583,8 @@
           "target_time_utc": "2026-09-03T05:01:33+00:00"
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -490,7 +613,8 @@
           "target_time_utc": "2026-09-03T05:01:33+00:00"
         },
         "4h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T08:01:33+00:00"
         },
         "next_session": {
           "status": "PENDING",

@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T19:08:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T19:08:00+00:00",
   "prediction_latency_seconds": 4920.0,
-  "evaluated_at_utc": "2026-09-03T05:54:46.955055+00:00",
+  "evaluated_at_utc": "2026-09-03T08:08:28.643065+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -145,7 +145,7 @@
     {
       "prediction_id": "20260902_FF_BESSENT_JAPAN_PLAN_001",
       "instrument": "NI225",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 64263.08984375,
       "reference_price_time_utc": "2026-09-02T06:29:00+00:00",
@@ -205,9 +205,21 @@
           "volatility_ratio_threshold": 1.25
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-03T06:29:00+00:00",
+          "price": 64269.48046875,
+          "change_pct": 0.009944,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.536126,
+          "post_event_range_pct": 1.481422,
+          "mfe_pct": 0.76294,
+          "mae_pct": -0.718482,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
