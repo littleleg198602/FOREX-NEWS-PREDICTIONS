@@ -1,0 +1,47 @@
+{
+  "prediction_id": "2026-09-03T23:51:42Z_FF_1416395",
+  "event_id": "IRAN_FINANCIAL_ISOLATION_EU_US_2026_09_03",
+  "created_at_utc": "2026-09-03T23:51:42Z",
+  "published_at_utc": "2026-09-03T23:39:42Z",
+  "observed_at_utc": "2026-09-03T23:51:42Z",
+  "source_time_text": "12 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416395-bessent-the-european-union-has-officially-joined-operation",
+  "headline_original": "Bessent: The European Union has officially joined Operation Economic Outcast",
+  "headline_cs": "Bessent: Evropská unie se připojila k operaci finanční izolace Íránu",
+  "summary_cs": "Americký ministr financí Scott Bessent uvedl, že Evropská unie se připojila k Operation Economic Outcast zaměřené na odříznutí íránského režimu od globálního finančního systému a financování jaderného programu, zbraní a proxy skupin. Jde o další koordinované zpřísnění ekonomického tlaku na Írán; samo o sobě nejde o vojenský útok, ale zvyšuje riziko odvety a prodlužuje geopolitickou prémii kolem Hormuzu a ropy.",
+  "categories": ["GEOPOLITICS", "IRAN", "SANCTIONS", "MIDDLE_EAST", "OIL_RISK"],
+  "region": ["US", "EU", "MIDDLE_EAST"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T23:51:42Z",
+    "dxy": {"value": 98.85, "direction": "DOWN", "regime": "BEARISH_INTRADAY", "source": "DollarMetal same-day DXY report", "source_time_note": "Latest reliably surfaced same-day DXY quote before prediction: 98.85 at 13:00 on Sep 3, with the index down on the day."},
+    "us2y": {"value": 4.332, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest reliably sourced same-day reading before prediction; two-year yield fell to 4.332%."},
+    "us10y": {"value": 4.761, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest reliably sourced same-day reading before prediction; 10-year yield fell to 4.761%."},
+    "vix": {"value": 15.1, "direction": "FLAT", "regime": "LOW_VOLATILITY", "source": "Barron's same-day VIX report", "source_time_note": "Same-day report described VIX as just over 15 before prediction; value stored as an approximate contemporaneous level, not a tick quote."},
+    "wti": {"value": 91.67, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "COMEX Live", "source_time_note": "Last trade 91.670 at 20:59 GMT on Sep 3, before prediction; +0.73% on the day."},
+    "brent": {"value": 95.82, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "COMEX Live", "source_time_note": "Last trade 95.820 at 21:36 GMT on Sep 3, before prediction; +0.20% on the day."},
+    "risk_regime": "WEAKER_DOLLAR_EASING_US_YIELDS_LOW_VIX_BUT_ELEVATED_OIL_AND_IRAN_GEOPOLITICAL_RISK",
+    "notes": "The sanctions headline arrives into a market with low VIX and easing US yields but still-elevated crude prices. That context argues against treating the story as a broad panic shock; the primary effect is a modest extension of geopolitical/oil risk and safe-haven support."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "The latest learning profile contains no ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments. EARLY_SIGNAL/WATCH_ONLY evidence remains advisory only and does not change confidence."
+  },
+  "predictions": [
+    {"instrument": "XAUUSD", "immediate": {"direction": "UP", "confidence": 6}, "next_session": {"direction": "MIXED", "confidence": 5}, "mechanism": "Coordinated US-EU financial pressure on Iran raises the probability of retaliation or prolonged confrontation, supporting geopolitical safe-haven demand; the weak dollar and easing Treasury yields are also supportive.", "invalidation": "A rapid de-escalation in US-Iran relations, clear progress toward negotiations, or a sharp rebound in DXY and US real/nominal yields overwhelms the sanctions risk premium.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "GDAXI", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Deeper EU involvement in financial pressure on Iran extends geopolitical and energy-price tail risk for Europe, which is relatively sensitive to imported energy costs.", "invalidation": "Oil prices fall materially and no Iranian retaliation or further sanctions escalation follows.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "STOXX50", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "EU participation in the sanctions campaign increases the chance of prolonged Middle East tension and an energy-cost risk premium for European equities.", "invalidation": "Brent falls decisively and the sanctions move is followed by de-escalatory diplomacy rather than retaliation.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "DOWN", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "The headline modestly raises geopolitical and oil-inflation tail risk, but low VIX and easing Treasury yields limit the expected equity downside.", "invalidation": "No further escalation occurs and oil/yields continue easing while risk appetite remains firm.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAGUSD", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Safe-haven and weaker-dollar support are offset by silver's cyclical exposure if sanctions raise energy costs and hurt growth expectations.", "invalidation": "Dollar, yields and risk appetite align decisively enough to dominate silver's conflicting monetary and industrial-demand channels.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
