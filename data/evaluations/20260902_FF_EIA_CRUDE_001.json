@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T17:56:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T17:56:00+00:00",
   "prediction_latency_seconds": 12360.0,
-  "evaluated_at_utc": "2026-09-03T17:26:33.838426+00:00",
+  "evaluated_at_utc": "2026-09-03T18:07:20.469705+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -220,7 +220,7 @@
     {
       "prediction_id": "20260902_FF_EIA_CRUDE_001",
       "instrument": "GDAXI",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 25839.33,
       "reference_price_time_utc": "2026-09-02T16:00:00+00:00",
@@ -274,9 +274,21 @@
           "mae_pct": -0.061067
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-03T16:00:00+00:00",
+          "price": 26003.32,
+          "change_pct": 0.634653,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.3543,
+          "post_event_range_pct": 0.862833,
+          "mfe_pct": 0.210881,
+          "mae_pct": -0.651952,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
