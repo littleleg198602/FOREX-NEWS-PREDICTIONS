@@ -1,0 +1,46 @@
+{
+  "prediction_id": "2026-09-03T21:03:28Z_FF_1416356",
+  "event_id": "FED_WALLER_TREASURY_SAFETY_PREMIUM_2026_09_03",
+  "created_at_utc": "2026-09-03T21:03:28Z",
+  "published_at_utc": "2026-09-03T20:58:28Z",
+  "observed_at_utc": "2026-09-03T21:03:28Z",
+  "source_time_text": "5 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories; Fundamental Analysis / Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416356-feds-waller-says-safety-premium-for-treasuries-is",
+  "headline_original": "Fed's Waller says safety premium for Treasuries is gone, pushing neutral rate higher",
+  "headline_cs": "Waller: Bezpečnostní prémie amerických dluhopisů zmizela a neutrální sazba je výš",
+  "summary_cs": "Christopher Waller uvedl, že americké státní dluhopisy už podle něj nenesou dřívější prémii za bezpečnost a likviditu, což posouvá neutrální úroveň sazeb výše. Jde o strukturálně jestřábí nový detail, který částečně stojí proti jeho dřívějšímu dnešnímu signálu, že při pokračující dezinflaci může Fed v září sazby ponechat beze změny.",
+  "categories": ["FED", "MONETARY_POLICY", "RATES", "TREASURIES", "US_MACRO"],
+  "region": ["US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T21:03:28Z",
+    "dxy": {"value": 98.85, "direction": "DOWN", "regime": "BEARISH_INTRADAY", "source": "TradersUnion current DXY page / Investing.com technical snapshot", "source_time_note": "Same-day current reading around 98.85; Investing.com technical snapshot at 2026-09-03T17:54:00Z classified DXY Strong Sell."},
+    "us2y": {"value": 4.34, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "Benzinga/Yahoo same-day US market report", "source_time_note": "Same-day reading around 4.34%, down about 5 bp after Waller's earlier comments; latest reliably sourced value available before prediction."},
+    "us10y": {"value": 4.75, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "Benzinga/Yahoo same-day US market report", "source_time_note": "Same-day reading around 4.75%, down about 4 bp and below the week's 4.81% high; latest reliably sourced value available before prediction."},
+    "vix": {"value": 14.53, "direction": "DOWN", "regime": "LOW_VOLATILITY_RISK_ON", "source": "MetricsHour VIX page", "source_time_note": "Updated 2026-09-03T18:01:00Z; latest reliably timestamped reading found before prediction."},
+    "wti": {"value": 91.6, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Pyth-derived WTI reference surfaced by Robinhood prediction market", "source_time_note": "Around 2026-09-03T19:15:00Z target/reference level was approximately 91.60; latest reliably timestamped intraday reference found before prediction."},
+    "brent": {"value": 95.0, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Yahoo/WSJ same-day market reports", "source_time_note": "Same-day reports placed Brent above $95; exact live quote timestamp unavailable, so value is conservatively stored as approximately 95.0 rather than inventing a more precise quote."},
+    "risk_regime": "WEAKER_DOLLAR_AND_EASING_TREASURY_YIELDS_WITH_LOW_VIX_BUT_ELEVATED_OIL_AND_NEW_STRUCTURAL_HAWKISH_RATE_SIGNAL",
+    "notes": "The current tape before this prediction was risk-on: DXY and Treasury yields had fallen and VIX was low. Waller's new statement is structurally hawkish because a higher neutral rate implies tighter equilibrium financial conditions, but it does not mechanically override the observed easing in yields or his earlier conditional support for a September hold. Elevated oil remains an inflationary counterweight."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL/WATCH_ONLY evidence is advisory only and does not materially change confidence."
+  },
+  "predictions": [
+    {"instrument": "NDX", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 5}, "mechanism": "A structurally higher neutral rate raises the long-run discount rate applied to duration-heavy growth equities, but falling actual Treasury yields and today's risk-on tape cap confidence.", "invalidation": "Treasury yields continue falling materially and markets treat Waller's remark as structural background rather than a change in near-term Fed pricing.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 5}, "mechanism": "A higher neutral rate implies tighter equilibrium financial conditions and higher valuation discount rates, partly offset by falling current yields and strong risk appetite.", "invalidation": "US yields remain in a sustained downtrend or Friday labor data sharply reinforce a no-hike/softer-Fed path.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAUUSD", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 5}, "mechanism": "A higher neutral rate is negative for non-yielding gold through the expected-rate channel, but the weaker dollar, easing observed yields and geopolitical risk prevent a high-confidence bearish call.", "invalidation": "DXY and Treasury yields continue falling or geopolitical safe-haven demand dominates the structural rate signal.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAGUSD", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Higher neutral-rate expectations are a headwind for precious metals, while a weaker dollar and silver's cyclical exposure create opposing forces.", "invalidation": "A decisive move in yields and DXY aligns in one direction and removes the current cross-signal.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
