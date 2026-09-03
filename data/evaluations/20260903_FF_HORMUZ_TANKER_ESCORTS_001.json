@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-03T04:01:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T04:01:33+00:00",
   "prediction_latency_seconds": 2553.0,
-  "evaluated_at_utc": "2026-09-03T21:43:53.331498+00:00",
+  "evaluated_at_utc": "2026-09-03T22:49:07.966266+00:00",
   "model_version": "1.1.0",
   "is_example": false,
   "backfilled": false,
@@ -676,7 +676,7 @@
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 29143.33,
       "reference_price_time_utc": "2026-09-02T21:16:00+00:00",
@@ -730,16 +730,28 @@
           "mae_pct": 0.283741
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "UP"
+          "actual_price_time_utc": "2026-09-03T21:15:00+00:00",
+          "price": 29482.32,
+          "change_pct": 1.163182,
+          "actual_direction": "UP",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.239354,
+          "post_event_range_pct": 1.295925,
+          "mfe_pct": 1.356429,
+          "mae_pct": 0.060504,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "WS30",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 53061.95,
       "reference_price_time_utc": "2026-09-02T20:42:00+00:00",
@@ -793,16 +805,28 @@
           "mae_pct": 0.465912
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "UP"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 53686.11,
+          "change_pct": 1.176285,
+          "actual_direction": "UP",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.284499,
+          "post_event_range_pct": 0.867574,
+          "mfe_pct": 1.290096,
+          "mae_pct": 0.422522,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 7666.6,
       "reference_price_time_utc": "2026-09-02T20:42:00+00:00",
@@ -856,9 +880,21 @@
           "mae_pct": 0.262306
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "UP"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 7747.71,
+          "change_pct": 1.057966,
+          "actual_direction": "UP",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.217831,
+          "post_event_range_pct": 0.913701,
+          "mfe_pct": 1.176007,
+          "mae_pct": 0.262306,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     }

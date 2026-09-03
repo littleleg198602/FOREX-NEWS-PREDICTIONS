@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T17:53:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T17:53:00+00:00",
   "prediction_latency_seconds": 15960.0,
-  "evaluated_at_utc": "2026-09-03T21:43:48.142224+00:00",
+  "evaluated_at_utc": "2026-09-03T22:49:05.632103+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -220,7 +220,7 @@
     {
       "prediction_id": "20260902_FF_YEN_INTERVENTION_001",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 29112.17578125,
       "reference_price_time_utc": "2026-09-02T17:52:00+00:00",
@@ -280,16 +280,28 @@
           "volatility_ratio_threshold": 1.25
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-03T21:15:00+00:00",
+          "price": 29482.32,
+          "change_pct": 1.271441,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.650394,
+          "post_event_range_pct": 1.297312,
+          "mfe_pct": 0.092242,
+          "mae_pct": -1.464895,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
     {
       "prediction_id": "20260902_FF_YEN_INTERVENTION_001",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 7666.240234375,
       "reference_price_time_utc": "2026-09-02T17:52:00+00:00",
@@ -346,16 +358,28 @@
           "neutral_envelope_pct": 0.555423
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 7747.71,
+          "change_pct": 1.062708,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.555423,
+          "post_event_range_pct": 0.913744,
+          "mfe_pct": 0.04905,
+          "mae_pct": -1.180755,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
     {
       "prediction_id": "20260902_FF_YEN_INTERVENTION_001",
       "instrument": "WS30",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 53002.5390625,
       "reference_price_time_utc": "2026-09-02T17:52:00+00:00",
@@ -412,9 +436,21 @@
           "neutral_envelope_pct": 0.535617
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 53686.11,
+          "change_pct": 1.289695,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.535617,
+          "post_event_range_pct": 0.868546,
+          "mfe_pct": 0.055901,
+          "mae_pct": -1.403633,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     }

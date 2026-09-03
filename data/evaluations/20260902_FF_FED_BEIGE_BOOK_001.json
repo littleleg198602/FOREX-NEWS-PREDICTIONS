@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T19:08:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T19:08:00+00:00",
   "prediction_latency_seconds": 4080.0,
-  "evaluated_at_utc": "2026-09-03T21:43:39.787334+00:00",
+  "evaluated_at_utc": "2026-09-03T22:49:01.050754+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -145,7 +145,7 @@
     {
       "prediction_id": "20260902_FF_FED_BEIGE_BOOK_001",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 29105.8203125,
       "reference_price_time_utc": "2026-09-02T19:07:00+00:00",
@@ -202,16 +202,28 @@
           "neutral_envelope_pct": 0.27608
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-03T21:15:00+00:00",
+          "price": 29482.32,
+          "change_pct": 1.293555,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.27608,
+          "post_event_range_pct": 1.297595,
+          "mfe_pct": 0.005556,
+          "mae_pct": -1.487051,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
     {
       "prediction_id": "20260902_FF_FED_BEIGE_BOOK_001",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 7665.7998046875,
       "reference_price_time_utc": "2026-09-02T19:07:00+00:00",
@@ -268,16 +280,29 @@
           "neutral_envelope_pct": 0.275899
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 7747.71,
+          "change_pct": 1.068515,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.275899,
+          "post_event_range_pct": 0.913796,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date",
+          "neutral_envelope_pct": 0.275899
         }
       }
     },
     {
       "prediction_id": "20260902_FF_FED_BEIGE_BOOK_001",
       "instrument": "WS30",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 53020.8203125,
       "reference_price_time_utc": "2026-09-02T19:07:00+00:00",
@@ -334,9 +359,22 @@
           "neutral_envelope_pct": 0.354578
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 53686.11,
+          "change_pct": 1.254771,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.354578,
+          "post_event_range_pct": 0.868247,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date",
+          "neutral_envelope_pct": 0.354578
         }
       }
     },

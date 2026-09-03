@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T17:56:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T17:56:00+00:00",
   "prediction_latency_seconds": 12360.0,
-  "evaluated_at_utc": "2026-09-03T21:43:41.916705+00:00",
+  "evaluated_at_utc": "2026-09-03T22:49:02.229653+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -520,7 +520,7 @@
     {
       "prediction_id": "20260902_FF_EIA_CRUDE_001",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 29108.189453125,
       "reference_price_time_utc": "2026-09-02T17:55:00+00:00",
@@ -574,16 +574,29 @@
           "mae_pct": -0.44253
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-03T21:15:00+00:00",
+          "price": 29482.32,
+          "change_pct": 1.28531,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.6242,
+          "post_event_range_pct": 1.29749,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date",
+          "neutral_envelope_pct": 0.6242
         }
       }
     },
     {
       "prediction_id": "20260902_FF_EIA_CRUDE_001",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 7666.02001953125,
       "reference_price_time_utc": "2026-09-02T17:55:00+00:00",
@@ -640,16 +653,29 @@
           "neutral_envelope_pct": 0.545
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 7747.71,
+          "change_pct": 1.065611,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.545,
+          "post_event_range_pct": 0.91377,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date",
+          "neutral_envelope_pct": 0.545
         }
       }
     },
     {
       "prediction_id": "20260902_FF_EIA_CRUDE_001",
       "instrument": "WS30",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 53012.0390625,
       "reference_price_time_utc": "2026-09-02T17:55:00+00:00",
@@ -706,9 +732,22 @@
           "neutral_envelope_pct": 0.535521
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-03T20:49:00+00:00",
+          "price": 53686.11,
+          "change_pct": 1.271543,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.535521,
+          "post_event_range_pct": 0.868391,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date",
+          "neutral_envelope_pct": 0.535521
         }
       }
     },
