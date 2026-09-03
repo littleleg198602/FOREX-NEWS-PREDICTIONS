@@ -1,0 +1,47 @@
+{
+  "prediction_id": "2026-09-03T18:05:27Z_FF_1416346",
+  "event_id": "OMAN_REJECTS_IRAN_HORMUZ_FEES_2026_09_03",
+  "created_at_utc": "2026-09-03T18:05:27Z",
+  "published_at_utc": "2026-09-03T16:40:00Z",
+  "observed_at_utc": "2026-09-03T18:05:27Z",
+  "source_time_text": "Sep 3, 5:40pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416346-oman-quietly-rejects-irans-pitch-for-strait-of",
+  "headline_original": "Oman quietly rejects Iran’s pitch for Strait of Hormuz fees — despite IRGC claim of deal",
+  "headline_cs": "Omán odmítl íránský návrh na poplatky za průjezd Hormuzem navzdory tvrzení IRGC o dohodě",
+  "summary_cs": "Omán podle zdrojů odmítl íránský návrh na společné vybírání poplatků od komerčních lodí v Hormuzském průlivu. To snižuje pravděpodobnost formalizovaného režimu poplatků a části dodatečné rizikové prémie v ropě, ale současný trh stále zůstává pod silným geopolitickým tlakem a ropa je zvýšená kvůli americko-íránské eskalaci.",
+  "categories": ["GEOPOLITICS", "ENERGY", "HORMUZ", "MIDDLE_EAST"],
+  "region": ["MIDDLE_EAST", "GLOBAL"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T18:05:27Z",
+    "dxy": {"value": 99.13, "direction": "DOWN", "regime": "WEAK_USD", "source": "TradersUnion same-day DXY page", "source_time_note": "Latest verified same-day value available before prediction; page reported DXY 99.13 and -0.43% on the day."},
+    "us2y": {"value": 4.36, "unit": "percent", "direction": "DOWN", "regime": "EASING_FRONT_END", "source": "CoinUnited/market summary same-day data", "source_time_note": "Latest verified same-day reading available before prediction; approximately 4.36%."},
+    "us10y": {"value": 4.754, "unit": "percent", "direction": "DOWN", "regime": "EASING_FROM_RECENT_HIGH", "source": "WSJ same-day bond market report", "source_time_note": "Latest verified same-day reading available before prediction; down from the recent 4.818% high."},
+    "vix": {"value": 15.2, "direction": "DOWN", "regime": "LOW_VOLATILITY", "source": "Barron's/Rio Times same-day market data", "source_time_note": "Latest verified same-day level available before prediction; VIX just above 15 / about 15.2."},
+    "wti": {"value": 91.51, "unit": "USD_per_barrel", "direction": "DOWN_SHORT_TERM", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "MoveSurge live market brief", "source_time_note": "Observed sequence 91.67 -> 91.48 -> 91.51 before prediction, showing a small immediate decline following the Oman headline."},
+    "brent": {"value": 97.29, "unit": "USD_per_barrel", "direction": "UP_DAILY", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters same-day oil report", "source_time_note": "Latest reliably sourced same-day value found before prediction; Brent remained strongly elevated on Middle East supply risk."},
+    "risk_regime": "WEAKER_USD_EASING_US_YIELDS_LOW_VIX_BUT_ELEVATED_OIL_AND_ACTIVE_MIDDLE_EAST_ESCALATION",
+    "notes": "The Oman headline is a modest de-escalatory oil-supply signal, but it does not override the dominant current macro fact that crude remains elevated because of active US-Iran conflict and Hormuz shipping risk. Confidence is therefore capped."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. Existing EARLY_SIGNAL segments are advisory only and do not change confidence."
+  },
+  "predictions": [
+    {"instrument": "XAUUSD", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Rejection of a formal Hormuz fee arrangement marginally reduces the tail risk of additional shipping friction and safe-haven demand, but active regional conflict limits the bearish signal for gold.", "invalidation": "Fresh attacks, tighter shipping restrictions, or a renewed surge in oil/geopolitical risk overwhelms the de-escalatory Oman signal.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Lower probability of a formalized Hormuz toll regime slightly reduces energy/inflation tail risk, supportive for broad risk assets, while elevated crude and active conflict cap confidence.", "invalidation": "Oil spikes again or conflict/shipping disruptions escalate despite Oman's rejection.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "NDX", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "A small reduction in oil-supply tail risk can ease inflation and yield pressure at the margin, which is supportive for rate-sensitive growth stocks.", "invalidation": "Treasury yields or oil reverse sharply higher on renewed escalation.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "GDAXI", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Europe is sensitive to imported energy costs, so reduced risk of extra Hormuz transit friction is mildly supportive, though crude remains elevated.", "invalidation": "Brent rises materially on fresh supply disruption or military escalation.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "STOXX50", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Lower marginal Hormuz fee/toll risk reduces one channel of energy-cost escalation for European equities.", "invalidation": "Fresh attacks or shipping curbs restore a stronger oil risk premium.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
