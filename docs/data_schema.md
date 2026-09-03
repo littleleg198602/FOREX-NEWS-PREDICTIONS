@@ -22,11 +22,41 @@ Povinná pole:
   "summary_cs": "...",
   "categories": ["GEOPOLITICS"],
   "region": ["US", "MIDDLE_EAST"],
-  "model_version": "1.0.0",
-  "market_context": {},
+  "model_version": "1.1.1",
+  "market_context_at_prediction": {},
   "predictions": []
 }
 ```
+
+### 1.1 Forex Factory relativní čas
+
+Forex Factory může místo absolutního času zobrazovat například `6 min ago`, `23 min ago` nebo `1 hr ago`. Takový údaj se **nesmí považovat za chybějící čas**.
+
+Při prvním zachycení zprávy se uloží:
+
+```json
+{
+  "source_time_text": "6 min ago",
+  "observed_at_utc": "2026-09-03T05:34:00Z",
+  "published_at_utc": "2026-09-03T05:28:00Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60
+}
+```
+
+Pravidla:
+
+- absolutní timestamp z Forex Factory má přednost,
+- relativní čas se přepočítá proti `observed_at_utc`,
+- původní text se vždy zachová v `source_time_text`,
+- přesnost/nejistota musí být explicitně uložená,
+- `created_at_utc` je skutečný okamžik vytvoření predikce a nikdy se nesmí zpětně posouvat k času publikace,
+- live predikce zachycená při prvním monitorovacím průchodu může být `eligible_for_hit_rate=true` i s odvozeným `published_at_utc`, protože cenové vyhodnocení se kotví k rozhodovacímu času predikce,
+- pokud není dostupný ani absolutní, ani použitelný relativní čas, záznam se uloží, ale podle pravidel projektu se označí jako časově neověřený/backfilled a nezapočítává se do standardního hit-rate.
+
+Monitoring používá překryv mezi běhy a deduplikaci podle URL nebo normalizovaného titulku/eventu, aby zaokrouhlené relativní časy nezpůsobovaly vynechané zprávy ani duplicity.
 
 ## 2. Predikce instrumentu
 
@@ -62,8 +92,9 @@ Confidence je celé číslo 1–10.
 
 Výchozí pravidlo:
 
-- použít close poslední kompletní 1min svíčky před časem publikace/zachycení zprávy,
-- nikdy nepoužívat svíčku, která už obsahuje reakci trhu po zprávě,
+- použít close poslední kompletní 1min svíčky před **rozhodovacím časem predikce**, ne před časem publikace, pokud predikce vznikla později,
+- rozhodovací čas je `max(published_at_utc/event_time_utc, created_at_utc)`,
+- nikdy nepoužívat svíčku, která obsahuje informace dostupné až po vytvoření predikce,
 - pokud 1min data nejsou dostupná, použít nejjemnější dostupný interval a uložit `price_resolution`,
 - pokud je trh zavřený, okamžitou reakci nehodnotit jako nulový pohyb; vyhodnocení začne od první relevantní obchodované ceny po otevření.
 
@@ -85,7 +116,7 @@ Pokud jsou dostupná data, ukládat v čase predikce:
 }
 ```
 
-Chybějící hodnota je `null`, nikdy se nedoplňuje odhadem.
+Chybějící hodnota je `null`, nikdy se nedoplňuje odhadem. Kontext nesmí obsahovat data známá až po `created_at_utc`/rozhodovacím čase.
 
 ## 5. Evaluation record
 
