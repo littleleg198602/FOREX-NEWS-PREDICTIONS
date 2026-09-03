@@ -59,13 +59,36 @@ jobs:
 
       - name: Commit evaluation results and statistics
         run: |
-          git add data/evaluations data/statistics
-          if git diff --cached --quiet; then
-            echo "No evaluation/statistics changes to commit."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update Yahoo evaluations, statistics and context learning profile"
-          git pull --rebase origin main
-          git push
+
+          for attempt in 1 2 3; do
+            git add data/evaluations data/statistics
+            if git diff --cached --quiet; then
+              echo "No evaluation/statistics changes to commit."
+              exit 0
+            fi
+
+            git commit -m "Update Yahoo evaluations, statistics and context learning profile"
+
+            if git push origin HEAD:main; then
+              echo "Evaluation results published successfully."
+              exit 0
+            fi
+
+            echo "Push raced with a newer commit on main (attempt ${attempt}/3)."
+            if [ "$attempt" -eq 3 ]; then
+              echo "Unable to publish after 3 attempts."
+              exit 1
+            fi
+
+            # Evaluation/statistics files are generated artifacts. Instead of
+            # rebasing them and creating content conflicts, sync to the newest
+            # main and regenerate from the latest prediction set.
+            git fetch origin main
+            git reset --hard origin/main
+            python -m pytest tests -q
+            python -m src.evaluation.evaluate_all
+            python -m src.statistics.build_stats
+            python -m src.learning.build_learning_profile
+          done
