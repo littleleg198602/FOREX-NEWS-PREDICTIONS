@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-09-03 — Methodology 1.1.1 / Forex Factory relative-time coverage
+
+- Forex Factory relative timestamps such as `6 min ago`, `23 min ago` and `1 hr ago` are now treated as usable source timestamps instead of missing times.
+- `published_at_utc` is derived from the observation time while preserving `source_time_text`, `observed_at_utc`, time source and uncertainty metadata.
+- Absolute Forex Factory timestamps remain preferred when available.
+- Live first-detection predictions with a derived relative publication time can remain eligible for hit-rate because evaluation is anchored to the real prediction decision time (`created_at_utc`), never to a backdated prediction time.
+- Monitoring now scans enough stories to cover the whole interval since the previous run with an overlap window, then deduplicates by URL or normalized headline/event context. This reduces missed stories caused by rounded relative timestamps and feed reordering without generating duplicate predictions.
+- Prediction/model methodology version increased to `1.1.1`.
+
+No automatic trading functionality was added.
+
 ## 2026-09-02 — Methodology 1.1 / audit hardening
 
 - Added explicit `config/model.yaml`; new live predictions use prediction/model methodology version `1.1.0`.
