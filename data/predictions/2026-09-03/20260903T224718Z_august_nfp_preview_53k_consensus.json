@@ -1,0 +1,47 @@
+{
+  "prediction_id": "2026-09-03T22:47:18Z_FF_1416378",
+  "event_id": "US_NFP_AUGUST_2026_PREVIEW_53K_2026_09_03",
+  "created_at_utc": "2026-09-03T22:47:18Z",
+  "published_at_utc": "2026-09-03T21:06:00Z",
+  "observed_at_utc": "2026-09-03T22:47:18Z",
+  "source_time_text": "Sep 3, 10:06pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories; Fundamental Analysis / Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416378-the-big-august-jobs-report-is-due-out",
+  "headline_original": "The big August jobs report is due out Friday. Here’s what to expect for what has been a jobless summer",
+  "headline_cs": "Páteční NFP: konsensus čeká jen 53 tisíc nových míst po téměř bezpracovním létě",
+  "summary_cs": "Nový preview před pátečními americkými payrolls uvádí Dow Jones konsensus pouze 53 tisíc nových pracovních míst a nezaměstnanost 4,1 %. Červen a červenec dohromady vykázaly čistý úbytek 3 tisíc míst, takže trh vstupuje do NFP s výrazně slabým pracovním příběhem; samotná data ale ještě zveřejněna nebyla.",
+  "categories": ["US_MACRO", "LABOR_MARKET", "NFP_PREVIEW", "FED"],
+  "region": ["US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T22:47:18Z",
+    "dxy": {"value": 98.86, "direction": "DOWN", "regime": "BEARISH_INTRADAY", "source": "Investing.com US Dollar Index", "source_time_note": "Latest same-day ICE/derived quote surfaced before prediction around 98.86, roughly -0.7% on the day."},
+    "us2y": {"value": 4.317, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest reliably sourced same-day reading found before prediction."},
+    "us10y": {"value": 4.744, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest reliably sourced same-day reading found before prediction, below the prior 4.818% peak."},
+    "vix": {"value": 14.50, "direction": "DOWN", "regime": "LOW_VOLATILITY_RISK_ON", "source": "Tallac Options VIX index page", "source_time_note": "September 3 same-day reading surfaced before prediction; low-volatility regime."},
+    "wti": {"value": 91.30, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters same-day oil market report", "source_time_note": "WTI around $91.30, a six-week-high area, before prediction."},
+    "brent": {"value": 95.52, "unit": "USD_per_barrel", "direction": "MIXED", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters same-day oil market report", "source_time_note": "Brent around $95.52, still elevated by Middle East risk, before prediction."},
+    "risk_regime": "WEAKER_DOLLAR_EASING_US_YIELDS_LOW_VIX_WITH_ELEVATED_OIL_AHEAD_OF_HIGH_IMPACT_NFP",
+    "notes": "Pre-prediction context is risk-on in equities and bonds after dovish Waller comments: DXY and Treasury yields are lower and VIX is subdued. Elevated oil remains an inflationary/geopolitical counterweight. The NFP preview is an expectations/positioning story, not the actual release, so directional confidence is intentionally modest while next-session volatility risk is higher."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL/WATCH_ONLY evidence is advisory only and does not materially change confidence."
+  },
+  "predictions": [
+    {"instrument": "XAUUSD", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "VOLATILITY", "confidence": 7}, "mechanism": "A very soft employment consensus reinforces the possibility of a less hawkish Fed path, while the already weaker dollar and falling Treasury yields support non-yielding gold ahead of NFP.", "invalidation": "US yields and DXY reverse sharply higher before the release or subsequent labor information materially raises the expected payroll outcome.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "NDX", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "VOLATILITY", "confidence": 7}, "mechanism": "Weak labor expectations can reduce expected policy tightening and discount rates, supporting duration-heavy technology shares, though growth fears cap confidence.", "invalidation": "Treasury yields rebound materially or the market shifts from rate-relief interpretation to recession/growth-scare pricing.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "MIXED", "confidence": 5}, "next_session": {"direction": "VOLATILITY", "confidence": 7}, "mechanism": "Lower-rate expectations are supportive but a 53k payroll consensus also highlights weak growth, leaving the broad index with offsetting signals before the actual release.", "invalidation": "A clear pre-release move in yields and DXY resolves the current rate-relief versus growth-scare cross-signal.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAGUSD", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "VOLATILITY", "confidence": 6}, "mechanism": "Lower yields and a weaker dollar support silver, while weak labor expectations can hurt its cyclical/industrial demand narrative.", "invalidation": "Dollar, yields and risk appetite align decisively in one direction before NFP.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "WS30", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "VOLATILITY", "confidence": 6}, "mechanism": "Lower rate expectations help valuations, but the Dow's cyclical exposure leaves it more sensitive to the weak-growth implication of a very soft payroll consensus.", "invalidation": "Pre-release macro data or yields decisively shift the balance toward either growth optimism or recession fear.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
