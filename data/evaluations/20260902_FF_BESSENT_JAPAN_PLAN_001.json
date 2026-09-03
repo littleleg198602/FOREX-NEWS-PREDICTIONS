@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T19:08:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T19:08:00+00:00",
   "prediction_latency_seconds": 4920.0,
-  "evaluated_at_utc": "2026-09-02T23:52:38.330832+00:00",
+  "evaluated_at_utc": "2026-09-03T00:17:05.605035+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -145,7 +145,7 @@
     {
       "prediction_id": "20260902_FF_BESSENT_JAPAN_PLAN_001",
       "instrument": "NI225",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "reference_price": 64263.08984375,
       "reference_price_time_utc": "2026-09-02T06:29:00+00:00",
@@ -154,20 +154,59 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-02T19:23:00+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T19:23:00+00:00",
+          "actual_price_time_utc": "2026-09-03T00:00:00+00:00",
+          "market_delay_minutes": 277.0,
+          "price": 64582.2109375,
+          "change_pct": 0.496585,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.376279,
+          "post_event_range_pct": 0.229428,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 0.609728,
+          "volatility_ratio_threshold": 1.25
         },
         "1h": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-02T20:08:00+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T20:08:00+00:00",
+          "actual_price_time_utc": "2026-09-03T00:00:00+00:00",
+          "market_delay_minutes": 232.0,
+          "price": 64582.2109375,
+          "change_pct": 0.496585,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.376279,
+          "post_event_range_pct": 0.229428,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 0.609728,
+          "volatility_ratio_threshold": 1.25
         },
         "4h": {
-          "status": "NO_TRADED_PRICE",
-          "target_time_utc": "2026-09-02T23:08:00+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-02T23:08:00+00:00",
+          "actual_price_time_utc": "2026-09-03T00:00:00+00:00",
+          "market_delay_minutes": 52.0,
+          "price": 64582.2109375,
+          "change_pct": 0.496585,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.536126,
+          "post_event_range_pct": 0.229428,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 0.427937,
+          "volatility_ratio_threshold": 1.25
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-03",
           "predicted_direction": "DOWN"
         }
       }
