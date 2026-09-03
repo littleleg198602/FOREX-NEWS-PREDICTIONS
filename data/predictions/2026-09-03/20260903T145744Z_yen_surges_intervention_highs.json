@@ -1,0 +1,52 @@
+{
+  "prediction_id": "2026-09-03T14:57:44Z_FF_1416324",
+  "event_id": "JPY_SURGE_INTERVENTION_HIGHS_2026_09_03",
+  "created_at_utc": "2026-09-03T14:57:44Z",
+  "published_at_utc": "2026-09-03T14:05:00Z",
+  "observed_at_utc": "2026-09-03T14:57:44Z",
+  "source_time_text": "Sep 3, 3:05pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories; Fundamental Analysis / Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416324-yen-suddenly-surges-to-bessent-intervention-highs-no",
+  "headline_original": "Yen Suddenly Surges To Bessent Intervention Highs... No One Knows Who/Why...",
+  "headline_cs": "Jen dál prudce posiluje k post-BOJ maximům; příčina není jasná",
+  "summary_cs": "Japonský jen pokračuje v novém, plynulejším posilování a dostal se k úrovním po předchozích zásazích/varováních kolem BOJ. Trh stále nemá potvrzení přímé intervence; kombinace intervenční opatrnosti a očekávání utažení BOJ však zvyšuje tlak na japonské exportéry.",
+  "categories": ["BOJ", "FX_INTERVENTION_RISK", "JPY", "MONETARY_POLICY"],
+  "region": ["JP"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T14:57:44Z",
+    "dxy": {"value": 99.166, "direction": "DOWN", "source": "WSJ same-day currency market report", "source_time_note": "Latest verified same-day reading available before prediction; DXY down about 0.4% to a six-day low."},
+    "us2y": {"value": 4.317, "unit": "percent", "direction": "DOWN", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest verified same-day reading available before prediction."},
+    "us10y": {"value": 4.744, "unit": "percent", "direction": "DOWN", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest verified same-day reading available before prediction, below the recent 4.818% high."},
+    "vix": {"value": 15.2, "direction": "LOW_STABLE", "source": "Barron's same-day VIX market report", "source_time_note": "Reported just above 15; 15.2 retained as approximate contemporaneous context, not an exact tick."},
+    "wti": {"value": 93.04, "unit": "USD_per_barrel", "direction": "UP", "source": "Reuters same-day oil market report", "source_time_note": "Latest same-day reported price found before prediction; oil at fresh six-week highs."},
+    "brent": {"value": 97.29, "unit": "USD_per_barrel", "direction": "UP", "source": "Reuters same-day oil market report", "source_time_note": "Latest same-day reported price found before prediction; oil at fresh six-week highs."},
+    "risk_regime": "WEAKER_USD_FALLING_US_YIELDS_LOW_VIX_BUT_HIGH_OIL_AND_STRONGER_JPY",
+    "notes": "Lower US yields and a weaker dollar are generally supportive for equities, but for Japan the sharp JPY appreciation and renewed intervention/tightening risk are the dominant immediate factors for exporters and NI225."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL/WATCH_ONLY evidence is advisory only and did not change confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "A materially stronger yen reduces translated overseas earnings for large Japanese exporters and, together with BOJ/intervention risk, raises the effective tightening impulse for Japanese equities.",
+      "invalidation": "JPY reverses sharply weaker, Japanese authorities clearly rule out intervention/tightening escalation, or falling global yields trigger a sufficiently strong broad equity rally to overwhelm the FX headwind.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
