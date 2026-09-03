@@ -1,0 +1,47 @@
+{
+  "prediction_id": "2026-09-03T18:47:48Z_FF_1416350",
+  "event_id": "US_IRAN_HORMUZ_2026_09_03",
+  "created_at_utc": "2026-09-03T18:47:48Z",
+  "published_at_utc": "2026-09-03T17:12:00Z",
+  "observed_at_utc": "2026-09-03T18:47:48Z",
+  "source_time_text": "Sep 3, 2026 1:12pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_timezone_assumption": "America/New_York (EDT, UTC-4), Forex Factory default display basis for this page",
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416350-us-vp-vance-were-not-talking-to-iran",
+  "headline_original": "US VP Vance: We're not talking to Iran unless they stop shooting at ships",
+  "headline_cs": "Vance: USA nebudou jednat s Íránem, dokud nepřestanou útoky na lodě",
+  "summary_cs": "Viceprezident JD Vance uvedl, že USA neplánují jednat s Íránem, dokud Teherán nepřestane útočit na komerční lodní dopravu v Hormuzském průlivu. Zároveň řekl, že velké bojové operace právě neprobíhají, takže jde o smíšený geopolitický signál s převahou rizika prodloužení napětí.",
+  "categories": ["GEOPOLITICS", "IRAN", "HORMUZ", "OIL_SUPPLY_RISK"],
+  "region": ["US", "MIDDLE_EAST"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T18:47:48Z",
+    "dxy": {"value": 98.88, "direction": "DOWN", "regime": "WEAK_USD", "source": "Reuters global markets report, latest verified same-day reading available before prediction", "source_time_note": "Reuters reported the dollar index down 0.72% to 98.88 before this prediction."},
+    "us2y": {"value": null, "unit": "percent", "direction": "DOWN", "regime": "EASING_FRONT_END", "source": "same-day rates context; exact verified numeric quote unavailable before prediction", "source_time_note": "Direction inferred from broad Treasury rally after Waller; numeric value intentionally left null."},
+    "us10y": {"value": 4.758, "unit": "percent", "direction": "DOWN", "regime": "EASING_LONG_YIELDS", "source": "Reuters global markets report", "source_time_note": "Reuters reported the 10-year yield down 3.6 bp to 4.758%."},
+    "vix": {"value": null, "direction": "DOWN", "regime": "MID_TEENS_LOW_TO_MODERATE_VOL", "source": "same-day volatility reporting", "source_time_note": "No sufficiently current verified spot quote found before prediction; value intentionally left null."},
+    "wti": {"value": 91.69, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_RISK_PREMIUM", "source": "Reuters global markets report", "source_time_note": "Reuters reported U.S. crude at $91.69, up 0.74%."},
+    "brent": {"value": 95.75, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_RISK_PREMIUM", "source": "Reuters global markets report", "source_time_note": "Reuters reported Brent at $95.75, up 0.13%."},
+    "risk_regime": "WEAK_USD_FALLING_TREASURY_YIELDS_RISK_ON_EQUITIES_BUT_ELEVATED_OIL_AND_HORMUZ_RISK",
+    "notes": "Current macro context is supportive for equities through lower yields and a weaker dollar, but elevated oil keeps geopolitical risk active. This prevents the Vance headline from receiving higher bearish confidence."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL is advisory only and did not alter confidence."
+  },
+  "predictions": [
+    {"instrument": "XAUUSD", "immediate": {"direction": "UP", "confidence": 6}, "next_session": {"direction": "MIXED", "confidence": 5}, "mechanism": "A harder condition for restarting talks keeps Hormuz tail risk and safe-haven demand alive, although the absence of major active combat limits the signal.", "invalidation": "Iran halts attacks on shipping, formal talks resume, or oil and geopolitical risk premia fall sharply.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Persistent Hormuz risk can sustain oil inflation and geopolitical risk premia, partly offsetting the day's lower-yield equity support.", "invalidation": "Shipping attacks stop or crude retreats materially while Treasury yields remain lower.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "NDX", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Geopolitical and oil-inflation risk is a near-term drag, but falling Treasury yields provide a strong offset for duration-sensitive tech.", "invalidation": "De-escalation in Hormuz or continued yield declines dominate the geopolitical signal.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAGUSD", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Safe-haven support conflicts with silver's cyclical sensitivity and the existing risk-on equity backdrop.", "invalidation": "A decisive geopolitical escalation or de-escalation resolves the competing drivers.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
