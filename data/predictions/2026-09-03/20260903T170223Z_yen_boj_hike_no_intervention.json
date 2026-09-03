@@ -1,0 +1,52 @@
+{
+  "prediction_id": "2026-09-03T17:02:23Z_FF_1416335",
+  "event_id": "JPY_BOJ_HIKE_BETS_NO_INTERVENTION_2026_09_03",
+  "created_at_utc": "2026-09-03T17:02:23Z",
+  "published_at_utc": "2026-09-03T15:51:00Z",
+  "observed_at_utc": "2026-09-03T17:02:23Z",
+  "source_time_text": "Sep 3, 4:51pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416335-yen-jumps-on-boj-hike-bets-us-dollar",
+  "headline_original": "Yen jumps on BOJ hike bets, US dollar slips on Waller comments",
+  "headline_cs": "Jen skáče vzhůru kvůli sázkám na zvýšení sazeb BOJ; intervence se nepotvrdila",
+  "summary_cs": "Japonský jen posílil zhruba o 2 % a trh zvýšil pravděpodobnost zářijového zvýšení sazeb BOJ. Nově zveřejněná data BOJ zároveň naznačují, že předchozí prudké posílení nebylo způsobeno oficiální devizovou intervencí, což podporuje názor, že pohyb je více fundamentální a může být trvalejší.",
+  "categories": ["BOJ", "MONETARY_POLICY", "JPY", "FX", "RATE_HIKE_EXPECTATIONS"],
+  "region": ["JP", "US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T17:02:23Z",
+    "dxy": {"value": 99.02, "direction": "DOWN", "source": "Reuters same-day FX market report", "source_time_note": "Latest verified same-day reading available before prediction; DXY down about 0.58% after Waller comments."},
+    "us2y": {"value": 4.317, "unit": "percent", "direction": "DOWN", "source": "Barron's same-day Treasury market report", "source_time_note": "Latest verified same-day reading available before prediction."},
+    "us10y": {"value": 4.744, "unit": "percent", "direction": "DOWN", "source": "Barron's same-day Treasury market report", "source_time_note": "Latest verified same-day reading available before prediction."},
+    "vix": {"value": 15.2, "direction": "LOW_STABLE", "source": "Barron's same-day VIX market report", "source_time_note": "Reported just above 15; approximate contemporaneous context rather than exact tick."},
+    "wti": {"value": 93.04, "unit": "USD_per_barrel", "direction": "UP", "source": "Reuters same-day oil market report", "source_time_note": "Latest same-day reported price found before prediction; fresh six-week high."},
+    "brent": {"value": 97.29, "unit": "USD_per_barrel", "direction": "UP", "source": "Reuters same-day oil market report", "source_time_note": "Latest same-day reported price found before prediction; fresh six-week high."},
+    "risk_regime": "WEAKER_USD_FALLING_US_YIELDS_LOW_VIX_HIGH_OIL_STRONG_JPY",
+    "notes": "Lower US yields and a weaker dollar support global risk assets, but for Japan the much stronger yen, high oil and increased BOJ hike probability are the dominant immediate forces. Confirmation that the yen move was not official intervention makes the JPY strength look more fundamentally driven."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL/WATCH_ONLY evidence is advisory only and did not change confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 7},
+      "next_session": {"direction": "DOWN", "confidence": 6},
+      "mechanism": "A stronger yen reduces translated overseas earnings for major Japanese exporters, while rising BOJ hike expectations increase the domestic discount rate. Confirmation that the prior JPY surge was not official intervention makes the move more likely to reflect persistent policy repricing rather than a temporary intervention shock.",
+      "invalidation": "JPY reverses materially weaker, BOJ officials push back strongly against near-term tightening, or a powerful global risk-on move overwhelms the currency and rate headwinds.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
