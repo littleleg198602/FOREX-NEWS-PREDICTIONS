@@ -1,0 +1,46 @@
+{
+  "prediction_id": "2026-09-03T09:54:26Z_FF_1416277",
+  "event_id": "EUROZONE_PPI_JULY_2026_09_03",
+  "created_at_utc": "2026-09-03T09:54:26Z",
+  "published_at_utc": "2026-09-03T09:00:00Z",
+  "observed_at_utc": "2026-09-03T09:54:26Z",
+  "source_time_text": "Sep 3, 10:00am on Forex Factory story page; monitored feed also showed 27 min ago on the captured feed view",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 3600,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416277-industrial-producer-prices-up-by-16-in-the",
+  "headline_original": "Industrial producer prices up by 1.6% in the euro area and by 1.4% in the EU",
+  "headline_cs": "Průmyslové výrobní ceny v eurozóně v červenci vzrostly meziměsíčně o 1,6 %",
+  "summary_cs": "Eurostat uvedl, že průmyslové výrobní ceny v červenci 2026 vzrostly proti červnu o 1,6 % v eurozóně a o 1,4 % v EU. Meziročně byly ceny v eurozóně výše o 5,8 %. Největší příspěvek přišel z energií, kde ceny vzrostly meziměsíčně o 5,6 %. To zvyšuje inflační riziko a může podporovat vyšší evropské výnosy a jestřábější očekávání ECB, což je krátkodobě protivítr pro evropské akcie.",
+  "categories": ["INFLATION", "PPI", "ECB", "EUROZONE_MACRO"],
+  "region": ["EUROZONE", "EU"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T09:54:26Z",
+    "dxy": {"value": 99.166, "direction": "DOWN", "source": "WSJ same-day currency market report", "source_time_note": "latest verified same-day reading available before prediction"},
+    "us2y": {"value": 4.362, "unit": "percent", "direction": "DOWN", "source": "Barron's same-day Treasury market update", "source_time_note": "latest verified early-session reading before prediction"},
+    "us10y": {"value": 4.765, "unit": "percent", "direction": "DOWN", "source": "Barron's same-day Treasury market update", "source_time_note": "latest verified early-session reading before prediction"},
+    "vix": {"value": null, "direction": null, "source": null, "source_time_note": "No sufficiently current reliably timestamped VIX value verified before prediction; left null rather than estimated."},
+    "wti": {"value": 90.51, "unit": "USD_per_barrel", "direction": "DOWN", "source": "Reuters same-day oil market report", "source_time_note": "latest verified European-session reading before prediction"},
+    "brent": {"value": 95.07, "unit": "USD_per_barrel", "direction": "DOWN", "source": "Reuters same-day oil market report", "source_time_note": "latest verified European-session reading before prediction"},
+    "risk_regime": "EASING_US_YIELDS_WEAKER_USD_WITH_ELEVATED_GEOPOLITICAL_OIL_PREMIUM",
+    "notes": "US yields and DXY were easing from recent highs while crude remained elevated because of Middle East risk. This reduces some global rate pressure, but the Eurozone PPI shock is locally inflationary and therefore still negative for rate-sensitive European equities."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. Existing evidence is EARLY_SIGNAL/WATCH_ONLY only and did not change confidence."
+  },
+  "predictions": [
+    {"instrument": "GDAXI", "immediate": {"direction": "DOWN", "confidence": 6}, "next_session": {"direction": "DOWN", "confidence": 5}, "mechanism": "Silný růst výrobních cen, tažený energií, zvyšuje inflační riziko a pravděpodobnost vyšších evropských výnosů; to zvyšuje diskontní sazbu a náklady financování pro německé akcie.", "invalidation": "Evropské výnosy budou dál výrazně klesat, ECB zprávu zjevně odhlédne jako dočasný energetický šok, nebo přijde silný risk-on katalyzátor, který rate efekt převáží.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "STOXX50", "immediate": {"direction": "DOWN", "confidence": 6}, "next_session": {"direction": "DOWN", "confidence": 5}, "mechanism": "Vyšší PPI zvyšuje obavy z přenosu nákladů do spotřebitelské inflace a podporuje vyšší diskontní sazby v eurozóně.", "invalidation": "Výnosy eurozóny klesnou navzdory datům nebo trh vyhodnotí růst cen jako čistě dočasný energetický efekt bez dopadu na ECB.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "FCHI40", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "DOWN", "confidence": 4}, "mechanism": "Vyšší nákladová inflace v eurozóně je mírně negativní pro valuace a marže francouzských firem, zejména pokud zvedne výnosy.", "invalidation": "Pokles evropských výnosů nebo jasný důkaz, že energetický cenový skok je jednorázový a bez širšího inflačního přenosu.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SPA35", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "DOWN", "confidence": 4}, "mechanism": "Vyšší eurozónová výrobní inflace může tlačit vzhůru očekávání sazeb a financování, což je protivítr pro širší španělský trh.", "invalidation": "ECB a dluhopisový trh data ignorují a evropské výnosy pokračují v poklesu.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
