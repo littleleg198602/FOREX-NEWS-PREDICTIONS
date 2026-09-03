@@ -1,0 +1,46 @@
+{
+  "prediction_id": "2026-09-03T14:05:38Z_FF_1416312",
+  "event_id": "FED_WALLER_DISINFLATION_HOLD_2026_09_03",
+  "created_at_utc": "2026-09-03T14:05:38Z",
+  "published_at_utc": "2026-09-03T12:57:38Z",
+  "observed_at_utc": "2026-09-03T14:05:38Z",
+  "source_time_text": "1 hr 8 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416312-waller-urges-giving-disinflation-a-chance-says-fed",
+  "headline_original": "Waller urges giving disinflation a chance, says Fed can wait one meeting",
+  "headline_cs": "Waller chce dát dezinflaci šanci a říká, že Fed může jedno zasedání vyčkat",
+  "summary_cs": "Guvernér Fedu Christopher Waller uvedl, že pokud nadcházející inflační data potvrdí zlepšení, podpořil by ponechání sazeb beze změny na zářijovém zasedání. Jeho tón je mírnější než nedávný jestřábí signál předsedy Warsha, ale následně zveřejněný silný ISM Services s vysokými cenami snižuje čistě dovish dopad této zprávy na forward výhled od okamžiku této predikce.",
+  "categories": ["FED", "MONETARY_POLICY", "DISINFLATION", "US_MACRO"],
+  "region": ["US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T14:05:38Z",
+    "dxy": {"value": 99.166, "direction": "DOWN", "source": "WSJ same-day currency market report", "source_time_note": "Latest verified same-day reading available before prediction; exact live quote timestamp unavailable."},
+    "us2y": {"value": 4.369, "unit": "percent", "direction": "DOWN", "source": "IC Markets same-day market analysis", "source_time_note": "Latest verified same-day reading available before prediction; exact live quote timestamp unavailable."},
+    "us10y": {"value": 4.774, "unit": "percent", "direction": "DOWN", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest verified same-day reading before prediction, down from 4.818% recent high."},
+    "vix": {"value": 15.2, "direction": "DOWN", "source": "ICRYPEX same-day market wrap", "source_time_note": "Latest verified same-day reading available before prediction; exact live quote timestamp unavailable."},
+    "wti": {"value": 90.51, "unit": "USD_per_barrel", "direction": "DOWN", "source": "Reuters same-day oil report", "source_time_note": "Verified at 2026-09-03T07:52:00Z; latest reliably timestamped value found before prediction."},
+    "brent": {"value": 95.07, "unit": "USD_per_barrel", "direction": "DOWN", "source": "Reuters same-day oil report", "source_time_note": "Verified at 2026-09-03T07:52:00Z; latest reliably timestamped value found before prediction."},
+    "risk_regime": "EASING_US_YIELDS_WEAKER_USD_LOW_VIX_WITH_ELEVATED_OIL_AND_FRESH_HAWKISH_ISM_COUNTERSIGNAL",
+    "notes": "Rates and DXY had eased before the prediction, supporting Waller's dovish mechanism, but the later and currently known ISM Services release was strong with elevated prices paid. Current macro facts therefore cap confidence; the learning profile does not override this context."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL/WATCH_ONLY evidence is advisory only."
+  },
+  "predictions": [
+    {"instrument": "NDX", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Dovish Waller lowers the marginal probability of an immediate Fed hike and can relieve rate-sensitive growth valuations, but the fresh strong ISM/price data limit the upside.", "invalidation": "US yields and hike odds rise decisively after strong macro data or Waller's conditional stance is overwhelmed by hotter inflation evidence.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "A possible September pause reduces immediate policy-tightening pressure, partly offset by resilient services activity and still-high inflation components.", "invalidation": "Treasury yields reverse sharply higher or incoming inflation/labor data re-establish a clear Fed-hike path.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAUUSD", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "A softer Fed stance is supportive through lower expected yields and a weaker dollar, while strong ISM price pressures cap confidence.", "invalidation": "US real/nominal yields and DXY rise materially on hotter data or Fed repricing.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAGUSD", "immediate": {"direction": "UP", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Lower marginal Fed-hike risk helps precious metals, but silver's cyclical sensitivity and the strong-services inflation mix make the signal less clean.", "invalidation": "Dollar and yields rise decisively or risk sentiment deteriorates enough to outweigh the rate effect.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
