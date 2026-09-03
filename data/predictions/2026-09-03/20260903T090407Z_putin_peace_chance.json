@@ -1,0 +1,136 @@
+{
+  "prediction_id": "2026-09-03T09:04:07Z_FF_1416264",
+  "event_id": "RUSSIA_UKRAINE_PEACE_CHANCE_2026_09_03",
+  "created_at_utc": "2026-09-03T09:04:07Z",
+  "published_at_utc": "2026-09-03T09:04:00Z",
+  "observed_at_utc": "2026-09-03T09:04:07Z",
+  "source_time_text": "Sep 3, 2026 9:04am (cross-checked on mirrored source page); Forex Factory source item also shows an absolute Sep 3 timestamp",
+  "time_source": "forex_factory_absolute_cross_checked",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416264-putin-there-are-chances-on-peace-agreement",
+  "headline_original": "Putin: There are chances on peace agreement",
+  "headline_cs": "Putin: Existuje šance na mírovou dohodu",
+  "summary_cs": "Vladimir Putin uvedl, že existuje šance na konstruktivní mírové rozhovory o Ukrajině, že Rusko a Ukrajina se musí nejprve dohodnout mezi sebou a že kontakty s Washingtonem pokračují. Jde o deeskalační rétoriku, nikoli o oznámení konkrétní dohody, takže hlavní krátkodobý dopad očekáváme přes evropskou rizikovou prémii a částečně přes safe-haven aktiva.",
+  "categories": ["GEOPOLITICS", "RUSSIA_UKRAINE", "PEACE_TALKS"],
+  "region": ["EUROPE", "RUSSIA", "UKRAINE", "US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T09:04:07Z",
+    "dxy": {
+      "value": 99.40,
+      "direction": "DOWN",
+      "source": "FXStreet same-day European-session report",
+      "source_time_note": "05:10 GMT reading; most recent reliably timestamped value found before prediction"
+    },
+    "us2y": {
+      "value": 4.383,
+      "unit": "percent",
+      "direction": "DOWN_FROM_PRIOR_HIGH",
+      "source": "WSJ same-day Treasury market report",
+      "source_time_note": "same-day verified reading available before prediction; not tick-synchronous"
+    },
+    "us10y": {
+      "value": 4.765,
+      "unit": "percent",
+      "direction": "DOWN_FROM_HIGHS",
+      "source": "WSJ same-day global bond market update",
+      "source_time_note": "latest same-day verified reading before prediction"
+    },
+    "vix": {
+      "value": 15.2,
+      "direction": "DOWN",
+      "source": "Yahoo-linked delayed market snapshot / same-day market reports",
+      "source_time_note": "latest confirmed value before US cash session; low-volatility regime"
+    },
+    "wti": {
+      "value": 90.51,
+      "unit": "USD_per_barrel",
+      "direction": "DOWN",
+      "source": "Reuters same-day oil market report",
+      "source_time_note": "latest verified European-session reading before prediction"
+    },
+    "brent": {
+      "value": 95.07,
+      "unit": "USD_per_barrel",
+      "direction": "DOWN",
+      "source": "Reuters same-day oil market report",
+      "source_time_note": "latest verified European-session reading before prediction"
+    },
+    "risk_regime": "CALM_WITH_HIGH_YIELDS_AND_GEOPOLITICAL_PREMIUM",
+    "notes": "DXY and Treasury yields had eased from recent highs, VIX remained low, and oil was modestly lower but still elevated because of the Iran conflict. The Russia-Ukraine peace headline therefore acts as an incremental de-escalation signal rather than a dominant global macro catalyst."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. Existing signals are EARLY_SIGNAL/WATCH_ONLY only and therefore did not alter confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Nižší očekávaná geopolitická riziková prémie v Evropě podporuje cyklické a exportní evropské akcie; německý trh je na vývoj války na Ukrajině citlivější než americké indexy.",
+      "invalidation": "Kreml nebo Kyjev rychle zpochybní reálnou možnost jednání, dojde k nové výrazné eskalaci nebo evropské výnosy prudce vzrostou.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Deeskalační titulky snižují evropskou geopolitickou rizikovou prémii a mohou krátkodobě podpořit širší eurozónové akcie.",
+      "invalidation": "Bez konkrétního pokroku v jednání se efekt vytratí; opačný směr nastane při nové eskalaci nebo prudkém růstu výnosů.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "Nižší evropská geopolitická prémie je mírně pozitivní pro francouzský akciový trh, i když dopad je méně přímý než na Německo.",
+      "invalidation": "Žádný konkrétní pokrok v mírových jednáních nebo obnovená eskalace konfliktu.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "SPA35",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "Risk-on přelití z evropské deeskalace může mírně podpořit španělské akcie, ale vazba je nepřímá.",
+      "invalidation": "Rychlé zhoršení geopolitických titulků nebo převaha negativního makro/rate šoku.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Nižší evropská geopolitická riziková prémie ubírá část safe-haven poptávky po zlatě, ale dominantní riziko zůstává v Íránu a na Hormuzu, proto je confidence omezená.",
+      "invalidation": "Nová eskalace na Ukrajině nebo Blízkém východě, prudší pokles amerických výnosů či další oslabení USD, které převáží mírový headline.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Stříbro čelí protichůdným vlivům: menší safe-haven poptávka je negativní, ale lepší evropský risk sentiment a průmyslový kanál jsou podpůrné.",
+      "invalidation": "Jasný trend v USD/výnosech nebo výrazná nová geopolitická eskalace, která vytvoří dominantní směr.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
