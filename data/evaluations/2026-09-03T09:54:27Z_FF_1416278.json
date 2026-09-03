@@ -1,0 +1,89 @@
+{
+  "prediction_id": "2026-09-03T09:54:27Z_FF_1416278",
+  "event_id": "JAPAN_MIMURA_FX_RATE_CHECKS_2026_09_03",
+  "event_time_utc": "2026-09-03T09:42:27+00:00",
+  "prediction_time_utc": "2026-09-03T09:54:27+00:00",
+  "evaluation_anchor_time_utc": "2026-09-03T09:54:27+00:00",
+  "prediction_latency_seconds": 720.0,
+  "evaluated_at_utc": "2026-09-03T10:51:20.922398+00:00",
+  "model_version": "1.1.1",
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_origin": "captured_at_prediction",
+  "market_context": {
+    "captured_at_utc": "2026-09-03T09:54:27Z",
+    "dxy": {
+      "value": 99.166,
+      "direction": "DOWN",
+      "source": "WSJ same-day currency market report",
+      "source_time_note": "latest verified same-day reading available before prediction"
+    },
+    "us2y": {
+      "value": 4.362,
+      "unit": "percent",
+      "direction": "DOWN",
+      "source": "Barron's same-day Treasury market update",
+      "source_time_note": "latest verified early-session reading before prediction"
+    },
+    "us10y": {
+      "value": 4.765,
+      "unit": "percent",
+      "direction": "DOWN",
+      "source": "Barron's same-day Treasury market update",
+      "source_time_note": "latest verified early-session reading before prediction"
+    },
+    "vix": {
+      "value": null,
+      "direction": null,
+      "source": null,
+      "source_time_note": "No sufficiently current reliably timestamped VIX value verified before prediction; left null rather than estimated."
+    },
+    "wti": {
+      "value": 90.51,
+      "unit": "USD_per_barrel",
+      "direction": "DOWN",
+      "source": "Reuters same-day oil market report",
+      "source_time_note": "latest verified European-session reading before prediction"
+    },
+    "brent": {
+      "value": 95.07,
+      "unit": "USD_per_barrel",
+      "direction": "DOWN",
+      "source": "Reuters same-day oil market report",
+      "source_time_note": "latest verified European-session reading before prediction"
+    },
+    "risk_regime": "STRONGER_YEN_EASING_US_YIELDS_WITH_INTERVENTION_RISK",
+    "notes": "The yen had already rallied sharply while US yields and DXY eased. Mimura's refusal to deny rate checks sustains intervention risk, so the incremental signal is negative for yen-sensitive Japanese exporters, but confidence is capped because much of the yen move was already underway."
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-03T09:54:27Z_FF_1416278",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "reference_price": 64269.48046875,
+      "reference_price_time_utc": "2026-09-03T06:29:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-03T10:09:27+00:00"
+        },
+        "1h": {
+          "status": "PENDING"
+        },
+        "4h": {
+          "status": "PENDING"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    }
+  ]
+}
