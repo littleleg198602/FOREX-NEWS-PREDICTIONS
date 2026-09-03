@@ -1,0 +1,84 @@
+{
+  "prediction_id": "20260903_FF_GOLD_200D_EMA_DIP_BUYING_001",
+  "event_id": "GOLD_200D_EMA_DIP_BUYING_2026_09_03",
+  "created_at_utc": "2026-09-03T00:48:42Z",
+  "event_time_utc": "2026-09-03T00:19:00Z",
+  "published_at_utc": "2026-09-03T00:19:00Z",
+  "source": "Forex Factory",
+  "source_section": "Latest Stories / Technical Analysis",
+  "source_url": "https://www.forexfactory.com/news/1416213-gold-holds-200-day-ema-futures-and-options-hint",
+  "headline_original": "Gold Holds 200-Day EMA, Futures and Options Hint at ‘Dip-Buying Mentality’",
+  "headline_cs": "Zlato drží 200denní EMA; futures a opce naznačují nákup poklesu",
+  "summary_cs": "FOREX.com upozorňuje, že zlato po předchozím poklesu našlo podporu kolem 200denního EMA a historického týdenního VPOC. Malá býčí svíčka s nadprůměrným objemem naznačuje přesun od prodejců ke kupcům a futures/opční struktura podporuje scénář nákupu poklesu. Proti tomu ale dál stojí zvýšené americké výnosy a stále jestřábí očekávání Fedu, proto je býčí výhled jen středně silný.",
+  "categories": ["PRECIOUS_METALS", "TECHNICAL", "DXY", "RATES"],
+  "region": ["US", "GLOBAL"],
+  "model_version": "1.1.0",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "eligibility_note": "Forex Factory exposed an exact story timestamp: Sep 3, 2026 1:19am Europe/London (GMT+1), converted to 2026-09-03T00:19:00Z. Evaluation anchor remains the later prediction decision time to avoid hindsight leakage.",
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_adjustment": false,
+    "reason": "The latest learning profile contains no ACTIONABLE segments in confidence, instrument, category, score-type or context-aware sections; historical evidence therefore did not change confidence."
+  },
+  "market_context_at_prediction": {
+    "captured_for_prediction_time_utc": "2026-09-03T00:48:42Z",
+    "information_cutoff": "at_or_before_prediction",
+    "note": "Values are the freshest verifiable public observations available during the run. Exact source quote timestamps are retained where exposed; otherwise the capture-time observation is stated explicitly and no later market information is used.",
+    "series": {
+      "DXY": {
+        "value": 99.60,
+        "timestamp_utc": "2026-09-02T23:32:16Z",
+        "short_term_regime": "FLAT",
+        "source": "Yahoo Finance DX-Y.NYB"
+      },
+      "US2Y": {
+        "value": 4.39,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "FLAT",
+        "source": "U.S. Treasury closing curve as reported by YieldCove"
+      },
+      "US10Y": {
+        "value": 4.79,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "FLAT",
+        "source": "U.S. Treasury closing curve as reported by YieldCove"
+      },
+      "VIX": {
+        "value": 15.20,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "LOW",
+        "source": "Cboe closing value as surfaced by Yahoo Finance / YieldCove"
+      },
+      "WTI": {
+        "value": 90.68,
+        "timestamp_utc": "2026-09-03T00:48:42Z",
+        "timestamp_note": "Capture-time observation; the WSJ early-Asia report exposed the price but not a precise quote timestamp.",
+        "short_term_regime": "FALLING",
+        "source": "Wall Street Journal early-Asia oil futures report"
+      },
+      "BRENT": {
+        "value": 95.63,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "ELEVATED",
+        "source": "Reuters Sep 2 settlement report"
+      }
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Technická podpora na 200denním EMA/VPOC spolu s objemem a náznaky dip-buyingu ve futures a opcích může spustit krátkodobý odraz. Nízký VIX a stabilní DXY tento odraz neblokují, ale vysoké americké výnosy kolem 4.8 % na 10Y omezují sílu býčího scénáře.",
+      "invalidation": "Jasný průraz a udržení pod 200denním EMA/VPOC, současně s posílením DXY nebo dalším růstem amerických výnosů, by býčí scénář zneplatnil."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Stříbro může krátkodobě těžit ze stejného precious-metals sentimentu jako zlato, ale článek se týká přímo zlata a stříbro má vyšší citlivost na průmyslový/rizikový cyklus, proto je confidence nižší.",
+      "invalidation": "Pokud zlato neudrží technickou podporu nebo DXY a americké výnosy zrychlí vzhůru, spillover do stříbra se pravděpodobně neudrží."
+    }
+  ]
+}
