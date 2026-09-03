@@ -1,0 +1,159 @@
+{
+  "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
+  "event_id": "HORMUZ_TANKER_ESCORTS_18M_BARRELS_2026_09_03",
+  "created_at_utc": "2026-09-03T04:01:33Z",
+  "event_time_utc": "2026-09-03T03:19:00Z",
+  "published_at_utc": "2026-09-03T03:19:00Z",
+  "source": "Forex Factory",
+  "source_section": "Fundamental Analysis / Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416222-cnn-report-us-military-escorts-40-tankers-with",
+  "headline_original": "CNN report US military escorts 40 tankers with 18 million barrels through Hormuz",
+  "headline_cs": "Americká armáda podle CNN eskortovala přes Hormuz 40 tankerů s 18 miliony barelů ropy",
+  "summary_cs": "Forex Factory přebírá zprávu, podle níž americká armáda během jediného dne eskortovala přes Hormuz 40 tankerů s přibližně 18 miliony barelů ropy. To se blíží předválečnému dennímu toku kolem 20 milionů barelů a oslabuje scénář dlouhodobého fyzického výpadku dodávek. Pro trhy jde o částečně deeskalační signál: může snižovat geopolitickou prémii v ropě, tlumit inflační tlak a podporovat akcie, zatímco ubírá část safe-haven podpory zlatu a stříbru.",
+  "categories": ["GEOPOLITICS", "MIDDLE_EAST", "ENERGY", "SUPPLY", "RISK_ON"],
+  "region": ["MIDDLE_EAST", "GLOBAL", "US"],
+  "model_version": "1.1.0",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "eligibility_note": "Forex Factory exposed an exact story timestamp: Sep 3, 4:19am Europe/London (BST), converted to 2026-09-03T03:19:00Z. Prediction was created later at 2026-09-03T04:01:33Z; evaluation should anchor to the decision time to avoid hindsight leakage.",
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_adjustment": false,
+    "reason": "The latest learning profile contains no ACTIONABLE segments in confidence, instrument, category, score-type or context-aware sections. Historical learning therefore did not alter confidence."
+  },
+  "market_context_at_prediction": {
+    "captured_for_prediction_time_utc": "2026-09-03T04:01:33Z",
+    "information_cutoff": "at_or_before_prediction",
+    "note": "Only observations available at or before the prediction decision time are recorded. Where the freshest public source exposed a market snapshot rather than an exchange-second timestamp, that limitation is retained explicitly.",
+    "series": {
+      "DXY": {
+        "value": 99.56,
+        "timestamp_utc": "2026-09-03T03:30:00Z",
+        "timestamp_note": "Fresh pre-prediction market snapshot; dollar marginally softer on the day.",
+        "short_term_regime": "FLAT",
+        "source": "Public market snapshot / U.S. Dollar Index"
+      },
+      "US2Y": {
+        "value": 4.383,
+        "timestamp_utc": "2026-09-03T03:30:00Z",
+        "timestamp_note": "Fresh pre-prediction Treasury market snapshot showing yields easing from multi-year highs.",
+        "short_term_regime": "FALLING",
+        "source": "Wall Street Journal U.S. Treasury market report"
+      },
+      "US10Y": {
+        "value": 4.793,
+        "timestamp_utc": "2026-09-03T03:30:00Z",
+        "timestamp_note": "Fresh pre-prediction Treasury market snapshot showing yields easing from recent highs.",
+        "short_term_regime": "FALLING",
+        "source": "Wall Street Journal / Reuters global markets"
+      },
+      "VIX": {
+        "value": 15.20,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "timestamp_note": "Latest completed U.S. session value available before prediction.",
+        "short_term_regime": "LOW",
+        "source": "U.S. market close snapshot"
+      },
+      "WTI": {
+        "value": 90.77,
+        "timestamp_utc": "2026-09-03T00:29:00Z",
+        "timestamp_note": "Reuters pre-prediction quote at 00:29 UTC; retained rather than substituting any later quote.",
+        "short_term_regime": "FALLING",
+        "source": "Reuters"
+      },
+      "BRENT": {
+        "value": 95.20,
+        "timestamp_utc": "2026-09-03T00:29:00Z",
+        "timestamp_note": "Reuters pre-prediction quote at 00:29 UTC; retained rather than substituting any later quote.",
+        "short_term_regime": "FALLING",
+        "source": "Reuters"
+      }
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Obnovení téměř předválečného průtoku tankerů přes Hormuz snižuje část geopolitické a inflační prémie, která podporovala zlato. Současně ale klesající americké výnosy zlatu pomáhají, proto je bearish signál jen středně silný.",
+      "invalidation": "Nové útoky na tankery, prudké zhoršení bezpečnosti Hormuzu nebo další výrazný pokles amerických výnosů by bearish scénář pro zlato zneplatnily."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Nižší geopolitická prémie je negativní pro safe-haven složku stříbra, ale lepší risk sentiment a průmyslová citlivost mohou tento efekt kompenzovat.",
+      "invalidation": "Výrazný nový risk-off nebo naopak silný globální růstový impuls by vychýlil stříbro z neutrálního scénáře."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Nižší riziko fyzického výpadku ropy snižuje dovozní energetické náklady a geopolitický risk-off, což je pro japonské akcie pozitivní.",
+      "invalidation": "Další eskalace v Hormuzu nebo obnovený růst ropy by pozitivní scénář rychle oslabily."
+    },
+    {
+      "instrument": "AUS200",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "Lepší globální risk sentiment podporuje index, i když případný pokles energetických titulů může část efektu tlumit.",
+      "invalidation": "Silný propad komoditních a energetických akcií nebo nová geopolitická eskalace by bullish scénář zneplatnily."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Evropským cyklickým akciím prospívá nižší energetická a geopolitická prémie a menší tlak na inflační očekávání.",
+      "invalidation": "Návrat Brent/WTI prudce vzhůru nebo nové omezení průtoku Hormuzem by pozitivní efekt zrušily."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "Pokles rizika energetického šoku podporuje evropský risk sentiment a snižuje tlak na marže firem i sazby.",
+      "invalidation": "Obnovená eskalace nebo prudký růst ropy by bullish scénář zneplatnily."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Širší evropský index těží z nižší pravděpodobnosti dlouhodobého ropného šoku a zlepšení globálního risk sentimentu.",
+      "invalidation": "Nové narušení dopravy přes Hormuz nebo prudké zvýšení výnosů by pozitivní scénář zrušily."
+    },
+    {
+      "instrument": "UK100",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Nižší geopolitické riziko podporuje širší trh, ale případný pokles ropy může zatížit vysokou váhu energetických firem v FTSE 100.",
+      "invalidation": "Pokud ropa výrazně posílí nebo naopak energetické tituly prudce klesnou, index se může jasně vychýlit z neutrálního scénáře."
+    },
+    {
+      "instrument": "SPA35",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "Nižší energetická a geopolitická prémie zlepšuje evropské růstové podmínky a podporuje risk-on.",
+      "invalidation": "Obnovení výpadků v Hormuzu nebo prudký růst ropy by pozitivní scénář zneplatnily."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Nižší geopolitická a inflační prémie spolu s mírně klesajícími americkými výnosy vytváří příznivější prostředí pro růstově oceněné technologické akcie.",
+      "invalidation": "Opětovný růst výnosů nebo nová eskalace konfliktu by technologický bullish scénář oslabily."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "Nižší riziko energetického šoku podporuje průmysl a spotřebitele, i když nižší ropa může brzdit energetickou složku indexu.",
+      "invalidation": "Nové přerušení toku ropy nebo prudké zvýšení výnosů by pozitivní efekt zrušily."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Téměř normalizovaný průtok tankerů snižuje pravděpodobnost dlouhodobého energetického šoku, tlumí inflační prémii a podporuje širší risk-on sentiment.",
+      "invalidation": "Nové útoky na tankerovou dopravu, prudký návrat ropy nahoru nebo obnovený růst výnosů by bullish scénář zneplatnily."
+    }
+  ]
+}
