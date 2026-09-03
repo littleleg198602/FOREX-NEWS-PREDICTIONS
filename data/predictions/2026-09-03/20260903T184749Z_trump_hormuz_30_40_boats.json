@@ -1,0 +1,48 @@
+{
+  "prediction_id": "2026-09-03T18:47:49Z_FF_1416351",
+  "event_id": "US_IRAN_HORMUZ_2026_09_03",
+  "created_at_utc": "2026-09-03T18:47:49Z",
+  "published_at_utc": "2026-09-03T17:23:00Z",
+  "observed_at_utc": "2026-09-03T18:47:48Z",
+  "source_time_text": "Sep 3, 2026 1:23pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_timezone_assumption": "America/New_York (EDT, UTC-4), Forex Factory default display basis for this page",
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416351-trump-30-to-40-boats-nightly-coming-through",
+  "headline_original": "Trump: 30 to 40 boats nightly coming through Hormuz Strait",
+  "headline_cs": "Trump: Hormuzem nyní projíždí 30 až 40 lodí každou noc",
+  "summary_cs": "Donald Trump uvedl, že Hormuzským průlivem nyní každou noc projíždí 30 až 40 lodí. Pokud je toto tempo udržitelné, snižuje to bezprostřední riziko úplného zablokování toku ropy přes průliv, i když širší konflikt a útoky na lodní dopravu pokračují.",
+  "categories": ["GEOPOLITICS", "IRAN", "HORMUZ", "OIL_SUPPLY"],
+  "region": ["US", "MIDDLE_EAST"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T18:47:49Z",
+    "dxy": {"value": 98.88, "direction": "DOWN", "regime": "WEAK_USD", "source": "Reuters global markets report, latest verified same-day reading available before prediction", "source_time_note": "Reuters reported the dollar index down 0.72% to 98.88 before this prediction."},
+    "us2y": {"value": null, "unit": "percent", "direction": "DOWN", "regime": "EASING_FRONT_END", "source": "same-day rates context; exact verified numeric quote unavailable before prediction", "source_time_note": "Direction inferred from broad Treasury rally after Waller; numeric value intentionally left null."},
+    "us10y": {"value": 4.758, "unit": "percent", "direction": "DOWN", "regime": "EASING_LONG_YIELDS", "source": "Reuters global markets report", "source_time_note": "Reuters reported the 10-year yield down 3.6 bp to 4.758%."},
+    "vix": {"value": null, "direction": "DOWN", "regime": "MID_TEENS_LOW_TO_MODERATE_VOL", "source": "same-day volatility reporting", "source_time_note": "No sufficiently current verified spot quote found before prediction; value intentionally left null."},
+    "wti": {"value": 91.69, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_RISK_PREMIUM", "source": "Reuters global markets report", "source_time_note": "Reuters reported U.S. crude at $91.69, up 0.74%."},
+    "brent": {"value": 95.75, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_RISK_PREMIUM", "source": "Reuters global markets report", "source_time_note": "Reuters reported Brent at $95.75, up 0.13%."},
+    "risk_regime": "WEAK_USD_FALLING_TREASURY_YIELDS_RISK_ON_EQUITIES_BUT_ELEVATED_OIL_AND_HORMUZ_RISK",
+    "notes": "The shipping-flow headline is mildly de-escalatory for oil-supply risk, but WTI and Brent remain elevated. Confidence is therefore capped and the headline does not override the broader conflict backdrop."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL is advisory only and did not alter confidence."
+  },
+  "predictions": [
+    {"instrument": "SP500", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Continued vessel traffic reduces the probability of an immediate complete Hormuz supply shutdown, easing a portion of oil-inflation and geopolitical risk premia.", "invalidation": "New successful attacks sharply reduce transit volumes or crude prices accelerate higher despite the reported shipping flow.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "NDX", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Lower immediate oil-supply tail risk complements the existing support from falling Treasury yields, though the conflict remains unresolved.", "invalidation": "A renewed Hormuz disruption or rising yields overwhelms the de-escalatory supply signal.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "GDAXI", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Europe is sensitive to imported energy costs; evidence that shipping continues through Hormuz slightly reduces the risk of a renewed energy shock.", "invalidation": "Transit falls materially or Brent resumes a sharp breakout higher.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "STOXX50", "immediate": {"direction": "UP", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Reduced probability of an immediate Hormuz closure marginally lowers energy and inflation tail risk for European equities.", "invalidation": "Shipping disruption intensifies or Brent rises sharply despite the headline.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAUUSD", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Evidence of continued Hormuz traffic trims a portion of the safe-haven premium, but unresolved attacks and a weak dollar limit downside conviction.", "invalidation": "Fresh attacks materially disrupt shipping or geopolitical escalation lifts safe-haven demand.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
