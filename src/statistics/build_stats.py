@@ -33,6 +33,67 @@ def _finalize(block: dict) -> dict:
     return out
 
 
+def _combine_score_types(finalized_by_score_type: dict) -> dict:
+    """Combine each score type using its own correctness rule.
+
+    Directional, MIXED and VOLATILITY keep their separate statistics, but this
+    provides one easy-to-read overall hit rate for progress tracking.
+    """
+    combined = {}
+    for horizon in HORIZONS:
+        n = 0
+        correct = 0
+        by_type = {}
+        for score_type in SCORE_TYPES:
+            item = finalized_by_score_type.get(score_type, {}).get(horizon, {})
+            type_n = int(item.get("n", 0) or 0)
+            type_correct = int(item.get("correct", 0) or 0)
+            n += type_n
+            correct += type_correct
+            by_type[score_type] = {
+                "n": type_n,
+                "correct": type_correct,
+                "hit_rate_pct": item.get("hit_rate_pct"),
+            }
+        combined[horizon] = {
+            "n": n,
+            "correct": correct,
+            "hit_rate_pct": _safe_rate(correct, n),
+            "by_score_type": by_type,
+        }
+    return combined
+
+
+def _write_daily_performance_snapshot(out_root, generated_at: datetime, audit: dict, overall_combined: dict) -> None:
+    """Keep one end-state snapshot per UTC day for learning progress comparisons."""
+    history_path = out_root / "performance_history.json"
+    history = {"scope": "daily UTC snapshots of eligible ex-ante scored predictions", "snapshots": []}
+    if history_path.exists():
+        try:
+            with history_path.open("r", encoding="utf-8") as f:
+                loaded = json.load(f)
+            if isinstance(loaded, dict) and isinstance(loaded.get("snapshots"), list):
+                history = loaded
+        except Exception:
+            pass
+
+    today = generated_at.date().isoformat()
+    snapshot = {
+        "date_utc": today,
+        "generated_at_utc": generated_at.isoformat(),
+        "eligible_prediction_files": audit.get("eligible_prediction_files", 0),
+        "overall_combined": overall_combined,
+    }
+
+    snapshots = [row for row in history.get("snapshots", []) if row.get("date_utc") != today]
+    snapshots.append(snapshot)
+    snapshots.sort(key=lambda row: row.get("date_utc", ""))
+    history["snapshots"] = snapshots[-365:]
+
+    with history_path.open("w", encoding="utf-8") as f:
+        json.dump(history, f, ensure_ascii=False, indent=2)
+
+
 def main() -> int:
     evaluations_root = ROOT / "data" / "evaluations"
     predictions_root = ROOT / "data" / "predictions"
@@ -114,14 +175,19 @@ def main() -> int:
                     stats["correct"] += int(bool(correct))
                     stats["sum_change_pct"] += change_pct
 
+    generated_at = datetime.now(timezone.utc)
+    finalized_overall = {
+        score_type: _finalize(block)
+        for score_type, block in overall_by_score_type.items()
+    }
+    overall_combined = _combine_score_types(finalized_overall)
+
     summary = {
-        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "generated_at_utc": generated_at.isoformat(),
         "scope": "eligible ex-ante predictions only; examples/backfills excluded; directional, MIXED and VOLATILITY reported separately",
         "audit": audit,
-        "overall_by_score_type": {
-            score_type: _finalize(block)
-            for score_type, block in overall_by_score_type.items()
-        },
+        "overall_combined": overall_combined,
+        "overall_by_score_type": finalized_overall,
         "by_instrument": {
             name: {score_type: _finalize(block) for score_type, block in score_blocks.items()}
             for name, score_blocks in sorted(by_instrument.items())
@@ -135,6 +201,8 @@ def main() -> int:
     out_path = out_root / "summary.json"
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
+
+    _write_daily_performance_snapshot(out_root, generated_at, audit, overall_combined)
 
     print(out_path)
     return 0
