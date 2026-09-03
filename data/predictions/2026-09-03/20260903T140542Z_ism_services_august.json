@@ -1,0 +1,47 @@
+{
+  "prediction_id": "2026-09-03T14:05:42Z_FF_1416333",
+  "event_id": "US_ISM_SERVICES_AUG_2026_09_03",
+  "created_at_utc": "2026-09-03T14:05:42Z",
+  "published_at_utc": "2026-09-03T14:03:42Z",
+  "observed_at_utc": "2026-09-03T14:05:42Z",
+  "source_time_text": "2 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416333-us-services-pmi-at-554-august-2026-ism",
+  "headline_original": "US Services PMI at 55.4%; August 2026 ISM Services PMI Report",
+  "headline_cs": "Americké služby zrychlily: ISM Services 55,4 a cenové tlaky znovu vzrostly",
+  "summary_cs": "ISM Services za srpen vzrostl na 55,4 proti odhadu 54,1 a předchozím 54,1. Nové objednávky vyskočily na 60,9 a Prices Paid na 72,6, zatímco zaměstnanost zůstala v kontrakci na 47,8. Kombinace silného růstu a vysokých cen je krátkodobě jestřábí pro sazby a negativní hlavně pro duration-sensitive akcie a drahé kovy, i když slabší zaměstnanost signál částečně tlumí.",
+  "categories": ["ISM", "SERVICES", "US_GROWTH", "INFLATION", "FED"],
+  "region": ["US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-03T14:05:42Z",
+    "dxy": {"value": 99.166, "direction": "DOWN", "source": "WSJ same-day currency market report", "source_time_note": "Latest verified same-day reading available before prediction; exact live quote timestamp unavailable."},
+    "us2y": {"value": 4.369, "unit": "percent", "direction": "DOWN", "source": "IC Markets same-day market analysis", "source_time_note": "Latest verified same-day reading available before prediction; exact live quote timestamp unavailable."},
+    "us10y": {"value": 4.774, "unit": "percent", "direction": "DOWN", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest verified same-day reading before prediction, down from 4.818% recent high."},
+    "vix": {"value": 15.2, "direction": "DOWN", "source": "ICRYPEX same-day market wrap", "source_time_note": "Latest verified same-day reading available before prediction; exact live quote timestamp unavailable."},
+    "wti": {"value": 90.51, "unit": "USD_per_barrel", "direction": "DOWN", "source": "Reuters same-day oil report", "source_time_note": "Verified at 2026-09-03T07:52:00Z; latest reliably timestamped value found before prediction."},
+    "brent": {"value": 95.07, "unit": "USD_per_barrel", "direction": "DOWN", "source": "Reuters same-day oil report", "source_time_note": "Verified at 2026-09-03T07:52:00Z; latest reliably timestamped value found before prediction."},
+    "risk_regime": "PRE_RELEASE_EASING_US_YIELDS_WEAKER_USD_LOW_VIX_BUT_ELEVATED_OIL_WITH_FRESH_HAWKISH_ISM_SHOCK",
+    "notes": "Pre-release verified context showed easing yields, weaker DXY and low VIX. The new ISM surprise is materially stronger and more inflationary than expected, so current macro facts favor a hawkish rate reaction despite Waller's earlier conditional dovishness."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE by_context, by_instrument_context, by_category_context or by_instrument_category_context segments are present. EARLY_SIGNAL/WATCH_ONLY evidence is advisory only."
+  },
+  "predictions": [
+    {"instrument": "NDX", "immediate": {"direction": "DOWN", "confidence": 7}, "next_session": {"direction": "DOWN", "confidence": 6}, "mechanism": "Stronger growth plus hotter services prices raises the risk of higher Treasury yields and a more restrictive Fed path, directly pressuring long-duration technology valuations.", "invalidation": "Treasury yields and September hike odds fail to rise or reverse lower because markets focus on weak services employment and/or dovish Fed guidance.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "DOWN", "confidence": 6}, "next_session": {"direction": "DOWN", "confidence": 5}, "mechanism": "The growth beat is positive, but the jump in Prices Paid to 72.6 keeps inflation and rate-hike risk elevated, raising the discount rate for the broad index.", "invalidation": "Bond yields decline despite the report or subsequent Fed commentary explicitly leans against a hike and dominates the inflation signal.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAUUSD", "immediate": {"direction": "DOWN", "confidence": 6}, "next_session": {"direction": "DOWN", "confidence": 5}, "mechanism": "A stronger-than-expected ISM with elevated prices paid can lift nominal/real yields and the dollar, increasing gold's opportunity cost.", "invalidation": "Yields and DXY stay weak or fall because markets prioritize the employment contraction and Waller's dovish conditional stance.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAGUSD", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Higher rate expectations weigh on precious metals, while resilient growth offers some industrial-demand offset for silver.", "invalidation": "Dollar and yields weaken materially or industrial-growth optimism overwhelms the rates channel.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "WS30", "immediate": {"direction": "MIXED", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Stronger services demand supports cyclicals, while hotter prices and higher-rate risk offset that benefit for the broad blue-chip index.", "invalidation": "A decisive bond-yield move makes either the growth-positive or rate-negative channel dominant.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
