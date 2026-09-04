@@ -1,0 +1,94 @@
+{
+  "prediction_id": "2026-09-04T03:26:43Z_FF_1416415",
+  "event_id": "JAPAN_US_YEN_UNDERVALUATION_2026_09_04",
+  "event_time_utc": "2026-09-04T02:26:00+00:00",
+  "prediction_time_utc": "2026-09-04T03:26:43+00:00",
+  "evaluation_anchor_time_utc": "2026-09-04T03:26:43+00:00",
+  "prediction_latency_seconds": 3643.0,
+  "evaluated_at_utc": "2026-09-04T03:26:38.341296+00:00",
+  "model_version": "1.1.1",
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_origin": "captured_at_prediction",
+  "market_context": {
+    "captured_at_utc": "2026-09-04T03:26:43Z",
+    "dxy": {
+      "value": 99.01,
+      "direction": "FLAT_TO_DOWN",
+      "regime": "SOFT_DOLLAR",
+      "source": "Reuters Sep 4 currency-market report",
+      "source_time_note": "Latest pre-prediction quote: DXY around 99.01, broadly flat after recent weakening."
+    },
+    "us2y": {
+      "value": 4.322,
+      "unit": "percent",
+      "direction": "DOWN",
+      "regime": "YIELDS_EASING",
+      "source": "WSJ Sep 3 U.S. market close report",
+      "source_time_note": "Latest reliably sourced pre-prediction close/readout: 2-year yield 4.322%."
+    },
+    "us10y": {
+      "value": 4.761,
+      "unit": "percent",
+      "direction": "DOWN",
+      "regime": "YIELDS_EASING",
+      "source": "WSJ Sep 3 U.S. market close report",
+      "source_time_note": "Latest reliably sourced pre-prediction close/readout: 10-year yield 4.761%."
+    },
+    "vix": {
+      "value": 15.2,
+      "direction": "DOWN",
+      "regime": "LOW_VOLATILITY",
+      "source": "Latest Sep 3 VIX close/readout available before prediction",
+      "source_time_note": "VIX remained in the mid-teens; latest reliable pre-prediction readout around 15.20."
+    },
+    "wti": {
+      "value": 91.56,
+      "unit": "USD_per_barrel",
+      "direction": "UP",
+      "regime": "ELEVATED_GEOPOLITICAL_PREMIUM",
+      "source": "Reuters Sep 4 oil market report",
+      "source_time_note": "Latest pre-prediction quote: WTI 91.56, up about 0.3%."
+    },
+    "brent": {
+      "value": 95.67,
+      "unit": "USD_per_barrel",
+      "direction": "UP",
+      "regime": "ELEVATED_GEOPOLITICAL_PREMIUM",
+      "source": "Reuters Sep 4 oil market report",
+      "source_time_note": "Latest pre-prediction quote: Brent 95.67, up about 0.2%."
+    },
+    "risk_regime": "SOFT_USD_EASING_US_YIELDS_LOW_VIX_WITH_STRONG_JPY_AND_ELEVATED_OIL",
+    "notes": "The dominant channel is JPY strength. Easing U.S. yields and a soft dollar already support the yen; Bessent's reported view that the yen is undervalued reduces the perceived risk of U.S. opposition to further JPY appreciation."
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-04T03:26:43Z_FF_1416415",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "reference_price": 64769.73828125,
+      "reference_price_time_utc": "2026-09-04T02:35:00+00:00",
+      "reference_rule": "last_traded_bar_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING"
+        },
+        "1h": {
+          "status": "PENDING"
+        },
+        "4h": {
+          "status": "PENDING"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    }
+  ]
+}
