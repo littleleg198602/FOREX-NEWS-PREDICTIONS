@@ -1,0 +1,72 @@
+{
+  "prediction_id": "2026-09-04T08:24:48Z_FF_1416430",
+  "event_id": "NORWAY_SWF_US_TREASURY_ALLOCATION_CUT_2026_09_04",
+  "created_at_utc": "2026-09-04T08:24:48Z",
+  "published_at_utc": "2026-09-04T08:10:48Z",
+  "observed_at_utc": "2026-09-04T08:24:48Z",
+  "source_time_text": "14 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416430-worlds-biggest-sovereign-wealth-fund-plans-to-cut",
+  "headline_original": "World's biggest sovereign wealth fund plans to cut U.S. Treasury holdings",
+  "headline_cs": "Největší státní fond světa chce snížit držbu amerických dluhopisů",
+  "summary_cs": "Norský státní investiční fond navrhl snížit alokaci do vládních dluhopisů, přičemž změna by dopadla hlavně na americké Treasuries. Jde spíše o strukturální než okamžitý prodejní šok, ale zpráva může krátkodobě zvýšit term premium a tlak na americké výnosy.",
+  "categories": ["BONDS", "US_TREASURIES", "ASSET_ALLOCATION", "SOVEREIGN_WEALTH_FUND"],
+  "region": ["UNITED_STATES", "GLOBAL", "NORWAY"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-04T08:24:48Z",
+    "dxy": {"value": 99.04, "direction": "SLIGHTLY_UP", "regime": "RECOVERING_BUT_SOFT", "source": "Yahoo Finance DX-Y.NYB", "source_time_note": "Yahoo Finance showed DXY 99.04, +0.13%, at 03:19:20 EDT on Sep 4; broader short-term dollar tone remained soft after Waller's dovish comments."},
+    "us2y": {"value": 4.34, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "Business Insider / AP Sep 4 pre-prediction market coverage", "source_time_note": "Latest reliable pre-prediction 2-year Treasury yield was about 4.34%, lower after the prior session's dovish Fed repricing."},
+    "us10y": {"value": 4.762, "unit": "percent", "direction": "SLIGHTLY_DOWN", "regime": "YIELDS_EASING_BUT_HIGH", "source": "Yahoo Finance ^TNX via DXY market page / AP Sep 4", "source_time_note": "Yahoo Finance showed the 10-year yield around 4.762%; AP described it as slightly lower near 4.77%."},
+    "vix": {"value": 14.32, "direction": "DOWN", "regime": "LOW_VOLATILITY", "source": "Yahoo Finance ^VIX", "source_time_note": "Latest verified VIX close was 14.32, down 5.79%, indicating a low-volatility risk-on backdrop before the prediction."},
+    "wti": {"value": 92.0, "unit": "USD_per_barrel", "direction": "ELEVATED", "regime": "HIGH_GEOPOLITICAL_PREMIUM", "source": "HDFC SKY Sep 4 market report", "source_time_note": "WTI was reported near $92 in the early Sep 4 session, remaining strongly elevated because of U.S.-Iran tensions."},
+    "brent": {"value": 95.82, "unit": "USD_per_barrel", "direction": "SLIGHTLY_UP", "regime": "HIGH_GEOPOLITICAL_PREMIUM", "source": "Yahoo Finance BZ=F", "source_time_note": "Yahoo Finance showed Brent around $95.82, about +0.31%, before the prediction."},
+    "risk_regime": "LOW_VIX_EASING_US_YIELDS_SOFT_DOLLAR_BUT_ELEVATED_OIL",
+    "notes": "The fund-allocation headline is mildly bearish for U.S. duration-sensitive equities because it can add marginal upward pressure to Treasury term premium. Existing easing in yields and very low VIX reduce conviction; high oil remains a separate inflationary headwind."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No verified ACTIONABLE context-aware segment in by_context, by_instrument_context, by_category_context or by_instrument_category_context justified a material confidence change. EARLY_SIGNAL evidence was advisory only and INSUFFICIENT segments were not used."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "A proposed reduction in U.S. Treasury allocation by the world's largest sovereign wealth fund can marginally raise long-end term premium and discount rates, which is most negative for long-duration technology equities.",
+      "invalidation": "Treasury yields continue falling despite the headline, the proposal proves immaterial or very gradual, or U.S. payrolls trigger a strong risk-on rally with lower yields.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "Lower structural demand for Treasuries can push required yields slightly higher and tighten financial conditions, a modest headwind for broad U.S. equities.",
+      "invalidation": "Bond yields fall further, the reallocation is too small or slow to affect markets, or strong macro data/risk appetite dominates the rates effect.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Reduced foreign demand for Treasuries can be mildly supportive for gold through reserve-diversification and dollar-confidence channels, but any accompanying rise in nominal yields is a direct offset.",
+      "invalidation": "The dollar and real yields rise decisively together or the allocation proposal has no observable effect on Treasury demand expectations.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
