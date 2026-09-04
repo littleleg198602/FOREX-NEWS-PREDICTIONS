@@ -1,0 +1,52 @@
+{
+  "prediction_id": "2026-09-04T01:03:11Z_FF_1416400",
+  "event_id": "JAPAN_FX_INTERVENTION_PREPAREDNESS_2026_09_04",
+  "created_at_utc": "2026-09-04T01:03:11Z",
+  "published_at_utc": "2026-09-04T00:37:11Z",
+  "observed_at_utc": "2026-09-04T01:03:11Z",
+  "source_time_text": "26 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416400-mimura-says-japan-is-in-regular-contact-with",
+  "headline_original": "Mimura says Japan is in regular contact with US authorities",
+  "headline_cs": "Mimura: Japonsko je v pravidelném kontaktu s USA a musí zůstat připravené na devizovém trhu",
+  "summary_cs": "Japonský nejvyšší měnový diplomat Atsushi Mimura uvedl, že Japonsko je v pravidelném kontaktu s americkými úřady a musí zůstat připravené na devizovém trhu. Po prudkém posílení jenu a předchozích spekulacích o intervenci jde o nové oficiální jawboning, které udržuje riziko dalšího posílení JPY a tlaku na exportně orientovaný Nikkei.",
+  "categories": ["CENTRAL_BANKS", "JAPAN", "FX_INTERVENTION", "JPY"],
+  "region": ["JAPAN", "US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-04T01:03:11Z",
+    "dxy": {"value": 98.85, "direction": "DOWN", "regime": "BEARISH_INTRADAY", "source": "DollarMetal same-day DXY report", "source_time_note": "Latest reliably surfaced Sep 3 quote available before prediction: DXY 98.85 at 13:00, down on the day."},
+    "us2y": {"value": 4.332, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest reliably sourced Sep 3 reading available before prediction; two-year yield fell to 4.332%."},
+    "us10y": {"value": 4.761, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ same-day Treasury market report", "source_time_note": "Latest reliably sourced Sep 3 reading available before prediction; 10-year yield fell to 4.761%."},
+    "vix": {"value": 15.20, "direction": "DOWN", "regime": "LOW_VOLATILITY", "source": "StockBotty Sep 3 VIX report", "source_time_note": "Sep 3 close/readout available before prediction: VIX 15.20, down from 16.34."},
+    "wti": {"value": 91.73, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Bakken Wire Sep 3 settlement report", "source_time_note": "Sep 3 settlement available before prediction: WTI 91.73, +0.72 on the day."},
+    "brent": {"value": 95.83, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Bakken Wire Sep 3 settlement report", "source_time_note": "Sep 3 settlement available before prediction: Brent 95.83, +0.20 on the day."},
+    "risk_regime": "WEAKER_USD_EASING_US_YIELDS_LOW_VIX_WITH_STRONGER_JPY_AND_ELEVATED_OIL",
+    "notes": "The direct channel is JPY rather than broad risk-off. Easing US yields and a weaker dollar already favor yen strength, so Mimura's intervention-readiness language reinforces an existing move rather than creating a fresh global panic signal."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE context-aware segment in by_context, by_instrument_context, by_category_context or by_instrument_category_context was available to justify a material confidence change. EARLY_SIGNAL observations remain advisory only."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Renewed official FX-intervention preparedness, combined with regular Japan-US coordination, raises the probability that authorities resist renewed JPY weakness. A firmer yen is a headwind for Japanese exporters and therefore for the Nikkei 225.",
+      "invalidation": "USD/JPY reverses sharply higher without intervention response, Japanese officials soften their language, or a strong global risk-on move overwhelms the currency headwind.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
