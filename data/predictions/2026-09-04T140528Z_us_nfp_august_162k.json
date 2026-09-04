@@ -1,0 +1,54 @@
+{
+  "prediction_id": "2026-09-04T140528Z_us_nfp_august_162k",
+  "event_id": "us_nfp_2026_08_release",
+  "created_at_utc": "2026-09-04T14:05:28Z",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "source": "Forex Factory",
+  "source_url": "https://www.forexfactory.com/news/1416483-the-us-employment-situation-august-2026",
+  "headline": "The US Employment Situation -- August 2026",
+  "category": "US_EMPLOYMENT_NFP",
+  "source_time_text": "Added at 1:37pm",
+  "observed_at_utc": "2026-09-04T14:05:28Z",
+  "published_at_utc": "2026-09-04T12:37:00Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "facts_at_prediction": {
+    "nonfarm_payrolls_actual": 162000,
+    "nonfarm_payrolls_consensus_range": "53000-56000",
+    "unemployment_rate": 4.1,
+    "market_interpretation": "Material upside payroll surprise; Fed September hike odds increased and front-end yields/dollar rose."
+  },
+  "market_context_at_prediction": {
+    "DXY": {"value": 99.12, "timestamp_utc": "2026-09-04T12:50:00Z", "short_term_direction": "up", "regime": "post-NFP strengthening", "source": "Reuters"},
+    "US2Y": {"value": 4.38, "unit": "%", "timestamp_utc": "2026-09-04T12:50:00Z", "short_term_direction": "up", "regime": "hawkish repricing", "source": "Reuters"},
+    "US10Y": {"value": 4.776, "unit": "%", "timestamp_utc": "2026-09-04T12:50:00Z", "short_term_direction": "slightly_up", "regime": "high-yield", "source": "Reuters"},
+    "VIX": {"value": 14.2, "timestamp_utc": "2026-09-04T13:00:00Z", "short_term_direction": "low_flat", "regime": "low volatility", "source": "Barron's live market coverage; latest available observation"},
+    "WTI": {"value": 90.68, "unit": "USD/bbl", "timestamp_utc": "2026-09-04T00:00:00Z", "short_term_direction": "slightly_down_day", "regime": "elevated geopolitical", "source": "daily benchmark via TECHi market page"},
+    "Brent": {"value": 95.18, "unit": "USD/bbl", "timestamp_utc": "2026-09-04T00:00:00Z", "short_term_direction": "slightly_down_day", "regime": "elevated geopolitical", "source": "daily benchmark via TECHi market page"}
+  },
+  "learning_prior": {
+    "profile_generated_at_utc": "2026-09-04T12:09:58.615480+00:00",
+    "profile_version": "1.3.1",
+    "material_adjustment": false,
+    "reason": "No verified ACTIONABLE context-aware segment was used to override the current macro signal; available confidence calibration for 5-6 is neutral and 7-8 evidence is EARLY_SIGNAL only."
+  },
+  "predictions": [
+    {"instrument": "XAUUSD", "direction": "DOWN", "confidence": 8},
+    {"instrument": "XAGUSD", "direction": "DOWN", "confidence": 7},
+    {"instrument": "NDX", "direction": "DOWN", "confidence": 6},
+    {"instrument": "SP500", "direction": "DOWN", "confidence": 6},
+    {"instrument": "WS30", "direction": "DOWN", "confidence": 5}
+  ],
+  "next_session": [
+    {"instrument": "XAUUSD", "direction": "MIXED", "confidence": 6},
+    {"instrument": "NDX", "direction": "MIXED", "confidence": 5},
+    {"instrument": "SP500", "direction": "MIXED", "confidence": 5}
+  ],
+  "mechanism": "Large payroll upside surprise raises the probability of near-term Fed tightening, lifting USD and yields and pressuring precious metals and rate-sensitive equities.",
+  "invalidation": "A materially soft next-week CPI or a rapid reversal lower in DXY and Treasury yields would weaken the hawkish interpretation."
+}
