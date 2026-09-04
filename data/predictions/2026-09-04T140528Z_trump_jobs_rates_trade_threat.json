@@ -1,0 +1,50 @@
+{
+  "prediction_id": "2026-09-04T140528Z_trump_jobs_rates_trade_threat",
+  "event_id": "trump_post_nfp_rates_trade_2026_09_04",
+  "created_at_utc": "2026-09-04T14:05:28Z",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "source": "Forex Factory",
+  "source_url": "https://www.forexfactory.com/news/1416495-trump-great-jobs-number-just-announced-breaking-all",
+  "headline": "Trump: Great jobs number just announced breaking all estimates; Lower the rate or I’ll stop trading with countries with which we have a deficit",
+  "category": "US_POLICY_TRADE_FED_PRESSURE",
+  "source_time_text": "7 min ago",
+  "observed_at_utc": "2026-09-04T14:05:28Z",
+  "published_at_utc": "2026-09-04T13:58:28Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "facts_at_prediction": {
+    "policy_signal": "Trump demanded lower rates despite the strong jobs report and threatened to stop trading with countries running surpluses against the U.S.",
+    "event_context": "Fresh policy rhetoric following NFP; separate from the payroll data release itself."
+  },
+  "market_context_at_prediction": {
+    "DXY": {"value": 99.12, "timestamp_utc": "2026-09-04T12:50:00Z", "short_term_direction": "up", "regime": "post-NFP strengthening", "source": "Reuters"},
+    "US2Y": {"value": 4.38, "unit": "%", "timestamp_utc": "2026-09-04T12:50:00Z", "short_term_direction": "up", "regime": "hawkish repricing", "source": "Reuters"},
+    "US10Y": {"value": 4.776, "unit": "%", "timestamp_utc": "2026-09-04T12:50:00Z", "short_term_direction": "slightly_up", "regime": "high-yield", "source": "Reuters"},
+    "VIX": {"value": 14.2, "timestamp_utc": "2026-09-04T13:00:00Z", "short_term_direction": "low_flat", "regime": "low volatility", "source": "Barron's live market coverage; latest available observation"},
+    "WTI": {"value": 90.68, "unit": "USD/bbl", "timestamp_utc": "2026-09-04T00:00:00Z", "short_term_direction": "slightly_down_day", "regime": "elevated geopolitical", "source": "daily benchmark via TECHi market page"},
+    "Brent": {"value": 95.18, "unit": "USD/bbl", "timestamp_utc": "2026-09-04T00:00:00Z", "short_term_direction": "slightly_down_day", "regime": "elevated geopolitical", "source": "daily benchmark via TECHi market page"}
+  },
+  "learning_prior": {
+    "profile_generated_at_utc": "2026-09-04T12:09:58.615480+00:00",
+    "profile_version": "1.3.1",
+    "material_adjustment": false,
+    "reason": "No verified ACTIONABLE context-aware segment was used to alter confidence; current policy rhetoric and market context dominate."
+  },
+  "predictions": [
+    {"instrument": "SP500", "direction": "DOWN", "confidence": 5},
+    {"instrument": "NDX", "direction": "DOWN", "confidence": 5},
+    {"instrument": "WS30", "direction": "DOWN", "confidence": 5},
+    {"instrument": "XAUUSD", "direction": "MIXED", "confidence": 4}
+  ],
+  "next_session": [
+    {"instrument": "SP500", "direction": "MIXED", "confidence": 4},
+    {"instrument": "NDX", "direction": "MIXED", "confidence": 4}
+  ],
+  "mechanism": "The trade threat adds policy uncertainty and downside risk to equities, while the demand for lower rates conflicts with the post-NFP rise in hike odds, leaving gold with opposing forces.",
+  "invalidation": "If the trade comment is quickly clarified as non-policy rhetoric or markets ignore it while yields and equities stabilize, the signal weakens."
+}
