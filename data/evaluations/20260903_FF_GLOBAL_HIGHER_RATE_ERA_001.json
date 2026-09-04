@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-03T05:51:50+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T05:51:50+00:00",
   "prediction_latency_seconds": 2750.0,
-  "evaluated_at_utc": "2026-09-04T21:30:05.664412+00:00",
+  "evaluated_at_utc": "2026-09-04T23:50:32.446386+00:00",
   "model_version": "1.1.1",
   "is_example": false,
   "backfilled": false,
@@ -64,7 +64,7 @@
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 4482.89990234375,
       "reference_price_time_utc": "2026-09-03T05:51:00+00:00",
@@ -121,16 +121,29 @@
           "neutral_envelope_pct": 0.789665
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-04",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-04T20:59:00+00:00",
+          "price": 4477.2001953125,
+          "change_pct": -0.127143,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.789665,
+          "post_event_range_pct": 2.806215,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date",
+          "neutral_envelope_pct": 0.789665
         }
       }
     },
     {
       "prediction_id": "20260903_FF_GLOBAL_HIGHER_RATE_ERA_001",
       "instrument": "XAGUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 66.3949966430664,
       "reference_price_time_utc": "2026-09-03T05:51:00+00:00",
@@ -184,9 +197,21 @@
           "mae_pct": -0.602457
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-04",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-04T20:59:00+00:00",
+          "price": 66.81999969482422,
+          "change_pct": 0.640113,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.926271,
+          "post_event_range_pct": 3.727688,
+          "mfe_pct": 1.596502,
+          "mae_pct": -2.53785,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
