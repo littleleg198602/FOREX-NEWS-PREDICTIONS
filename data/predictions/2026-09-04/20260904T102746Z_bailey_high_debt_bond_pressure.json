@@ -1,0 +1,44 @@
+{
+  "prediction_id": "2026-09-04T10:27:46Z_FF_1416444",
+  "event_id": "BOE_BAILEY_HIGH_DEBT_BOND_PRESSURE_2026_09_04",
+  "created_at_utc": "2026-09-04T10:27:46Z",
+  "published_at_utc": "2026-09-04T09:31:00Z",
+  "observed_at_utc": "2026-09-04T10:27:46Z",
+  "source_time_text": "Sep 4, 2:31am | 57 min ago",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416444-boes-bailey-high-debt-levels-reflect-very-substantial",
+  "headline_original": "BOE's Bailey: High Debt Levels Reflect Very Substantial Challenges To Governments, Add To Bond Market Pressure",
+  "headline_cs": "Bailey varuje, že vysoký dluh dál tlačí na dluhopisové trhy",
+  "summary_cs": "Guvernér Bank of England Andrew Bailey uvedl, že vysoké úrovně veřejného dluhu představují velmi významné výzvy pro vlády a zvyšují tlak na dluhopisové trhy. Pro britské akcie je to mírně negativní přes vyšší dlouhé výnosy a finanční podmínky, ale dnešní americká NFP mohou tento signál rychle přebít.",
+  "categories": ["BOE", "BONDS", "FISCAL", "DEBT"],
+  "region": ["UNITED_KINGDOM", "GLOBAL"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-04T10:27:46Z",
+    "dxy": {"value": 99.0, "direction": "SOFT", "regime": "BELOW_RECENT_MOVING_AVERAGES", "source": "Investing.com DXY technical snapshot Sep 4", "source_time_note": "Pre-prediction DXY indications were around the 99 area with the daily trend still weak."},
+    "us2y": {"value": 4.30, "unit": "percent", "direction": "DOWN", "regime": "FRONT_END_EASING", "source": "Latest verified Sep 3-4 market coverage", "source_time_note": "The 2-year yield had eased to roughly 4.30% after Waller's comments and remained the latest reliable pre-prediction reference."},
+    "us10y": {"value": 4.75, "unit": "percent", "direction": "SLIGHTLY_DOWN", "regime": "HIGH_BUT_EASING", "source": "Latest verified Sep 4 Treasury market coverage", "source_time_note": "The 10-year yield remained near 4.75% before the prediction, off recent highs."},
+    "vix": {"value": 14.32, "direction": "DOWN", "regime": "LOW_VOLATILITY", "source": "CBOE/Yahoo Sep 3 close", "source_time_note": "Latest verified VIX reference was 14.32 after a 5.8% decline."},
+    "wti": {"value": 90.66, "unit": "USD_per_barrel", "direction": "SLIGHTLY_DOWN", "regime": "HIGH_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4", "source_time_note": "WTI was reported near $90.66 in the current Sep 4 session."},
+    "brent": {"value": 95.05, "unit": "USD_per_barrel", "direction": "SLIGHTLY_DOWN", "regime": "HIGH_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4", "source_time_note": "Brent was reported near $95.05 in the current Sep 4 session."},
+    "risk_regime": "LOW_VIX_SOFT_DOLLAR_EASING_US_YIELDS_BUT_HIGH_OIL_AND_ELEVATED_GLOBAL_BOND_STRESS",
+    "notes": "Bailey's warning is directionally negative for duration-sensitive risk assets through higher sovereign term premia, but the immediate signal is low-impact and offset by low VIX and easing US yields. NFP later today is a larger macro catalyst."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "The latest learning profile was checked against by_context, by_instrument_context, by_category_context and by_instrument_category_context guardrails. No verified ACTIONABLE context-aware segment warranted a material confidence adjustment; EARLY_SIGNAL evidence remained advisory only and INSUFFICIENT evidence was not used."
+  },
+  "predictions": [
+    {"instrument": "UK100", "immediate": {"direction": "DOWN", "confidence": 5}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Higher sovereign-debt pressure can lift gilt term premia and tighten financial conditions, a modest negative for UK equities despite FTSE 100's international earnings mix.", "invalidation": "Gilt and global bond yields fall materially, low-volatility risk-on broadens, or US payrolls dominate with a strong positive equity impulse.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "XAUUSD", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Sovereign-debt stress can support safe-haven demand for gold, while higher long-end yields work in the opposite direction, leaving the net signal mixed.", "invalidation": "A decisive move in US yields or the dollar resolves the current two-sided pressure on gold.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
