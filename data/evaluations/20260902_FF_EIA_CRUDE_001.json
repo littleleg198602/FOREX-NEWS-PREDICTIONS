@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T17:56:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T17:56:00+00:00",
   "prediction_latency_seconds": 12360.0,
-  "evaluated_at_utc": "2026-09-03T23:53:37.537390+00:00",
+  "evaluated_at_utc": "2026-09-04T00:07:32.906055+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -911,7 +911,7 @@
     {
       "prediction_id": "20260902_FF_EIA_CRUDE_001",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 4423.2001953125,
       "reference_price_time_utc": "2026-09-02T17:55:00+00:00",
@@ -968,9 +968,21 @@
           "neutral_envelope_pct": 0.752844
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "UP"
+          "actual_price_time_utc": "2026-09-03T23:57:00+00:00",
+          "price": 4525.7998046875,
+          "change_pct": 2.319579,
+          "actual_direction": "UP",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.752844,
+          "post_event_range_pct": 2.954879,
+          "mfe_pct": 3.058867,
+          "mae_pct": -0.165046,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     }

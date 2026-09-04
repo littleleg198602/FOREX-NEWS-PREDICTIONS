@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-02T19:08:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-02T19:08:00+00:00",
   "prediction_latency_seconds": 4080.0,
-  "evaluated_at_utc": "2026-09-03T23:53:35.702752+00:00",
+  "evaluated_at_utc": "2026-09-04T00:07:29.856444+00:00",
   "model_version": "1.0.0",
   "is_example": false,
   "backfilled": true,
@@ -381,7 +381,7 @@
     {
       "prediction_id": "20260902_FF_FED_BEIGE_BOOK_001",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 4422.5,
       "reference_price_time_utc": "2026-09-02T19:07:00+00:00",
@@ -435,9 +435,22 @@
           "mae_pct": -0.355007
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-03",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-03T23:57:00+00:00",
+          "price": 4525.7998046875,
+          "change_pct": 2.335779,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.368565,
+          "post_event_range_pct": 2.955346,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date",
+          "neutral_envelope_pct": 0.368565
         }
       }
     }
