@@ -2,12 +2,14 @@
   "prediction_id": "2026-09-04T140528Z_us_nfp_august_162k",
   "event_id": "us_nfp_2026_08_release",
   "created_at_utc": "2026-09-04T14:05:28Z",
+  "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
   "source": "Forex Factory",
   "source_url": "https://www.forexfactory.com/news/1416483-the-us-employment-situation-august-2026",
   "headline": "The US Employment Situation -- August 2026",
   "category": "US_EMPLOYMENT_NFP",
+  "categories": ["US_EMPLOYMENT_NFP"],
   "source_time_text": "Added at 1:37pm",
   "observed_at_utc": "2026-09-04T14:05:28Z",
   "published_at_utc": "2026-09-04T12:37:00Z",
@@ -38,13 +40,41 @@
     "reason": "No verified ACTIONABLE context-aware segment was used to override the current macro signal; available confidence calibration for 5-6 is neutral and 7-8 evidence is EARLY_SIGNAL only."
   },
   "predictions": [
-    {"instrument": "XAUUSD", "direction": "DOWN", "confidence": 8},
-    {"instrument": "XAGUSD", "direction": "DOWN", "confidence": 7},
-    {"instrument": "NDX", "direction": "DOWN", "confidence": 6},
-    {"instrument": "SP500", "direction": "DOWN", "confidence": 6},
-    {"instrument": "WS30", "direction": "DOWN", "confidence": 5}
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 8},
+      "next_session": {"direction": "MIXED", "confidence": 6},
+      "mechanism": "Large payroll upside surprise raises the probability of near-term Fed tightening, lifting USD and yields and pressuring precious metals and rate-sensitive equities.",
+      "invalidation": "A materially soft next-week CPI or a rapid reversal lower in DXY and Treasury yields would weaken the hawkish interpretation."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "DOWN", "confidence": 7},
+      "mechanism": "Large payroll upside surprise raises the probability of near-term Fed tightening, lifting USD and yields and pressuring precious metals and rate-sensitive equities.",
+      "invalidation": "A materially soft next-week CPI or a rapid reversal lower in DXY and Treasury yields would weaken the hawkish interpretation."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "Large payroll upside surprise raises the probability of near-term Fed tightening, lifting USD and yields and pressuring precious metals and rate-sensitive equities.",
+      "invalidation": "A materially soft next-week CPI or a rapid reversal lower in DXY and Treasury yields would weaken the hawkish interpretation."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "Large payroll upside surprise raises the probability of near-term Fed tightening, lifting USD and yields and pressuring precious metals and rate-sensitive equities.",
+      "invalidation": "A materially soft next-week CPI or a rapid reversal lower in DXY and Treasury yields would weaken the hawkish interpretation."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Large payroll upside surprise raises the probability of near-term Fed tightening, lifting USD and yields and pressuring precious metals and rate-sensitive equities.",
+      "invalidation": "A materially soft next-week CPI or a rapid reversal lower in DXY and Treasury yields would weaken the hawkish interpretation."
+    }
   ],
-  "next_session": [
+  "legacy_top_level_next_session": [
     {"instrument": "XAUUSD", "direction": "MIXED", "confidence": 6},
     {"instrument": "NDX", "direction": "MIXED", "confidence": 5},
     {"instrument": "SP500", "direction": "MIXED", "confidence": 5}
