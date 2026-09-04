@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-03T04:01:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T04:01:33+00:00",
   "prediction_latency_seconds": 2553.0,
-  "evaluated_at_utc": "2026-09-04T07:13:15.732815+00:00",
+  "evaluated_at_utc": "2026-09-04T08:26:52.878008+00:00",
   "model_version": "1.1.0",
   "is_example": false,
   "backfilled": false,
@@ -193,7 +193,7 @@
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "NI225",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 64536.37890625,
       "reference_price_time_utc": "2026-09-03T04:01:00+00:00",
@@ -247,16 +247,28 @@
           "mae_pct": -1.183175
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-04",
-          "predicted_direction": "UP"
+          "actual_price_time_utc": "2026-09-04T06:29:00+00:00",
+          "price": 65054.55859375,
+          "change_pct": 0.802926,
+          "actual_direction": "UP",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.733683,
+          "post_event_range_pct": 1.478206,
+          "mfe_pct": 1.001095,
+          "mae_pct": -1.183175,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
     {
       "prediction_id": "20260903_FF_HORMUZ_TANKER_ESCORTS_001",
       "instrument": "AUS200",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "reference_price": 9022.2998046875,
       "reference_price_time_utc": "2026-09-03T04:01:00+00:00",
@@ -310,9 +322,21 @@
           "mae_pct": -0.198391
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-04",
-          "predicted_direction": "UP"
+          "actual_price_time_utc": "2026-09-04T06:11:00+00:00",
+          "price": 9005.900390625,
+          "change_pct": -0.181765,
+          "actual_direction": "DOWN",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.638425,
+          "post_event_range_pct": 0.697166,
+          "mfe_pct": 0.422294,
+          "mae_pct": -0.274872,
+          "evaluation_method": "last_bar_of_next_relevant_local_trading_date"
         }
       }
     },
@@ -375,7 +399,7 @@
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-03",
-          "actual_price_time_utc": "2026-09-03T15:30:00+00:00",
+          "actual_price_time_utc": "2026-09-03T16:00:00+00:00",
           "price": 26003.32,
           "change_pct": 0.634653,
           "actual_direction": "UP",
