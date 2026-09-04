@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-04T08:27:13.875880+00:00",
+  "generated_at_utc": "2026-09-04T09:25:30.715552+00:00",
   "profile_version": "1.3.1",
   "purpose": "Compact evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
   "guardrails": {
@@ -21,21 +21,21 @@
     "anti_leakage": "Market context and evaluation anchors use only information available at or before the prediction decision time."
   },
   "audit": {
-    "prediction_files": 38,
-    "evaluation_files": 32,
-    "eligible_evaluation_files": 26,
+    "prediction_files": 40,
+    "evaluation_files": 34,
+    "eligible_evaluation_files": 28,
     "excluded_ineligible": 6,
     "excluded_examples": 0,
-    "scored_items": 336,
+    "scored_items": 338,
     "scored_items_with_context": 86,
-    "scored_items_without_context": 250
+    "scored_items_without_context": 252
   },
   "omitted_insufficient_segments": {
-    "confidence_calibration": 5,
+    "confidence_calibration": 4,
     "by_instrument": 38,
-    "by_category": 163,
+    "by_category": 166,
     "by_score_type": 0,
-    "by_instrument_category": 945,
+    "by_instrument_category": 952,
     "by_context": 32,
     "by_context_signature": 12,
     "by_instrument_context": 328,
@@ -43,6 +43,20 @@
     "by_instrument_category_context": 1308
   },
   "confidence_calibration": [
+    {
+      "confidence_bucket": "1-4",
+      "horizon": "15m",
+      "n": 10,
+      "unique_events": 9,
+      "correct": 10,
+      "raw_hit_rate_pct": 100.0,
+      "bayesian_hit_rate_pct": 85.71,
+      "wilson_lower_95_pct": 72.25,
+      "mean_change_pct": 0.04664,
+      "sample_status": "EARLY_SIGNAL",
+      "learning_weight": 0.133,
+      "recommendation": "WATCH_ONLY"
+    },
     {
       "confidence_bucket": "5-6",
       "horizon": "15m",
@@ -52,7 +66,7 @@
       "raw_hit_rate_pct": 51.9,
       "bayesian_hit_rate_pct": 51.81,
       "wilson_lower_95_pct": 41.05,
-      "mean_change_pct": 0.094608,
+      "mean_change_pct": 0.094636,
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.733,
       "recommendation": "KEEP_NEUTRAL"
@@ -60,13 +74,13 @@
     {
       "confidence_bucket": "5-6",
       "horizon": "1h",
-      "n": 78,
+      "n": 79,
       "unique_events": 22,
-      "correct": 36,
-      "raw_hit_rate_pct": 46.15,
-      "bayesian_hit_rate_pct": 46.34,
-      "wilson_lower_95_pct": 35.53,
-      "mean_change_pct": 0.165516,
+      "correct": 37,
+      "raw_hit_rate_pct": 46.84,
+      "bayesian_hit_rate_pct": 46.99,
+      "wilson_lower_95_pct": 36.24,
+      "mean_change_pct": 0.165149,
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.733,
       "recommendation": "KEEP_NEUTRAL"
@@ -80,7 +94,7 @@
       "raw_hit_rate_pct": 50.0,
       "bayesian_hit_rate_pct": 50.0,
       "wilson_lower_95_pct": 38.6,
-      "mean_change_pct": 0.241571,
+      "mean_change_pct": 0.241377,
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.633,
       "recommendation": "KEEP_NEUTRAL"
@@ -222,7 +236,7 @@
       "raw_hit_rate_pct": 69.23,
       "bayesian_hit_rate_pct": 64.71,
       "wilson_lower_95_pct": 42.37,
-      "mean_change_pct": 0.366632,
+      "mean_change_pct": 0.367783,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.173,
       "recommendation": "WATCH_ONLY"
@@ -236,7 +250,7 @@
       "raw_hit_rate_pct": 69.23,
       "bayesian_hit_rate_pct": 64.71,
       "wilson_lower_95_pct": 42.37,
-      "mean_change_pct": 0.265322,
+      "mean_change_pct": 0.26824,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.173,
       "recommendation": "WATCH_ONLY"
@@ -244,15 +258,15 @@
     {
       "instrument": "XAUUSD",
       "horizon": "15m",
-      "n": 16,
-      "unique_events": 15,
-      "correct": 9,
-      "raw_hit_rate_pct": 56.25,
-      "bayesian_hit_rate_pct": 55.0,
-      "wilson_lower_95_pct": 33.18,
-      "mean_change_pct": 0.114382,
+      "n": 17,
+      "unique_events": 16,
+      "correct": 10,
+      "raw_hit_rate_pct": 58.82,
+      "bayesian_hit_rate_pct": 57.14,
+      "wilson_lower_95_pct": 36.01,
+      "mean_change_pct": 0.104666,
       "sample_status": "EARLY_SIGNAL",
-      "learning_weight": 0.213,
+      "learning_weight": 0.227,
       "recommendation": "WATCH_ONLY"
     },
     {
@@ -278,7 +292,7 @@
       "raw_hit_rate_pct": 60.0,
       "bayesian_hit_rate_pct": 57.89,
       "wilson_lower_95_pct": 35.75,
-      "mean_change_pct": 0.225869,
+      "mean_change_pct": 0.224964,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.2,
       "recommendation": "WATCH_ONLY"
@@ -308,7 +322,7 @@
       "raw_hit_rate_pct": 57.14,
       "bayesian_hit_rate_pct": 55.56,
       "wilson_lower_95_pct": 32.59,
-      "mean_change_pct": 0.424489,
+      "mean_change_pct": 0.425557,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.167,
       "recommendation": "WATCH_ONLY"
@@ -322,7 +336,7 @@
       "raw_hit_rate_pct": 52.08,
       "bayesian_hit_rate_pct": 51.92,
       "wilson_lower_95_pct": 38.33,
-      "mean_change_pct": 0.040104,
+      "mean_change_pct": 0.040151,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.2,
       "recommendation": "WATCH_ONLY"
@@ -350,7 +364,7 @@
       "raw_hit_rate_pct": 47.62,
       "bayesian_hit_rate_pct": 47.83,
       "wilson_lower_95_pct": 33.36,
-      "mean_change_pct": 0.063788,
+      "mean_change_pct": 0.063895,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.2,
       "recommendation": "WATCH_ONLY"
@@ -378,7 +392,7 @@
       "raw_hit_rate_pct": 32.14,
       "bayesian_hit_rate_pct": 34.38,
       "wilson_lower_95_pct": 17.93,
-      "mean_change_pct": 0.358046,
+      "mean_change_pct": 0.358313,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.167,
       "recommendation": "WATCH_ONLY"
@@ -420,7 +434,7 @@
       "raw_hit_rate_pct": 42.86,
       "bayesian_hit_rate_pct": 44.0,
       "wilson_lower_95_pct": 24.47,
-      "mean_change_pct": 0.246962,
+      "mean_change_pct": 0.247318,
       "sample_status": "EARLY_SIGNAL",
       "learning_weight": 0.2,
       "recommendation": "WATCH_ONLY"
@@ -478,7 +492,7 @@
       "raw_hit_rate_pct": 43.75,
       "bayesian_hit_rate_pct": 44.05,
       "wilson_lower_95_pct": 33.41,
-      "mean_change_pct": 0.096264,
+      "mean_change_pct": 0.096292,
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.767,
       "recommendation": "KEEP_NEUTRAL"
@@ -486,13 +500,13 @@
     {
       "score_type": "directional",
       "horizon": "1h",
-      "n": 79,
+      "n": 80,
       "unique_events": 23,
-      "correct": 34,
-      "raw_hit_rate_pct": 43.04,
-      "bayesian_hit_rate_pct": 43.37,
-      "wilson_lower_95_pct": 32.69,
-      "mean_change_pct": 0.145221,
+      "correct": 35,
+      "raw_hit_rate_pct": 43.75,
+      "bayesian_hit_rate_pct": 44.05,
+      "wilson_lower_95_pct": 33.41,
+      "mean_change_pct": 0.145205,
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.767,
       "recommendation": "KEEP_NEUTRAL"
@@ -506,7 +520,7 @@
       "raw_hit_rate_pct": 42.86,
       "bayesian_hit_rate_pct": 43.24,
       "wilson_lower_95_pct": 31.94,
-      "mean_change_pct": 0.251425,
+      "mean_change_pct": 0.251773,
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.667,
       "recommendation": "KEEP_NEUTRAL"
@@ -528,15 +542,15 @@
     {
       "score_type": "mixed_neutral",
       "horizon": "15m",
-      "n": 20,
-      "unique_events": 12,
-      "correct": 16,
-      "raw_hit_rate_pct": 80.0,
-      "bayesian_hit_rate_pct": 75.0,
-      "wilson_lower_95_pct": 58.4,
-      "mean_change_pct": 0.154128,
+      "n": 21,
+      "unique_events": 13,
+      "correct": 17,
+      "raw_hit_rate_pct": 80.95,
+      "bayesian_hit_rate_pct": 76.0,
+      "wilson_lower_95_pct": 60.0,
+      "mean_change_pct": 0.144264,
       "sample_status": "EARLY_SIGNAL",
-      "learning_weight": 0.267,
+      "learning_weight": 0.28,
       "recommendation": "WATCH_ONLY"
     },
     {

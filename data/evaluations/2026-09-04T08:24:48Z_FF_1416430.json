@@ -5,7 +5,7 @@
   "prediction_time_utc": "2026-09-04T08:24:48+00:00",
   "evaluation_anchor_time_utc": "2026-09-04T08:24:48+00:00",
   "prediction_latency_seconds": 840.0,
-  "evaluated_at_utc": "2026-09-04T08:27:12.725414+00:00",
+  "evaluated_at_utc": "2026-09-04T09:25:28.982055+00:00",
   "model_version": "1.1.1",
   "is_example": false,
   "backfilled": false,
@@ -75,10 +75,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-04T08:39:48+00:00"
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-04T09:24:48+00:00"
         },
         "4h": {
           "status": "PENDING"
@@ -102,10 +104,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-04T08:39:48+00:00"
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-04T09:24:48+00:00"
         },
         "4h": {
           "status": "PENDING"
@@ -120,19 +124,33 @@
     {
       "prediction_id": "2026-09-04T08:24:48Z_FF_1416430",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
-      "reference_price": 4530.0,
-      "reference_price_time_utc": "2026-09-04T08:17:00+00:00",
+      "reference_price": 4527.10009765625,
+      "reference_price_time_utc": "2026-09-04T08:24:00+00:00",
       "reference_rule": "last_traded_bar_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING"
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T08:39:48+00:00",
+          "actual_price_time_utc": "2026-09-04T08:40:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 4524.7001953125,
+          "change_pct": -0.053012,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.117068,
+          "post_event_range_pct": 0.110446,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.117068
         },
         "1h": {
-          "status": "PENDING"
+          "status": "NO_TRADED_PRICE",
+          "target_time_utc": "2026-09-04T09:24:48+00:00"
         },
         "4h": {
           "status": "PENDING"
