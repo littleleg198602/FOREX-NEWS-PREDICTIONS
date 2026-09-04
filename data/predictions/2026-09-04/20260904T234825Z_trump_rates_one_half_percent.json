@@ -1,0 +1,45 @@
+{
+  "prediction_id": "2026-09-04T23:48:25Z_FF_1416555",
+  "event_id": "TRUMP_RATES_ONE_TO_HALF_PERCENT_2026_09_04",
+  "created_at_utc": "2026-09-04T23:48:25Z",
+  "published_at_utc": "2026-09-04T23:47:00Z",
+  "observed_at_utc": "2026-09-04T23:48:25Z",
+  "source_time_text": "Sep 4, 2026 7:47pm; Added at 7:51pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416555-trump-we-should-be-at-one-percent-or",
+  "headline_original": "Trump: We should be at one percent or half percent rate",
+  "headline_cs": "Trump chce americké sazby kolem 0,5 až 1 procenta",
+  "summary_cs": "Donald Trump uvedl, že americké sazby by podle něj měly být kolem 1 % nebo dokonce 0,5 % a současně řekl, že zvýšení sazeb podle něj nezajistí stabilitu dluhopisového trhu. Výrok je výrazně holubičí, ale nemění aktuální rozhodovací rámec Fedu a přichází po silných NFP, které naopak zvýšily tržní pravděpodobnost zářijového zvýšení sazeb.",
+  "categories": ["FED", "RATES", "US_POLITICS", "BONDS", "USD"],
+  "region": ["US", "GLOBAL"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-04T23:48:25Z",
+    "dxy": {"value": 99.255, "direction": "UP", "regime": "FIRM_AFTER_STRONG_NFP", "source": "Trendonify/Barron's Sep 4 close snapshot", "source_time_note": "Latest available Sep 4 DXY close reference was about 99.255 after an intraday post-NFP rise."},
+    "us2y": {"value": 4.379, "unit": "percent", "direction": "UP", "regime": "HAWKISH_FRONT_END", "source": "WSJ Sep 4 market close report", "source_time_note": "Two-year Treasury yield finished near 4.379% after strong payrolls increased rate-hike expectations."},
+    "us10y": {"value": 4.795, "unit": "percent", "direction": "UP", "regime": "HIGH_AND_RISING", "source": "MarketWatch Sep 4 Treasury reaction", "source_time_note": "Latest reported Sep 4 10-year yield was about 4.795% after the jobs report."},
+    "vix": {"value": 14.2, "direction": "DOWN", "regime": "LOW_VOLATILITY", "source": "Barron's Sep 4 market close report", "source_time_note": "VIX was around 14.2, indicating a low-volatility regime despite rate and geopolitical risks."},
+    "wti": {"value": 91.48, "unit": "USD_per_barrel", "direction": "UP", "regime": "HIGH_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 settlement", "source_time_note": "WTI settled at $91.48, up on the day and nearly 10% higher for the week."},
+    "brent": {"value": 92.68, "unit": "USD_per_barrel", "direction": "UP", "regime": "HIGH_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 settlement", "source_time_note": "Brent settled at $92.68, up 0.8% on the day and 7.6% for the week."},
+    "risk_regime": "STRONG_DOLLAR_RISING_US_YIELDS_LOW_VIX_HIGH_OIL_POST_NFP_HAWKISH",
+    "notes": "Current macro context is materially more hawkish than Trump's desired rate path: strong NFP pushed September hike odds to roughly 58%, DXY and Treasury yields rose, while VIX remained low. The political headline is therefore treated as a countervailing dovish signal rather than a policy change."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "The latest learning profile was reviewed under its guardrails. No verified ACTIONABLE context-aware segment was identified that justified a material confidence adjustment for this event; EARLY_SIGNAL evidence was advisory only and INSUFFICIENT segments were ignored."
+  },
+  "predictions": [
+    {"instrument": "XAUUSD", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Extreme dovish political pressure is supportive for gold through lower-rate expectations, but the actual pre-prediction backdrop remains a stronger dollar and sharply higher Treasury yields after NFP.", "invalidation": "A clear Fed response validating lower rates would tilt gold upward, while a renewed rise in DXY and real yields would tilt it downward.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "NDX", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "Lower-rate rhetoric is valuation-positive for growth stocks, but it conflicts directly with the stronger post-NFP rate-hike signal and elevated Treasury yields.", "invalidation": "A meaningful repricing toward lower Fed rates would turn the signal bullish; further rise in yields would turn it bearish.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"},
+    {"instrument": "SP500", "immediate": {"direction": "MIXED", "confidence": 4}, "next_session": {"direction": "MIXED", "confidence": 4}, "mechanism": "The headline is dovish for financial conditions, but markets currently price a materially hawkish post-NFP Fed path and the statement itself does not change policy.", "invalidation": "Concrete Fed guidance toward lower rates would turn the signal bullish; sustained post-NFP yield strength would reinforce downside pressure.", "reference_price": null, "reference_price_time_utc": null, "market_data_source": "yahoo_pending_evaluation"}
+  ]
+}
