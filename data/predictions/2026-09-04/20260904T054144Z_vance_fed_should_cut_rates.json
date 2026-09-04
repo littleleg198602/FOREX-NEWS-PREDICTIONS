@@ -1,0 +1,72 @@
+{
+  "prediction_id": "2026-09-04T05:41:44Z_FF_1416418",
+  "event_id": "VANCE_FED_RATE_CUT_PRESSURE_2026_09_04",
+  "created_at_utc": "2026-09-04T05:41:44Z",
+  "published_at_utc": "2026-09-04T05:10:00Z",
+  "observed_at_utc": "2026-09-04T05:41:44Z",
+  "source_time_text": "Sep 4, 6:10am",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416418-vance-says-fed-should-lower-interest-rates-would",
+  "headline_original": "Vance says Fed should lower interest rates: ‘Would be nice to have some help’",
+  "headline_cs": "Vance znovu tlačí na Fed, aby snížil sazby",
+  "summary_cs": "Viceprezident JD Vance řekl, že Fed by měl sazby snížit, aby pomohl dostupnosti bydlení, a přidal další politický tlak na centrální banku. Výrok přichází po Wallerově mírnějším tónu, ale sám o sobě není změnou měnové politiky Fedu.",
+  "categories": ["MONETARY_POLICY", "FED", "US_POLITICS", "RATES"],
+  "region": ["US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-04T05:41:44Z",
+    "dxy": {"value": 98.98, "direction": "DOWN", "regime": "SOFT_DOLLAR", "source": "Investing.com DXY Sep 2026 futures / Reuters Sep 4 currency report", "source_time_note": "Latest available pre-prediction DXY futures readout 98.98, down about 0.58%; Reuters also described the dollar as weaker on the week and flat into payrolls."},
+    "us2y": {"value": 4.317, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ Sep 4 Treasury market report", "source_time_note": "Latest reliable pre-prediction readout: U.S. 2-year yield 4.317%."},
+    "us10y": {"value": 4.744, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ Sep 4 Treasury market report", "source_time_note": "Latest reliable pre-prediction readout: U.S. 10-year yield 4.744%."},
+    "vix": {"value": 15.20, "direction": "LOW_TO_FLAT", "regime": "LOW_VOLATILITY", "source": "Latest Sep 3 VIX close/readout available before prediction", "source_time_note": "No newer reliable overnight cash VIX print was available; latest pre-prediction close/readout remained around 15.20."},
+    "wti": {"value": 92.10, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil market report", "source_time_note": "Latest pre-prediction Reuters quote: WTI about 92.10, with a strong weekly gain driven by U.S.-Iran tensions."},
+    "brent": {"value": 96.06, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil market report", "source_time_note": "Latest pre-prediction Reuters quote: Brent about 96.06, with geopolitical risk premium elevated."},
+    "risk_regime": "SOFT_USD_EASING_US_YIELDS_LOW_VIX_BUT_ELEVATED_OIL",
+    "notes": "The immediate backdrop is supportive for duration-sensitive assets because the dollar and Treasury yields are easing, but high oil prices keep inflation risk elevated. Vance's comment is political pressure rather than a Fed policy commitment, so confidence is capped."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE context-aware segment in by_context, by_instrument_context, by_category_context or by_instrument_category_context justified a material confidence change. The only actionable broad calibration segments around confidence 5-6 recommend KEEP_NEUTRAL; EARLY_SIGNAL segments were treated as advisory only."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "Additional public pressure for lower rates reinforces the already softer rate narrative and easing Treasury yields, which is supportive for long-duration technology valuations, but the statement is not a Fed commitment.",
+      "invalidation": "Payrolls or inflation expectations push Treasury yields and Fed hike odds sharply higher, or Fed officials explicitly reject the easing narrative.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "Lower-rate rhetoric is mildly supportive for broad equity valuations, but elevated oil and the political rather than policy nature of the statement reduce conviction.",
+      "invalidation": "Treasury yields reverse higher or macro data restore a clearly hawkish Fed path.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "A softer rate narrative and weaker dollar are supportive for non-yielding gold, while elevated oil-related inflation risk provides an additional hedge bid; the limited policy authority of the comment caps confidence.",
+      "invalidation": "DXY and real/nominal U.S. yields reverse sharply higher after payrolls or hawkish Fed repricing.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
