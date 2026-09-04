@@ -1,0 +1,52 @@
+{
+  "prediction_id": "2026-09-04T03:26:43Z_FF_1416415",
+  "event_id": "JAPAN_US_YEN_UNDERVALUATION_2026_09_04",
+  "created_at_utc": "2026-09-04T03:26:43Z",
+  "published_at_utc": "2026-09-04T02:26:00Z",
+  "observed_at_utc": "2026-09-04T03:26:43Z",
+  "source_time_text": "Sep 3, 7:26pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416415-japan-finmin-katayama-bessent-understands-supports-our-position",
+  "headline_original": "Japan FinMin Katayama: Bessent understands, supports our position",
+  "headline_cs": "Katayama: Bessent podporuje japonský postoj a považuje jen za podhodnocený",
+  "summary_cs": "Japonská ministryně financí Katayama uvedla, že americký ministr financí Scott Bessent rozumí a podporuje japonskou pozici. Dodala, že Bessent dlouhodobě považuje jen za podhodnocený zejména kvůli úrokovému diferenciálu, což posiluje tržní očekávání, že USA nebudou bránit dalšímu posílení JPY.",
+  "categories": ["CENTRAL_BANKS", "JAPAN", "FX", "JPY", "US_JAPAN_POLICY_COORDINATION"],
+  "region": ["JAPAN", "US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-04T03:26:43Z",
+    "dxy": {"value": 99.01, "direction": "FLAT_TO_DOWN", "regime": "SOFT_DOLLAR", "source": "Reuters Sep 4 currency-market report", "source_time_note": "Latest pre-prediction quote: DXY around 99.01, broadly flat after recent weakening."},
+    "us2y": {"value": 4.322, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ Sep 3 U.S. market close report", "source_time_note": "Latest reliably sourced pre-prediction close/readout: 2-year yield 4.322%."},
+    "us10y": {"value": 4.761, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ Sep 3 U.S. market close report", "source_time_note": "Latest reliably sourced pre-prediction close/readout: 10-year yield 4.761%."},
+    "vix": {"value": 15.20, "direction": "DOWN", "regime": "LOW_VOLATILITY", "source": "Latest Sep 3 VIX close/readout available before prediction", "source_time_note": "VIX remained in the mid-teens; latest reliable pre-prediction readout around 15.20."},
+    "wti": {"value": 91.56, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil market report", "source_time_note": "Latest pre-prediction quote: WTI 91.56, up about 0.3%."},
+    "brent": {"value": 95.67, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil market report", "source_time_note": "Latest pre-prediction quote: Brent 95.67, up about 0.2%."},
+    "risk_regime": "SOFT_USD_EASING_US_YIELDS_LOW_VIX_WITH_STRONG_JPY_AND_ELEVATED_OIL",
+    "notes": "The dominant channel is JPY strength. Easing U.S. yields and a soft dollar already support the yen; Bessent's reported view that the yen is undervalued reduces the perceived risk of U.S. opposition to further JPY appreciation."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE context-aware segment in by_context, by_instrument_context, by_category_context or by_instrument_category_context justified a material confidence change. EARLY_SIGNAL evidence remains advisory only."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "U.S. Treasury support for Japan's FX stance and Bessent's view that the yen is undervalued reinforce the probability of further JPY strength. A stronger yen is a headwind for Japanese exporters and typically weighs on the Nikkei 225.",
+      "invalidation": "USD/JPY reverses sharply higher, U.S. or Japanese officials walk back the yen-undervaluation message, or a strong global risk-on move overwhelms the currency headwind.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
