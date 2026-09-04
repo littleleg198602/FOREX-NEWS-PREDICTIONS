@@ -1,0 +1,62 @@
+{
+  "prediction_id": "2026-09-04T07:11:17Z_FF_1416421",
+  "event_id": "GERMANY_FACTORY_ORDERS_JULY_2026_2026_09_04",
+  "created_at_utc": "2026-09-04T07:11:17Z",
+  "published_at_utc": "2026-09-04T06:06:00Z",
+  "observed_at_utc": "2026-09-04T07:11:17Z",
+  "source_time_text": "Sep 4, 1:06am | 34 min ago",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 300,
+  "source": "Forex Factory",
+  "source_section": "Hot Stories + Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416421-new-orders-in-manufacturing-in-july-2026-25",
+  "headline_original": "New orders in manufacturing in July 2026: +2.5% on the previous month",
+  "headline_cs": "Německé tovární objednávky výrazně překonaly očekávání",
+  "summary_cs": "Německé tovární objednávky v červenci vzrostly o 2,5 % meziměsíčně proti konsensu zhruba +0,3 %. Bez velkých zakázek ale objednávky klesly o 1,4 %, takže headline je silný, ale podklad je smíšenější.",
+  "categories": ["MACRO", "GERMANY", "FACTORY_ORDERS", "GROWTH"],
+  "region": ["GERMANY", "EUROZONE"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-04T07:11:17Z",
+    "dxy": {"value": 98.99, "direction": "FLAT_TO_DOWN", "regime": "SOFT_DOLLAR", "source": "TradersUnion live DXY / Investing.com technical readout", "source_time_note": "Latest available pre-prediction DXY readout around 98.99; broader short-term trend remained soft ahead of U.S. payrolls."},
+    "us2y": {"value": 4.322, "unit": "percent", "direction": "DOWN", "regime": "YIELDS_EASING", "source": "WSJ Sep 4 Treasury market coverage / latest reliable pre-prediction close", "source_time_note": "Latest reliable pre-prediction 2-year Treasury yield was about 4.322%, lower after Waller's dovish comments."},
+    "us10y": {"value": 4.755, "unit": "percent", "direction": "FLAT_TO_DOWN", "regime": "YIELDS_EASING", "source": "WSJ Sep 4 Treasury market report", "source_time_note": "Latest pre-prediction 10-year Treasury yield was about 4.755%, little changed to slightly lower ahead of payrolls."},
+    "vix": {"value": 15.20, "direction": "LOW_TO_FLAT", "regime": "LOW_VOLATILITY", "source": "Latest Sep 4 verified market readout", "source_time_note": "Latest reliable pre-prediction VIX readout remained around 15.2, consistent with a low-volatility regime."},
+    "wti": {"value": 91.94, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "OilPriceAPI live dashboard Sep 4 02:56 GMT", "source_time_note": "Latest pre-prediction WTI readout was about 91.94, up on the day and strongly higher on the week amid U.S.-Iran tensions."},
+    "brent": {"value": 96.06, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "OilPriceAPI live dashboard / Reuters Sep 4 oil report", "source_time_note": "Latest pre-prediction Brent readout was about 96.06 with geopolitical risk premium elevated."},
+    "risk_regime": "SOFT_USD_EASING_US_YIELDS_LOW_VIX_BUT_ELEVATED_OIL",
+    "notes": "The German growth surprise is equity-supportive, especially for DAX cyclicals, while low VIX and easing U.S. yields reinforce risk appetite. However, very high oil prices, weak ex-large-order detail and imminent U.S. payrolls cap conviction."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No ACTIONABLE context-aware segment in by_context, by_instrument_context, by_category_context or by_instrument_category_context justified a material confidence change. EARLY_SIGNAL evidence was advisory only and INSUFFICIENT segments were not used."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "A 2.5% rise in German factory orders versus roughly 0.3% expected is a positive growth surprise for Germany and supports cyclical/industrial sentiment, but the ex-large-order decline tempers the signal.",
+      "invalidation": "German industrial follow-through disappoints, oil rises sharply further, or U.S. payrolls drive a broad global risk-off move and higher yields.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 5},
+      "mechanism": "A stronger-than-expected German manufacturing demand signal modestly improves the Eurozone cyclical outlook, though the effect is diluted outside Germany and by elevated energy costs.",
+      "invalidation": "Eurozone follow-through data weaken materially, energy prices jump again, or global risk appetite reverses after U.S. payrolls.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
