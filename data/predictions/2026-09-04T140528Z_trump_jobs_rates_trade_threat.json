@@ -2,12 +2,14 @@
   "prediction_id": "2026-09-04T140528Z_trump_jobs_rates_trade_threat",
   "event_id": "trump_post_nfp_rates_trade_2026_09_04",
   "created_at_utc": "2026-09-04T14:05:28Z",
+  "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
   "source": "Forex Factory",
   "source_url": "https://www.forexfactory.com/news/1416495-trump-great-jobs-number-just-announced-breaking-all",
   "headline": "Trump: Great jobs number just announced breaking all estimates; Lower the rate or I’ll stop trading with countries with which we have a deficit",
   "category": "US_POLICY_TRADE_FED_PRESSURE",
+  "categories": ["US_POLICY_TRADE_FED_PRESSURE"],
   "source_time_text": "7 min ago",
   "observed_at_utc": "2026-09-04T14:05:28Z",
   "published_at_utc": "2026-09-04T13:58:28Z",
@@ -36,12 +38,34 @@
     "reason": "No verified ACTIONABLE context-aware segment was used to alter confidence; current policy rhetoric and market context dominate."
   },
   "predictions": [
-    {"instrument": "SP500", "direction": "DOWN", "confidence": 5},
-    {"instrument": "NDX", "direction": "DOWN", "confidence": 5},
-    {"instrument": "WS30", "direction": "DOWN", "confidence": 5},
-    {"instrument": "XAUUSD", "direction": "MIXED", "confidence": 4}
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The trade threat adds policy uncertainty and downside risk to equities, while the demand for lower rates conflicts with the post-NFP rise in hike odds, leaving gold with opposing forces.",
+      "invalidation": "If the trade comment is quickly clarified as non-policy rhetoric or markets ignore it while yields and equities stabilize, the signal weakens."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The trade threat adds policy uncertainty and downside risk to equities, while the demand for lower rates conflicts with the post-NFP rise in hike odds, leaving gold with opposing forces.",
+      "invalidation": "If the trade comment is quickly clarified as non-policy rhetoric or markets ignore it while yields and equities stabilize, the signal weakens."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "The trade threat adds policy uncertainty and downside risk to equities, while the demand for lower rates conflicts with the post-NFP rise in hike odds, leaving gold with opposing forces.",
+      "invalidation": "If the trade comment is quickly clarified as non-policy rhetoric or markets ignore it while yields and equities stabilize, the signal weakens."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The trade threat adds policy uncertainty and downside risk to equities, while the demand for lower rates conflicts with the post-NFP rise in hike odds, leaving gold with opposing forces.",
+      "invalidation": "If the trade comment is quickly clarified as non-policy rhetoric or markets ignore it while yields and equities stabilize, the signal weakens."
+    }
   ],
-  "next_session": [
+  "legacy_top_level_next_session": [
     {"instrument": "SP500", "direction": "MIXED", "confidence": 4},
     {"instrument": "NDX", "direction": "MIXED", "confidence": 4}
   ],
