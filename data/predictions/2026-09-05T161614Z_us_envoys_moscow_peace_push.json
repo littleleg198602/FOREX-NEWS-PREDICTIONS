@@ -1,0 +1,134 @@
+{
+  "prediction_id": "2026-09-05T161614Z_us_envoys_moscow_peace_push",
+  "event_id": "ff_1416583_us_envoys_moscow_peace_push",
+  "created_at_utc": "2026-09-05T16:16:14Z",
+  "source": {
+    "platform": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1416583-us-envoys-witkoff-and-kushner-are-in-moscow",
+    "headline": "U.S. envoys Witkoff and Kushner are in Moscow in a new push for peace between Russia and Ukraine",
+    "source_time_text": "Sep 5, 4:59pm | 17 min ago",
+    "observed_at_utc": "2026-09-05T16:16:14Z",
+    "published_at_utc": "2026-09-05T15:59:00Z",
+    "time_source": "forex_factory_absolute",
+    "time_is_derived": false,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60,
+    "display_timezone_offset": "+01:00"
+  },
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": ["geopolitics", "russia_ukraine", "peace_talks"],
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "market_context_at_prediction": {
+    "context_timestamp_utc": "2026-09-05T16:16:14Z",
+    "market_state": "weekend_closed_last_available_friday_data",
+    "DXY": {
+      "value": 99.14,
+      "value_timestamp_utc": "2026-09-04T20:00:00Z",
+      "short_term_direction": "UP_THEN_FADED",
+      "regime": "firm_after_strong_nfp_but_below_intraday_peak",
+      "source": "Barron's, Sep 4 2026"
+    },
+    "US2Y": {
+      "value": 4.37,
+      "unit": "percent",
+      "value_timestamp_utc": "2026-09-04T20:00:00Z",
+      "short_term_direction": "UP",
+      "regime": "elevated_hawkish_fed_pricing",
+      "source": "Reuters, Sep 4 2026"
+    },
+    "US10Y": {
+      "value": 4.78,
+      "unit": "percent",
+      "value_timestamp_utc": "2026-09-04T20:00:00Z",
+      "short_term_direction": "UP",
+      "regime": "elevated_near_multiyear_highs",
+      "source": "Reuters, Sep 4 2026"
+    },
+    "VIX": {
+      "value": 14.2,
+      "value_timestamp_utc": "2026-09-04T20:00:00Z",
+      "short_term_direction": "LOW_STABLE",
+      "regime": "low_volatility_complacent",
+      "source": "Friday market reports, Sep 4 2026"
+    },
+    "WTI": {
+      "value": 91.48,
+      "unit": "USD_per_barrel",
+      "value_timestamp_utc": "2026-09-04T20:00:00Z",
+      "short_term_direction": "UP",
+      "regime": "high_geopolitical_risk_premium",
+      "source": "WSJ, Sep 5 2026 reporting Sep 4 close"
+    },
+    "Brent": {
+      "value": 96.28,
+      "unit": "USD_per_barrel",
+      "value_timestamp_utc": "2026-09-04T20:00:00Z",
+      "short_term_direction": "UP",
+      "regime": "high_geopolitical_risk_premium",
+      "source": "WSJ, Sep 5 2026 reporting Sep 4 close"
+    }
+  },
+  "learning_profile_used": {
+    "profile_version": "1.3.1",
+    "generated_at_utc": "2026-09-05T16:05:36.381077+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No verified ACTIONABLE context-aware segment specific enough to override or materially adjust this low-confidence geopolitical assessment; EARLY_SIGNAL evidence was treated as advisory only."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "A credible renewed peace channel can reduce the European geopolitical risk premium and marginally support cyclicals, but the effect is limited until Moscow reciprocates and Middle East risk remains dominant.",
+      "invalidation": "Talks fail quickly, Russia rejects a reciprocal pause, or another geopolitical escalation dominates before European markets reopen."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "Lower perceived Russia-Ukraine escalation risk is marginally positive for broad European risk assets, though the weekend timing and absence of an agreement cap conviction.",
+      "invalidation": "No substantive progress emerges or broader risk-off forces from rates, Iran or energy markets overwhelm the peace signal."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "A revived U.S.-led peace effort mildly lowers European geopolitical tail risk and can support sentiment into the next open.",
+      "invalidation": "The diplomatic push stalls or fresh military escalation reverses the reduction in geopolitical risk premium."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "A credible peace initiative can trim safe-haven demand, but elevated Middle East risk, high oil and weekend uncertainty limit the bearish gold signal.",
+      "invalidation": "The Moscow talks fail, Russia-Ukraine strikes intensify, or Middle East escalation strengthens safe-haven demand before metals reopen."
+    }
+  ]
+}
