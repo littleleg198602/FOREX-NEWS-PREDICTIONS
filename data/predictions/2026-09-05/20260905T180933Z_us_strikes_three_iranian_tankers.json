@@ -1,0 +1,98 @@
+{
+  "prediction_id": "2026-09-05T18:09:33Z_FF_1416593",
+  "event_id": "US_IRAN_THREE_TANKERS_NAVY_MISSILES_2026_09_05",
+  "created_at_utc": "2026-09-05T18:09:33Z",
+  "published_at_utc": "2026-09-05T17:53:33Z",
+  "observed_at_utc": "2026-09-05T18:09:33Z",
+  "source_time_text": "Sep 5, 10:50pm | 16 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "time_note": "Forex Factory displayed both an absolute label and a relative age, but the displayed absolute clock was inconsistent with the automation observation clock. The usable relative age was therefore used to derive published_at_utc without backdating created_at_utc.",
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416593-us-attacks-3-iranian-oil-tankers-after-missiles",
+  "headline_original": "U.S. attacks 3 Iranian oil tankers after missiles target Navy warships",
+  "headline_cs": "USA udeřily na tři íránské tankery po raketových útocích na americké válečné lodě",
+  "summary_cs": "CENTCOM uvedl, že americké síly zasáhly tři íránské ropné tankery poté, co IRGC odpálily balistické střely směrem ke dvěma americkým válečným lodím. Jedna loď byla vyřazena u Kharg Island, druhá u Jasku a třetí v Ománském zálivu; jde o podstatné rozšíření dříve hlášeného jednotlivého zásahu a zvyšuje riziko další odvety i narušení ropných toků.",
+  "categories": ["GEOPOLITICS", "IRAN", "US", "OIL", "NAVAL_CONFLICT", "SHIPPING", "SUPPLY_RISK", "ESCALATION"],
+  "region": ["MIDDLE_EAST", "US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "deduplication": {
+    "status": "NEW_SUBSTANTIVE_DEVELOPMENT",
+    "related_prior_event_id": "US_IRAN_KHARG_TANKER_STRIKE_2026_09_05",
+    "reason": "Prior item concerned a claimed strike on one tanker near Kharg Island. This item adds confirmed CENTCOM attribution, three tanker strikes, and preceding IRGC ballistic-missile attacks toward two U.S. Navy warships."
+  },
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-05T18:09:33Z",
+    "market_status_note": "Saturday; major cash markets are closed. Values are the latest reliably available pre-prediction Friday Sep 4 close/readouts; no later price information is used.",
+    "dxy": {"value": 99.18, "direction": "UP", "regime": "FIRM_AFTER_NFP", "source": "Investing.com DXY technical snapshot Sep 4 20:00 GMT", "source_timestamp_utc": "2026-09-04T20:00:00Z"},
+    "us2y": {"value": 4.37, "unit": "percent", "direction": "UP", "regime": "HAWKISH_REPRICING", "source": "AP / Treasury Rate Watch Sep 4 close", "source_timestamp_utc": "2026-09-04"},
+    "us10y": {"value": 4.78, "unit": "percent", "direction": "UP", "regime": "HIGH_YIELD", "source": "Treasury Rate Watch Sep 4 close", "source_timestamp_utc": "2026-09-04"},
+    "vix": {"value": 13.96, "direction": "DOWN", "regime": "LOW_VOLATILITY", "source": "MetricsHour Sep 4 close snapshot", "source_timestamp_utc": "2026-09-04T17:01:00Z"},
+    "wti": {"value": 91.48, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil close report", "source_timestamp_utc": "2026-09-04"},
+    "brent": {"value": 96.28, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil close report", "source_timestamp_utc": "2026-09-04"},
+    "risk_regime": "FIRM_USD_HIGH_US_YIELDS_LOW_VIX_VERY_HIGH_OIL_AND_ESCALATING_US_IRAN_NAVAL_RISK",
+    "notes": "The incremental information is materially more severe than the earlier single-tanker report: direct IRGC missile attacks toward U.S. Navy warships plus U.S. strikes on three crude carriers. High oil prices amplify the inflation and growth shock channel, while firm DXY and high U.S. yields cap part of gold's safe-haven upside."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No relevant context-aware ACTIONABLE segment was verified that justified changing confidence for this specific geopolitical/oil escalation. EARLY_SIGNAL evidence was advisory only and INSUFFICIENT evidence was not used."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 7},
+      "next_session": {"direction": "UP", "confidence": 6},
+      "mechanism": "Direct attacks on U.S. Navy assets followed by strikes on three Iranian crude carriers materially increase escalation and safe-haven demand, though firm DXY and elevated Treasury yields cap upside.",
+      "invalidation": "Credible rapid de-escalation, no Iranian follow-through, and a material fall in oil and geopolitical risk premia before markets reopen."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 7},
+      "next_session": {"direction": "DOWN", "confidence": 6},
+      "mechanism": "Europe's energy-import exposure makes a renewed oil-supply shock and risk-off repricing particularly negative for German cyclicals and margins.",
+      "invalidation": "Oil reverses sharply lower and the military escalation is contained before the European open."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 6},
+      "mechanism": "Higher crude and geopolitical risk premia worsen the European growth-inflation mix and raise the equity risk premium.",
+      "invalidation": "A verified ceasefire/de-escalation or a sharp fall in crude and volatility risk before the next session."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "A broader Middle East energy shock pressures European cyclicals and consumer-sensitive equities despite partial support from energy-sector exposure.",
+      "invalidation": "Oil gives back the risk premium and regional retaliation risk fades materially."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 6},
+      "mechanism": "Japan's heavy energy-import dependence makes higher oil prices a terms-of-trade shock, while risk-off flows can compound existing yen-strength pressure on exporters.",
+      "invalidation": "Crude falls sharply, USDJPY reverses materially higher, or global risk appetite strengthens despite the escalation."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Escalation raises the equity risk premium and oil-driven inflation risk while Treasury yields are already elevated after strong payrolls.",
+      "invalidation": "The confrontation is rapidly contained and oil/yields fall enough to restore broad risk appetite."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "The combination of higher geopolitical risk, expensive oil and elevated Treasury yields is a negative setup for long-duration technology valuations.",
+      "invalidation": "Treasury yields and oil retreat sharply and markets treat the episode as contained before the U.S. open."
+    }
+  ]
+}
