@@ -1,0 +1,113 @@
+{
+  "prediction_id": "2026-09-05T13:20:44Z_FF_1416584",
+  "event_id": "US_IRAN_KHARG_TANKER_STRIKE_2026_09_05",
+  "created_at_utc": "2026-09-05T13:20:44Z",
+  "published_at_utc": "2026-09-05T11:27:00Z",
+  "observed_at_utc": "2026-09-05T13:20:44Z",
+  "source_time_text": "Sep 5, 7:27am | 46 min ago",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416584-iran-accuses-the-us-of-targeting-a-tanker",
+  "headline_original": "Iran accuses the US of targeting a tanker near Kharg Island, and other Mideast news",
+  "headline_cs": "Írán obvinil USA z útoku na tanker u Kharg Island",
+  "summary_cs": "Íránská státní televize uvedla, že americké střely zasáhly íránský tanker poblíž Kharg Island v Perském zálivu. USA se bezprostředně nevyjádřily; pokud se útok potvrdí, jde o další konkrétní eskalaci poblíž klíčového íránského ropného exportního uzlu a zvyšuje riziko odvety i dalšího omezení regionální přepravy ropy.",
+  "categories": ["GEOPOLITICS", "IRAN", "US", "OIL", "PERSIAN_GULF", "SHIPPING", "SUPPLY_RISK"],
+  "region": ["MIDDLE_EAST", "US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-05T13:20:44Z",
+    "market_status_note": "Saturday; major cash and futures markets are closed, so the values below are the latest reliably available pre-prediction Friday Sep 4 close/readouts. No post-prediction price information is used.",
+    "dxy": {"value": 99.16, "direction": "UP", "regime": "FIRM_AFTER_NFP", "source": "Rabofund Sep 4 market close summary / Samuel & Co Sep 4 market brief", "source_time_note": "Latest Friday close/readout; DXY firmed after the strong U.S. payroll report."},
+    "us2y": {"value": 4.37, "unit": "percent", "direction": "UP", "regime": "HAWKISH_REPRICING", "source": "AP Sep 4 market close / StockMarketWatch Sep 4 digest", "source_time_note": "Latest Friday close/readout; 2-year Treasury yield around 4.37% after NFP."},
+    "us10y": {"value": 4.79, "unit": "percent", "direction": "UP", "regime": "HIGH_YIELD", "source": "AP Sep 4 market close / Reuters Sep 4 global markets", "source_time_note": "Latest Friday close/readout; 10-year Treasury yield around 4.78-4.80%."},
+    "vix": {"value": 14.53, "direction": "SLIGHTLY_UP", "regime": "LOW_VOLATILITY", "source": "Rabofund Sep 4 market close / StockMarketWatch Sep 4 digest", "source_time_note": "Friday close; VIX remained low despite a modest increase."},
+    "wti": {"value": 91.48, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil close report", "source_time_note": "Friday close; WTI rose nearly 10% on the week amid U.S.-Iran conflict risk."},
+    "brent": {"value": 92.68, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil close report", "source_time_note": "Friday close; Brent remained elevated with Hormuz and regional supply risks."},
+    "risk_regime": "FIRM_USD_HIGH_US_YIELDS_LOW_VIX_ELEVATED_OIL_AND_ESCALATING_MIDDLE_EAST_RISK",
+    "notes": "The new information is a claimed U.S. strike on an Iranian tanker near Kharg Island. The dominant incremental mechanism is higher oil-supply and retaliation risk. Firm DXY and high U.S. yields limit gold upside, while already-elevated oil increases the sensitivity of European and Japanese equity indices to further escalation."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No verified relevant ACTIONABLE context-aware segment was identified that justified changing the forecast confidence. EARLY_SIGNAL evidence was treated as advisory only and INSUFFICIENT evidence caused no adjustment."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "A fresh military escalation near a critical Iranian oil-export area raises safe-haven demand and geopolitical risk premia, although firm U.S. yields and DXY cap the upside.",
+      "invalidation": "The strike is credibly denied or rapidly de-escalated, no retaliation follows, and oil/risk premia fall materially before markets reopen.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Germany is highly exposed to imported energy costs; a higher Middle East oil-risk premium raises inflation and margin pressure while reducing risk appetite.",
+      "invalidation": "Rapid de-escalation, a clear denial of the strike, or a material drop in crude prices before the European open.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Higher oil and geopolitical risk premia are a headwind for European growth-sensitive equities and can tighten financial conditions through inflation expectations.",
+      "invalidation": "No follow-through in oil or regional tensions and a broad global risk-on move into the next European session.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A renewed energy shock and geopolitical escalation raise input costs and risk aversion across European cyclicals, though energy exposure can offset part of the pressure.",
+      "invalidation": "Oil gives back the risk premium or the reported strike is not confirmed and geopolitical tensions ease.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Japan is a major energy importer, so higher oil-risk premia combine with existing yen strength to pressure exporter margins and domestic purchasing power.",
+      "invalidation": "Crude prices fall sharply, geopolitical tensions de-escalate, or a strong global risk-on move overwhelms the energy and currency headwinds.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Escalation raises the equity risk premium and oil-driven inflation risk, while already-high Treasury yields leave less valuation cushion for broad U.S. equities.",
+      "invalidation": "The geopolitical report is denied or contained and oil prices retreat materially before U.S. markets reopen.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher geopolitical and inflation risk can keep Treasury yields elevated and raise discount rates, a particular valuation headwind for long-duration technology shares.",
+      "invalidation": "Treasury yields and oil fall while the conflict de-escalates, allowing risk appetite to recover before the next U.S. session.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
