@@ -1,0 +1,53 @@
+{
+  "prediction_id": "2026-09-05T09:58:36Z_FF_1416538",
+  "event_id": "JPY_STRENGTH_CARRY_UNWIND_2026_09_05",
+  "created_at_utc": "2026-09-05T09:58:36Z",
+  "published_at_utc": "2026-09-05T09:22:00Z",
+  "observed_at_utc": "2026-09-05T09:58:36Z",
+  "source_time_text": "Sep 5, 2:22am | 36 min ago",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source": "Forex Factory",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1416538-yens-changing-fortunes-might-finally-be-spooking-the",
+  "headline_original": "Yen's changing fortunes might finally be spooking the bears",
+  "headline_cs": "Síla jenu začíná vytlačovat medvědí sázky a zvyšuje tlak na Nikkei",
+  "summary_cs": "Jen míří k přibližně 2% týdennímu posílení vůči dolaru. Vedle očekávání dalšího zpřísnění BoJ ho podporuje repatriace kapitálu, rozmotávání carry obchodů a americký politický tlak, což zvyšuje riziko dalšího posílení JPY a představuje protivítr pro japonské exportéry.",
+  "categories": ["JAPAN", "FX", "JPY", "BOJ", "CARRY_TRADE", "CAPITAL_REPATRIATION"],
+  "region": ["JAPAN", "US"],
+  "model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "market_context_at_prediction": {
+    "captured_at_utc": "2026-09-05T09:58:36Z",
+    "market_status_note": "Saturday; cash markets are closed, so values below are the latest reliably available pre-prediction Friday Sep 4 close/readouts.",
+    "dxy": {"value": 99.15, "direction": "UP", "regime": "FIRM_AFTER_NFP", "source": "Investing.com DXY historical data / Reuters Sep 4 global markets", "source_time_note": "Sep 4 close/readout; DXY rose about 0.2-0.25% after strong U.S. payrolls."},
+    "us2y": {"value": 4.37, "unit": "percent", "direction": "UP", "regime": "HAWKISH_REPRICING", "source": "Reuters Sep 4 global markets / AP market close", "source_time_note": "Latest Friday readout after NFP; 2-year Treasury yield around 4.37%."},
+    "us10y": {"value": 4.784, "unit": "percent", "direction": "UP", "regime": "HIGH_YIELD", "source": "Reuters Sep 4 global markets / Hyperdash close summary", "source_time_note": "Latest Friday close/readout; 10-year Treasury yield about 4.78%."},
+    "vix": {"value": 14.55, "direction": "SLIGHTLY_UP", "regime": "LOW_VOLATILITY", "source": "Hyperdash Sep 4 close summary / Barron's Sep 4 VIX report", "source_time_note": "Friday close/readout; volatility remained low in the mid-14s."},
+    "wti": {"value": 91.48, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil close report", "source_time_note": "Friday close; WTI up nearly 10% on the week amid U.S.-Iran tensions."},
+    "brent": {"value": 92.68, "unit": "USD_per_barrel", "direction": "UP", "regime": "ELEVATED_GEOPOLITICAL_PREMIUM", "source": "Reuters Sep 4 oil close report", "source_time_note": "Friday close; Brent remained elevated on Hormuz and supply-risk concerns."},
+    "risk_regime": "FIRM_USD_HIGH_US_YIELDS_LOW_VIX_ELEVATED_OIL_WITH_STRONG_JPY",
+    "notes": "The key instrument-specific force is JPY appreciation driven by BOJ tightening expectations, capital repatriation and carry-trade unwind. Firm U.S. yields and DXY after NFP are a partial counterforce, but the yen still strengthened materially during the week."
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "material_confidence_adjustment": false,
+    "reason": "No relevant ACTIONABLE context-aware segment justified a material confidence adjustment. Available EARLY_SIGNAL evidence was treated as advisory only; the actionable 5-6 confidence calibration is neutral rather than directional."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Further JPY appreciation reduces translated overseas earnings and competitiveness for Japan's large exporters, while carry-trade unwinds can tighten financial conditions and amplify equity selling pressure.",
+      "invalidation": "USD/JPY reverses sharply higher, BOJ tightening expectations fade materially, Japanese officials lean against further yen strength, or a strong global risk-on move overwhelms the currency headwind.",
+      "reference_price": null,
+      "reference_price_time_utc": null,
+      "market_data_source": "yahoo_pending_evaluation"
+    }
+  ]
+}
