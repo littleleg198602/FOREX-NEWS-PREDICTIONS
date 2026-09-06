@@ -1,0 +1,177 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-03T21:03:28Z_FF_1416356",
+  "event_id": "FED_WALLER_TREASURY_SAFETY_PREMIUM_2026_09_03",
+  "event_time_utc": "2026-09-03T20:58:28+00:00",
+  "prediction_time_utc": "2026-09-03T21:03:28+00:00",
+  "evaluation_anchor_time_utc": "2026-09-03T21:03:28+00:00",
+  "prediction_latency_seconds": 300.0,
+  "evaluated_at_utc": "2026-09-06T19:58:30.133101+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "FED",
+    "MONETARY_POLICY",
+    "RATES",
+    "TREASURIES",
+    "US_MACRO"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-03T21:03:28Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.85,
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "TradersUnion current DXY page / Investing.com technical snapshot",
+        "source_time_note": "Same-day current reading around 98.85; Investing.com technical snapshot at 2026-09-03T17:54:00Z classified DXY Strong Sell."
+      },
+      "US2Y": {
+        "value": 4.34,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Benzinga/Yahoo same-day US market report",
+        "source_time_note": "Same-day reading around 4.34%, down about 5 bp after Waller's earlier comments; latest reliably sourced value available before prediction."
+      },
+      "US10Y": {
+        "value": 4.75,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Benzinga/Yahoo same-day US market report",
+        "source_time_note": "Same-day reading around 4.75%, down about 4 bp and below the week's 4.81% high; latest reliably sourced value available before prediction."
+      },
+      "VIX": {
+        "value": 14.53,
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "MetricsHour VIX page",
+        "source_time_note": "Updated 2026-09-03T18:01:00Z; latest reliably timestamped reading found before prediction."
+      },
+      "WTI": {
+        "value": 91.6,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Pyth-derived WTI reference surfaced by Robinhood prediction market",
+        "source_time_note": "Around 2026-09-03T19:15:00Z target/reference level was approximately 91.60; latest reliably timestamped intraday reference found before prediction."
+      },
+      "BRENT": {
+        "value": 95.0,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Yahoo/WSJ same-day market reports",
+        "source_time_note": "Same-day reports placed Brent above $95; exact live quote timestamp unavailable, so value is conservatively stored as approximately 95.0 rather than inventing a more precise quote."
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-03T21:03:28Z_FF_1416356",
+      "instrument": "NDX",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-03T21:03:28Z_FF_1416356",
+      "instrument": "SP500",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-03T21:03:28Z_FF_1416356",
+      "instrument": "XAUUSD",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-03T21:03:28Z_FF_1416356",
+      "instrument": "XAGUSD",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

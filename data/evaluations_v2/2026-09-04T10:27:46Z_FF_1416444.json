@@ -1,0 +1,134 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-04T10:27:46Z_FF_1416444",
+  "event_id": "BOE_BAILEY_HIGH_DEBT_BOND_PRESSURE_2026_09_04",
+  "event_time_utc": "2026-09-04T09:31:00+00:00",
+  "prediction_time_utc": "2026-09-04T10:27:46+00:00",
+  "evaluation_anchor_time_utc": "2026-09-04T10:27:46+00:00",
+  "prediction_latency_seconds": 3406.0,
+  "evaluated_at_utc": "2026-09-06T19:58:42.366251+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "BOE",
+    "BONDS",
+    "FISCAL",
+    "DEBT"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-04T10:27:46Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.0,
+        "direction": "SOFT",
+        "regime": "UNKNOWN",
+        "source": "Investing.com DXY technical snapshot Sep 4",
+        "source_time_note": "Pre-prediction DXY indications were around the 99 area with the daily trend still weak."
+      },
+      "US2Y": {
+        "value": 4.3,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Latest verified Sep 3-4 market coverage",
+        "source_time_note": "The 2-year yield had eased to roughly 4.30% after Waller's comments and remained the latest reliable pre-prediction reference."
+      },
+      "US10Y": {
+        "value": 4.75,
+        "unit": "percent",
+        "direction": "SLIGHTLY_DOWN",
+        "regime": "FALLING",
+        "source": "Latest verified Sep 4 Treasury market coverage",
+        "source_time_note": "The 10-year yield remained near 4.75% before the prediction, off recent highs."
+      },
+      "VIX": {
+        "value": 14.32,
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "CBOE/Yahoo Sep 3 close",
+        "source_time_note": "Latest verified VIX reference was 14.32 after a 5.8% decline."
+      },
+      "WTI": {
+        "value": 90.66,
+        "unit": "USD_per_barrel",
+        "direction": "SLIGHTLY_DOWN",
+        "regime": "FALLING",
+        "source": "Reuters Sep 4",
+        "source_time_note": "WTI was reported near $90.66 in the current Sep 4 session."
+      },
+      "BRENT": {
+        "value": 95.05,
+        "unit": "USD_per_barrel",
+        "direction": "SLIGHTLY_DOWN",
+        "regime": "FALLING",
+        "source": "Reuters Sep 4",
+        "source_time_note": "Brent was reported near $95.05 in the current Sep 4 session."
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-04T10:27:46Z_FF_1416444",
+      "instrument": "UK100",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-04T10:27:46Z_FF_1416444",
+      "instrument": "XAUUSD",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

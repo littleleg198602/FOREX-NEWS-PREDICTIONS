@@ -1,0 +1,228 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260906T061017Z_trump_admin_pressure_warsh_fed_hike",
+  "event_id": "ff_1416602_trump_admin_pressure_warsh_fed_hike",
+  "event_time_utc": "2026-09-06T03:26:16+00:00",
+  "prediction_time_utc": "2026-09-06T06:10:17+00:00",
+  "evaluation_anchor_time_utc": "2026-09-06T06:10:17+00:00",
+  "prediction_latency_seconds": 9841.0,
+  "evaluated_at_utc": "2026-09-06T19:58:59.023920+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "fed",
+    "rates",
+    "us_politics",
+    "central_bank_independence"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [
+    "published_at_utc adapted from source.published_at_utc",
+    "eligible_for_hit_rate adapted from eligibility",
+    "backfilled adapted from eligibility"
+  ],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-06T06:10:17Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.14,
+        "value_timestamp_utc": "2026-09-04T21:00:00Z",
+        "short_term_direction": "UP_THEN_STALLED",
+        "regime": "FLAT",
+        "source": "Barron's market coverage, Sep 4 2026",
+        "timestamp_utc": "2026-09-04T21:00:00Z"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "unit": "percent",
+        "value_timestamp_utc": "2026-09-04T21:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters global markets, Sep 4 2026",
+        "timestamp_utc": "2026-09-04T21:00:00Z"
+      },
+      "US10Y": {
+        "value": 4.78,
+        "unit": "percent",
+        "value_timestamp_utc": "2026-09-04T21:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters global markets, Sep 4 2026",
+        "timestamp_utc": "2026-09-04T21:00:00Z"
+      },
+      "VIX": {
+        "value": 14.53,
+        "value_timestamp_utc": "2026-09-04T21:00:00Z",
+        "short_term_direction": "SLIGHTLY_UP",
+        "regime": "LOW",
+        "source": "Stock Market Watch digest, Sep 4 2026",
+        "timestamp_utc": "2026-09-04T21:00:00Z"
+      },
+      "WTI": {
+        "value": 91.48,
+        "unit": "USD_per_barrel",
+        "value_timestamp_utc": "2026-09-04T21:00:00Z",
+        "short_term_direction": "HIGH_WEEKLY_GAIN_DAILY_MIXED",
+        "regime": "FLAT",
+        "source": "Reuters oil markets, Sep 4 2026",
+        "timestamp_utc": "2026-09-04T21:00:00Z"
+      },
+      "BRENT": {
+        "value": 96.28,
+        "unit": "USD_per_barrel",
+        "value_timestamp_utc": "2026-09-04T21:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters oil markets, Sep 4 2026",
+        "timestamp_utc": "2026-09-04T21:00:00Z"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260906T061017Z_trump_admin_pressure_warsh_fed_hike",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4476.60009765625,
+      "reference_price_time_utc": "2026-09-04T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 1990.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T06:25:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 1990.283
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T07:10:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 1990.283
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T10:10:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 1990.283
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260906T061017Z_trump_admin_pressure_warsh_fed_hike",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29544.154,
+      "reference_price_time_utc": "2026-09-04T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 1973.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T06:25:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 1973.283
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T07:10:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 1973.283
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T10:10:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 1973.283
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260906T061017Z_trump_admin_pressure_warsh_fed_hike",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7718.6,
+      "reference_price_time_utc": "2026-09-04T20:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2016.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T06:25:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2016.283
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T07:10:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2016.283
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T10:10:17+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2016.283
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}

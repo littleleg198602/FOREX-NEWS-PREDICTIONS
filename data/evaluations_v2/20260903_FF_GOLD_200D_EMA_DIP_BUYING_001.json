@@ -1,0 +1,131 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260903_FF_GOLD_200D_EMA_DIP_BUYING_001",
+  "event_id": "GOLD_200D_EMA_DIP_BUYING_2026_09_03",
+  "event_time_utc": "2026-09-03T00:19:00+00:00",
+  "prediction_time_utc": "2026-09-03T00:48:42+00:00",
+  "evaluation_anchor_time_utc": "2026-09-03T00:48:42+00:00",
+  "prediction_latency_seconds": 1782.0,
+  "evaluated_at_utc": "2026-09-06T19:58:03.323901+00:00",
+  "model_version": "1.1.0",
+  "prediction_model_version": "1.1.0",
+  "methodology_version": null,
+  "categories": [
+    "PRECIOUS_METALS",
+    "TECHNICAL",
+    "DXY",
+    "RATES"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": "at_or_before_prediction",
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.6,
+        "timestamp_utc": "2026-09-02T23:32:16Z",
+        "short_term_regime": "FLAT",
+        "source": "Yahoo Finance DX-Y.NYB",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.39,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "FLAT",
+        "source": "U.S. Treasury closing curve as reported by YieldCove",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 4.79,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "FLAT",
+        "source": "U.S. Treasury closing curve as reported by YieldCove",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 15.2,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "LOW",
+        "source": "Cboe closing value as surfaced by Yahoo Finance / YieldCove",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 90.68,
+        "timestamp_utc": "2026-09-03T00:48:42Z",
+        "timestamp_note": "Capture-time observation; the WSJ early-Asia report exposed the price but not a precise quote timestamp.",
+        "short_term_regime": "FALLING",
+        "source": "Wall Street Journal early-Asia oil futures report",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 95.63,
+        "timestamp_utc": "2026-09-02T20:00:00Z",
+        "short_term_regime": "ELEVATED",
+        "source": "Reuters Sep 2 settlement report",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260903_FF_GOLD_200D_EMA_DIP_BUYING_001",
+      "instrument": "XAUUSD",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260903_FF_GOLD_200D_EMA_DIP_BUYING_001",
+      "instrument": "XAGUSD",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

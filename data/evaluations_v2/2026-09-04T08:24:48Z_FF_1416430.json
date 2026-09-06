@@ -1,0 +1,155 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-04T08:24:48Z_FF_1416430",
+  "event_id": "NORWAY_SWF_US_TREASURY_ALLOCATION_CUT_2026_09_04",
+  "event_time_utc": "2026-09-04T08:10:48+00:00",
+  "prediction_time_utc": "2026-09-04T08:24:48+00:00",
+  "evaluation_anchor_time_utc": "2026-09-04T08:24:48+00:00",
+  "prediction_latency_seconds": 840.0,
+  "evaluated_at_utc": "2026-09-06T19:58:39.392526+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "BONDS",
+    "US_TREASURIES",
+    "ASSET_ALLOCATION",
+    "SOVEREIGN_WEALTH_FUND"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-04T08:24:48Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.04,
+        "direction": "SLIGHTLY_UP",
+        "regime": "UNKNOWN",
+        "source": "Yahoo Finance DX-Y.NYB",
+        "source_time_note": "Yahoo Finance showed DXY 99.04, +0.13%, at 03:19:20 EDT on Sep 4; broader short-term dollar tone remained soft after Waller's dovish comments."
+      },
+      "US2Y": {
+        "value": 4.34,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Business Insider / AP Sep 4 pre-prediction market coverage",
+        "source_time_note": "Latest reliable pre-prediction 2-year Treasury yield was about 4.34%, lower after the prior session's dovish Fed repricing."
+      },
+      "US10Y": {
+        "value": 4.762,
+        "unit": "percent",
+        "direction": "SLIGHTLY_DOWN",
+        "regime": "FALLING",
+        "source": "Yahoo Finance ^TNX via DXY market page / AP Sep 4",
+        "source_time_note": "Yahoo Finance showed the 10-year yield around 4.762%; AP described it as slightly lower near 4.77%."
+      },
+      "VIX": {
+        "value": 14.32,
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "Yahoo Finance ^VIX",
+        "source_time_note": "Latest verified VIX close was 14.32, down 5.79%, indicating a low-volatility risk-on backdrop before the prediction."
+      },
+      "WTI": {
+        "value": 92.0,
+        "unit": "USD_per_barrel",
+        "direction": "ELEVATED",
+        "regime": "UNKNOWN",
+        "source": "HDFC SKY Sep 4 market report",
+        "source_time_note": "WTI was reported near $92 in the early Sep 4 session, remaining strongly elevated because of U.S.-Iran tensions."
+      },
+      "BRENT": {
+        "value": 95.82,
+        "unit": "USD_per_barrel",
+        "direction": "SLIGHTLY_UP",
+        "regime": "UNKNOWN",
+        "source": "Yahoo Finance BZ=F",
+        "source_time_note": "Yahoo Finance showed Brent around $95.82, about +0.31%, before the prediction."
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-04T08:24:48Z_FF_1416430",
+      "instrument": "NDX",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-04T08:24:48Z_FF_1416430",
+      "instrument": "SP500",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-04T08:24:48Z_FF_1416430",
+      "instrument": "XAUUSD",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

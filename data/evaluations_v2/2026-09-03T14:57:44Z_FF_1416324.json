@@ -1,0 +1,113 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-03T14:57:44Z_FF_1416324",
+  "event_id": "JPY_SURGE_INTERVENTION_HIGHS_2026_09_03",
+  "event_time_utc": "2026-09-03T14:05:00+00:00",
+  "prediction_time_utc": "2026-09-03T14:57:44+00:00",
+  "evaluation_anchor_time_utc": "2026-09-03T14:57:44+00:00",
+  "prediction_latency_seconds": 3164.0,
+  "evaluated_at_utc": "2026-09-06T19:58:26.612449+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "BOJ",
+    "FX_INTERVENTION_RISK",
+    "JPY",
+    "MONETARY_POLICY"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-03T14:57:44Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.166,
+        "direction": "DOWN",
+        "source": "WSJ same-day currency market report",
+        "source_time_note": "Latest verified same-day reading available before prediction; DXY down about 0.4% to a six-day low.",
+        "regime": "FALLING"
+      },
+      "US2Y": {
+        "value": 4.317,
+        "unit": "percent",
+        "direction": "DOWN",
+        "source": "WSJ same-day Treasury market report",
+        "source_time_note": "Latest verified same-day reading available before prediction.",
+        "regime": "FALLING"
+      },
+      "US10Y": {
+        "value": 4.744,
+        "unit": "percent",
+        "direction": "DOWN",
+        "source": "WSJ same-day Treasury market report",
+        "source_time_note": "Latest verified same-day reading available before prediction, below the recent 4.818% high.",
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "value": 15.2,
+        "direction": "LOW_STABLE",
+        "source": "Barron's same-day VIX market report",
+        "source_time_note": "Reported just above 15; 15.2 retained as approximate contemporaneous context, not an exact tick.",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 93.04,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "source": "Reuters same-day oil market report",
+        "source_time_note": "Latest same-day reported price found before prediction; oil at fresh six-week highs.",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 97.29,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "source": "Reuters same-day oil market report",
+        "source_time_note": "Latest same-day reported price found before prediction; oil at fresh six-week highs.",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-03T14:57:44Z_FF_1416324",
+      "instrument": "NI225",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

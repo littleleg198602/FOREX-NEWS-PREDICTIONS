@@ -1,0 +1,114 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-04T03:26:43Z_FF_1416415",
+  "event_id": "JAPAN_US_YEN_UNDERVALUATION_2026_09_04",
+  "event_time_utc": "2026-09-04T02:26:00+00:00",
+  "prediction_time_utc": "2026-09-04T03:26:43+00:00",
+  "evaluation_anchor_time_utc": "2026-09-04T03:26:43+00:00",
+  "prediction_latency_seconds": 3643.0,
+  "evaluated_at_utc": "2026-09-06T19:58:36.906891+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "CENTRAL_BANKS",
+    "JAPAN",
+    "FX",
+    "JPY",
+    "US_JAPAN_POLICY_COORDINATION"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-04T03:26:43Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.01,
+        "direction": "FLAT_TO_DOWN",
+        "regime": "FLAT",
+        "source": "Reuters Sep 4 currency-market report",
+        "source_time_note": "Latest pre-prediction quote: DXY around 99.01, broadly flat after recent weakening."
+      },
+      "US2Y": {
+        "value": 4.322,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ Sep 3 U.S. market close report",
+        "source_time_note": "Latest reliably sourced pre-prediction close/readout: 2-year yield 4.322%."
+      },
+      "US10Y": {
+        "value": 4.761,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ Sep 3 U.S. market close report",
+        "source_time_note": "Latest reliably sourced pre-prediction close/readout: 10-year yield 4.761%."
+      },
+      "VIX": {
+        "value": 15.2,
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "Latest Sep 3 VIX close/readout available before prediction",
+        "source_time_note": "VIX remained in the mid-teens; latest reliable pre-prediction readout around 15.20."
+      },
+      "WTI": {
+        "value": 91.56,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 4 oil market report",
+        "source_time_note": "Latest pre-prediction quote: WTI 91.56, up about 0.3%."
+      },
+      "BRENT": {
+        "value": 95.67,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 4 oil market report",
+        "source_time_note": "Latest pre-prediction quote: Brent 95.67, up about 0.2%."
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-04T03:26:43Z_FF_1416415",
+      "instrument": "NI225",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

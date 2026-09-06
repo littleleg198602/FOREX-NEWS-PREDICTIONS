@@ -1,0 +1,113 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-04T01:03:11Z_FF_1416400",
+  "event_id": "JAPAN_FX_INTERVENTION_PREPAREDNESS_2026_09_04",
+  "event_time_utc": "2026-09-04T00:37:11+00:00",
+  "prediction_time_utc": "2026-09-04T01:03:11+00:00",
+  "evaluation_anchor_time_utc": "2026-09-04T01:03:11+00:00",
+  "prediction_latency_seconds": 1560.0,
+  "evaluated_at_utc": "2026-09-06T19:58:36.740610+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "CENTRAL_BANKS",
+    "JAPAN",
+    "FX_INTERVENTION",
+    "JPY"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-04T01:03:11Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.85,
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "DollarMetal same-day DXY report",
+        "source_time_note": "Latest reliably surfaced Sep 3 quote available before prediction: DXY 98.85 at 13:00, down on the day."
+      },
+      "US2Y": {
+        "value": 4.332,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ same-day Treasury market report",
+        "source_time_note": "Latest reliably sourced Sep 3 reading available before prediction; two-year yield fell to 4.332%."
+      },
+      "US10Y": {
+        "value": 4.761,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ same-day Treasury market report",
+        "source_time_note": "Latest reliably sourced Sep 3 reading available before prediction; 10-year yield fell to 4.761%."
+      },
+      "VIX": {
+        "value": 15.2,
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "StockBotty Sep 3 VIX report",
+        "source_time_note": "Sep 3 close/readout available before prediction: VIX 15.20, down from 16.34."
+      },
+      "WTI": {
+        "value": 91.73,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Bakken Wire Sep 3 settlement report",
+        "source_time_note": "Sep 3 settlement available before prediction: WTI 91.73, +0.72 on the day."
+      },
+      "BRENT": {
+        "value": 95.83,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Bakken Wire Sep 3 settlement report",
+        "source_time_note": "Sep 3 settlement available before prediction: Brent 95.83, +0.20 on the day."
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-04T01:03:11Z_FF_1416400",
+      "instrument": "NI225",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-03T08:06:59Z_FF_1416260",
+  "event_id": "BOJ_QUARTER_POINT_HIKE_2026_09_03",
+  "event_time_utc": "2026-09-03T07:46:59+00:00",
+  "prediction_time_utc": "2026-09-03T08:06:59+00:00",
+  "evaluation_anchor_time_utc": "2026-09-03T08:06:59+00:00",
+  "prediction_latency_seconds": 1200.0,
+  "evaluated_at_utc": "2026-09-06T19:58:36.583703+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "CENTRAL_BANK",
+    "RATES",
+    "JAPAN"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-03T08:06:59Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.545,
+        "direction": "DOWN",
+        "source": "public market report / Reuters-linked market coverage",
+        "source_time_note": "latest available same-day reading",
+        "regime": "FALLING"
+      },
+      "US2Y": {
+        "value": null,
+        "direction": null,
+        "source": null,
+        "source_time_note": "reliable same-moment value not verified",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 4.784,
+        "unit": "percent",
+        "direction": "DOWN_FROM_HIGHS",
+        "source": "public market report / Reuters-linked market coverage",
+        "source_time_note": "latest available same-day reading",
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "value": 15.2,
+        "direction": "DOWN",
+        "source": "public market report",
+        "source_time_note": "latest available same-day reading",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 90.8,
+        "unit": "USD_per_barrel",
+        "direction": "MIXED_TO_FLAT",
+        "source": "Report.az market indicators",
+        "source_time_note": "2026-09-03 same-day reading",
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "value": 95.23,
+        "unit": "USD_per_barrel",
+        "direction": "SLIGHT_DOWN",
+        "source": "Report.az market indicators",
+        "source_time_note": "2026-09-03 same-day reading",
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-03T08:06:59Z_FF_1416260",
+      "instrument": "NI225",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

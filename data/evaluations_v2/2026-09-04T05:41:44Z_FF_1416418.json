@@ -1,0 +1,155 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-04T05:41:44Z_FF_1416418",
+  "event_id": "VANCE_FED_RATE_CUT_PRESSURE_2026_09_04",
+  "event_time_utc": "2026-09-04T05:10:00+00:00",
+  "prediction_time_utc": "2026-09-04T05:41:44+00:00",
+  "evaluation_anchor_time_utc": "2026-09-04T05:41:44+00:00",
+  "prediction_latency_seconds": 1904.0,
+  "evaluated_at_utc": "2026-09-06T19:58:37.099479+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "MONETARY_POLICY",
+    "FED",
+    "US_POLITICS",
+    "RATES"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-04T05:41:44Z",
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.98,
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Investing.com DXY Sep 2026 futures / Reuters Sep 4 currency report",
+        "source_time_note": "Latest available pre-prediction DXY futures readout 98.98, down about 0.58%; Reuters also described the dollar as weaker on the week and flat into payrolls."
+      },
+      "US2Y": {
+        "value": 4.317,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ Sep 4 Treasury market report",
+        "source_time_note": "Latest reliable pre-prediction readout: U.S. 2-year yield 4.317%."
+      },
+      "US10Y": {
+        "value": 4.744,
+        "unit": "percent",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ Sep 4 Treasury market report",
+        "source_time_note": "Latest reliable pre-prediction readout: U.S. 10-year yield 4.744%."
+      },
+      "VIX": {
+        "value": 15.2,
+        "direction": "LOW_TO_FLAT",
+        "regime": "LOW",
+        "source": "Latest Sep 3 VIX close/readout available before prediction",
+        "source_time_note": "No newer reliable overnight cash VIX print was available; latest pre-prediction close/readout remained around 15.20."
+      },
+      "WTI": {
+        "value": 92.1,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 4 oil market report",
+        "source_time_note": "Latest pre-prediction Reuters quote: WTI about 92.10, with a strong weekly gain driven by U.S.-Iran tensions."
+      },
+      "BRENT": {
+        "value": 96.06,
+        "unit": "USD_per_barrel",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 4 oil market report",
+        "source_time_note": "Latest pre-prediction Reuters quote: Brent about 96.06, with geopolitical risk premium elevated."
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-04T05:41:44Z_FF_1416418",
+      "instrument": "NDX",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-04T05:41:44Z_FF_1416418",
+      "instrument": "SP500",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    },
+    {
+      "prediction_id": "2026-09-04T05:41:44Z_FF_1416418",
+      "instrument": "XAUUSD",
+      "status": "NO_REFERENCE_PRICE",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "evaluations": {
+        "15m": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "1h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "4h": {
+          "status": "NO_REFERENCE_PRICE"
+        },
+        "next_session": {
+          "status": "NO_REFERENCE_PRICE"
+        }
+      }
+    }
+  ]
+}

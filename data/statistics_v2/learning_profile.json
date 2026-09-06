@@ -1,0 +1,59 @@
+{
+  "generated_at_utc": "2026-09-06T19:59:03.558620+00:00",
+  "profile_version": "2.0.0",
+  "evaluation_version": "2.0.0",
+  "purpose": "Evidence-based priors for future Forex Factory predictions from leakage-safe evaluation v2. Never rewrite historical predictions.",
+  "guardrails": {
+    "minimum_sample_actionable": 30,
+    "minimum_sample_early_signal": 10,
+    "strong_sample": 75,
+    "minimum_unique_events_early_signal": 5,
+    "minimum_unique_events_actionable": 15,
+    "strong_unique_events": 30,
+    "actionable_min_hit_rate_pct": 58.0,
+    "actionable_max_hit_rate_pct": 42.0,
+    "bayesian_prior": {
+      "alpha": 2.0,
+      "beta": 2.0
+    },
+    "event_independence_unit": "event_id; prediction_id only as fallback",
+    "event_weighting": "Each event contributes total weight 1 inside a segment, split across correlated instrument observations.",
+    "score_type_isolation": "directional, mixed_neutral and volatility are never pooled for learning recommendations",
+    "model_version_isolation": "different prediction model versions are never pooled in learning segments",
+    "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT causes no change.",
+    "anti_leakage": "Market context and price anchors use only bars whose close was available at or before prediction decision time."
+  },
+  "audit": {
+    "evaluation_version": "2.0.0",
+    "prediction_files": 55,
+    "evaluation_files": 49,
+    "eligible_evaluation_files": 43,
+    "excluded_ineligible": 6,
+    "excluded_examples": 0,
+    "scored_items": 0,
+    "scored_items_with_context": 0,
+    "scored_items_without_context": 0
+  },
+  "omitted_insufficient_segments": {
+    "confidence_calibration": 0,
+    "by_instrument": 0,
+    "by_category": 0,
+    "by_score_type": 0,
+    "by_instrument_category": 0,
+    "by_context": 0,
+    "by_context_signature": 0,
+    "by_instrument_context": 0,
+    "by_category_context": 0,
+    "by_instrument_category_context": 0
+  },
+  "confidence_calibration": [],
+  "by_instrument": [],
+  "by_category": [],
+  "by_score_type": [],
+  "by_instrument_category": [],
+  "by_context": [],
+  "by_context_signature": [],
+  "by_instrument_context": [],
+  "by_category_context": [],
+  "by_instrument_category_context": []
+}

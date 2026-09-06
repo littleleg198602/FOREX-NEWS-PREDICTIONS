@@ -1,0 +1,176 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff_20260906_100800_saxony_anhalt_afd_vote",
+  "event_id": "2026-09-06_saxony-anhalt-afd-state-election",
+  "event_time_utc": "2026-09-06T10:08:00+00:00",
+  "prediction_time_utc": "2026-09-06T11:27:43+00:00",
+  "evaluation_anchor_time_utc": "2026-09-06T11:27:43+00:00",
+  "prediction_latency_seconds": 4783.0,
+  "evaluated_at_utc": "2026-09-06T19:59:01.676511+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "politics",
+    "Germany",
+    "election",
+    "Europe"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.17,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters global markets, Sep 4 2026"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters / Forbes Advisor, Sep 4 2026"
+      },
+      "US10Y": {
+        "value": 4.78,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters / Forbes Advisor, Sep 4 2026"
+      },
+      "VIX": {
+        "value": 14.2,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "DOWN",
+        "regime": "LOW",
+        "source": "Barron's, Sep 4 2026 close"
+      },
+      "WTI": {
+        "value": 91.48,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters oil markets, Sep 4 2026 close"
+      },
+      "BRENT": {
+        "value": 96.28,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters oil markets, Sep 4 2026 close"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff_20260906_100800_saxony_anhalt_afd_vote",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 26046.4,
+      "reference_price_time_utc": "2026-09-04T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2606.717,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T11:42:43+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2606.717
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T12:27:43+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2606.717
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T15:27:43+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2606.717
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff_20260906_100800_saxony_anhalt_afd_vote",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6396.39013671875,
+      "reference_price_time_utc": "2026-09-04T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2637.717,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T11:42:43+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2637.717
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T12:27:43+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2637.717
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-06T15:27:43+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2637.717
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
