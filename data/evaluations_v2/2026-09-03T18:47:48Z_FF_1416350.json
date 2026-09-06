@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-03T18:47:48+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T18:47:48+00:00",
   "prediction_latency_seconds": 5748.0,
-  "evaluated_at_utc": "2026-09-06T22:48:56.328315+00:00",
+  "evaluated_at_utc": "2026-09-06T23:55:47.334593+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -113,24 +113,6 @@
           "directional_threshold_pct": 0.041732,
           "actual_direction_thresholded": "DOWN"
         },
-        "15m": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-03T19:02:48+00:00",
-          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
-          "market_delay_minutes": 0.2,
-          "price": 4522.2998046875,
-          "change_pct": -0.145733,
-          "actual_direction": "DOWN",
-          "correct": false,
-          "score_type": "directional",
-          "baseline_range_pct": 0.152353,
-          "post_event_range_pct": 0.194303,
-          "mfe_pct": 0.024291,
-          "mae_pct": -0.170013,
-          "directional_threshold_pct": 0.015235,
-          "actual_direction_thresholded": "DOWN"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T22:47:48+00:00",
@@ -147,6 +129,24 @@
           "mfe_pct": 0.024291,
           "mae_pct": -0.247294,
           "directional_threshold_pct": 0.092517,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T19:02:48+00:00",
+          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 4522.2998046875,
+          "change_pct": -0.145733,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.152353,
+          "post_event_range_pct": 0.194303,
+          "mfe_pct": 0.024291,
+          "mae_pct": -0.170013,
+          "directional_threshold_pct": 0.015235,
           "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
@@ -206,6 +206,13 @@
           "directional_threshold_pct": 0.014897,
           "actual_direction_thresholded": "DOWN"
         },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-03T22:47:48+00:00",
+          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
+          "market_delay_minutes": 883.2,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T19:02:48+00:00",
@@ -223,13 +230,6 @@
           "mae_pct": -0.023214,
           "directional_threshold_pct": 0.01,
           "actual_direction_thresholded": "DOWN"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-03T22:47:48+00:00",
-          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
-          "market_delay_minutes": 883.2,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
@@ -273,6 +273,13 @@
           "directional_threshold_pct": 0.021274,
           "actual_direction_thresholded": "DOWN"
         },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-03T22:47:48+00:00",
+          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
+          "market_delay_minutes": 883.2,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T19:02:48+00:00",
@@ -290,13 +297,6 @@
           "mae_pct": -0.047727,
           "directional_threshold_pct": 0.01,
           "actual_direction_thresholded": "DOWN"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-03T22:47:48+00:00",
-          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
-          "market_delay_minutes": 883.2,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
@@ -339,23 +339,6 @@
           "mae_pct": null,
           "neutral_envelope_pct": 0.555144
         },
-        "15m": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-03T19:02:48+00:00",
-          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
-          "market_delay_minutes": 0.2,
-          "price": 67.47000122070312,
-          "change_pct": -0.118433,
-          "actual_direction": "DOWN",
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 0.162832,
-          "post_event_range_pct": 0.185048,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "neutral_envelope_pct": 0.162832
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T22:47:48+00:00",
@@ -372,6 +355,23 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 1.613625
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T19:02:48+00:00",
+          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 67.47000122070312,
+          "change_pct": -0.118433,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.162832,
+          "post_event_range_pct": 0.185048,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.162832
         },
         "next_session": {
           "status": "DONE",
