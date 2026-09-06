@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-03T23:51:42+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T23:51:42+00:00",
   "prediction_latency_seconds": 720.0,
-  "evaluated_at_utc": "2026-09-06T19:58:33.739076+00:00",
+  "evaluated_at_utc": "2026-09-06T20:04:21.778107+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -92,107 +92,281 @@
     {
       "prediction_id": "2026-09-03T23:51:42Z_FF_1416395",
       "instrument": "XAUUSD",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T00:51:42+00:00",
+          "actual_price_time_utc": "2026-09-04T00:52:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T00:51:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 4528.5,
+          "change_pct": 0.061865,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.156884,
+          "post_event_range_pct": 0.269576,
+          "mfe_pct": 0.128153,
+          "mae_pct": -0.141423,
+          "directional_threshold_pct": 0.015688,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T03:51:42+00:00",
+          "actual_price_time_utc": "2026-09-04T03:52:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T03:51:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 4515.7001953125,
+          "change_pct": -0.22096,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.205489,
+          "post_event_range_pct": 0.45518,
+          "mfe_pct": 0.174556,
+          "mae_pct": -0.280624,
+          "directional_threshold_pct": 0.020549,
+          "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T00:06:42+00:00",
+          "actual_price_time_utc": "2026-09-04T00:07:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T00:06:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 4528.7001953125,
+          "change_pct": 0.066288,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.090596,
+          "post_event_range_pct": 0.167932,
+          "mfe_pct": 0.092797,
+          "mae_pct": -0.075135,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "UP"
         }
-      }
+      },
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4525.7001953125,
+      "reference_price_time_utc": "2026-09-03T23:51:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T23:50:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6
     },
     {
       "prediction_id": "2026-09-03T23:51:42Z_FF_1416395",
       "instrument": "GDAXI",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PENDING",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T00:51:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 470.7
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T03:51:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 470.7
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T00:06:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 470.7
         }
-      }
+      },
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 26003.32,
+      "reference_price_time_utc": "2026-09-03T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 470.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5
     },
     {
       "prediction_id": "2026-09-03T23:51:42Z_FF_1416395",
       "instrument": "STOXX50",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PENDING",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T00:51:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 501.7
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T03:51:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 501.7
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T00:06:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 501.7
         }
-      }
+      },
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6381.56982421875,
+      "reference_price_time_utc": "2026-09-03T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 501.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5
     },
     {
       "prediction_id": "2026-09-03T23:51:42Z_FF_1416395",
       "instrument": "SP500",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PENDING",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T00:51:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 181.7
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T03:51:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 181.7
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T00:06:42+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 181.7
         }
-      }
+      },
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7747.71,
+      "reference_price_time_utc": "2026-09-03T20:50:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T20:49:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 181.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4
     },
     {
       "prediction_id": "2026-09-03T23:51:42Z_FF_1416395",
       "instrument": "XAGUSD",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T00:51:42+00:00",
+          "actual_price_time_utc": "2026-09-04T00:52:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T00:51:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 67.57499694824219,
+          "change_pct": -0.036985,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.170115,
+          "post_event_range_pct": 0.31065,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.170115
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T03:51:42+00:00",
+          "actual_price_time_utc": "2026-09-04T03:53:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T03:52:00+00:00",
+          "market_delay_minutes": 1.3,
+          "price": 67.2750015258789,
+          "change_pct": -0.480765,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.266273,
+          "post_event_range_pct": 0.939341,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.266273
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T00:06:42+00:00",
+          "actual_price_time_utc": "2026-09-04T00:07:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T00:06:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 67.58999633789062,
+          "change_pct": -0.014796,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.066577,
+          "post_event_range_pct": 0.125738,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.066577
         }
-      }
+      },
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 67.5999984741211,
+      "reference_price_time_utc": "2026-09-03T23:51:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T23:50:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4
     }
   ]
 }

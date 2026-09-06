@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-03T17:02:23+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T17:02:23+00:00",
   "prediction_latency_seconds": 4283.0,
-  "evaluated_at_utc": "2026-09-06T19:58:26.773170+00:00",
+  "evaluated_at_utc": "2026-09-06T20:04:16.728738+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -92,23 +92,44 @@
     {
       "prediction_id": "2026-09-03T17:02:23Z_FF_1416335",
       "instrument": "NI225",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PENDING",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^N225",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-03T18:02:23+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 632.383
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-03T21:02:23+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 632.383
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "DOWN"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-03T17:17:23+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 632.383
         }
-      }
+      },
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 64269.48046875,
+      "reference_price_time_utc": "2026-09-03T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 632.383,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 7
     }
   ]
 }

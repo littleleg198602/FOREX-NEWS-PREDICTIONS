@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-03T00:48:42+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T00:48:42+00:00",
   "prediction_latency_seconds": 1782.0,
-  "evaluated_at_utc": "2026-09-06T19:58:03.323901+00:00",
+  "evaluated_at_utc": "2026-09-06T20:04:04.491674+00:00",
   "model_version": "1.1.0",
   "prediction_model_version": "1.1.0",
   "methodology_version": null,
@@ -88,44 +88,158 @@
     {
       "prediction_id": "20260903_FF_GOLD_200D_EMA_DIP_BUYING_001",
       "instrument": "XAUUSD",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T01:48:42+00:00",
+          "actual_price_time_utc": "2026-09-03T01:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T01:48:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 4449.10009765625,
+          "change_pct": 0.36772,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.230107,
+          "post_event_range_pct": 0.509827,
+          "mfe_pct": 0.4963,
+          "mae_pct": -0.013527,
+          "directional_threshold_pct": 0.023011,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T04:48:42+00:00",
+          "actual_price_time_utc": "2026-09-03T04:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T04:48:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 4482.2998046875,
+          "change_pct": 1.116676,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.257172,
+          "post_event_range_pct": 1.166299,
+          "mfe_pct": 1.152773,
+          "mae_pct": -0.013527,
+          "directional_threshold_pct": 0.025717,
+          "actual_direction_thresholded": "UP"
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "UP"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T01:03:42+00:00",
+          "actual_price_time_utc": "2026-09-03T01:04:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T01:03:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 4436.39990234375,
+          "change_pct": 0.081215,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.16243,
+          "post_event_range_pct": 0.241376,
+          "mfe_pct": 0.227849,
+          "mae_pct": -0.013527,
+          "directional_threshold_pct": 0.016243,
+          "actual_direction_thresholded": "UP"
         }
-      }
+      },
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4432.7998046875,
+      "reference_price_time_utc": "2026-09-03T00:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T00:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6
     },
     {
       "prediction_id": "20260903_FF_GOLD_200D_EMA_DIP_BUYING_001",
       "instrument": "XAGUSD",
-      "status": "NO_REFERENCE_PRICE",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "evaluations": {
-        "15m": {
-          "status": "NO_REFERENCE_PRICE"
-        },
         "1h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T01:48:42+00:00",
+          "actual_price_time_utc": "2026-09-03T01:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T01:48:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 66.20999908447266,
+          "change_pct": 0.455159,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.318615,
+          "post_event_range_pct": 0.804125,
+          "mfe_pct": 0.743435,
+          "mae_pct": -0.06069,
+          "directional_threshold_pct": 0.031861,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T04:48:42+00:00",
+          "actual_price_time_utc": "2026-09-03T04:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T04:48:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 66.75499725341797,
+          "change_pct": 1.282041,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.599297,
+          "post_event_range_pct": 1.380665,
+          "mfe_pct": 1.319974,
+          "mae_pct": -0.06069,
+          "directional_threshold_pct": 0.05993,
+          "actual_direction_thresholded": "UP"
         },
         "next_session": {
-          "status": "NO_REFERENCE_PRICE"
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T01:03:42+00:00",
+          "actual_price_time_utc": "2026-09-03T01:04:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T01:03:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 65.95500183105469,
+          "change_pct": 0.068272,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.197234,
+          "post_event_range_pct": 0.348954,
+          "mfe_pct": 0.288264,
+          "mae_pct": -0.06069,
+          "directional_threshold_pct": 0.019723,
+          "actual_direction_thresholded": "UP"
         }
-      }
+      },
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 65.91000366210938,
+      "reference_price_time_utc": "2026-09-03T00:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-03T00:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 1.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4
     }
   ]
 }
