@@ -7,6 +7,7 @@ import yaml
 import yfinance as yf
 
 from src.config import ROOT
+from src.market_data.yahoo_provider import _normalize_frame, _set_interval_minutes, last_complete_bar_before
 
 CONFIG_PATH = ROOT / "config" / "market_context.yaml"
 
@@ -23,28 +24,28 @@ def _load_config() -> dict:
 
 
 def _normalize(df: pd.DataFrame) -> pd.DataFrame:
-    if df.empty:
-        return df
-    out = df.copy()
-    if isinstance(out.columns, pd.MultiIndex):
-        out.columns = out.columns.get_level_values(0)
-    out.columns = [str(c).lower().replace(" ", "_") for c in out.columns]
-    if out.index.tz is None:
-        out.index = out.index.tz_localize("UTC")
-    else:
-        out.index = out.index.tz_convert("UTC")
-    return out
+    return _normalize_frame(df)
+
+
+def _interval_to_minutes(interval: str) -> int:
+    value = str(interval).strip().lower()
+    if value.endswith("m"):
+        try:
+            return max(1, int(value[:-1]))
+        except ValueError:
+            return 1
+    return 1
 
 
 def _last_close_before(df: pd.DataFrame, when: datetime) -> tuple[datetime, float] | None:
+    """Last close actually available by `when`, never an unfinished candle."""
     if df.empty:
         return None
-    eligible = df[df.index < pd.Timestamp(when)]
-    if eligible.empty:
+    point = last_complete_bar_before(df, when)
+    if point is None:
         return None
-    ts = eligible.index[-1].to_pydatetime().astimezone(timezone.utc)
-    close = float(eligible.iloc[-1]["close"])
-    return ts, close
+    ts = datetime.fromisoformat(point.available_at_utc).astimezone(timezone.utc)
+    return ts, point.close
 
 
 def _change_pct(start: float | None, end: float | None) -> float | None:
@@ -119,7 +120,9 @@ def _download(symbol: str, start: datetime, end: datetime, interval: str) -> pd.
         prepost=True,
         threads=False,
     )
-    return _normalize(frame)
+    if isinstance(frame.columns, pd.MultiIndex):
+        frame.columns = frame.columns.get_level_values(0)
+    return _set_interval_minutes(_normalize(frame), _interval_to_minutes(interval))
 
 
 def _candidate_snapshot(
@@ -134,7 +137,7 @@ def _candidate_snapshot(
     long_minutes = int(lookbacks.get("long", 240))
     history_minutes = int(lookbacks.get("history", max(long_minutes + 30, 5760)))
     start = decision_time_utc - timedelta(minutes=history_minutes)
-    end = decision_time_utc + timedelta(minutes=1)
+    end = decision_time_utc + timedelta(minutes=6)
     symbol = candidate["symbol"]
 
     last_error: Exception | None = None
@@ -188,7 +191,7 @@ def _candidate_snapshot(
     trend_metric = candidate.get("trend_metric", meta.get("trend_metric"))
 
     label = _trend_label(name, value, change_pct_60m, change_abs_60m, config, trend_metric)
-    if not is_fresh and name != "VIX":
+    if not is_fresh:
         label = "UNKNOWN"
 
     return {
@@ -197,6 +200,7 @@ def _candidate_snapshot(
         "interval": selected_interval,
         "value": value,
         "timestamp_utc": current_ts.isoformat(),
+        "available_at_utc": current_ts.isoformat(),
         "age_minutes": round(age_minutes, 2),
         "fresh": is_fresh,
         "max_staleness_minutes": max_staleness,
@@ -213,7 +217,7 @@ def _candidate_snapshot(
 
 
 def fetch_pre_event_context(event_time_utc: datetime) -> dict:
-    """Capture context strictly before the supplied prediction/decision timestamp."""
+    """Capture context using only bars complete by the prediction timestamp."""
     decision_time_utc = _parse_utc(event_time_utc)
     config = _load_config()
 
@@ -239,7 +243,7 @@ def fetch_pre_event_context(event_time_utc: datetime) -> dict:
         if snapshots:
             fresh = [item for item in snapshots if item.get("fresh")]
             selected = fresh[0] if fresh else min(snapshots, key=lambda item: item.get("age_minutes", 1e12))
-            if not selected.get("fresh") and name != "VIX":
+            if not selected.get("fresh"):
                 selected["regime"] = "UNKNOWN"
             labels[name] = selected.get("regime", "UNKNOWN")
             if errors:
@@ -251,6 +255,7 @@ def fetch_pre_event_context(event_time_utc: datetime) -> dict:
                 "source": "yahoo",
                 "value": None,
                 "timestamp_utc": None,
+                "available_at_utc": None,
                 "regime": "UNKNOWN",
                 "candidate_errors": errors or ["No usable Yahoo candidate"],
             }
@@ -258,7 +263,7 @@ def fetch_pre_event_context(event_time_utc: datetime) -> dict:
     return {
         "captured_for_time_utc": decision_time_utc.isoformat(),
         "captured_for_event_time_utc": decision_time_utc.isoformat(),
-        "information_cutoff": "strictly_before_prediction_decision_time",
+        "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
         "source": "yahoo",
         "series": series_out,
         "regimes": labels,
