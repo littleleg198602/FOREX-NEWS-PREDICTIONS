@@ -1,0 +1,131 @@
+{
+  "prediction_id": "20260906T061017Z_trump_admin_pressure_warsh_fed_hike",
+  "event_id": "ff_1416602_trump_admin_pressure_warsh_fed_hike",
+  "created_at_utc": "2026-09-06T06:10:17Z",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "fed",
+    "rates",
+    "us_politics",
+    "central_bank_independence"
+  ],
+  "source": {
+    "platform": "Forex Factory",
+    "section": ["Hot Stories", "Latest Stories"],
+    "headline": "Trump turns up the heat on Warsh as Fed rate hike looms",
+    "publisher": "CNBC",
+    "source_url": "https://www.forexfactory.com/news/1416602-trump-turns-up-the-heat-on-warsh-as",
+    "source_time_text": "2 hr 43 min ago",
+    "observed_at_utc": "2026-09-06T06:09:16Z",
+    "published_at_utc": "2026-09-06T03:26:16Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 120
+  },
+  "eligibility": {
+    "backfilled": false,
+    "eligible_for_hit_rate": true,
+    "evaluation_anchor": "created_at_utc"
+  },
+  "summary": "Ten days before a Fed meeting expected to consider another rate increase, President Trump, the vice president, the Treasury secretary and a senior economic adviser are publicly pressing Chair Kevin Warsh not to hike. The coordinated pressure is a fresh policy-credibility and rate-expectations development beyond Trump's earlier standalone call for 0.5%-1% rates.",
+  "market_context_at_prediction": {
+    "context_timestamp_utc": "2026-09-06T06:10:17Z",
+    "market_state": "weekend_closed_using_latest_available_friday_closes",
+    "DXY": {
+      "value": 99.14,
+      "value_timestamp_utc": "2026-09-04T21:00:00Z",
+      "short_term_direction": "UP_THEN_STALLED",
+      "regime": "FIRM_AFTER_STRONG_NFP",
+      "source": "Barron's market coverage, Sep 4 2026"
+    },
+    "US2Y": {
+      "value": 4.37,
+      "unit": "percent",
+      "value_timestamp_utc": "2026-09-04T21:00:00Z",
+      "short_term_direction": "UP",
+      "regime": "HAWKISH_RATE_REPRICING",
+      "source": "Reuters global markets, Sep 4 2026"
+    },
+    "US10Y": {
+      "value": 4.78,
+      "unit": "percent",
+      "value_timestamp_utc": "2026-09-04T21:00:00Z",
+      "short_term_direction": "UP",
+      "regime": "ELEVATED_YIELDS",
+      "source": "Reuters global markets, Sep 4 2026"
+    },
+    "VIX": {
+      "value": 14.53,
+      "value_timestamp_utc": "2026-09-04T21:00:00Z",
+      "short_term_direction": "SLIGHTLY_UP",
+      "regime": "LOW_VOLATILITY",
+      "source": "Stock Market Watch digest, Sep 4 2026"
+    },
+    "WTI": {
+      "value": 91.48,
+      "unit": "USD_per_barrel",
+      "value_timestamp_utc": "2026-09-04T21:00:00Z",
+      "short_term_direction": "HIGH_WEEKLY_GAIN_DAILY_MIXED",
+      "regime": "GEOPOLITICAL_RISK_PREMIUM",
+      "source": "Reuters oil markets, Sep 4 2026"
+    },
+    "Brent": {
+      "value": 96.28,
+      "unit": "USD_per_barrel",
+      "value_timestamp_utc": "2026-09-04T21:00:00Z",
+      "short_term_direction": "UP",
+      "regime": "GEOPOLITICAL_RISK_PREMIUM",
+      "source": "Reuters oil markets, Sep 4 2026"
+    }
+  },
+  "learning_prior": {
+    "profile_version": "1.3.1",
+    "profile_generated_at_utc": "2026-09-06T05:58:36.896838+00:00",
+    "context_adjustment_applied": false,
+    "reason": "Context-aware arrays by_context, by_instrument_context, by_category_context and by_instrument_category_context contain no actionable segments. Confidence therefore remains driven by current macro facts and pre-prediction market context."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Coordinated political pressure against a Fed hike can pull expected front-end rates lower at the margin and raise concern about central-bank independence, both supportive for gold, but strong payrolls and elevated Treasury yields cap conviction.",
+      "invalidation": "Fed officials firmly reassert a September hike path and Treasury yields/DXY extend higher when markets reopen."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Any reduction in expected policy tightening is valuation-positive for long-duration technology shares, but political pressure on Fed independence and still-high yields limit the signal.",
+      "invalidation": "September hike odds rise materially or US2Y/US10Y resume a sharp climb at the reopen."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Less expected Fed tightening is modestly supportive for broad equities, offset by policy-credibility risk and the strong-NFP backdrop.",
+      "invalidation": "Fed pushback restores hawkish pricing or broader risk-off pressure dominates."
+    }
+  ]
+}
