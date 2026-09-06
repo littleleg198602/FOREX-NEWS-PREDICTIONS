@@ -23,12 +23,15 @@ def test_pct_change_down():
 def test_actual_direction():
     assert _actual_direction(0.5) == "UP"
     assert _actual_direction(-0.5) == "DOWN"
-    assert _actual_direction(0.0) == "FLAT"
+    assert _actual_direction(0.0) == "NO_MOVE"
+    assert _actual_direction(0.005, threshold_pct=0.01) == "NO_MOVE"
+    assert _actual_direction(0.02, threshold_pct=0.01) == "UP"
 
 
 def test_direction_correct():
     assert _direction_correct("UP", "UP") is True
     assert _direction_correct("DOWN", "UP") is False
+    assert _direction_correct("UP", "NO_MOVE") is False
     assert _direction_correct("MIXED", "UP") is None
     assert _direction_correct("VOLATILITY", "DOWN") is None
 
@@ -71,32 +74,50 @@ def test_evaluation_anchor_never_precedes_prediction_creation():
     assert latency == 900.0
 
 
-def test_pre_open_prediction_uses_same_day_as_next_relevant_session():
+def test_pre_open_prediction_uses_same_day_as_next_relevant_session_after_close_confirmation():
     decision = datetime(2026, 9, 2, 13, 0, tzinfo=timezone.utc)  # 09:00 New York
-    now = datetime(2026, 9, 2, 22, 0, tzinfo=timezone.utc)
+    now = datetime(2026, 9, 3, 22, 0, tzinfo=timezone.utc)
     index = pd.DatetimeIndex([
         "2026-09-01T20:00:00Z",
         "2026-09-02T13:30:00Z",
         "2026-09-02T20:00:00Z",
+        "2026-09-03T13:30:00Z",
     ])
-    frame = pd.DataFrame({"close": [100.0, 101.0, 102.0]}, index=index)
+    frame = pd.DataFrame({"close": [100.0, 101.0, 102.0, 103.0]}, index=index)
+    frame.attrs["interval_minutes"] = 1
     status, session, session_date = _next_session_frame(frame, "NDX", decision, now)
     assert status == "DONE"
     assert session_date.isoformat() == "2026-09-02"
     assert session is not None and len(session) == 2
 
 
-def test_intraday_prediction_waits_for_next_trading_date():
+def test_intraday_prediction_waits_for_next_trading_date_and_later_date_confirms_close():
     decision = datetime(2026, 9, 2, 15, 0, tzinfo=timezone.utc)
-    now = datetime(2026, 9, 3, 22, 0, tzinfo=timezone.utc)
+    now = datetime(2026, 9, 4, 22, 0, tzinfo=timezone.utc)
     index = pd.DatetimeIndex([
         "2026-09-02T13:30:00Z",
         "2026-09-02T20:00:00Z",
         "2026-09-03T13:30:00Z",
         "2026-09-03T20:00:00Z",
+        "2026-09-04T13:30:00Z",
     ])
-    frame = pd.DataFrame({"close": [100.0, 101.0, 102.0, 103.0]}, index=index)
+    frame = pd.DataFrame({"close": [100.0, 101.0, 102.0, 103.0, 104.0]}, index=index)
+    frame.attrs["interval_minutes"] = 1
     status, session, session_date = _next_session_frame(frame, "NDX", decision, now)
     assert status == "DONE"
     assert session_date.isoformat() == "2026-09-03"
     assert session is not None and len(session) == 2
+
+
+def test_feed_silence_during_same_session_is_not_mistaken_for_close():
+    decision = datetime(2026, 9, 2, 13, 0, tzinfo=timezone.utc)
+    now = datetime(2026, 9, 2, 22, 0, tzinfo=timezone.utc)
+    index = pd.DatetimeIndex([
+        "2026-09-02T13:30:00Z",
+        "2026-09-02T14:00:00Z",
+    ])
+    frame = pd.DataFrame({"close": [100.0, 101.0]}, index=index)
+    frame.attrs["interval_minutes"] = 1
+    status, _, session_date = _next_session_frame(frame, "NDX", decision, now)
+    assert session_date.isoformat() == "2026-09-02"
+    assert status == "PENDING"
