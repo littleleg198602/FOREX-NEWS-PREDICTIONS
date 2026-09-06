@@ -5,7 +5,13 @@ import pandas as pd
 from src.evaluation.evaluate_all import _merge_evaluation
 from src.learning.build_learning_profile import _add, _finalize, _new_counter
 from src.market_data.context_snapshot import _last_close_before
-from src.market_data.yahoo_provider import first_complete_bar_at_or_after, last_complete_bar_before
+from src.market_data.yahoo_provider import (
+    MAX_1M_TOTAL_MINUTES,
+    MIN_1M_PREHISTORY_MINUTES,
+    bounded_1m_window_minutes,
+    first_complete_bar_at_or_after,
+    last_complete_bar_before,
+)
 from src.prediction.normalization import normalize_market_context, normalize_prediction, validate_normalized_prediction
 
 
@@ -62,6 +68,13 @@ def test_target_price_uses_first_completed_bar_not_bar_start_label():
     assert point is not None
     assert point.close == 101.0
     assert point.available_at_utc.startswith("2026-09-06T10:16:00")
+
+
+def test_large_yahoo_minute_request_is_bounded_below_intraday_limit():
+    before, after = bounded_1m_window_minutes(7 * 24 * 60, 4 * 24 * 60)
+    assert before + after <= MAX_1M_TOTAL_MINUTES
+    assert before >= MIN_1M_PREHISTORY_MINUTES
+    assert after == 4 * 24 * 60
 
 
 def test_nested_source_time_and_eligibility_are_normalized_without_editing_raw_shape():
