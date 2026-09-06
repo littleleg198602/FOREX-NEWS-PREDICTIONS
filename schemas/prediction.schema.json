@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/forex-news-prediction-v2.schema.json",
+  "title": "FOREX-NEWS-PREDICTIONS normalized prediction v2",
+  "type": "object",
+  "required": [
+    "prediction_id",
+    "created_at_utc",
+    "event_time_utc",
+    "eligible_for_hit_rate",
+    "backfilled",
+    "categories",
+    "predictions"
+  ],
+  "properties": {
+    "prediction_id": {"type": "string", "minLength": 1},
+    "event_id": {"type": ["string", "null"]},
+    "created_at_utc": {"type": "string", "format": "date-time"},
+    "event_time_utc": {"type": "string", "format": "date-time"},
+    "published_at_utc": {"type": ["string", "null"], "format": "date-time"},
+    "model_version": {"type": ["string", "null"]},
+    "prediction_model_version": {"type": ["string", "null"]},
+    "methodology_version": {"type": ["string", "null"]},
+    "eligible_for_hit_rate": {"type": "boolean"},
+    "backfilled": {"type": "boolean"},
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "predictions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["instrument", "immediate"],
+        "properties": {
+          "instrument": {"type": "string", "minLength": 1},
+          "immediate": {"$ref": "#/$defs/forecast"},
+          "next_session": {"$ref": "#/$defs/forecast"},
+          "mechanism": {"type": ["string", "null"]},
+          "invalidation": {"type": ["string", "null"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "market_context_at_prediction": {
+      "type": "object",
+      "properties": {
+        "series": {"type": "object"},
+        "regimes": {"type": "object"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "forecast": {
+      "type": "object",
+      "required": ["direction", "confidence"],
+      "properties": {
+        "direction": {
+          "type": "string",
+          "enum": ["UP", "DOWN", "MIXED", "VOLATILITY"]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
