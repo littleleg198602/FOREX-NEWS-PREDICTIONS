@@ -110,16 +110,21 @@ def _merge_evaluation(existing: dict | None, new: dict) -> dict:
         for item in new.get("results", [])
         if isinstance(item, dict) and item.get("instrument")
     }
-    order = []
+    order: list[str] = []
     for item in new.get("results", []) + existing.get("results", []):
         instrument = item.get("instrument") if isinstance(item, dict) else None
         if instrument and instrument not in order:
             order.append(instrument)
-    merged["results"] = [
-        _merge_result(old_by_instrument.get(instrument), new_by_instrument.get(instrument, old_by_instrument[instrument]))
-        for instrument in order
-        if instrument in new_by_instrument or instrument in old_by_instrument
-    ]
+
+    merged_results: list[dict] = []
+    for instrument in order:
+        old_item = old_by_instrument.get(instrument)
+        new_item = new_by_instrument.get(instrument)
+        if new_item is None and old_item is not None:
+            merged_results.append(old_item)
+        elif new_item is not None:
+            merged_results.append(_merge_result(old_item, new_item))
+    merged["results"] = merged_results
     return merged
 
 
