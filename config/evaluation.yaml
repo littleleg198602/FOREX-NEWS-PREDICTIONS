@@ -1,27 +1,46 @@
-version: 1
-
+version: 2
+evaluation_version: "2.0.0"
 timezone_storage: UTC
+
+output:
+  evaluations_dir: "data/evaluations_v2"
+  statistics_dir: "data/statistics_v2"
+  preserve_legacy_v1: true
 
 reference_price:
   preferred_interval: "1m"
-  rule: "last_complete_bar_before_event"
-  allow_post_event_bar: false
-  fallback_to_coarser_interval: true
-  closed_market_behavior: "defer_to_first_relevant_traded_price"
+  rule: "last_bar_whose_close_is_available_at_or_before_prediction_decision"
+  allow_unfinished_bar: false
+  reference_max_age_minutes_for_fixed_horizons: 10
+  closed_market_behavior: "MARKET_CLOSED"
 
 evaluation_horizons:
   - id: "15m"
     minutes: 15
+    kind: "fixed_clock_time"
   - id: "1h"
     minutes: 60
+    kind: "fixed_clock_time"
   - id: "4h"
     minutes: 240
+    kind: "fixed_clock_time"
   - id: "next_session"
     session_based: true
+
+fixed_horizon_quality:
+  max_market_delay_minutes: 5
+  delayed_price_behavior: "DATA_GAP_OR_MARKET_CLOSED"
+  never_substitute_next_open_for_fixed_horizon: true
+
+next_session:
+  completion_rule: "require_observed_later_trading_date"
+  note: "Conservative data-driven close confirmation avoids treating an intraday feed outage as a completed session."
+  volatility_baseline: "previous_relevant_local_trading_session"
 
 providers:
   primary: "yahoo"
   secondary: "twelvedata"
+  secondary_implemented: false
   require_source_on_every_price: true
   do_not_mix_sources_within_one_evaluation_if_avoidable: true
 
@@ -36,11 +55,14 @@ classification:
     - DOWN
     - MIXED
     - VOLATILITY
-  threshold_mode: "instrument_volatility_based"
-  fixed_thresholds_enabled: false
+  directional_threshold:
+    mode: "fraction_of_pre_event_realized_range"
+    fraction: 0.10
+    absolute_floor_pct: 0.01
+    no_move_label: "NO_MOVE"
   volatility_reference: "pre_event_realized_range_same_horizon"
-  mixed_rule: "correct when absolute close change stays inside the pre-event same-horizon range"
-  volatility_rule: "correct when post-event range / pre-event same-horizon range >= 1.25"
+  mixed_rule: "explicit neutral prediction; correct when absolute close change stays inside the pre-event same-horizon range"
+  volatility_rule: "fixed horizons: post-event range / pre-event same-horizon range >= configured threshold"
   volatility_ratio_threshold: 1.25
   directional_hit_rate_scope:
     - UP
@@ -48,9 +70,13 @@ classification:
   non_directional_scores_reported_separately:
     - MIXED
     - VOLATILITY
+  never_mix_score_types_for_learning: true
 
 integrity:
   prediction_immutable_after_creation: true
   evaluation_separate_from_prediction: true
   preserve_failed_predictions: true
+  preserve_completed_horizons_on_provider_failure: true
   hindsight_edits_forbidden: true
+  raw_prediction_normalized_only_in_derived_evaluation: true
+  config_hash_recorded_in_every_evaluation: true
