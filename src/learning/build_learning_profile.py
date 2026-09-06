@@ -5,12 +5,14 @@ from datetime import datetime, timezone
 import json
 import math
 
-from src.config import ROOT, load_yaml
+from src.config import ROOT, load_evaluation_config, load_yaml
 from src.market_data.context_snapshot import context_signature
+from src.prediction.normalization import normalize_prediction
 
 HORIZONS = ("15m", "1h", "4h", "next_session")
 PRIOR_ALPHA = 2.0
 PRIOR_BETA = 2.0
+EVAL_CONFIG = load_evaluation_config()
 
 
 def _learning_config() -> dict:
@@ -44,7 +46,7 @@ def _confidence_bucket(value: int | float | None) -> str:
     return "9-10"
 
 
-def _wilson_lower_bound(correct: int, n: int, z: float = 1.96) -> float | None:
+def _wilson_lower_bound(correct: float, n: int, z: float = 1.96) -> float | None:
     if n <= 0:
         return None
     phat = correct / n
@@ -56,7 +58,13 @@ def _wilson_lower_bound(correct: int, n: int, z: float = 1.96) -> float | None:
 
 
 def _new_counter() -> dict:
-    return {"n": 0, "correct": 0, "sum_change_pct": 0.0, "event_ids": set()}
+    return {
+        "n": 0,
+        "correct": 0,
+        "sum_change_pct": 0.0,
+        "event_ids": set(),
+        "event_scores": defaultdict(lambda: {"n": 0, "correct": 0}),
+    }
 
 
 def _add(counter: dict, correct: bool, change_pct: float, event_id: str | None = None) -> None:
@@ -64,24 +72,48 @@ def _add(counter: dict, correct: bool, change_pct: float, event_id: str | None =
     counter["correct"] += int(bool(correct))
     counter["sum_change_pct"] += change_pct
     if event_id is not None:
-        counter.setdefault("event_ids", set()).add(event_id)
+        event_key = str(event_id)
+        counter.setdefault("event_ids", set()).add(event_key)
+        event_scores = counter.setdefault("event_scores", defaultdict(lambda: {"n": 0, "correct": 0}))
+        event_scores[event_key]["n"] += 1
+        event_scores[event_key]["correct"] += int(bool(correct))
+
+
+def _event_weighted_stats(counter: dict) -> tuple[int, float]:
+    event_scores = counter.get("event_scores")
+    if event_scores:
+        means = []
+        for stats in event_scores.values():
+            if stats.get("n", 0) > 0:
+                means.append(stats.get("correct", 0) / stats["n"])
+        if means:
+            return len(means), float(sum(means))
+
+    ids = counter.get("event_ids")
+    if ids:
+        # Legacy/manual counter with IDs but without per-event outcomes. We know
+        # independence count but cannot reconstruct exact event weighting.
+        unique = len(ids)
+        raw = 0.0 if counter.get("n", 0) <= 0 else counter.get("correct", 0) / counter["n"]
+        return unique, raw * unique
+
+    n = int(counter.get("n", 0))
+    return n, float(counter.get("correct", 0))
 
 
 def _finalize(counter: dict) -> dict:
-    n = counter["n"]
-    correct = counter["correct"]
+    observation_n = int(counter.get("n", 0))
+    observation_correct = int(counter.get("correct", 0))
     t = _thresholds()
-    ids = counter.get("event_ids")
-    # Unit-test/manual counters without IDs are treated as independent samples;
-    # production counters always receive the prediction's clustered event_id.
-    unique_events = len(ids) if ids is not None and len(ids) > 0 else n
+    unique_events, weighted_successes = _event_weighted_stats(counter)
 
-    if n == 0:
+    if observation_n == 0:
         return {
             "n": 0,
             "unique_events": 0,
             "correct": 0,
             "raw_hit_rate_pct": None,
+            "event_weighted_hit_rate_pct": None,
             "bayesian_hit_rate_pct": None,
             "wilson_lower_95_pct": None,
             "mean_change_pct": None,
@@ -89,36 +121,38 @@ def _finalize(counter: dict) -> dict:
             "learning_weight": 0.0,
         }
 
-    raw = correct / n
-    bayes = (correct + PRIOR_ALPHA) / (n + PRIOR_ALPHA + PRIOR_BETA)
-    wilson = _wilson_lower_bound(correct, n)
+    weighted_raw = None if unique_events <= 0 else weighted_successes / unique_events
+    bayes = None if unique_events <= 0 else (weighted_successes + PRIOR_ALPHA) / (unique_events + PRIOR_ALPHA + PRIOR_BETA)
+    wilson = None if unique_events <= 0 else _wilson_lower_bound(weighted_successes, unique_events)
 
-    if n >= t["actionable"] and unique_events >= t["unique_actionable"]:
+    if observation_n >= t["actionable"] and unique_events >= t["unique_actionable"]:
         sample_status = "ACTIONABLE"
         learning_weight = min(
             1.0,
-            n / max(t["strong"], 1),
+            observation_n / max(t["strong"], 1),
             unique_events / max(t["unique_strong"], 1),
         )
-    elif n >= t["early"] and unique_events >= t["unique_early"]:
+    elif observation_n >= t["early"] and unique_events >= t["unique_early"]:
         sample_status = "EARLY_SIGNAL"
         learning_weight = min(
             0.35,
-            n / max(t["strong"], 1),
+            observation_n / max(t["strong"], 1),
             unique_events / max(t["unique_strong"], 1),
         )
     else:
         sample_status = "INSUFFICIENT"
         learning_weight = 0.0
 
+    raw_observation_rate = observation_correct / observation_n
     return {
-        "n": n,
+        "n": observation_n,
         "unique_events": unique_events,
-        "correct": correct,
-        "raw_hit_rate_pct": round(raw * 100.0, 2),
-        "bayesian_hit_rate_pct": round(bayes * 100.0, 2),
+        "correct": observation_correct,
+        "raw_hit_rate_pct": round(raw_observation_rate * 100.0, 2),
+        "event_weighted_hit_rate_pct": None if weighted_raw is None else round(weighted_raw * 100.0, 2),
+        "bayesian_hit_rate_pct": None if bayes is None else round(bayes * 100.0, 2),
         "wilson_lower_95_pct": None if wilson is None else round(wilson * 100.0, 2),
-        "mean_change_pct": round(counter["sum_change_pct"] / n, 6),
+        "mean_change_pct": round(counter.get("sum_change_pct", 0.0) / observation_n, 6),
         "sample_status": sample_status,
         "learning_weight": round(learning_weight, 3),
     }
@@ -144,8 +178,8 @@ def _recommendation(stats: dict) -> str:
 
 def main() -> int:
     predictions_root = ROOT / "data" / "predictions"
-    evaluations_root = ROOT / "data" / "evaluations"
-    out_root = ROOT / "data" / "statistics"
+    evaluations_root = ROOT / EVAL_CONFIG.get("output", {}).get("evaluations_dir", "data/evaluations_v2")
+    out_root = ROOT / EVAL_CONFIG.get("output", {}).get("statistics_dir", "data/statistics_v2")
     out_root.mkdir(parents=True, exist_ok=True)
 
     predictions: dict[str, dict] = {}
@@ -153,22 +187,24 @@ def main() -> int:
         try:
             with path.open("r", encoding="utf-8") as f:
                 raw = json.load(f)
-            predictions[raw["prediction_id"]] = raw
+            normalized = normalize_prediction(raw)
+            predictions[normalized["prediction_id"]] = normalized
         except Exception:
             continue
 
-    by_instrument_category_horizon = defaultdict(_new_counter)
-    by_instrument_horizon = defaultdict(_new_counter)
-    by_category_horizon = defaultdict(_new_counter)
-    by_confidence_horizon = defaultdict(_new_counter)
-    by_score_type_horizon = defaultdict(_new_counter)
-    by_context_horizon = defaultdict(_new_counter)
-    by_context_signature_horizon = defaultdict(_new_counter)
-    by_instrument_context_horizon = defaultdict(_new_counter)
-    by_category_context_horizon = defaultdict(_new_counter)
-    by_instrument_category_context_horizon = defaultdict(_new_counter)
+    by_instrument = defaultdict(_new_counter)
+    by_category = defaultdict(_new_counter)
+    by_confidence = defaultdict(_new_counter)
+    by_score_type = defaultdict(_new_counter)
+    by_instrument_category = defaultdict(_new_counter)
+    by_context = defaultdict(_new_counter)
+    by_context_signature = defaultdict(_new_counter)
+    by_instrument_context = defaultdict(_new_counter)
+    by_category_context = defaultdict(_new_counter)
+    by_instrument_category_context = defaultdict(_new_counter)
 
     audit = {
+        "evaluation_version": EVAL_CONFIG.get("evaluation_version"),
         "prediction_files": len(predictions),
         "evaluation_files": 0,
         "eligible_evaluation_files": 0,
@@ -186,6 +222,8 @@ def main() -> int:
         except Exception:
             continue
 
+        if evaluation.get("evaluation_version") != EVAL_CONFIG.get("evaluation_version"):
+            continue
         audit["evaluation_files"] += 1
         prediction_id = evaluation.get("prediction_id")
         prediction = predictions.get(prediction_id)
@@ -202,11 +240,9 @@ def main() -> int:
             continue
         audit["eligible_evaluation_files"] += 1
 
-        # Multiple stories may belong to the same macro/geopolitical event.
-        # event_id is therefore the independence unit; prediction_id is only a
-        # fallback for records that predate event clustering.
         learning_event_id = str(prediction.get("event_id") or prediction_id)
         categories = prediction.get("categories") or ["UNKNOWN"]
+        model_version = str(evaluation.get("model_version") or prediction.get("model_version") or "UNKNOWN")
         pred_by_instrument = {
             item.get("instrument"): item
             for item in prediction.get("predictions", [])
@@ -226,31 +262,34 @@ def main() -> int:
                 if scored.get("status") != "DONE" or scored.get("correct") is None:
                     continue
 
+                score_type = scored.get("score_type", "directional")
                 confidence_source = pred_item.get("next_session", {}) if horizon == "next_session" else pred_item.get("immediate", {})
                 confidence_bucket = _confidence_bucket(confidence_source.get("confidence"))
                 correct = bool(scored["correct"])
                 change_pct = float(scored.get("change_pct", 0.0))
-                score_type = scored.get("score_type", "directional")
                 audit["scored_items"] += 1
 
-                _add(by_instrument_horizon[(instrument, horizon)], correct, change_pct, learning_event_id)
-                _add(by_confidence_horizon[(confidence_bucket, horizon)], correct, change_pct, learning_event_id)
-                _add(by_score_type_horizon[(score_type, horizon)], correct, change_pct, learning_event_id)
+                # Every learning key includes model_version + score_type. A
+                # successful MIXED/VOLATILITY item can therefore never change a
+                # directional segment, and model versions are never pooled.
+                _add(by_instrument[(model_version, score_type, instrument, horizon)], correct, change_pct, learning_event_id)
+                _add(by_confidence[(model_version, score_type, confidence_bucket, horizon)], correct, change_pct, learning_event_id)
+                _add(by_score_type[(model_version, score_type, horizon)], correct, change_pct, learning_event_id)
 
                 for category in categories:
-                    _add(by_category_horizon[(category, horizon)], correct, change_pct, learning_event_id)
-                    _add(by_instrument_category_horizon[(instrument, category, horizon)], correct, change_pct, learning_event_id)
+                    _add(by_category[(model_version, score_type, category, horizon)], correct, change_pct, learning_event_id)
+                    _add(by_instrument_category[(model_version, score_type, instrument, category, horizon)], correct, change_pct, learning_event_id)
 
                 if regimes:
                     audit["scored_items_with_context"] += 1
-                    _add(by_context_signature_horizon[(signature, horizon)], correct, change_pct, learning_event_id)
+                    _add(by_context_signature[(model_version, score_type, signature, horizon)], correct, change_pct, learning_event_id)
                     for context_name, regime in regimes.items():
-                        _add(by_context_horizon[(context_name, regime, horizon)], correct, change_pct, learning_event_id)
-                        _add(by_instrument_context_horizon[(instrument, context_name, regime, horizon)], correct, change_pct, learning_event_id)
+                        _add(by_context[(model_version, score_type, context_name, regime, horizon)], correct, change_pct, learning_event_id)
+                        _add(by_instrument_context[(model_version, score_type, instrument, context_name, regime, horizon)], correct, change_pct, learning_event_id)
                         for category in categories:
-                            _add(by_category_context_horizon[(category, context_name, regime, horizon)], correct, change_pct, learning_event_id)
+                            _add(by_category_context[(model_version, score_type, category, context_name, regime, horizon)], correct, change_pct, learning_event_id)
                             _add(
-                                by_instrument_category_context_horizon[(instrument, category, context_name, regime, horizon)],
+                                by_instrument_category_context[(model_version, score_type, instrument, category, context_name, regime, horizon)],
                                 correct,
                                 change_pct,
                                 learning_event_id,
@@ -279,8 +318,9 @@ def main() -> int:
     t = _thresholds()
     profile = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "profile_version": "1.3.1",
-        "purpose": "Compact evidence-based priors for future Forex Factory predictions. Never rewrite historical predictions.",
+        "profile_version": "2.0.0",
+        "evaluation_version": EVAL_CONFIG.get("evaluation_version"),
+        "purpose": "Evidence-based priors for future Forex Factory predictions from leakage-safe evaluation v2. Never rewrite historical predictions.",
         "guardrails": {
             "minimum_sample_actionable": t["actionable"],
             "minimum_sample_early_signal": t["early"],
@@ -292,30 +332,29 @@ def main() -> int:
             "actionable_max_hit_rate_pct": t["bad"],
             "bayesian_prior": {"alpha": PRIOR_ALPHA, "beta": PRIOR_BETA},
             "event_independence_unit": "event_id; prediction_id only as fallback",
-            "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT segments are omitted from this compact profile and cause no change.",
-            "anti_overfit": "Both observation count and independent clustered event count must pass thresholds. Correlated instruments or multiple stories from one event cannot by themselves make a segment actionable.",
-            "anti_leakage": "Market context and evaluation anchors use only information available at or before the prediction decision time.",
+            "event_weighting": "Each event contributes total weight 1 inside a segment, split across correlated instrument observations.",
+            "score_type_isolation": "directional, mixed_neutral and volatility are never pooled for learning recommendations",
+            "model_version_isolation": "different prediction model versions are never pooled in learning segments",
+            "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT causes no change.",
+            "anti_leakage": "Market context and price anchors use only bars whose close was available at or before prediction decision time.",
         },
         "audit": audit,
         "omitted_insufficient_segments": omitted,
-        "confidence_calibration": pack("confidence_calibration", by_confidence_horizon, ("confidence_bucket", "horizon")),
-        "by_instrument": pack("by_instrument", by_instrument_horizon, ("instrument", "horizon")),
-        "by_category": pack("by_category", by_category_horizon, ("category", "horizon")),
-        "by_score_type": pack("by_score_type", by_score_type_horizon, ("score_type", "horizon")),
-        "by_instrument_category": pack("by_instrument_category", by_instrument_category_horizon, ("instrument", "category", "horizon")),
-        "by_context": pack("by_context", by_context_horizon, ("context", "regime", "horizon")),
-        "by_context_signature": pack("by_context_signature", by_context_signature_horizon, ("context_signature", "horizon")),
-        "by_instrument_context": pack("by_instrument_context", by_instrument_context_horizon, ("instrument", "context", "regime", "horizon")),
-        "by_category_context": pack("by_category_context", by_category_context_horizon, ("category", "context", "regime", "horizon")),
+        "confidence_calibration": pack("confidence_calibration", by_confidence, ("model_version", "score_type", "confidence_bucket", "horizon")),
+        "by_instrument": pack("by_instrument", by_instrument, ("model_version", "score_type", "instrument", "horizon")),
+        "by_category": pack("by_category", by_category, ("model_version", "score_type", "category", "horizon")),
+        "by_score_type": pack("by_score_type", by_score_type, ("model_version", "score_type", "horizon")),
+        "by_instrument_category": pack("by_instrument_category", by_instrument_category, ("model_version", "score_type", "instrument", "category", "horizon")),
+        "by_context": pack("by_context", by_context, ("model_version", "score_type", "context", "regime", "horizon")),
+        "by_context_signature": pack("by_context_signature", by_context_signature, ("model_version", "score_type", "context_signature", "horizon")),
+        "by_instrument_context": pack("by_instrument_context", by_instrument_context, ("model_version", "score_type", "instrument", "context", "regime", "horizon")),
+        "by_category_context": pack("by_category_context", by_category_context, ("model_version", "score_type", "category", "context", "regime", "horizon")),
         "by_instrument_category_context": pack(
             "by_instrument_category_context",
-            by_instrument_category_context_horizon,
-            ("instrument", "category", "context", "regime", "horizon"),
+            by_instrument_category_context,
+            ("model_version", "score_type", "instrument", "category", "context", "regime", "horizon"),
         ),
     }
-
-    # pack() populates omitted while the profile is being built, so assign the
-    # final copy after all sections have been produced.
     profile["omitted_insufficient_segments"] = dict(omitted)
 
     out_path = out_root / "learning_profile.json"
