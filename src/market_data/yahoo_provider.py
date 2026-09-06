@@ -9,6 +9,13 @@ import yfinance as yf
 
 from src.config import load_instruments
 
+# Yahoo/yfinance minute data rejects or inconsistently serves overly large
+# start/end requests. Keep each request comfortably below the practical
+# intraday range limit while retaining enough pre-event history for baselines.
+MAX_1M_TOTAL_MINUTES = 6 * 24 * 60
+MAX_1M_FORWARD_MINUTES = 5 * 24 * 60
+MIN_1M_PREHISTORY_MINUTES = 6 * 60
+
 
 @dataclass(frozen=True)
 class PricePoint:
@@ -57,6 +64,26 @@ def interval_minutes(df: pd.DataFrame) -> int:
     except (TypeError, ValueError):
         value = 1
     return max(1, value)
+
+
+def bounded_1m_window_minutes(before_minutes: int, after_minutes: int) -> tuple[int, int]:
+    """Bound one Yahoo 1m request to a reliable total window.
+
+    Forward history is the scarce requirement for completed horizons. Whatever
+    budget remains is assigned to pre-event history, with at least six hours
+    retained for reference/baseline calculations.
+    """
+    requested_before = max(0, int(before_minutes))
+    requested_after = max(0, int(after_minutes))
+
+    bounded_after = min(requested_after, MAX_1M_FORWARD_MINUTES)
+    remaining = max(0, MAX_1M_TOTAL_MINUTES - bounded_after)
+    if remaining < MIN_1M_PREHISTORY_MINUTES:
+        bounded_after = max(0, MAX_1M_TOTAL_MINUTES - MIN_1M_PREHISTORY_MINUTES)
+        remaining = MIN_1M_PREHISTORY_MINUTES
+    bounded_before = min(requested_before, remaining)
+
+    return bounded_before, bounded_after
 
 
 def bar_available_at_index(df: pd.DataFrame) -> pd.DatetimeIndex:
@@ -110,8 +137,9 @@ def fetch_1m_window(instrument: str, event_time_utc: datetime, before_minutes: i
 
     symbol = instruments[instrument]["yahoo_symbol"]
     event_time_utc = _ensure_utc(event_time_utc)
-    start = event_time_utc - timedelta(minutes=before_minutes)
-    end = event_time_utc + timedelta(minutes=after_minutes + 2)
+    bounded_before, bounded_after = bounded_1m_window_minutes(before_minutes, after_minutes)
+    start = event_time_utc - timedelta(minutes=bounded_before)
+    end = event_time_utc + timedelta(minutes=bounded_after + 2)
 
     df = yf.download(
         symbol,
@@ -128,7 +156,12 @@ def fetch_1m_window(instrument: str, event_time_utc: datetime, before_minutes: i
         # yfinance may return a ticker level even for one symbol.
         df.columns = df.columns.get_level_values(0)
 
-    return _set_interval_minutes(_normalize_frame(df), 1)
+    out = _set_interval_minutes(_normalize_frame(df), 1)
+    out.attrs["requested_before_minutes"] = int(before_minutes)
+    out.attrs["requested_after_minutes"] = int(after_minutes)
+    out.attrs["bounded_before_minutes"] = bounded_before
+    out.attrs["bounded_after_minutes"] = bounded_after
+    return out
 
 
 def _point_from_row(df: pd.DataFrame, position: int) -> PricePoint:
