@@ -1,0 +1,68 @@
+{
+  "prediction_id": "2026-09-06T145157Z_kremlin_us_envoys_no_breakthrough",
+  "event_id": "ukraine_russia_us_envoys_moscow_2026-09-06_no_breakthrough",
+  "created_at_utc": "2026-09-06T14:51:57Z",
+  "observed_at_utc": "2026-09-06T14:51:57Z",
+  "published_at_utc": "2026-09-06T13:55:57Z",
+  "source_time_text": "56 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "source": {
+    "publisher": "CNBC via Forex Factory",
+    "headline": "Kremlin says Ukraine talks with U.S. envoys were useful; no sign of breakthrough",
+    "url": "https://www.forexfactory.com/news/1416610-kremlin-says-ukraine-talks-with-us-envoys-were"
+  },
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": ["geopolitics", "russia-ukraine", "peace-talks"],
+  "market_context_at_prediction": {
+    "context_status": "weekend_last_available_market_close",
+    "DXY": {"value": 99.17, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "firm_after_jobs_report", "source": "Reuters"},
+    "US2Y": {"value": 4.37, "unit": "percent", "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "hawkish_high", "source": "Reuters"},
+    "US10Y": {"value": 4.78, "unit": "percent", "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "elevated", "source": "Reuters"},
+    "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "SLIGHTLY_UP", "regime": "low_volatility", "source": "Cboe close reported by TS2"},
+    "WTI": {"value": 91.48, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-04T18:30:00Z", "short_term_direction": "UP", "regime": "geopolitical_risk_premium", "source": "Reuters"},
+    "Brent": {"value": 96.28, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-04T18:30:00Z", "short_term_direction": "UP", "regime": "geopolitical_risk_premium", "source": "Reuters"}
+  },
+  "learning_profile": {
+    "profile_version": "1.3.1",
+    "generated_at_utc": "2026-09-06T14:12:05.275078+00:00",
+    "context_adjustment_applied": false,
+    "reason": "Context-aware sections by_context, by_instrument_context, by_category_context and by_instrument_category_context contain no actionable entries in the current profile."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Absence of a Ukraine peace breakthrough removes some near-term European geopolitical relief premium, with Germany relatively exposed to regional risk sentiment.",
+      "invalidation": "Concrete ceasefire terms, a follow-up agreement, or another credible step toward settlement before European markets reopen."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "No breakthrough modestly weakens the de-escalation case for European risk assets, though talks remain open and were described as useful.",
+      "invalidation": "A substantive peace framework or ceasefire announcement before the next European session."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "European equities may lose a small amount of peace-talk optimism, but the signal is weak because negotiations did not collapse.",
+      "invalidation": "A concrete de-escalation step or strong global risk-on move before reopening."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Failure to secure a breakthrough preserves geopolitical safe-haven demand, but high US yields and a firm dollar cap conviction.",
+      "invalidation": "A credible ceasefire breakthrough or a renewed sharp rise in the dollar and Treasury yields."
+    }
+  ]
+}
