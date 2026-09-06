@@ -1,0 +1,74 @@
+{
+  "prediction_id": "2026-09-06T224614Z_us_envoys_kyiv_peace_push",
+  "event_id": "ukraine_russia_us_envoys_kyiv_2026-09-06",
+  "created_at_utc": "2026-09-06T22:46:14Z",
+  "observed_at_utc": "2026-09-06T22:46:14Z",
+  "published_at_utc": "2026-09-06T20:00:00Z",
+  "source_time_text": "Sep 6, 8:00pm",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "source": {
+    "publisher": "CNBC via Forex Factory",
+    "headline": "U.S. envoys make first Kyiv visit amid Ukraine war peace push",
+    "url": "https://www.forexfactory.com/news/1416620-us-envoys-make-first-kyiv-visit-amid-ukraine"
+  },
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["geopolitics", "russia-ukraine", "peace-talks"],
+  "market_context_at_prediction": {
+    "context_status": "weekend_last_available_market_close",
+    "regimes": {
+      "usd": "firm_after_jobs_report",
+      "rates": "hawkish_elevated",
+      "volatility": "low",
+      "energy": "geopolitical_risk_premium_high"
+    },
+    "DXY": {"value": 99.17, "timestamp_utc": "2026-09-04T20:00:00Z", "freshness_seconds": 182774, "short_term_direction": "UP", "regime": "firm_after_jobs_report", "source": "Mitrade/Reuters market close context"},
+    "US2Y": {"value": 4.37, "unit": "percent", "timestamp_utc": "2026-09-04T20:00:00Z", "freshness_seconds": 182774, "short_term_direction": "UP", "regime": "hawkish_high", "source": "Reuters"},
+    "US10Y": {"value": 4.78, "unit": "percent", "timestamp_utc": "2026-09-04T20:00:00Z", "freshness_seconds": 182774, "short_term_direction": "UP", "regime": "elevated", "source": "Reuters/Forbes"},
+    "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T20:00:00Z", "freshness_seconds": 182774, "short_term_direction": "SLIGHTLY_UP", "regime": "low_volatility", "source": "YCharts/Cboe"},
+    "WTI": {"value": 91.48, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-04T18:30:00Z", "freshness_seconds": 188174, "short_term_direction": "UP", "regime": "geopolitical_risk_premium", "source": "Reuters"},
+    "BRENT": {"value": 96.28, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-04T18:30:00Z", "freshness_seconds": 188174, "short_term_direction": "UP", "regime": "geopolitical_risk_premium", "source": "Reuters"}
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-06T21:23:06.681148+00:00",
+    "context_adjustment_applied": false,
+    "reason": "No ACTIONABLE v2 context-aware segment was identified for this event/context combination; current facts and pre-prediction market context determine confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Direct U.S. engagement with Kyiv after Moscow keeps a live de-escalation channel open and can modestly reduce Europe's geopolitical risk premium, though no agreement exists yet.",
+      "invalidation": "Kyiv or Moscow rejects the U.S. proposal, talks break down, or fresh military escalation dominates before European markets reopen."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "A continuing U.S.-mediated peace process is modestly supportive for European risk sentiment, but the absence of concrete terms keeps conviction low.",
+      "invalidation": "No follow-through from Kyiv/Moscow or renewed escalation before the next European session."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Potential de-escalation can slightly improve broader European sentiment, though the signal is weaker outside Germany and remains headline-dependent.",
+      "invalidation": "Peace diplomacy stalls or geopolitical risk worsens before reopening."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "A credible ongoing diplomatic channel can trim some Ukraine-related safe-haven demand, but high oil, firm dollar and elevated U.S. yields complicate the signal.",
+      "invalidation": "Talks fail, military escalation resumes, or broader geopolitical stress increases safe-haven demand."
+    }
+  ]
+}
