@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-09-06 — Methodology / evaluation 2.0.0 — independent-audit hardening
+
+- Preserved all legacy `data/evaluations` v1 files and moved new leakage-safe results to `data/evaluations_v2`; v2 statistics/learning live in `data/statistics_v2`.
+- Fixed unfinished-candle look-ahead: Yahoo bars are treated as START-labelled and become usable only at bar end (`available_at`). The same rule now applies to pre-prediction market context, including 5-minute fallbacks.
+- Fixed closed-market horizon contamination: 15m/1h/4h no longer use the next market open when the target market is closed or when the first available bar is too delayed. Such cases are marked `MARKET_CLOSED` or `DATA_GAP` and are not scored as fixed-horizon reactions.
+- Added a volatility-aware directional no-move threshold so microscopic numerical changes are not automatically classified as UP/DOWN.
+- Added canonical prediction normalization and a versioned JSON Schema. Historical nested `source.published_at_utc`, nested eligibility, flat forecast items and top-level `next_session` arrays are adapted only in derived records; original predictions remain immutable.
+- Added `data/statistics_v2/data_health.json` intake validation/quarantine reporting. Legacy backfills without reliable time are quarantined rather than silently treated as evaluated live signals.
+- Canonicalized market context to DXY, US2Y, US10Y, VIX, WTI and BRENT `series` + `regimes`, so legacy/direct context shapes can be consumed by learning.
+- Prevented transient provider failures from deleting already completed horizons. V2 evaluation merges retries into prior results, preserves terminal horizons, retries provider failures and writes JSON atomically.
+- Replaced the 90-minute-silence next-session completion heuristic with conservative confirmation by observing a later local trading date. Feed silence alone can no longer mark a session complete.
+- Next-session VOLATILITY/MIXED baselines now use the previous relevant local trading-session range instead of a four-hour baseline.
+- Learning now isolates `score_type` and `model_version` in every segment. Directional, MIXED and VOLATILITY outcomes therefore cannot change one another's recommendations.
+- Learning evidence is event-weighted: each `event_id` contributes total weight 1 within a segment, preventing many correlated instruments from one story from masquerading as independent experiments.
+- Pinned the exact dependency versions used by CI and added JSON Schema validation.
+- Main hourly evaluation workflow now runs audit regression tests, prediction validation and the Yahoo tracked/context smoke test before v2 evaluation.
+- Added explicit `evaluation_version` and evaluation/instrument configuration hash to every v2 evaluation for reproducibility.
+
+The prediction model itself remains version `1.1.1`; the evaluation/methodology change is `2.0.0`. Historical predictions are not rewritten. No automatic trading functionality was added.
+
 ## 2026-09-03 — Methodology 1.1.1 / Forex Factory relative-time coverage
 
 - Forex Factory relative timestamps such as `6 min ago`, `23 min ago` and `1 hr ago` are now treated as usable source timestamps instead of missing times.
