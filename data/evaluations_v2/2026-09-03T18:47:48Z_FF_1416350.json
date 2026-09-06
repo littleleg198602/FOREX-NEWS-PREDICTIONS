@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-03T18:47:48+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T18:47:48+00:00",
   "prediction_latency_seconds": 5748.0,
-  "evaluated_at_utc": "2026-09-06T20:04:17.707025+00:00",
+  "evaluated_at_utc": "2026-09-06T21:22:33.664381+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -95,24 +95,6 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "evaluations": {
-        "1h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-03T19:47:48+00:00",
-          "actual_price_time_utc": "2026-09-03T19:48:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-03T19:47:00+00:00",
-          "market_delay_minutes": 0.2,
-          "price": 4527.0,
-          "change_pct": -0.041951,
-          "actual_direction": "DOWN",
-          "correct": false,
-          "score_type": "directional",
-          "baseline_range_pct": 0.417318,
-          "post_event_range_pct": 0.214184,
-          "mfe_pct": 0.024291,
-          "mae_pct": -0.189894,
-          "directional_threshold_pct": 0.041732,
-          "actual_direction_thresholded": "DOWN"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T22:47:48+00:00",
@@ -131,10 +113,23 @@
           "directional_threshold_pct": 0.092517,
           "actual_direction_thresholded": "DOWN"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-04",
-          "predicted_direction": "MIXED"
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T19:47:48+00:00",
+          "actual_price_time_utc": "2026-09-03T19:48:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T19:47:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 4527.0,
+          "change_pct": -0.041951,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.417318,
+          "post_event_range_pct": 0.214184,
+          "mfe_pct": 0.024291,
+          "mae_pct": -0.189894,
+          "directional_threshold_pct": 0.041732,
+          "actual_direction_thresholded": "DOWN"
         },
         "15m": {
           "status": "DONE",
@@ -153,6 +148,11 @@
           "mae_pct": -0.170013,
           "directional_threshold_pct": 0.015235,
           "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
         }
       },
       "yahoo_proxy_for": "XAUUSD",
@@ -173,6 +173,13 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "evaluations": {
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-03T22:47:48+00:00",
+          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
+          "market_delay_minutes": 883.2,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T19:47:48+00:00",
@@ -191,18 +198,6 @@
           "directional_threshold_pct": 0.014897,
           "actual_direction_thresholded": "DOWN"
         },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-03T22:47:48+00:00",
-          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
-          "market_delay_minutes": 883.2,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-04",
-          "predicted_direction": "MIXED"
-        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T19:02:48+00:00",
@@ -220,6 +215,11 @@
           "mae_pct": -0.023214,
           "directional_threshold_pct": 0.01,
           "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
         }
       },
       "yahoo_proxy_for": null,
@@ -240,6 +240,13 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "evaluations": {
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-03T22:47:48+00:00",
+          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
+          "market_delay_minutes": 883.2,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T19:47:48+00:00",
@@ -258,18 +265,6 @@
           "directional_threshold_pct": 0.021274,
           "actual_direction_thresholded": "DOWN"
         },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-03T22:47:48+00:00",
-          "first_available_price_time_utc": "2026-09-04T13:31:00+00:00",
-          "market_delay_minutes": 883.2,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-04",
-          "predicted_direction": "MIXED"
-        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T19:02:48+00:00",
@@ -287,6 +282,11 @@
           "mae_pct": -0.047727,
           "directional_threshold_pct": 0.01,
           "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
         }
       },
       "yahoo_proxy_for": null,
@@ -307,23 +307,6 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "evaluations": {
-        "1h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-03T19:47:48+00:00",
-          "actual_price_time_utc": "2026-09-03T19:48:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-03T19:47:00+00:00",
-          "market_delay_minutes": 0.2,
-          "price": 67.66000366210938,
-          "change_pct": 0.162843,
-          "actual_direction": "UP",
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 0.555144,
-          "post_event_range_pct": 0.340493,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "neutral_envelope_pct": 0.555144
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T22:47:48+00:00",
@@ -341,10 +324,22 @@
           "mae_pct": null,
           "neutral_envelope_pct": 1.613625
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-04",
-          "predicted_direction": "MIXED"
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T19:47:48+00:00",
+          "actual_price_time_utc": "2026-09-03T19:48:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T19:47:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 67.66000366210938,
+          "change_pct": 0.162843,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.555144,
+          "post_event_range_pct": 0.340493,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.555144
         },
         "15m": {
           "status": "DONE",
@@ -362,6 +357,11 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 0.162832
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "MIXED"
         }
       },
       "yahoo_proxy_for": "XAGUSD",
