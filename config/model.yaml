@@ -1,15 +1,19 @@
-version: 1
+version: 2
 
 prediction_model_version: "1.1.1"
-methodology_version: "1.1.1"
-effective_from_utc: "2026-09-03T05:35:00Z"
+methodology_version: "2.0.0"
+evaluation_version: "2.0.0"
+effective_from_utc: "2026-09-06T19:40:00Z"
 
 notes:
-  - "Decision-time anchoring prevents evaluation from starting before the prediction exists."
-  - "MIXED and VOLATILITY use separate scoring logic."
-  - "next_session evaluation is enabled."
-  - "Pre-prediction context includes DXY, US2Y, US10Y, VIX, WTI and Brent."
-  - "Learning uses context-aware segments and independent event_id guardrails."
-  - "Backfilled, example and ineligible predictions are excluded from normal learning/hit-rate."
-  - "Forex Factory relative timestamps such as '6 min ago' are converted to derived UTC publication times and retain source text, observation time and uncertainty metadata."
-  - "Monitoring uses an overlap window and deduplication so rounded relative timestamps do not cause missed stories."
+  - "Prediction model itself remains 1.1.1; methodology/evaluation moved to 2.0.0 after the independent audit."
+  - "Every price/context bar must be complete and available by the relevant decision/target timestamp; unfinished candles are forbidden."
+  - "Fixed 15m/1h/4h horizons never substitute a later market open when the market is closed or data is excessively delayed."
+  - "Legacy prediction JSON shapes are normalized into a derived v2 record; the original prediction file is never hindsight-edited."
+  - "Evaluation v1 files remain preserved in data/evaluations; v2 writes separately to data/evaluations_v2."
+  - "MIXED, VOLATILITY and directional signals are isolated in learning; different model versions are not pooled."
+  - "Learning uses event-weighted evidence so many correlated instruments from one event do not behave like independent experiments."
+  - "Market context is normalized to canonical DXY, US2Y, US10Y, VIX, WTI and BRENT series/regimes."
+  - "next_session completion requires later traded-date confirmation; feed silence alone cannot close a session."
+  - "Backfilled, example and ineligible predictions remain excluded from normal hit-rate and learning."
+  - "No automatic trading functionality is permitted."
