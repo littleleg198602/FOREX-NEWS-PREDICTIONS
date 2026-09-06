@@ -139,6 +139,25 @@ def test_retry_provider_failure_cannot_erase_done_horizon():
     assert result["evaluations"]["15m"]["price"] == 101.0
 
 
+def test_merge_accepts_new_instrument_missing_from_existing_evaluation():
+    existing = {"evaluation_version": "2.0.0", "results": []}
+    new = {
+        "evaluation_version": "2.0.0",
+        "results": [
+            {
+                "instrument": "SP500",
+                "status": "PARTIAL",
+                "reference_price": 100.0,
+                "evaluations": {"15m": {"status": "PENDING"}},
+            }
+        ],
+    }
+    merged = _merge_evaluation(existing, new)
+    assert len(merged["results"]) == 1
+    assert merged["results"][0]["instrument"] == "SP500"
+    assert merged["results"][0]["reference_price"] == 100.0
+
+
 def test_learning_weights_each_event_once_even_with_many_correlated_rows():
     counter = _new_counter()
     for _ in range(10):
