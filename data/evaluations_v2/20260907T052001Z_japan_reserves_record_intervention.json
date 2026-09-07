@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-07T05:20:01+00:00",
   "evaluation_anchor_time_utc": "2026-09-07T05:20:01+00:00",
   "prediction_latency_seconds": 5041.0,
-  "evaluated_at_utc": "2026-09-07T21:36:12.126964+00:00",
+  "evaluated_at_utc": "2026-09-07T23:31:16.257737+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -106,6 +106,11 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T09:20:01+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-07T05:35:01+00:00",
@@ -124,16 +129,6 @@
           "directional_threshold_pct": 0.020908,
           "actual_direction_thresholded": "UP"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-07T09:20:01+00:00",
-          "reason": "no complete traded bar available at/after target"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-07T06:20:01+00:00",
@@ -151,6 +146,11 @@
           "mae_pct": -0.106348,
           "directional_threshold_pct": 0.024605,
           "actual_direction_thresholded": "NO_MOVE"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
         }
       }
     }
