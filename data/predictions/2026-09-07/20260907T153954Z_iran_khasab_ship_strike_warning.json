@@ -1,0 +1,82 @@
+{
+  "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+  "created_at_utc": "2026-09-07T15:39:54Z",
+  "published_at_utc": "2026-09-07T15:12:54Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["GEOPOLITICS", "IRAN", "HORMUZ", "SHIPPING", "OIL"],
+  "source": {
+    "headline": "Iran warns ships face strike risk near Oman's Khasab - Fars",
+    "forex_factory_url": "https://www.forexfactory.com/news/1416760-iran-warns-ships-face-strike-risk-near-omans",
+    "source_url": null,
+    "source_time_text": "27 min ago",
+    "observed_at_utc": "2026-09-07T15:39:54Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.9, "timestamp_utc": "2026-09-07T15:39:54Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "Reuters Sep 7 market update", "freshness": "current_same_day"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest U.S. close before Labor Day holiday", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.78, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "latest U.S. close before Labor Day holiday", "freshness": "stale_market_closed_us_holiday"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T23:31:00Z", "short_term_direction": "FLAT", "regime": "LOW", "source": "latest CBOE close before U.S. holiday", "freshness": "stale_market_closed_us_holiday"},
+      "WTI": {"value": 92.27, "timestamp_utc": "2026-09-07T15:39:54Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"},
+      "BRENT": {"value": 97.17, "timestamp_utc": "2026-09-07T15:39:54Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"}
+    },
+    "regimes": {"rates": "HIGH_RISING_STALE_US_HOLIDAY", "volatility": "LOW_STALE_US_HOLIDAY", "oil": "HIGH_RISING", "usd": "FIRM_BUT_SOFTENING", "geopolitics": "HORMUZ_ESCALATION"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T07:27:07.639823+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE v2 context-aware segment was identified that justified a material confidence change; current escalation facts and contemporaneous oil/USD context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "A direct warning that ships near Khasab face strike risk raises the probability of immediate shipping disruption and increases geopolitical safe-haven demand.",
+      "invalidation": "Iran retracts the warning, tanker traffic normalizes, and no further military incidents occur near the Hormuz approaches."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "Higher shipping and oil-risk premia worsen the energy-cost backdrop for Germany's industrial economy and favor risk-off positioning.",
+      "invalidation": "Brent falls sharply as shipping normalizes or a credible de-escalation agreement is announced."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "Escalating shipping risk around Hormuz raises imported-energy costs and geopolitical risk premia across euro-area equities.",
+      "invalidation": "Hormuz transit normalizes and oil gives back the risk premium."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Silver gets some safe-haven and softer-dollar support, but its industrial sensitivity makes the signal weaker than gold.",
+      "invalidation": "Risk premia fade quickly or the dollar rebounds materially."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "French equities are exposed to broader European risk-off sentiment and higher imported energy costs, though less directly than Germany.",
+      "invalidation": "European risk sentiment improves materially alongside lower oil prices."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Japan's dependence on imported energy makes a sustained Hormuz shipping premium a negative input-cost shock, while risk-off demand can strengthen the yen and pressure exporters.",
+      "invalidation": "Oil prices retreat and regional risk sentiment recovers decisively."
+    }
+  ]
+}
