@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-07T05:20:01+00:00",
   "evaluation_anchor_time_utc": "2026-09-07T05:20:01+00:00",
   "prediction_latency_seconds": 5041.0,
-  "evaluated_at_utc": "2026-09-07T05:22:38.896314+00:00",
+  "evaluated_at_utc": "2026-09-07T06:31:48.914298+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -92,36 +92,51 @@
     {
       "prediction_id": "20260907T052001Z_japan_reserves_record_intervention",
       "instrument": "NI225",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^N225",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 66312.6796875,
-      "reference_price_time_utc": "2026-09-07T05:08:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-07T05:07:00+00:00",
+      "reference_price": 66269.6796875,
+      "reference_price_time_utc": "2026-09-07T05:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T05:19:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 12.017,
+      "reference_age_minutes": 0.017,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-07T05:35:01+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-07T06:20:01+00:00"
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-07T09:20:01+00:00"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN"
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T06:20:01+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-07T05:35:01+00:00",
+          "actual_price_time_utc": "2026-09-07T05:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-07T05:35:00+00:00",
+          "market_delay_minutes": 0.98,
+          "price": 66297.6015625,
+          "change_pct": 0.042134,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.209077,
+          "post_event_range_pct": 0.146053,
+          "mfe_pct": 0.039705,
+          "mae_pct": -0.106348,
+          "directional_threshold_pct": 0.020908,
+          "actual_direction_thresholded": "UP"
         }
       }
     }
