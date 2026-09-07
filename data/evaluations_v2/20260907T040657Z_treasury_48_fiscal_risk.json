@@ -1,0 +1,201 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260907T040657Z_treasury_48_fiscal_risk",
+  "event_id": null,
+  "event_time_utc": "2026-09-07T04:01:00+00:00",
+  "prediction_time_utc": "2026-09-07T04:06:57+00:00",
+  "evaluation_anchor_time_utc": "2026-09-07T04:06:57+00:00",
+  "prediction_latency_seconds": 357.0,
+  "evaluated_at_utc": "2026-09-07T04:03:48.396372+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "BONDS",
+    "RATES",
+    "FISCAL_RISK"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.2,
+        "timestamp_utc": "2026-09-07T02:25:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "FXStreet/TMGM",
+        "freshness": "same_session"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest US market close",
+        "freshness": "stale_market_closed"
+      },
+      "US10Y": {
+        "value": 4.78,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest US market close",
+        "freshness": "stale_market_closed"
+      },
+      "VIX": {
+        "value": 14.53,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "FLAT",
+        "regime": "LOW",
+        "source": "latest US market close",
+        "freshness": "stale_market_closed"
+      },
+      "WTI": {
+        "value": 92.14,
+        "timestamp_utc": "2026-09-07T04:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters",
+        "freshness": "current"
+      },
+      "BRENT": {
+        "value": 96.8,
+        "timestamp_utc": "2026-09-07T04:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters",
+        "freshness": "current"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260907T040657Z_treasury_48_fiscal_risk",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29544.154,
+      "reference_price_time_utc": "2026-09-04T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3289.95,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T04:21:57+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T05:06:57+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T08:06:57+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T040657Z_treasury_48_fiscal_risk",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7718.6,
+      "reference_price_time_utc": "2026-09-04T20:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3332.95,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T04:21:57+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T05:06:57+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T08:06:57+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T040657Z_treasury_48_fiscal_risk",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4476.60009765625,
+      "reference_price_time_utc": "2026-09-04T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3306.95,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T04:21:57+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T05:06:57+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T08:06:57+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}

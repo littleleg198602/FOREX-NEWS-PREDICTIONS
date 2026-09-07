@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-06T23:56:19.404278+00:00",
+  "generated_at_utc": "2026-09-07T04:03:50.778809+00:00",
   "profile_version": "2.0.0",
   "evaluation_version": "2.0.0",
   "purpose": "Evidence-based priors for future Forex Factory predictions from leakage-safe evaluation v2. Never rewrite historical predictions.",
@@ -25,26 +25,26 @@
   },
   "audit": {
     "evaluation_version": "2.0.0",
-    "prediction_files": 56,
-    "evaluation_files": 50,
-    "eligible_evaluation_files": 44,
+    "prediction_files": 58,
+    "evaluation_files": 52,
+    "eligible_evaluation_files": 46,
     "excluded_ineligible": 6,
     "excluded_examples": 0,
-    "scored_items": 305,
-    "scored_items_with_context": 305,
+    "scored_items": 313,
+    "scored_items_with_context": 313,
     "scored_items_without_context": 0
   },
   "omitted_insufficient_segments": {
-    "confidence_calibration": 41,
-    "by_instrument": 131,
-    "by_category": 378,
-    "by_score_type": 18,
-    "by_instrument_category": 946,
-    "by_context": 132,
-    "by_context_signature": 88,
-    "by_instrument_context": 739,
-    "by_category_context": 1960,
-    "by_instrument_category_context": 4611
+    "confidence_calibration": 40,
+    "by_instrument": 135,
+    "by_category": 387,
+    "by_score_type": 17,
+    "by_instrument_category": 975,
+    "by_context": 134,
+    "by_context_signature": 91,
+    "by_instrument_context": 751,
+    "by_category_context": 2023,
+    "by_instrument_category_context": 4694
   },
   "confidence_calibration": [
     {
@@ -97,6 +97,23 @@
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.493,
       "recommendation": "KEEP_NEUTRAL"
+    },
+    {
+      "model_version": "1.1.1",
+      "score_type": "directional",
+      "confidence_bucket": "5-6",
+      "horizon": "next_session",
+      "n": 10,
+      "unique_events": 5,
+      "correct": 1,
+      "raw_hit_rate_pct": 10.0,
+      "event_weighted_hit_rate_pct": 20.0,
+      "bayesian_hit_rate_pct": 33.33,
+      "wilson_lower_95_pct": 3.62,
+      "mean_change_pct": 0.746785,
+      "sample_status": "EARLY_SIGNAL",
+      "learning_weight": 0.133,
+      "recommendation": "WATCH_ONLY"
     },
     {
       "model_version": "1.1.1",
@@ -321,6 +338,22 @@
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.573,
       "recommendation": "KEEP_NEUTRAL"
+    },
+    {
+      "model_version": "1.1.1",
+      "score_type": "directional",
+      "horizon": "next_session",
+      "n": 15,
+      "unique_events": 6,
+      "correct": 2,
+      "raw_hit_rate_pct": 13.33,
+      "event_weighted_hit_rate_pct": 18.33,
+      "bayesian_hit_rate_pct": 31.0,
+      "wilson_lower_95_pct": 3.54,
+      "mean_change_pct": 0.751985,
+      "sample_status": "EARLY_SIGNAL",
+      "learning_weight": 0.2,
+      "recommendation": "WATCH_ONLY"
     },
     {
       "model_version": "1.1.1",
@@ -694,6 +727,24 @@
       "sample_status": "ACTIONABLE",
       "learning_weight": 0.52,
       "recommendation": "KEEP_NEUTRAL"
+    },
+    {
+      "model_version": "1.1.1",
+      "score_type": "directional",
+      "context": "VIX",
+      "regime": "LOW",
+      "horizon": "next_session",
+      "n": 14,
+      "unique_events": 5,
+      "correct": 2,
+      "raw_hit_rate_pct": 14.29,
+      "event_weighted_hit_rate_pct": 22.0,
+      "bayesian_hit_rate_pct": 34.44,
+      "wilson_lower_95_pct": 4.27,
+      "mean_change_pct": 0.718446,
+      "sample_status": "EARLY_SIGNAL",
+      "learning_weight": 0.167,
+      "recommendation": "WATCH_ONLY"
     },
     {
       "model_version": "1.1.1",
