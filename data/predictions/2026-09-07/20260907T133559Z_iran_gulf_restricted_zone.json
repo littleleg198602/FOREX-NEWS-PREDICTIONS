@@ -1,0 +1,82 @@
+{
+  "prediction_id": "20260907T133559Z_iran_gulf_restricted_zone",
+  "created_at_utc": "2026-09-07T13:35:59Z",
+  "published_at_utc": "2026-09-07T11:38:59Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["GEOPOLITICS", "IRAN", "HORMUZ", "OIL", "SHIPPING"],
+  "source": {
+    "headline": "Iran says to announce new restricted zone in the Gulf in the coming days",
+    "forex_factory_url": "https://www.forexfactory.com/news/1416701-iran-says-to-announce-new-restricted-zone-in",
+    "source_url": "https://www.channelnewsasia.com/world/iran-us-gulf-new-restricted-zone-hormuz-6366526",
+    "source_time_text": "1 hr 57 min ago",
+    "observed_at_utc": "2026-09-07T13:35:59Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.953, "timestamp_utc": "2026-09-07T13:35:59Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "WSJ Sep 7 market update", "freshness": "current_same_day"},
+      "US2Y": {"value": 4.402, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest U.S. close after August jobs report", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.795, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "latest U.S. close after August jobs report", "freshness": "stale_market_closed_us_holiday"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T23:31:00Z", "short_term_direction": "FLAT", "regime": "LOW", "source": "latest CBOE close before U.S. holiday", "freshness": "stale_market_closed_us_holiday"},
+      "WTI": {"value": 92.26, "timestamp_utc": "2026-09-07T13:35:59Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"},
+      "BRENT": {"value": 97.47, "timestamp_utc": "2026-09-07T13:35:59Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"}
+    },
+    "regimes": {"rates": "HIGH_RISING_STALE_US_HOLIDAY", "volatility": "LOW_STALE_US_HOLIDAY", "oil": "HIGH_RISING", "usd": "FIRM_BUT_SOFTENING", "geopolitics": "HORMUZ_ESCALATION"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T07:27:07.639823+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE v2 context-aware segment was identified that justified a material confidence change; current geopolitical facts and contemporaneous oil/USD context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "A new Iranian restricted zone and conditional Hormuz opening raise the probability of renewed shipping disruption and geopolitical risk premia, supporting safe-haven demand for gold.",
+      "invalidation": "Iran and Oman finalize a credible open corridor with materially improved tanker traffic and no further military escalation."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Silver receives some safe-haven and softer-dollar support, but industrial-demand sensitivity makes the geopolitical impulse less clean than for gold.",
+      "invalidation": "Risk premia fade quickly, the dollar rebounds materially, or broader growth fears overwhelm precious-metal support."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "Higher oil and renewed Hormuz shipping risk raise energy-cost and inflation pressure on Germany's energy-sensitive industrial economy.",
+      "invalidation": "Brent falls sharply as shipping normalizes or a credible de-escalation agreement is announced."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "A higher oil-risk premium and geopolitical uncertainty weigh on euro-area cyclicals and increase the chance of tighter financial conditions.",
+      "invalidation": "Hormuz transit normalizes and oil gives back the risk premium."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "France is less energy-intensive than Germany but remains exposed to European risk-off sentiment and higher imported energy costs.",
+      "invalidation": "European risk sentiment improves materially alongside lower oil prices."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Japan is a major energy importer, so a sustained Hormuz premium worsens input costs while geopolitical risk can pressure exporters and cyclicals.",
+      "invalidation": "Oil prices retreat and regional risk sentiment recovers decisively."
+    }
+  ]
+}
