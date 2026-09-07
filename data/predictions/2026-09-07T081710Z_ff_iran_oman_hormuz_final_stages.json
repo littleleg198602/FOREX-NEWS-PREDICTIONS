@@ -1,0 +1,65 @@
+{
+  "created_at_utc": "2026-09-07T08:17:10Z",
+  "published_at_utc": "2026-09-07T07:56:10Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["GEOPOLITICS", "HORMUZ", "OIL"],
+  "headline": "Iran Says Negotiations With Oman On Hormuz Reached Final Stages",
+  "source_url": "https://www.forexfactory.com/news/1416688-iran-says-negotiations-with-oman-on-hormuz-reached",
+  "source_time_text": "21 min ago",
+  "observed_at_utc": "2026-09-07T08:17:10Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "market_context_at_prediction": {
+    "DXY": {"value": 99.085, "timestamp_utc": "2026-09-07T00:00:00Z", "direction": "DOWN", "regime": "SOFT_USD", "source": "WSJ market report", "freshness": "same-day, mildly delayed"},
+    "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "US Treasury via Multpl", "freshness": "last cash close; US bond market closed for Labor Day"},
+    "US10Y": {"value": 4.784, "timestamp_utc": "2026-09-04T20:00:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "Samuel & Co market brief", "freshness": "last available reference; US bond market closed for Labor Day"},
+    "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T20:00:00Z", "direction": "UP", "regime": "LOW_VOL", "source": "Next Bullish Trade", "freshness": "last cash close; US market closed for Labor Day"},
+    "WTI": {"value": 92.62, "timestamp_utc": "2026-09-07T08:00:00Z", "direction": "UP", "regime": "GEOPOLITICAL_PREMIUM", "source": "Reuters", "freshness": "same-day live report"},
+    "BRENT": {"value": 97.48, "timestamp_utc": "2026-09-07T08:00:00Z", "direction": "UP", "regime": "GEOPOLITICAL_PREMIUM", "source": "Reuters", "freshness": "same-day live report"},
+    "regimes": {"usd": "SOFT_USD", "rates": "HIGH_YIELD", "volatility": "LOW_VOL", "energy": "GEOPOLITICAL_PREMIUM"}
+  },
+  "learning_v2": {"profile_generated_at_utc": "2026-09-07T07:27:07.639823+00:00", "material_confidence_adjustment": false, "reason": "No matching ACTIONABLE v2 context-aware segment identified; current facts/context used."},
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A credible temporary Hormuz route would reduce immediate geopolitical and energy-supply risk, trimming safe-haven demand for gold.",
+      "invalidation": "Talks fail, the temporary route is not agreed, or new attacks materially disrupt Hormuz shipping."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Lower geopolitical stress can reduce precious-metals haven demand, though silver's industrial component limits conviction.",
+      "invalidation": "Talks fail or a fresh escalation restores a strong haven bid."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lower Hormuz disruption risk would reduce Europe's imported-energy risk premium and support cyclical equities.",
+      "invalidation": "No agreement is reached or Brent breaks materially higher on renewed shipping disruption."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A temporary shipping accord would ease energy-price and geopolitical pressure on euro-area risk assets.",
+      "invalidation": "Talks fail or oil accelerates higher despite the diplomatic headline."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Reduced Hormuz risk would modestly improve European risk sentiment and lower energy-cost pressure.",
+      "invalidation": "The proposed route fails to materialize or conflict escalation resumes."
+    }
+  ]
+}
