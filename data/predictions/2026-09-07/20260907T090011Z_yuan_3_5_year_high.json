@@ -1,0 +1,54 @@
+{
+  "prediction_id": "20260907T090011Z_yuan_3_5_year_high",
+  "created_at_utc": "2026-09-07T09:00:11Z",
+  "published_at_utc": "2026-09-07T08:47:11Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["CHINA", "FX", "USD", "PBOC"],
+  "source": {
+    "headline": "Yuan hits fresh 3-1/2-year high despite PBOC's weak guidance",
+    "forex_factory_url": "https://www.forexfactory.com/news/1416681-yuan-hits-fresh-3-12-year-high-despite-pbocs-weak",
+    "source_url": "https://www.brecorder.com/",
+    "source_time_text": "13 min ago",
+    "observed_at_utc": "2026-09-07T09:00:11Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.085, "timestamp_utc": "2026-09-07T09:00:11Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "WSJ market update for Sep 7, 2026", "freshness": "current"},
+      "US2Y": {"value": 4.402, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest U.S. market close after August jobs report", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.795, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "latest U.S. market close after August jobs report", "freshness": "stale_market_closed_us_holiday"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T23:31:00Z", "short_term_direction": "FLAT", "regime": "LOW", "source": "latest CBOE close available before U.S. holiday", "freshness": "stale_market_closed_us_holiday"},
+      "WTI": {"value": 92.12, "timestamp_utc": "2026-09-07T09:00:11Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Sep 7 oil market update", "freshness": "current"},
+      "BRENT": {"value": 96.80, "timestamp_utc": "2026-09-07T09:00:11Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Sep 7 oil market update", "freshness": "current"}
+    },
+    "regimes": {"rates": "HIGH_RISING_STALE_US_HOLIDAY", "volatility": "LOW_STALE_US_HOLIDAY", "oil": "HIGH_RISING", "usd": "FIRM_BUT_SOFTENING"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T07:27:07.639823+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE v2 context-aware segment was identified for a material confidence change; current FX facts and contemporaneous market context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A fresh multi-year yuan high alongside a softer DXY is a mild USD-weakness impulse that can support dollar-denominated gold, but very high U.S. yields and elevated oil constrain conviction.",
+      "invalidation": "DXY reverses sharply higher or U.S. yield expectations reprice upward enough to overwhelm the currency impulse."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Dollar softness is mildly supportive for silver, while stronger Asian currency sentiment may help the industrial-demand narrative, though high yields and oil keep the signal low-conviction.",
+      "invalidation": "The dollar rebounds materially, yields rise further, or broader risk sentiment weakens enough to pressure industrial metals."
+    }
+  ]
+}
