@@ -1,0 +1,224 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260907T133559Z_afd_saxony_anhalt_landslide",
+  "event_id": null,
+  "event_time_utc": "2026-09-07T12:01:59+00:00",
+  "prediction_time_utc": "2026-09-07T13:35:59+00:00",
+  "evaluation_anchor_time_utc": "2026-09-07T13:35:59+00:00",
+  "prediction_latency_seconds": 5640.0,
+  "evaluated_at_utc": "2026-09-07T18:14:07.904381+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "GERMANY",
+    "POLITICS",
+    "EUROPE",
+    "RISK_SENTIMENT"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.953,
+        "timestamp_utc": "2026-09-07T13:35:59Z",
+        "short_term_direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ Sep 7 market update",
+        "freshness": "current_same_day"
+      },
+      "US2Y": {
+        "value": 4.402,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest U.S. close after August jobs report",
+        "freshness": "stale_market_closed_us_holiday"
+      },
+      "US10Y": {
+        "value": 4.795,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest U.S. close after August jobs report",
+        "freshness": "stale_market_closed_us_holiday"
+      },
+      "VIX": {
+        "value": 14.53,
+        "timestamp_utc": "2026-09-04T23:31:00Z",
+        "short_term_direction": "FLAT",
+        "regime": "LOW",
+        "source": "latest CBOE close before U.S. holiday",
+        "freshness": "stale_market_closed_us_holiday"
+      },
+      "WTI": {
+        "value": 92.26,
+        "timestamp_utc": "2026-09-07T13:35:59Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 7 oil market update",
+        "freshness": "current_same_day"
+      },
+      "BRENT": {
+        "value": 97.47,
+        "timestamp_utc": "2026-09-07T13:35:59Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 7 oil market update",
+        "freshness": "current_same_day"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260907T133559Z_afd_saxony_anhalt_landslide",
+      "instrument": "GDAXI",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25989.369140625,
+      "reference_price_time_utc": "2026-09-07T13:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T13:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.983,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-07T13:50:59+00:00",
+          "actual_price_time_utc": "2026-09-07T13:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-07T13:50:00+00:00",
+          "market_delay_minutes": 0.02,
+          "price": 25987.76953125,
+          "change_pct": -0.006155,
+          "actual_direction": "NO_MOVE",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.130785,
+          "post_event_range_pct": 0.054364,
+          "mfe_pct": 0.030008,
+          "mae_pct": -0.024356,
+          "directional_threshold_pct": 0.013079,
+          "actual_direction_thresholded": "NO_MOVE"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-07T14:35:59+00:00",
+          "actual_price_time_utc": "2026-09-07T14:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-07T14:35:00+00:00",
+          "market_delay_minutes": 0.02,
+          "price": 25995.029296875,
+          "change_pct": 0.021779,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.203396,
+          "post_event_range_pct": 0.114973,
+          "mfe_pct": 0.032781,
+          "mae_pct": -0.082193,
+          "directional_threshold_pct": 0.02034,
+          "actual_direction_thresholded": "UP"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T17:35:59+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T133559Z_afd_saxony_anhalt_landslide",
+      "instrument": "STOXX50",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6403.14013671875,
+      "reference_price_time_utc": "2026-09-07T13:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T13:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.983,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-07T13:50:59+00:00",
+          "actual_price_time_utc": "2026-09-07T13:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-07T13:50:00+00:00",
+          "market_delay_minutes": 0.02,
+          "price": 6403.33984375,
+          "change_pct": 0.003119,
+          "actual_direction": "NO_MOVE",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.115254,
+          "post_event_range_pct": 0.064338,
+          "mfe_pct": 0.029671,
+          "mae_pct": -0.034666,
+          "directional_threshold_pct": 0.011525,
+          "actual_direction_thresholded": "NO_MOVE"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-07T14:35:59+00:00",
+          "actual_price_time_utc": "2026-09-07T14:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-07T14:35:00+00:00",
+          "market_delay_minutes": 0.02,
+          "price": 6400.81005859375,
+          "change_pct": -0.03639,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.27752,
+          "post_event_range_pct": 0.120882,
+          "mfe_pct": 0.047012,
+          "mae_pct": -0.07387,
+          "directional_threshold_pct": 0.027752,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T17:35:59+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}

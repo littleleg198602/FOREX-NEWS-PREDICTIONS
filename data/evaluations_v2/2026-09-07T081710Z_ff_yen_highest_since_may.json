@@ -1,0 +1,135 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "2026-09-07T081710Z_ff_yen_highest_since_may",
+  "event_id": null,
+  "event_time_utc": "2026-09-07T08:14:10+00:00",
+  "prediction_time_utc": "2026-09-07T08:17:10+00:00",
+  "evaluation_anchor_time_utc": "2026-09-07T08:17:10+00:00",
+  "prediction_latency_seconds": 180.0,
+  "evaluated_at_utc": "2026-09-07T18:14:23.758186+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "JAPAN",
+    "FX_INTERVENTION",
+    "BOJ"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.085,
+        "timestamp_utc": "2026-09-07T00:00:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ market report",
+        "freshness": "same-day, mildly delayed"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "US Treasury via Multpl",
+        "freshness": "last cash close; US bond market closed for Labor Day"
+      },
+      "US10Y": {
+        "value": 4.784,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Samuel & Co market brief",
+        "freshness": "last available reference; US bond market closed for Labor Day"
+      },
+      "VIX": {
+        "value": 14.53,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Next Bullish Trade",
+        "freshness": "last cash close; US market closed for Labor Day"
+      },
+      "WTI": {
+        "value": 92.62,
+        "timestamp_utc": "2026-09-07T08:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "same-day live report"
+      },
+      "BRENT": {
+        "value": 97.48,
+        "timestamp_utc": "2026-09-07T08:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "same-day live report"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "2026-09-07T081710Z_ff_yen_highest_since_may",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 66346.96875,
+      "reference_price_time_utc": "2026-09-07T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 107.167,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T08:32:10+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 107.167
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T09:17:10+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 107.167
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T12:17:10+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 107.167
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    }
+  ]
+}

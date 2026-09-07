@@ -1,21 +1,21 @@
 {
   "evaluation_version": "2.0.0",
   "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
-  "prediction_id": "20260907T072435Z_china_54bn_state_bank_insurer_injection",
+  "prediction_id": "20260907T090011Z_yuan_3_5_year_high",
   "event_id": null,
-  "event_time_utc": "2026-09-07T06:42:35+00:00",
-  "prediction_time_utc": "2026-09-07T07:24:35+00:00",
-  "evaluation_anchor_time_utc": "2026-09-07T07:24:35+00:00",
-  "prediction_latency_seconds": 2520.0,
-  "evaluated_at_utc": "2026-09-07T18:14:05.478918+00:00",
+  "event_time_utc": "2026-09-07T08:47:11+00:00",
+  "prediction_time_utc": "2026-09-07T09:00:11+00:00",
+  "evaluation_anchor_time_utc": "2026-09-07T09:00:11+00:00",
+  "prediction_latency_seconds": 780.0,
+  "evaluated_at_utc": "2026-09-07T18:14:06.558641+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
   "categories": [
     "CHINA",
-    "FISCAL_SUPPORT",
-    "FINANCIAL_SYSTEM",
-    "STIMULUS"
+    "FX",
+    "USD",
+    "PBOC"
   ],
   "is_example": false,
   "backfilled": false,
@@ -28,27 +28,27 @@
     "source": null,
     "series": {
       "DXY": {
-        "value": 99.151,
-        "timestamp_utc": "2026-09-07T05:20:01Z",
+        "value": 99.085,
+        "timestamp_utc": "2026-09-07T09:00:11Z",
         "short_term_direction": "DOWN",
         "regime": "FALLING",
-        "source": "latest available market update; Reuters described the dollar as under pressure on Sep 7",
-        "freshness": "delayed_latest_available"
+        "source": "WSJ market update for Sep 7, 2026",
+        "freshness": "current"
       },
       "US2Y": {
-        "value": 4.372,
+        "value": 4.402,
         "timestamp_utc": "2026-09-04T20:00:00Z",
         "short_term_direction": "UP",
         "regime": "UNKNOWN",
-        "source": "latest US market close / WSJ",
+        "source": "latest U.S. market close after August jobs report",
         "freshness": "stale_market_closed_us_holiday"
       },
       "US10Y": {
-        "value": 4.768,
+        "value": 4.795,
         "timestamp_utc": "2026-09-04T20:00:00Z",
         "short_term_direction": "UP",
         "regime": "UNKNOWN",
-        "source": "latest US market close / WSJ",
+        "source": "latest U.S. market close after August jobs report",
         "freshness": "stale_market_closed_us_holiday"
       },
       "VIX": {
@@ -56,23 +56,23 @@
         "timestamp_utc": "2026-09-04T23:31:00Z",
         "short_term_direction": "FLAT",
         "regime": "LOW",
-        "source": "CBOE close via published market data",
+        "source": "latest CBOE close available before U.S. holiday",
         "freshness": "stale_market_closed_us_holiday"
       },
       "WTI": {
-        "value": 92.62,
-        "timestamp_utc": "2026-09-07T07:24:35Z",
+        "value": 92.12,
+        "timestamp_utc": "2026-09-07T09:00:11Z",
         "short_term_direction": "UP",
         "regime": "RISING",
-        "source": "Reuters Sep 7 oil market update",
+        "source": "Sep 7 oil market update",
         "freshness": "current"
       },
       "BRENT": {
-        "value": 97.48,
-        "timestamp_utc": "2026-09-07T07:24:35Z",
+        "value": 96.8,
+        "timestamp_utc": "2026-09-07T09:00:11Z",
         "short_term_direction": "UP",
         "regime": "RISING",
-        "source": "Reuters Sep 7 oil market update",
+        "source": "Sep 7 oil market update",
         "freshness": "current"
       }
     },
@@ -91,39 +91,39 @@
   },
   "results": [
     {
-      "prediction_id": "20260907T072435Z_china_54bn_state_bank_insurer_injection",
-      "instrument": "AUS200",
+      "prediction_id": "20260907T090011Z_yuan_3_5_year_high",
+      "instrument": "XAUUSD",
       "status": "PENDING",
       "market_data_source": "yahoo",
-      "yahoo_symbol": "^AXJO",
-      "yahoo_proxy_for": null,
-      "yahoo_proxy_type": null,
-      "reference_price": 9010.900390625,
-      "reference_price_time_utc": "2026-09-07T06:12:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-07T06:11:00+00:00",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4476.60009765625,
+      "reference_price_time_utc": "2026-09-04T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 72.583,
+      "reference_age_minutes": 3600.183,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
-      "predicted_confidence": 5,
+      "predicted_confidence": 4,
       "evaluations": {
         "15m": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T07:39:35+00:00",
+          "target_time_utc": "2026-09-07T09:15:11+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 72.583
+          "reference_age_minutes": 3600.183
         },
         "1h": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T08:24:35+00:00",
+          "target_time_utc": "2026-09-07T10:00:11+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 72.583
+          "reference_age_minutes": 3600.183
         },
         "4h": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T11:24:35+00:00",
+          "target_time_utc": "2026-09-07T13:00:11+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 72.583
+          "reference_age_minutes": 3600.183
         },
         "next_session": {
           "status": "PENDING",
@@ -133,39 +133,39 @@
       }
     },
     {
-      "prediction_id": "20260907T072435Z_china_54bn_state_bank_insurer_injection",
-      "instrument": "NI225",
+      "prediction_id": "20260907T090011Z_yuan_3_5_year_high",
+      "instrument": "XAGUSD",
       "status": "PENDING",
       "market_data_source": "yahoo",
-      "yahoo_symbol": "^N225",
-      "yahoo_proxy_for": null,
-      "yahoo_proxy_type": null,
-      "reference_price": 66346.96875,
-      "reference_price_time_utc": "2026-09-07T06:30:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-07T06:29:00+00:00",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 66.74800109863281,
+      "reference_price_time_utc": "2026-09-04T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 54.583,
+      "reference_age_minutes": 3600.183,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T07:39:35+00:00",
+          "target_time_utc": "2026-09-07T09:15:11+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 54.583
+          "reference_age_minutes": 3600.183
         },
         "1h": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T08:24:35+00:00",
+          "target_time_utc": "2026-09-07T10:00:11+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 54.583
+          "reference_age_minutes": 3600.183
         },
         "4h": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T11:24:35+00:00",
+          "target_time_utc": "2026-09-07T13:00:11+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 54.583
+          "reference_age_minutes": 3600.183
         },
         "next_session": {
           "status": "PENDING",

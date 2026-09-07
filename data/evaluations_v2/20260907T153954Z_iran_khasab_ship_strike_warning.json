@@ -1,0 +1,331 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+  "event_id": null,
+  "event_time_utc": "2026-09-07T15:12:54+00:00",
+  "prediction_time_utc": "2026-09-07T15:39:54+00:00",
+  "evaluation_anchor_time_utc": "2026-09-07T15:39:54+00:00",
+  "prediction_latency_seconds": 1620.0,
+  "evaluated_at_utc": "2026-09-07T18:14:12.205299+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "IRAN",
+    "HORMUZ",
+    "SHIPPING",
+    "OIL"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.9,
+        "timestamp_utc": "2026-09-07T15:39:54Z",
+        "short_term_direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters Sep 7 market update",
+        "freshness": "current_same_day"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest U.S. close before Labor Day holiday",
+        "freshness": "stale_market_closed_us_holiday"
+      },
+      "US10Y": {
+        "value": 4.78,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest U.S. close before Labor Day holiday",
+        "freshness": "stale_market_closed_us_holiday"
+      },
+      "VIX": {
+        "value": 14.53,
+        "timestamp_utc": "2026-09-04T23:31:00Z",
+        "short_term_direction": "FLAT",
+        "regime": "LOW",
+        "source": "latest CBOE close before U.S. holiday",
+        "freshness": "stale_market_closed_us_holiday"
+      },
+      "WTI": {
+        "value": 92.27,
+        "timestamp_utc": "2026-09-07T15:39:54Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 7 oil market update",
+        "freshness": "current_same_day"
+      },
+      "BRENT": {
+        "value": 97.17,
+        "timestamp_utc": "2026-09-07T15:39:54Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 7 oil market update",
+        "freshness": "current_same_day"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4476.60009765625,
+      "reference_price_time_utc": "2026-09-04T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3999.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3999.9
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T16:39:54+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3999.9
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:39:54+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 26006.53,
+      "reference_price_time_utc": "2026-09-07T15:31:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T15:30:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "first_available_price_time_utc": "2026-09-07T16:01:00+00:00",
+          "market_delay_minutes": 6.1,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T16:39:54+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:39:54+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6399.2998046875,
+      "reference_price_time_utc": "2026-09-07T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T16:39:54+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:39:54+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 66.74800109863281,
+      "reference_price_time_utc": "2026-09-04T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3999.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3999.9
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T16:39:54+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3999.9
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:39:54+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8300.509765625,
+      "reference_price_time_utc": "2026-09-07T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T16:39:54+00:00",
+          "reason": "no complete traded bar available at/after target"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:39:54+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T153954Z_iran_khasab_ship_strike_warning",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 66346.96875,
+      "reference_price_time_utc": "2026-09-07T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 549.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 549.9
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T16:39:54+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 549.9
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:39:54+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
