@@ -1,0 +1,76 @@
+{
+  "prediction_id": "20260907T194021Z_trump_us_controls_hormuz",
+  "event_id": "ff_1412667_trump_us_controls_hormuz",
+  "created_at_utc": "2026-09-07T19:40:21Z",
+  "event_time_utc": "2026-09-07T19:27:21Z",
+  "published_at_utc": "2026-09-07T19:27:21Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["GEOPOLITICS", "IRAN", "HORMUZ", "OIL", "US_POLICY"],
+  "source": {
+    "headline": "Trump: US is the only one that has control of Hormuz",
+    "forex_factory_url": "https://www.forexfactory.com/news/1412667-trump-us-is-the-only-one-that-has",
+    "source_url": "https://x.com/financialjuice",
+    "source_time_text": "13 min ago",
+    "observed_at_utc": "2026-09-07T19:40:21Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.953, "timestamp_utc": "2026-09-07T19:40:21Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "WSJ Sep 7 currency market update", "freshness": "current_same_day"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest U.S. close before Labor Day holiday", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.784, "timestamp_utc": "2026-09-07T09:23:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "Yahoo Finance reference via Arcane Intel", "freshness": "same_day_stale_us_holiday"},
+      "VIX": {"value": 15.03, "timestamp_utc": "2026-09-07T09:23:00Z", "short_term_direction": "UP", "regime": "LOW", "source": "Yahoo Finance reference via Arcane Intel", "freshness": "same_day_stale_us_holiday"},
+      "WTI": {"value": 92.65, "timestamp_utc": "2026-09-07T19:40:21Z", "short_term_direction": "UP", "regime": "HIGH_RISING_SIX_WEEK_HIGH", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"},
+      "BRENT": {"value": 97.31, "timestamp_utc": "2026-09-07T19:40:21Z", "short_term_direction": "UP", "regime": "HIGH_RISING_SIX_WEEK_HIGH", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"}
+    },
+    "regimes": {
+      "rates": "HIGH_HAWKISH_STALE_US_HOLIDAY",
+      "volatility": "LOW_STALE_US_HOLIDAY",
+      "oil": "HIGH_RISING_SIX_WEEK_HIGH",
+      "usd": "FIRM_BUT_SOFTENING",
+      "geopolitics": "MIDDLE_EAST_ESCALATION_CONTESTED_HORMUZ_CONTROL"
+    }
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T18:14:28.322175+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE context-aware segment warrants a material confidence adjustment. The headline is treated cautiously because current oil prices still retain a large escalation premium and the control claim is not independently confirmed in the FF item."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A U.S. claim of control and completed minesweeping could reduce shipping-risk premia if credible, but it also highlights direct military control of the Strait while oil remains near six-week highs; the immediate implication is two-sided headline volatility rather than a clean directional signal.",
+      "invalidation": "Independent evidence clearly confirms either normalized safe shipping, producing durable de-escalation, or renewed direct conflict that creates an unambiguous safe-haven impulse."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "European equities would benefit from credible normalization of Hormuz shipping, but crude remains elevated and the statement may represent contested military escalation rather than genuine de-escalation.",
+      "invalidation": "Brent falls sharply on confirmed shipping normalization or rises decisively on renewed clashes, creating a clear directional energy shock."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The euro-area index has potential upside from lower shipping risk but downside from continued high oil and geopolitical uncertainty, leaving the net impulse balanced pending confirmation.",
+      "invalidation": "A verified change in tanker traffic and oil prices resolves the ambiguity decisively."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Japan is highly sensitive to Gulf energy security, but the unconfirmed U.S. control claim competes with still-high oil and yen-related forces, so conviction is low.",
+      "invalidation": "Oil and tanker-flow data confirm either meaningful de-escalation or a renewed supply shock."
+    }
+  ]
+}
