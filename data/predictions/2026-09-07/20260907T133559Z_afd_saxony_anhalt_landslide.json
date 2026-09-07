@@ -1,0 +1,54 @@
+{
+  "prediction_id": "20260907T133559Z_afd_saxony_anhalt_landslide",
+  "created_at_utc": "2026-09-07T13:35:59Z",
+  "published_at_utc": "2026-09-07T12:01:59Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["GERMANY", "POLITICS", "EUROPE", "RISK_SENTIMENT"],
+  "source": {
+    "headline": "Far-right AfD landslide in German state piles pressure on federal government",
+    "forex_factory_url": "https://www.forexfactory.com/news/1416719-far-right-afd-landslide-in-german-state-piles-pressure",
+    "source_url": "https://www.cnbc.com/",
+    "source_time_text": "1 hr 34 min ago",
+    "observed_at_utc": "2026-09-07T13:35:59Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.953, "timestamp_utc": "2026-09-07T13:35:59Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "WSJ Sep 7 market update", "freshness": "current_same_day"},
+      "US2Y": {"value": 4.402, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest U.S. close after August jobs report", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.795, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "latest U.S. close after August jobs report", "freshness": "stale_market_closed_us_holiday"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T23:31:00Z", "short_term_direction": "FLAT", "regime": "LOW", "source": "latest CBOE close before U.S. holiday", "freshness": "stale_market_closed_us_holiday"},
+      "WTI": {"value": 92.26, "timestamp_utc": "2026-09-07T13:35:59Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"},
+      "BRENT": {"value": 97.47, "timestamp_utc": "2026-09-07T13:35:59Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"}
+    },
+    "regimes": {"rates": "HIGH_RISING_STALE_US_HOLIDAY", "volatility": "LOW_STALE_US_HOLIDAY", "oil": "HIGH_RISING", "usd": "FIRM_BUT_SOFTENING", "european_political_risk": "ELEVATED"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T07:27:07.639823+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE v2 context-aware segment was identified that justified a material confidence change; the prediction remains low-to-moderate conviction and is driven by current political facts and European market context."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "A large AfD state-election win increases German political uncertainty and pressure on the federal coalition, adding a modest domestic risk premium to equities.",
+      "invalidation": "The federal coalition remains stable and German equities show no political-risk repricing despite the result."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Germany's political uncertainty can spill modestly into broader euro-area risk sentiment, but the state-level result is not by itself a euro-area systemic shock.",
+      "invalidation": "Broader European markets ignore the German political development or positive macro/risk factors dominate."
+    }
+  ]
+}
