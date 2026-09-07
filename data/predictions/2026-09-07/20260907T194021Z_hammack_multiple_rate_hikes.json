@@ -1,0 +1,83 @@
+{
+  "prediction_id": "20260907T194021Z_hammack_multiple_rate_hikes",
+  "event_id": "ff_1412658_hammack_multiple_rate_hikes",
+  "created_at_utc": "2026-09-07T19:40:21Z",
+  "event_time_utc": "2026-09-07T18:26:21Z",
+  "published_at_utc": "2026-09-07T18:26:21Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["FED", "RATES", "INFLATION", "US_MACRO"],
+  "source": {
+    "headline": "Cleveland Fed's Hammack: It will take more than one interest rate hike to bring down inflation",
+    "forex_factory_url": "https://www.forexfactory.com/news/1412658-cleveland-feds-hammack-it-will-take-more-than",
+    "source_url": "https://finance.yahoo.com/",
+    "source_time_text": "1 hr 14 min ago",
+    "observed_at_utc": "2026-09-07T19:40:21Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.953, "timestamp_utc": "2026-09-07T19:40:21Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "WSJ Sep 7 currency market update", "freshness": "current_same_day"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest U.S. close before Labor Day holiday", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.784, "timestamp_utc": "2026-09-07T09:23:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "Yahoo Finance reference via Arcane Intel", "freshness": "same_day_stale_us_holiday"},
+      "VIX": {"value": 15.03, "timestamp_utc": "2026-09-07T09:23:00Z", "short_term_direction": "UP", "regime": "LOW", "source": "Yahoo Finance reference via Arcane Intel", "freshness": "same_day_stale_us_holiday"},
+      "WTI": {"value": 92.65, "timestamp_utc": "2026-09-07T19:40:21Z", "short_term_direction": "UP", "regime": "HIGH_RISING_SIX_WEEK_HIGH", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"},
+      "BRENT": {"value": 97.31, "timestamp_utc": "2026-09-07T19:40:21Z", "short_term_direction": "UP", "regime": "HIGH_RISING_SIX_WEEK_HIGH", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"}
+    },
+    "regimes": {
+      "rates": "HIGH_HAWKISH_STALE_US_HOLIDAY",
+      "volatility": "LOW_STALE_US_HOLIDAY",
+      "oil": "HIGH_RISING_SIX_WEEK_HIGH",
+      "usd": "FIRM_BUT_SOFTENING",
+      "geopolitics": "MIDDLE_EAST_ESCALATION"
+    }
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T18:14:28.322175+00:00",
+    "material_confidence_adjustment": false,
+    "note": "ACTIONABLE v2 aggregate directional confidence segments are KEEP_NEUTRAL; no ACTIONABLE context-aware segment justifies a material adjustment, so current Fed facts and contemporaneous rates/oil context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "A voting Fed policymaker arguing that more than one hike may be required reinforces a higher-for-longer/hawkish path and raises the opportunity cost of holding non-yielding gold while Treasury yields are already elevated.",
+      "invalidation": "Subsequent Fed communication turns clearly dovish or incoming inflation data sharply reduce September and follow-on hike expectations."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Higher expected policy rates and elevated long yields increase discount rates, with long-duration technology valuations especially sensitive.",
+      "invalidation": "Treasury yields fall materially and markets dismiss Hammack's view as isolated rather than representative of the FOMC."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "A more hawkish Fed path tightens financial conditions and raises equity discount rates, although sector diversification reduces sensitivity versus Nasdaq 100.",
+      "invalidation": "Rate-hike pricing falls despite the comments or risk appetite strengthens on lower yields."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher real-rate expectations are a headwind for silver, partly offset by its industrial-demand component and a currently softer dollar.",
+      "invalidation": "DXY and yields fall together or industrial-metal demand overwhelms the rates impulse."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Tighter expected Fed policy is a broad equity headwind, but the Dow's value/financial composition is less duration-sensitive than Nasdaq 100.",
+      "invalidation": "Financials benefit from the rate backdrop enough to offset broader tightening pressure."
+    }
+  ]
+}
