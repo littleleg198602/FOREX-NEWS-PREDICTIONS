@@ -1,0 +1,88 @@
+{
+  "prediction_id": "20260907T172350Z_oil_six_week_high_aramco_hit",
+  "created_at_utc": "2026-09-07T17:23:50Z",
+  "published_at_utc": "2026-09-07T15:50:00Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["GEOPOLITICS", "IRAN", "SAUDI_ARABIA", "ARAMCO", "OIL", "HORMUZ"],
+  "source": {
+    "headline": "Oil prices rise to 6-week high after Iran and U.S. trade blows, Saudi Aramco facilities reportedly hit",
+    "forex_factory_url": "https://www.forexfactory.com/news/1416762-oil-prices-rise-to-6-week-high-after-iran",
+    "source_url": "https://www.cnbc.com/2026/09/07/oil-prices-rise-to-6-week-high-after-iran-and-us-trade-blows-saudi-aramco-facilities-reportedly-hit.html",
+    "source_time_text": "Sep 7, 10:50am",
+    "observed_at_utc": "2026-09-07T17:23:50Z",
+    "time_source": "forex_factory_absolute",
+    "time_is_derived": false,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.953, "timestamp_utc": "2026-09-07T17:23:50Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "WSJ Sep 7 currency market update", "freshness": "current_same_day"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest U.S. close before Labor Day holiday", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.78, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "latest U.S. close before Labor Day holiday", "freshness": "stale_market_closed_us_holiday"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T23:31:00Z", "short_term_direction": "FLAT", "regime": "LOW", "source": "latest CBOE close before U.S. holiday", "freshness": "stale_market_closed_us_holiday"},
+      "WTI": {"value": 92.63, "timestamp_utc": "2026-09-07T17:23:50Z", "short_term_direction": "UP", "regime": "HIGH_RISING_SIX_WEEK_HIGH", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"},
+      "BRENT": {"value": 97.13, "timestamp_utc": "2026-09-07T17:23:50Z", "short_term_direction": "UP", "regime": "HIGH_RISING_SIX_WEEK_HIGH", "source": "Reuters Sep 7 oil market update", "freshness": "current_same_day"}
+    },
+    "regimes": {
+      "rates": "HIGH_RISING_STALE_US_HOLIDAY",
+      "volatility": "LOW_STALE_US_HOLIDAY",
+      "oil": "HIGH_RISING_SIX_WEEK_HIGH",
+      "usd": "FIRM_BUT_SOFTENING",
+      "geopolitics": "MIDDLE_EAST_ESCALATION_ENERGY_INFRASTRUCTURE"
+    }
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T07:27:07.639823+00:00",
+    "material_confidence_adjustment": false,
+    "note": "ACTIONABLE v2 aggregate directional segments were KEEP_NEUTRAL and no ACTIONABLE context-aware segment justified a material confidence change; current facts and contemporaneous oil/USD context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "A fresh reported strike on Saudi Aramco infrastructure broadens the conflict from shipping risk toward physical energy infrastructure, increasing geopolitical safe-haven demand while oil remains near six-week highs.",
+      "invalidation": "Damage proves immaterial, Saudi output/export capacity is unaffected, and oil rapidly gives back the escalation premium."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Higher crude and direct attacks on Gulf energy infrastructure raise imported-energy and geopolitical risk premia for Germany's industrial-heavy market.",
+      "invalidation": "Oil retreats sharply and the Aramco incident is confirmed to have no meaningful supply consequence."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "A broader Middle East energy-infrastructure threat worsens the inflation and input-cost backdrop for euro-area equities.",
+      "invalidation": "A credible de-escalation or rapid normalization of oil prices removes the new risk premium."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "French equities face the same regional risk-off and imported-energy shock, but with less direct industrial sensitivity than Germany.",
+      "invalidation": "European risk appetite recovers while crude falls back below the pre-escalation range."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "Japan's dependence on imported energy makes sustained Gulf supply risk a negative terms-of-trade shock, while risk aversion can also strengthen the yen and pressure exporters.",
+      "invalidation": "Oil prices retreat materially and the yen weakens enough to offset the energy-cost shock."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Silver can benefit from softer USD and safe-haven demand, but industrial-growth concerns from higher energy prices cap conviction versus gold.",
+      "invalidation": "The dollar rebounds materially or geopolitical risk premium fades quickly."
+    }
+  ]
+}
