@@ -1,0 +1,165 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260907T052001Z_canada_retalitory_tariffs",
+  "event_id": null,
+  "event_time_utc": "2026-09-07T04:54:00+00:00",
+  "prediction_time_utc": "2026-09-07T05:20:01+00:00",
+  "evaluation_anchor_time_utc": "2026-09-07T05:20:01+00:00",
+  "prediction_latency_seconds": 1561.0,
+  "evaluated_at_utc": "2026-09-07T05:22:38.653142+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "TRADE",
+    "TARIFFS",
+    "CANADA_US"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.151,
+        "timestamp_utc": "2026-09-07T05:20:01Z",
+        "short_term_direction": "FLAT",
+        "regime": "FLAT",
+        "source": "WSJ market update",
+        "freshness": "current"
+      },
+      "US2Y": {
+        "value": 4.372,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest US market close / WSJ",
+        "freshness": "stale_market_closed"
+      },
+      "US10Y": {
+        "value": 4.768,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest US market close / WSJ",
+        "freshness": "stale_market_closed"
+      },
+      "VIX": {
+        "value": 14.53,
+        "timestamp_utc": "2026-09-04T23:31:00Z",
+        "short_term_direction": "UP",
+        "regime": "LOW",
+        "source": "CBOE close via MetricsHour",
+        "freshness": "stale_market_closed"
+      },
+      "WTI": {
+        "value": 92.28,
+        "timestamp_utc": "2026-09-07T05:20:01Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters",
+        "freshness": "current"
+      },
+      "BRENT": {
+        "value": 97.07,
+        "timestamp_utc": "2026-09-07T05:20:01Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters",
+        "freshness": "current"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260907T052001Z_canada_retalitory_tariffs",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7718.6,
+      "reference_price_time_utc": "2026-09-04T20:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3406.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T05:35:01+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T06:20:01+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T09:20:01+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T052001Z_canada_retalitory_tariffs",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 53414.25,
+      "reference_price_time_utc": "2026-09-04T20:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3406.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T05:35:01+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T06:20:01+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T09:20:01+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    }
+  ]
+}
