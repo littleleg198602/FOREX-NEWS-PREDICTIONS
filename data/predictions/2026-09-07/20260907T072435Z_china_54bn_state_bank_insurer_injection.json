@@ -1,0 +1,53 @@
+{
+  "prediction_id": "20260907T072435Z_china_54bn_state_bank_insurer_injection",
+  "created_at_utc": "2026-09-07T07:24:35Z",
+  "published_at_utc": "2026-09-07T06:42:35Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["CHINA", "FISCAL_SUPPORT", "FINANCIAL_SYSTEM", "STIMULUS"],
+  "source": {
+    "headline": "China to pump $54bn into state banks and insurers to boost economy",
+    "forex_factory_url": "https://www.forexfactory.com/news/1416658-china-to-pump-54bn-into-state-banks-and",
+    "source_time_text": "42 min ago",
+    "observed_at_utc": "2026-09-07T07:24:35Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.151, "timestamp_utc": "2026-09-07T05:20:01Z", "short_term_direction": "DOWN", "regime": "FIRM_BUT_SOFTENING", "source": "latest available market update; Reuters described the dollar as under pressure on Sep 7", "freshness": "delayed_latest_available"},
+      "US2Y": {"value": 4.372, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest US market close / WSJ", "freshness": "stale_market_closed_us_holiday"},
+      "US10Y": {"value": 4.768, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "latest US market close / WSJ", "freshness": "stale_market_closed_us_holiday"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T23:31:00Z", "short_term_direction": "FLAT", "regime": "LOW", "source": "CBOE close via published market data", "freshness": "stale_market_closed_us_holiday"},
+      "WTI": {"value": 92.62, "timestamp_utc": "2026-09-07T07:24:35Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current"},
+      "BRENT": {"value": 97.48, "timestamp_utc": "2026-09-07T07:24:35Z", "short_term_direction": "UP", "regime": "HIGH_RISING", "source": "Reuters Sep 7 oil market update", "freshness": "current"}
+    },
+    "regimes": {"rates": "HIGH_RISING_STALE_US_HOLIDAY", "volatility": "LOW_STALE_US_HOLIDAY", "oil": "HIGH_RISING", "usd": "FIRM_BUT_SOFTENING"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T06:31:50.432128+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE v2 context-aware segment was used to materially change confidence; current China support facts and contemporaneous market context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A large state capital injection into Chinese banks and insurers supports regional risk sentiment and the China-sensitive Australian equity complex, although high oil and global yields cap the strength of the signal.",
+      "invalidation": "Chinese equities reject the stimulus impulse, regional risk sentiment weakens, or rising yields and oil dominate the session."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Chinese financial-system support is mildly positive for broader Asian risk appetite, but the Nikkei is less directly exposed and remains constrained by high global yields, oil and yen-policy risk.",
+      "invalidation": "Asian equities reverse lower or yen strength and rate pressure overwhelm the regional risk-on impulse."
+    }
+  ]
+}
