@@ -1,0 +1,53 @@
+{
+  "prediction_id": "20260907T052001Z_canada_retalitory_tariffs",
+  "created_at_utc": "2026-09-07T05:20:01Z",
+  "published_at_utc": "2026-09-07T04:54:00Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["TRADE", "TARIFFS", "CANADA_US"],
+  "source": {
+    "headline": "Canada Hits Back With New US Tariffs",
+    "forex_factory_url": "https://www.forexfactory.com/news/1416663-canada-hits-back-with-new-us-tariffs",
+    "source_time_text": "Sep 7, 5:54am",
+    "observed_at_utc": "2026-09-07T05:20:01Z",
+    "time_source": "forex_factory_absolute",
+    "time_is_derived": false,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.151, "timestamp_utc": "2026-09-07T05:20:01Z", "short_term_direction": "FLAT", "regime": "FIRM", "source": "WSJ market update", "freshness": "current"},
+      "US2Y": {"value": 4.372, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH", "source": "latest US market close / WSJ", "freshness": "stale_market_closed"},
+      "US10Y": {"value": 4.768, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "VERY_HIGH_NEAR_4_8", "source": "latest US market close / WSJ", "freshness": "stale_market_closed"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T23:31:00Z", "short_term_direction": "UP", "regime": "LOW", "source": "CBOE close via MetricsHour", "freshness": "stale_market_closed"},
+      "WTI": {"value": 92.28, "timestamp_utc": "2026-09-07T05:20:01Z", "short_term_direction": "UP", "regime": "HIGH", "source": "Reuters", "freshness": "current"},
+      "BRENT": {"value": 97.07, "timestamp_utc": "2026-09-07T05:20:01Z", "short_term_direction": "UP", "regime": "HIGH", "source": "Reuters", "freshness": "current"}
+    },
+    "regimes": {"rates": "HIGH_RISING", "volatility": "LOW", "oil": "HIGH_RISING", "usd": "FIRM"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T04:43:55.416686+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE context-aware segment recommended a material confidence change; current facts and context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Fresh Canadian retaliation broadens the US trade conflict and adds a modest risk premium to US equities, though the stated macro impact is expected to be limited and the US cash market is closed today.",
+      "invalidation": "The tariff package is delayed, narrowed materially, or US-Canada negotiations produce a de-escalation before the next US cash session."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Tariffs on steel, aluminum, appliances and agricultural equipment raise cross-border cost and supply-chain risk for industrial-heavy US equities, with the larger effect more likely at the next cash open.",
+      "invalidation": "The measures are softened or offset by a rapid bilateral trade agreement."
+    }
+  ]
+}
