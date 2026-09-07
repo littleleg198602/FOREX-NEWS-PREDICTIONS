@@ -182,3 +182,25 @@ def test_learning_weights_each_event_once_even_with_many_correlated_rows():
     assert stats["event_weighted_hit_rate_pct"] == 50.0
     assert stats["unique_events"] == 2
     assert stats["sample_status"] == "INSUFFICIENT"
+
+
+def test_prediction_id_alias_is_adapted_for_intake_compatibility():
+    raw = {
+        "id": "legacy-prediction-id",
+        "created_at_utc": "2026-09-07T10:00:00Z",
+        "published_at_utc": "2026-09-07T09:59:00Z",
+        "eligible_for_hit_rate": True,
+        "backfilled": False,
+        "categories": ["MACRO"],
+        "predictions": [
+            {
+                "instrument": "SP500",
+                "immediate": {"direction": "DOWN", "confidence": 6},
+            }
+        ],
+    }
+    normalized = normalize_prediction(raw)
+    assert normalized["prediction_id"] == "legacy-prediction-id"
+    errors, warnings = validate_normalized_prediction(normalized, {"SP500"})
+    assert errors == []
+    assert "prediction_id adapted from id" in warnings
