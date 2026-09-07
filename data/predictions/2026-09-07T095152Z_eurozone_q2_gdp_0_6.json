@@ -1,0 +1,58 @@
+{
+  "id": "2026-09-07T095152Z_eurozone_q2_gdp_0_6",
+  "created_at_utc": "2026-09-07T09:51:52Z",
+  "published_at_utc": "2026-09-07T09:07:52Z",
+  "source_time_text": "44 min ago",
+  "observed_at_utc": "2026-09-07T09:51:52Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["MACRO", "EUROZONE", "GDP"],
+  "headline": "GDP main components and employment estimates for the second quarter of 2026 GDP up by 0.6% and employment up by 0.1% in the euro area",
+  "source_url": "https://www.forexfactory.com/news/1416696-gdp-main-components-and-employment-estimates-for-the",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.09, "timestamp_utc": "2026-09-07T09:30:00Z", "direction": "DOWN", "regime": "SOFT_USD", "source": "web_market_snapshot", "freshness": "same_morning_approx"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T19:30:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "latest_available_close", "freshness": "previous_US_session"},
+      "US10Y": {"value": 4.78, "timestamp_utc": "2026-09-04T19:30:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "latest_available_close", "freshness": "previous_US_session"},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-04T20:00:00Z", "direction": "FLAT", "regime": "LOW_VOL", "source": "latest_available_close", "freshness": "previous_US_session"},
+      "WTI": {"value": 92.6, "timestamp_utc": "2026-09-07T08:30:00Z", "direction": "UP", "regime": "ELEVATED_OIL", "source": "same_morning_news_market_snapshot", "freshness": "same_morning_approx"},
+      "BRENT": {"value": 97.5, "timestamp_utc": "2026-09-07T08:30:00Z", "direction": "UP", "regime": "ELEVATED_OIL", "source": "same_morning_news_market_snapshot", "freshness": "same_morning_approx"}
+    },
+    "regimes": ["SOFT_USD", "HIGH_US_YIELDS", "LOW_VOL", "ELEVATED_OIL"]
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-07T07:27:07.639823+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No verified ACTIONABLE context-aware v2 segment was used to alter confidence; current facts and context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "A 0.6% quarterly euro-area GDP increase after a flat first quarter supports cyclical earnings expectations and broad euro-area risk sentiment.",
+      "invalidation": "European equities reject the growth surprise or elevated oil and yields dominate the session."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Stronger euro-area activity supports Germany-sensitive cyclicals, though the effect is diluted by high energy costs.",
+      "invalidation": "DAX fails to hold positive breadth or energy-sensitive sectors lead a broad reversal."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Stronger euro-area growth improves the regional demand backdrop for French large caps.",
+      "invalidation": "Regional risk sentiment turns negative despite the GDP release."
+    }
+  ]
+}
