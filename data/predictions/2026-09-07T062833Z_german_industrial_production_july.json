@@ -1,0 +1,107 @@
+{
+  "prediction_id": "2026-09-07T062833Z_german_industrial_production_july",
+  "created_at_utc": "2026-09-07T06:28:33Z",
+  "published_at_utc": "2026-09-07T06:25:33Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["MACRO", "GERMANY", "INDUSTRIAL_PRODUCTION"],
+  "headline": "German production in July 2026: -1.1% on the previous month",
+  "source": {
+    "publisher": "Forex Factory / Destatis",
+    "url": "https://www.forexfactory.com/news/1416678-german-production-in-july-2026-11-on-the",
+    "source_time_text": "3 min ago",
+    "observed_at_utc": "2026-09-07T06:28:33Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "event": {
+    "summary": "German industrial production fell 1.1% month-on-month in July 2026; June was revised to 0.0% from +0.2%. Production was 1.6% lower year-on-year, while the May-July three-month comparison was +0.4%.",
+    "impact": "Low-impact but directly relevant German macro data; the monthly and yearly contraction is a modest negative for cyclical German equities, partly offset by the positive three-month trend."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.09,
+        "timestamp_utc": "2026-09-07T06:20:00Z",
+        "direction": "DOWN",
+        "regime": "WEAK_SOFTENING",
+        "source": "Reuters",
+        "freshness": "live/recent"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_STALE_US_HOLIDAY",
+        "source": "yieldcurve.pro / prior close",
+        "freshness": "stale_market_closed"
+      },
+      "US10Y": {
+        "value": 4.784,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_STALE_US_HOLIDAY",
+        "source": "Investing.com / prior close",
+        "freshness": "stale_market_closed"
+      },
+      "VIX": {
+        "value": 14.52,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "direction": "UP",
+        "regime": "LOW_STALE_US_HOLIDAY",
+        "source": "Cboe / prior close",
+        "freshness": "stale_market_closed"
+      },
+      "WTI": {
+        "value": 92.28,
+        "timestamp_utc": "2026-09-07T06:20:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "Reuters",
+        "freshness": "live/recent"
+      },
+      "BRENT": {
+        "value": 97.07,
+        "timestamp_utc": "2026-09-07T06:20:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "Reuters",
+        "freshness": "live/recent"
+      }
+    },
+    "regimes": {
+      "usd": "SOFT",
+      "rates": "HIGH_BUT_US_CASH_MARKET_CLOSED",
+      "volatility": "LOW_STALE",
+      "oil": "HIGH_RISING",
+      "risk": "MIXED_WITH_ENERGY_INFLATION_PRESSURE"
+    }
+  },
+  "learning_v2": {
+    "profile_version": "2.0.0",
+    "profile_generated_at_utc": "2026-09-07T05:22:39.808202+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No matching ACTIONABLE v2 context-aware segment was found; current facts and pre-prediction context determine confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A 1.1% monthly fall and 1.6% yearly fall in German industrial output weakens the cyclical growth signal for German equities; elevated and rising oil prices add cost pressure, while the positive three-month production trend limits conviction.",
+      "invalidation": "A strong rebound in European cyclicals or materially lower energy prices that outweigh the weak production print."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Germany's industrial weakness is a modest negative read-through for euro-area cyclicals, amplified by elevated energy costs, but the signal is low impact and partially offset by the positive three-month production trend.",
+      "invalidation": "Broad European risk-on price action or falling energy prices that dominate the German data surprise."
+    }
+  ]
+}
