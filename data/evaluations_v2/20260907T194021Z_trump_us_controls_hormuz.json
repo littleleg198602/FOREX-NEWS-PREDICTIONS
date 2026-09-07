@@ -1,0 +1,239 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260907T194021Z_trump_us_controls_hormuz",
+  "event_id": "ff_1412667_trump_us_controls_hormuz",
+  "event_time_utc": "2026-09-07T19:27:21+00:00",
+  "prediction_time_utc": "2026-09-07T19:40:21+00:00",
+  "evaluation_anchor_time_utc": "2026-09-07T19:40:21+00:00",
+  "prediction_latency_seconds": 780.0,
+  "evaluated_at_utc": "2026-09-07T19:44:05.346730+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "IRAN",
+    "HORMUZ",
+    "OIL",
+    "US_POLICY"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.953,
+        "timestamp_utc": "2026-09-07T19:40:21Z",
+        "short_term_direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ Sep 7 currency market update",
+        "freshness": "current_same_day"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest U.S. close before Labor Day holiday",
+        "freshness": "stale_market_closed_us_holiday"
+      },
+      "US10Y": {
+        "value": 4.784,
+        "timestamp_utc": "2026-09-07T09:23:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Yahoo Finance reference via Arcane Intel",
+        "freshness": "same_day_stale_us_holiday"
+      },
+      "VIX": {
+        "value": 15.03,
+        "timestamp_utc": "2026-09-07T09:23:00Z",
+        "short_term_direction": "UP",
+        "regime": "LOW",
+        "source": "Yahoo Finance reference via Arcane Intel",
+        "freshness": "same_day_stale_us_holiday"
+      },
+      "WTI": {
+        "value": 92.65,
+        "timestamp_utc": "2026-09-07T19:40:21Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 7 oil market update",
+        "freshness": "current_same_day"
+      },
+      "BRENT": {
+        "value": 97.31,
+        "timestamp_utc": "2026-09-07T19:40:21Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 7 oil market update",
+        "freshness": "current_same_day"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260907T194021Z_trump_us_controls_hormuz",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4476.60009765625,
+      "reference_price_time_utc": "2026-09-04T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4240.35,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:55:21+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T20:40:21+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T23:40:21+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T194021Z_trump_us_controls_hormuz",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 26006.53,
+      "reference_price_time_utc": "2026-09-07T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 219.35,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:55:21+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T20:40:21+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T23:40:21+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T194021Z_trump_us_controls_hormuz",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6399.2998046875,
+      "reference_price_time_utc": "2026-09-07T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 250.35,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:55:21+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T20:40:21+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T23:40:21+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260907T194021Z_trump_us_controls_hormuz",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 66346.96875,
+      "reference_price_time_utc": "2026-09-07T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 790.35,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T19:55:21+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T20:40:21+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-07T23:40:21+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}

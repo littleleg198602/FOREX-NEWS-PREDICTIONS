@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-03T22:47:18+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T22:47:18+00:00",
   "prediction_latency_seconds": 6078.0,
-  "evaluated_at_utc": "2026-09-07T18:13:06.756655+00:00",
+  "evaluated_at_utc": "2026-09-07T19:43:31.467224+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -113,6 +113,27 @@
           "directional_threshold_pct": 0.014821,
           "actual_direction_thresholded": "UP"
         },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-04",
+          "actual_price_time_utc": "2026-09-04T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+          "price": 4476.60009765625,
+          "change_pct": -0.971129,
+          "actual_direction": "DOWN",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 7,
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 2.891277,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.782874,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "volatility_ratio": 0.962507,
+          "volatility_ratio_threshold": 1.25
+        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T23:02:18+00:00",
@@ -148,27 +169,6 @@
           "mae_pct": -0.165911,
           "directional_threshold_pct": 0.027209,
           "actual_direction_thresholded": "NO_MOVE"
-        },
-        "next_session": {
-          "status": "DONE",
-          "session_local_date": "2026-09-04",
-          "actual_price_time_utc": "2026-09-04T21:00:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
-          "price": 4476.60009765625,
-          "change_pct": -0.971129,
-          "actual_direction": "DOWN",
-          "predicted_direction": "VOLATILITY",
-          "predicted_confidence": 7,
-          "correct": false,
-          "score_type": "volatility",
-          "baseline_range_pct": 2.891277,
-          "baseline_definition": "previous_relevant_local_trading_session_range",
-          "post_event_range_pct": 2.782874,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
-          "volatility_ratio": 0.962507,
-          "volatility_ratio_threshold": 1.25
         }
       },
       "yahoo_proxy_for": "XAUUSD",
@@ -195,6 +195,11 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 91.3
         },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "VOLATILITY"
+        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-03T23:02:18+00:00",
@@ -206,11 +211,6 @@
           "target_time_utc": "2026-09-04T02:47:18+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 91.3
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-04",
-          "predicted_direction": "VOLATILITY"
         }
       },
       "yahoo_proxy_for": null,
@@ -237,6 +237,11 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 117.3
         },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "VOLATILITY"
+        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-03T23:02:18+00:00",
@@ -248,11 +253,6 @@
           "target_time_utc": "2026-09-04T02:47:18+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 117.3
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-04",
-          "predicted_direction": "VOLATILITY"
         }
       },
       "yahoo_proxy_for": null,
@@ -290,6 +290,27 @@
           "mae_pct": null,
           "neutral_envelope_pct": 0.199766
         },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-04",
+          "actual_price_time_utc": "2026-09-04T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+          "price": 66.74800109863281,
+          "change_pct": -1.231135,
+          "actual_direction": "DOWN",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6,
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 3.410773,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 3.662324,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "volatility_ratio": 1.073752,
+          "volatility_ratio_threshold": 1.25
+        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T23:02:18+00:00",
@@ -323,27 +344,6 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 0.355143
-        },
-        "next_session": {
-          "status": "DONE",
-          "session_local_date": "2026-09-04",
-          "actual_price_time_utc": "2026-09-04T21:00:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
-          "price": 66.74800109863281,
-          "change_pct": -1.231135,
-          "actual_direction": "DOWN",
-          "predicted_direction": "VOLATILITY",
-          "predicted_confidence": 6,
-          "correct": false,
-          "score_type": "volatility",
-          "baseline_range_pct": 3.410773,
-          "baseline_definition": "previous_relevant_local_trading_session_range",
-          "post_event_range_pct": 3.662324,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
-          "volatility_ratio": 1.073752,
-          "volatility_ratio_threshold": 1.25
         }
       },
       "yahoo_proxy_for": "XAGUSD",
@@ -370,6 +370,11 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 117.3
         },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-04",
+          "predicted_direction": "VOLATILITY"
+        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-03T23:02:18+00:00",
@@ -381,11 +386,6 @@
           "target_time_utc": "2026-09-04T02:47:18+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 117.3
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-04",
-          "predicted_direction": "VOLATILITY"
         }
       },
       "yahoo_proxy_for": null,
