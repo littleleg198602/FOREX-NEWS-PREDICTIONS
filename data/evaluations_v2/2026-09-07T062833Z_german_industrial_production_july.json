@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-07T06:28:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-07T06:28:33+00:00",
   "prediction_latency_seconds": 180.0,
-  "evaluated_at_utc": "2026-09-07T06:31:49.223389+00:00",
+  "evaluated_at_utc": "2026-09-07T07:27:06.571959+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -106,9 +106,10 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-07T06:43:33+00:00"
+          "session_local_date": "2026-09-07",
+          "predicted_direction": "MIXED"
         },
         "1h": {
           "status": "PENDING",
@@ -118,10 +119,11 @@
           "status": "PENDING",
           "target_time_utc": "2026-09-07T10:28:33+00:00"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T06:43:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3747.55
         }
       }
     },
@@ -142,9 +144,10 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-07T06:43:33+00:00"
+          "session_local_date": "2026-09-07",
+          "predicted_direction": "MIXED"
         },
         "1h": {
           "status": "PENDING",
@@ -154,10 +157,11 @@
           "status": "PENDING",
           "target_time_utc": "2026-09-07T10:28:33+00:00"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T06:43:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3778.55
         }
       }
     }
