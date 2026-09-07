@@ -188,6 +188,11 @@ def normalize_prediction(raw_prediction: dict) -> dict:
     eligibility = _as_dict(raw.get("eligibility"))
     warnings: list[str] = []
 
+    prediction_id = raw.get("prediction_id")
+    if not prediction_id and raw.get("id"):
+        prediction_id = raw.get("id")
+        warnings.append("prediction_id adapted from id")
+
     published_at = raw.get("published_at_utc") or source.get("published_at_utc")
     event_time = raw.get("event_time_utc") or source.get("event_time_utc") or published_at
     if raw.get("published_at_utc") is None and source.get("published_at_utc"):
@@ -251,7 +256,7 @@ def normalize_prediction(raw_prediction: dict) -> dict:
     normalized = deepcopy(raw)
     normalized.update(
         {
-            "prediction_id": raw.get("prediction_id"),
+            "prediction_id": prediction_id,
             "event_id": raw.get("event_id"),
             "created_at_utc": raw.get("created_at_utc"),
             "published_at_utc": published_at,
