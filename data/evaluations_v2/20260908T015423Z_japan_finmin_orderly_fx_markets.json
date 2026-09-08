@@ -1,0 +1,130 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260908T015423Z_japan_finmin_orderly_fx_markets",
+  "event_id": "forex_factory_1416841",
+  "event_time_utc": "2026-09-08T01:42:00+00:00",
+  "prediction_time_utc": "2026-09-08T01:54:23+00:00",
+  "evaluation_anchor_time_utc": "2026-09-08T01:54:23+00:00",
+  "prediction_latency_seconds": 743.0,
+  "evaluated_at_utc": "2026-09-08T01:57:51.466301+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "JAPAN",
+    "FX",
+    "INTERVENTION",
+    "POLICY"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.89,
+        "timestamp_utc": "2026-09-07T23:16:48Z",
+        "short_term_direction": "DOWN",
+        "regime": "FALLING",
+        "source": "latest available pre-decision DXY snapshot",
+        "freshness": "recent_same_session_but_not_tick_current"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest normal US cash-market close",
+        "freshness": "stale_due_us_labor_day_holiday"
+      },
+      "US10Y": {
+        "value": 4.784,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "latest normal US cash-market close",
+        "freshness": "stale_due_us_labor_day_holiday"
+      },
+      "VIX": {
+        "value": 15.3,
+        "timestamp_utc": "2026-09-07T19:00:17Z",
+        "short_term_direction": "UP",
+        "regime": "LOW",
+        "source": "latest available pre-decision VIX snapshot",
+        "freshness": "holiday_session_derived"
+      },
+      "WTI": {
+        "value": 92.65,
+        "timestamp_utc": "2026-09-07T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters September 7 oil close / latest available pre-decision",
+        "freshness": "same_day_close"
+      },
+      "BRENT": {
+        "value": 97.31,
+        "timestamp_utc": "2026-09-07T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters September 7 oil close / latest available pre-decision",
+        "freshness": "same_day_close"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260908T015423Z_japan_finmin_orderly_fx_markets",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 66602.3671875,
+      "reference_price_time_utc": "2026-09-08T01:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T01:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.383,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T02:09:23+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T02:54:23+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T05:54:23+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}

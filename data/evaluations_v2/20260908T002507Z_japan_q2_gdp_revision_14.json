@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T00:25:07+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T00:25:07+00:00",
   "prediction_latency_seconds": 607.0,
-  "evaluated_at_utc": "2026-09-08T00:28:18.010729+00:00",
+  "evaluated_at_utc": "2026-09-08T01:57:51.084176+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -93,36 +93,62 @@
     {
       "prediction_id": "20260908T002507Z_japan_q2_gdp_revision_14",
       "instrument": "NI225",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^N225",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 65969.6171875,
-      "reference_price_time_utc": "2026-09-08T00:14:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T00:13:00+00:00",
+      "reference_price": 66312.4921875,
+      "reference_price_time_utc": "2026-09-08T00:25:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T00:24:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.117,
+      "reference_age_minutes": 0.117,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T00:40:07+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T01:25:07+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T04:25:07+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T00:40:07+00:00",
+          "actual_price_time_utc": "2026-09-08T00:41:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T00:40:00+00:00",
+          "market_delay_minutes": 0.88,
+          "price": 66375.171875,
+          "change_pct": 0.094522,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.635356,
+          "post_event_range_pct": 0.25509,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.635356
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T01:25:07+00:00",
+          "actual_price_time_utc": "2026-09-08T01:26:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T01:25:00+00:00",
+          "market_delay_minutes": 0.88,
+          "price": 66474.8515625,
+          "change_pct": 0.24484,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.859708,
+          "post_event_range_pct": 0.717967,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.859708
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T04:25:07+00:00"
         }
       }
     }
