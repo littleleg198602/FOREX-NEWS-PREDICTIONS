@@ -1,0 +1,129 @@
+{
+  "prediction_id": "ff-1416985-iran-demands-new-conditions",
+  "event_id": "ff-1416985",
+  "created_at_utc": "2026-09-08T18:04:20Z",
+  "event_time_utc": "2026-09-08T17:10:46Z",
+  "published_at_utc": "2026-09-08T17:10:46Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "US_IRAN", "ENERGY_RISK"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "headline": "Iranian Media: Tehran Demands New Conditions From Washington To Resume Negotiations",
+    "url": "https://www.forexfactory.com/news/1416985-iranian-media-tehran-demands-new-conditions-from-washington",
+    "source_time_text": "53 min ago",
+    "observed_at_utc": "2026-09-08T18:03:46Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.86,
+        "timestamp_utc": "2026-09-08T15:47:08Z",
+        "direction": "DOWN",
+        "regime": "softening_intraday",
+        "source": "Investing.com DXY real-time derived quote",
+        "freshness_seconds": 8260
+      },
+      "US2Y": {
+        "value": 4.402,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T18:03:46Z",
+        "direction": "UP",
+        "regime": "elevated_slightly_rising",
+        "source": "Trading Economics current US 2Y quote observed at prediction time",
+        "freshness_seconds": 34
+      },
+      "US10Y": {
+        "value": 4.789,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T13:45:20Z",
+        "direction": "UP",
+        "regime": "high_and_rising",
+        "source": "MarketWatch intraday Treasury update",
+        "freshness_seconds": 15540
+      },
+      "VIX": {
+        "value": 15.33,
+        "timestamp_utc": "2026-09-08T13:45:20Z",
+        "direction": "UP",
+        "regime": "rising_but_subdued",
+        "source": "MarketWatch intraday VIX update",
+        "freshness_seconds": 15540
+      },
+      "WTI": {
+        "value": 92.69,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T14:56:00Z",
+        "direction": "UP",
+        "regime": "geopolitical_risk_premium_high",
+        "source": "Reuters intraday oil update",
+        "freshness_seconds": 11260
+      },
+      "BRENT": {
+        "value": 97.70,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T14:56:00Z",
+        "direction": "UP",
+        "regime": "near_100_geopolitical_risk",
+        "source": "Reuters intraday oil update",
+        "freshness_seconds": 11260
+      }
+    },
+    "regimes": {
+      "rates": "restrictive_high_yields",
+      "risk": "mild_risk_off",
+      "energy": "high_and_rising",
+      "usd": "softening"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-08T15:30:50.781087+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "Relevant GEOPOLITICS and context-aware segments were WATCH_ONLY/EARLY_SIGNAL rather than ACTIONABLE for a material directional-confidence change; current facts and pre-prediction context therefore dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "New Iranian conditions reduce the probability of a rapid US-Iran diplomatic breakthrough, preserving geopolitical and energy risk premia that are supportive for gold, while a softer DXY provides an additional near-term tailwind.",
+      "invalidation": "A confirmed agreement to restart talks without material preconditions, a ceasefire signal, or a sharp fall in oil risk premia would weaken the upside case."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "A harder path back to US-Iran talks extends the probability of high energy prices; Europe and German cyclicals are comparatively sensitive to renewed energy-cost and geopolitical pressure.",
+      "invalidation": "Concrete diplomatic progress or a material drop in Brent would neutralize the downside bias."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Persistent negotiation friction keeps the regional conflict and near-$100 Brent risk premium alive, mildly weighing on European risk assets.",
+      "invalidation": "Verified de-escalation and falling oil prices would remove the principal bearish channel."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Less immediate diplomatic progress sustains oil-driven inflation risk and already-elevated Treasury yields, creating a mild risk-off headwind for US equities.",
+      "invalidation": "A diplomatic breakthrough or simultaneous decline in crude and Treasury yields would negate the mild downside signal."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Persistent geopolitical and energy inflation risk can keep long yields elevated, which is a modest valuation headwind for duration-sensitive growth stocks despite the softer dollar.",
+      "invalidation": "A clear fall in US10Y alongside diplomatic de-escalation would neutralize the downside bias."
+    }
+  ]
+}
