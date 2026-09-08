@@ -1,0 +1,100 @@
+{
+  "prediction_id": "ff-1416916-yen-short-squeeze",
+  "event_id": "forex-factory-1416916",
+  "created_at_utc": "2026-09-08T12:27:05Z",
+  "event_time_utc": "2026-09-08T09:54:00Z",
+  "published_at_utc": "2026-09-08T09:54:00Z",
+  "source_time_text": "Sep 8, 11:54am | 1 hr 17 min ago",
+  "observed_at_utc": "2026-09-08T12:27:05Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_timezone": "Europe/Budapest",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["JPY", "BOJ", "carry_trade", "geopolitics", "Middle_East"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Yen Short Squeeze Runs into Middle East War Escalation",
+  "source_url": "https://www.forexfactory.com/news/1416916-yen-short-squeeze-runs-into-middle-east-war",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.882,
+        "timestamp_utc": "2026-09-08T09:08:00Z",
+        "direction": "DOWN",
+        "source": "Reuters/Barrons market update",
+        "freshness": "intraday_delayed"
+      },
+      "US2Y": {
+        "value": 4.38,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T12:27:05Z",
+        "direction": "UP",
+        "source": "latest available market reporting referencing post-jobs repricing",
+        "freshness": "stale_reference_value"
+      },
+      "US10Y": {
+        "value": 4.802,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T09:00:00Z",
+        "direction": "UP",
+        "source": "WSJ European trade update",
+        "freshness": "intraday_delayed"
+      },
+      "VIX": {
+        "value": 15.30,
+        "timestamp_utc": "2026-09-08T12:27:05Z",
+        "direction": "UP",
+        "source": "Tallac Options/CBOE index snapshot",
+        "freshness": "intraday"
+      },
+      "WTI": {
+        "value": 94.41,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T08:00:00Z",
+        "direction": "UP",
+        "source": "Reuters-derived oil market report",
+        "freshness": "intraday_delayed"
+      },
+      "BRENT": {
+        "value": 99.00,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T08:00:00Z",
+        "direction": "UP",
+        "source": "Reuters-derived oil market report",
+        "freshness": "intraday_delayed"
+      }
+    },
+    "regimes": {
+      "dollar": "softening",
+      "rates": "high_and_rising",
+      "volatility": "rising_but_not_stressed",
+      "oil": "elevated_and_rising",
+      "risk": "risk_off_with_yen_repatriation_carry_unwind"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-08T11:27:44.203497+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No relevant ACTIONABLE context-aware segment justified a material adjustment; current facts and pre-prediction context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 6
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 5
+      },
+      "mechanism": "A rapid yen appreciation toward seven-month highs, higher BOJ tightening expectations, repatriation and carry-trade unwinds pressure Japanese exporters and raise the risk premium for the Nikkei while Middle East escalation keeps oil and global yields elevated.",
+      "invalidation": "USD/JPY reverses materially higher, BOJ tightening expectations fade, or a clear Middle East de-escalation triggers a broad risk-on reversal."
+    }
+  ]
+}
