@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T13:35:48+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T13:35:48+00:00",
   "prediction_latency_seconds": 2508.0,
-  "evaluated_at_utc": "2026-09-08T13:40:56.122691+00:00",
+  "evaluated_at_utc": "2026-09-08T14:34:30.294908+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -98,23 +98,41 @@
     {
       "prediction_id": "ff-1416933-ecb-survey-terminal-rate",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25994.859375,
-      "reference_price_time_utc": "2026-09-08T13:26:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T13:25:00+00:00",
+      "reference_price": 25974.5390625,
+      "reference_price_time_utc": "2026-09-08T13:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T13:34:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 9.8,
+      "reference_age_minutes": 0.8,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T13:50:48+00:00",
+          "actual_price_time_utc": "2026-09-08T13:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T13:50:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 25975.619140625,
+          "change_pct": 0.004158,
+          "actual_direction": "NO_MOVE",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.122273,
+          "post_event_range_pct": 0.124814,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.122273
+        },
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T13:50:48+00:00"
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         },
         "1h": {
           "status": "PENDING",
@@ -123,34 +141,47 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T17:35:48+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
         }
       }
     },
     {
       "prediction_id": "ff-1416933-ecb-survey-terminal-rate",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6409.6201171875,
-      "reference_price_time_utc": "2026-09-08T13:26:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T13:25:00+00:00",
+      "reference_price": 6407.72021484375,
+      "reference_price_time_utc": "2026-09-08T13:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T13:34:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 9.8,
+      "reference_age_minutes": 0.8,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T13:50:48+00:00",
+          "actual_price_time_utc": "2026-09-08T13:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T13:50:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 6406.27978515625,
+          "change_pct": -0.02248,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.129688,
+          "post_event_range_pct": 0.101753,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.129688
+        },
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T13:50:48+00:00"
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         },
         "1h": {
           "status": "PENDING",
@@ -159,34 +190,47 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T17:35:48+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
         }
       }
     },
     {
       "prediction_id": "ff-1416933-ecb-survey-terminal-rate",
       "instrument": "FCHI40",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FCHI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 8303.2001953125,
-      "reference_price_time_utc": "2026-09-08T13:26:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T13:25:00+00:00",
+      "reference_price": 8309.2099609375,
+      "reference_price_time_utc": "2026-09-08T13:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T13:34:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 9.8,
+      "reference_age_minutes": 0.8,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T13:50:48+00:00",
+          "actual_price_time_utc": "2026-09-08T13:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T13:50:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 8307.33984375,
+          "change_pct": -0.022507,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.152716,
+          "post_event_range_pct": 0.097595,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.152716
+        },
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T13:50:48+00:00"
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         },
         "1h": {
           "status": "PENDING",
@@ -195,11 +239,6 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T17:35:48+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
         }
       }
     }
