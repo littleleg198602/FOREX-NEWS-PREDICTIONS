@@ -1,0 +1,247 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417049-canada-additional-duties-scope",
+  "event_id": "ff-1417049",
+  "event_time_utc": "2026-09-08T22:53:00+00:00",
+  "prediction_time_utc": "2026-09-08T23:23:39+00:00",
+  "evaluation_anchor_time_utc": "2026-09-08T23:23:39+00:00",
+  "prediction_latency_seconds": 1839.0,
+  "evaluated_at_utc": "2026-09-08T23:25:34.017885+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "trade_policy",
+    "tariffs",
+    "US_Canada"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.905,
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Trading Economics current snapshot",
+        "freshness": "current_page_snapshot",
+        "freshness_seconds": 0
+      },
+      "US2Y": {
+        "value": 4.402,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Trading Economics September 8 daily market quote",
+        "freshness": "same_session_daily_quote",
+        "freshness_seconds": 0
+      },
+      "US10Y": {
+        "value": 4.8,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Trading Economics September 8 daily market quote",
+        "freshness": "same_session_daily_quote",
+        "freshness_seconds": 0
+      },
+      "VIX": {
+        "value": 15.77,
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "US market close snapshot via Yahoo Finance market data",
+        "freshness": "same_day_us_close",
+        "freshness_seconds": 12219
+      },
+      "WTI": {
+        "value": 92.318,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Trading Economics current snapshot",
+        "freshness": "current_page_snapshot",
+        "freshness_seconds": 0
+      },
+      "BRENT": {
+        "value": 97.468,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Trading Economics current snapshot",
+        "freshness": "current_page_snapshot",
+        "freshness_seconds": 0
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417049-canada-additional-duties-scope",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52786.07,
+      "reference_price_time_utc": "2026-09-08T21:06:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T21:05:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 137.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T23:38:39+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T00:23:39+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T03:23:39+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417049-canada-additional-duties-scope",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7673.52,
+      "reference_price_time_utc": "2026-09-08T21:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T21:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 142.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T23:38:39+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T00:23:39+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T03:23:39+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417049-canada-additional-duties-scope",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29507.701,
+      "reference_price_time_utc": "2026-09-08T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 126.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T23:38:39+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T00:23:39+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T03:23:39+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417049-canada-additional-duties-scope",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4395.5,
+      "reference_price_time_utc": "2026-09-08T23:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T23:15:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 7.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T23:38:39+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T00:23:39+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T03:23:39+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
