@@ -1,0 +1,54 @@
+{
+  "prediction_id": "ff-1416881-iran-economic-warfare-missiles",
+  "event_id": "ff-1416881",
+  "created_at_utc": "2026-09-08T09:09:15Z",
+  "event_time_utc": "2026-09-08T08:52:00Z",
+  "published_at_utc": "2026-09-08T08:52:00Z",
+  "source": {
+    "platform": "Forex Factory",
+    "source_url": "https://www.forexfactory.com/news/1416881-iran-threatens-us-with-new-economic-warfare-and",
+    "headline": "Iran threatens US with new 'economic warfare' and missiles as Houthis attack Saudi Arabia",
+    "source_time_text": "Sep 8, 8:52am | 11 min ago",
+    "observed_at_utc": "2026-09-08T09:09:15Z",
+    "time_source": "forex_factory_absolute",
+    "time_is_derived": false,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "iran_us_conflict", "energy_supply_risk", "risk_off"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.84, "timestamp_utc": "2026-09-08T08:50:00Z", "direction": "DOWN", "regime": "SOFT_USD", "source": "Reuters market report observed pre-prediction", "freshness_seconds": 1155},
+      "US2Y": {"value": 4.34, "timestamp_utc": "2026-09-03T21:00:00Z", "direction": "MIXED", "regime": "ELEVATED_STALE_LAST_AVAILABLE", "source": "BusinessQuant/FRED daily last available reading", "freshness_seconds": 389355},
+      "US10Y": {"value": 4.77, "timestamp_utc": "2026-09-03T21:00:00Z", "direction": "MIXED", "regime": "ELEVATED_STALE_LAST_AVAILABLE", "source": "BusinessQuant/FRED daily last available reading", "freshness_seconds": 389355},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-05T20:00:00Z", "direction": "MIXED", "regime": "LOW_VOL_STALE_LAST_CLOSE", "source": "CBOE close reported in current market coverage", "freshness_seconds": 220155},
+      "WTI": {"value": 94.41, "timestamp_utc": "2026-09-08T09:00:00Z", "direction": "UP", "regime": "GEOPOLITICAL_SPIKE", "source": "Reuters energy report observed pre-prediction", "freshness_seconds": 555},
+      "BRENT": {"value": 99.0, "value_is_approximate": true, "timestamp_utc": "2026-09-08T09:00:00Z", "direction": "UP", "regime": "GEOPOLITICAL_SPIKE_NEAR_100", "source": "Reuters energy report observed pre-prediction", "freshness_seconds": 555}
+    },
+    "regimes": {
+      "usd": "soft",
+      "rates": "elevated",
+      "volatility": "low_but_stale",
+      "oil": "strong_geopolitical_spike",
+      "risk": "risk_off"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "material_confidence_adjustment": false,
+    "reason": "No matching ACTIONABLE v2 context-aware segment was used to override current macro facts; confidence reflects current event/context."
+  },
+  "predictions": [
+    {"instrument":"XAUUSD","immediate":{"direction":"UP","confidence":6},"next_session":{"direction":"UP","confidence":5},"mechanism":"Fresh military and economic-warfare escalation increases safe-haven demand, partly offset by elevated rate expectations.","invalidation":"Verified de-escalation, falling oil risk premium and no further military incidents."},
+    {"instrument":"NDX","immediate":{"direction":"DOWN","confidence":6},"next_session":{"direction":"DOWN","confidence":5},"mechanism":"Oil-driven inflation risk and geopolitical risk-off pressure long-duration growth equities.","invalidation":"Oil reverses sharply lower and US risk sentiment normalizes despite the headlines."},
+    {"instrument":"SP500","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"DOWN","confidence":4},"mechanism":"Higher energy and conflict risk raise inflation and earnings-risk premia before the US session.","invalidation":"Confirmed de-escalation and a rapid reversal in crude and Treasury-rate pressure."},
+    {"instrument":"GDAXI","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"DOWN","confidence":4},"mechanism":"Europe is sensitive to energy-price shocks and global risk-off sentiment.","invalidation":"Energy prices retreat and European risk appetite recovers decisively."},
+    {"instrument":"STOXX50","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"DOWN","confidence":4},"mechanism":"Escalating Gulf risk raises energy-input and discount-rate pressure across euro-area large caps.","invalidation":"Oil and geopolitical risk premium reverse materially."},
+    {"instrument":"XAGUSD","immediate":{"direction":"MIXED","confidence":4},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"Safe-haven support conflicts with higher-rate and cyclical-demand headwinds.","invalidation":"A decisive move in real yields or a major escalation creates a clear directional impulse."}
+  ]
+}
