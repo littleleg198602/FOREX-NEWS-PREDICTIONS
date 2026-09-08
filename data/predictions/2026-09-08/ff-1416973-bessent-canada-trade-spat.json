@@ -1,0 +1,62 @@
+{
+  "prediction_id": "ff-1416973-bessent-canada-trade-spat",
+  "event_id": "ff-1416973",
+  "created_at_utc": "2026-09-08T15:26:25Z",
+  "event_time_utc": "2026-09-08T15:07:59Z",
+  "published_at_utc": "2026-09-08T15:07:59Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["TRADE_POLICY", "USA_CANADA", "RISK_SENTIMENT"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "headline": "US Treasury Secretary Bessent: I think we will get through the Canada trade spat",
+    "url": "https://www.forexfactory.com/news/1416973-us-treasury-secretary-bessent-i-think-we-will",
+    "source_time_text": "17 min ago",
+    "observed_at_utc": "2026-09-08T15:24:59Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.989, "timestamp_utc": "2026-09-08T10:14:00Z", "direction": "DOWN", "regime": "softening_intraday", "source": "WSJ/Tradeweb market update", "freshness_seconds": 18785},
+      "US2Y": {"value": 4.363, "unit": "percent", "timestamp_utc": "2026-09-08T08:00:00Z", "direction": "DOWN", "regime": "elevated_but_easing", "source": "Barron's/Tradeweb intraday update", "freshness_seconds": 26885},
+      "US10Y": {"value": 4.802, "unit": "percent", "timestamp_utc": "2026-09-08T10:14:00Z", "direction": "UP", "regime": "high_and_rising", "source": "WSJ/Tradeweb market update", "freshness_seconds": 18785},
+      "VIX": {"value": 15.68, "timestamp_utc": "2026-09-08T14:30:00Z", "direction": "UP", "regime": "rising_but_subdued", "source": "Barron's intraday market coverage", "freshness_seconds": 3385},
+      "WTI": {"value": 93.41, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-08T14:30:00Z", "direction": "UP", "regime": "geopolitical_risk_premium_high", "source": "Barron's intraday market coverage", "freshness_seconds": 3385},
+      "BRENT": {"value": 98.29, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-08T14:30:00Z", "direction": "UP", "regime": "near_100_geopolitical_risk", "source": "Barron's intraday market coverage", "freshness_seconds": 3385}
+    },
+    "regimes": {
+      "rates": "restrictive_high_yields",
+      "risk": "mild_risk_off",
+      "energy": "high_and_rising",
+      "usd": "mixed_to_soft"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-08T14:34:32.725737+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No directly matching ACTIONABLE v2 context segment was used to override the current trade-policy and market facts."
+  },
+  "predictions": [
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Bessent's expectation that the Canada dispute will be resolved reduces a portion of the trade-war risk premium, with relatively greater relevance for industrial and economically sensitive large caps.",
+      "invalidation": "Fresh tariff escalation, a breakdown in negotiations, or another major oil-driven risk-off leg would invalidate the mild positive bias."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "The comment is a modest de-escalation signal and Bessent estimates only a very small inflation effect from a Canada trade war, but high oil prices and Treasury yields cap the bullish impulse.",
+      "invalidation": "A renewed US-Canada escalation or a broader risk-off move from energy and geopolitics would overwhelm the de-escalation signal."
+    }
+  ]
+}
