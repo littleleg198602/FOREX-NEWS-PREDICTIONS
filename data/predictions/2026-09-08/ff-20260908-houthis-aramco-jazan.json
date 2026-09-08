@@ -1,0 +1,73 @@
+{
+  "prediction_id": "ff-20260908-houthis-aramco-jazan",
+  "event_id": "forex-factory-1416892",
+  "created_at_utc": "2026-09-08T09:54:43Z",
+  "event_time_utc": "2026-09-08T08:24:43Z",
+  "published_at_utc": "2026-09-08T08:24:43Z",
+  "source_time_text": "1 hr 30 min ago",
+  "observed_at_utc": "2026-09-08T09:54:43Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 1800,
+  "time_uncertainty_seconds": 1800,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "Middle_East", "oil", "Saudi_Arabia", "Aramco"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "headline": "Houthis Claim Targeting Aramco In Jazan",
+    "url": "https://www.forexfactory.com/news/1416892-houthis-claim-targeting-aramco-in-jazan",
+    "publisher": "Forex Factory / RedboxGlobal"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": null, "direction": "DOWN", "regime": "softening", "timestamp_utc": "2026-09-08T09:54:43Z", "source": "Reuters/Forex Factory market coverage", "freshness": "current_direction_value_unavailable"},
+      "US2Y": {"value": 4.37, "unit": "%", "direction": "UP", "regime": "elevated", "timestamp_utc": "2026-09-08T09:54:43Z", "source": "YCharts/Treasury curve derived from 10Y 4.78 and 10Y-2Y spread 0.41", "freshness": "latest_available_curve_not_intraday"},
+      "US10Y": {"value": 4.78, "unit": "%", "direction": "UP", "regime": "elevated", "timestamp_utc": "2026-09-08T09:54:43Z", "source": "YCharts/Treasury curve", "freshness": "latest_available_curve_not_intraday"},
+      "VIX": {"value": 14.53, "direction": "MIXED", "regime": "moderate", "timestamp_utc": "2026-09-06T00:00:00Z", "source": "CBOE close reported by TS2", "freshness": "stale_last_close"},
+      "WTI": {"value": 93.69, "unit": "USD/bbl", "direction": "UP", "regime": "geopolitical_spike", "timestamp_utc": "2026-09-08T09:54:43Z", "source": "PTI/Rediff current market report", "freshness": "same_day"},
+      "BRENT": {"value": 98.33, "unit": "USD/bbl", "direction": "UP", "regime": "near_100_geopolitical_spike", "timestamp_utc": "2026-09-08T09:54:43Z", "source": "PTI/Rediff current market report", "freshness": "same_day"}
+    },
+    "regimes": {"rates": "high_and_rising", "risk": "geopolitically_fragile", "oil": "elevated_spike", "usd": "softening"}
+  },
+  "learning_v2": {"material_adjustment": false, "reason": "No context-aware ACTIONABLE segment was used to override current facts; generic directional 5-6 segments are KEEP_NEUTRAL."},
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "A claimed attack on Saudi Aramco infrastructure raises geopolitical and energy-supply risk, supporting safe-haven demand.",
+      "invalidation": "The claim is disproven or damage is confirmed negligible and crude oil gives back the escalation premium."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "Higher oil and geopolitical risk increase input-cost and risk-premium pressure on European cyclicals.",
+      "invalidation": "Oil reverses sharply lower and the attack is shown to have no operational impact."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "Near-$100 Brent plus fresh Saudi infrastructure risk is negative for European risk assets.",
+      "invalidation": "Energy risk premium collapses on verified de-escalation or no damage."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Higher oil raises inflation and discount-rate concerns while geopolitical escalation weighs on risk sentiment.",
+      "invalidation": "Crude reverses and broader US risk sentiment remains resilient."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Oil-driven inflation risk and elevated yields are a headwind for long-duration growth equities.",
+      "invalidation": "Treasury yields fall materially and oil loses the escalation premium."
+    }
+  ]
+}
