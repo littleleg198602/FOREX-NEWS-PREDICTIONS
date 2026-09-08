@@ -1,0 +1,52 @@
+{
+  "prediction_id": "ff-1416890-canada-retaliatory-tariffs",
+  "event_id": "ff-1416890",
+  "created_at_utc": "2026-09-08T09:09:15Z",
+  "event_time_utc": "2026-09-08T08:54:15Z",
+  "published_at_utc": "2026-09-08T08:54:15Z",
+  "source": {
+    "platform": "Forex Factory",
+    "source_url": "https://www.forexfactory.com/news/1416890-canadas-retaliatory-tariffs-worth-276-billion-take-effect",
+    "headline": "Canada’s retaliatory tariffs worth $27.6 billion take effect as trade rift with U.S. deepens",
+    "source_time_text": "15 min ago",
+    "observed_at_utc": "2026-09-08T09:09:15Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["trade_policy", "tariffs", "canada_us", "inflation_risk", "risk_off"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.84, "timestamp_utc": "2026-09-08T08:50:00Z", "direction": "DOWN", "regime": "SOFT_USD", "source": "Reuters market report observed pre-prediction", "freshness_seconds": 1155},
+      "US2Y": {"value": 4.34, "timestamp_utc": "2026-09-03T21:00:00Z", "direction": "MIXED", "regime": "ELEVATED_STALE_LAST_AVAILABLE", "source": "BusinessQuant/FRED daily last available reading", "freshness_seconds": 389355},
+      "US10Y": {"value": 4.77, "timestamp_utc": "2026-09-03T21:00:00Z", "direction": "MIXED", "regime": "ELEVATED_STALE_LAST_AVAILABLE", "source": "BusinessQuant/FRED daily last available reading", "freshness_seconds": 389355},
+      "VIX": {"value": 14.53, "timestamp_utc": "2026-09-05T20:00:00Z", "direction": "MIXED", "regime": "LOW_VOL_STALE_LAST_CLOSE", "source": "CBOE close reported in current market coverage", "freshness_seconds": 220155},
+      "WTI": {"value": 94.41, "timestamp_utc": "2026-09-08T09:00:00Z", "direction": "UP", "regime": "GEOPOLITICAL_SPIKE", "source": "Reuters energy report observed pre-prediction", "freshness_seconds": 555},
+      "BRENT": {"value": 99.0, "value_is_approximate": true, "timestamp_utc": "2026-09-08T09:00:00Z", "direction": "UP", "regime": "GEOPOLITICAL_SPIKE_NEAR_100", "source": "Reuters energy report observed pre-prediction", "freshness_seconds": 555}
+    },
+    "regimes": {
+      "usd": "soft",
+      "rates": "elevated",
+      "volatility": "low_but_stale",
+      "oil": "strong_geopolitical_spike",
+      "risk": "risk_off"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "material_confidence_adjustment": false,
+    "reason": "No matching ACTIONABLE v2 context-aware segment was used to override current facts."
+  },
+  "predictions": [
+    {"instrument":"SP500","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"New tariffs broaden North American trade friction and add a modest inflation/earnings-risk premium to U.S. equities.","invalidation":"Rapid negotiated suspension of the tariffs or a strong risk-on move that fully absorbs the trade shock."},
+    {"instrument":"NDX","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"Tariff escalation adds inflation and policy uncertainty, modestly negative for long-duration technology valuations.","invalidation":"Trade tensions de-escalate quickly or falling yields dominate the tariff effect."},
+    {"instrument":"WS30","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"Industrials and multinational firms face added cross-border cost and demand uncertainty from retaliatory tariffs.","invalidation":"Immediate trade compromise or evidence the covered goods have negligible earnings impact."},
+    {"instrument":"XAUUSD","immediate":{"direction":"UP","confidence":3},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"Trade friction adds a small safe-haven and inflation hedge bid, but elevated rates limit conviction.","invalidation":"Trade de-escalation and rising real yields overwhelm the modest safe-haven impulse."}
+  ]
+}
