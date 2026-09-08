@@ -1,0 +1,43 @@
+{
+  "prediction_id": "20260908T043004Z_rba_hunter_hike_if_inflation_intensifies",
+  "event_id": "forex_factory_1416863",
+  "created_at_utc": "2026-09-08T04:30:04Z",
+  "event_time_utc": "2026-09-08T03:58:04Z",
+  "published_at_utc": "2026-09-08T03:58:04Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["AUSTRALIA", "RBA", "MONETARY_POLICY", "INFLATION"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Hunter: RBA board may need to raise rates if inflation appears set to intensify",
+  "source_url": "https://www.forexfactory.com/news/1416863-hunter-rba-board-may-need-to-raise-rates",
+  "source_time_text": "32 min ago",
+  "observed_at_utc": "2026-09-08T04:30:04Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.8, "timestamp_utc": "2026-09-08T02:21:00Z", "short_term_direction": "DOWN", "regime": "SOFTER_USD", "source": "Investing.com technical snapshot / current-day DXY reference", "freshness": "same_session_delayed_snapshot"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH_YIELD", "source": "US Treasury latest completed cash-market close", "freshness": "stale_due_us_labor_day_holiday"},
+      "US10Y": {"value": 4.781, "timestamp_utc": "2026-09-08T02:17:00Z", "short_term_direction": "DOWN", "regime": "HIGH_YIELD", "source": "current-day market snapshot", "freshness": "same_session_delayed_snapshot"},
+      "VIX": {"value": 15.3, "timestamp_utc": "2026-09-08T02:42:00Z", "short_term_direction": "DOWN", "regime": "LOW_TO_MODERATE_VOLATILITY", "source": "current-day VIX snapshot", "freshness": "same_session_delayed_snapshot"},
+      "WTI": {"value": 92.92, "timestamp_utc": "2026-09-08T04:20:00Z", "short_term_direction": "UP", "regime": "ELEVATED_ENERGY_RISK", "source": "Reuters current Asia-session oil report", "freshness": "recent_same_session"},
+      "BRENT": {"value": 97.49, "timestamp_utc": "2026-09-08T04:20:00Z", "short_term_direction": "UP", "regime": "ELEVATED_ENERGY_RISK", "source": "Reuters current Asia-session oil report", "freshness": "recent_same_session"}
+    },
+    "regimes": {"usd": "SOFTER_USD", "rates": "HIGH_YIELDS", "volatility": "LOW_TO_MODERATE_AND_EASING", "energy": "ELEVATED_AND_RISING", "risk": "MIXED_WITH_GEOPOLITICAL_PRESSURE"}
+  },
+  "learning_profile": {"profile_version": "2.0.0", "generated_at_utc": "2026-09-08T01:57:52.389251+00:00", "material_confidence_adjustment": false, "reason": "No matching ACTIONABLE AUS200 context-aware segment was identified; generic ACTIONABLE confidence calibration is KEEP_NEUTRAL, so no material confidence change was applied."},
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "An explicit RBA warning that rates may need to rise if inflation intensifies increases tightening risk and discount rates for Australian equities, while elevated oil prices add inflation pressure.",
+      "invalidation": "A rapid fall in inflation expectations, energy prices or market-implied RBA tightening would weaken the bearish impulse."
+    }
+  ],
+  "source_summary": "RBA Assistant Governor Hunter said the board may need to raise rates if inflation appears set to intensify; related remarks stressed housing as a key transmission channel and the aim of cooling housing activity and the broader economy."
+}
