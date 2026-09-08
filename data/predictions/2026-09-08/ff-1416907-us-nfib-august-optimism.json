@@ -1,0 +1,104 @@
+{
+  "prediction_id": "ff-1416907-us-nfib-august-optimism",
+  "event_id": "ff-1416907",
+  "created_at_utc": "2026-09-08T11:24:48Z",
+  "observed_at_utc": "2026-09-08T11:22:48Z",
+  "published_at_utc": "2026-09-08T10:17:48Z",
+  "event_time_utc": "2026-09-08T10:17:48Z",
+  "source_time_text": "1 hr 5 min ago",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US-macro", "small-business", "sentiment"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "US NFIB: Main Street Optimism Cools in August but Holds Above Long-Term Average",
+  "source_url": "https://www.forexfactory.com/news/1416907-us-nfib-main-street-optimism-cools-in-august",
+  "summary": "The NFIB Small Business Optimism Index fell 1.1 points to 98.7 in August, while remaining slightly above its 52-year average of 98.0. Expected business conditions, earnings trends and hiring plans weakened, but the release was low impact and not a broad recession signal.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.84,
+        "timestamp_utc": "2026-09-08T09:51:00Z",
+        "direction": "DOWN",
+        "regime": "soft-dollar",
+        "source": "market.news / web verification",
+        "freshness_seconds": 5628
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T22:04:00Z",
+        "direction": "UP",
+        "regime": "elevated-stale-reference",
+        "source": "US Treasury via YCharts",
+        "freshness_seconds": 307248,
+        "note": "No reliable intraday quote was available in this run; retained only as a clearly stale reference, not as a live directional trigger."
+      },
+      "US10Y": {
+        "value": 4.809,
+        "timestamp_utc": "2026-09-08T10:30:00Z",
+        "direction": "UP",
+        "regime": "high-and-rising",
+        "source": "WSJ market report / web verification",
+        "freshness_seconds": 3288
+      },
+      "VIX": {
+        "value": 15.87,
+        "timestamp_utc": "2026-09-08T07:13:00Z",
+        "direction": "UP",
+        "regime": "moderately-elevated",
+        "source": "Yahoo Finance market snapshot / web verification",
+        "freshness_seconds": 15108
+      },
+      "WTI": {
+        "value": 94.73,
+        "timestamp_utc": "2026-09-08T11:00:00Z",
+        "direction": "UP",
+        "regime": "geopolitical-risk-premium",
+        "source": "Reuters / web verification",
+        "freshness_seconds": 1488
+      },
+      "BRENT": {
+        "value": 99.46,
+        "timestamp_utc": "2026-09-08T11:00:00Z",
+        "direction": "UP",
+        "regime": "near-100-geopolitical-risk-premium",
+        "source": "Reuters / web verification",
+        "freshness_seconds": 1488
+      }
+    },
+    "regimes": {
+      "usd": "soft-dollar",
+      "rates": "long-yields-high",
+      "risk": "cautious-risk-off",
+      "energy": "strong-geopolitical-premium",
+      "growth": "mixed-US-growth-signal"
+    }
+  },
+  "learning_profile": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_confidence_adjustment": false,
+    "reason": "No verified ACTIONABLE context-aware segment was used to change this low-impact macro prediction materially."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Cooling small-business optimism is mildly negative for growth, but the index remains above its long-term average and the release is low impact relative to oil, rates and upcoming inflation data.",
+      "invalidation": "A broader set of US activity indicators confirms a sharp slowdown, or conversely stronger data and falling yields dominate the session."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 2},
+      "mechanism": "Weaker earnings trends, hiring plans and expected business conditions marginally weigh on domestically sensitive cyclical shares.",
+      "invalidation": "Risk appetite improves broadly, oil falls materially, or rates decline enough to offset the weak sentiment details."
+    }
+  ]
+}
