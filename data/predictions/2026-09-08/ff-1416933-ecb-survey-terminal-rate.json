@@ -1,0 +1,126 @@
+{
+  "prediction_id": "ff-1416933-ecb-survey-terminal-rate",
+  "event_id": "forex-factory-1416933",
+  "created_at_utc": "2026-09-08T13:35:48Z",
+  "event_time_utc": "2026-09-08T12:54:00Z",
+  "published_at_utc": "2026-09-08T12:54:00Z",
+  "source_time_text": "Sep 8, 2:54pm | 31 min ago",
+  "observed_at_utc": "2026-09-08T13:35:48Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_timezone": "Europe/Budapest",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["EUR", "ECB", "rates", "inflation", "central_bank_survey"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "ECB Survey: Economists See September as End of Current Hiking Cycle, 2.50% Through End-2027",
+  "source_url": "https://www.forexfactory.com/news/1416933-ecb-survey-economists-see-september-as-end-of",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.94,
+        "timestamp_utc": "2026-09-08T13:35:48Z",
+        "direction": "DOWN",
+        "source": "TradersUnion/Investing.com DXY intraday snapshot",
+        "freshness": "intraday"
+      },
+      "US2Y": {
+        "value": 4.363,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T07:00:00Z",
+        "direction": "DOWN",
+        "source": "Barron's/Tradeweb Asian-session Treasury update",
+        "freshness": "intraday_delayed"
+      },
+      "US10Y": {
+        "value": 4.802,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T10:00:00Z",
+        "direction": "UP",
+        "source": "WSJ European-trade Treasury update",
+        "freshness": "intraday_delayed"
+      },
+      "VIX": {
+        "value": 15.30,
+        "timestamp_utc": "2026-09-08T13:35:48Z",
+        "direction": "UP",
+        "source": "Tallac Options/CBOE index snapshot",
+        "freshness": "intraday"
+      },
+      "WTI": {
+        "value": 93.81,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T11:31:00Z",
+        "direction": "UP",
+        "source": "EnergyNow/TradingView morning oil report",
+        "freshness": "intraday_delayed"
+      },
+      "BRENT": {
+        "value": 98.36,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T11:31:00Z",
+        "direction": "UP",
+        "source": "EnergyNow/TradingView morning oil report",
+        "freshness": "intraday_delayed"
+      }
+    },
+    "regimes": {
+      "dollar": "soft",
+      "rates": "high_with_curve_mixed",
+      "volatility": "rising_but_not_stressed",
+      "oil": "elevated_and_rising",
+      "risk": "cautious_risk_off_with_inflation_pressure"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-08T12:30:56.909976+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No relevant ACTIONABLE ECB/context-aware segment was found; current facts and pre-prediction market context determine confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A fully expected 25bp ECB hike limits surprise, while the survey's view that September ends the hiking cycle is equity-supportive beyond the meeting; elevated oil, inflation risk and global yields offset that relief and leave no clean directional edge.",
+      "invalidation": "A materially more hawkish ECB signal than the survey implies, or a sharp oil/yield rise, would skew DAX lower; clear confirmation of a terminal hike with falling yields and oil would skew it higher."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "The expected 2.50% terminal deposit rate provides some valuation relief, but the hike itself is already priced and current energy-driven inflation and rate pressure cap the bullish read-through for euro-area large caps.",
+      "invalidation": "Unexpectedly hawkish ECB guidance plus rising oil/yields would turn the balance lower; a clearly terminal hike and easing energy/rate pressure would turn it higher."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "The dovish terminal-rate implication is mildly supportive, but the signal is already largely priced and France remains exposed to the same elevated energy-cost and bond-yield backdrop as the broader euro area.",
+      "invalidation": "A hawkish ECB surprise or renewed energy spike would favor downside; lower yields and confirmation that September is the final hike would favor upside."
+    }
+  ]
+}
