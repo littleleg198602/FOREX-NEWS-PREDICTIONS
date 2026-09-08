@@ -1,0 +1,43 @@
+{
+  "prediction_id": "20260908T015423Z_japan_finmin_orderly_fx_markets",
+  "event_id": "forex_factory_1416841",
+  "created_at_utc": "2026-09-08T01:54:23Z",
+  "event_time_utc": "2026-09-08T01:42:00Z",
+  "published_at_utc": "2026-09-08T01:42:00Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["JAPAN", "FX", "INTERVENTION", "POLICY"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Japan FinMin Katayama: Will Maintain Close Communication With US To Achieve Orderly FX Markets",
+  "source_url": "https://www.forexfactory.com/news/1416841-japan-finmin-katayama-will-maintain-close-communication-with",
+  "source_time_text": "Sep 8, 2:42am",
+  "observed_at_utc": "2026-09-08T01:54:22Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.89, "timestamp_utc": "2026-09-07T23:16:48Z", "short_term_direction": "DOWN", "regime": "SOFTER_USD", "source": "latest available pre-decision DXY snapshot", "freshness": "recent_same_session_but_not_tick_current"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH_YIELD", "source": "latest normal US cash-market close", "freshness": "stale_due_us_labor_day_holiday"},
+      "US10Y": {"value": 4.784, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH_YIELD", "source": "latest normal US cash-market close", "freshness": "stale_due_us_labor_day_holiday"},
+      "VIX": {"value": 15.30, "timestamp_utc": "2026-09-07T19:00:17Z", "short_term_direction": "UP", "regime": "LOW_TO_MODERATE_VOLATILITY", "source": "latest available pre-decision VIX snapshot", "freshness": "holiday_session_derived"},
+      "WTI": {"value": 92.65, "timestamp_utc": "2026-09-07T20:00:00Z", "short_term_direction": "UP", "regime": "ELEVATED_ENERGY_RISK", "source": "Reuters September 7 oil close / latest available pre-decision", "freshness": "same_day_close"},
+      "BRENT": {"value": 97.31, "timestamp_utc": "2026-09-07T20:00:00Z", "short_term_direction": "UP", "regime": "ELEVATED_ENERGY_RISK", "source": "Reuters September 7 oil close / latest available pre-decision", "freshness": "same_day_close"}
+    },
+    "regimes": {"usd": "SOFTER_USD", "rates": "HIGH_YIELDS_WITH_US_CASH_MARKET_HOLIDAY_STALENESS", "volatility": "LOW_TO_MODERATE_AND_RISING", "energy": "ELEVATED_AND_RISING", "risk": "MIXED_WITH_GEOPOLITICAL_PRESSURE"}
+  },
+  "learning_profile": {"profile_version": "2.0.0", "generated_at_utc": "2026-09-08T00:28:19.133757+00:00", "material_confidence_adjustment": false, "reason": "No matching ACTIONABLE NI225 context-aware segment was identified; no material confidence change from v2 learning."},
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "The finance minister's emphasis on close U.S.-Japan communication to keep FX markets orderly reinforces the credibility of intervention risk after recent yen-support operations. A firmer yen is a modest headwind for exporter-heavy Nikkei earnings translation, but the statement itself is low-impact and lacks a new intervention commitment.",
+      "invalidation": "A sustained rebound in USD/JPY or explicit clarification that no further intervention is contemplated would remove most of the bearish equity impulse."
+    }
+  ],
+  "source_summary": "Japan Finance Minister Katayama said Japan will maintain close communication with the United States to achieve orderly FX markets."
+}
