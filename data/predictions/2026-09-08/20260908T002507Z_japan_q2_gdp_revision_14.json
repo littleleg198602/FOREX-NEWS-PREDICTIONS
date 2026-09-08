@@ -1,0 +1,102 @@
+{
+  "prediction_id": "20260908T002507Z_japan_q2_gdp_revision_14",
+  "event_id": "forex_factory_1416833",
+  "created_at_utc": "2026-09-08T00:25:07Z",
+  "event_time_utc": "2026-09-08T00:15:00Z",
+  "published_at_utc": "2026-09-08T00:15:00Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["JAPAN", "GDP", "BOJ", "MACRO"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Japan revises Q2 GDP up to annualised 1.4% expansion",
+  "source_url": "https://www.forexfactory.com/news/1416833-japan-revises-q2-gdp-up-to-annualised-14",
+  "source_time_text": "Sep 8, 1:15am",
+  "observed_at_utc": "2026-09-08T00:25:07Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.89,
+        "timestamp_utc": "2026-09-07T23:16:48Z",
+        "short_term_direction": "DOWN",
+        "regime": "SOFTER_USD",
+        "source": "Investing.com DXY real-time derived snapshot",
+        "freshness": "recent_same_session"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "HIGH_YIELD",
+        "source": "yieldcurve.pro / latest cash-market close",
+        "freshness": "stale_due_us_labor_day_holiday"
+      },
+      "US10Y": {
+        "value": 4.784,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "HIGH_YIELD",
+        "source": "Investing.com / latest normal US cash-market close",
+        "freshness": "stale_due_us_labor_day_holiday"
+      },
+      "VIX": {
+        "value": 15.30,
+        "timestamp_utc": "2026-09-07T19:00:17Z",
+        "short_term_direction": "UP",
+        "regime": "LOW_TO_MODERATE_VOLATILITY",
+        "source": "Investing.com VIX derived snapshot",
+        "freshness": "holiday_session_derived"
+      },
+      "WTI": {
+        "value": 92.65,
+        "timestamp_utc": "2026-09-07T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "ELEVATED_ENERGY_RISK",
+        "source": "Reuters September 7 oil close",
+        "freshness": "same_day_close"
+      },
+      "BRENT": {
+        "value": 97.31,
+        "timestamp_utc": "2026-09-07T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "ELEVATED_ENERGY_RISK",
+        "source": "Reuters September 7 oil close",
+        "freshness": "same_day_close"
+      }
+    },
+    "regimes": {
+      "usd": "SOFTER_USD",
+      "rates": "HIGH_YIELDS_WITH_US_CASH_MARKET_HOLIDAY_STALENESS",
+      "volatility": "LOW_TO_MODERATE_AND_RISING",
+      "energy": "ELEVATED_AND_RISING",
+      "risk": "MIXED_WITH_GEOPOLITICAL_PRESSURE"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-07T23:31:29.065928Z",
+    "material_confidence_adjustment": false,
+    "reason": "No matching ACTIONABLE NI225 context-aware segment was identified; v2 broad confidence calibration for 5-6 directional predictions is KEEP_NEUTRAL and does not override current facts."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 5
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "The upgrade from 1.1% to 1.4% annualised GDP is growth-positive, but it remains below the 1.6% median forecast and reinforces an already very high probability of a near-term BOJ hike. Stronger growth therefore supports domestic fundamentals while tighter-policy and stronger-yen risk can weigh on exporter-heavy Nikkei constituents.",
+      "invalidation": "A clear post-release move to weaker yen and lower Japanese rate-hike expectations would shift the balance toward upside; a sharp yen rally with rising JGB yields would shift it toward downside."
+    }
+  ],
+  "source_summary": "Japan Q2 2026 GDP was revised to 1.4% annualised from 1.1%; q/q growth was 0.4%, matching the median forecast. Capital expenditure was less weak than first estimated, while private consumption was flat."
+}
