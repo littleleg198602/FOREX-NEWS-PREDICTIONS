@@ -1,0 +1,122 @@
+{
+  "prediction_id": "ff-1416875-german-exports-july-2026",
+  "event_id": "forex_factory_1416875",
+  "created_at_utc": "2026-09-08T06:38:57Z",
+  "event_time_utc": "2026-09-08T06:08:00Z",
+  "published_at_utc": "2026-09-08T06:08:00Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GERMANY", "TRADE", "MACRO"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "platform": "Forex Factory",
+    "source_url": "https://www.forexfactory.com/news/1416875-german-exports-in-july-2026-08-on-june",
+    "headline": "German exports in July 2026: -0.8% on June 2026",
+    "source_time_text": "Sep 8, 8:08am",
+    "observed_at_utc": "2026-09-08T06:38:57Z",
+    "time_source": "forex_factory_absolute",
+    "time_is_derived": false,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60,
+    "source_timezone": "Europe/Budapest"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.84,
+        "timestamp_utc": "2026-09-08T06:38:57Z",
+        "direction": "DOWN",
+        "regime": "SOFTENING",
+        "source": "Reuters current Asia-market report",
+        "freshness": "current_snapshot_reported_during_run"
+      },
+      "US2Y": {
+        "value": 4.363,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T06:38:57Z",
+        "direction": "DOWN",
+        "regime": "HIGH_YIELD_EASING_SLIGHTLY",
+        "source": "WSJ Asian Treasury market report",
+        "freshness": "current_snapshot_reported_during_run"
+      },
+      "US10Y": {
+        "value": 4.779,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T06:38:57Z",
+        "direction": "DOWN",
+        "regime": "HIGH_YIELD_EASING_SLIGHTLY",
+        "source": "WSJ Asian Treasury market report",
+        "freshness": "current_snapshot_reported_during_run"
+      },
+      "VIX": {
+        "value": 14.53,
+        "timestamp_utc": "2026-09-05T20:00:00Z",
+        "direction": "MIXED",
+        "regime": "LOW_VOLATILITY_LAST_CLOSE",
+        "source": "latest available VIX close report",
+        "freshness": "stale_last_close_market_closed_or_no_new_print"
+      },
+      "WTI": {
+        "value": 92.92,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T06:38:57Z",
+        "direction": "UP",
+        "regime": "ELEVATED_RISING",
+        "source": "Reuters current oil-market report",
+        "freshness": "current_snapshot_reported_during_run"
+      },
+      "BRENT": {
+        "value": 97.49,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T06:38:57Z",
+        "direction": "UP",
+        "regime": "ELEVATED_RISING",
+        "source": "Reuters current oil-market report",
+        "freshness": "current_snapshot_reported_during_run"
+      }
+    },
+    "regimes": {
+      "usd": "SOFTENING",
+      "rates": "HIGH_BUT_EASING_SLIGHTLY",
+      "risk": "CAUTIOUS_MIXED",
+      "energy": "ELEVATED_RISING",
+      "macro": "GERMAN_TRADE_SIGNAL_MIXED"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-08T05:42:42.829705+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No applicable ACTIONABLE v2 segment was identified that justified a material confidence change; current facts and pre-prediction context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "German exports fell 0.8% month-on-month, which is mildly negative for cyclicals, but imports fell much more sharply and exports remained 6.1% above a year earlier, leaving the net equity signal mixed rather than clearly bearish.",
+      "invalidation": "A clear DAX breakout driven by stronger European risk appetite or a broad risk-off move that overwhelms the mixed trade-data signal."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "Germany's weaker monthly exports are a modest drag on the euro-area cyclical outlook, but the stronger trade surplus and positive year-on-year export growth limit directional conviction for the broader Euro Stoxx 50.",
+      "invalidation": "A strong directional European equity move caused by ECB repricing, energy prices or geopolitics that dominates the low-impact trade release."
+    }
+  ]
+}
