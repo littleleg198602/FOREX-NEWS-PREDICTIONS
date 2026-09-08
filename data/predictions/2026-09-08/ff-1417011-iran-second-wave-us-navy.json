@@ -1,0 +1,56 @@
+{
+  "prediction_id": "ff-1417011-iran-second-wave-us-navy",
+  "event_id": "forex_factory_1417011",
+  "created_at_utc": "2026-09-08T21:02:25Z",
+  "event_time_utc": "2026-09-08T20:20:25Z",
+  "published_at_utc": "2026-09-08T20:20:25Z",
+  "source_time_text": "42 min ago",
+  "observed_at_utc": "2026-09-08T21:02:25Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "iran_us_conflict", "oil_supply_risk", "risk_off"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417011-iran-launched-undisclosed-second-wave-of-attacks-on",
+    "headline": "Iran Launched Undisclosed Second Wave of Attacks on U.S. Navy Ships, Sources Say - WSJ"
+  },
+  "market_context_at_prediction": {
+    "observed_at_utc": "2026-09-08T21:02:25Z",
+    "series": {
+      "DXY": {"value": 98.905, "timestamp_utc": "2026-09-08T21:02:25Z", "direction": "DOWN", "regime": "WEAKENING", "source": "Trading Economics", "freshness": "current/same-day quote"},
+      "US2Y": {"value": 4.402, "unit": "percent", "timestamp_utc": "2026-09-08T21:02:25Z", "direction": "UP", "regime": "HIGH_RISING", "source": "Trading Economics", "freshness": "current/same-day quote"},
+      "US10Y": {"value": 4.801, "unit": "percent", "timestamp_utc": "2026-09-08T21:02:25Z", "direction": "UP", "regime": "HIGH_RISING", "source": "Trading Economics", "freshness": "current/same-day quote"},
+      "VIX": {"value": 15.68, "timestamp_utc": "2026-09-08T21:02:25Z", "direction": "UP", "regime": "RISING_BUT_SUB20", "source": "Barron's/Cboe market report", "freshness": "same-day market reading"},
+      "WTI": {"value": 92.33, "unit": "USD/bbl", "timestamp_utc": "2026-09-08T21:02:25Z", "direction": "UP", "regime": "ELEVATED_RISING", "source": "Trading Economics", "freshness": "current/same-day quote"},
+      "BRENT": {"value": 97.413, "unit": "USD/bbl", "timestamp_utc": "2026-09-08T21:02:25Z", "direction": "UP", "regime": "NEAR_100_RISING", "source": "Trading Economics", "freshness": "current/same-day quote"}
+    },
+    "regimes": {
+      "usd": "weakening",
+      "rates": "high_and_rising",
+      "volatility": "rising_but_moderate",
+      "oil": "elevated_and_rising",
+      "risk": "risk_off"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "material_confidence_adjustment": false,
+    "reason": "No applicable ACTIONABLE context-aware v2 segment was used to alter confidence; current facts and pre-prediction context dominate."
+  },
+  "predictions": [
+    {"instrument":"XAUUSD","immediate":{"direction":"UP","confidence":6},"next_session":{"direction":"UP","confidence":5},"mechanism":"Renewed direct attacks on U.S. naval assets raise geopolitical and oil-supply risk while a softer DXY supports gold.","invalidation":"Confirmed de-escalation, no follow-on military response, and a sharp reversal lower in crude risk premium."},
+    {"instrument":"GDAXI","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Europe is sensitive to an energy-price shock; near-$100 Brent and rising yields pressure cyclicals and valuations.","invalidation":"Rapid de-escalation and material decline in Brent and sovereign yields."},
+    {"instrument":"STOXX50","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Energy inflation and geopolitical risk weigh on broad euro-area equities.","invalidation":"Rapid de-escalation and material decline in Brent and yields."},
+    {"instrument":"SP500","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Higher oil, rising Treasury yields and renewed military escalation reinforce risk-off pressure.","invalidation":"No U.S. retaliation plus a sharp decline in oil and Treasury yields."},
+    {"instrument":"NDX","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Growth equities remain vulnerable to high/rising yields and geopolitical risk premium.","invalidation":"Treasury yields and oil reverse lower while conflict risk fades."},
+    {"instrument":"WS30","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Industrial and cyclical exposure is vulnerable to a renewed oil shock and geopolitical escalation.","invalidation":"De-escalation and a sustained reversal lower in crude prices."},
+    {"instrument":"XAGUSD","immediate":{"direction":"MIXED","confidence":4},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"Safe-haven demand is supportive, but silver's industrial sensitivity and high yields offset part of that benefit.","invalidation":"A decisive move in either risk appetite or yields that resolves the competing drivers."}
+  ]
+}
