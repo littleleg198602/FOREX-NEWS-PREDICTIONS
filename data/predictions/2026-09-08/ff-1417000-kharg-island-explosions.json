@@ -1,0 +1,143 @@
+{
+  "prediction_id": "ff-1417000-kharg-island-explosions",
+  "event_id": "ff-1417000",
+  "created_at_utc": "2026-09-08T19:20:34Z",
+  "event_time_utc": "2026-09-08T19:15:34Z",
+  "published_at_utc": "2026-09-08T19:15:34Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "IRAN", "ENERGY_RISK", "HIGH_IMPACT_BREAKING"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "headline": "Several Explosions Were Heard On Kharg Island - Mehr",
+    "url": "https://www.forexfactory.com/news/1417000-several-explosions-were-heard-on-kharg-island",
+    "source_time_text": "5 min ago",
+    "observed_at_utc": "2026-09-08T19:20:34Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.856,
+        "timestamp_utc": "2026-09-08T18:00:00Z",
+        "direction": "DOWN",
+        "regime": "softening_intraday",
+        "source": "The Daily DXY intraday quote",
+        "freshness_seconds": 4834
+      },
+      "US2Y": {
+        "value": 4.402,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T19:20:34Z",
+        "direction": "UP",
+        "regime": "elevated_slightly_rising",
+        "source": "Trading Economics current US 2Y quote observed at prediction time",
+        "freshness_seconds": 0
+      },
+      "US10Y": {
+        "value": 4.789,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T19:20:34Z",
+        "direction": "UP",
+        "regime": "high_and_rising",
+        "source": "MarketWatch intraday Treasury quote observed at prediction time",
+        "freshness_seconds": 0
+      },
+      "VIX": {
+        "value": 15.68,
+        "timestamp_utc": "2026-09-08T19:20:34Z",
+        "direction": "UP",
+        "regime": "rising_but_subdued",
+        "source": "Barron's intraday VIX quote observed at prediction time",
+        "freshness_seconds": 0
+      },
+      "WTI": {
+        "value": 93.41,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T19:20:34Z",
+        "direction": "UP",
+        "regime": "geopolitical_risk_premium_high",
+        "source": "Barron's intraday oil quote observed at prediction time",
+        "freshness_seconds": 0
+      },
+      "BRENT": {
+        "value": 98.29,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T19:20:34Z",
+        "direction": "UP",
+        "regime": "near_100_geopolitical_risk",
+        "source": "Barron's intraday oil quote observed at prediction time",
+        "freshness_seconds": 0
+      }
+    },
+    "regimes": {
+      "rates": "restrictive_high_yields",
+      "risk": "risk_off_but_vix_subdued",
+      "energy": "high_and_rising",
+      "usd": "softening"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-08T18:43:23.976535+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "Current leakage-safe v2 profile contains ACTIONABLE calibration segments but no sufficiently specific context-aware segment was used to override the current high-impact geopolitical facts; confidence is therefore based on live event severity and pre-prediction context."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 7},
+      "next_session": {"direction": "UP", "confidence": 6},
+      "mechanism": "Explosions reported on Kharg Island, a strategic Iranian oil-export hub, materially raise escalation and energy-supply risk. With Brent already near $100 and DXY softer, safe-haven demand is supportive for gold.",
+      "invalidation": "A verified non-military cause with no damage to oil-export infrastructure, rapid de-escalation, or a sharp reversal lower in crude would weaken the upside case."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Safe-haven demand and a softer dollar support silver, but its industrial sensitivity and high Treasury yields cap conviction versus gold.",
+      "invalidation": "A benign explanation for the explosions or a broad risk-on reversal with rising DXY would neutralize the upside bias."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "A fresh threat to Gulf oil infrastructure increases the probability of higher energy costs and inflation, a comparatively strong headwind for European cyclicals and German industry.",
+      "invalidation": "Confirmation of no material infrastructure damage together with a sharp decline in Brent would weaken the bearish case."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Escalating Gulf energy risk raises input costs and geopolitical risk premia for European equities while yields remain elevated.",
+      "invalidation": "A benign cause, no export disruption and falling oil prices would remove the principal downside channel."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A possible escalation around a major Iranian oil hub adds inflation and risk-off pressure while US Treasury yields are already high, offset partly by gains in energy shares.",
+      "invalidation": "No confirmed damage, falling crude and easing Treasury yields would neutralize the downside bias."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher geopolitical and energy inflation risk can keep long yields elevated, creating a valuation headwind for duration-sensitive technology shares.",
+      "invalidation": "A quick de-escalation accompanied by lower oil and US10Y would invalidate the bearish setup."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The Dow is exposed to cyclical risk from an oil-driven inflation shock, although energy constituents partly cushion the index.",
+      "invalidation": "A benign event outcome and reversal in crude would reduce the downside pressure."
+    }
+  ]
+}
