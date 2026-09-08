@@ -1,0 +1,149 @@
+{
+  "prediction_id": "ff-1417049-canada-additional-duties-scope",
+  "event_id": "ff-1417049",
+  "created_at_utc": "2026-09-08T23:23:39Z",
+  "event_time_utc": "2026-09-08T22:53:00Z",
+  "published_at_utc": "2026-09-08T22:53:00Z",
+  "source_time_text": "Sep 8, 11:53pm",
+  "observed_at_utc": "2026-09-08T23:23:39Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_timezone": "Europe/London (BST, UTC+1)",
+  "source_url": "https://www.forexfactory.com/news/1417049-modifying-the-scope-of-products-of-canada-subject",
+  "headline": "Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "trade_policy",
+    "tariffs",
+    "US_Canada"
+  ],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.905,
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "DOWN",
+        "regime": "weakening",
+        "source": "Trading Economics current snapshot",
+        "freshness": "current_page_snapshot",
+        "freshness_seconds": 0
+      },
+      "US2Y": {
+        "value": 4.402,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "high_rising",
+        "source": "Trading Economics September 8 daily market quote",
+        "freshness": "same_session_daily_quote",
+        "freshness_seconds": 0
+      },
+      "US10Y": {
+        "value": 4.80,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "high_rising",
+        "source": "Trading Economics September 8 daily market quote",
+        "freshness": "same_session_daily_quote",
+        "freshness_seconds": 0
+      },
+      "VIX": {
+        "value": 15.77,
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "rising_below_20",
+        "source": "US market close snapshot via Yahoo Finance market data",
+        "freshness": "same_day_us_close",
+        "freshness_seconds": 12219
+      },
+      "WTI": {
+        "value": 92.318,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "elevated",
+        "source": "Trading Economics current snapshot",
+        "freshness": "current_page_snapshot",
+        "freshness_seconds": 0
+      },
+      "BRENT": {
+        "value": 97.468,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T23:23:39Z",
+        "direction": "UP",
+        "regime": "elevated_near_100",
+        "source": "Trading Economics current snapshot",
+        "freshness": "current_page_snapshot",
+        "freshness_seconds": 0
+      }
+    },
+    "regimes": {
+      "usd": "weakening",
+      "rates": "high_rising",
+      "volatility": "rising_below_20",
+      "oil": "elevated_near_100",
+      "risk": "cautious_risk_off"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "WS30",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "Broader US-Canada tariff pressure raises cost and policy uncertainty for industrial, auto and cyclical companies, with already-high yields and oil amplifying the drag.",
+      "invalidation": "A rapid US-Canada exemption, rollback or negotiated reciprocity deal that materially narrows the announced measures."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "Additional tariff scope adds trade-policy uncertainty and potential input-cost pressure while US yields and oil remain elevated.",
+      "invalidation": "A prompt exemption or de-escalation that removes the incremental tariff burden."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "The direct tariff exposure is less concentrated in mega-cap technology, leaving the index caught between broader risk-off pressure and sector-specific resilience.",
+      "invalidation": "A broad risk-on move driven by tariff de-escalation and falling yields."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "Incremental trade friction can support safe-haven demand and the softer DXY helps, but high Treasury yields cap conviction.",
+      "invalidation": "A quick trade-policy rollback combined with firmer DXY and/or higher real yields."
+    }
+  ]
+}
