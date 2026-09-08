@@ -1,0 +1,51 @@
+{
+  "prediction_id": "ff-1417028-us-consumer-credit-july-2026",
+  "event_id": "forex_factory_1417028",
+  "created_at_utc": "2026-09-08T21:42:17Z",
+  "event_time_utc": "2026-09-08T21:03:00Z",
+  "published_at_utc": "2026-09-08T21:03:00Z",
+  "source_time_text": "Sep 8, 10:03pm | 39 min ago",
+  "observed_at_utc": "2026-09-08T21:42:17Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["us_macro", "consumer_credit", "rates", "consumer_demand"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417028-consumer-credit-smashes-estimates-as-credit-card-debt",
+    "headline": "Consumer Credit Smashes Estimates As Credit Card Debt Hits New All-Time High"
+  },
+  "market_context_at_prediction": {
+    "observed_at_utc": "2026-09-08T21:42:17Z",
+    "series": {
+      "DXY": {"value": 98.989, "timestamp_utc": "2026-09-08T21:29:00Z", "direction": "DOWN", "regime": "WEAKENING", "source": "WSJ/Dow Jones Market Data", "freshness": "13 minutes old"},
+      "US2Y": {"value": 4.396, "unit": "percent", "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "HIGH_RISING", "source": "WSJ/Tradeweb", "freshness": "29 minutes old"},
+      "US10Y": {"value": 4.802, "unit": "percent", "timestamp_utc": "2026-09-08T21:29:00Z", "direction": "UP", "regime": "HIGH_RISING", "source": "WSJ/Tradeweb", "freshness": "13 minutes old"},
+      "VIX": {"value": 15.68, "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "RISING_BUT_SUB20", "source": "Barron's/Cboe market report", "freshness": "same-day market reading, about 29 minutes old"},
+      "WTI": {"value": 93.03, "unit": "USD/bbl", "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "ELEVATED_RISING", "source": "Reuters/NYMEX settlement report", "freshness": "same-day settlement, about 29 minutes old"},
+      "BRENT": {"value": 97.92, "unit": "USD/bbl", "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "NEAR_100_RISING", "source": "Reuters/ICE market report", "freshness": "same-day market reading, about 29 minutes old"}
+    },
+    "regimes": {
+      "usd": "weakening",
+      "rates": "high_and_rising",
+      "volatility": "rising_but_moderate",
+      "oil": "elevated_and_rising",
+      "risk": "risk_off"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "material_confidence_adjustment": false,
+    "reason": "No applicable ACTIONABLE context-aware v2 segment was identified for this consumer-credit setup; current facts and pre-prediction context dominate."
+  },
+  "predictions": [
+    {"instrument":"NDX","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"Consumer credit rose $18.1B versus roughly $11.7B expected, reinforcing resilient demand while Treasury yields are already high; the resulting rate-pressure channel is most relevant to long-duration technology valuations.","invalidation":"A rapid fall in Treasury yields or evidence that the credit increase reflects one-off refinancing rather than sustained demand."},
+    {"instrument":"SP500","immediate":{"direction":"MIXED","confidence":3},"next_session":{"direction":"MIXED","confidence":3},"mechanism":"Stronger credit growth supports near-term consumption but can also keep inflation and rate concerns elevated, leaving a mixed broad-index impulse.","invalidation":"A decisive rates move lower would tilt the balance positive; a renewed yield spike would tilt it negative."}
+  ]
+}
