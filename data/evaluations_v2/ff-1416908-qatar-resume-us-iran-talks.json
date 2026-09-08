@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T11:24:48+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T11:24:48+00:00",
   "prediction_latency_seconds": 2880.0,
-  "evaluated_at_utc": "2026-09-08T11:27:41.386077+00:00",
+  "evaluated_at_utc": "2026-09-08T12:30:53.088451+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -94,108 +94,153 @@
     {
       "prediction_id": "ff-1416908-qatar-resume-us-iran-talks",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4444.39990234375,
-      "reference_price_time_utc": "2026-09-08T11:18:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T11:17:00+00:00",
+      "reference_price": 4444.10009765625,
+      "reference_price_time_utc": "2026-09-08T11:24:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T11:23:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 6.8,
+      "reference_age_minutes": 0.8,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T11:39:48+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T11:39:48+00:00",
+          "actual_price_time_utc": "2026-09-08T11:40:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T11:39:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 4449.2998046875,
+          "change_pct": 0.117002,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.238521,
+          "post_event_range_pct": 0.184508,
+          "mfe_pct": -0.002252,
+          "mae_pct": -0.18676,
+          "directional_threshold_pct": 0.023852,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T12:24:48+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T15:24:48+00:00"
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-08T12:24:48+00:00",
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:24:48+00:00"
         }
       }
     },
     {
       "prediction_id": "ff-1416908-qatar-resume-us-iran-talks",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25955.400390625,
-      "reference_price_time_utc": "2026-09-08T11:13:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T11:12:00+00:00",
+      "reference_price": 25974.5703125,
+      "reference_price_time_utc": "2026-09-08T11:24:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T11:23:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.8,
+      "reference_age_minutes": 0.8,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T11:39:48+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T11:39:48+00:00",
+          "actual_price_time_utc": "2026-09-08T11:40:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T11:39:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 25963.41015625,
+          "change_pct": -0.042966,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.139597,
+          "post_event_range_pct": 0.068532,
+          "mfe_pct": 0.011783,
+          "mae_pct": -0.056749,
+          "directional_threshold_pct": 0.01396,
+          "actual_direction_thresholded": "DOWN"
         },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T12:24:48+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T15:24:48+00:00"
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-08T12:24:48+00:00",
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:24:48+00:00"
         }
       }
     },
     {
       "prediction_id": "ff-1416908-qatar-resume-us-iran-talks",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6394.89013671875,
-      "reference_price_time_utc": "2026-09-08T11:13:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T11:12:00+00:00",
+      "reference_price": 6404.18017578125,
+      "reference_price_time_utc": "2026-09-08T11:24:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T11:23:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.8,
+      "reference_age_minutes": 0.8,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T11:39:48+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T11:39:48+00:00",
+          "actual_price_time_utc": "2026-09-08T11:40:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T11:39:00+00:00",
+          "market_delay_minutes": 0.2,
+          "price": 6402.75,
+          "change_pct": -0.022332,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.160204,
+          "post_event_range_pct": 0.060584,
+          "mfe_pct": 0.021547,
+          "mae_pct": -0.039037,
+          "directional_threshold_pct": 0.01602,
+          "actual_direction_thresholded": "DOWN"
         },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T12:24:48+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T15:24:48+00:00"
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-08T12:24:48+00:00",
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:24:48+00:00"
         }
       }
     },
@@ -217,21 +262,25 @@
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T11:39:48+00:00"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T11:39:48+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 5210.8
         },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T12:24:48+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T15:24:48+00:00"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T12:24:48+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 5210.8
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:24:48+00:00"
         }
       }
     },
@@ -253,21 +302,25 @@
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T11:39:48+00:00"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T11:39:48+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 5167.8
         },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T12:24:48+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T15:24:48+00:00"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T12:24:48+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 5167.8
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:24:48+00:00"
         }
       }
     }
