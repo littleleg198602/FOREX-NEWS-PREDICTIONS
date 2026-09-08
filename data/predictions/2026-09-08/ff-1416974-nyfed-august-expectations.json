@@ -1,0 +1,69 @@
+{
+  "prediction_id": "ff-1416974-nyfed-august-expectations",
+  "event_id": "ff-1416974",
+  "created_at_utc": "2026-09-08T15:25:40Z",
+  "event_time_utc": "2026-09-08T15:15:59Z",
+  "published_at_utc": "2026-09-08T15:15:59Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US_MACRO", "INFLATION_EXPECTATIONS", "LABOR_MARKET"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "headline": "US Medium-Term Inflation Expectations Tick Down; Unemployment Expectations Deteriorate",
+    "url": "https://www.forexfactory.com/news/1416974-us-medium-term-inflation-expectations-tick-down-unemployment-expectations",
+    "source_time_text": "9 min ago",
+    "observed_at_utc": "2026-09-08T15:24:59Z",
+    "time_source": "forex_factory_relative",
+    "time_is_derived": true,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.989, "timestamp_utc": "2026-09-08T10:14:00Z", "direction": "DOWN", "regime": "softening_intraday", "source": "WSJ/Tradeweb market update", "freshness_seconds": 18640},
+      "US2Y": {"value": 4.363, "unit": "percent", "timestamp_utc": "2026-09-08T08:00:00Z", "direction": "DOWN", "regime": "elevated_but_easing", "source": "Barron's/Tradeweb intraday update", "freshness_seconds": 26740},
+      "US10Y": {"value": 4.802, "unit": "percent", "timestamp_utc": "2026-09-08T10:14:00Z", "direction": "UP", "regime": "high_and_rising", "source": "WSJ/Tradeweb market update", "freshness_seconds": 18640},
+      "VIX": {"value": 15.68, "timestamp_utc": "2026-09-08T14:30:00Z", "direction": "UP", "regime": "rising_but_subdued", "source": "Barron's intraday market coverage", "freshness_seconds": 3340},
+      "WTI": {"value": 93.41, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-08T14:30:00Z", "direction": "UP", "regime": "geopolitical_risk_premium_high", "source": "Barron's intraday market coverage", "freshness_seconds": 3340},
+      "BRENT": {"value": 98.29, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-08T14:30:00Z", "direction": "UP", "regime": "near_100_geopolitical_risk", "source": "Barron's intraday market coverage", "freshness_seconds": 3340}
+    },
+    "regimes": {
+      "rates": "restrictive_high_yields",
+      "risk": "mild_risk_off",
+      "energy": "high_and_rising",
+      "usd": "mixed_to_soft"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-08T14:34:32.725737+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No directly matching ACTIONABLE v2 context segment was used to override current facts; relevant generic calibration was kept neutral."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Slightly lower medium-term inflation expectations are marginally dovish, but the deterioration in unemployment expectations is growth-negative and current oil and Treasury-yield pressure offsets a clean risk-on read.",
+      "invalidation": "A decisive move lower in Treasury yields and oil would tilt the signal bullish; a renewed jump in yields or energy would tilt it bearish."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lower three-year inflation expectations can support duration-sensitive growth stocks, but elevated long yields and oil-driven inflation risk prevent a clean upside call.",
+      "invalidation": "A sustained drop in US10Y would favor upside; a break higher in US10Y with oil near or above $100 would favor downside."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "The deterioration in unemployment and job-finding expectations is mildly negative for more cyclical large-cap exposure, while the inflation signal is not dovish enough to fully offset it.",
+      "invalidation": "A broad risk-on reversal led by falling yields and energy prices would neutralize the mild downside bias."
+    }
+  ]
+}
