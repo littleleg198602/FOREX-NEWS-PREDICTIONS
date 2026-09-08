@@ -1,0 +1,129 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260908T043005Z_nab_business_confidence_august_2026",
+  "event_id": "forex_factory_1416860",
+  "event_time_utc": "2026-09-08T03:56:04+00:00",
+  "prediction_time_utc": "2026-09-08T04:30:05+00:00",
+  "evaluation_anchor_time_utc": "2026-09-08T04:30:05+00:00",
+  "prediction_latency_seconds": 2041.0,
+  "evaluated_at_utc": "2026-09-08T04:33:30.075648+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "AUSTRALIA",
+    "BUSINESS_CONFIDENCE",
+    "MACRO"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.8,
+        "timestamp_utc": "2026-09-08T02:21:00Z",
+        "short_term_direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Investing.com technical snapshot / current-day DXY reference",
+        "freshness": "same_session_delayed_snapshot"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "US Treasury latest completed cash-market close",
+        "freshness": "stale_due_us_labor_day_holiday"
+      },
+      "US10Y": {
+        "value": 4.781,
+        "timestamp_utc": "2026-09-08T02:17:00Z",
+        "short_term_direction": "DOWN",
+        "regime": "FALLING",
+        "source": "current-day market snapshot",
+        "freshness": "same_session_delayed_snapshot"
+      },
+      "VIX": {
+        "value": 15.3,
+        "timestamp_utc": "2026-09-08T02:42:00Z",
+        "short_term_direction": "DOWN",
+        "regime": "LOW",
+        "source": "current-day VIX snapshot",
+        "freshness": "same_session_delayed_snapshot"
+      },
+      "WTI": {
+        "value": 92.92,
+        "timestamp_utc": "2026-09-08T04:20:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters current Asia-session oil report",
+        "freshness": "recent_same_session"
+      },
+      "BRENT": {
+        "value": 97.49,
+        "timestamp_utc": "2026-09-08T04:20:00Z",
+        "short_term_direction": "UP",
+        "regime": "UNKNOWN",
+        "source": "Reuters current Asia-session oil report",
+        "freshness": "recent_same_session"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260908T043005Z_nab_business_confidence_august_2026",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8944.2998046875,
+      "reference_price_time_utc": "2026-09-08T04:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T04:13:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 16.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T04:45:05+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T05:30:05+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T08:30:05+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
