@@ -1,0 +1,135 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260908T053950Z_uk_brc_retail_sales_august_2026",
+  "event_id": "ff_1416831_uk_brc_retail_sales_august_2026",
+  "event_time_utc": "2026-09-08T04:04:50+00:00",
+  "prediction_time_utc": "2026-09-08T05:39:50+00:00",
+  "evaluation_anchor_time_utc": "2026-09-08T05:39:50+00:00",
+  "prediction_latency_seconds": 5700.0,
+  "evaluated_at_utc": "2026-09-08T05:42:41.912296+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "UK",
+    "RETAIL_SALES",
+    "MACRO"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.8,
+        "timestamp_utc": "2026-09-08T04:33:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Times of India market report / observed via web",
+        "freshness_seconds": 4010,
+        "note": "Report stated DXY 98.80, down 0.37%."
+      },
+      "US2Y": {
+        "value": 4.379,
+        "timestamp_utc": "2026-09-08T05:39:50Z",
+        "direction": "FLAT",
+        "regime": "FLAT",
+        "source": "Investing.com page observed at prediction time",
+        "freshness_seconds": 0,
+        "note": "Page showed 4.379 and 0.00%; exchange timestamp on the page was not reliably date-resolved."
+      },
+      "US10Y": {
+        "value": 4.787,
+        "timestamp_utc": "2026-09-08T05:39:50Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com page observed at prediction time",
+        "freshness_seconds": 0,
+        "note": "Page showed 4.787, +0.003 (+0.06%)."
+      },
+      "VIX": {
+        "value": 15.3,
+        "timestamp_utc": "2026-09-08T05:39:50Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Investing.com page observed at prediction time",
+        "freshness_seconds": null,
+        "note": "Latest displayed VIX was 15.30, +5.30%; US cash market context is delayed around the prior US holiday/session."
+      },
+      "WTI": {
+        "value": 92.34,
+        "timestamp_utc": "2026-09-08T05:39:50Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com page observed at prediction time",
+        "freshness_seconds": 0,
+        "note": "WTI futures displayed 92.34, +0.94%."
+      },
+      "BRENT": {
+        "value": 96.97,
+        "timestamp_utc": "2026-09-08T05:39:50Z",
+        "direction": "MIXED",
+        "regime": "FLAT",
+        "source": "Investing.com page observed at prediction time; cross-checked with a same-day report near 97.61",
+        "freshness_seconds": 0,
+        "note": "Brent remained near the upper-90s; same-day sources differed modestly by observation time/feed."
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "FLAT"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260908T053950Z_uk_brc_retail_sales_august_2026",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10822.13,
+      "reference_price_time_utc": "2026-09-07T15:36:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-07T15:35:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 843.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T05:54:50+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T06:39:50+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T09:39:50+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}

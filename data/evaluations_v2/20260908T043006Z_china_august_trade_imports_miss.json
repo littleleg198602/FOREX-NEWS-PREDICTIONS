@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T04:30:06+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T04:30:06+00:00",
   "prediction_latency_seconds": 5162.0,
-  "evaluated_at_utc": "2026-09-08T04:38:56.726241+00:00",
+  "evaluated_at_utc": "2026-09-08T05:42:41.795415+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -93,36 +93,51 @@
     {
       "prediction_id": "20260908T043006Z_china_august_trade_imports_miss",
       "instrument": "AUS200",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^AXJO",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 8941.7001953125,
-      "reference_price_time_utc": "2026-09-08T04:19:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T04:18:00+00:00",
+      "reference_price": 8940.099609375,
+      "reference_price_time_utc": "2026-09-08T04:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T04:29:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.1,
+      "reference_age_minutes": 0.1,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T08:30:06+00:00"
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T04:45:06+00:00",
+          "actual_price_time_utc": "2026-09-08T04:46:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T04:45:00+00:00",
+          "market_delay_minutes": 0.9,
+          "price": 8942.7998046875,
+          "change_pct": 0.030203,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.06376,
+          "post_event_range_pct": 0.097317,
+          "mfe_pct": 0.054803,
+          "mae_pct": -0.042514,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "UP"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-08T05:30:06+00:00",
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
         },
-        "15m": {
+        "4h": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T04:45:06+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-08T05:30:06+00:00"
+          "target_time_utc": "2026-09-08T08:30:06+00:00"
         }
       }
     }
