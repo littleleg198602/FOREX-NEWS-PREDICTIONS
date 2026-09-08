@@ -1,0 +1,169 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1416973-bessent-canada-trade-spat",
+  "event_id": "ff-1416973",
+  "event_time_utc": "2026-09-08T15:07:59+00:00",
+  "prediction_time_utc": "2026-09-08T15:26:25+00:00",
+  "evaluation_anchor_time_utc": "2026-09-08T15:26:25+00:00",
+  "prediction_latency_seconds": 1106.0,
+  "evaluated_at_utc": "2026-09-08T15:30:47.734593+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "TRADE_POLICY",
+    "USA_CANADA",
+    "RISK_SENTIMENT"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.989,
+        "timestamp_utc": "2026-09-08T10:14:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ/Tradeweb market update",
+        "freshness_seconds": 18785
+      },
+      "US2Y": {
+        "value": 4.363,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T08:00:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Barron's/Tradeweb intraday update",
+        "freshness_seconds": 26885
+      },
+      "US10Y": {
+        "value": 4.802,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T10:14:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "WSJ/Tradeweb market update",
+        "freshness_seconds": 18785
+      },
+      "VIX": {
+        "value": 15.68,
+        "timestamp_utc": "2026-09-08T14:30:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Barron's intraday market coverage",
+        "freshness_seconds": 3385
+      },
+      "WTI": {
+        "value": 93.41,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T14:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Barron's intraday market coverage",
+        "freshness_seconds": 3385
+      },
+      "BRENT": {
+        "value": 98.29,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T14:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Barron's intraday market coverage",
+        "freshness_seconds": 3385
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FALLING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1416973-bessent-canada-trade-spat",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52877.37890625,
+      "reference_price_time_utc": "2026-09-08T15:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T15:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.417,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:41:25+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T16:26:25+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T19:26:25+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1416973-bessent-canada-trade-spat",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7695.81982421875,
+      "reference_price_time_utc": "2026-09-08T15:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T15:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.417,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:41:25+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T16:26:25+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T19:26:25+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
