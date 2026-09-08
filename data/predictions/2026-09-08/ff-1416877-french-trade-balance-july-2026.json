@@ -1,0 +1,122 @@
+{
+  "prediction_id": "ff-1416877-french-trade-balance-july-2026",
+  "event_id": "forex_factory_1416877",
+  "created_at_utc": "2026-09-08T07:33:34Z",
+  "event_time_utc": "2026-09-08T06:57:00Z",
+  "published_at_utc": "2026-09-08T06:57:00Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["FRANCE", "TRADE", "MACRO"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "platform": "Forex Factory",
+    "source_url": "https://www.forexfactory.com/news/1416877-french-trade-balance-is-deteriorating-due-to-an",
+    "headline": "French trade balance is deteriorating due to an increase in imports",
+    "source_time_text": "Sep 7, 11:57pm | 36 min ago",
+    "observed_at_utc": "2026-09-08T07:33:34Z",
+    "time_source": "forex_factory_absolute",
+    "time_is_derived": false,
+    "time_precision_seconds": 60,
+    "time_uncertainty_seconds": 60,
+    "source_timezone": "America/Los_Angeles"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.8,
+        "timestamp_utc": "2026-09-08T07:33:34Z",
+        "direction": "DOWN",
+        "regime": "SOFTENING",
+        "source": "current Asia-market reference snapshot",
+        "freshness": "current_snapshot_reported_during_run"
+      },
+      "US2Y": {
+        "value": 4.37,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-04T19:30:00Z",
+        "direction": "MIXED",
+        "regime": "HIGH_YIELD",
+        "source": "latest reliable Treasury rate snapshot available during run",
+        "freshness": "stale_latest_reliable_snapshot"
+      },
+      "US10Y": {
+        "value": 4.788,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T07:33:34Z",
+        "direction": "UP",
+        "regime": "HIGH_YIELD_RISING",
+        "source": "Reuters current global-markets report",
+        "freshness": "current_snapshot_reported_during_run"
+      },
+      "VIX": {
+        "value": 14.53,
+        "timestamp_utc": "2026-09-05T20:00:00Z",
+        "direction": "MIXED",
+        "regime": "LOW_VOLATILITY_LAST_CLOSE",
+        "source": "latest available VIX close report",
+        "freshness": "stale_last_close_market_closed_or_no_new_spot_print"
+      },
+      "WTI": {
+        "value": 93.70,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T07:33:34Z",
+        "direction": "UP",
+        "regime": "ELEVATED_RISING",
+        "source": "Reuters current oil-market report",
+        "freshness": "current_snapshot_reported_during_run"
+      },
+      "BRENT": {
+        "value": 98.25,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-08T07:33:34Z",
+        "direction": "UP",
+        "regime": "ELEVATED_RISING",
+        "source": "Reuters current oil-market report",
+        "freshness": "current_snapshot_reported_during_run"
+      }
+    },
+    "regimes": {
+      "usd": "SOFTENING",
+      "rates": "HIGH",
+      "risk": "CAUTIOUS_MIXED",
+      "energy": "ELEVATED_RISING",
+      "macro": "FRENCH_TRADE_BALANCE_DETERIORATING_LOW_IMPACT"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-08T06:42:17.831595+00:00",
+    "material_confidence_adjustment": false,
+    "reason": "No applicable ACTIONABLE v2 context-aware segment justified a material confidence change; current facts and pre-prediction market context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "FCHI40",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "mechanism": "France's July trade deficit widened by EUR0.9bn to EUR6.7bn as imports rose EUR1.1bn while exports increased only EUR0.2bn. The deterioration is a mild negative macro signal for French equities, but the release is low impact and the import increase partly reflects transport-equipment demand, limiting conviction.",
+      "invalidation": "A broad European risk-on move, ECB repricing, or a fall in energy prices that overwhelms the low-impact French trade signal."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 2
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 2
+      },
+      "mechanism": "The weaker French trade balance adds a small drag to the euro-area macro picture, but France is only one component of the index and the release is too low impact to justify a strong directional call for Euro Stoxx 50.",
+      "invalidation": "A stronger directional move in European equities driven by ECB expectations, energy prices, or geopolitics."
+    }
+  ]
+}
