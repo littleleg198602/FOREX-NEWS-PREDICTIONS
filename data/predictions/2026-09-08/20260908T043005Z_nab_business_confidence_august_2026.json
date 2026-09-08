@@ -1,0 +1,43 @@
+{
+  "prediction_id": "20260908T043005Z_nab_business_confidence_august_2026",
+  "event_id": "forex_factory_1416860",
+  "created_at_utc": "2026-09-08T04:30:05Z",
+  "event_time_utc": "2026-09-08T03:56:04Z",
+  "published_at_utc": "2026-09-08T03:56:04Z",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["AUSTRALIA", "BUSINESS_CONFIDENCE", "MACRO"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "NAB Monthly Business Survey, August 2026",
+  "source_url": "https://www.forexfactory.com/news/1416860-nab-monthly-business-survey-august-2026",
+  "source_time_text": "34 min ago",
+  "observed_at_utc": "2026-09-08T04:30:04Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.8, "timestamp_utc": "2026-09-08T02:21:00Z", "short_term_direction": "DOWN", "regime": "SOFTER_USD", "source": "Investing.com technical snapshot / current-day DXY reference", "freshness": "same_session_delayed_snapshot"},
+      "US2Y": {"value": 4.37, "timestamp_utc": "2026-09-04T20:00:00Z", "short_term_direction": "UP", "regime": "HIGH_YIELD", "source": "US Treasury latest completed cash-market close", "freshness": "stale_due_us_labor_day_holiday"},
+      "US10Y": {"value": 4.781, "timestamp_utc": "2026-09-08T02:17:00Z", "short_term_direction": "DOWN", "regime": "HIGH_YIELD", "source": "current-day market snapshot", "freshness": "same_session_delayed_snapshot"},
+      "VIX": {"value": 15.3, "timestamp_utc": "2026-09-08T02:42:00Z", "short_term_direction": "DOWN", "regime": "LOW_TO_MODERATE_VOLATILITY", "source": "current-day VIX snapshot", "freshness": "same_session_delayed_snapshot"},
+      "WTI": {"value": 92.92, "timestamp_utc": "2026-09-08T04:20:00Z", "short_term_direction": "UP", "regime": "ELEVATED_ENERGY_RISK", "source": "Reuters current Asia-session oil report", "freshness": "recent_same_session"},
+      "BRENT": {"value": 97.49, "timestamp_utc": "2026-09-08T04:20:00Z", "short_term_direction": "UP", "regime": "ELEVATED_ENERGY_RISK", "source": "Reuters current Asia-session oil report", "freshness": "recent_same_session"}
+    },
+    "regimes": {"usd": "SOFTER_USD", "rates": "HIGH_YIELDS", "volatility": "LOW_TO_MODERATE_AND_EASING", "energy": "ELEVATED_AND_RISING", "risk": "MIXED_WITH_GEOPOLITICAL_PRESSURE"}
+  },
+  "learning_profile": {"profile_version": "2.0.0", "generated_at_utc": "2026-09-08T01:57:52.389251+00:00", "material_confidence_adjustment": false, "reason": "No matching ACTIONABLE AUS200 context-aware segment was identified; no material v2 learning adjustment was applied."},
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Business confidence fell to -8 and business conditions to -1, signalling softer domestic activity and a near-term headwind for Australian cyclicals, though lower growth can partly offset rate-hike pressure.",
+      "invalidation": "A strong commodity-led rally, better forward orders or a sharp dovish repricing of the RBA would reduce the downside signal."
+    }
+  ],
+  "source_summary": "NAB reported business confidence fell for a second month to -8, well below its long-run average of 5, while business conditions fell 5 points to -1."
+}
