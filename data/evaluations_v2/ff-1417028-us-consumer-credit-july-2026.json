@@ -1,0 +1,170 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417028-us-consumer-credit-july-2026",
+  "event_id": "forex_factory_1417028",
+  "event_time_utc": "2026-09-08T21:03:00+00:00",
+  "prediction_time_utc": "2026-09-08T21:42:17+00:00",
+  "evaluation_anchor_time_utc": "2026-09-08T21:42:17+00:00",
+  "prediction_latency_seconds": 2357.0,
+  "evaluated_at_utc": "2026-09-08T21:47:13.346637+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "us_macro",
+    "consumer_credit",
+    "rates",
+    "consumer_demand"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.989,
+        "timestamp_utc": "2026-09-08T21:29:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "WSJ/Dow Jones Market Data",
+        "freshness": "13 minutes old"
+      },
+      "US2Y": {
+        "value": 4.396,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T21:13:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "WSJ/Tradeweb",
+        "freshness": "29 minutes old"
+      },
+      "US10Y": {
+        "value": 4.802,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-08T21:29:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "WSJ/Tradeweb",
+        "freshness": "13 minutes old"
+      },
+      "VIX": {
+        "value": 15.68,
+        "timestamp_utc": "2026-09-08T21:13:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Barron's/Cboe market report",
+        "freshness": "same-day market reading, about 29 minutes old"
+      },
+      "WTI": {
+        "value": 93.03,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-08T21:13:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/NYMEX settlement report",
+        "freshness": "same-day settlement, about 29 minutes old"
+      },
+      "BRENT": {
+        "value": 97.92,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-08T21:13:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/ICE market report",
+        "freshness": "same-day market reading, about 29 minutes old"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417028-us-consumer-credit-july-2026",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29507.701,
+      "reference_price_time_utc": "2026-09-08T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 25.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T21:57:17+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T22:42:17+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T01:42:17+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417028-us-consumer-credit-july-2026",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7673.52,
+      "reference_price_time_utc": "2026-09-08T21:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T21:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 41.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T21:57:17+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T22:42:17+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T01:42:17+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
