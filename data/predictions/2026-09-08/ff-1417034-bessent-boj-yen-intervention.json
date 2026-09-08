@@ -1,0 +1,50 @@
+{
+  "prediction_id": "ff-1417034-bessent-boj-yen-intervention",
+  "event_id": "forex_factory_1417034",
+  "created_at_utc": "2026-09-08T21:42:17Z",
+  "event_time_utc": "2026-09-08T21:33:00Z",
+  "published_at_utc": "2026-09-08T21:33:00Z",
+  "source_time_text": "Sep 8, 10:33pm | 9 min ago",
+  "observed_at_utc": "2026-09-08T21:42:17Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["boj", "japan", "fx_intervention", "yen", "currency_policy"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417034-bessent-says-he-has-good-insight-into-boj",
+    "headline": "Bessent Says He Has Good Insight Into BOJ And Japanese Policymakers Next Moves, Including On Potential Yen Intervention"
+  },
+  "market_context_at_prediction": {
+    "observed_at_utc": "2026-09-08T21:42:17Z",
+    "series": {
+      "DXY": {"value": 98.989, "timestamp_utc": "2026-09-08T21:29:00Z", "direction": "DOWN", "regime": "WEAKENING", "source": "WSJ/Dow Jones Market Data", "freshness": "13 minutes old"},
+      "US2Y": {"value": 4.396, "unit": "percent", "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "HIGH_RISING", "source": "WSJ/Tradeweb", "freshness": "29 minutes old"},
+      "US10Y": {"value": 4.802, "unit": "percent", "timestamp_utc": "2026-09-08T21:29:00Z", "direction": "UP", "regime": "HIGH_RISING", "source": "WSJ/Tradeweb", "freshness": "13 minutes old"},
+      "VIX": {"value": 15.68, "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "RISING_BUT_SUB20", "source": "Barron's/Cboe market report", "freshness": "same-day market reading, about 29 minutes old"},
+      "WTI": {"value": 93.03, "unit": "USD/bbl", "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "ELEVATED_RISING", "source": "Reuters/NYMEX settlement report", "freshness": "same-day settlement, about 29 minutes old"},
+      "BRENT": {"value": 97.92, "unit": "USD/bbl", "timestamp_utc": "2026-09-08T21:13:00Z", "direction": "UP", "regime": "NEAR_100_RISING", "source": "Reuters/ICE market report", "freshness": "same-day market reading, about 29 minutes old"}
+    },
+    "regimes": {
+      "usd": "weakening",
+      "rates": "high_and_rising",
+      "volatility": "rising_but_moderate",
+      "oil": "elevated_and_rising",
+      "risk": "risk_off"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "material_confidence_adjustment": false,
+    "reason": "No applicable ACTIONABLE context-aware v2 segment was identified for this specific BOJ/intervention setup; current facts and pre-prediction context dominate."
+  },
+  "predictions": [
+    {"instrument":"NI225","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"DOWN","confidence":4},"mechanism":"Bessent's explicit reference to insight into BOJ moves and potential yen intervention reinforces the probability of policy support for a stronger yen, which is a headwind for Japanese exporters and can intensify carry-trade unwinds.","invalidation":"Clear denial of intervention risk, a sustained reversal weaker in the yen, or unexpectedly dovish BOJ guidance."}
+  ]
+}
