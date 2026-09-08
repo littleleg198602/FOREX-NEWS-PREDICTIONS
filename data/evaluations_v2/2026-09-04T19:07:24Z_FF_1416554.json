@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-04T19:07:24+00:00",
   "evaluation_anchor_time_utc": "2026-09-04T19:07:24+00:00",
   "prediction_latency_seconds": 1524.0,
-  "evaluated_at_utc": "2026-09-08T12:30:22.366900+00:00",
+  "evaluated_at_utc": "2026-09-08T13:40:21.120777+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -115,6 +115,18 @@
           "directional_threshold_pct": 0.01,
           "actual_direction_thresholded": "UP"
         },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-08",
+          "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-04T23:07:24+00:00",
+          "first_available_price_time_utc": "2026-09-08T04:01:00+00:00",
+          "market_delay_minutes": 4613.6,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-04T20:07:24+00:00",
@@ -132,18 +144,6 @@
           "mae_pct": -0.006716,
           "directional_threshold_pct": 0.029746,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-04T23:07:24+00:00",
-          "first_available_price_time_utc": "2026-09-08T04:01:00+00:00",
-          "market_delay_minutes": 4613.6,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       },
       "yahoo_proxy_for": "XAUUSD",
@@ -167,12 +167,6 @@
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-04T19:22:24+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 217.4
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-04T20:07:24+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 217.4
         },
@@ -201,6 +195,12 @@
           "target_time_utc": "2026-09-04T23:07:24+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 217.4
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T20:07:24+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 217.4
         }
       },
       "yahoo_proxy_for": null,
@@ -227,12 +227,6 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 186.4
         },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-04T20:07:24+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 186.4
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-07",
@@ -256,6 +250,12 @@
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-04T23:07:24+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 186.4
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T20:07:24+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 186.4
         }
@@ -296,6 +296,18 @@
           "directional_threshold_pct": 0.01,
           "actual_direction_thresholded": "NO_MOVE"
         },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-08",
+          "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-04T23:07:24+00:00",
+          "first_available_price_time_utc": "2026-09-08T13:31:00+00:00",
+          "market_delay_minutes": 5183.6,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-04T20:07:24+00:00",
@@ -313,16 +325,6 @@
           "mae_pct": -0.097631,
           "directional_threshold_pct": 0.013731,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-04T23:07:24+00:00",
-          "reason": "no complete traded bar available at/after target"
         }
       },
       "yahoo_proxy_for": null,
@@ -361,6 +363,18 @@
           "directional_threshold_pct": 0.010913,
           "actual_direction_thresholded": "UP"
         },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-08",
+          "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-04T23:07:24+00:00",
+          "first_available_price_time_utc": "2026-09-08T13:31:00+00:00",
+          "market_delay_minutes": 5183.6,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-04T20:07:24+00:00",
@@ -378,16 +392,6 @@
           "mae_pct": -0.258581,
           "directional_threshold_pct": 0.022459,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-04T23:07:24+00:00",
-          "reason": "no complete traded bar available at/after target"
         }
       },
       "yahoo_proxy_for": null,
@@ -425,6 +429,18 @@
           "mae_pct": null,
           "neutral_envelope_pct": 0.075085
         },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-08",
+          "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-04T23:07:24+00:00",
+          "first_available_price_time_utc": "2026-09-08T04:01:00+00:00",
+          "market_delay_minutes": 4613.6,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-04T20:07:24+00:00",
@@ -441,18 +457,6 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 0.37546
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-04T23:07:24+00:00",
-          "first_available_price_time_utc": "2026-09-08T04:01:00+00:00",
-          "market_delay_minutes": 4613.6,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       },
       "yahoo_proxy_for": "XAGUSD",
