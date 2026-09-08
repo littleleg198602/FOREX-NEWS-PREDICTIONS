@@ -1,0 +1,166 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1416907-us-nfib-august-optimism",
+  "event_id": "ff-1416907",
+  "event_time_utc": "2026-09-08T10:17:48+00:00",
+  "prediction_time_utc": "2026-09-08T11:24:48+00:00",
+  "evaluation_anchor_time_utc": "2026-09-08T11:24:48+00:00",
+  "prediction_latency_seconds": 4020.0,
+  "evaluated_at_utc": "2026-09-08T11:27:41.156340+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "US-macro",
+    "small-business",
+    "sentiment"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.84,
+        "timestamp_utc": "2026-09-08T09:51:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "market.news / web verification",
+        "freshness_seconds": 5628
+      },
+      "US2Y": {
+        "value": 4.37,
+        "timestamp_utc": "2026-09-04T22:04:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "US Treasury via YCharts",
+        "freshness_seconds": 307248,
+        "note": "No reliable intraday quote was available in this run; retained only as a clearly stale reference, not as a live directional trigger."
+      },
+      "US10Y": {
+        "value": 4.809,
+        "timestamp_utc": "2026-09-08T10:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "WSJ market report / web verification",
+        "freshness_seconds": 3288
+      },
+      "VIX": {
+        "value": 15.87,
+        "timestamp_utc": "2026-09-08T07:13:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Yahoo Finance market snapshot / web verification",
+        "freshness_seconds": 15108
+      },
+      "WTI": {
+        "value": 94.73,
+        "timestamp_utc": "2026-09-08T11:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters / web verification",
+        "freshness_seconds": 1488
+      },
+      "BRENT": {
+        "value": 99.46,
+        "timestamp_utc": "2026-09-08T11:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters / web verification",
+        "freshness_seconds": 1488
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1416907-us-nfib-august-optimism",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7718.6,
+      "reference_price_time_utc": "2026-09-04T20:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5210.8,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T11:39:48+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T12:24:48+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:24:48+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1416907-us-nfib-august-optimism",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 53414.25,
+      "reference_price_time_utc": "2026-09-04T20:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5210.8,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T11:39:48+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T12:24:48+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-08T15:24:48+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
