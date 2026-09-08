@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T09:09:15+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T09:09:15+00:00",
   "prediction_latency_seconds": 1035.0,
-  "evaluated_at_utc": "2026-09-08T09:14:05.153257+00:00",
+  "evaluated_at_utc": "2026-09-08T09:43:59.714040+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -94,23 +94,42 @@
     {
       "prediction_id": "ff-1416881-iran-economic-warfare-missiles",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4439.0,
-      "reference_price_time_utc": "2026-09-08T09:05:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T09:04:00+00:00",
+      "reference_price": 4439.60009765625,
+      "reference_price_time_utc": "2026-09-08T09:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T09:08:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 4.25,
+      "reference_age_minutes": 0.25,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 6,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T09:24:15+00:00"
+          "session_local_date": null,
+          "predicted_direction": "UP"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T09:24:15+00:00",
+          "actual_price_time_utc": "2026-09-08T09:25:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T09:24:00+00:00",
+          "market_delay_minutes": 0.75,
+          "price": 4439.0,
+          "change_pct": -0.013517,
+          "actual_direction": "NO_MOVE",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.155417,
+          "post_event_range_pct": 0.128394,
+          "mfe_pct": 0.090098,
+          "mae_pct": -0.038296,
+          "directional_threshold_pct": 0.015542,
+          "actual_direction_thresholded": "NO_MOVE"
         },
         "1h": {
           "status": "PENDING",
@@ -119,11 +138,6 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T13:09:15+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "UP"
         }
       }
     },
@@ -144,9 +158,16 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T09:24:15+00:00"
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T09:24:15+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 5032.25
         },
         "1h": {
           "status": "PENDING",
@@ -155,11 +176,6 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T13:09:15+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN"
         }
       }
     },
@@ -180,9 +196,16 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T09:24:15+00:00"
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T09:24:15+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 5075.25
         },
         "1h": {
           "status": "PENDING",
@@ -191,34 +214,48 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T13:09:15+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN"
         }
       }
     },
     {
       "prediction_id": "ff-1416881-iran-economic-warfare-missiles",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25838.2890625,
-      "reference_price_time_utc": "2026-09-08T09:00:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T08:59:00+00:00",
+      "reference_price": 25857.240234375,
+      "reference_price_time_utc": "2026-09-08T09:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T09:08:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 9.25,
+      "reference_age_minutes": 0.25,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T09:24:15+00:00"
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T09:24:15+00:00",
+          "actual_price_time_utc": "2026-09-08T09:25:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T09:24:00+00:00",
+          "market_delay_minutes": 0.75,
+          "price": 25892.029296875,
+          "change_pct": 0.134543,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.244144,
+          "post_event_range_pct": 0.166222,
+          "mfe_pct": 0.025448,
+          "mae_pct": -0.140774,
+          "directional_threshold_pct": 0.024414,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
           "status": "PENDING",
@@ -227,34 +264,48 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T13:09:15+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN"
         }
       }
     },
     {
       "prediction_id": "ff-1416881-iran-economic-warfare-missiles",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6372.64013671875,
-      "reference_price_time_utc": "2026-09-08T08:59:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T08:58:00+00:00",
+      "reference_price": 6376.47998046875,
+      "reference_price_time_utc": "2026-09-08T09:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T09:08:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 10.25,
+      "reference_age_minutes": 0.25,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T09:24:15+00:00"
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T09:24:15+00:00",
+          "actual_price_time_utc": "2026-09-08T09:25:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T09:24:00+00:00",
+          "market_delay_minutes": 0.75,
+          "price": 6383.8701171875,
+          "change_pct": 0.115897,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.228654,
+          "post_event_range_pct": 0.140516,
+          "mfe_pct": 0.024619,
+          "mae_pct": -0.115897,
+          "directional_threshold_pct": 0.022865,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
           "status": "PENDING",
@@ -263,34 +314,47 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T13:09:15+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN"
         }
       }
     },
     {
       "prediction_id": "ff-1416881-iran-economic-warfare-missiles",
       "instrument": "XAGUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "yahoo_proxy_for": "XAGUSD",
       "yahoo_proxy_type": "COMEX silver futures",
       "reference_price": 66.53500366210938,
-      "reference_price_time_utc": "2026-09-08T09:05:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-08T09:04:00+00:00",
+      "reference_price_time_utc": "2026-09-08T09:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-08T09:08:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 4.25,
+      "reference_age_minutes": 0.25,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-08T09:24:15+00:00"
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-08T09:24:15+00:00",
+          "actual_price_time_utc": "2026-09-08T09:25:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T09:24:00+00:00",
+          "market_delay_minutes": 0.75,
+          "price": 66.52999877929688,
+          "change_pct": -0.007522,
+          "actual_direction": "NO_MOVE",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.202904,
+          "post_event_range_pct": 0.18036,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.202904
         },
         "1h": {
           "status": "PENDING",
@@ -299,11 +363,6 @@
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-08T13:09:15+00:00"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
         }
       }
     }
