@@ -1,0 +1,89 @@
+{
+  "prediction_id": "ff-1417206-us-treasury-10y-auction-results",
+  "event_id": "ff-1417206",
+  "created_at_utc": "2026-09-09T17:32:45Z",
+  "event_time_utc": "2026-09-09T17:02:00Z",
+  "published_at_utc": "2026-09-09T17:02:00Z",
+  "source_time_text": "Sep 9, 6:02pm",
+  "observed_at_utc": "2026-09-09T17:32:45Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 30,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US Treasury", "10-year auction", "rates", "bond market"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "name": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417206-us-treasury-auction-results",
+    "headline": "US Treasury Auction Results",
+    "primary_source_url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2026/R_20260909_2.pdf"
+  },
+  "event_details": {
+    "security": "9-Year 11-Month Note",
+    "high_yield_pct": 4.834,
+    "median_yield_pct": 4.769,
+    "bid_to_cover": 2.71,
+    "accepted_usd": 39000040000,
+    "indirect_bidder_accepted_usd": 30804090000,
+    "direct_bidder_accepted_usd": 6420800000,
+    "primary_dealer_accepted_usd": 1677000000,
+    "previous_ff_calendar_high_yield_pct": 4.68,
+    "previous_ff_calendar_bid_to_cover": 2.5
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.64, "timestamp_utc": "2026-09-09T17:20:00Z", "direction": "DOWN", "source": "TradersUnion current-session DXY snapshot", "freshness": "recent_intraday"},
+      "US2Y": {"value": 4.42, "unit": "%", "timestamp_utc": "2026-09-09T13:57:00Z", "direction": "UP", "source": "Yahoo Finance market update", "freshness": "same_session_delayed"},
+      "US10Y": {"value": 4.83, "unit": "%", "timestamp_utc": "2026-09-09T17:02:00Z", "direction": "UP", "source": "Treasury auction high yield / current market reports", "freshness": "event_time_current"},
+      "VIX": {"value": 16.36, "timestamp_utc": "2026-09-09T16:52:00Z", "direction": "UP", "source": "Convex intraday VIX feed", "freshness": "about_40m"},
+      "WTI": {"value": 96.48, "unit": "USD/bbl", "timestamp_utc": "2026-09-09T17:00:00Z", "direction": "UP", "source": "Reuters current-session report", "freshness": "current_session"},
+      "BRENT": {"value": 101.32, "unit": "USD/bbl", "timestamp_utc": "2026-09-09T17:00:00Z", "direction": "UP", "source": "Reuters current-session report", "freshness": "current_session"}
+    },
+    "regimes": {
+      "USD": "soft",
+      "rates": "high_and_rising",
+      "volatility": "rising_but_sub_20",
+      "oil": "above_100_geopolitical_risk",
+      "risk": "risk_off"
+    }
+  },
+  "learning_v2": {
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "note": "The ACTIONABLE v2 mixed_neutral next_session 1-4 confidence segment supports a modest confidence boost for MIXED next-session forecasts. No learned segment overrides the current high-yield, high-oil macro facts."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The 10-year auction cleared at 4.834%, materially above the prior 4.68% auction level, reinforcing a high discount-rate regime that is most punitive for long-duration technology valuations despite a solid 2.71 bid-to-cover ratio.",
+      "invalidation": "A sustained post-auction drop in the 10-year yield back below roughly 4.75% would weaken the bearish valuation signal."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher long yields increase the equity discount rate while Brent above $100 keeps inflation risk elevated; strong indirect demand prevents a stronger bearish conviction.",
+      "invalidation": "A durable reversal lower in Treasury yields together with easing oil prices would invalidate the downside bias."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The Dow faces the same higher-yield and energy-cost headwinds, but its lower duration sensitivity and the auction's solid demand profile leave the immediate balance less one-sided than for NDX.",
+      "invalidation": "A sharp further rise in long yields would shift the balance toward DOWN; a sustained yield reversal would shift it toward UP."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The higher auction yield is a headwind for gold, while a soft DXY, rising geopolitical risk and oil above $100 support safe-haven demand, leaving the net signal mixed.",
+      "invalidation": "A simultaneous sharp rise in DXY and real/nominal yields would turn the balance bearish; a yield reversal with further geopolitical escalation would turn it bullish."
+    }
+  ]
+}
