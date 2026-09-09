@@ -1,0 +1,60 @@
+{
+  "prediction_id": "ff-20260909-214333-qeshm-sirik-explosions",
+  "event_id": "ff-qeshm-sirik-explosions-20260909",
+  "created_at_utc": "2026-09-09T21:52:33Z",
+  "event_time_utc": "2026-09-09T21:43:33Z",
+  "published_at_utc": "2026-09-09T21:43:33Z",
+  "source_time_text": "9 min ago",
+  "observed_at_utc": "2026-09-09T21:52:33Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "iran", "middle_east", "oil_supply_risk"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / @DeItaone citing Iran's Fars",
+    "headline": "Multiple Explosions Heard In Iran's Qeshm And Sirik - Iran's Fars",
+    "source_url": "https://www.forexfactory.com/news"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.83, "timestamp_utc": "2026-09-09T21:30:00Z", "direction": "FLAT_TO_DOWN", "source": "Reuters", "freshness": "same_session"},
+      "US2Y": {"value": 4.415, "timestamp_utc": "2026-09-09T20:30:00Z", "direction": "UP", "source": "market close reports", "freshness": "same_session"},
+      "US10Y": {"value": 4.841, "timestamp_utc": "2026-09-09T20:30:00Z", "direction": "UP", "source": "Reuters", "freshness": "same_session"},
+      "VIX": {"value": 16.46, "timestamp_utc": "2026-09-09T20:00:00Z", "direction": "UP", "source": "Yahoo/AP market close", "freshness": "same_session"},
+      "WTI": {"value": 96.05, "timestamp_utc": "2026-09-09T18:30:00Z", "direction": "UP", "source": "Reuters/AP settlement", "freshness": "same_session"},
+      "BRENT": {"value": 101.21, "timestamp_utc": "2026-09-09T18:30:00Z", "direction": "UP", "source": "Reuters/AP settlement", "freshness": "same_session"}
+    },
+    "regimes": {
+      "dollar": "soft",
+      "rates": "high_and_rising",
+      "volatility": "elevated_and_rising",
+      "oil": "above_100_brent_geopolitical_risk",
+      "cross_asset": "risk_off_inflationary"
+    }
+  },
+  "learning_adjustment": {
+    "profile_version": "2.0.0",
+    "material_change": true,
+    "note": "ACTIONABLE v2 evidence advises reducing/avoiding 5-6 directional confidence at 15m; current geopolitical facts remain directional, so immediate confidence is capped at 5 while next-session remains MIXED at 4."
+  },
+  "predictions": [
+    {"instrument":"XAUUSD","immediate":{"direction":"UP","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Fresh explosions in Iran near the Hormuz region add safe-haven and geopolitical risk premium while oil remains above $100 Brent.","invalidation":"Credible confirmation that the explosions were minor/non-military plus rapid de-escalation and a sharp oil retreat."},
+    {"instrument":"SP500","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Additional Gulf escalation reinforces oil-driven inflation and risk-off pressure while Treasury yields remain high.","invalidation":"Rapid de-escalation, no infrastructure damage and a sustained fall in Brent and Treasury yields."},
+    {"instrument":"NDX","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"High yields plus a fresh geopolitical oil shock are an adverse combination for duration-sensitive technology equities.","invalidation":"De-escalation with falling oil and yields."},
+    {"instrument":"WS30","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Escalation raises energy and risk premia, although energy-heavy constituents partially cushion the index.","invalidation":"No strategic damage and rapid oil reversal."},
+    {"instrument":"GDAXI","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Energy-import sensitivity and global risk-off pressure weigh on European cyclicals.","invalidation":"Rapid geopolitical de-escalation and lower oil."},
+    {"instrument":"FCHI40","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Higher energy risk premium and weaker global risk appetite pressure French equities.","invalidation":"Rapid geopolitical de-escalation and lower oil."},
+    {"instrument":"STOXX50","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Escalation near Gulf shipping routes worsens the energy/inflation backdrop for euro-area equities.","invalidation":"Rapid geopolitical de-escalation and lower oil."},
+    {"instrument":"NI225","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Japan is highly exposed to imported energy costs and global risk-off flows.","invalidation":"No supply disruption and a sharp oil retreat."},
+    {"instrument":"AUS200","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Global risk-off pressure offsets some support from commodity exposure.","invalidation":"Rapid de-escalation and improving global risk sentiment."},
+    {"instrument":"UK100","immediate":{"direction":"MIXED","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Energy majors benefit from higher oil while broader equities face inflation and risk-off pressure.","invalidation":"A clear directional break driven by either sharply higher oil or rapid de-escalation."},
+    {"instrument":"SPA35","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Energy-price and risk-off pressures outweigh limited sector offsets.","invalidation":"Rapid de-escalation and lower oil."},
+    {"instrument":"XAGUSD","immediate":{"direction":"MIXED","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Safe-haven demand is supportive, but industrial-demand and high-yield headwinds limit directional conviction.","invalidation":"A strong coordinated move in dollar, yields and risk sentiment that resolves the opposing forces."}
+  ]
+}
