@@ -1,0 +1,68 @@
+{
+  "prediction_id": "ff-bessent-3pct-growth-debt-20260909",
+  "event_id": "ff-bessent-3pct-growth-debt-20260909",
+  "created_at_utc": "2026-09-09T06:11:47Z",
+  "event_time_utc": "2026-09-09T05:33:47Z",
+  "published_at_utc": "2026-09-09T05:33:47Z",
+  "source_time_text": "38 min ago",
+  "observed_at_utc": "2026-09-09T06:11:47Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US_MACRO", "FISCAL_POLICY", "GROWTH", "TREASURY_YIELDS"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Bessent: We can grow our way out of debt with 3% GDP growth",
+  "source_url": "https://www.forexfactory.com/news",
+  "source_provider": "Forex Factory / Yahoo Finance",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.79, "as_of_utc": "2026-09-09T05:30:00Z", "direction": "UP", "regime": "FIRM", "source": "Financial Express market update", "freshness_seconds": 2507},
+      "US2Y": {"value": 4.38, "unit": "percent", "as_of_utc": "2026-09-08T21:00:00Z", "direction": "UP", "regime": "ELEVATED", "source": "Federal Reserve daily yield via GuruFocus", "freshness_seconds": 33107},
+      "US10Y": {"value": 4.789, "unit": "percent", "as_of_utc": "2026-09-08T20:00:00Z", "direction": "UP", "regime": "ELEVATED", "source": "MarketWatch", "freshness_seconds": 36707},
+      "VIX": {"value": 15.33, "as_of_utc": "2026-09-08T20:00:00Z", "direction": "UP", "regime": "MODERATE", "source": "MarketWatch", "freshness_seconds": 36707},
+      "WTI": {"value": 94.34, "unit": "USD/bbl", "as_of_utc": "2026-09-09T05:45:00Z", "direction": "UP", "regime": "HIGH", "source": "Reuters", "freshness_seconds": 1607},
+      "BRENT": {"value": 99.66, "unit": "USD/bbl", "as_of_utc": "2026-09-09T05:45:00Z", "direction": "UP", "regime": "VERY_HIGH", "source": "Reuters", "freshness_seconds": 1607}
+    },
+    "regimes": {
+      "rates": "HIGH_AND_RISING",
+      "energy": "VERY_HIGH_RISK_PREMIUM",
+      "volatility": "MODERATE_RISING",
+      "usd": "FIRM",
+      "risk": "CAUTIOUS_RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-09T04:56:26.641906+00:00",
+    "material_adjustment": true,
+    "note": "ACTIONABLE v2 segment for mixed_neutral confidence 1-4 at next_session supports a modest confidence increase for the neutral next-session view; current macro/context remains primary."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A 3% growth objective is mildly supportive for earnings, but the statement contains no new policy action and is offset by elevated Treasury yields, firm DXY and oil near $100.",
+      "invalidation": "A concrete fiscal-spending restraint plan plus falling yields would turn the balance more positive; another yield/oil spike would turn it negative."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Growth optimism is supportive, but high long yields remain a direct valuation headwind for duration-sensitive technology stocks.",
+      "invalidation": "A sustained fall in US10Y with unchanged growth expectations would shift the signal upward; a renewed yield surge would shift it downward."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Stronger nominal growth can help cyclicals, but debt sustainability rhetoric without concrete spending action is insufficient to offset elevated energy and rate pressure.",
+      "invalidation": "Concrete deficit restraint with easing energy and yields would improve the outlook; worsening fiscal concerns would weaken it."
+    }
+  ]
+}
