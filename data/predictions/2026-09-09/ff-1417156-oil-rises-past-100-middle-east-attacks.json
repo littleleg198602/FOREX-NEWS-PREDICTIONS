@@ -1,0 +1,159 @@
+{
+  "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+  "event_id": "ff-news-1417156",
+  "created_at_utc": "2026-09-09T13:47:53Z",
+  "event_time_utc": "2026-09-09T13:13:53Z",
+  "published_at_utc": "2026-09-09T13:13:53Z",
+  "source_time_text": "34 min ago",
+  "source_absolute_text": "Sep 9, 2:00pm",
+  "observed_at_utc": "2026-09-09T13:47:53Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "OIL", "MIDDLE_EAST", "SUPPLY_RISK", "INFLATION_RISK"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / BNN Bloomberg",
+    "headline": "Oil rises past $100 a barrel after the latest wave of Middle East attacks",
+    "url": "https://www.forexfactory.com/news/1417156-oil-rises-past-100-a-barrel-after-the"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.67,
+        "timestamp_utc": "2026-09-09T12:39:27Z",
+        "direction": "DOWN",
+        "regime": "SOFT_NEAR_THREE_WEEK_LOW",
+        "source": "Investing.com real-time derived DXY quote",
+        "freshness_seconds": 4106
+      },
+      "US2Y": {
+        "value": 4.43,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T13:39:00Z",
+        "direction": "UP",
+        "regime": "HIGH_AND_RISING",
+        "source": "Wall Street Journal market update",
+        "freshness_seconds": 533
+      },
+      "US10Y": {
+        "value": 4.807,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T13:30:00Z",
+        "direction": "UP",
+        "regime": "NEAR_MULTIYEAR_HIGH",
+        "source": "MarketWatch intraday Treasury update",
+        "freshness_seconds": 1073
+      },
+      "VIX": {
+        "value": 16.93,
+        "timestamp_utc": "2026-09-09T12:44:54Z",
+        "direction": "UP",
+        "regime": "RISING_BELOW_20",
+        "source": "Investing.com VIX Sep-2026 futures real-time derived quote",
+        "freshness_seconds": 3779
+      },
+      "WTI": {
+        "value": 95.77,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-09T13:15:00Z",
+        "direction": "UP",
+        "regime": "GEOPOLITICAL_SPIKE",
+        "source": "Reuters",
+        "freshness_seconds": 1973
+      },
+      "BRENT": {
+        "value": 100.66,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-09T13:15:00Z",
+        "direction": "UP",
+        "regime": "ABOVE_100_GEOPOLITICAL_SPIKE",
+        "source": "Reuters",
+        "freshness_seconds": 1973
+      }
+    },
+    "regimes": {
+      "usd": "SOFT",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "RISING_BUT_BELOW_20",
+      "oil": "ABOVE_100_SUPPLY_RISK",
+      "risk": "RISK_OFF_INFLATION_SHOCK"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-09T12:42:10.549151+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No matching ACTIONABLE v2 context-aware segment was verified for this exact pre-prediction context, so no material confidence adjustment was applied."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 6},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Brent holding above $100 confirms a larger geopolitical and inflation risk premium, supporting safe-haven demand for gold while elevated Treasury yields cap conviction.",
+      "invalidation": "Rapid Middle East de-escalation together with a sharp reversal in Brent below the breakout and easing Treasury yields."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Europe is highly exposed to imported energy costs; oil above $100 worsens the inflation-growth mix and pressures industrial margins.",
+      "invalidation": "A sustained oil reversal and broad risk-on recovery."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The $100 Brent break raises energy costs and rate risk across euro-area equities while geopolitical risk remains elevated.",
+      "invalidation": "Brent falls decisively back below $100 and geopolitical tensions ease."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher oil prices add inflation and margin pressure to an already soft French industrial backdrop.",
+      "invalidation": "A sharp oil pullback or strong broad European risk-on move."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Oil above $100 reinforces inflation and Fed-tightening risk while current Treasury yields remain near multi-year highs.",
+      "invalidation": "Treasury yields and oil both reverse materially lower or geopolitical tensions de-escalate."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A renewed inflation impulse from $100-plus oil supports higher-for-longer rates, pressuring duration-sensitive technology valuations.",
+      "invalidation": "A decisive decline in Treasury yields that overwhelms the oil shock."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Industrial and cyclical exposure is vulnerable to higher fuel costs and risk-off sentiment despite partial energy-sector support.",
+      "invalidation": "Oil reverses quickly or a broad cyclical rally develops."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Japan is a major energy importer, so higher oil costs worsen terms of trade while a stronger yen can additionally pressure exporters.",
+      "invalidation": "Oil falls sharply or the yen weakens enough to offset the energy shock for exporters."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Safe-haven demand supports silver, but higher yields and growth concerns offset part of that support through its industrial-demand channel.",
+      "invalidation": "A strong directional dollar/yield move or rapid geopolitical de-escalation removes the current two-sided impulse."
+    }
+  ]
+}
