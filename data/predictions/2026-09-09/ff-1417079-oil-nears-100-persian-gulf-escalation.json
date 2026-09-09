@@ -1,0 +1,140 @@
+{
+  "prediction_id": "ff-1417079-oil-nears-100-persian-gulf-escalation",
+  "event_id": "ff-1417079",
+  "created_at_utc": "2026-09-09T04:53:33Z",
+  "event_time_utc": "2026-09-09T04:06:33Z",
+  "published_at_utc": "2026-09-09T04:06:33Z",
+  "source_time_text": "47 min ago",
+  "observed_at_utc": "2026-09-09T04:53:33Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_url": "https://www.forexfactory.com/news/1417079-the-commodities-feed-oil-nears-100bbl-amid-persian",
+  "source_name": "Forex Factory / ING Think",
+  "headline": "The Commodities Feed: Oil nears $100/bbl amid Persian Gulf escalation",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "oil", "middle_east", "iran", "supply_risk"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.795,
+        "timestamp_utc": "2026-09-09T02:00:00Z",
+        "direction": "RISING",
+        "source": "Refinitiv via CNBC Indonesia",
+        "freshness_seconds": 10413
+      },
+      "US2Y": {
+        "value": 4.39,
+        "timestamp_utc": "2026-09-08T20:00:00Z",
+        "direction": "RISING",
+        "source": "US Treasury curve, inferred from 10Y 4.80% and 10Y-2Y spread 0.41%",
+        "freshness_seconds": 32013
+      },
+      "US10Y": {
+        "value": 4.80,
+        "timestamp_utc": "2026-09-08T20:00:00Z",
+        "direction": "RISING",
+        "source": "US Treasury / YCharts",
+        "freshness_seconds": 32013
+      },
+      "VIX": {
+        "value": 15.7,
+        "timestamp_utc": "2026-09-09T01:43:41Z",
+        "direction": "RISING",
+        "source": "Yahoo Finance via ImpliedOpen",
+        "freshness_seconds": 11392
+      },
+      "WTI": {
+        "value": 94.34,
+        "timestamp_utc": "2026-09-09T04:30:00Z",
+        "direction": "RISING",
+        "source": "Reuters early Asia trade",
+        "freshness_seconds": 1413
+      },
+      "BRENT": {
+        "value": 99.66,
+        "timestamp_utc": "2026-09-09T04:30:00Z",
+        "direction": "RISING",
+        "source": "Reuters early Asia trade",
+        "freshness_seconds": 1413
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW_RISING",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-09T04:51:17.179064+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No matching ACTIONABLE context-aware segment was used; matching oil-rising context signatures found were WATCH_ONLY/EARLY_SIGNAL and therefore advisory only."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "Escalating Persian Gulf supply risk and Brent near $100 increase geopolitical hedging demand for gold, though rising yields cap conviction.",
+      "invalidation": "Rapid regional de-escalation, confirmation of no further tanker or infrastructure damage, and a sharp oil pullback."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Europe is highly exposed to imported energy costs; near-$100 Brent raises inflation and margin pressure while yields are elevated.",
+      "invalidation": "Brent falls materially below the recent breakout zone or geopolitical risk premium collapses."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher oil and renewed Persian Gulf escalation worsen the European inflation-growth mix and risk sentiment.",
+      "invalidation": "Fast de-escalation and a material reversal lower in oil and bond yields."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Higher energy costs and geopolitical risk are a modest drag on French equities despite sector diversification.",
+      "invalidation": "Oil reverses sharply lower or the conflict de-escalates."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Near-$100 Brent increases inflation and rate risk while fresh US strikes on Iranian tankers reinforce risk-off sentiment.",
+      "invalidation": "Oil and Treasury yields fall sharply or the military situation de-escalates."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Higher oil feeds inflation expectations and elevated long yields pressure duration-sensitive technology valuations.",
+      "invalidation": "A sharp decline in US yields outweighs the geopolitical shock."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Industrial and cyclical exposure is vulnerable to a renewed energy-price shock and broader risk-off move.",
+      "invalidation": "Energy prices reverse and geopolitical escalation stops."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Safe-haven demand supports silver but higher yields and growth concerns offset part of that impulse.",
+      "invalidation": "A decisive risk-on move or a strong dollar/yield surge dominates precious-metal demand."
+    }
+  ]
+}
