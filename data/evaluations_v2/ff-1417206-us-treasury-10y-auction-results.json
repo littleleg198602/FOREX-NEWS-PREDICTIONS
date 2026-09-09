@@ -1,0 +1,242 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417206-us-treasury-10y-auction-results",
+  "event_id": "ff-1417206",
+  "event_time_utc": "2026-09-09T17:02:00+00:00",
+  "prediction_time_utc": "2026-09-09T17:32:45+00:00",
+  "evaluation_anchor_time_utc": "2026-09-09T17:32:45+00:00",
+  "prediction_latency_seconds": 1845.0,
+  "evaluated_at_utc": "2026-09-09T17:35:50.035852+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "US Treasury",
+    "10-year auction",
+    "rates",
+    "bond market"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.64,
+        "timestamp_utc": "2026-09-09T17:20:00Z",
+        "direction": "DOWN",
+        "source": "TradersUnion current-session DXY snapshot",
+        "freshness": "recent_intraday",
+        "regime": "FALLING"
+      },
+      "US2Y": {
+        "value": 4.42,
+        "unit": "%",
+        "timestamp_utc": "2026-09-09T13:57:00Z",
+        "direction": "UP",
+        "source": "Yahoo Finance market update",
+        "freshness": "same_session_delayed",
+        "regime": "RISING"
+      },
+      "US10Y": {
+        "value": 4.83,
+        "unit": "%",
+        "timestamp_utc": "2026-09-09T17:02:00Z",
+        "direction": "UP",
+        "source": "Treasury auction high yield / current market reports",
+        "freshness": "event_time_current",
+        "regime": "RISING"
+      },
+      "VIX": {
+        "value": 16.36,
+        "timestamp_utc": "2026-09-09T16:52:00Z",
+        "direction": "UP",
+        "source": "Convex intraday VIX feed",
+        "freshness": "about_40m",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 96.48,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-09T17:00:00Z",
+        "direction": "UP",
+        "source": "Reuters current-session report",
+        "freshness": "current_session",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 101.32,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-09T17:00:00Z",
+        "direction": "UP",
+        "source": "Reuters current-session report",
+        "freshness": "current_session",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417206-us-treasury-10y-auction-results",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29418.265625,
+      "reference_price_time_utc": "2026-09-09T17:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T17:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:45+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T18:32:45+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T21:32:45+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417206-us-treasury-10y-auction-results",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7641.669921875,
+      "reference_price_time_utc": "2026-09-09T17:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T17:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:45+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T18:32:45+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T21:32:45+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417206-us-treasury-10y-auction-results",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52481.25,
+      "reference_price_time_utc": "2026-09-09T17:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T17:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:45+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T18:32:45+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T21:32:45+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417206-us-treasury-10y-auction-results",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4464.39990234375,
+      "reference_price_time_utc": "2026-09-09T17:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T17:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:45+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T18:32:45+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T21:32:45+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
