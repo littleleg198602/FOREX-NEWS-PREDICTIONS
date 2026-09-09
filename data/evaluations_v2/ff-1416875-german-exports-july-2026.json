@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T06:38:57+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T06:38:57+00:00",
   "prediction_latency_seconds": 1857.0,
-  "evaluated_at_utc": "2026-09-09T06:14:01.286862+00:00",
+  "evaluated_at_utc": "2026-09-09T07:37:27.948265+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -96,7 +96,7 @@
     {
       "prediction_id": "ff-1416875-german-exports-july-2026",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
@@ -116,20 +116,35 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 877.95
         },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T07:38:57+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 877.95
+        },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-08T16:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T16:00:00+00:00",
+          "price": 26007.63,
+          "change_pct": 0.00423,
+          "actual_direction": "NO_MOVE",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.578243,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.873316,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.578243
         },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-08T10:38:57+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 877.95
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-08T07:38:57+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 877.95
         }
@@ -138,7 +153,7 @@
     {
       "prediction_id": "ff-1416875-german-exports-july-2026",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
@@ -158,20 +173,35 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 908.95
         },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T07:38:57+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 908.95
+        },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-08T15:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T15:29:00+00:00",
+          "price": 6408.06982421875,
+          "change_pct": 0.137047,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.583507,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.842431,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.583507
         },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-08T10:38:57+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 908.95
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-08T07:38:57+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 908.95
         }

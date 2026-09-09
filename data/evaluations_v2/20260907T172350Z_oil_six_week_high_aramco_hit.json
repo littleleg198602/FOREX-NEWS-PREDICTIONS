@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-07T17:23:50+00:00",
   "evaluation_anchor_time_utc": "2026-09-07T17:23:50+00:00",
   "prediction_latency_seconds": 5630.0,
-  "evaluated_at_utc": "2026-09-09T06:13:55.431447+00:00",
+  "evaluated_at_utc": "2026-09-09T07:37:17.335648+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -115,6 +115,12 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 4103.833
         },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T18:23:50+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 4103.833
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-08",
@@ -141,19 +147,13 @@
           "target_time_utc": "2026-09-07T21:23:50+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 4103.833
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T18:23:50+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 4103.833
         }
       }
     },
     {
       "prediction_id": "20260907T172350Z_oil_six_week_high_aramco_hit",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
@@ -173,20 +173,36 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 82.833
         },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T18:23:50+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 82.833
+        },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-08T16:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T16:00:00+00:00",
+          "price": 26007.63,
+          "change_pct": 0.00423,
+          "actual_direction": "NO_MOVE",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.578243,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.873316,
+          "mfe_pct": 0.795453,
+          "mae_pct": -0.077862,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.057824,
+          "actual_direction_thresholded": "NO_MOVE"
         },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-07T21:23:50+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 82.833
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T18:23:50+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 82.833
         }
@@ -195,7 +211,7 @@
     {
       "prediction_id": "20260907T172350Z_oil_six_week_high_aramco_hit",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
@@ -215,20 +231,36 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 113.833
         },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T18:23:50+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 113.833
+        },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-08T15:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T15:29:00+00:00",
+          "price": 6408.06982421875,
+          "change_pct": 0.137047,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.583507,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.842431,
+          "mfe_pct": 0.575838,
+          "mae_pct": -0.266593,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.058351,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-07T21:23:50+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 113.833
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T18:23:50+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 113.833
         }
@@ -237,7 +269,7 @@
     {
       "prediction_id": "20260907T172350Z_oil_six_week_high_aramco_hit",
       "instrument": "FCHI40",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FCHI",
       "yahoo_proxy_for": null,
@@ -257,20 +289,35 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 113.833
         },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T18:23:50+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 113.833
+        },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-08T15:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T15:29:00+00:00",
+          "price": 8307.900390625,
+          "change_pct": 0.089038,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.74273,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.752366,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.74273
         },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-07T21:23:50+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 113.833
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T18:23:50+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 113.833
         }
@@ -296,6 +343,12 @@
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-07T17:38:50+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 653.833
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T18:23:50+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 653.833
         },
@@ -325,12 +378,6 @@
           "target_time_utc": "2026-09-07T21:23:50+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 653.833
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T18:23:50+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 653.833
         }
       }
     },
@@ -357,6 +404,12 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 4103.833
         },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T18:23:50+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 4103.833
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-08",
@@ -380,12 +433,6 @@
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-07T21:23:50+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 4103.833
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T18:23:50+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 4103.833
         }

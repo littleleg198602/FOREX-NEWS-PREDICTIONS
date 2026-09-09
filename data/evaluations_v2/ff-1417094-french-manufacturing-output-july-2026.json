@@ -1,0 +1,203 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417094-french-manufacturing-output-july-2026",
+  "event_id": "ff-1417094",
+  "event_time_utc": "2026-09-09T06:59:35+00:00",
+  "prediction_time_utc": "2026-09-09T07:34:35+00:00",
+  "evaluation_anchor_time_utc": "2026-09-09T07:34:35+00:00",
+  "prediction_latency_seconds": 2100.0,
+  "evaluated_at_utc": "2026-09-09T07:37:49.348574+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "France",
+    "industrial_production",
+    "manufacturing",
+    "growth"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.8,
+        "timestamp_utc": "2026-09-09T05:55:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "The Ledger Brief / Investing.com",
+        "freshness": "~100 min; delayed",
+        "notes": "Intraday technicals Strong Sell around 98.78-98.80."
+      },
+      "US2Y": {
+        "value": 4.39,
+        "timestamp_utc": "2026-09-09T05:55:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "The Ledger Brief",
+        "freshness": "~100 min; delayed"
+      },
+      "US10Y": {
+        "value": 4.8,
+        "timestamp_utc": "2026-09-09T05:55:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "The Ledger Brief",
+        "freshness": "~100 min; delayed"
+      },
+      "VIX": {
+        "value": 15.72,
+        "timestamp_utc": "2026-09-08T20:15:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "CBOE delayed close via ChartExchange / The Ledger Brief",
+        "freshness": "prior US close"
+      },
+      "WTI": {
+        "value": 94.13,
+        "timestamp_utc": "2026-09-09T06:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "~95 min"
+      },
+      "BRENT": {
+        "value": 99.22,
+        "timestamp_utc": "2026-09-09T06:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "~95 min"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417094-french-manufacturing-output-july-2026",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8272.9296875,
+      "reference_price_time_utc": "2026-09-09T07:23:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T07:22:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.583,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T07:49:35+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T08:34:35+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T11:34:35+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417094-french-manufacturing-output-july-2026",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6374.93017578125,
+      "reference_price_time_utc": "2026-09-09T07:23:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T07:22:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.583,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T07:49:35+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T08:34:35+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T11:34:35+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417094-french-manufacturing-output-july-2026",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25888.5703125,
+      "reference_price_time_utc": "2026-09-09T07:23:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T07:22:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.583,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 2,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T07:49:35+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T08:34:35+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T11:34:35+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
