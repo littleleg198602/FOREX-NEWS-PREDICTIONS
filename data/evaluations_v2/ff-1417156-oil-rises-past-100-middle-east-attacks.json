@@ -1,0 +1,423 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+  "event_id": "ff-news-1417156",
+  "event_time_utc": "2026-09-09T13:13:53+00:00",
+  "prediction_time_utc": "2026-09-09T13:47:53+00:00",
+  "evaluation_anchor_time_utc": "2026-09-09T13:47:53+00:00",
+  "prediction_latency_seconds": 2040.0,
+  "evaluated_at_utc": "2026-09-09T13:52:20.003119+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "OIL",
+    "MIDDLE_EAST",
+    "SUPPLY_RISK",
+    "INFLATION_RISK"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.67,
+        "timestamp_utc": "2026-09-09T12:39:27Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Investing.com real-time derived DXY quote",
+        "freshness_seconds": 4106
+      },
+      "US2Y": {
+        "value": 4.43,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T13:39:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Wall Street Journal market update",
+        "freshness_seconds": 533
+      },
+      "US10Y": {
+        "value": 4.807,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T13:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "MarketWatch intraday Treasury update",
+        "freshness_seconds": 1073
+      },
+      "VIX": {
+        "value": 16.93,
+        "timestamp_utc": "2026-09-09T12:44:54Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Investing.com VIX Sep-2026 futures real-time derived quote",
+        "freshness_seconds": 3779
+      },
+      "WTI": {
+        "value": 95.77,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-09T13:15:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_seconds": 1973
+      },
+      "BRENT": {
+        "value": 100.66,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-09T13:15:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_seconds": 1973
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4459.89990234375,
+      "reference_price_time_utc": "2026-09-09T13:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25559.9296875,
+      "reference_price_time_utc": "2026-09-09T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6305.91015625,
+      "reference_price_time_utc": "2026-09-09T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8181.2001953125,
+      "reference_price_time_utc": "2026-09-09T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7652.10986328125,
+      "reference_price_time_utc": "2026-09-09T13:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29456.3125,
+      "reference_price_time_utc": "2026-09-09T13:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52447.41015625,
+      "reference_price_time_utc": "2026-09-09T13:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 65148.078125,
+      "reference_price_time_utc": "2026-09-09T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 437.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 67.94999694824219,
+      "reference_price_time_utc": "2026-09-09T13:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T13:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.883,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:02:53+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T14:47:53+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T17:47:53+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}

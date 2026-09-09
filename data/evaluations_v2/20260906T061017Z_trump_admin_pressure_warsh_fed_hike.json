@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-06T06:10:17+00:00",
   "evaluation_anchor_time_utc": "2026-09-06T06:10:17+00:00",
   "prediction_latency_seconds": 9841.0,
-  "evaluated_at_utc": "2026-09-09T12:41:50.464852+00:00",
+  "evaluated_at_utc": "2026-09-09T13:51:42.197435+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -158,7 +158,7 @@
     {
       "prediction_id": "20260906T061017Z_trump_admin_pressure_warsh_fed_hike",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -185,9 +185,24 @@
           "reference_age_minutes": 1973.283
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-08T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T21:16:00+00:00",
+          "price": 29507.701,
+          "change_pct": -0.123385,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.725986,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.844928,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.725986
         },
         "4h": {
           "status": "MARKET_CLOSED",
@@ -200,7 +215,7 @@
     {
       "prediction_id": "20260906T061017Z_trump_admin_pressure_warsh_fed_hike",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -227,9 +242,24 @@
           "reference_age_minutes": 2016.283
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-08T21:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T21:00:00+00:00",
+          "price": 7673.52,
+          "change_pct": -0.584044,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.570956,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.658407,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.570956
         },
         "4h": {
           "status": "MARKET_CLOSED",

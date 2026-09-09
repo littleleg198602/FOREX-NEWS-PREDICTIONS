@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-04T14:05:28+00:00",
   "evaluation_anchor_time_utc": "2026-09-04T14:05:28+00:00",
   "prediction_latency_seconds": 5308.0,
-  "evaluated_at_utc": "2026-09-09T12:41:47.139701+00:00",
+  "evaluated_at_utc": "2026-09-09T13:51:34.264277+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -257,7 +257,7 @@
     {
       "prediction_id": "2026-09-04T140528Z_us_nfp_august_162k",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "evaluations": {
@@ -298,9 +298,24 @@
           "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-08T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T21:16:00+00:00",
+          "price": 29507.701,
+          "change_pct": -0.419777,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.723831,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.842421,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.723831
         },
         "4h": {
           "status": "DONE",
@@ -335,7 +350,7 @@
     {
       "prediction_id": "2026-09-04T140528Z_us_nfp_august_162k",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "evaluations": {
@@ -376,9 +391,24 @@
           "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-08",
-          "predicted_direction": "MIXED"
+          "actual_price_time_utc": "2026-09-08T21:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-08T21:00:00+00:00",
+          "price": 7673.52,
+          "change_pct": -0.808166,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.569669,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.656923,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.569669
         },
         "4h": {
           "status": "DONE",
