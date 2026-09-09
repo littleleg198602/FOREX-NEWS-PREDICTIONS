@@ -1,0 +1,72 @@
+{
+  "prediction_id": "ff-1417148-us-adp-ner-pulse-august-22-2026",
+  "event_id": "ff-news-1417148",
+  "created_at_utc": "2026-09-09T12:38:55Z",
+  "event_time_utc": "2026-09-09T12:16:00Z",
+  "published_at_utc": "2026-09-09T12:16:00Z",
+  "source_time_text": "Sep 9, 2:16pm",
+  "observed_at_utc": "2026-09-09T12:38:55Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_timezone": "Europe/Budapest (CEST, UTC+2)",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US_EMPLOYMENT", "ADP", "FED_POLICY", "RATES"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / ADP via PR Newswire",
+    "headline": "US ADP National Employment Report Preliminary Estimate for August 22, 2026",
+    "url": "https://www.forexfactory.com/news/1417148-us-adp-national-employment-report-preliminary-estimate-for"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.64, "timestamp_utc": "2026-09-09T08:00:00Z", "direction": "DOWN", "regime": "SOFT_NEAR_TWO_WEEK_LOW", "source": "Refinitiv market quote reported by CNBC Indonesia", "freshness": "about 4 hours 39 minutes"},
+      "US2Y": {"value": 4.41, "unit": "percent", "timestamp_utc": "2026-09-09T00:00:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "Federal Reserve daily series via GuruFocus", "freshness": "latest daily observation available"},
+      "US10Y": {"value": 4.80, "unit": "percent", "timestamp_utc": "2026-09-09T11:02:00Z", "direction": "UP", "regime": "NEAR_MULTIYEAR_HIGH", "source": "Reuters", "freshness": "about 1 hour 37 minutes"},
+      "VIX": {"value": 16.49, "timestamp_utc": "2026-09-09T12:00:00Z", "direction": "UP", "regime": "RISING_BELOW_20", "source": "MarketWatch intraday report", "freshness": "intraday; exact quote second unavailable"},
+      "WTI": {"value": 95.25, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-09T09:08:51Z", "direction": "UP", "regime": "GEOPOLITICAL_SPIKE", "source": "AP", "freshness": "about 3 hours 30 minutes"},
+      "BRENT": {"value": 100.72, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-09T09:08:51Z", "direction": "UP", "regime": "ABOVE_100_GEOPOLITICAL_SPIKE", "source": "AP", "freshness": "about 3 hours 30 minutes"}
+    },
+    "regimes": {
+      "usd": "SOFT",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "RISING_BUT_BELOW_20",
+      "oil": "ABOVE_100_SUPPLY_RISK",
+      "risk": "CAUTIOUS_RISK_OFF"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Hiring accelerated week over week, which marginally reinforces higher-for-longer rate risk while US10Y is near 4.8% and oil is above $100; duration-sensitive technology valuations are most exposed.",
+      "invalidation": "A sharp drop in Treasury yields or subsequent labor/inflation data that materially weakens the Fed tightening case."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "The labor signal is mildly growth-positive but also rate-hawkish, leaving the broad index caught between resilient activity and tighter financial conditions.",
+      "invalidation": "A decisive rates move lower together with improving risk appetite, or a much stronger follow-up labor signal that clearly shifts Fed expectations."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "Better hiring momentum supports cyclicals, but high oil and yields offset that benefit and keep the immediate index impulse two-sided.",
+      "invalidation": "A broad cyclical risk-on move with falling yields, or a renewed geopolitical shock that dominates the labor signal."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "A firmer labor pulse can support yields and pressure gold, while the soft dollar and geopolitical risk provide opposing safe-haven support.",
+      "invalidation": "A decisive move in real yields or the dollar that removes the current two-sided macro impulse."
+    }
+  ]
+}
