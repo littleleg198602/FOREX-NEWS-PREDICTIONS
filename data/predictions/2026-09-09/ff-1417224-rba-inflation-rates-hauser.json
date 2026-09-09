@@ -1,0 +1,102 @@
+{
+  "prediction_id": "ff-1417224-rba-inflation-rates-hauser",
+  "event_id": "ff-news-1417224",
+  "created_at_utc": "2026-09-09T20:08:34Z",
+  "event_time_utc": "2026-09-09T19:20:00Z",
+  "published_at_utc": "2026-09-09T19:20:00Z",
+  "source_time_text": "Sep 9, 8:20pm | 48 min ago",
+  "observed_at_utc": "2026-09-09T20:08:34Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_url": "https://www.forexfactory.com/news/1417224-the-rba-hoped-this-years-three-interest-rate",
+  "source": "Forex Factory / The Guardian",
+  "headline": "The RBA hoped this year’s three interest rate rises would tame inflation – but nothing is going their way",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["RBA", "inflation", "rates", "Australia", "central_bank"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.75,
+        "timestamp_utc": "2026-09-09T20:08:00Z",
+        "direction": "DOWN",
+        "regime": "SOFT_USD",
+        "source": "web cross-check; DXY trading around 98.7-98.8 on Sep 9",
+        "freshness": "same-day indicative"
+      },
+      "US2Y": {
+        "value": 4.4,
+        "timestamp_utc": "2026-09-09T20:08:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED_YIELD",
+        "source": "web cross-check; Sep 9 Treasury curve around 4.4% at 2Y",
+        "freshness": "same-day indicative"
+      },
+      "US10Y": {
+        "value": 4.834,
+        "timestamp_utc": "2026-09-09T18:12:00Z",
+        "direction": "UP",
+        "regime": "HIGH_YIELD",
+        "source": "Sep 9 US Treasury 10-year auction / Barron's",
+        "freshness": "about 2 hours old"
+      },
+      "VIX": {
+        "value": 16.36,
+        "timestamp_utc": "2026-09-09T19:28:00Z",
+        "direction": "UP",
+        "regime": "NORMAL_RISING_VOL",
+        "source": "Convex live intraday VIX",
+        "freshness": "about 40 minutes old"
+      },
+      "WTI": {
+        "value": 95.27,
+        "timestamp_utc": "2026-09-09T20:08:00Z",
+        "direction": "UP",
+        "regime": "ENERGY_SHOCK",
+        "source": "Fuel Data Portal delayed futures, Sep 9",
+        "freshness": "same-day delayed"
+      },
+      "BRENT": {
+        "value": 100.67,
+        "timestamp_utc": "2026-09-09T19:57:00Z",
+        "direction": "UP",
+        "regime": "ENERGY_SHOCK",
+        "source": "Convex live market data",
+        "freshness": "about 11 minutes old"
+      }
+    },
+    "regimes": {
+      "usd": "SOFT_USD",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "NORMAL_BUT_RISING",
+      "energy": "ENERGY_SHOCK",
+      "cross_asset": "INFLATIONARY_RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-09T19:28:53.527025+00:00",
+    "material_adjustment": true,
+    "note": "ACTIONABLE v2 mixed_neutral next_session 1-4 confidence segment supports a modestly higher-confidence MIXED next-session view; it does not override the immediate RBA/inflation signal."
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Persistent above-target Australian inflation after three rate increases keeps further tightening/higher-for-longer risk alive, pressuring equity valuations and rate-sensitive sectors; the global backdrop of oil above $100 and elevated yields adds to the headwind.",
+      "invalidation": "A clear RBA signal that no further tightening is likely, a materially softer Australian inflation signal, or a broad risk-on move accompanied by falling global yields and energy prices."
+    }
+  ]
+}
