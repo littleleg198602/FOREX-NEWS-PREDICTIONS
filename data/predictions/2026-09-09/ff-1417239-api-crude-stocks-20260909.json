@@ -1,0 +1,72 @@
+{
+  "prediction_id": "ff-1417239-api-crude-stocks-20260909",
+  "event_id": "ff-news-1417239",
+  "created_at_utc": "2026-09-09T21:01:33Z",
+  "event_time_utc": "2026-09-09T20:48:33Z",
+  "published_at_utc": "2026-09-09T20:48:33Z",
+  "source_time_text": "13 min ago",
+  "observed_at_utc": "2026-09-09T21:01:33Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_url": "https://www.forexfactory.com/news/1417239-api-crude-03m-cushing-03m-distillate-2m-gasoline",
+  "headline": "API: Crude -0.3m, Cushing -0.3m, Distillate +2m, Gasoline -1.9m",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "oil", "inventories", "inflation"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.844, "timestamp_utc": "2026-09-09T19:28:27Z", "direction": "FLAT_TO_UP", "source": "ICE close reported by GateNews", "freshness_seconds": 5590},
+      "US2Y": {"value": 4.42, "timestamp_utc": "2026-09-09T20:00:00Z", "direction": "UP", "source": "WSJ market close reporting", "freshness_seconds": 3693},
+      "US10Y": {"value": 4.841, "timestamp_utc": "2026-09-09T20:00:00Z", "direction": "UP", "source": "Reuters market close reporting", "freshness_seconds": 3693},
+      "VIX": {"value": 16.36, "timestamp_utc": "2026-09-09T20:21:00Z", "direction": "UP", "source": "Convex intraday feed", "freshness_seconds": 2433},
+      "WTI": {"value": 96.05, "timestamp_utc": "2026-09-09T18:30:00Z", "direction": "UP", "source": "Reuters settlement", "freshness_seconds": 9093},
+      "BRENT": {"value": 101.21, "timestamp_utc": "2026-09-09T18:30:00Z", "direction": "UP", "source": "Reuters settlement", "freshness_seconds": 9093}
+    },
+    "regimes": {
+      "dollar": "NEUTRAL_TO_FIRM",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "ELEVATED_RISING",
+      "oil": "HIGH_GEOPOLITICAL_RISK"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-09T20:11:14.547182+00:00",
+    "material_adjustment": "Next-session MIXED confidence held at 4/10 because the ACTIONABLE v2 mixed_neutral 1-4 next_session segment recommends BOOST_CONFIDENCE; immediate directions were not overridden."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The API crude draw was only 0.3m versus a 1.3m expected draw and distillates built 2m, marginally easing the oil-inflation impulse and long-duration valuation pressure, although the gasoline draw and geopolitical oil premium limit the signal.",
+      "invalidation": "Fresh supply disruption headlines or renewed oil gains that dominate the modest inventory-side easing signal."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A smaller-than-expected crude draw and distillate build are marginally disinflationary for energy, giving broad equities a small relief impulse against an otherwise risk-off backdrop.",
+      "invalidation": "Brent/WTI extend higher on geopolitical escalation or rates rise further despite the inventory release."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Inventory components conflict: crude drew less than expected and distillates built, while gasoline drew 1.9m; this should produce limited directional follow-through for the Dow.",
+      "invalidation": "A decisive oil move or new macro/geopolitical headline creates a clearer directional regime."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Slight inventory-side relief to oil inflation can weigh on gold at the margin, but persistent geopolitical risk, a soft dollar backdrop and high rates pull in opposing directions.",
+      "invalidation": "A sharp move in yields, DXY or Middle East risk overwhelms the modest inventory signal."
+    }
+  ]
+}
