@@ -1,0 +1,76 @@
+{
+  "prediction_id": "ff-1417198-us-treasury-6b-long-debt-buyback",
+  "event_id": "ff-1417198",
+  "created_at_utc": "2026-09-09T16:17:09Z",
+  "event_time_utc": "2026-09-09T15:46:00Z",
+  "published_at_utc": "2026-09-09T15:46:00Z",
+  "source_time_text": "21 min ago",
+  "observed_at_utc": "2026-09-09T16:07:00Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US Treasury", "bond buyback", "rates", "liquidity"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "name": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417198-treasury-department-to-buy-back-6-billion-in",
+    "headline": "Treasury Department to buy back $6 billion in longer-term debt, triple the normal level"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.8, "timestamp_utc": "2026-09-09T16:00:00Z", "direction": "DOWN", "source": "market/news snapshot", "freshness": "approx_current"},
+      "US2Y": {"value": 4.43, "unit": "%", "timestamp_utc": "2026-09-09T16:00:00Z", "direction": "UP", "source": "market/news snapshot", "freshness": "approx_current"},
+      "US10Y": {"value": 4.83, "unit": "%", "timestamp_utc": "2026-09-09T15:08:40Z", "direction": "UP", "source": "MarketWatch/FactSet", "freshness": "recent"},
+      "VIX": {"value": 16.49, "timestamp_utc": "2026-09-09T16:00:00Z", "direction": "UP", "source": "MarketWatch", "freshness": "current_session"},
+      "WTI": {"value": 95.78, "unit": "USD/bbl", "timestamp_utc": "2026-09-09T16:00:00Z", "direction": "UP", "source": "Investors.com market snapshot", "freshness": "current_session"},
+      "BRENT": {"value": 100.7, "unit": "USD/bbl", "timestamp_utc": "2026-09-09T16:00:00Z", "direction": "UP", "source": "Reuters/current market reports", "freshness": "current_session"}
+    },
+    "regimes": {
+      "USD": "soft",
+      "rates": "high_and_rising",
+      "volatility": "rising_but_sub_20",
+      "oil": "high_geopolitical_risk",
+      "risk": "risk_off"
+    }
+  },
+  "learning_v2": {
+    "profile_version": "2.0.0",
+    "material_adjustment": false,
+    "note": "No context-specific ACTIONABLE segment was used to override current macro facts; generic directional 5-6 confidence segments are KEEP_NEUTRAL."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The $6B buyback was below some higher market expectations and the 10Y yield rose to about 4.83%, pressuring duration-sensitive technology valuations despite the liquidity-support intent.",
+      "invalidation": "A sustained drop in US10Y/US2Y yields following the operation or a materially larger follow-up buyback would weaken the bearish signal."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher long yields after the announcement offset the supportive liquidity signal, while oil above $100 keeps inflation risk elevated.",
+      "invalidation": "A clear reversal lower in Treasury yields together with stable risk sentiment would invalidate the downside bias."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The Dow is less duration-sensitive than NDX, leaving the buyback's liquidity support and higher-yield headwind more balanced.",
+      "invalidation": "A sharp yield breakout higher would shift the balance toward DOWN; a sustained yield decline would shift it toward UP."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher Treasury yields are a gold headwind, but dollar softness and elevated geopolitical/oil risk support safe-haven demand.",
+      "invalidation": "A simultaneous sharp rise in DXY and real/nominal yields would turn the balance bearish for gold."
+    }
+  ]
+}
