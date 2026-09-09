@@ -1,0 +1,167 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417072-china-august-cpi-ppi-2026-09-09",
+  "event_id": "ff-1417072",
+  "event_time_utc": "2026-09-09T02:45:00+00:00",
+  "prediction_time_utc": "2026-09-09T03:22:44+00:00",
+  "evaluation_anchor_time_utc": "2026-09-09T03:22:44+00:00",
+  "prediction_latency_seconds": 2264.0,
+  "evaluated_at_utc": "2026-09-09T03:25:20.753410+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "China",
+    "inflation",
+    "CPI",
+    "PPI",
+    "commodities"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.15,
+        "timestamp_utc": "2026-09-09T03:00:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness": "same-session"
+      },
+      "US2Y": {
+        "value": 4.363,
+        "timestamp_utc": "2026-09-08T00:00:00Z",
+        "direction": "MIXED",
+        "regime": "FLAT",
+        "source": "Tradeweb via Barrons",
+        "freshness": "stale_last_available"
+      },
+      "US10Y": {
+        "value": 4.805,
+        "timestamp_utc": "2026-09-09T02:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "WSJ",
+        "freshness": "same-session"
+      },
+      "VIX": {
+        "value": 15.72,
+        "timestamp_utc": "2026-09-08T20:15:01Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Yahoo Finance",
+        "freshness": "prior_us_close"
+      },
+      "WTI": {
+        "value": 94.34,
+        "timestamp_utc": "2026-09-09T03:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "same-session"
+      },
+      "BRENT": {
+        "value": 99.66,
+        "timestamp_utc": "2026-09-09T03:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "same-session"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417072-china-august-cpi-ppi-2026-09-09",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8900.7998046875,
+      "reference_price_time_utc": "2026-09-09T03:06:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T03:05:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 16.733,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T03:37:44+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T04:22:44+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T07:22:44+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417072-china-august-cpi-ppi-2026-09-09",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 67.02999877929688,
+      "reference_price_time_utc": "2026-09-09T03:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T03:15:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.733,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T03:37:44+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T04:22:44+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T07:22:44+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
