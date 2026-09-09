@@ -1,0 +1,131 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417224-rba-inflation-rates-hauser",
+  "event_id": "ff-news-1417224",
+  "event_time_utc": "2026-09-09T19:20:00+00:00",
+  "prediction_time_utc": "2026-09-09T20:08:34+00:00",
+  "evaluation_anchor_time_utc": "2026-09-09T20:08:34+00:00",
+  "prediction_latency_seconds": 2914.0,
+  "evaluated_at_utc": "2026-09-09T20:11:13.352434+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "RBA",
+    "inflation",
+    "rates",
+    "Australia",
+    "central_bank"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.75,
+        "timestamp_utc": "2026-09-09T20:08:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "web cross-check; DXY trading around 98.7-98.8 on Sep 9",
+        "freshness": "same-day indicative"
+      },
+      "US2Y": {
+        "value": 4.4,
+        "timestamp_utc": "2026-09-09T20:08:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "web cross-check; Sep 9 Treasury curve around 4.4% at 2Y",
+        "freshness": "same-day indicative"
+      },
+      "US10Y": {
+        "value": 4.834,
+        "timestamp_utc": "2026-09-09T18:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Sep 9 US Treasury 10-year auction / Barron's",
+        "freshness": "about 2 hours old"
+      },
+      "VIX": {
+        "value": 16.36,
+        "timestamp_utc": "2026-09-09T19:28:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Convex live intraday VIX",
+        "freshness": "about 40 minutes old"
+      },
+      "WTI": {
+        "value": 95.27,
+        "timestamp_utc": "2026-09-09T20:08:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Fuel Data Portal delayed futures, Sep 9",
+        "freshness": "same-day delayed"
+      },
+      "BRENT": {
+        "value": 100.67,
+        "timestamp_utc": "2026-09-09T19:57:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Convex live market data",
+        "freshness": "about 11 minutes old"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417224-rba-inflation-rates-hauser",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8911.400390625,
+      "reference_price_time_utc": "2026-09-09T06:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T06:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 836.567,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T20:23:34+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-09T21:08:34+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T00:08:34+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
