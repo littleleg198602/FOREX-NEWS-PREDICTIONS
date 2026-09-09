@@ -1,0 +1,58 @@
+{
+  "prediction_id": "ff-1417137-irgc-20-targets-retaliation",
+  "event_id": "ff-news-1417137",
+  "created_at_utc": "2026-09-09T11:46:42Z",
+  "event_time_utc": "2026-09-09T11:39:42Z",
+  "published_at_utc": "2026-09-09T11:39:42Z",
+  "source_time_text": "7 min ago",
+  "observed_at_utc": "2026-09-09T11:46:42Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "IRAN", "MIDDLE_EAST", "OIL_SUPPLY_RISK", "RISK_OFF"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / @finsquawk_ / Fars",
+    "headline": "IRGC Spokesman: Iran To Hit 20 Targets For Every 2-3 Enemy Strikes - Fars",
+    "url": "https://www.forexfactory.com/news/1417137-irgc-spokesman-iran-to-hit-20-targets-for"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.79, "timestamp_utc": "2026-09-09T11:46:42Z", "direction": "WEAK_TO_FLAT", "regime": "BELOW_100", "source": "current-day market report", "freshness": "intraday value; exact quote timestamp unavailable"},
+      "US2Y": {"value": 4.41, "timestamp_utc": "2026-09-09T00:00:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "Federal Reserve daily series via GuruFocus", "freshness": "latest daily observation available"},
+      "US10Y": {"value": 4.807, "timestamp_utc": "2026-09-09T11:00:00Z", "direction": "UP", "regime": "NEAR_MULTIYEAR_HIGH", "source": "MarketWatch/Reuters market reports", "freshness": "about 1 hour"},
+      "VIX": {"value": 15.72, "timestamp_utc": "2026-09-09T02:42:00Z", "direction": "DOWN", "regime": "LOW_NORMAL", "source": "TradeWithMaya VIX feed", "freshness": "about 9 hours; latest independently timestamped value found"},
+      "WTI": {"value": 95.21, "timestamp_utc": "2026-09-09T10:33:00Z", "direction": "UP", "regime": "GEOPOLITICAL_SPIKE", "source": "Reuters", "freshness": "about 1 hour 14 minutes"},
+      "BRENT": {"value": 100.69, "timestamp_utc": "2026-09-09T10:33:00Z", "direction": "UP", "regime": "ABOVE_100_GEOPOLITICAL_SPIKE", "source": "Reuters", "freshness": "about 1 hour 14 minutes"}
+    },
+    "regimes": {
+      "usd": "SOFT",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "LOW_NORMAL_BUT_GEOPOLITICAL_TAIL_RISK",
+      "oil": "SHARP_UPSIDE_SUPPLY_RISK",
+      "risk": "RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "version": "2.0.0",
+    "generated_at_utc": "2026-09-09T09:48:42.931218+00:00",
+    "material_adjustment": true,
+    "note": "ACTIONABLE v2 evidence shows 5-6 directional next-session forecasts underperform and low-confidence MIXED next-session forecasts are strong; immediate directions remain driven by current facts/context, while next-session forecasts are kept MIXED at moderate confidence."
+  },
+  "predictions": [
+    {"instrument":"XAUUSD","immediate":{"direction":"UP","confidence":6},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Escalation threat increases geopolitical safe-haven demand while a softer dollar offsets high real-rate pressure.","invalidation":"Credible de-escalation, no follow-through strikes, and a sharp reversal lower in Brent."},
+    {"instrument":"GDAXI","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Europe is exposed to the inflation and growth drag from oil above $100 and broader risk-off sentiment.","invalidation":"Rapid de-escalation and Brent falling decisively back below $100."},
+    {"instrument":"STOXX50","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Higher energy costs and tighter-for-longer rate expectations pressure European risk assets.","invalidation":"De-escalation plus falling oil and sovereign yields."},
+    {"instrument":"FCHI40","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Fresh geopolitical escalation compounds already weak French industrial data and energy-cost pressure.","invalidation":"No military follow-through and broad European risk-on reversal."},
+    {"instrument":"SP500","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Escalation raises oil-driven inflation risk while US10Y is near 4.8%, compressing equity risk appetite.","invalidation":"Clear diplomatic de-escalation with simultaneous declines in oil and Treasury yields."},
+    {"instrument":"NDX","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"High long yields plus a renewed geopolitical risk premium weigh on duration-sensitive technology valuations.","invalidation":"US10Y falls materially and geopolitical escalation fails to translate into further attacks."},
+    {"instrument":"WS30","immediate":{"direction":"DOWN","confidence":5},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Industrial and cyclical exposure is vulnerable to higher energy costs and trade/risk-off uncertainty.","invalidation":"Oil reverses sharply lower and risk appetite broadens."},
+    {"instrument":"NI225","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Japan is sensitive to imported energy inflation and the stronger-yen/carry-unwind backdrop.","invalidation":"Oil drops and the yen weakens materially."},
+    {"instrument":"XAGUSD","immediate":{"direction":"MIXED","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Safe-haven demand is offset by silver's industrial-growth sensitivity and high yields.","invalidation":"A decisive move in yields or industrial-risk sentiment creates a one-sided macro impulse."}
+  ]
+}
