@@ -1,0 +1,160 @@
+{
+  "prediction_id": "ff-1417215-trump-iran-war-after-election",
+  "event_id": "ff-1417215",
+  "created_at_utc": "2026-09-09T19:25:57Z",
+  "event_time_utc": "2026-09-09T18:30:57Z",
+  "published_at_utc": "2026-09-09T18:30:57Z",
+  "source_time_text": "55 min ago",
+  "observed_at_utc": "2026-09-09T19:25:57Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "iran", "oil", "risk_sentiment"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "platform": "Forex Factory",
+    "section": ["Hot Stories", "Latest Stories"],
+    "headline": "Trump: War In Iran Will End Immediately After Election",
+    "url": "https://www.forexfactory.com/news/1417215-trump-war-in-iran-will-end-immediately-after",
+    "context": "Trump said the Iran war would end immediately after the election, said the U.S. is not currently looking for a deal, and said oil prices would tumble after the election."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.75,
+        "timestamp_utc": "2026-09-09T19:25:57Z",
+        "direction": "DOWN",
+        "regime": "SOFTENING",
+        "source": "Reuters / current-market web snapshot",
+        "freshness": "same-session; latest cited market snapshot"
+      },
+      "US2Y": {
+        "value": 4.415,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T19:25:57Z",
+        "direction": "UP",
+        "regime": "HIGH_YIELD",
+        "source": "current-market reporting",
+        "freshness": "same-session; latest cited market snapshot"
+      },
+      "US10Y": {
+        "value": 4.837,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T19:25:57Z",
+        "direction": "UP",
+        "regime": "HIGH_YIELD",
+        "source": "Reuters / Treasury market reporting",
+        "freshness": "same-session; latest cited market snapshot"
+      },
+      "VIX": {
+        "value": 16.36,
+        "timestamp_utc": "2026-09-09T18:45:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED_NORMAL",
+        "source": "intraday market feed surfaced via current web snapshot",
+        "freshness": "about 40 minutes before decision"
+      },
+      "WTI": {
+        "value": 95.73,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-09T19:25:57Z",
+        "direction": "UP",
+        "regime": "GEOPOLITICAL_PREMIUM",
+        "source": "current-market reporting",
+        "freshness": "same-session; latest cited market snapshot"
+      },
+      "BRENT": {
+        "value": 100.77,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-09T19:25:57Z",
+        "direction": "UP",
+        "regime": "ABOVE_100_GEOPOLITICAL_PREMIUM",
+        "source": "current-market reporting",
+        "freshness": "same-session; latest cited market snapshot"
+      }
+    },
+    "regimes": {
+      "usd": "softening",
+      "rates": "high_and_rising",
+      "volatility": "elevated_normal",
+      "oil": "high_and_rising_geopolitical_premium",
+      "risk": "risk_off"
+    }
+  },
+  "learning_profile_v2": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "adjustment": "ACTIONABLE mixed_neutral next_session 1-4 segment supports keeping next-session forecasts MIXED with confidence 4/10; it does not override immediate macro/geopolitical direction."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The statement reduces expectations of near-term Iran de-escalation while oil remains above $100 and risk sentiment is defensive, supporting safe-haven demand.",
+      "invalidation": "A credible near-term ceasefire or negotiation breakthrough accompanied by a sharp fall in Brent would invalidate the safe-haven thesis."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A longer expected conflict sustains Europe's energy-cost and inflation risk while long yields remain elevated.",
+      "invalidation": "Rapid de-escalation and a sustained drop in oil and bond yields would weaken the bearish impulse."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Persistent Middle East conflict risk raises energy and inflation premia and weighs on broad European risk assets.",
+      "invalidation": "A credible ceasefire plus materially lower oil would reverse the incremental risk-off signal."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The no-near-term-deal message reinforces energy and macro uncertainty already pressuring European equities.",
+      "invalidation": "A sudden diplomatic breakthrough and falling oil would invalidate the bearish setup."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Prolonged war expectations keep oil and inflation risk elevated while Treasury yields remain high, a negative combination for broad U.S. equities.",
+      "invalidation": "A credible de-escalation or sharp oil/yield decline would weaken the downside signal."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "High long-end yields plus persistent geopolitical and energy inflation risk pressure duration-sensitive technology valuations.",
+      "invalidation": "A sustained fall in US10Y together with geopolitical de-escalation would invalidate the bearish impulse."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The statement extends the expected window of geopolitical and oil-price stress, weighing on cyclical risk sentiment despite energy-sector support.",
+      "invalidation": "A ceasefire or material drop in crude prices would weaken the downside case."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Japan is highly exposed to imported energy costs, so a longer conflict and oil above $100 increase inflation and margin pressure.",
+      "invalidation": "Rapid oil-price normalization or a credible conflict resolution would invalidate the bearish impulse."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Safe-haven support conflicts with industrial-demand and high-yield headwinds, leaving silver without a clean directional edge.",
+      "invalidation": "A decisive dollar/yield move or major geopolitical shift could resolve the current two-sided setup."
+    }
+  ]
+}
