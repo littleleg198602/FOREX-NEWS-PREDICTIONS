@@ -1,0 +1,70 @@
+{
+  "prediction_id": "ff-1417094-french-manufacturing-output-july-2026",
+  "event_id": "ff-1417094",
+  "created_at_utc": "2026-09-09T07:34:35Z",
+  "event_time_utc": "2026-09-09T06:59:35Z",
+  "published_at_utc": "2026-09-09T06:59:35Z",
+  "source_time_text": "35 min ago",
+  "observed_at_utc": "2026-09-09T07:34:35Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["France", "industrial_production", "manufacturing", "growth"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "platform": "Forex Factory",
+    "headline": "In July 2026, French manufacturing output falls sharply again (-0.8% after -1.0%)",
+    "source_domain": "insee.fr",
+    "forex_factory_url": "https://www.forexfactory.com/news/1417094-in-july-2026-french-manufacturing-output-falls-sharply"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.80, "timestamp_utc": "2026-09-09T05:55:00Z", "direction": "DOWN", "regime": "weakening_usd", "source": "The Ledger Brief / Investing.com", "freshness": "~100 min; delayed", "notes": "Intraday technicals Strong Sell around 98.78-98.80."},
+      "US2Y": {"value": 4.39, "timestamp_utc": "2026-09-09T05:55:00Z", "direction": "UP", "regime": "high_yield", "source": "The Ledger Brief", "freshness": "~100 min; delayed"},
+      "US10Y": {"value": 4.80, "timestamp_utc": "2026-09-09T05:55:00Z", "direction": "UP", "regime": "high_yield", "source": "The Ledger Brief", "freshness": "~100 min; delayed"},
+      "VIX": {"value": 15.72, "timestamp_utc": "2026-09-08T20:15:00Z", "direction": "UP", "regime": "rising_volatility", "source": "CBOE delayed close via ChartExchange / The Ledger Brief", "freshness": "prior US close"},
+      "WTI": {"value": 94.13, "timestamp_utc": "2026-09-09T06:00:00Z", "direction": "UP", "regime": "energy_shock", "source": "Reuters", "freshness": "~95 min"},
+      "BRENT": {"value": 99.22, "timestamp_utc": "2026-09-09T06:00:00Z", "direction": "UP", "regime": "near_100_energy_shock", "source": "Reuters", "freshness": "~95 min"}
+    },
+    "regimes": {
+      "usd": "weakening",
+      "rates": "high_and_rising",
+      "volatility": "rising_from_low_base",
+      "oil": "near_100_supply_risk",
+      "risk": "cautious_risk_off"
+    }
+  },
+  "learning_profile_v2": {
+    "profile_generated_at_utc": "2026-09-09T06:14:13.834046+00:00",
+    "material_adjustment_applied": false,
+    "reason": "No matching ACTIONABLE v2 context-aware segment was identified for this France manufacturing-growth event; current facts and pre-prediction context determine confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "A second consecutive sharp contraction in French manufacturing output weakens the domestic growth signal and is a direct negative for French cyclicals, while near-$100 Brent and elevated global yields add pressure.",
+      "invalidation": "A strong positive revision, rapid rebound in forward French activity data, or a broad risk-on move driven by sharply lower oil and yields."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 3},
+      "mechanism": "French industrial weakness adds to euro-area growth concerns, but the index impact is diluted by its broader multinational composition.",
+      "invalidation": "Broader euro-area data materially outperforming or a strong risk-on reversal led by lower energy prices and yields."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 2},
+      "next_session": {"direction": "MIXED", "confidence": 2},
+      "mechanism": "The French data are a mild negative read-through for euro-area demand, but the direct Germany-specific signal is limited.",
+      "invalidation": "German or euro-area data producing a clearer directional growth signal."
+    }
+  ]
+}
