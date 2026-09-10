@@ -1,0 +1,114 @@
+{
+  "prediction_id": "ff-1417277-trump-5000-dividend-adults",
+  "event_id": "forex-factory-1417277",
+  "created_at_utc": "2026-09-10T03:40:43Z",
+  "event_time_utc": "2026-09-10T02:12:00Z",
+  "published_at_utc": "2026-09-10T02:12:00Z",
+  "source_time_text": "Sep 10, 3:12am",
+  "observed_at_utc": "2026-09-10T03:40:43Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US_FISCAL_POLICY", "POLITICS", "INFLATION", "RATES"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Trump: I'll issue a $5k dividend to every adult in the US, if Republicans win the House and Senate",
+  "source_url": "https://www.forexfactory.com/news/1417277-trump-ill-issue-a-5k-dividend-to-every",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.82,
+        "timestamp_utc": "2026-09-10T03:40:00Z",
+        "direction": "FLAT_TO_UP",
+        "source": "TradersUnion current DXY snapshot",
+        "freshness": "current snapshot available at prediction time"
+      },
+      "US2Y": {
+        "value": 4.419,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T03:40:00Z",
+        "direction": "UP",
+        "source": "Investing.com market snapshot",
+        "freshness": "current snapshot available at prediction time"
+      },
+      "US10Y": {
+        "value": 4.812,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T03:40:00Z",
+        "direction": "UP",
+        "source": "Investing.com market snapshot",
+        "freshness": "current snapshot available at prediction time"
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "UP",
+        "source": "latest completed US session snapshot",
+        "freshness": "latest completed spot-session observation available pre-prediction"
+      },
+      "WTI": {
+        "value": 96.24,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T02:56:00Z",
+        "direction": "UP",
+        "source": "Reuters",
+        "freshness": "about 45 minutes old at prediction time"
+      },
+      "BRENT": {
+        "value": 101.10,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T02:56:00Z",
+        "direction": "HIGH_FLAT",
+        "source": "Reuters",
+        "freshness": "about 45 minutes old at prediction time"
+      }
+    },
+    "regimes": {
+      "usd": "SUBDUED",
+      "rates": "HIGH_RISING",
+      "volatility": "ELEVATED_RISING",
+      "oil": "GEOPOLITICAL_SUPPLY_PREMIUM_ABOVE_100_BRENT",
+      "risk": "RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-10T01:55:39.919442+00:00",
+    "material_adjustment": true,
+    "note": "ACTIONABLE v2 calibration says low-confidence directional 15m forecasts should be reduced/avoided, while low-confidence MIXED 1h/next-session forecasts have stronger evidence. This capped the weak NDX directional call and favored MIXED where current fiscal effects are genuinely two-sided."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A potentially very large fiscal transfer would raise deficit, inflation and Treasury-supply concerns, which are especially adverse to long-duration technology valuations; however the proposal is conditional on an election outcome and lacks implementation detail.",
+      "invalidation": "The proposal is withdrawn, narrowed materially, shown not to require new borrowing, or Treasury yields fall despite fiscal headlines."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Potential consumer stimulus is supportive for nominal demand, while the implied fiscal expansion and inflation risk are negative through higher yields, leaving the broad index with competing forces.",
+      "invalidation": "Concrete funding details materially reduce deficit implications or the market clearly prices the proposal as non-credible."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Cyclical and consumer exposure could benefit from a transfer, but higher inflation and financing costs offset that support.",
+      "invalidation": "The plan becomes clearly unfunded and yields surge sharply, or alternatively is dismissed as non-credible by markets."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A large unfunded fiscal transfer would reinforce concerns about U.S. deficits, inflation and long-run currency purchasing power, which can support gold; high real/nominal yields limit conviction.",
+      "invalidation": "Treasury yields and the dollar rise sharply enough to dominate fiscal-debasement concerns, or the proposal is quickly judged politically non-viable."
+    }
+  ]
+}
