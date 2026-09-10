@@ -1,0 +1,134 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417561-australian-yields-rba-hike-pricing",
+  "event_id": "forex-factory-1417561",
+  "event_time_utc": "2026-09-10T08:26:00+00:00",
+  "prediction_time_utc": "2026-09-10T09:13:58+00:00",
+  "evaluation_anchor_time_utc": "2026-09-10T09:13:58+00:00",
+  "prediction_latency_seconds": 2878.0,
+  "evaluated_at_utc": "2026-09-10T09:17:16.681067+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "AUSTRALIA_RBA",
+    "RATES",
+    "BOND_YIELDS",
+    "AU_EQUITIES"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.81,
+        "timestamp_utc": "2026-09-10T04:19:00Z",
+        "direction": "FLAT_TO_SLIGHTLY_DOWN",
+        "source": "Reuters syndicated by Business Recorder/Yahoo",
+        "freshness": "about 4 hours 55 minutes old at prediction time",
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "value": 4.43,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "HIGH_FLAT",
+        "source": "latest completed US session snapshot",
+        "freshness": "prior completed-session observation available pre-prediction",
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "value": 4.8407,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T02:06:17Z",
+        "direction": "HIGH_FLAT",
+        "source": "Reuters global markets",
+        "freshness": "about 7 hours 8 minutes old at prediction time",
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "ELEVATED_UP",
+        "source": "latest completed US session snapshot",
+        "freshness": "prior completed-session observation available pre-prediction",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 96.54,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T08:14:00Z",
+        "direction": "UP_AND_ELEVATED",
+        "source": "Reuters",
+        "freshness": "about 1 hour old at prediction time",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 101.61,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T08:14:00Z",
+        "direction": "UP_ABOVE_100",
+        "source": "Reuters",
+        "freshness": "about 1 hour old at prediction time",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417561-australian-yields-rba-hike-pricing",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8819.400390625,
+      "reference_price_time_utc": "2026-09-10T06:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T06:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 181.967,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T09:28:58+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T10:13:58+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T13:13:58+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
