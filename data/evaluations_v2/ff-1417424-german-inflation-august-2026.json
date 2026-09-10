@@ -1,0 +1,206 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417424-german-inflation-august-2026",
+  "event_id": "forex-factory-1417424",
+  "event_time_utc": "2026-09-10T06:16:45+00:00",
+  "prediction_time_utc": "2026-09-10T06:47:45+00:00",
+  "evaluation_anchor_time_utc": "2026-09-10T06:47:45+00:00",
+  "prediction_latency_seconds": 1860.0,
+  "evaluated_at_utc": "2026-09-10T06:50:22.505534+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "GERMANY_INFLATION",
+    "ECB",
+    "RATES",
+    "EU_EQUITIES"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.78,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "SUBDUED_TO_DOWN",
+        "source": "Investing.com close; Reuters intraday narrative confirmed a softer/subdued dollar on Sep 10",
+        "freshness": "latest exact DXY level located was prior completed session; direction cross-checked with same-day Reuters reporting available pre-prediction",
+        "regime": "FALLING"
+      },
+      "US2Y": {
+        "value": 4.43,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "SLIGHTLY_DOWN_INTRADAY",
+        "source": "US Treasury prior close; same-day curve update indicated the front end was easing",
+        "freshness": "prior completed-session exact level with same-day directional update available pre-prediction",
+        "regime": "FALLING"
+      },
+      "US10Y": {
+        "value": 4.8407,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T02:06:00Z",
+        "direction": "HIGH_FLAT",
+        "source": "Reuters global markets",
+        "freshness": "about 4 hours 42 minutes old at prediction time",
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "UP",
+        "source": "latest completed US session snapshot",
+        "freshness": "latest completed spot-session observation available pre-prediction",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 95.58,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T06:19:00Z",
+        "direction": "DOWN_INTRADAY_BUT_ELEVATED",
+        "source": "Reuters",
+        "freshness": "about 29 minutes old at prediction time",
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "value": 100.5,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T06:19:00Z",
+        "direction": "DOWN_INTRADAY_BUT_ABOVE_100",
+        "source": "Reuters",
+        "freshness": "about 29 minutes old at prediction time",
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "FALLING",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417424-german-inflation-august-2026",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25576.45,
+      "reference_price_time_utc": "2026-09-09T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 886.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T07:02:45+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T07:47:45+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T10:47:45+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417424-german-inflation-august-2026",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6302.0400390625,
+      "reference_price_time_utc": "2026-09-09T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 917.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T07:02:45+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T07:47:45+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T10:47:45+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417424-german-inflation-august-2026",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8159.02001953125,
+      "reference_price_time_utc": "2026-09-09T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-09T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 917.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T07:02:45+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T07:47:45+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T10:47:45+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
