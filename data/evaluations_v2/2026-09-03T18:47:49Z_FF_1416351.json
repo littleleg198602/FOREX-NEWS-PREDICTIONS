@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-03T18:47:49+00:00",
   "evaluation_anchor_time_utc": "2026-09-03T18:47:49+00:00",
   "prediction_latency_seconds": 5089.0,
-  "evaluated_at_utc": "2026-09-10T09:46:18.757186+00:00",
+  "evaluated_at_utc": "2026-09-10T10:55:39.335493+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -95,6 +95,44 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T19:02:49+00:00",
+          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
+          "market_delay_minutes": 0.18,
+          "price": 7751.58984375,
+          "change_pct": -0.021028,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.048883,
+          "post_event_range_pct": 0.053267,
+          "mfe_pct": 0.023214,
+          "mae_pct": -0.030053,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-04",
+          "actual_price_time_utc": "2026-09-04T20:34:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
+          "price": 7718.6,
+          "change_pct": -0.446527,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.903493,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.568407,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.903493
+        },
         "4h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-03T22:47:49+00:00",
@@ -119,44 +157,6 @@
           "mae_pct": -0.071071,
           "directional_threshold_pct": 0.014897,
           "actual_direction_thresholded": "DOWN"
-        },
-        "next_session": {
-          "status": "DONE",
-          "session_local_date": "2026-09-04",
-          "actual_price_time_utc": "2026-09-04T20:34:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-04T20:33:00+00:00",
-          "price": 7718.6,
-          "change_pct": -0.446527,
-          "actual_direction": "DOWN",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4,
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 0.903493,
-          "baseline_definition": "previous_relevant_local_trading_session_range",
-          "post_event_range_pct": 0.568407,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
-          "neutral_envelope_pct": 0.903493
-        },
-        "15m": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-03T19:02:49+00:00",
-          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
-          "market_delay_minutes": 0.18,
-          "price": 7751.58984375,
-          "change_pct": -0.021028,
-          "actual_direction": "DOWN",
-          "correct": false,
-          "score_type": "directional",
-          "baseline_range_pct": 0.048883,
-          "post_event_range_pct": 0.053267,
-          "mfe_pct": 0.023214,
-          "mae_pct": -0.030053,
-          "directional_threshold_pct": 0.01,
-          "actual_direction_thresholded": "DOWN"
         }
       },
       "yahoo_proxy_for": null,
@@ -177,6 +177,44 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T19:02:49+00:00",
+          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
+          "market_delay_minutes": 0.18,
+          "price": 29509.166015625,
+          "change_pct": -0.04336,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.06723,
+          "post_event_range_pct": 0.100495,
+          "mfe_pct": 0.047727,
+          "mae_pct": -0.052768,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-04",
+          "actual_price_time_utc": "2026-09-04T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T21:16:00+00:00",
+          "price": 29544.154,
+          "change_pct": 0.075155,
+          "actual_direction": "NO_MOVE",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.279304,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.726531,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 1.279304
+        },
         "4h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-03T22:47:49+00:00",
@@ -201,44 +239,6 @@
           "mae_pct": -0.152429,
           "directional_threshold_pct": 0.021274,
           "actual_direction_thresholded": "DOWN"
-        },
-        "next_session": {
-          "status": "DONE",
-          "session_local_date": "2026-09-04",
-          "actual_price_time_utc": "2026-09-04T21:17:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-04T21:16:00+00:00",
-          "price": 29544.154,
-          "change_pct": 0.075155,
-          "actual_direction": "NO_MOVE",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4,
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 1.279304,
-          "baseline_definition": "previous_relevant_local_trading_session_range",
-          "post_event_range_pct": 0.726531,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
-          "neutral_envelope_pct": 1.279304
-        },
-        "15m": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-03T19:02:49+00:00",
-          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
-          "market_delay_minutes": 0.18,
-          "price": 29509.166015625,
-          "change_pct": -0.04336,
-          "actual_direction": "DOWN",
-          "correct": false,
-          "score_type": "directional",
-          "baseline_range_pct": 0.06723,
-          "post_event_range_pct": 0.100495,
-          "mfe_pct": 0.047727,
-          "mae_pct": -0.052768,
-          "directional_threshold_pct": 0.01,
-          "actual_direction_thresholded": "DOWN"
         }
       },
       "yahoo_proxy_for": null,
@@ -259,15 +259,9 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "evaluations": {
-        "4h": {
+        "15m": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-03T22:47:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 166.817
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-03T19:47:49+00:00",
+          "target_time_utc": "2026-09-03T19:02:49+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 166.817
         },
@@ -291,9 +285,15 @@
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 0.857391
         },
-        "15m": {
+        "4h": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-03T19:02:49+00:00",
+          "target_time_utc": "2026-09-03T22:47:49+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 166.817
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-03T19:47:49+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 166.817
         }
@@ -316,15 +316,9 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "evaluations": {
-        "4h": {
+        "15m": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-03T22:47:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 197.817
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-03T19:47:49+00:00",
+          "target_time_utc": "2026-09-03T19:02:49+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 197.817
         },
@@ -348,9 +342,15 @@
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 0.666447
         },
-        "15m": {
+        "4h": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-03T19:02:49+00:00",
+          "target_time_utc": "2026-09-03T22:47:49+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 197.817
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-03T19:47:49+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 197.817
         }
@@ -373,6 +373,44 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-03T19:02:49+00:00",
+          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
+          "market_delay_minutes": 0.18,
+          "price": 4522.2998046875,
+          "change_pct": -0.145733,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.152353,
+          "post_event_range_pct": 0.194303,
+          "mfe_pct": 0.170013,
+          "mae_pct": -0.024291,
+          "directional_threshold_pct": 0.015235,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-04",
+          "actual_price_time_utc": "2026-09-04T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
+          "price": 4476.60009765625,
+          "change_pct": -1.154802,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 2.885915,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.777712,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 2.885915
+        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-03T22:47:49+00:00",
@@ -407,44 +445,6 @@
           "mfe_pct": 0.189894,
           "mae_pct": -0.024291,
           "directional_threshold_pct": 0.041732,
-          "actual_direction_thresholded": "DOWN"
-        },
-        "next_session": {
-          "status": "DONE",
-          "session_local_date": "2026-09-04",
-          "actual_price_time_utc": "2026-09-04T21:00:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-04T20:59:00+00:00",
-          "price": 4476.60009765625,
-          "change_pct": -1.154802,
-          "actual_direction": "DOWN",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4,
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 2.885915,
-          "baseline_definition": "previous_relevant_local_trading_session_range",
-          "post_event_range_pct": 2.777712,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
-          "neutral_envelope_pct": 2.885915
-        },
-        "15m": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-03T19:02:49+00:00",
-          "actual_price_time_utc": "2026-09-03T19:03:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-03T19:02:00+00:00",
-          "market_delay_minutes": 0.18,
-          "price": 4522.2998046875,
-          "change_pct": -0.145733,
-          "actual_direction": "DOWN",
-          "correct": true,
-          "score_type": "directional",
-          "baseline_range_pct": 0.152353,
-          "post_event_range_pct": 0.194303,
-          "mfe_pct": 0.170013,
-          "mae_pct": -0.024291,
-          "directional_threshold_pct": 0.015235,
           "actual_direction_thresholded": "DOWN"
         }
       },

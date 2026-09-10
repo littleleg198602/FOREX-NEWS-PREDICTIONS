@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-10T09:43:40+00:00",
   "evaluation_anchor_time_utc": "2026-09-10T09:43:40+00:00",
   "prediction_latency_seconds": 6220.0,
-  "evaluated_at_utc": "2026-09-10T09:46:57.406798+00:00",
+  "evaluated_at_utc": "2026-09-10T10:56:20.830646+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -97,36 +97,51 @@
     {
       "prediction_id": "ff-1417565-italian-industrial-production-july-2026",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6301.0,
-      "reference_price_time_utc": "2026-09-10T09:32:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-10T09:31:00+00:00",
+      "reference_price": 6293.990234375,
+      "reference_price_time_utc": "2026-09-10T09:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T09:42:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.667,
+      "reference_age_minutes": 0.667,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-10T09:58:40+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-10T10:43:40+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-10T13:43:40+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-10T09:58:40+00:00",
+          "actual_price_time_utc": "2026-09-10T09:59:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T09:58:00+00:00",
+          "market_delay_minutes": 0.33,
+          "price": 6302.56005859375,
+          "change_pct": 0.136159,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.176678,
+          "post_event_range_pct": 0.153009,
+          "mfe_pct": 0.166508,
+          "mae_pct": 0.013499,
+          "directional_threshold_pct": 0.017668,
+          "actual_direction_thresholded": "UP"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-10T13:43:40+00:00"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-10T10:43:40+00:00",
+          "reason": "no complete traded bar available at/after target"
         }
       }
     }
