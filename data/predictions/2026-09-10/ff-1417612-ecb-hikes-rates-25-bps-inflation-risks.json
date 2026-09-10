@@ -1,0 +1,55 @@
+{
+  "prediction_id": "ff-1417612-ecb-hikes-rates-25-bps-inflation-risks",
+  "event_id": "ff-1417612-ecb-hikes-rates-25-bps-inflation-risks",
+  "created_at_utc": "2026-09-10T12:50:24Z",
+  "event_time_utc": "2026-09-10T12:15:00Z",
+  "published_at_utc": "2026-09-10T12:27:24Z",
+  "source_time_text": "23 min ago",
+  "observed_at_utc": "2026-09-10T12:50:24Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["EUROZONE", "ECB", "RATES", "INFLATION", "GEOPOLITICS"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / European Central Bank",
+    "headline": "ECB hikes rates 25 bps as inflation risks rise",
+    "url": "https://www.forexfactory.com/news/1417612-ecb-hikes-rates-25-bps-as-inflation-risks",
+    "impact": "high",
+    "facts_at_prediction": {
+      "rate_change_bps": 25,
+      "deposit_rate": "2.50%",
+      "headline_inflation_forecasts": {"2026":"3.0%","2027":"2.5%","2028":"2.1%"},
+      "growth_forecasts": {"2026":"0.9%","2027":"1.4%","2028":"1.5%"},
+      "interpretation": "ECB delivered the expected 25bp hike but stressed that Middle East energy shocks are keeping inflation above target for an extended period; later inflation forecasts were revised higher while growth forecasts were upgraded"
+    }
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.444, "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "DOWN", "regime": "SOFT_USD", "source": "The Daily DXY, observed current-session quote", "freshness_seconds": 0},
+      "US2Y": {"value": 4.42, "unit": "percent", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP_SLIGHTLY", "regime": "HIGH_YIELDS", "source": "Wall Street Journal market coverage, latest available quote observed before prediction", "freshness_seconds": 0},
+      "US10Y": {"value": 4.84, "unit": "percent", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "HIGH_RISING_YIELDS", "source": "Wall Street Journal market coverage, latest available quote observed before prediction", "freshness_seconds": 0},
+      "VIX": {"value": 16.51, "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "MODERATE_RISK", "source": "MarketWatch live coverage", "freshness_seconds": 0},
+      "WTI": {"value": 97.50, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "ELEVATED_OIL", "source": "Reuters market coverage", "freshness_seconds": 0},
+      "BRENT": {"value": 102.15, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "ELEVATED_OIL", "source": "Reuters market coverage", "freshness_seconds": 0}
+    },
+    "regimes": {"usd": "SOFT_USD", "rates": "HIGH_RISING_YIELDS", "volatility": "MODERATE_RISK_RISING", "oil": "ELEVATED_RISING", "global_risk": "RISK_OFF_PRESSURE"}
+  },
+  "learning_v2_at_prediction": {
+    "profile_generated_at_utc": "2026-09-10T11:45:59.660207+00:00",
+    "material_adjustment": true,
+    "reason": "ACTIONABLE v2 calibration shows poor short-horizon performance for directional confidence 5-6 and weak 1-4 directional performance at 15m, so confidence is capped despite the hawkish policy facts. ACTIONABLE mixed-neutral next-session evidence supports MIXED next-session forecasts."
+  },
+  "predictions": [
+    {"instrument":"GDAXI","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"The ECB rate hike raises the discount rate while persistent energy-driven inflation and high global yields pressure German equity valuations, especially rate-sensitive sectors.","invalidation":"A strongly dovish Lagarde press conference, a sharp fall in Bund/Treasury yields, or a rapid drop in oil would invalidate the bearish immediate call."},
+    {"instrument":"STOXX50","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Higher ECB policy rates and upward inflation revisions tighten euro-area financial conditions, creating a broad valuation headwind despite upgraded growth forecasts.","invalidation":"A clear dovish policy-path signal or a strong risk-on reversal with falling yields would invalidate the bearish immediate call."},
+    {"instrument":"FCHI40","immediate":{"direction":"DOWN","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"The expected hike still tightens financial conditions while persistent energy inflation remains a margin and valuation headwind for French large caps.","invalidation":"A material decline in European yields and oil, or a dovish ECB follow-through, would invalidate the bearish immediate call."},
+    {"instrument":"SPA35","immediate":{"direction":"DOWN","confidence":3},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Higher ECB rates tighten financing conditions across the euro area, though the bank-heavy Spanish index can partly benefit from higher rates, limiting conviction.","invalidation":"Strong bank outperformance or a dovish ECB path would invalidate the mild bearish call."},
+    {"instrument":"XAUUSD","immediate":{"direction":"MIXED","confidence":4},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"ECB tightening can weigh on gold through higher global yields, while persistent inflation and Middle East risk support safe-haven demand, leaving the net immediate signal mixed.","invalidation":"A decisive move in global real yields or geopolitical risk would break the mixed balance."}
+  ]
+}
