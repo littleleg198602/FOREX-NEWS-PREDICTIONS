@@ -1,0 +1,117 @@
+{
+  "prediction_id": "ff-1417641-yemen-houthis-red-sea-navigation-safe",
+  "event_id": "ff-1417641",
+  "created_at_utc": "2026-09-10T15:16:33Z",
+  "event_time_utc": "2026-09-10T14:26:00Z",
+  "published_at_utc": "2026-09-10T14:26:00Z",
+  "source_time_text": "Sep 10, 2026 3:26pm",
+  "observed_at_utc": "2026-09-10T15:16:33Z",
+  "time_source": "forex_factory_absolute_source",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "ENERGY", "RED_SEA", "YEMEN"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / FinancialJuice",
+    "headline": "Yemen's Houthis Spokesperson: Operations will stop when attacks on Yemen end and the blockade is lifted",
+    "url": "https://www.forexfactory.com/news/1417641-yemens-houthis-spokesperson-operations-will-stop-when-attacks"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.44,
+        "timestamp_utc": "2026-09-10T15:00:00Z",
+        "direction": "DOWN",
+        "regime": "SOFT",
+        "source": "The Daily DXY",
+        "freshness": "same-day intraday"
+      },
+      "US2Y": {
+        "value": 4.53,
+        "unit": "%",
+        "timestamp_utc": "2026-09-10T15:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "MarketWatch",
+        "freshness": "same-day intraday"
+      },
+      "US10Y": {
+        "value": 4.927,
+        "unit": "%",
+        "timestamp_utc": "2026-09-10T14:50:51Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "Barron's / Tradeweb",
+        "freshness": "about 26 minutes before prediction"
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-10T15:00:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "SKN market overview",
+        "freshness": "same-day intraday"
+      },
+      "WTI": {
+        "value": 100.15,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T15:00:00Z",
+        "direction": "UP",
+        "regime": "SPIKE_HIGH",
+        "source": "MarketWatch / FactSet",
+        "freshness": "same-day intraday"
+      },
+      "BRENT": {
+        "value": 105.65,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T15:00:00Z",
+        "direction": "UP",
+        "regime": "SPIKE_HIGH",
+        "source": "MarketWatch / FactSet",
+        "freshness": "same-day intraday"
+      }
+    },
+    "regimes": {
+      "usd": "SOFT",
+      "rates": "HIGH_RISING",
+      "volatility": "ELEVATED",
+      "energy": "SPIKE_HIGH",
+      "risk": "RISK_OFF"
+    }
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-10T14:28:20.952347+00:00",
+    "material_adjustment": true,
+    "applied_segment": "mixed_neutral confidence 1-4 next_session",
+    "sample_status": "ACTIONABLE",
+    "effect": "Kept conflicting geopolitical/risk-off setup in MIXED rather than forcing a weak directional call."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The statement reduces some Red Sea shipping-risk premium, but oil and Treasury yields remain sharply elevated, leaving US equities with offsetting forces.",
+      "invalidation": "A verified ceasefire/de-escalation that pushes crude materially lower would shift the balance upward; renewed attacks or shipping disruption would shift it downward."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Potential geopolitical relief is positive for risk appetite, but near-5% US10Y and higher Fed-hike pricing are a direct valuation headwind for growth stocks.",
+      "invalidation": "A sharp fall in Treasury yields alongside confirmed de-escalation would favor upside; further oil/yield spikes would favor downside."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Reduced Red Sea risk is mildly bearish for safe-haven demand, while elevated geopolitical uncertainty and a softer DXY remain supportive, producing a balanced setup.",
+      "invalidation": "A durable de-escalation with falling oil and risk premia would favor downside; renewed regional escalation would favor upside."
+    }
+  ]
+}
