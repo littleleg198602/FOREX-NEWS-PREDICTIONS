@@ -1,0 +1,113 @@
+{
+  "prediction_id": "ff-1417575-white-house-refined-copper-tariffs",
+  "event_id": "ff-1417575-white-house-refined-copper-tariffs",
+  "created_at_utc": "2026-09-10T10:53:14Z",
+  "event_time_utc": "2026-09-10T10:29:00Z",
+  "published_at_utc": "2026-09-10T10:29:00Z",
+  "source_time_text": "Sep 10, 11:29am",
+  "observed_at_utc": "2026-09-10T10:53:14Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "TARIFFS", "COPPER", "TRADE_POLICY", "COMMODITIES"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / FinancialJuice",
+    "headline": "White House yet to decide on refined copper tariffs",
+    "url": "https://www.forexfactory.com/news/1417575-white-house-yet-to-decide-on-refined-copper",
+    "impact": "low",
+    "facts_at_prediction": {
+      "white_house_decision_status": "not_yet_decided",
+      "lme_copper_reaction_pct": -2.0,
+      "reaction_context": "LME copper dropped about 2% after the Reuters-linked tariff cost concern headline carried on the FF story page."
+    }
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.78,
+        "timestamp_utc": "2026-09-10T10:00:00Z",
+        "direction": "UP_SLIGHTLY",
+        "regime": "NEUTRAL_USD",
+        "source": "Financial Express market coverage",
+        "freshness_seconds": 3194
+      },
+      "US2Y": {
+        "value": 4.447,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T09:15:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING_YIELDS",
+        "source": "WSJ market coverage",
+        "freshness_seconds": 5894
+      },
+      "US10Y": {
+        "value": 4.857,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T10:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING_YIELDS",
+        "source": "Financial Express market coverage",
+        "freshness_seconds": 3194
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-09T20:15:00Z",
+        "direction": "UP",
+        "regime": "MODERATE_RISK",
+        "source": "CBOE prior close via YCharts",
+        "freshness_seconds": 52794
+      },
+      "WTI": {
+        "value": 96.54,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T08:14:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED_OIL",
+        "source": "Reuters",
+        "freshness_seconds": 9594
+      },
+      "BRENT": {
+        "value": 101.61,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T08:14:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED_OIL",
+        "source": "Reuters",
+        "freshness_seconds": 9594
+      }
+    },
+    "regimes": {
+      "usd": "NEUTRAL_USD",
+      "rates": "HIGH_RISING_YIELDS",
+      "volatility": "MODERATE_RISK",
+      "oil": "ELEVATED_RISING",
+      "global_risk": "MIXED_RISK_OFF_PRESSURE"
+    }
+  },
+  "learning_v2_at_prediction": {
+    "profile_generated_at_utc": "2026-09-10T09:46:58.336599+00:00",
+    "material_adjustment": true,
+    "reason": "ACTIONABLE directional confidence calibration indicates weak performance for low-to-medium confidence directional calls, so confidence is capped at 3/10; ACTIONABLE low-confidence mixed-neutral next-session calibration supports a MIXED next-session view. Current copper/tariff facts remain primary."
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Uncertainty over U.S. refined-copper tariffs triggered an approximately 2% LME copper drop on the FF story page. Australia’s equity benchmark has meaningful materials/mining exposure, so a sharp copper repricing is a modest immediate headwind, though the policy outcome remains undecided and China stimulus provides an offset.",
+      "invalidation": "A clear White House decision that removes tariff-cost concerns, a rapid copper rebound, or stronger China-driven metals demand would invalidate the bearish AUS200 impulse."
+    }
+  ]
+}
