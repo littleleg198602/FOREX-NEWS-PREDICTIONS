@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T12:27:05+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T12:27:05+00:00",
   "prediction_latency_seconds": 9185.0,
-  "evaluated_at_utc": "2026-09-09T21:54:45.914563+00:00",
+  "evaluated_at_utc": "2026-09-10T00:16:51.644072+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -98,7 +98,7 @@
     {
       "prediction_id": "ff-1416916-yen-short-squeeze",
       "instrument": "NI225",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^N225",
       "yahoo_proxy_for": null,
@@ -112,12 +112,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-08T13:27:05+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 357.083
-        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-08T12:42:05+00:00",
@@ -125,9 +119,31 @@
           "reference_age_minutes": 357.083
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-09",
-          "predicted_direction": "DOWN"
+          "actual_price_time_utc": "2026-09-09T06:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-09T06:29:00+00:00",
+          "price": 65148.078125,
+          "change_pct": -0.340129,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 2.174411,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.187619,
+          "mfe_pct": 0.539605,
+          "mae_pct": -0.648014,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.217441,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-08T13:27:05+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 357.083
         },
         "4h": {
           "status": "MARKET_CLOSED",
