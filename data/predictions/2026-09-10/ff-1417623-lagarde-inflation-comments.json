@@ -1,0 +1,80 @@
+{
+  "prediction_id": "ff-1417623-lagarde-inflation-comments",
+  "event_id": "forex-factory-1417623",
+  "created_at_utc": "2026-09-10T14:18:45Z",
+  "event_time_utc": "2026-09-10T13:20:45Z",
+  "published_at_utc": "2026-09-10T13:20:45Z",
+  "source_time_text": "58 min ago",
+  "observed_at_utc": "2026-09-10T14:18:45Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["Eurozone", "ECB", "inflation", "central-bank", "rates"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / FinancialJuice",
+    "headline": "ECB's Lagarde: Inflation has been lower recently than anticipated, especially food",
+    "url": "https://www.forexfactory.com/news/1417623-ecbs-lagarde-inflation-has-been-lower-recently-than"
+  },
+  "summary": "Lagarde said recent inflation has been lower than anticipated, especially food, but also said the ECB was surprised by how long inflation persisted and declined to signal a future rate path. This partially softens the immediate hawkish interpretation of the rate hike without establishing a clear easing bias.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.12, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "FIRMING", "source": "Reuters", "freshness": "intraday_same_session"},
+      "US2Y": {"value": 4.53, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "RISING_YIELDS", "source": "MarketWatch", "freshness": "intraday_same_session"},
+      "US10Y": {"value": 4.914, "timestamp_utc": "2026-09-10T13:28:57Z", "direction": "UP", "regime": "RISING_YIELDS", "source": "Barron's", "freshness": "about_50_minutes"},
+      "VIX": {"value": 16.51, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "RISK_CAUTION", "source": "MarketWatch", "freshness": "intraday_same_session"},
+      "WTI": {"value": 100.0, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "ENERGY_SPIKE", "source": "Reuters", "freshness": "intraday_same_session"},
+      "BRENT": {"value": 105.26, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "ENERGY_SPIKE", "source": "Reuters", "freshness": "intraday_same_session"}
+    },
+    "regimes": {
+      "rates": "BEARISH_RISK_AS_YIELDS_RISE",
+      "risk": "CAUTIOUS",
+      "energy": "SHARP_UP",
+      "usd": "FIRMING",
+      "overall": "INFLATIONARY_RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "profile_generated_at_utc": "2026-09-10T12:56:01.898927+00:00",
+    "applied": true,
+    "material_adjustment": true,
+    "basis": "ACTIONABLE v2 evidence supports restraining weak directional forecasts and gives stronger evidence to low-confidence MIXED next-session calls.",
+    "legacy_v1_used": false
+  },
+  "predictions": [
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Softer recent inflation is equity-friendly, but longer-lasting inflation and today's rate hike leave policy restrictive and prevent a clean bullish signal.",
+      "invalidation": "A clear ECB signal of another near-term hike or, conversely, a clear pivot toward easing creates a directional catalyst."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The softer inflation remark helps rate-sensitive equities, while high energy costs and persistent inflation remain a drag on German growth and valuations.",
+      "invalidation": "Sharp repricing of ECB rates or a major move in energy prices dominates the balanced signal."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lagarde's comments reduce immediate hawkish pressure but do not provide a firm easing path, leaving French equities without a strong directional edge.",
+      "invalidation": "A materially more hawkish or dovish ECB policy signal follows the press conference."
+    },
+    {
+      "instrument": "SPA35",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Banks may benefit from higher rates while broader equities face valuation and energy headwinds, producing offsetting effects.",
+      "invalidation": "A decisive shift in European rates or risk sentiment breaks the balance."
+    }
+  ]
+}
