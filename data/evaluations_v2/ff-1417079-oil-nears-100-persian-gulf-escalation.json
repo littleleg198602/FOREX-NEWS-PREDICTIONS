@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-09T04:53:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-09T04:53:33+00:00",
   "prediction_latency_seconds": 2820.0,
-  "evaluated_at_utc": "2026-09-10T17:08:00.746210+00:00",
+  "evaluated_at_utc": "2026-09-10T17:52:26.603320+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -108,6 +108,29 @@
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-10",
+          "predicted_direction": "UP"
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-09T08:53:33+00:00",
+          "actual_price_time_utc": "2026-09-09T08:54:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-09T08:53:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 4445.60009765625,
+          "change_pct": 0.515517,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.691872,
+          "post_event_range_pct": 0.755176,
+          "mfe_pct": 0.757439,
+          "mae_pct": 0.002263,
+          "directional_threshold_pct": 0.069187,
+          "actual_direction_thresholded": "UP"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T05:53:33+00:00",
@@ -143,29 +166,6 @@
           "mae_pct": 0.002263,
           "directional_threshold_pct": 0.01,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "UP"
-        },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-09T08:53:33+00:00",
-          "actual_price_time_utc": "2026-09-09T08:54:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-09T08:53:00+00:00",
-          "market_delay_minutes": 0.45,
-          "price": 4445.60009765625,
-          "change_pct": 0.515517,
-          "actual_direction": "UP",
-          "correct": true,
-          "score_type": "directional",
-          "baseline_range_pct": 0.691872,
-          "post_event_range_pct": 0.755176,
-          "mfe_pct": 0.757439,
-          "mae_pct": 0.002263,
-          "directional_threshold_pct": 0.069187,
-          "actual_direction_thresholded": "UP"
         }
       }
     },
@@ -186,18 +186,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:53:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 772.55
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:08:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 772.55
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-09",
@@ -223,6 +211,18 @@
           "target_time_utc": "2026-09-09T08:53:33+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 772.55
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:53:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 772.55
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:08:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 772.55
         }
       }
     },
@@ -243,18 +243,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:53:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 803.55
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:08:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 803.55
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-09",
@@ -280,6 +268,18 @@
           "target_time_utc": "2026-09-09T08:53:33+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 803.55
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:53:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 803.55
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:08:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 803.55
         }
       }
     },
@@ -300,18 +300,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:53:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 803.55
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:08:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 803.55
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-09",
@@ -337,6 +325,18 @@
           "target_time_utc": "2026-09-09T08:53:33+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 803.55
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:53:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 803.55
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:08:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 803.55
         }
       }
     },
@@ -357,18 +357,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:53:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 472.55
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:08:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 472.55
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-09",
@@ -394,6 +382,18 @@
           "target_time_utc": "2026-09-09T08:53:33+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 472.55
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:53:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.55
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:08:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.55
         }
       }
     },
@@ -414,18 +414,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:53:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 456.55
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:08:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 456.55
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-09",
@@ -451,6 +439,18 @@
           "target_time_utc": "2026-09-09T08:53:33+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 456.55
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:53:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 456.55
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:08:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 456.55
         }
       }
     },
@@ -471,18 +471,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:53:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 467.55
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T05:08:33+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 467.55
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-09",
@@ -508,6 +496,18 @@
           "target_time_utc": "2026-09-09T08:53:33+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 467.55
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:53:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 467.55
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T05:08:33+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 467.55
         }
       }
     },
@@ -528,6 +528,28 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 3,
       "evaluations": {
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-10",
+          "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-09T08:53:33+00:00",
+          "actual_price_time_utc": "2026-09-09T08:54:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-09T08:53:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 67.29499816894531,
+          "change_pct": 0.582915,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.517076,
+          "post_event_range_pct": 1.120992,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 1.517076
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T05:53:33+00:00",
@@ -561,28 +583,6 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 0.112095
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-09T08:53:33+00:00",
-          "actual_price_time_utc": "2026-09-09T08:54:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-09T08:53:00+00:00",
-          "market_delay_minutes": 0.45,
-          "price": 67.29499816894531,
-          "change_pct": 0.582915,
-          "actual_direction": "UP",
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 1.517076,
-          "post_event_range_pct": 1.120992,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "neutral_envelope_pct": 1.517076
         }
       }
     }
