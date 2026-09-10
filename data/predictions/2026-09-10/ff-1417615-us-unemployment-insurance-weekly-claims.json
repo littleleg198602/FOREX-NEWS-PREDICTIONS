@@ -1,0 +1,53 @@
+{
+  "prediction_id": "ff-1417615-us-unemployment-insurance-weekly-claims",
+  "event_id": "ff-1417615-us-unemployment-insurance-weekly-claims",
+  "created_at_utc": "2026-09-10T12:50:24Z",
+  "event_time_utc": "2026-09-10T12:30:00Z",
+  "published_at_utc": "2026-09-10T12:42:24Z",
+  "source_time_text": "8 min ago",
+  "observed_at_utc": "2026-09-10T12:50:24Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "LABOR", "JOBLESS_CLAIMS", "FED", "RATES"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / U.S. Department of Labor",
+    "headline": "US Unemployment Insurance Weekly Claims",
+    "url": "https://www.forexfactory.com/news/1417615-us-unemployment-insurance-weekly-claims",
+    "impact": "medium",
+    "facts_at_prediction": {
+      "initial_claims": 206000,
+      "previous_revised": 207000,
+      "four_week_average": 206000,
+      "continuing_claims": 1774000,
+      "interpretation": "claims remained low and broadly stable, signalling continued labor-market resilience rather than a fresh deterioration"
+    }
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.444, "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "DOWN", "regime": "SOFT_USD", "source": "The Daily DXY, observed current-session quote", "freshness_seconds": 0},
+      "US2Y": {"value": 4.42, "unit": "percent", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP_SLIGHTLY", "regime": "HIGH_YIELDS", "source": "Wall Street Journal market coverage, latest available quote observed before prediction", "freshness_seconds": 0},
+      "US10Y": {"value": 4.84, "unit": "percent", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "HIGH_RISING_YIELDS", "source": "Wall Street Journal market coverage, latest available quote observed before prediction", "freshness_seconds": 0},
+      "VIX": {"value": 16.51, "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "MODERATE_RISK", "source": "MarketWatch live coverage", "freshness_seconds": 0},
+      "WTI": {"value": 97.50, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "ELEVATED_OIL", "source": "Reuters market coverage", "freshness_seconds": 0},
+      "BRENT": {"value": 102.15, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-10T12:50:24Z", "direction": "UP", "regime": "ELEVATED_OIL", "source": "Reuters market coverage", "freshness_seconds": 0}
+    },
+    "regimes": {"usd": "SOFT_USD", "rates": "HIGH_RISING_YIELDS", "volatility": "MODERATE_RISK_RISING", "oil": "ELEVATED_RISING", "global_risk": "RISK_OFF_PRESSURE"}
+  },
+  "learning_v2_at_prediction": {
+    "profile_generated_at_utc": "2026-09-10T11:45:59.660207+00:00",
+    "material_adjustment": true,
+    "reason": "ACTIONABLE v2 calibration discourages overconfidence in low-to-mid confidence directional calls; this secondary labor signal is therefore kept weak. ACTIONABLE mixed-neutral next-session evidence supports MIXED for the next session."
+  },
+  "predictions": [
+    {"instrument":"NDX","immediate":{"direction":"DOWN","confidence":3},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Persistently low claims reinforce a resilient labor-market narrative, which can keep Fed tightening expectations and front-end yields firm, mildly pressuring duration-sensitive technology shares.","invalidation":"A sharp decline in Treasury yields or clear dovish Fed repricing would invalidate the mild bearish call."},
+    {"instrument":"SP500","immediate":{"direction":"DOWN","confidence":3},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Labor resilience marginally supports higher-for-longer rate expectations, a modest headwind for broad equity valuations in an already high-yield environment.","invalidation":"A broad risk-on move accompanied by falling yields would invalidate the mild bearish call."},
+    {"instrument":"XAUUSD","immediate":{"direction":"DOWN","confidence":3},"next_session":{"direction":"MIXED","confidence":4},"mechanism":"Resilient employment can support Treasury yields and reduce urgency for Fed easing, creating a mild headwind for non-yielding gold despite geopolitical support.","invalidation":"A sharp fall in yields or renewed geopolitical escalation would invalidate the mild bearish call."}
+  ]
+}
