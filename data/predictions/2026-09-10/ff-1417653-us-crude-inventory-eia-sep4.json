@@ -1,0 +1,65 @@
+{
+  "prediction_id": "ff-1417653-us-crude-inventory-eia-sep4",
+  "event_id": "ff-1417653",
+  "created_at_utc": "2026-09-10T17:03:57Z",
+  "event_time_utc": "2026-09-10T16:29:57Z",
+  "published_at_utc": "2026-09-10T16:29:57Z",
+  "source_time_text": "34 min ago",
+  "observed_at_utc": "2026-09-10T17:03:57Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "ENERGY", "EIA", "CRUDE_INVENTORIES", "INFLATION"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / StreetInsider / EIA",
+    "headline": "Crude Inventory -0.4M Barrels Last Week - EIA",
+    "url": "https://www.forexfactory.com/news/1417653-crude-inventory-04m-barrels-last-week-eia"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.75, "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "DOWN", "regime": "SOFT", "source": "DestChart same-day live range", "freshness": "same-day reading observed at prediction time"},
+      "US2Y": {"value": 4.53, "unit": "%", "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "UP", "regime": "HIGH_RISING", "source": "MarketWatch", "freshness": "same-day intraday quote observed at prediction time"},
+      "US10Y": {"value": 4.927, "unit": "%", "timestamp_utc": "2026-09-10T14:50:51Z", "direction": "UP", "regime": "HIGH_RISING", "source": "Barron's / Tradeweb", "freshness": "about 2h13m before prediction"},
+      "VIX": {"value": 16.46, "timestamp_utc": "2026-09-10T02:31:00Z", "direction": "UP", "regime": "ELEVATED", "source": "MetricsHour / CBOE", "freshness": "same-day but stale intraday quote"},
+      "WTI": {"value": 101.21, "unit": "USD/bbl", "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "UP", "regime": "SPIKE_HIGH", "source": "Reuters same-day intraday report", "freshness": "same-day quote observed at prediction time"},
+      "BRENT": {"value": 106.60, "unit": "USD/bbl", "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "UP", "regime": "SPIKE_HIGH", "source": "Reuters same-day intraday report", "freshness": "same-day quote observed at prediction time"}
+    },
+    "regimes": {"usd": "SOFT", "rates": "HIGH_RISING", "volatility": "ELEVATED", "energy": "SPIKE_HIGH", "risk": "RISK_OFF"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-10T15:19:49.255833+00:00",
+    "material_adjustment": true,
+    "applied_segment": "directional confidence 1-4 / mixed_neutral next_session",
+    "sample_status": "ACTIONABLE",
+    "effect": "Kept the directional reaction low-confidence because the smaller-than-expected draw is being overwhelmed by geopolitical energy risk; favored MIXED next-session outcomes."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A 0.4M-barrel crude draw is smaller than the roughly 1.4M draw expected on the FF calendar, marginally easing oil/inflation pressure and supporting equities, but the effect is small versus the ongoing geopolitical oil spike.",
+      "invalidation": "Renewed supply-disruption headlines or another sharp oil/yield leg higher would overwhelm the modest inventory relief."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A softer-than-expected inventory draw slightly reduces the marginal inflation impulse from energy, which helps duration-sensitive technology shares, but elevated Treasury yields cap conviction.",
+      "invalidation": "A further rise in US2Y/US10Y or renewed oil escalation would negate the modest positive effect."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A smaller crude draw is mildly disinflationary and can weigh on inflation-hedge demand, while Middle East risk and a soft DXY remain supportive, leaving gold balanced.",
+      "invalidation": "A major geopolitical escalation would favor upside; a sharp rise in real yields with easing geopolitical risk would favor downside."
+    }
+  ]
+}
