@@ -1,0 +1,119 @@
+{
+  "prediction_id": "ff-1417687-us-treasury-operation-economic-outcast-iran-proxies",
+  "event_id": "ff-news-1417687",
+  "created_at_utc": "2026-09-10T20:20:19Z",
+  "event_time_utc": "2026-09-10T19:46:00Z",
+  "published_at_utc": "2026-09-10T19:46:00Z",
+  "source_time_text": "Sep 10, 8:46pm",
+  "observed_at_utc": "2026-09-10T20:20:19Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "geopolitics", "sanctions", "Iran"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "headline": "US Treasury: Operation Economic Outcast Strikes Iran’s Global Terrorist Proxy Network",
+    "forex_factory_url": "https://www.forexfactory.com/news/1417687-us-treasury-operation-economic-outcast-strikes-irans-global",
+    "primary_source_url": "https://home.treasury.gov/",
+    "summary": "OFAC announced new action against networks supporting Kata'ib Hizballah and Hizballah, plus an Iran-related enforcement action and a tighter licensing-policy stance. The measure adds incremental US-Iran geopolitical and sanctions pressure during an already elevated Middle East risk regime."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.745,
+        "unit": "index",
+        "observed_at_utc": "2026-09-10T20:20:19Z",
+        "short_term_direction": "DOWN",
+        "source": "Investing.com US Dollar Index historical/intraday data, Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day latest available value; exact tick timestamp unavailable"
+      },
+      "US2Y": {
+        "value": 4.53,
+        "unit": "percent",
+        "observed_at_utc": "2026-09-10T20:20:19Z",
+        "short_term_direction": "UP",
+        "source": "MarketWatch/FactSet same-day Treasury market report, Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day market level; exact tick timestamp unavailable"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "observed_at_utc": "2026-09-10T20:20:19Z",
+        "short_term_direction": "UP",
+        "source": "AP/Reuters same-day Treasury market reports, Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day late-session/close-area market level"
+      },
+      "VIX": {
+        "value": 16.46,
+        "unit": "index",
+        "observed_at_utc": "2026-09-10T20:20:19Z",
+        "short_term_direction": "UP",
+        "source": "same-day US market close report, Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day close-area value"
+      },
+      "WTI": {
+        "value": 102.48,
+        "unit": "USD/bbl",
+        "observed_at_utc": "2026-09-10T20:20:19Z",
+        "short_term_direction": "UP",
+        "source": "Reuters Sep 10 2026 energy market update",
+        "freshness_seconds": null,
+        "freshness": "same-day latest available quote"
+      },
+      "BRENT": {
+        "value": 107.63,
+        "unit": "USD/bbl",
+        "observed_at_utc": "2026-09-10T20:20:19Z",
+        "short_term_direction": "UP",
+        "source": "Reuters Sep 10 2026 energy market update",
+        "freshness_seconds": null,
+        "freshness": "same-day latest available quote"
+      }
+    },
+    "regimes": {
+      "dollar": "SOFT_TO_FLAT",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "ELEVATED_BUT_NOT_STRESSED",
+      "energy": "SHARP_UPSIDE_GEOPOLITICAL",
+      "geopolitics": "ELEVATED_US_IRAN_ESCALATION_RISK"
+    }
+  },
+  "learning_context": {
+    "profile": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "used_materially": true,
+    "note": "ACTIONABLE v2 evidence argues against raising weak directional 5-6 confidence signals and supports higher confidence in low-confidence MIXED outcomes, especially next-session. Current sanctions facts and contemporaneous market context remain primary."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Fresh US sanctions on Iran-linked proxy networks add incremental geopolitical risk and safe-haven demand, but already-high Treasury yields cap confidence in a clean gold rally.",
+      "invalidation": "A clear US-Iran de-escalation or a renewed sharp rise in DXY and Treasury yields would weaken or reverse the bullish gold impulse."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Additional sanctions raise the probability of prolonged regional escalation and reinforce already-high oil and yield pressure on broad US equity valuations.",
+      "invalidation": "A credible de-escalation signal, falling oil prices, or a sharp Treasury-yield reversal lower would offset the bearish impulse."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The sanctions add geopolitical risk while US yields remain near multi-year highs, a combination that is mildly negative for duration-sensitive growth equities.",
+      "invalidation": "A decisive drop in Treasury yields or meaningful US-Iran de-escalation would invalidate the immediate downside bias."
+    }
+  ]
+}
