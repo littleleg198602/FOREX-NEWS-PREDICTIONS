@@ -1,0 +1,99 @@
+{
+  "prediction_id": "ff-1417274-boj-masu-policy-japan",
+  "event_id": "forex-factory-1417274",
+  "created_at_utc": "2026-09-10T01:52:23Z",
+  "event_time_utc": "2026-09-10T01:33:00Z",
+  "published_at_utc": "2026-09-10T01:33:00Z",
+  "source_time_text": "Sep 10, 2:33am",
+  "observed_at_utc": "2026-09-10T01:52:23Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_url": "https://www.forexfactory.com/news/1417274-boj-masu-economic-activity-prices-and-monetary-policy",
+  "headline": "BOJ Masu: Economic Activity, Prices, and Monetary Policy in Japan",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["central_bank", "BOJ", "Japan", "rates", "inflation", "oil"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.658,
+        "timestamp_utc": "2026-09-09T23:59:00Z",
+        "direction": "DOWN",
+        "regime": "WEAKENING",
+        "source": "Trendonify / current Sep 9 close available before prediction",
+        "freshness": "latest completed daily observation available pre-prediction"
+      },
+      "US2Y": {
+        "value": 4.42,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "WSJ market close report",
+        "freshness": "same-session close available pre-prediction"
+      },
+      "US10Y": {
+        "value": 4.836,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "WSJ market close report",
+        "freshness": "same-session close available pre-prediction"
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING_MODERATE",
+        "source": "CBOE close via Tallac Options / Yahoo Finance",
+        "freshness": "same-session close available pre-prediction"
+      },
+      "WTI": {
+        "value": 96.55,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T01:45:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "Reuters Sep 10 early Asia market report",
+        "freshness": "current-session report observed pre-prediction"
+      },
+      "BRENT": {
+        "value": 101.34,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T01:45:00Z",
+        "direction": "UP",
+        "regime": "ABOVE_100_RISING",
+        "source": "Reuters Sep 10 early Asia market report",
+        "freshness": "current-session report observed pre-prediction"
+      }
+    },
+    "regimes": {
+      "usd": "WEAKENING",
+      "rates": "HIGH_RISING",
+      "volatility": "RISING_MODERATE",
+      "oil": "HIGH_RISING",
+      "risk": "RISK_OFF_TILT"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 6
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Masu explicitly supports continued BOJ rate hikes while conditions remain accommodative and flags the stronger inflation effect of a weak yen. Tighter Japanese policy and yen appreciation pressure exporter-heavy Nikkei valuations, while Brent above $100 raises input-cost and growth risks for energy-importing Japan.",
+      "invalidation": "A clear dovish BOJ clarification, sharp yen reversal weaker, or rapid oil-price de-escalation would weaken the bearish Nikkei signal."
+    }
+  ]
+}
