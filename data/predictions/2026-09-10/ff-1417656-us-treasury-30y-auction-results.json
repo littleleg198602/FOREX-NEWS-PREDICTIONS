@@ -1,0 +1,125 @@
+{
+  "prediction_id": "ff-1417656-us-treasury-30y-auction-results",
+  "event_id": "ff-news-1417656",
+  "created_at_utc": "2026-09-10T17:49:49Z",
+  "event_time_utc": "2026-09-10T17:02:00Z",
+  "published_at_utc": "2026-09-10T17:02:00Z",
+  "source_time_text": "Sep 10, 6:02pm",
+  "observed_at_utc": "2026-09-10T17:49:49Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "rates", "Treasury", "bond_auction"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "headline": "US Treasury Auction Results",
+    "forex_factory_url": "https://www.forexfactory.com/news/1417656-us-treasury-auction-results",
+    "primary_source_url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2026/R_20260910_3.pdf",
+    "summary": "US Treasury sold $22.0bn of a 29-year 11-month bond at a 5.308% high yield. Bid-to-cover was 2.61; indirect bidders took $17.45bn and primary dealers only $0.485bn, showing strong end-investor demand despite the elevated clearing yield."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.44,
+        "unit": "index",
+        "observed_at_utc": "2026-09-10T17:49:49Z",
+        "short_term_direction": "DOWN",
+        "source": "The Daily DXY, intraday Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day intraday quote; exact tick timestamp unavailable"
+      },
+      "US2Y": {
+        "value": 4.53,
+        "unit": "percent",
+        "observed_at_utc": "2026-09-10T17:49:49Z",
+        "short_term_direction": "UP",
+        "source": "same-day US Treasury market reports, Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day market level; exact tick timestamp unavailable"
+      },
+      "US10Y": {
+        "value": 4.92,
+        "unit": "percent",
+        "observed_at_utc": "2026-09-10T17:49:49Z",
+        "short_term_direction": "UP",
+        "source": "AP/Reuters same-day Treasury market reports, Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day market level; exact tick timestamp unavailable"
+      },
+      "VIX": {
+        "value": 16.51,
+        "unit": "index",
+        "observed_at_utc": "2026-09-10T17:49:49Z",
+        "short_term_direction": "UP",
+        "source": "MarketWatch intraday Sep 10 2026",
+        "freshness_seconds": null,
+        "freshness": "same-day intraday quote; exact tick timestamp unavailable"
+      },
+      "WTI": {
+        "value": 101.21,
+        "unit": "USD/bbl",
+        "observed_at_utc": "2026-09-10T17:49:49Z",
+        "short_term_direction": "UP",
+        "source": "Reuters Sep 10 2026 energy market update",
+        "freshness_seconds": null,
+        "freshness": "same-day latest available quote"
+      },
+      "BRENT": {
+        "value": 106.60,
+        "unit": "USD/bbl",
+        "observed_at_utc": "2026-09-10T17:49:49Z",
+        "short_term_direction": "UP",
+        "source": "Reuters Sep 10 2026 energy market update",
+        "freshness_seconds": null,
+        "freshness": "same-day latest available quote"
+      }
+    },
+    "regimes": {
+      "dollar": "SOFT_INTRADAY",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "ELEVATED_BUT_NOT_STRESSED",
+      "energy": "SHARP_UPSIDE_GEOPOLITICAL"
+    }
+  },
+  "learning_context": {
+    "profile": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "used_materially": true,
+    "note": "ACTIONABLE v2 mixed_neutral low-confidence segments support a modest confidence boost for MIXED outcomes; directional 5-6 confidence segments are not favored. Current auction facts and market context remain primary."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The 5.308% long-bond clearing yield keeps duration-sensitive valuations under pressure, but strong bid-to-cover and very low dealer take-down show genuine demand, offsetting a clean bearish equity signal.",
+      "invalidation": "A sustained post-auction move in US10Y/long yields sharply higher would turn the balance more bearish; a clear yield reversal lower would turn it more bullish."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Elevated long-end yields are negative for valuation, while strong end-investor auction demand reduces the risk of a disorderly Treasury selloff.",
+      "invalidation": "A decisive long-yield breakout higher or lower after the auction would replace the balanced setup with a directional one."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher financing costs are a headwind, but the auction's 2.61 bid-to-cover and minimal dealer absorption indicate sufficient demand to prevent a clear risk-off conclusion from this event alone.",
+      "invalidation": "A renewed broad Treasury selloff with US10Y and the long end making fresh highs would tilt the Dow outlook down."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "High real/nominal yields weigh on non-yielding gold, while geopolitical risk and strong Treasury demand limit the case for a clean downside continuation.",
+      "invalidation": "A sustained rise in DXY and Treasury yields would turn gold more bearish; a sharp yield reversal lower would support gold."
+    }
+  ]
+}
