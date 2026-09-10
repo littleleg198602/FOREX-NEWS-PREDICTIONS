@@ -1,0 +1,126 @@
+{
+  "prediction_id": "ff-20260910-trump-5000-election-dividend-inflation",
+  "event_id": "ff-headline-trump-5000-election-dividend",
+  "created_at_utc": "2026-09-10T21:53:17Z",
+  "event_time_utc": "2026-09-10T21:26:17Z",
+  "published_at_utc": "2026-09-10T21:26:17Z",
+  "source_time_text": "27 min ago",
+  "observed_at_utc": "2026-09-10T21:53:17Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "fiscal_policy", "inflation", "election_policy", "rates"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "platform": "Forex Factory",
+    "section": "Fundamental Analysis / Latest Stories",
+    "headline": "Trump’s proposed $5,000 election dividend checks could fuel inflation, economists say",
+    "publisher": "CNBC",
+    "source_url": "https://www.forexfactory.com/news"
+  },
+  "summary": "Forex Factory surfaced a CNBC story on President Trump's conditional proposal for a $5,000 payment to every U.S. adult if Republicans win the House and Senate. Economists cited in the story said the proposal is unlikely to become reality, but if enacted it could add to inflation and fiscal pressure. Long Treasury yields were already near multi-year highs and oil above $100, making an additional fiscal-inflation headline marginally negative for rate-sensitive U.S. equities.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.75,
+        "timestamp_utc": "2026-09-10T21:45:00Z",
+        "short_term_direction": "UP",
+        "regime": "FIRMING",
+        "source": "web snapshot; contemporaneous DXY reports placed the index around 98.70-98.80",
+        "freshness": "same-session; approximate midpoint of reported range",
+        "estimated_from_range": true
+      },
+      "US2Y": {
+        "value": 4.548,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T21:40:00Z",
+        "short_term_direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "WSJ market report surfaced via web search",
+        "freshness": "same-session"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T21:40:00Z",
+        "short_term_direction": "UP",
+        "regime": "HIGH_RISING_NEAR_5PCT",
+        "source": "AP/WSJ/MarketWatch same-session market reports",
+        "freshness": "same-session"
+      },
+      "VIX": {
+        "value": 16.48,
+        "timestamp_utc": "2026-09-10T21:40:00Z",
+        "short_term_direction": "FLAT_TO_UP",
+        "regime": "MODERATE",
+        "source": "same-day web market snapshot",
+        "freshness": "same-session"
+      },
+      "WTI": {
+        "value": 102.48,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "SHARP_UP_HIGH",
+        "source": "Reuters same-day settlement report",
+        "freshness": "latest completed session settlement"
+      },
+      "BRENT": {
+        "value": 107.63,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "SHARP_UP_HIGH",
+        "source": "Reuters same-day settlement report",
+        "freshness": "latest completed session settlement"
+      }
+    },
+    "regimes": {
+      "rates": "RISK_OFF_TIGHTENING",
+      "energy": "INFLATIONARY_SHOCK",
+      "volatility": "MODERATE",
+      "usd": "FIRMING"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "used_for_material_adjustment": true,
+    "applicable_actionable_segment": "confidence_calibration directional 1-4 at 15m: REDUCE_OR_AVOID",
+    "effect": "kept directional confidence low because low-confidence directional 15m signals have ACTIONABLE underperformance; current macro facts and market context remained primary"
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A potential large transfer to households would increase fiscal impulse and inflation risk, reinforcing already-rising Treasury yields and pressuring long-duration technology valuations; proposal credibility is low, limiting conviction.",
+      "invalidation": "Clear evidence the proposal cannot advance, a sharp reversal lower in Treasury yields, or a materially softer CPI/Fed repricing would negate the bearish impulse."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Additional fiscal-stimulus inflation risk adds to a backdrop of oil above $100 and Treasury yields near multi-year highs, modestly worsening the discount-rate environment for broad U.S. equities.",
+      "invalidation": "A rapid fall in yields, explicit abandonment of the proposal, or a strong disinflationary catalyst would remove the incremental negative effect."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Fiscal and inflation concerns can lift long yields and financing costs, mildly pressuring the Dow; lower duration than NDX makes the expected effect smaller.",
+      "invalidation": "A meaningful Treasury rally or clear evidence the payment plan is politically non-viable would invalidate the directional call."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Fiscal-deficit concerns are supportive for gold, but the same inflation impulse is lifting real/nominal yields and the dollar, creating opposing forces.",
+      "invalidation": "A decisive break in either yields/USD or fiscal-risk pricing would resolve the current two-sided setup into a directional signal."
+    }
+  ]
+}
