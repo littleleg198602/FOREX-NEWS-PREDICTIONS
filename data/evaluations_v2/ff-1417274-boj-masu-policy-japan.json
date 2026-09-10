@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-10T01:52:23+00:00",
   "evaluation_anchor_time_utc": "2026-09-10T01:52:23+00:00",
   "prediction_latency_seconds": 1163.0,
-  "evaluated_at_utc": "2026-09-10T11:45:56.345634+00:00",
+  "evaluated_at_utc": "2026-09-10T12:55:54.918407+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -113,6 +113,18 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-10T02:52:23+00:00",
+          "first_available_price_time_utc": "2026-09-10T03:31:00+00:00",
+          "market_delay_minutes": 38.62,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-10T05:52:23+00:00",
@@ -148,18 +160,6 @@
           "mae_pct": -0.155089,
           "directional_threshold_pct": 0.046238,
           "actual_direction_thresholded": "UP"
-        },
-        "1h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-10T02:52:23+00:00",
-          "first_available_price_time_utc": "2026-09-10T03:31:00+00:00",
-          "market_delay_minutes": 38.62,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
         }
       }
     }
