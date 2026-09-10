@@ -1,0 +1,107 @@
+{
+  "prediction_id": "ff-1417424-german-inflation-august-2026",
+  "event_id": "forex-factory-1417424",
+  "created_at_utc": "2026-09-10T06:47:45Z",
+  "event_time_utc": "2026-09-10T06:16:45Z",
+  "published_at_utc": "2026-09-10T06:16:45Z",
+  "source_time_text": "31 min ago",
+  "observed_at_utc": "2026-09-10T06:47:45Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GERMANY_INFLATION", "ECB", "RATES", "EU_EQUITIES"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "German inflation rate at +2.9% in August 2026",
+  "source_url": "https://www.forexfactory.com/news/1417424-german-inflation-rate-at-29-in-august-2026",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.78,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "SUBDUED_TO_DOWN",
+        "source": "Investing.com close; Reuters intraday narrative confirmed a softer/subdued dollar on Sep 10",
+        "freshness": "latest exact DXY level located was prior completed session; direction cross-checked with same-day Reuters reporting available pre-prediction"
+      },
+      "US2Y": {
+        "value": 4.43,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "SLIGHTLY_DOWN_INTRADAY",
+        "source": "US Treasury prior close; same-day curve update indicated the front end was easing",
+        "freshness": "prior completed-session exact level with same-day directional update available pre-prediction"
+      },
+      "US10Y": {
+        "value": 4.8407,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T02:06:00Z",
+        "direction": "HIGH_FLAT",
+        "source": "Reuters global markets",
+        "freshness": "about 4 hours 42 minutes old at prediction time"
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "UP",
+        "source": "latest completed US session snapshot",
+        "freshness": "latest completed spot-session observation available pre-prediction"
+      },
+      "WTI": {
+        "value": 95.58,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T06:19:00Z",
+        "direction": "DOWN_INTRADAY_BUT_ELEVATED",
+        "source": "Reuters",
+        "freshness": "about 29 minutes old at prediction time"
+      },
+      "BRENT": {
+        "value": 100.50,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T06:19:00Z",
+        "direction": "DOWN_INTRADAY_BUT_ABOVE_100",
+        "source": "Reuters",
+        "freshness": "about 29 minutes old at prediction time"
+      }
+    },
+    "regimes": {
+      "usd": "SUBDUED",
+      "rates": "HIGH",
+      "volatility": "ELEVATED_RISING",
+      "oil": "GEOPOLITICAL_SUPPLY_PREMIUM_ABOVE_100_BRENT",
+      "risk": "CAUTIOUS_RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-10T04:52:10.508685+00:00",
+    "material_adjustment": true,
+    "note": "The release largely confirms the preliminary German CPI reading, so immediate forecasts remain MIXED on current facts. ACTIONABLE v2 evidence for low-confidence MIXED next-session forecasts supports confidence 4/10 there; no EARLY_SIGNAL or INSUFFICIENT segment was used to change direction or confidence materially."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "German CPI at 2.9% y/y confirms persistent inflation and energy pressure, which supports a firmer ECB/rates premium, but the final reading was broadly expected and therefore provides little fresh directional surprise for the DAX.",
+      "invalidation": "A material revision away from the reported inflation profile, a clear dovish ECB surprise, or a sharp post-release rates move would change the balance."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The German inflation confirmation keeps euro-area rate sensitivity elevated ahead of the ECB, but the lack of a meaningful data surprise limits a clean directional edge for the broader Euro Stoxx 50.",
+      "invalidation": "A substantially more dovish or hawkish ECB outcome than currently priced, or a large reversal in oil and bond yields, would dominate this signal."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "MIXED", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "German CPI is relevant to common ECB policy expectations but has a weaker direct link to French equities; expected inflation confirmation and offsetting sector effects leave the CAC 40 without a strong immediate direction.",
+      "invalidation": "A large ECB repricing or broad European risk-on/risk-off move would overwhelm the weak country-specific signal."
+    }
+  ]
+}
