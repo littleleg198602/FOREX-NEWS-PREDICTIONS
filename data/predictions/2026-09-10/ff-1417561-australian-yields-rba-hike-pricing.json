@@ -1,0 +1,99 @@
+{
+  "prediction_id": "ff-1417561-australian-yields-rba-hike-pricing",
+  "event_id": "forex-factory-1417561",
+  "created_at_utc": "2026-09-10T09:13:58Z",
+  "event_time_utc": "2026-09-10T08:26:00Z",
+  "published_at_utc": "2026-09-10T08:26:00Z",
+  "source_time_text": "Sep 10, 1:26am",
+  "observed_at_utc": "2026-09-10T09:13:58Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["AUSTRALIA_RBA", "RATES", "BOND_YIELDS", "AU_EQUITIES"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Australian dollar holds firm as yields hit six-month highs",
+  "source_url": "https://www.forexfactory.com/news/1417561-australian-dollar-holds-firm-as-yields-hit-six-month",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.81,
+        "timestamp_utc": "2026-09-10T04:19:00Z",
+        "direction": "FLAT_TO_SLIGHTLY_DOWN",
+        "source": "Reuters syndicated by Business Recorder/Yahoo",
+        "freshness": "about 4 hours 55 minutes old at prediction time"
+      },
+      "US2Y": {
+        "value": 4.43,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "HIGH_FLAT",
+        "source": "latest completed US session snapshot",
+        "freshness": "prior completed-session observation available pre-prediction"
+      },
+      "US10Y": {
+        "value": 4.8407,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T02:06:17Z",
+        "direction": "HIGH_FLAT",
+        "source": "Reuters global markets",
+        "freshness": "about 7 hours 8 minutes old at prediction time"
+      },
+      "VIX": {
+        "value": 16.46,
+        "timestamp_utc": "2026-09-09T20:00:00Z",
+        "direction": "ELEVATED_UP",
+        "source": "latest completed US session snapshot",
+        "freshness": "prior completed-session observation available pre-prediction"
+      },
+      "WTI": {
+        "value": 96.54,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T08:14:00Z",
+        "direction": "UP_AND_ELEVATED",
+        "source": "Reuters",
+        "freshness": "about 1 hour old at prediction time"
+      },
+      "BRENT": {
+        "value": 101.61,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-10T08:14:00Z",
+        "direction": "UP_ABOVE_100",
+        "source": "Reuters",
+        "freshness": "about 1 hour old at prediction time"
+      }
+    },
+    "regimes": {
+      "usd": "SUBDUED",
+      "rates": "HIGH",
+      "volatility": "ELEVATED",
+      "oil": "GEOPOLITICAL_SUPPLY_PREMIUM_ABOVE_100_BRENT",
+      "risk": "CAUTIOUS_RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-10T06:50:23.877741+00:00",
+    "material_adjustment": false,
+    "note": "No matching ACTIONABLE v2 context-aware segment was identified for this exact Australia/RBA plus high-rates, elevated-oil context, so confidence was not materially altered by learning. EARLY_SIGNAL and INSUFFICIENT evidence were not used."
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Markets pricing roughly an 80% chance of a near-term RBA hike and Australian 3-year yields reaching about 4.905% raise the domestic discount-rate headwind for equities. Brent above $101 and elevated global yields reinforce the pressure, while commodity and financial-sector exposure can partly offset it.",
+      "invalidation": "A clear dovish RBA signal, a sharp fall in Australian short-end yields, or a rapid drop in oil and global bond yields would weaken the bearish immediate setup."
+    }
+  ]
+}
