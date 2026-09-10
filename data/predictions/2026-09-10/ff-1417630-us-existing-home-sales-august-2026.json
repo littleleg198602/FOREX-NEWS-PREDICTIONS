@@ -1,0 +1,73 @@
+{
+  "prediction_id": "ff-1417630-us-existing-home-sales-august-2026",
+  "event_id": "forex-factory-1417630",
+  "created_at_utc": "2026-09-10T14:18:45Z",
+  "event_time_utc": "2026-09-10T14:02:45Z",
+  "published_at_utc": "2026-09-10T14:02:45Z",
+  "source_time_text": "16 min ago",
+  "observed_at_utc": "2026-09-10T14:18:45Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "housing", "existing-home-sales", "Fed", "macro"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / National Association of REALTORS",
+    "headline": "US NAR Existing-Home Sales Report Shows 2.0% Decrease in August",
+    "url": "https://www.forexfactory.com/news/1417630-us-nar-existing-home-sales-report-shows-20-decrease"
+  },
+  "summary": "US existing-home sales fell 2.0% month over month and 1.2% year over year in August. The weaker housing signal marginally supports a softer-growth / lower-rate interpretation, but the live macro regime is dominated by surging oil and Treasury yields, so directional confidence is deliberately low.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.12, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "FIRMING", "source": "Reuters", "freshness": "intraday_same_session"},
+      "US2Y": {"value": 4.53, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "RISING_YIELDS", "source": "MarketWatch", "freshness": "intraday_same_session"},
+      "US10Y": {"value": 4.914, "timestamp_utc": "2026-09-10T13:28:57Z", "direction": "UP", "regime": "RISING_YIELDS", "source": "Barron's", "freshness": "about_50_minutes"},
+      "VIX": {"value": 16.51, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "RISK_CAUTION", "source": "MarketWatch", "freshness": "intraday_same_session"},
+      "WTI": {"value": 100.0, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "ENERGY_SPIKE", "source": "Reuters", "freshness": "intraday_same_session"},
+      "BRENT": {"value": 105.26, "timestamp_utc": "2026-09-10T14:00:00Z", "direction": "UP", "regime": "ENERGY_SPIKE", "source": "Reuters", "freshness": "intraday_same_session"}
+    },
+    "regimes": {
+      "rates": "BEARISH_RISK_AS_YIELDS_RISE",
+      "risk": "CAUTIOUS",
+      "energy": "SHARP_UP",
+      "usd": "FIRMING",
+      "overall": "INFLATIONARY_RISK_OFF"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "profile_generated_at_utc": "2026-09-10T12:56:01.898927+00:00",
+    "applied": true,
+    "material_adjustment": true,
+    "basis": "ACTIONABLE v2 confidence calibration: low-confidence directional signals are kept restrained; low-confidence MIXED next-session forecasts have stronger evidence.",
+    "legacy_v1_used": false
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Weaker housing activity can marginally reduce expected policy tightness and support duration-sensitive equities, but today's inflation/oil/yield shock sharply limits conviction.",
+      "invalidation": "Further rise in Treasury yields or renewed Fed-hike repricing overwhelms the housing-growth signal."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lower housing activity is dovish for rates but negative for cyclical growth, leaving the broad index with opposing forces.",
+      "invalidation": "A decisive move in yields or oil creates a dominant directional macro impulse."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Softer housing data modestly supports lower-rate expectations, but a firmer dollar and sharply higher yields cap the gold response.",
+      "invalidation": "Dollar and real-yield strength accelerates after the release."
+    }
+  ]
+}
