@@ -1,0 +1,55 @@
+{
+  "prediction_id": "ff-1417267-uk-rics-housing-bottoming",
+  "event_id": "forex_factory_1417267",
+  "created_at_utc": "2026-09-10T01:08:03Z",
+  "event_time_utc": "2026-09-10T00:35:03Z",
+  "published_at_utc": "2026-09-10T00:35:03Z",
+  "source_time_text": "33 min ago",
+  "observed_at_utc": "2026-09-10T01:08:03Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["UK", "housing", "RICS", "macro"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "headline": "UK housing market slowdown is bottoming out, RICS says",
+    "url": "https://www.forexfactory.com/news/1417267-uk-housing-market-slowdown-is-bottoming-out-rics"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.78, "timestamp_utc": "2026-09-09T10:46:00Z", "direction": "FLAT_TO_DOWN", "source": "The Edge market wrap / web snapshot", "freshness": "delayed_same_day"},
+      "US2Y": {"value": 4.43, "timestamp_utc": "2026-09-09T17:28:00Z", "direction": "UP", "source": "Benzinga market snapshot", "freshness": "same_day_close_context"},
+      "US10Y": {"value": 4.8528, "timestamp_utc": "2026-09-09T15:24:47Z", "direction": "UP", "source": "Reuters", "freshness": "same_day_close_context"},
+      "VIX": {"value": 16.46, "timestamp_utc": "2026-09-09T20:00:00Z", "direction": "UP", "source": "Yahoo Finance/AP close", "freshness": "last_close"},
+      "WTI": {"value": 97.02, "timestamp_utc": "2026-09-10T00:06:00Z", "direction": "UP", "source": "WSJ market snapshot", "freshness": "current_pre_prediction"},
+      "BRENT": {"value": 101.84, "timestamp_utc": "2026-09-10T00:06:00Z", "direction": "UP", "source": "WSJ market snapshot", "freshness": "current_pre_prediction"}
+    },
+    "regimes": {
+      "usd": "SOFT",
+      "rates": "HIGH_RISING",
+      "volatility": "ELEVATED_RISING",
+      "oil": "HIGH_RISING",
+      "risk": "RISK_OFF"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "UK100",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "RICS housing balance improved to -28 versus -30 expected and demand/sales indicators moved off recent lows, modestly improving UK domestic-growth sentiment; however the FTSE 100 is internationally exposed and elevated oil, yields and volatility cap the signal.",
+      "invalidation": "A renewed deterioration in UK housing/activity indicators or a broader global risk-off move led by higher oil and yields would overwhelm the modest positive domestic signal."
+    }
+  ],
+  "learning_applied": {
+    "profile_version": "2.0.0",
+    "material_change": true,
+    "note": "ACTIONABLE v2 evidence shows weak performance for low-confidence directional 15m forecasts, so confidence remains deliberately low; ACTIONABLE mixed-neutral next-session evidence supports confidence 4 for MIXED."
+  }
+}
