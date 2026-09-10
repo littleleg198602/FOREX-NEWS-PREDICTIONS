@@ -1,0 +1,65 @@
+{
+  "prediction_id": "ff-1417654-iran-resumed-ballistic-missile-production",
+  "event_id": "ff-1417654",
+  "created_at_utc": "2026-09-10T17:03:57Z",
+  "event_time_utc": "2026-09-10T16:36:00Z",
+  "published_at_utc": "2026-09-10T16:36:00Z",
+  "source_time_text": "Sep 10, 5:36pm",
+  "observed_at_utc": "2026-09-10T17:03:57Z",
+  "time_source": "forex_factory_absolute_source",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "IRAN", "MIDDLE_EAST", "RISK_OFF"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / FinancialJuice / WSJ",
+    "headline": "Iran has resumed producing ballistic missiles - US and Middle East Officials cited by the WSJ",
+    "url": "https://www.forexfactory.com/news/1417654-iran-has-resumed-producing-ballistic-missiles-us"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 98.75, "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "DOWN", "regime": "SOFT", "source": "DestChart same-day live range", "freshness": "same-day reading observed at prediction time"},
+      "US2Y": {"value": 4.53, "unit": "%", "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "UP", "regime": "HIGH_RISING", "source": "MarketWatch", "freshness": "same-day intraday quote observed at prediction time"},
+      "US10Y": {"value": 4.927, "unit": "%", "timestamp_utc": "2026-09-10T14:50:51Z", "direction": "UP", "regime": "HIGH_RISING", "source": "Barron's / Tradeweb", "freshness": "about 2h13m before prediction"},
+      "VIX": {"value": 16.46, "timestamp_utc": "2026-09-10T02:31:00Z", "direction": "UP", "regime": "ELEVATED", "source": "MetricsHour / CBOE", "freshness": "same-day but stale intraday quote"},
+      "WTI": {"value": 101.21, "unit": "USD/bbl", "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "UP", "regime": "SPIKE_HIGH", "source": "Reuters same-day intraday report", "freshness": "same-day quote observed at prediction time"},
+      "BRENT": {"value": 106.60, "unit": "USD/bbl", "timestamp_utc": "2026-09-10T17:03:57Z", "direction": "UP", "regime": "SPIKE_HIGH", "source": "Reuters same-day intraday report", "freshness": "same-day quote observed at prediction time"}
+    },
+    "regimes": {"usd": "SOFT", "rates": "HIGH_RISING", "volatility": "ELEVATED", "energy": "SPIKE_HIGH", "risk": "RISK_OFF"}
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-10T15:19:49.255833+00:00",
+    "material_adjustment": true,
+    "applied_segment": "directional confidence 1-4 / mixed_neutral next_session",
+    "sample_status": "ACTIONABLE",
+    "effect": "Kept immediate directional confidence low and favored MIXED next-session outcomes rather than escalating confidence mechanically."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Renewed Iranian ballistic-missile production signals persistence of the conflict and supports safe-haven demand, while a soft DXY helps gold; very high yields cap conviction.",
+      "invalidation": "A verified ceasefire or rapid de-escalation combined with falling regional risk premia would weaken the safe-haven bid."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A renewed weapons-production signal increases perceived conflict duration and energy-supply risk while oil and Treasury yields are already elevated, pressuring broad equity valuations.",
+      "invalidation": "Verified de-escalation or a sharp reversal lower in oil and Treasury yields would weaken the bearish impulse."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Geopolitical risk-off pressure combines with near-5% long yields, a direct valuation headwind for long-duration growth stocks.",
+      "invalidation": "A sharp decline in Treasury yields alongside verified Middle East de-escalation would favor upside instead."
+    }
+  ]
+}
