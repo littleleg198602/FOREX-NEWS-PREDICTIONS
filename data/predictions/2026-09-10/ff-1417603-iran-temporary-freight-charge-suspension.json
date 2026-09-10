@@ -1,0 +1,139 @@
+{
+  "prediction_id": "ff-1417603-iran-temporary-freight-charge-suspension",
+  "event_id": "ff-1417603-iran-temporary-freight-charge-suspension",
+  "created_at_utc": "2026-09-10T11:42:24Z",
+  "event_time_utc": "2026-09-10T11:03:24Z",
+  "published_at_utc": "2026-09-10T11:03:24Z",
+  "source_time_text": "39 min ago",
+  "observed_at_utc": "2026-09-10T11:42:24Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["IRAN", "ENERGY", "SHIPPING", "GEOPOLITICS", "OIL"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / FinancialJuice / Fars News",
+    "headline": "Iran orders temporary suspension of 10% freight charge on foreign vessels carrying energy products to or from Iran - Fars News",
+    "url": "https://www.forexfactory.com/news/1417603-iran-orders-temporary-suspension-of-10-freight-charge",
+    "impact": "medium",
+    "facts_at_prediction": {
+      "measure": "temporary suspension of a 10% freight charge",
+      "scope": "foreign vessels carrying energy products to or from Iran",
+      "interpretation": "marginally reduces friction for Iranian energy shipping but does not resolve the broader US-Iran conflict or Strait of Hormuz disruption"
+    }
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.738,
+        "timestamp_utc": "2026-09-10T10:42:24Z",
+        "direction": "DOWN_SLIGHTLY",
+        "regime": "NEUTRAL_SOFT_USD",
+        "source": "Barron's/Dow Jones live market coverage",
+        "freshness_seconds": 3600
+      },
+      "US2Y": {
+        "value": 4.447,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T09:15:00Z",
+        "direction": "UP_SLIGHTLY",
+        "regime": "HIGH_YIELDS",
+        "source": "Wall Street Journal market coverage",
+        "freshness_seconds": 8844
+      },
+      "US10Y": {
+        "value": 4.859,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T09:15:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING_YIELDS",
+        "source": "Wall Street Journal market coverage",
+        "freshness_seconds": 8844
+      },
+      "VIX": {
+        "value": 16.51,
+        "timestamp_utc": "2026-09-10T11:05:24Z",
+        "direction": "UP",
+        "regime": "MODERATE_RISK",
+        "source": "MarketWatch live coverage",
+        "freshness_seconds": 2220
+      },
+      "WTI": {
+        "value": 97.38,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T11:34:57Z",
+        "direction": "UP",
+        "regime": "ELEVATED_OIL",
+        "source": "Barron's live market coverage",
+        "freshness_seconds": 447
+      },
+      "BRENT": {
+        "value": 102.0,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T11:34:57Z",
+        "direction": "UP",
+        "regime": "ELEVATED_OIL",
+        "source": "Barron's live market coverage",
+        "freshness_seconds": 447
+      }
+    },
+    "regimes": {
+      "usd": "NEUTRAL_SOFT_USD",
+      "rates": "HIGH_RISING_YIELDS",
+      "volatility": "MODERATE_RISK",
+      "oil": "ELEVATED_RISING",
+      "global_risk": "MIXED_RISK_OFF_PRESSURE"
+    }
+  },
+  "learning_v2_at_prediction": {
+    "profile_generated_at_utc": "2026-09-10T10:56:22.175499+00:00",
+    "material_adjustment": true,
+    "reason": "ACTIONABLE v2 directional confidence calibration for confidence 1-4 at 15m is REDUCE_OR_AVOID, so the directional calls remain low-confidence at 3/10. ACTIONABLE low-confidence mixed-neutral next-session calibration supports MIXED next-session forecasts. Current geopolitical and energy facts remain primary."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Suspending the 10% freight charge marginally lowers friction for Iranian energy shipping and is a small de-escalatory/supply-positive signal for global risk assets, but ongoing tanker attacks, constrained Hormuz traffic and Brent near $102 sharply limit the strength of the equity-positive impulse.",
+      "invalidation": "Renewed escalation in tanker attacks, tighter Hormuz restrictions, or another sharp rise in oil would invalidate the mild positive SP500 impulse."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A marginal reduction in Iranian energy-shipping friction slightly reduces inflation and geopolitical tail risk, which is modestly supportive for duration-sensitive technology equities, though elevated Treasury yields and oil keep the signal weak.",
+      "invalidation": "A renewed surge in oil or Treasury yields, or fresh US-Iran escalation, would invalidate the mild positive NDX impulse."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "The temporary freight-charge suspension modestly reduces one layer of geopolitical and energy-shipping stress, trimming a small amount of safe-haven premium from gold, but the broader conflict and high oil prices remain dominant risks.",
+      "invalidation": "Fresh military escalation, worsening Hormuz disruption, or a sharp risk-off move would invalidate the mild bearish gold impulse."
+    }
+  ]
+}
