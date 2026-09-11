@@ -1,0 +1,86 @@
+{
+  "prediction_id": "ff-20260911-iran-regional-hormuz-shipping-talks",
+  "event_id": "ff-iran-regional-meeting-hormuz-shipping-20260911",
+  "created_at_utc": "2026-09-11T13:58:09Z",
+  "event_time_utc": "2026-09-11T13:44:09Z",
+  "published_at_utc": "2026-09-11T13:44:09Z",
+  "source_time_text": "14 min ago",
+  "observed_at_utc": "2026-09-11T13:58:09Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "iran", "strait_of_hormuz", "shipping", "energy"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "section": ["Hot Stories", "Latest Stories"],
+    "headline": "Iran Foreign Ministry spokesperson announces plans for regional meeting involving Persian Gulf countries",
+    "source_url": "https://www.forexfactory.com/news"
+  },
+  "summary": "Iran plans a regional meeting in Oman with Iraq and other regional countries to discuss safe commercial shipping routes in the Strait of Hormuz, while saying it remains committed to maritime security but cannot guarantee navigation while US blockades and economic warfare continue.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.11, "as_of_utc": "2026-09-11T13:10:00Z", "direction": "UP", "source": "MarketWatch/WSJ via web", "freshness_seconds": 2889, "freshness": "recent_intraday"},
+      "US2Y": {"value": 4.596, "unit": "percent", "as_of_utc": "2026-09-11T13:10:00Z", "direction": "UP", "source": "Tradeweb/Barrons via web", "freshness_seconds": 2889, "freshness": "recent_intraday"},
+      "US10Y": {"value": 4.95, "unit": "percent", "as_of_utc": "2026-09-11T13:10:00Z", "direction": "HIGH_FLAT", "source": "Reuters/WSJ via web", "freshness_seconds": 2889, "freshness": "recent_intraday"},
+      "VIX": {"value": 17.53, "as_of_utc": "2026-09-11T12:30:00Z", "direction": "UP", "source": "Global Invest Daily market snapshot via web", "freshness_seconds": 5289, "freshness": "delayed_intraday"},
+      "WTI": {"value": 99.07, "unit": "USD/bbl", "as_of_utc": "2026-09-11T13:09:00Z", "direction": "DOWN", "source": "Reuters", "freshness_seconds": 2949, "freshness": "recent_intraday"},
+      "BRENT": {"value": 104.35, "unit": "USD/bbl", "as_of_utc": "2026-09-11T13:09:00Z", "direction": "DOWN", "source": "Reuters", "freshness_seconds": 2949, "freshness": "recent_intraday"}
+    },
+    "regimes": {
+      "dollar": "firm",
+      "rates": "very_high_hawkish",
+      "volatility": "elevated",
+      "oil": "very_high_but_falling_on_diplomacy",
+      "risk": "conflicted_partial_deescalation"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Hormuz shipping talks reduce part of the oil/geopolitical risk premium and support equities, but the benefit is offset by very high Treasury yields and hawkish post-CPI Fed pricing; oil had already fallen sharply by prediction time, implying partial pricing-in.",
+      "invalidation": "A collapse in the talks, renewed attacks on Gulf shipping, or a renewed oil spike above recent highs would restore the risk-off impulse."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lower oil risk is supportive, but Nasdaq remains highly exposed to Treasury yields near 5% and increased Fed-hike expectations after CPI.",
+      "invalidation": "A durable drop in yields alongside successful shipping talks would shift the balance bullish; renewed geopolitical escalation would shift it bearish."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Diplomatic progress reduces safe-haven demand, but elevated geopolitical uncertainty and persistent inflation/rate stress continue to support hedging demand, while a firm dollar and high yields cap gold.",
+      "invalidation": "A verified durable Hormuz reopening with falling geopolitical risk would strengthen downside pressure; renewed attacks or talks failure would strengthen upside pressure."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Europe benefits materially from lower energy risk, but ECB tightening and elevated global yields offset the positive impulse; the oil decline suggests part of the de-escalation was already priced.",
+      "invalidation": "A durable oil break lower with confirmed safe shipping would improve the bullish case; renewed shipping disruption would reverse it."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lower Gulf shipping risk supports European risk assets through the energy channel, but restrictive ECB/rates conditions and incomplete diplomatic certainty keep the signal conflicted.",
+      "invalidation": "Confirmed safe navigation and further oil declines would make the setup more bullish; failed talks and renewed disruption would make it bearish."
+    }
+  ],
+  "learning": {
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "applied_actionable_segment": "confidence_calibration:model=1.1.1,score_type=mixed_neutral,confidence=1-4,horizon=15m",
+    "effect": "Kept immediate forecasts MIXED at confidence 4 rather than forcing a weak directional call; ACTIONABLE mixed-neutral 1-4 confidence segment has strong leakage-safe performance, while low-confidence directional 15m segments are ACTIONABLE REDUCE_OR_AVOID."
+  }
+}
