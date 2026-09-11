@@ -1,0 +1,62 @@
+{
+  "prediction_id": "ff-1417700-japan-business-outlook-survey-q3-2026",
+  "event_id": "forex-factory-1417700",
+  "created_at_utc": "2026-09-11T02:25:24Z",
+  "event_time_utc": "2026-09-10T23:50:00Z",
+  "published_at_utc": "2026-09-10T23:51:00Z",
+  "source_time_text": "Sep 11, 12:51am",
+  "observed_at_utc": "2026-09-11T02:25:24Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["JPY", "Japan", "business_outlook", "BSI", "macro"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / Japan Ministry of Finance",
+    "url": "https://www.forexfactory.com/news/1417700-japan-business-outlook-survey-july-september-2026",
+    "headline": "Japan Business Outlook Survey (July-September 2026)"
+  },
+  "event_facts": {
+    "BSI_Manufacturing_Index_actual": 7.6,
+    "forecast": 2.5,
+    "previous": -1.8
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.081, "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "firm", "source": "Reuters", "freshness": "current_session"},
+      "US2Y": {"value": 4.55, "unit": "pct", "timestamp_utc": "2026-09-10T21:30:00Z", "direction": "UP", "regime": "high_yield", "source": "MarketWatch/Dow Jones", "freshness": "latest_available_reference"},
+      "US10Y": {"value": 4.95, "unit": "pct", "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "near_5pct_high_yield", "source": "Reuters", "freshness": "current_session"},
+      "VIX": {"value": 16.46, "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "ELEVATED", "regime": "moderate_risk", "source": "Investing.com derived", "freshness": "latest_available_reference"},
+      "WTI": {"value": 103.45, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "energy_shock", "source": "Reuters", "freshness": "current_session"},
+      "BRENT": {"value": 108.68, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "energy_shock", "source": "Reuters", "freshness": "current_session"}
+    },
+    "regimes": {
+      "usd": "firm",
+      "rates": "high_and_rising",
+      "volatility": "moderate",
+      "oil": "severe_energy_shock",
+      "global_risk": "risk_off"
+    }
+  },
+  "learning_profile_v2": {
+    "profile_version": "2.0.0",
+    "segment_used": "confidence_calibration/mixed_neutral/1-4/15m",
+    "sample_status": "ACTIONABLE",
+    "recommendation": "BOOST_CONFIDENCE",
+    "application": "Supported MIXED rather than forcing a weak directional call under conflicting strong BSI data and risk-off market context."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The BSI manufacturing index beat forecast sharply (7.6 vs 2.5; prior -1.8), supporting Japanese corporate sentiment, but the current global energy shock, rising US yields and risk-off Asian equity tape materially offset the positive domestic signal.",
+      "invalidation": "A sustained reversal lower in oil and global yields together with a firm Nikkei recovery would shift the balance toward UP; renewed energy/geopolitical escalation would shift it toward DOWN."
+    }
+  ]
+}
