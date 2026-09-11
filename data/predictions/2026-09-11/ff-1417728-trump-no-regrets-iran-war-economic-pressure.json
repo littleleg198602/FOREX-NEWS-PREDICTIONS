@@ -1,0 +1,116 @@
+{
+  "prediction_id": "ff-1417728-trump-no-regrets-iran-war-economic-pressure",
+  "event_id": "forex_factory:1417728",
+  "created_at_utc": "2026-09-11T04:16:16Z",
+  "event_time_utc": "2026-09-10T23:37:00Z",
+  "published_at_utc": "2026-09-10T23:37:00Z",
+  "source_time_text": "Sep 10, 7:37pm",
+  "observed_at_utc": "2026-09-11T04:16:16Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "iran", "us_policy", "risk_off"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "forex_factory_url": "https://www.forexfactory.com/news/1417728-trump-says-he-has-no-regrets-about-starting",
+    "source_name": "CNBC",
+    "source_url": "https://www.cnbc.com/2026/09/11/us-iran-war-trump-hormuz-banks-oil-sanctions.html",
+    "headline": "Trump says he has no regrets about starting the Iran war as U.S. dials up economic pressure"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.081,
+        "timestamp_utc": "2026-09-11T03:30:00Z",
+        "direction": "UP",
+        "regime": "firm_usd",
+        "source": "Reuters, Sep 11 2026 FX market report",
+        "freshness_seconds": 2776
+      },
+      "US2Y": {
+        "value": 4.55,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "direction": "UP",
+        "regime": "hawkish_high_yield",
+        "source": "MarketWatch, Sep 10 2026 afternoon Treasury market update",
+        "freshness_seconds": 29776
+      },
+      "US10Y": {
+        "value": 4.965,
+        "timestamp_utc": "2026-09-11T03:30:00Z",
+        "direction": "UP",
+        "regime": "near_5pct_high_yield",
+        "source": "Reuters, Sep 11 2026 FX market report",
+        "freshness_seconds": 2776
+      },
+      "VIX": {
+        "value": 17.70,
+        "timestamp_utc": "2026-09-10T22:25:00Z",
+        "direction": "UP",
+        "regime": "elevated_risk_aversion",
+        "source": "Cboe VIX market data",
+        "freshness_seconds": 21076
+      },
+      "WTI": {
+        "value": 103.45,
+        "timestamp_utc": "2026-09-11T03:30:00Z",
+        "direction": "UP",
+        "regime": "energy_shock_above_100",
+        "source": "Reuters, Sep 11 2026 oil market report",
+        "freshness_seconds": 2776
+      },
+      "BRENT": {
+        "value": 108.96,
+        "timestamp_utc": "2026-09-11T03:30:00Z",
+        "direction": "UP",
+        "regime": "energy_shock_above_100",
+        "source": "Reuters, Sep 11 2026 FX/oil market report",
+        "freshness_seconds": 2776
+      }
+    },
+    "regimes": {
+      "usd": "firm",
+      "rates": "rising_and_restrictive",
+      "volatility": "elevated",
+      "oil": "geopolitical_energy_shock",
+      "cross_asset": "risk_off_inflationary"
+    }
+  },
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-09-11T02:28:43.594028+00:00",
+    "material_adjustment": true,
+    "applied_actionable_segments": [
+      "directional confidence 1-4 / 15m: REDUCE_OR_AVOID",
+      "mixed_neutral confidence 1-4 / next_session: BOOST_CONFIDENCE"
+    ],
+    "note": "Current macro/geopolitical facts determine direction. ACTIONABLE v2 calibration caps weak immediate directional confidence and supports MIXED next-session forecasts; no legacy v1 profile used."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Renewed confirmation that the U.S. administration remains committed to the Iran conflict and is increasing economic pressure supports geopolitical safe-haven demand, but a firm dollar and near-5% US10Y limit gold upside.",
+      "invalidation": "Credible U.S.-Iran de-escalation, a clear ceasefire path, or a sharp fall in geopolitical risk premium without a concurrent drop in yields."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Continued Iran-war commitment plus higher oil reinforces inflation and risk-off pressure while Treasury yields remain restrictive for equity valuations.",
+      "invalidation": "Credible de-escalation combined with a meaningful retreat in oil and Treasury yields."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The geopolitical and energy-inflation shock keeps long yields elevated, which is particularly adverse for rate-sensitive growth and technology valuations.",
+      "invalidation": "A rapid fall in long yields and oil, or a confirmed geopolitical de-escalation that restores risk appetite."
+    }
+  ]
+}
