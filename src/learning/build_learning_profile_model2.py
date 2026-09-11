@@ -9,6 +9,7 @@ from src.learning import build_learning_profile as legacy
 from src.market_data.context_snapshot import context_signature
 from src.prediction.forecast import forecast_for_horizon
 from src.prediction.normalization import normalize_prediction
+from src.prediction.taxonomy import canonical_categories, canonical_label
 
 HORIZONS = ("15m", "1h", "4h", "next_session")
 EVAL_CONFIG = load_evaluation_config()
@@ -63,6 +64,7 @@ def main() -> int:
         "by_cross_asset_confirmation": defaultdict(legacy._new_counter),
         "by_novelty": defaultdict(legacy._new_counter),
         "by_news_age": defaultdict(legacy._new_counter),
+        "by_relevance": defaultdict(legacy._new_counter),
         "by_evidence_combo": defaultdict(legacy._new_counter),
     }
 
@@ -78,6 +80,7 @@ def main() -> int:
         "scored_items_without_context": 0,
         "scored_model2_items_with_evidence": 0,
         "scored_model2_items_without_evidence": 0,
+        "event_cluster_id_used": 0,
     }
 
     for path in evaluations_root.glob("*.json"):
@@ -101,8 +104,11 @@ def main() -> int:
             continue
         audit["eligible_evaluation_files"] += 1
 
-        learning_event_id = str(prediction.get("event_id") or prediction_id)
-        categories = prediction.get("categories") or ["UNKNOWN"]
+        event_cluster = prediction.get("event_cluster_id")
+        if event_cluster:
+            audit["event_cluster_id_used"] += 1
+        learning_event_id = str(event_cluster or prediction.get("event_id") or prediction_id)
+        categories = canonical_categories(prediction.get("categories") or ["UNKNOWN"])
         model_version = str(evaluation.get("model_version") or prediction.get("model_version") or "UNKNOWN")
         pred_by_instrument = {
             item.get("instrument"): item
@@ -111,22 +117,27 @@ def main() -> int:
         }
         market_context = evaluation.get("market_context") or prediction.get("market_context_at_prediction") or {}
         all_regimes = market_context.get("regimes", {}) if isinstance(market_context, dict) else {}
-        regimes = {name: regime for name, regime in all_regimes.items() if regime and regime != "UNKNOWN"}
+        regimes = {
+            canonical_label(name): canonical_label(regime)
+            for name, regime in all_regimes.items()
+            if regime and regime != "UNKNOWN"
+        }
         signature = context_signature(market_context) if regimes else "NO_CONTEXT"
 
         evidence = prediction.get("evidence") if isinstance(prediction.get("evidence"), dict) else {}
-        article_role = str(evidence.get("article_role") or "UNKNOWN")
+        article_role = canonical_label(evidence.get("article_role"))
         absorption = evidence.get("absorption") if isinstance(evidence.get("absorption"), dict) else {}
-        absorption_state = str(absorption.get("state") or "UNKNOWN")
+        absorption_state = canonical_label(absorption.get("state"))
         cross = evidence.get("cross_asset_confirmation") if isinstance(evidence.get("cross_asset_confirmation"), dict) else {}
-        cross_verdict = str(cross.get("verdict") or "UNKNOWN")
-        novelty = str(evidence.get("novelty") or "UNKNOWN")
+        cross_verdict = canonical_label(cross.get("verdict"))
+        novelty = canonical_label(evidence.get("novelty"))
         news_age = _news_age_bucket(evidence.get("news_age_minutes"))
         evidence_combo = f"{article_role}|{absorption_state}|{cross_verdict}"
 
         for result in evaluation.get("results", []):
             instrument = result.get("instrument")
             pred_item = pred_by_instrument.get(instrument, {})
+            relevance = canonical_label(pred_item.get("relevance"))
             for horizon in HORIZONS:
                 scored = result.get("evaluations", {}).get(horizon, {})
                 if scored.get("status") != "DONE" or scored.get("correct") is None:
@@ -170,6 +181,7 @@ def main() -> int:
                     add("by_cross_asset_confirmation", (model_version, score_type, cross_verdict, horizon))
                     add("by_novelty", (model_version, score_type, novelty, horizon))
                     add("by_news_age", (model_version, score_type, news_age, horizon))
+                    add("by_relevance", (model_version, score_type, relevance, horizon))
                     add("by_evidence_combo", (model_version, score_type, evidence_combo, horizon))
 
     omitted: dict[str, int] = {}
@@ -206,12 +218,13 @@ def main() -> int:
             "actionable_min_hit_rate_pct": t["good"],
             "actionable_max_hit_rate_pct": t["bad"],
             "bayesian_prior": {"alpha": legacy.PRIOR_ALPHA, "beta": legacy.PRIOR_BETA},
-            "event_independence_unit": "event_id; prediction_id only as fallback",
-            "event_weighting": "Each event contributes total weight 1 inside a segment, split across correlated instrument observations.",
+            "event_independence_unit": "event_cluster_id when supplied; otherwise event_id; prediction_id only as final fallback",
+            "event_weighting": "Each independent event/cluster contributes total weight 1 inside a segment, split across correlated instrument observations.",
+            "taxonomy_normalization": "Derived learning labels are canonicalized for case/punctuation so GEOPOLITICS and geopolitics do not fragment evidence.",
             "score_type_isolation": "directional, mixed_neutral and volatility are never pooled",
             "model_version_isolation": "prediction model versions are never pooled",
-            "horizon_isolation": "15m, 1h, 4h and next_session use the confidence and direction that were explicitly forecast for that horizon when available",
-            "evidence_learning": "model 2 additionally learns article role, absorption, cross-asset confirmation, novelty, news age and their combinations",
+            "horizon_isolation": "15m, 1h, 4h and next_session use the confidence and direction explicitly forecast for that horizon when available",
+            "evidence_learning": "model 2 additionally learns article role, absorption, cross-asset confirmation, novelty, news age, instrument relevance and their combinations",
             "rule": "Only ACTIONABLE segments may materially change future confidence. EARLY_SIGNAL is advisory only; INSUFFICIENT causes no change.",
         },
         "audit": audit,
@@ -230,6 +243,7 @@ def main() -> int:
         "by_cross_asset_confirmation": pack("by_cross_asset_confirmation", ("model_version", "score_type", "cross_asset_confirmation", "horizon")),
         "by_novelty": pack("by_novelty", ("model_version", "score_type", "novelty", "horizon")),
         "by_news_age": pack("by_news_age", ("model_version", "score_type", "news_age_bucket", "horizon")),
+        "by_relevance": pack("by_relevance", ("model_version", "score_type", "relevance", "horizon")),
         "by_evidence_combo": pack("by_evidence_combo", ("model_version", "score_type", "evidence_combo", "horizon")),
     }
     profile["omitted_insufficient_segments"] = dict(omitted)
