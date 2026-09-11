@@ -1,0 +1,151 @@
+{
+  "prediction_id": "ff-1417915-trump-5000-dividend-promise",
+  "event_id": "forex-factory-news-1417915",
+  "created_at_utc": "2026-09-11T19:42:00Z",
+  "event_time_utc": "2026-09-11T19:10:00Z",
+  "published_at_utc": "2026-09-11T19:10:00Z",
+  "source_time_text": "Sep 11, 8:10pm",
+  "observed_at_utc": "2026-09-11T19:34:00Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "fiscal_policy", "consumer_stimulus", "inflation", "politics"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Donald Trump via Forex Factory",
+    "headline": "Trump: The $5,000 dividend will happen because the people of our country deserve it",
+    "forex_factory_url": "https://www.forexfactory.com/news/1417915-trump-the-5000-dividend-will-happen-because-the",
+    "source_url": "https://truthsocial.com/"
+  },
+  "summary": "Donald Trump reiterated that a $5,000 dividend would be paid to U.S. adults, framing it as funded by economic development and investment. The statement is potentially market-relevant through fiscal stimulus, inflation expectations and Treasury financing, but it does not provide an enacted funding mechanism, implementation date or legislative path, so the immediate macro signal is uncertain rather than cleanly directional.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.11,
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "FIRM",
+        "regime": "FIRM",
+        "source": "MarketWatch intraday DXY report",
+        "freshness": "intraday_current_approx"
+      },
+      "US2Y": {
+        "value": 4.60,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "UP_NEAR_MULTIYEAR_HIGH",
+        "regime": "HIGH",
+        "source": "Reuters/Barron's intraday Treasury reporting",
+        "freshness": "intraday_recent_approx"
+      },
+      "US10Y": {
+        "value": 4.961,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T19:40:56Z",
+        "direction": "HIGH_NEAR_5_PERCENT",
+        "regime": "VERY_HIGH",
+        "source": "Investing.com real-time Treasury yield",
+        "freshness": "intraday_current"
+      },
+      "VIX": {
+        "value": 16.13,
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "DOWN_ON_DAY",
+        "regime": "MODERATE",
+        "source": "Cboe VIX spot",
+        "freshness": "intraday_current_approx"
+      },
+      "WTI": {
+        "value": 98.85,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "WSJ intraday oil report",
+        "freshness": "intraday_recent_approx"
+      },
+      "BRENT": {
+        "value": 103.51,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "WSJ intraday oil report",
+        "freshness": "intraday_recent_approx"
+      }
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HIGH_RESTRICTIVE",
+      "volatility": "EASING_BUT_NOT_LOW",
+      "oil": "VERY_HIGH_BUT_FALLING",
+      "global_risk": "RISK_ON_REBOUND_WITH_HIGH_RATE_AND_GEOPOLITICAL_TENSION",
+      "us_fiscal_impulse": "POTENTIALLY_EXPANSIONARY_BUT_UNFUNDED_AND_UNCERTAIN"
+    }
+  },
+  "learning_profile_v2": {
+    "used": true,
+    "generated_at_utc": "2026-09-11T18:45:28.347939+00:00",
+    "material_adjustment": false,
+    "basis": "ACTIONABLE v2 evidence strongly favors MIXED over weak low-confidence directional calls in conflicting setups, but the forecast is independently driven by the unresolved trade-off between prospective fiscal stimulus and higher inflation/rate risk.",
+    "effect": "No material confidence adjustment; current facts and pre-prediction market context determined the forecast."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A large consumer dividend could support household demand and earnings expectations, but it could also widen fiscal deficits, lift inflation expectations and keep Treasury yields elevated. With no enacted funding or timing, the net immediate effect is conflicted.",
+      "invalidation": "A credible funded implementation path with falling yields would favor UP; a bond-market selloff driven by deficit and inflation fears would favor DOWN."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Stimulus can support nominal growth, but Nasdaq is especially sensitive to long yields already near 5%. Any fiscal-premium or inflation-driven rate rise offsets the demand benefit.",
+      "invalidation": "A durable drop in long yields despite credible stimulus would favor UP; a renewed rise through 5% in US10Y would favor DOWN."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Consumer-facing cyclicals could benefit from direct payments, while higher fiscal borrowing and inflation expectations could weigh through rates. The absence of implementation details keeps the signal balanced.",
+      "invalidation": "Confirmed near-term payments without a Treasury-yield shock would favor UP; renewed bond stress and stronger inflation pricing would favor DOWN."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A larger fiscal impulse can support gold through inflation and deficit concerns, but firm DXY and very high real/nominal yields are a strong counterweight. The proposal remains politically and operationally uncertain.",
+      "invalidation": "A clear fiscal implementation path combined with falling DXY and yields would favor UP; stronger dollar and renewed Treasury yield increases would favor DOWN."
+    }
+  ]
+}
