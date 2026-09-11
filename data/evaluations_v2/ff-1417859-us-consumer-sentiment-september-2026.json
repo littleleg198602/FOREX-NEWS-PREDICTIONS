@@ -1,0 +1,242 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417859-us-consumer-sentiment-september-2026",
+  "event_id": "ff-news-1417859",
+  "event_time_utc": "2026-09-11T14:00:00+00:00",
+  "prediction_time_utc": "2026-09-11T15:22:36+00:00",
+  "evaluation_anchor_time_utc": "2026-09-11T15:22:36+00:00",
+  "prediction_latency_seconds": 4956.0,
+  "evaluated_at_utc": "2026-09-11T15:25:57.071043+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "US",
+    "consumer_sentiment",
+    "inflation_expectations",
+    "Fed"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.1,
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "web market snapshot / DXY current range 99.10-99.15",
+        "freshness": "current-page observation; underlying quote timestamp not exposed"
+      },
+      "US2Y": {
+        "value": 4.598,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "WSJ market report observed during prediction run",
+        "freshness": "same-day; exact underlying quote timestamp not exposed"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "FLAT_TO_DOWN_FROM_HIGH",
+        "regime": "FLAT",
+        "source": "WSJ/AP same-day market reports observed during prediction run",
+        "freshness": "same-day; exact underlying quote timestamp not exposed"
+      },
+      "VIX": {
+        "value": 18.824,
+        "timestamp_utc": "2026-09-11T08:43:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "Vantage Markets / TradingView snapshot",
+        "freshness": "stale_about_6h40m_at_prediction"
+      },
+      "WTI": {
+        "value": 99.07,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "same-day Reuters/UOL market reporting observed during prediction run",
+        "freshness": "same-day current report; exact underlying quote timestamp not exposed"
+      },
+      "BRENT": {
+        "value": 104.35,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "same-day Reuters/UOL market reporting observed during prediction run",
+        "freshness": "same-day current report; exact underlying quote timestamp not exposed"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417859-us-consumer-sentiment-september-2026",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7669.35009765625,
+      "reference_price_time_utc": "2026-09-11T15:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.6,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T15:37:36+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T16:22:36+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:22:36+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417859-us-consumer-sentiment-september-2026",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29420.84765625,
+      "reference_price_time_utc": "2026-09-11T15:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.6,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T15:37:36+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T16:22:36+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:22:36+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417859-us-consumer-sentiment-september-2026",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52578.23046875,
+      "reference_price_time_utc": "2026-09-11T15:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.6,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T15:37:36+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T16:22:36+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:22:36+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417859-us-consumer-sentiment-september-2026",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4404.89990234375,
+      "reference_price_time_utc": "2026-09-11T15:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:15:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.6,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T15:37:36+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T16:22:36+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:22:36+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
