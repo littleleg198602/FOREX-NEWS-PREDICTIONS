@@ -1,0 +1,243 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417915-trump-5000-dividend-promise",
+  "event_id": "forex-factory-news-1417915",
+  "event_time_utc": "2026-09-11T19:10:00+00:00",
+  "prediction_time_utc": "2026-09-11T19:42:00+00:00",
+  "evaluation_anchor_time_utc": "2026-09-11T19:42:00+00:00",
+  "prediction_latency_seconds": 1920.0,
+  "evaluated_at_utc": "2026-09-11T19:37:17.139426+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "US",
+    "fiscal_policy",
+    "consumer_stimulus",
+    "inflation",
+    "politics"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.11,
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "FIRM",
+        "regime": "RISING",
+        "source": "MarketWatch intraday DXY report",
+        "freshness": "intraday_current_approx"
+      },
+      "US2Y": {
+        "value": 4.6,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "UP_NEAR_MULTIYEAR_HIGH",
+        "regime": "RISING",
+        "source": "Reuters/Barron's intraday Treasury reporting",
+        "freshness": "intraday_recent_approx"
+      },
+      "US10Y": {
+        "value": 4.961,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T19:40:56Z",
+        "direction": "HIGH_NEAR_5_PERCENT",
+        "regime": "UNKNOWN",
+        "source": "Investing.com real-time Treasury yield",
+        "freshness": "intraday_current"
+      },
+      "VIX": {
+        "value": 16.13,
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "DOWN_ON_DAY",
+        "regime": "LOW",
+        "source": "Cboe VIX spot",
+        "freshness": "intraday_current_approx"
+      },
+      "WTI": {
+        "value": 98.85,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "FALLING",
+        "source": "WSJ intraday oil report",
+        "freshness": "intraday_recent_approx"
+      },
+      "BRENT": {
+        "value": 103.51,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T19:42:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "FALLING",
+        "source": "WSJ intraday oil report",
+        "freshness": "intraday_recent_approx"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417915-trump-5000-dividend-promise",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7663.3701171875,
+      "reference_price_time_utc": "2026-09-11T19:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:57:00+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T20:42:00+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417915-trump-5000-dividend-promise",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29397.166015625,
+      "reference_price_time_utc": "2026-09-11T19:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:57:00+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T20:42:00+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417915-trump-5000-dividend-promise",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52593.83984375,
+      "reference_price_time_utc": "2026-09-11T19:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:57:00+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T20:42:00+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417915-trump-5000-dividend-promise",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4392.7001953125,
+      "reference_price_time_utc": "2026-09-11T19:28:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:27:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 14.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:57:00+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T20:42:00+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
