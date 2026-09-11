@@ -1,19 +1,22 @@
-version: 2
+version: 3
 
-prediction_model_version: "1.1.1"
-methodology_version: "2.0.0"
+prediction_model_version: "2.0.0"
+methodology_version: "3.0.0"
 evaluation_version: "2.0.0"
-effective_from_utc: "2026-09-06T19:40:00Z"
+effective_from_utc: "2026-09-11T08:00:00Z"
 
 notes:
-  - "Prediction model itself remains 1.1.1; methodology/evaluation moved to 2.0.0 after the independent audit."
+  - "Prediction model 2.0.0 improves the information set and decision process rather than tuning scoring thresholds or coefficients."
+  - "Each instrument carries independent 15m, 1h, 4h and next_session forecasts; immediate remains a compatibility summary only."
+  - "Every model-2 prediction records article role, source verification, news age, novelty, surprise details when applicable, absorption state, cross-asset confirmation, dominant driver and investor-attention state."
+  - "Prediction target is the residual move from the actual decision time. For delayed articles, the already-observed reaction since publication must be analyzed before forecasting."
+  - "Scheduled macro releases must compare actual versus consensus, previous and revisions/components where available; headline level alone is insufficient."
+  - "Directional calls require a counter-case and instrument technical/location state; conflicting evidence may justify MIXED but directional coverage is reported alongside accuracy."
   - "Every price/context bar must be complete and available by the relevant decision/target timestamp; unfinished candles are forbidden."
   - "Fixed 15m/1h/4h horizons never substitute a later market open when the market is closed or data is excessively delayed."
-  - "Legacy prediction JSON shapes are normalized into a derived v2 record; the original prediction file is never hindsight-edited."
-  - "Evaluation v1 files remain preserved in data/evaluations; v2 writes separately to data/evaluations_v2."
-  - "MIXED, VOLATILITY and directional signals are isolated in learning; different model versions are not pooled."
+  - "Legacy prediction JSON shapes are normalized into a derived v2 record; original historical prediction files are never hindsight-edited."
+  - "Evaluation v1 files remain preserved in data/evaluations; leakage-safe evaluation v2 remains in data/evaluations_v2."
+  - "MIXED, VOLATILITY and directional signals are isolated in learning; prediction model versions are never pooled."
   - "Learning uses event-weighted evidence so many correlated instruments from one event do not behave like independent experiments."
-  - "Market context is normalized to canonical DXY, US2Y, US10Y, VIX, WTI and BRENT series/regimes."
-  - "next_session completion requires later traded-date confirmation; feed silence alone cannot close a session."
-  - "Backfilled, example and ineligible predictions remain excluded from normal hit-rate and learning."
+  - "Market context is normalized to canonical DXY, US2Y, US10Y, VIX, WTI and BRENT series/regimes; relevant local FX/rates and the affected instrument reaction are stored in evidence/technical_state."
   - "No automatic trading functionality is permitted."
