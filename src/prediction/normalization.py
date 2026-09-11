@@ -6,6 +6,10 @@ from typing import Any
 
 ALLOWED_DIRECTIONS = {"UP", "DOWN", "MIXED", "VOLATILITY"}
 CONTEXT_FACTORS = ("DXY", "US2Y", "US10Y", "VIX", "WTI", "BRENT")
+MODEL2_HORIZONS = ("15m", "1h", "4h", "next_session")
+MODEL2_ARTICLE_ROLES = {"NEW_CATALYST", "INCREMENTAL_UPDATE", "MARKET_RECAP", "COMMENTARY", "DATA_RELEASE"}
+MODEL2_ABSORPTION = {"UNPRICED", "PARTIALLY_PRICED", "CONFIRMED_CONTINUATION", "FADED", "REVERSED", "NO_REACTION", "UNKNOWN"}
+MODEL2_CONFIRMATION = {"CONFIRMED", "CONFLICTING", "NEUTRAL", "UNKNOWN"}
 
 
 def _as_dict(value: Any) -> dict:
@@ -81,8 +85,6 @@ def _canonical_regime(factor: str, item: dict, explicit: Any = None) -> str:
             return "ELEVATED"
         return "UNKNOWN"
 
-    # A description like UP_THEN_FADED or UP_THEN_STALLED is not a clean
-    # directional trend at decision time. Keep it neutral instead of forcing UP.
     if "FADE" in text or "STALL" in text or "MIXED" in text or "FLAT" in text or "STABLE" in text:
         return "FLAT"
     if any(token in text for token in ("FALL", "DOWN", "LOWER", "WEAK", "EASING", "DOVISH")):
@@ -105,7 +107,6 @@ def normalize_market_context(raw_context: Any) -> dict:
     regimes: dict[str, str] = {}
     adapted = False
 
-    # Canonical series format, if already present.
     for raw_name, raw_item in direct_series.items():
         factor = _canonical_factor_name(raw_name)
         if factor is None or not isinstance(raw_item, dict):
@@ -116,8 +117,6 @@ def normalize_market_context(raw_context: Any) -> dict:
         series[factor] = item
         regimes[factor] = item["regime"]
 
-    # Historical/live external automation often stored DXY/US2Y/etc directly
-    # at the context root. Adapt those records without mutating the prediction.
     for raw_name, raw_item in raw.items():
         factor = _canonical_factor_name(raw_name)
         if factor is None or not isinstance(raw_item, dict):
@@ -139,8 +138,6 @@ def normalize_market_context(raw_context: Any) -> dict:
         series[factor] = item
         regimes[factor] = item["regime"]
 
-    # Regime-only contexts are still useful; preserve them as UNKNOWN-value
-    # canonical series entries.
     for raw_name, raw_regime in direct_regimes.items():
         factor = _canonical_factor_name(raw_name)
         if factor is None:
@@ -151,7 +148,6 @@ def normalize_market_context(raw_context: Any) -> dict:
             series[factor] = item
             regimes[factor] = item["regime"]
 
-    # Make missing context explicit instead of silently dropping it.
     for factor in CONTEXT_FACTORS:
         if factor not in series:
             series[factor] = {
@@ -231,22 +227,28 @@ def normalize_prediction(raw_prediction: dict) -> dict:
             continue
         out = deepcopy(item)
         instrument = out.get("instrument")
+        horizons = _as_dict(out.get("horizons"))
         if not isinstance(out.get("immediate"), dict):
-            direction = out.get("direction")
-            confidence = out.get("confidence")
-            if direction is not None or confidence is not None:
-                out["immediate"] = {
-                    "direction": direction,
-                    "confidence": confidence,
+            if isinstance(horizons.get("15m"), dict):
+                out["immediate"] = deepcopy(horizons["15m"])
+                warnings.append(f"{instrument or 'UNKNOWN'} immediate adapted from horizons.15m")
+            else:
+                direction = out.get("direction")
+                confidence = out.get("confidence")
+                if direction is not None or confidence is not None:
+                    out["immediate"] = {"direction": direction, "confidence": confidence}
+                    warnings.append(f"{instrument or 'UNKNOWN'} immediate adapted from flat direction/confidence")
+        if not isinstance(out.get("next_session"), dict):
+            if isinstance(horizons.get("next_session"), dict):
+                out["next_session"] = deepcopy(horizons["next_session"])
+                warnings.append(f"{instrument or 'UNKNOWN'} next_session adapted from horizons.next_session")
+            elif instrument in top_level_next:
+                legacy_next = top_level_next[instrument]
+                out["next_session"] = {
+                    "direction": legacy_next.get("direction"),
+                    "confidence": legacy_next.get("confidence"),
                 }
-                warnings.append(f"{instrument or 'UNKNOWN'} immediate adapted from flat direction/confidence")
-        if not isinstance(out.get("next_session"), dict) and instrument in top_level_next:
-            legacy_next = top_level_next[instrument]
-            out["next_session"] = {
-                "direction": legacy_next.get("direction"),
-                "confidence": legacy_next.get("confidence"),
-            }
-            warnings.append(f"{instrument} next_session adapted from top-level array")
+                warnings.append(f"{instrument} next_session adapted from top-level array")
         if "mechanism" not in out and raw.get("mechanism"):
             out["mechanism"] = raw.get("mechanism")
         if "invalidation" not in out and raw.get("invalidation"):
@@ -269,13 +271,25 @@ def normalize_prediction(raw_prediction: dict) -> dict:
             "backfilled": backfilled,
             "predictions": normalized_predictions,
             "market_context_at_prediction": normalize_market_context(raw.get("market_context_at_prediction")),
-            "normalization": {
-                "schema": "prediction_v2_normalized",
-                "warnings": warnings,
-            },
+            "normalization": {"schema": "prediction_v2_normalized", "warnings": warnings},
         }
     )
     return normalized
+
+
+def _validate_forecast(forecast: Any, label: str, errors: list[str]) -> None:
+    if not isinstance(forecast, dict):
+        errors.append(f"{label} must be an object")
+        return
+    direction = str(forecast.get("direction") or "").upper()
+    if direction not in ALLOWED_DIRECTIONS:
+        errors.append(f"{label} invalid direction {direction!r}")
+    try:
+        confidence = float(forecast.get("confidence"))
+    except (TypeError, ValueError):
+        confidence = None
+    if confidence is None or not 1 <= confidence <= 10:
+        errors.append(f"{label} confidence must be 1..10")
 
 
 def validate_normalized_prediction(prediction: dict, known_instruments: set[str] | None = None) -> tuple[list[str], list[str]]:
@@ -288,6 +302,32 @@ def validate_normalized_prediction(prediction: dict, known_instruments: set[str]
         errors.append("missing event_time_utc/published_at_utc")
     if prediction.get("eligible_for_hit_rate", True) and not prediction.get("created_at_utc"):
         errors.append("eligible live prediction missing created_at_utc")
+
+    model2 = str(prediction.get("prediction_model_version") or prediction.get("model_version") or "") == "2.0.0"
+    if model2:
+        evidence = prediction.get("evidence")
+        if not isinstance(evidence, dict):
+            errors.append("model 2.0.0 requires evidence object")
+        else:
+            if evidence.get("article_role") not in MODEL2_ARTICLE_ROLES:
+                errors.append("model 2.0.0 evidence.article_role is invalid")
+            absorption = _as_dict(evidence.get("absorption"))
+            if absorption.get("state") not in MODEL2_ABSORPTION:
+                errors.append("model 2.0.0 evidence.absorption.state is invalid")
+            confirmation = _as_dict(evidence.get("cross_asset_confirmation"))
+            if confirmation.get("verdict") not in MODEL2_CONFIRMATION:
+                errors.append("model 2.0.0 evidence.cross_asset_confirmation.verdict is invalid")
+            try:
+                age = float(evidence.get("news_age_minutes"))
+            except (TypeError, ValueError):
+                age = None
+            if age is None or age < 0:
+                errors.append("model 2.0.0 evidence.news_age_minutes must be >= 0")
+            for field in ("source_quality", "novelty", "dominant_driver", "attention"):
+                if not evidence.get(field):
+                    errors.append(f"model 2.0.0 evidence.{field} is required")
+            if not isinstance(evidence.get("source_verified"), bool):
+                errors.append("model 2.0.0 evidence.source_verified must be boolean")
 
     prediction_items = prediction.get("predictions")
     if not isinstance(prediction_items, list) or not prediction_items:
@@ -307,33 +347,27 @@ def validate_normalized_prediction(prediction: dict, known_instruments: set[str]
         immediate = item.get("immediate")
         if not isinstance(immediate, dict):
             errors.append(f"predictions[{index}] missing immediate object")
-            continue
-        direction = str(immediate.get("direction") or "").upper()
-        if direction not in ALLOWED_DIRECTIONS:
-            errors.append(f"predictions[{index}] invalid immediate direction {direction!r}")
-        confidence = immediate.get("confidence")
-        try:
-            confidence_value = float(confidence)
-        except (TypeError, ValueError):
-            confidence_value = None
-        if confidence_value is None or not 1 <= confidence_value <= 10:
-            errors.append(f"predictions[{index}] immediate confidence must be 1..10")
+        else:
+            _validate_forecast(immediate, f"predictions[{index}] immediate", errors)
 
         next_session = item.get("next_session")
         if next_session is not None:
-            if not isinstance(next_session, dict):
-                errors.append(f"predictions[{index}] next_session must be an object")
+            _validate_forecast(next_session, f"predictions[{index}] next_session", errors)
+
+        if model2:
+            horizons = item.get("horizons")
+            if not isinstance(horizons, dict):
+                errors.append(f"predictions[{index}] model 2.0.0 requires horizons object")
             else:
-                next_direction = str(next_session.get("direction") or "").upper()
-                if next_direction and next_direction not in ALLOWED_DIRECTIONS:
-                    errors.append(f"predictions[{index}] invalid next_session direction {next_direction!r}")
-                if next_direction:
-                    try:
-                        next_confidence = float(next_session.get("confidence"))
-                    except (TypeError, ValueError):
-                        next_confidence = None
-                    if next_confidence is None or not 1 <= next_confidence <= 10:
-                        errors.append(f"predictions[{index}] next_session confidence must be 1..10")
+                for horizon in MODEL2_HORIZONS:
+                    if horizon not in horizons:
+                        errors.append(f"predictions[{index}] horizons missing {horizon}")
+                    else:
+                        _validate_forecast(horizons[horizon], f"predictions[{index}] horizons.{horizon}", errors)
+            if not isinstance(item.get("technical_state"), dict):
+                errors.append(f"predictions[{index}] model 2.0.0 requires technical_state object")
+            if not item.get("counter_case"):
+                errors.append(f"predictions[{index}] model 2.0.0 requires counter_case")
 
     for field in ("created_at_utc", "event_time_utc", "published_at_utc"):
         value = prediction.get(field)
