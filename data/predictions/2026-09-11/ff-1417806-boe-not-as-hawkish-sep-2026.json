@@ -1,0 +1,112 @@
+{
+  "prediction_id": "ff-1417806-boe-not-as-hawkish-sep-2026",
+  "event_id": "forex-factory-news-1417806",
+  "created_at_utc": "2026-09-11T17:56:10Z",
+  "event_time_utc": "2026-09-11T17:51:10Z",
+  "published_at_utc": "2026-09-11T17:51:10Z",
+  "source_time_text": "5 min ago",
+  "observed_at_utc": "2026-09-11T17:56:10Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 90,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["UK", "BOE", "monetary_policy", "inflation", "energy"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "ING Think via Forex Factory",
+    "headline": "Why the Bank of England might not be as hawkish as you think",
+    "forex_factory_url": "https://www.forexfactory.com/news/1417806-why-the-bank-of-england-might-not-be",
+    "source_url": "https://think.ing.com/articles/why-the-bank-of-england-might-not-be-as-hawkish-as-you-think/"
+  },
+  "summary": "ING expects the Bank of England to keep Bank Rate at 3.75% at the September 17 meeting by a 6-3 vote. Despite elevated oil and gas prices, it argues inflation has not broadened materially beyond energy, wage growth is near levels consistent with the 2% target, and current UK policy is already restrictive. A November hike is possible only if energy stays persistently high; ING's base case remains no hike and eventual cuts in 2027.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.172,
+        "as_of_utc": "2026-09-11T10:28:00Z",
+        "direction": "UP",
+        "regime": "FIRM",
+        "source": "The Edge Asia Market Wrap",
+        "freshness": "stale_intraday"
+      },
+      "US2Y": {
+        "value": 4.61,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T16:30:00Z",
+        "direction": "UP",
+        "regime": "HIGH",
+        "source": "WSJ market report",
+        "freshness": "intraday_recent_approx"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T16:30:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "WSJ market report",
+        "freshness": "intraday_recent_approx"
+      },
+      "VIX": {
+        "value": 17.18,
+        "as_of_utc": "2026-09-11T10:28:00Z",
+        "direction": "DOWN",
+        "regime": "ELEVATED",
+        "source": "The Edge Asia Market Wrap",
+        "freshness": "stale_intraday"
+      },
+      "WTI": {
+        "value": 99.68,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T16:05:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "crudeoilprices.today",
+        "freshness": "intraday_recent"
+      },
+      "BRENT": {
+        "value": 105.05,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T16:05:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "crudeoilprices.today",
+        "freshness": "intraday_recent"
+      }
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HIGH_RESTRICTIVE",
+      "volatility": "ELEVATED_BUT_EASING",
+      "oil": "VERY_HIGH_BUT_OFF_HIGHS",
+      "global_risk": "MIXED",
+      "uk_policy_impulse": "LESS_HAWKISH_THAN_MARKET_PRICING"
+    }
+  },
+  "learning_profile_v2": {
+    "used": true,
+    "generated_at_utc": "2026-09-11T16:01:14.523262+00:00",
+    "material_adjustment": true,
+    "basis": "ACTIONABLE mixed_neutral confidence 1-4 segments show strong leakage-safe hit rates at 15m/1h and next_session, while low-confidence directional 15m signals are ACTIONABLE REDUCE_OR_AVOID.",
+    "effect": "Kept the live forecast MIXED at confidence 4 instead of forcing a weak directional UK100 call from a research note that may not immediately change market pricing."
+  },
+  "predictions": [
+    {
+      "instrument": "UK100",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A less-hawkish BoE path is supportive for UK equities through lower expected discount rates and potentially a softer pound, but the article is analyst research rather than an official BoE signal and the current oil/rates backdrop remains restrictive.",
+      "invalidation": "A clear hawkish BoE communication, renewed surge in UK/global yields, or another sharp energy-price spike that materially increases November hike expectations would invalidate the less-hawkish interpretation."
+    }
+  ]
+}
