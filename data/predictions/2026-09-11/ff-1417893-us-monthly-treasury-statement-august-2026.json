@@ -1,0 +1,151 @@
+{
+  "prediction_id": "ff-1417893-us-monthly-treasury-statement-august-2026",
+  "event_id": "forex-factory-news-1417893",
+  "created_at_utc": "2026-09-11T18:42:17Z",
+  "event_time_utc": "2026-09-11T18:27:17Z",
+  "published_at_utc": "2026-09-11T18:27:17Z",
+  "source_time_text": "15 min ago",
+  "observed_at_utc": "2026-09-11T18:42:17Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 90,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "fiscal_policy", "federal_budget", "Treasury", "macro"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "U.S. Treasury Fiscal Data via Forex Factory",
+    "headline": "Monthly Treasury Statement: Receipts and Outlays of the United States Government",
+    "forex_factory_url": "https://www.forexfactory.com/news/1417893-monthly-treasury-statement-receipts-and-outlays-of-the",
+    "source_url": "https://fiscaldata.treasury.gov/"
+  },
+  "summary": "The U.S. federal budget deficit for August 2026 was about $166.8-$167 billion, materially smaller than the roughly $221.1 billion consensus and the $432.3 billion prior reading. Reuters reported that the year-to-date deficit nevertheless remained around $1.97 trillion; adjusted for calendar effects, August's deficit was about $248 billion and slightly wider than a year earlier. The near-term surprise is fiscally less negative, but the structural deficit backdrop remains heavy.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.11,
+        "as_of_utc": "2026-09-11T18:42:17Z",
+        "direction": "FIRM_TO_FLAT",
+        "regime": "FIRM",
+        "source": "Investing.com current-day range / Barron's intraday DXY reporting",
+        "freshness": "intraday_current_approx"
+      },
+      "US2Y": {
+        "value": 4.598,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T13:53:00Z",
+        "direction": "UP",
+        "regime": "HIGH",
+        "source": "WSJ intraday Treasury report",
+        "freshness": "stale_intraday"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T13:53:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "WSJ intraday Treasury report",
+        "freshness": "stale_intraday"
+      },
+      "VIX": {
+        "value": 15.71,
+        "as_of_utc": "2026-09-11T18:00:00Z",
+        "direction": "DOWN",
+        "regime": "MODERATE",
+        "source": "MarketWatch / FactSet afternoon report",
+        "freshness": "intraday_recent_approx"
+      },
+      "WTI": {
+        "value": 98.85,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T18:00:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "WSJ afternoon oil report",
+        "freshness": "intraday_recent_approx"
+      },
+      "BRENT": {
+        "value": 103.51,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T18:00:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "WSJ afternoon oil report",
+        "freshness": "intraday_recent_approx"
+      }
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HIGH_RESTRICTIVE",
+      "volatility": "EASING",
+      "oil": "VERY_HIGH_BUT_FALLING",
+      "global_risk": "RISK_ON_REBOUND_WITH_MACRO_TENSION",
+      "us_fiscal_impulse": "LESS_NEGATIVE_MONTHLY_SURPRISE_BUT_STRUCTURALLY_WIDE_DEFICIT"
+    }
+  },
+  "learning_profile_v2": {
+    "used": true,
+    "generated_at_utc": "2026-09-11T18:35:54.367643+00:00",
+    "material_adjustment": false,
+    "basis": "ACTIONABLE v2 segments favor MIXED in genuinely conflicting setups and discourage weak low-confidence directional calls, but the current fiscal facts and market context independently point to a mixed interpretation.",
+    "effect": "No material confidence adjustment; current facts/context determined the forecast."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A smaller-than-expected monthly deficit can marginally ease near-term fiscal-term-premium pressure and support equities, but the year-to-date deficit remains very large and rates are still restrictive, limiting a clean bullish signal.",
+      "invalidation": "A sustained post-release decline in Treasury yields with broader risk-on follow-through would shift the setup bullish; renewed fiscal-driven yield pressure would shift it bearish."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "Nasdaq benefits most if the smaller deficit reduces long-end yield pressure, but US10Y remains near 5% and the structural fiscal gap is still large, so duration-sensitive tech lacks a clean directional edge from this release alone.",
+      "invalidation": "A durable break lower in long yields would favor UP; a renewed move toward or through 5% in US10Y would favor DOWN."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "The better monthly fiscal print is mildly supportive, but its calendar effects and still-large cumulative deficit reduce the signal strength while restrictive yields remain a headwind.",
+      "invalidation": "Clear yield relief and sustained broad-market buying would favor UP; renewed bond-market stress would favor DOWN."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A smaller monthly deficit is marginally negative for gold if it reduces fiscal-risk demand and supports the dollar, but persistent large cumulative deficits, geopolitical risk and very high oil prices preserve safe-haven support.",
+      "invalidation": "A decisive fall in yields and DXY with persistent geopolitical stress would favor UP; stronger dollar and renewed yield increases with easing geopolitical risk would favor DOWN."
+    }
+  ]
+}
