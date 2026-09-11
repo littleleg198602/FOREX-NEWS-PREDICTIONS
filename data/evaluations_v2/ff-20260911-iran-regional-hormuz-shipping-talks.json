@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T13:58:09+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T13:58:09+00:00",
   "prediction_latency_seconds": 840.0,
-  "evaluated_at_utc": "2026-09-11T14:01:33.609350+00:00",
+  "evaluated_at_utc": "2026-09-11T14:27:59.396137+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -104,7 +104,7 @@
     {
       "prediction_id": "ff-20260911-iran-regional-hormuz-shipping-talks",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -118,14 +118,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:13:09+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:58:09+00:00"
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T17:58:09+00:00"
@@ -134,13 +126,34 @@
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:58:09+00:00"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T14:13:09+00:00",
+          "actual_price_time_utc": "2026-09-11T14:14:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T14:13:00+00:00",
+          "market_delay_minutes": 0.85,
+          "price": 7666.22021484375,
+          "change_pct": -0.072729,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.154329,
+          "post_event_range_pct": 0.19591,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.154329
         }
       }
     },
     {
       "prediction_id": "ff-20260911-iran-regional-hormuz-shipping-talks",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -154,14 +167,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:13:09+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:58:09+00:00"
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T17:58:09+00:00"
@@ -170,34 +175,47 @@
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:58:09+00:00"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T14:13:09+00:00",
+          "actual_price_time_utc": "2026-09-11T14:14:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T14:13:00+00:00",
+          "market_delay_minutes": 0.85,
+          "price": 29373.849609375,
+          "change_pct": -0.113101,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.252151,
+          "post_event_range_pct": 0.340804,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.252151
         }
       }
     },
     {
       "prediction_id": "ff-20260911-iran-regional-hormuz-shipping-talks",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4432.60009765625,
-      "reference_price_time_utc": "2026-09-11T13:52:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T13:51:00+00:00",
+      "reference_price": 4432.10009765625,
+      "reference_price_time_utc": "2026-09-11T13:58:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T13:57:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 6.15,
+      "reference_age_minutes": 0.15,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:13:09+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:58:09+00:00"
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T17:58:09+00:00"
@@ -206,6 +224,27 @@
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:58:09+00:00"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T14:13:09+00:00",
+          "actual_price_time_utc": "2026-09-11T14:14:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T14:13:00+00:00",
+          "market_delay_minutes": 0.85,
+          "price": 4425.5,
+          "change_pct": -0.148916,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.309102,
+          "post_event_range_pct": 0.476074,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.309102
         }
       }
     },
@@ -217,23 +256,15 @@
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25561.849609375,
-      "reference_price_time_utc": "2026-09-11T13:47:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T13:46:00+00:00",
+      "reference_price": 25563.880859375,
+      "reference_price_time_utc": "2026-09-11T13:58:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T13:57:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.15,
+      "reference_age_minutes": 0.15,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:13:09+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:58:09+00:00"
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T17:58:09+00:00"
@@ -242,6 +273,15 @@
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:58:09+00:00"
+        },
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-11T14:13:09+00:00",
+          "reason": "no complete traded bar available at/after target"
         }
       }
     },
@@ -253,23 +293,15 @@
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6334.56982421875,
-      "reference_price_time_utc": "2026-09-11T13:47:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T13:46:00+00:00",
+      "reference_price": 6329.93994140625,
+      "reference_price_time_utc": "2026-09-11T13:58:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T13:57:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.15,
+      "reference_age_minutes": 0.15,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:13:09+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T14:58:09+00:00"
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T17:58:09+00:00"
@@ -278,6 +310,15 @@
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:58:09+00:00"
+        },
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-11T14:13:09+00:00",
+          "reason": "no complete traded bar available at/after target"
         }
       }
     }

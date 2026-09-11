@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-10T01:52:23+00:00",
   "evaluation_anchor_time_utc": "2026-09-10T01:52:23+00:00",
   "prediction_latency_seconds": 1163.0,
-  "evaluated_at_utc": "2026-09-11T14:01:06.089693+00:00",
+  "evaluated_at_utc": "2026-09-11T14:27:43.459993+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -113,6 +113,29 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-10T05:52:23+00:00",
+          "actual_price_time_utc": "2026-09-10T05:53:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T05:52:00+00:00",
+          "market_delay_minutes": 0.62,
+          "price": 64942.78125,
+          "change_pct": 0.687794,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.148077,
+          "post_event_range_pct": 1.093243,
+          "mfe_pct": 0.161539,
+          "mae_pct": -0.931704,
+          "directional_threshold_pct": 0.114808,
+          "actual_direction_thresholded": "UP"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-11",
+          "predicted_direction": "MIXED"
+        },
         "1h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-10T02:52:23+00:00",
@@ -137,29 +160,6 @@
           "mae_pct": -0.155089,
           "directional_threshold_pct": 0.046238,
           "actual_direction_thresholded": "UP"
-        },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-10T05:52:23+00:00",
-          "actual_price_time_utc": "2026-09-10T05:53:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-10T05:52:00+00:00",
-          "market_delay_minutes": 0.62,
-          "price": 64942.78125,
-          "change_pct": 0.687794,
-          "actual_direction": "UP",
-          "correct": false,
-          "score_type": "directional",
-          "baseline_range_pct": 1.148077,
-          "post_event_range_pct": 1.093243,
-          "mfe_pct": 0.161539,
-          "mae_pct": -0.931704,
-          "directional_threshold_pct": 0.114808,
-          "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-11",
-          "predicted_direction": "MIXED"
         }
       }
     }
