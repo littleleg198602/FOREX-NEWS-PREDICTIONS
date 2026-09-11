@@ -3,10 +3,10 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime, timezone
 import json
-from pathlib import Path
 from typing import Any
 
 from src.config import ROOT
+from src.prediction.forecast import forecast_for_horizon
 from src.prediction.normalization import normalize_prediction
 
 HORIZONS = ("15m", "1h", "4h", "next_session")
@@ -111,6 +111,7 @@ def main() -> int:
     by_category = {h: defaultdict(_new_counter) for h in HORIZONS}
     by_confidence = {h: defaultdict(_new_counter) for h in HORIZONS}
     by_predicted_direction = {h: defaultdict(_new_counter) for h in HORIZONS}
+    by_model_version = {h: defaultdict(_new_counter) for h in HORIZONS}
 
     eligible_events: set[str] = set()
     latencies: list[float] = []
@@ -137,6 +138,7 @@ def main() -> int:
             latencies.append(latency)
         latency_bucket = _bucket(latency)
         categories = pred.get("categories") or ["UNKNOWN"]
+        model_version = str(pred.get("prediction_model_version") or pred.get("model_version") or "UNKNOWN")
 
         pred_by_instrument = {
             str(p.get("instrument")): p
@@ -160,13 +162,11 @@ def main() -> int:
                 _add(overall[horizon], item)
                 _add(by_latency[horizon][latency_bucket], item)
                 _add(by_instrument[horizon][instrument], item)
+                _add(by_model_version[horizon][model_version], item)
                 for category in categories:
                     _add(by_category[horizon][str(category)], item)
 
-                if horizon == "next_session":
-                    forecast = pitem.get("next_session") or {}
-                else:
-                    forecast = pitem.get("immediate") or {}
+                forecast = forecast_for_horizon(pitem, horizon)
                 confidence = forecast.get("confidence")
                 direction = str(forecast.get("direction") or item.get("predicted_direction") or "UNKNOWN").upper()
                 if confidence is not None:
@@ -203,12 +203,10 @@ def main() -> int:
             "full_up_down_reversal_pct": None if not eligible else round(opposite / eligible * 100.0, 2),
         }
 
-    latency_summary = {}
-    for horizon in HORIZONS:
-        latency_summary[horizon] = {
-            key: _finish(value)
-            for key, value in sorted(by_latency[horizon].items())
-        }
+    latency_summary = {
+        horizon: {key: _finish(value) for key, value in sorted(by_latency[horizon].items())}
+        for horizon in HORIZONS
+    }
 
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -227,6 +225,10 @@ def main() -> int:
         "directional_by_news_age": latency_summary,
         "directional_by_instrument_ranked": {h: _rank(m) for h, m in by_instrument.items()},
         "directional_by_category_ranked": {h: _rank(m) for h, m in by_category.items()},
+        "directional_by_model_version": {
+            h: {k: _finish(v) for k, v in sorted(m.items())}
+            for h, m in by_model_version.items()
+        },
         "directional_by_confidence": {
             h: {k: _finish(v) for k, v in sorted(m.items())}
             for h, m in by_confidence.items()
@@ -237,10 +239,10 @@ def main() -> int:
         },
         "actual_horizon_instability": horizon_flip,
         "structural_findings": [
-            "The current prediction schema uses one 'immediate' direction for all fixed 15m, 1h and 4h horizons, although realized direction can change between those horizons.",
-            "A Forex Factory article can be materially older than the prediction decision time; for such cases the target is the residual move after decision time, not the original headline reaction.",
-            "Current prediction records lack a standardized surprise-vs-consensus block, first-reaction/absorption state, novelty score, source-verification state and cross-asset confirmation matrix.",
-            "Directional hit rate should be reported together with directional coverage so accuracy cannot be improved merely by replacing difficult calls with MIXED.",
+            "Historical model 1.x reused one 'immediate' direction for 15m, 1h and 4h even though realized direction changes frequently; model 2.0 resolves this with explicit horizon forecasts.",
+            "A Forex Factory article can be materially older than the prediction decision time; the target is the residual move after decision time, not the original headline reaction.",
+            "Historical records often lack standardized surprise, absorption, novelty, source-verification and cross-asset confirmation fields; model 2.0 requires these evidence features for new predictions.",
+            "Directional hit rate must be reported together with directional coverage so accuracy cannot be improved merely by replacing difficult calls with MIXED.",
         ],
     }
 
@@ -248,14 +250,11 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "quality_audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    md = []
-    md.append("# Prediction quality audit\n")
-    md.append(f"Generated: {report['generated_at_utc']}\n")
-    md.append("## Directional accuracy\n")
+    md = ["# Prediction quality audit\n", f"Generated: {report['generated_at_utc']}\n", "## Directional accuracy\n"]
     for h in HORIZONS:
         row = report["directional_overall"][h]
         md.append(f"- {h}: {row['correct']}/{row['n']} = {row['hit_rate_pct']}%")
-    md.append("\n## Detection latency\n")
+    md.extend(["\n## Detection latency\n"])
     ls = report["latency_minutes"]
     md.append(f"- events with usable latency: {ls['n']}")
     md.append(f"- mean: {ls['mean']} min; median: {ls['median']} min")
