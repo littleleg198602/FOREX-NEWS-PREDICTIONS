@@ -1,0 +1,119 @@
+{
+  "prediction_id": "ff-1417705-trump-maybe-not-full-iran-escalation",
+  "event_id": "ff-1417705",
+  "created_at_utc": "2026-09-11T00:32:18Z",
+  "event_time_utc": "2026-09-10T23:38:18Z",
+  "published_at_utc": "2026-09-10T23:38:18Z",
+  "source_time_text": "54 min ago",
+  "observed_at_utc": "2026-09-11T00:32:18Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US", "Iran", "geopolitics", "deescalation", "energy", "risk_sentiment"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "platform": "Forex Factory",
+    "section": "Hot Stories / News Latest Stories",
+    "headline": "Trump: Maybe I don't go full into Iran because of election",
+    "publisher": "@zerohedge",
+    "source_url": "https://www.forexfactory.com/news/1417705-trump-maybe-i-dont-go-full-into-iran"
+  },
+  "summary": "Forex Factory surfaced a new Trump comment saying he may not go 'full into Iran' because of the election. The wording is tentative rather than a policy decision, but it is a modest de-escalation signal relative to the same-session backdrop of sharply higher oil, Treasury yields and prolonged-war concerns. The signal is therefore treated as low-conviction and subordinate to current macro conditions.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 98.738,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "short_term_direction": "FLAT_TO_UP",
+        "regime": "FIRM",
+        "source": "Barron's same-session market report surfaced by web search",
+        "freshness": "latest same-session quoted DXY level available before prediction; several hours old"
+      },
+      "US2Y": {
+        "value": 4.58,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "Financial Times same-session bond-market report",
+        "freshness": "latest completed US session context available before prediction"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "HIGH_RISING_NEAR_5PCT",
+        "source": "AP/Reuters/MarketWatch same-session closing reports",
+        "freshness": "latest completed US session context available before prediction"
+      },
+      "VIX": {
+        "value": 16.51,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "MODERATE_RISING",
+        "source": "MarketWatch same-session report",
+        "freshness": "same-session quoted level available before prediction"
+      },
+      "WTI": {
+        "value": 102.48,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "SHARP_UP_HIGH",
+        "source": "Reuters September 10 settlement report",
+        "freshness": "latest completed session settlement"
+      },
+      "BRENT": {
+        "value": 107.63,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "SHARP_UP_HIGH",
+        "source": "Reuters September 10 settlement report",
+        "freshness": "latest completed session settlement"
+      }
+    },
+    "regimes": {
+      "rates": "RISK_OFF_TIGHTENING",
+      "energy": "INFLATIONARY_GEOPOLITICAL_SHOCK",
+      "volatility": "MODERATE_RISING",
+      "usd": "FIRM",
+      "geopolitics": "HIGH_RISK_WITH_TENTATIVE_DEESCALATION_HEADLINE"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "used_for_material_adjustment": true,
+    "applicable_actionable_segment": "confidence_calibration directional 1-4 at 15m: REDUCE_OR_AVOID",
+    "effect": "kept immediate directional confidence at 3/10 because low-confidence directional 15m signals are an ACTIONABLE underperforming segment; the tentative de-escalation headline was not allowed to override the strongly inflationary/risk-off market context"
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A tentative signal that the U.S. president may limit further Iran escalation marginally reduces geopolitical and oil-supply risk premium, which is supportive for broad equities; conviction is low because no policy change was announced and yields/oil remain extremely elevated.",
+      "invalidation": "A renewed explicit escalation threat, fresh attacks on energy/shipping infrastructure, or another sharp rise in oil and Treasury yields would negate the modest positive impulse."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "UP", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Any reduction in geopolitical escalation risk can ease the oil/inflation tail risk weighing on long-duration technology shares, but near-5% US10Y yields sharply limit the expected upside response.",
+      "invalidation": "A renewed rise in oil/yields or a clear reversal toward military escalation would invalidate the call."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A modest de-escalation signal reduces safe-haven demand at the margin, while high US yields remain a headwind for gold; the tentative wording prevents a stronger bearish forecast.",
+      "invalidation": "Fresh escalation, additional attacks, or a sharp fall in Treasury yields would invalidate the downside bias."
+    }
+  ]
+}
