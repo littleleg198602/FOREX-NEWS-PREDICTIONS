@@ -3,18 +3,11 @@
   "$id": "https://example.local/forex-news-prediction-v2.schema.json",
   "title": "FOREX-NEWS-PREDICTIONS normalized prediction v2",
   "type": "object",
-  "required": [
-    "prediction_id",
-    "created_at_utc",
-    "event_time_utc",
-    "eligible_for_hit_rate",
-    "backfilled",
-    "categories",
-    "predictions"
-  ],
+  "required": ["prediction_id", "created_at_utc", "event_time_utc", "eligible_for_hit_rate", "backfilled", "categories", "predictions"],
   "properties": {
     "prediction_id": {"type": "string", "minLength": 1},
     "event_id": {"type": ["string", "null"]},
+    "event_cluster_id": {"type": ["string", "null"]},
     "created_at_utc": {"type": "string", "format": "date-time"},
     "event_time_utc": {"type": "string", "format": "date-time"},
     "published_at_utc": {"type": ["string", "null"], "format": "date-time"},
@@ -23,32 +16,18 @@
     "methodology_version": {"type": ["string", "null"]},
     "eligible_for_hit_rate": {"type": "boolean"},
     "backfilled": {"type": "boolean"},
-    "categories": {
-      "type": "array",
-      "minItems": 1,
-      "items": {"type": "string"}
-    },
+    "categories": {"type": "array", "minItems": 1, "items": {"type": "string"}},
     "evidence": {"$ref": "#/$defs/evidence"},
-    "predictions": {
-      "type": "array",
-      "minItems": 1,
-      "items": {"$ref": "#/$defs/instrumentPrediction"}
-    },
+    "predictions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/instrumentPrediction"}},
     "market_context_at_prediction": {
       "type": "object",
-      "properties": {
-        "series": {"type": "object"},
-        "regimes": {"type": "object"}
-      },
+      "properties": {"series": {"type": "object"}, "regimes": {"type": "object"}},
       "additionalProperties": true
     }
   },
   "allOf": [
     {
-      "if": {
-        "properties": {"prediction_model_version": {"const": "2.0.0"}},
-        "required": ["prediction_model_version"]
-      },
+      "if": {"properties": {"prediction_model_version": {"const": "2.0.0"}}, "required": ["prediction_model_version"]},
       "then": {
         "required": ["evidence"],
         "properties": {
@@ -69,10 +48,7 @@
       "type": "object",
       "required": ["direction", "confidence"],
       "properties": {
-        "direction": {
-          "type": "string",
-          "enum": ["UP", "DOWN", "MIXED", "VOLATILITY"]
-        },
+        "direction": {"type": "string", "enum": ["UP", "DOWN", "MIXED", "VOLATILITY"]},
         "confidence": {"type": "number", "minimum": 1, "maximum": 10},
         "rationale": {"type": ["string", "null"]}
       },
@@ -94,6 +70,7 @@
       "required": ["instrument", "immediate"],
       "properties": {
         "instrument": {"type": "string", "minLength": 1},
+        "relevance": {"type": "string", "enum": ["DIRECT", "SECONDARY", "TERTIARY", "UNKNOWN"]},
         "immediate": {"$ref": "#/$defs/forecast"},
         "next_session": {"$ref": "#/$defs/forecast"},
         "horizons": {"$ref": "#/$defs/horizons"},
@@ -108,7 +85,9 @@
             "trend_1h": {"type": ["string", "null"]},
             "session_location": {"type": ["string", "null"]},
             "extension_state": {"type": ["string", "null"]},
-            "market_open": {"type": ["boolean", "null"]}
+            "market_open": {"type": ["boolean", "null"]},
+            "source": {"type": ["string", "null"]},
+            "observed_at_utc": {"type": ["string", "null"], "format": "date-time"}
           },
           "additionalProperties": true
         }
@@ -117,35 +96,29 @@
     },
     "evidence": {
       "type": "object",
-      "required": [
-        "article_role",
-        "source_quality",
-        "source_verified",
-        "news_age_minutes",
-        "novelty",
-        "absorption",
-        "cross_asset_confirmation",
-        "dominant_driver",
-        "attention"
-      ],
+      "required": ["article_role", "source_quality", "source_verified", "news_age_minutes", "novelty", "absorption", "cross_asset_confirmation", "dominant_driver", "attention"],
       "properties": {
-        "article_role": {
-          "type": "string",
-          "enum": ["NEW_CATALYST", "INCREMENTAL_UPDATE", "MARKET_RECAP", "COMMENTARY", "DATA_RELEASE"]
-        },
+        "article_role": {"type": "string", "enum": ["NEW_CATALYST", "INCREMENTAL_UPDATE", "MARKET_RECAP", "COMMENTARY", "DATA_RELEASE"]},
         "source_quality": {"type": "string", "enum": ["PRIMARY", "TIER1", "SECONDARY", "UNKNOWN"]},
         "source_verified": {"type": "boolean"},
         "news_age_minutes": {"type": "number", "minimum": 0},
         "novelty": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
         "attention": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
         "dominant_driver": {"type": "string", "minLength": 1},
+        "market_expectations": {
+          "type": ["object", "null"],
+          "properties": {
+            "source": {"type": ["string", "null"]},
+            "expected_value": {},
+            "implied_probability": {"type": ["number", "null"]},
+            "distribution_notes": {"type": ["string", "null"]}
+          },
+          "additionalProperties": true
+        },
         "surprise": {
           "type": ["object", "null"],
           "properties": {
-            "actual": {},
-            "consensus": {},
-            "previous": {},
-            "revised_previous": {},
+            "actual": {}, "consensus": {}, "previous": {}, "revised_previous": {},
             "surprise_direction": {"type": ["string", "null"]},
             "components": {"type": "object"}
           },
@@ -155,10 +128,7 @@
           "type": "object",
           "required": ["state"],
           "properties": {
-            "state": {
-              "type": "string",
-              "enum": ["UNPRICED", "PARTIALLY_PRICED", "CONFIRMED_CONTINUATION", "FADED", "REVERSED", "NO_REACTION", "UNKNOWN"]
-            },
+            "state": {"type": "string", "enum": ["UNPRICED", "PARTIALLY_PRICED", "CONFIRMED_CONTINUATION", "FADED", "REVERSED", "NO_REACTION", "UNKNOWN"]},
             "reason": {"type": ["string", "null"]},
             "observed_reaction": {"type": "object"}
           },
