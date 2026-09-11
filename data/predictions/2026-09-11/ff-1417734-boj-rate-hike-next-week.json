@@ -1,0 +1,58 @@
+{
+  "prediction_id": "ff-1417734-boj-rate-hike-next-week",
+  "event_id": "forex-factory-1417734",
+  "created_at_utc": "2026-09-11T06:45:22.321022Z",
+  "event_time_utc": "2026-09-11T05:17:00Z",
+  "published_at_utc": "2026-09-11T05:17:00Z",
+  "source_time_text": "Sep 10, 10:17pm",
+  "observed_at_utc": "2026-09-11T06:45:22.321022Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["Japan", "BOJ", "rates", "inflation", "monetary_policy"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417734-boj-set-to-lift-rates-next-week-but",
+    "headline": "BOJ set to lift rates next week but offer few clues on terminal, sources say",
+    "original_source": "channelnewsasia.com / Reuters"
+  },
+  "story_summary": "Four sources say the BOJ is most likely to raise rates by 25 bps next week to 1.25%, a 31-year high, with scope to signal faster tightening if inflation risks intensify.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.09, "timestamp_utc": "2026-09-11T06:45:22.321022Z", "direction": "UP", "regime": "FIRM_USD", "source": "Investing.com real-time derived / cross-checked Reuters", "freshness_seconds": 0},
+      "US2Y": {"value": 4.596, "unit": "%", "timestamp_utc": "2026-09-11T05:54:11Z", "direction": "UP", "regime": "HAWKISH_HIGH_YIELD", "source": "Reuters", "freshness_seconds": 3071},
+      "US10Y": {"value": 4.97, "unit": "%", "timestamp_utc": "2026-09-11T05:54:11Z", "direction": "UP", "regime": "NEAR_5_PERCENT_BREAKOUT", "source": "Reuters", "freshness_seconds": 3071},
+      "VIX": {"value": 16.44, "timestamp_utc": "2026-09-11T06:45:22.321022Z", "direction": "FLAT", "regime": "LOW_MODERATE_VOLATILITY", "source": "Investing.com real-time derived", "freshness_seconds": 0},
+      "WTI": {"value": 101.10, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T05:55:00Z", "direction": "DOWN_INTRADAY", "regime": "VERY_HIGH_ENERGY_PRICE", "source": "Reuters", "freshness_seconds": 3022},
+      "BRENT": {"value": 105.62, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T05:55:00Z", "direction": "DOWN_INTRADAY", "regime": "VERY_HIGH_ENERGY_PRICE", "source": "Reuters", "freshness_seconds": 3022}
+    },
+    "regimes": {
+      "rates": "GLOBAL_YIELDS_RISING",
+      "risk": "RISK_OFF_INFLATIONARY",
+      "energy": "ELEVATED_BUT_PULLING_BACK_INTRADAY",
+      "usd": "FIRM",
+      "volatility": "LOW_MODERATE"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "sample_status_used": "ACTIONABLE",
+    "material_confidence_adjustment": false,
+    "note": "Directional confidence 1-4 ACTIONABLE calibration is KEEP_NEUTRAL; current macro facts drive the forecast."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A likely 25 bp BOJ hike to a 31-year high and the possibility of faster tightening support the yen and raise domestic discount rates, both negative for Nikkei exporters and valuations; global yields and oil add risk-off pressure.",
+      "invalidation": "A clear BOJ signal that the hike is one-and-done, a sharp yen reversal weaker, or a broad fall in global yields/oil would reduce the bearish impulse."
+    }
+  ]
+}
