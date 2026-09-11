@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T19:42:00+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T19:42:00+00:00",
   "prediction_latency_seconds": 1920.0,
-  "evaluated_at_utc": "2026-09-11T19:37:17.139426+00:00",
+  "evaluated_at_utc": "2026-09-11T21:44:39.513939+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -98,144 +98,248 @@
     {
       "prediction_id": "ff-1417915-trump-5000-dividend-promise",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 7663.3701171875,
-      "reference_price_time_utc": "2026-09-11T19:38:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T19:37:00+00:00",
+      "reference_price": 7663.06982421875,
+      "reference_price_time_utc": "2026-09-11T19:42:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:41:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 4.0,
+      "reference_age_minutes": 0.0,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:57:00+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T20:42:00+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T23:42:00+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T19:56:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 7658.56982421875,
+          "change_pct": -0.058723,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.048152,
+          "post_event_range_pct": 0.082344,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.048152
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T20:42:00+00:00",
+          "actual_price_time_utc": "2026-09-11T20:47:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+          "market_delay_minutes": 5.0,
+          "price": 7656.98,
+          "change_pct": -0.07947,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.103741,
+          "post_event_range_pct": 0.120581,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.103741
         }
       }
     },
     {
       "prediction_id": "ff-1417915-trump-5000-dividend-promise",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 29397.166015625,
-      "reference_price_time_utc": "2026-09-11T19:38:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T19:37:00+00:00",
+      "reference_price": 29400.25,
+      "reference_price_time_utc": "2026-09-11T19:42:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:41:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 4.0,
+      "reference_age_minutes": 0.0,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:57:00+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T20:42:00+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T23:42:00+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T19:56:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29380.9140625,
+          "change_pct": -0.065768,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.047267,
+          "post_event_range_pct": 0.11799,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.047267
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T20:42:00+00:00",
+          "actual_price_time_utc": "2026-09-11T20:42:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T20:41:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 29368.44,
+          "change_pct": -0.108196,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.148722,
+          "post_event_range_pct": 0.161995,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.148722
         }
       }
     },
     {
       "prediction_id": "ff-1417915-trump-5000-dividend-promise",
       "instrument": "WS30",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^DJI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 52593.83984375,
-      "reference_price_time_utc": "2026-09-11T19:38:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T19:37:00+00:00",
+      "reference_price": 52588.76953125,
+      "reference_price_time_utc": "2026-09-11T19:42:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:41:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 4.0,
+      "reference_age_minutes": 0.0,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:57:00+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T20:42:00+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T23:42:00+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T19:56:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 52563.21875,
+          "change_pct": -0.048586,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.056326,
+          "post_event_range_pct": 0.06876,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.056326
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T20:42:00+00:00",
+          "actual_price_time_utc": "2026-09-11T20:47:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+          "market_delay_minutes": 5.0,
+          "price": 52573.29,
+          "change_pct": -0.029435,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.09998,
+          "post_event_range_pct": 0.085896,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.09998
         }
       }
     },
     {
       "prediction_id": "ff-1417915-trump-5000-dividend-promise",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4392.7001953125,
-      "reference_price_time_utc": "2026-09-11T19:28:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T19:27:00+00:00",
+      "reference_price": 4390.10009765625,
+      "reference_price_time_utc": "2026-09-11T19:42:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T19:41:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 14.0,
+      "reference_age_minutes": 0.0,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:57:00+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T20:42:00+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T23:42:00+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_time_utc": "2026-09-11T19:57:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T19:56:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 4388.2998046875,
+          "change_pct": -0.041008,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.173119,
+          "post_event_range_pct": 0.116173,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.173119
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T23:42:00+00:00"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T20:42:00+00:00",
+          "actual_price_time_utc": "2026-09-11T20:42:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T20:41:00+00:00",
+          "market_delay_minutes": 0.0,
+          "price": 4390.10009765625,
+          "change_pct": 0.0,
+          "actual_direction": "NO_MOVE",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.216396,
+          "post_event_range_pct": 0.202727,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.216396
         }
       }
     }

@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-08T01:54:23+00:00",
   "evaluation_anchor_time_utc": "2026-09-08T01:54:23+00:00",
   "prediction_latency_seconds": 743.0,
-  "evaluated_at_utc": "2026-09-11T19:36:34.124005+00:00",
+  "evaluated_at_utc": "2026-09-11T21:44:14.762105+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -125,6 +125,26 @@
           "directional_threshold_pct": 0.020295,
           "actual_direction_thresholded": "DOWN"
         },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-09",
+          "actual_price_time_utc": "2026-09-09T06:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-09T06:29:00+00:00",
+          "price": 65148.078125,
+          "change_pct": -2.093386,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 2.136158,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.166726,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 2.136158
+        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-08T05:54:23+00:00",
@@ -149,26 +169,6 @@
           "first_available_price_time_utc": "2026-09-08T03:31:00+00:00",
           "market_delay_minutes": 36.62,
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
-        "next_session": {
-          "status": "DONE",
-          "session_local_date": "2026-09-09",
-          "actual_price_time_utc": "2026-09-09T06:30:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-09T06:29:00+00:00",
-          "price": 65148.078125,
-          "change_pct": -2.093386,
-          "actual_direction": "DOWN",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 3,
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 2.136158,
-          "baseline_definition": "previous_relevant_local_trading_session_range",
-          "post_event_range_pct": 1.166726,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
-          "neutral_envelope_pct": 2.136158
         }
       }
     }
