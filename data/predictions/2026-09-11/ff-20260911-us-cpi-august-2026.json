@@ -1,0 +1,133 @@
+{
+  "prediction_id": "ff-20260911-us-cpi-august-2026",
+  "event_id": "forex-factory-us-cpi-august-2026",
+  "created_at_utc": "2026-09-11T13:17:58Z",
+  "event_time_utc": "2026-09-11T12:30:00Z",
+  "published_at_utc": "2026-09-11T12:53:58Z",
+  "source_time_text": "24 min ago",
+  "observed_at_utc": "2026-09-11T13:17:58Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["US_CPI", "INFLATION", "FED", "RATES"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / U.S. Bureau of Labor Statistics",
+    "url": "https://www.forexfactory.com/news",
+    "headline": "US Consumer Price Index - August 2026"
+  },
+  "facts_at_prediction": {
+    "headline_cpi_mom_pct": 0.4,
+    "headline_cpi_yoy_pct": 3.4,
+    "core_cpi_mom_pct": 0.3,
+    "core_cpi_mom_consensus_pct": 0.2,
+    "core_cpi_yoy_pct": 2.4,
+    "fed_hike_probability_comment": "Forex Factory reported roughly 90% probability of a Fed hike after the release, versus about 70% before.",
+    "market_reaction_comment": "US equity futures remained positive but pared gains; short-dated Treasury yields rose."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.11,
+        "timestamp_utc": "2026-09-11T13:10:00Z",
+        "direction": "UP",
+        "source": "MarketWatch post-CPI snapshot via web search",
+        "freshness": "minutes"
+      },
+      "US2Y": {
+        "value": 4.596,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T12:55:00Z",
+        "direction": "UP",
+        "source": "Barron's/MarketWatch post-CPI reporting via web search",
+        "freshness": "tens_of_minutes"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T13:05:00Z",
+        "direction": "MIXED_UP",
+        "source": "WSJ/Reuters post-CPI reporting via web search",
+        "freshness": "minutes"
+      },
+      "VIX": {
+        "value": 17.5,
+        "timestamp_utc": "2026-09-11T13:10:00Z",
+        "direction": "ELEVATED",
+        "source": "current market snapshot indexed by web search",
+        "freshness": "minutes"
+      },
+      "WTI": {
+        "value": 99.52,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T11:32:00Z",
+        "direction": "DOWN",
+        "source": "Reuters",
+        "freshness": "under_2_hours"
+      },
+      "BRENT": {
+        "value": 104.18,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T11:32:00Z",
+        "direction": "DOWN",
+        "source": "Reuters",
+        "freshness": "under_2_hours"
+      }
+    },
+    "regimes": {
+      "rates": "HIGH_AND_HAWKISH",
+      "usd": "FIRM",
+      "volatility": "ELEVATED",
+      "oil": "VERY_HIGH_BUT_PULLING_BACK",
+      "risk": "CONFLICTING_RISK_ON_FUTURES_VS_HAWKISH_RATES"
+    }
+  },
+  "learning_profile": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_confidence_adjustment": false,
+    "note": "No v2 ACTIONABLE context segment was used to override the current CPI and live market facts."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Core CPI was firmer than consensus and Fed hike odds rose sharply, while equity futures remained positive; conflicting rate and risk signals favour volatility over a forced direction.",
+      "invalidation": "A decisive post-release move with falling short yields and stable Fed pricing would reduce the volatility thesis."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Hotter core inflation raises discount-rate pressure, but the initial equity reaction stayed positive as oil pulled back.",
+      "invalidation": "A sustained one-way equity move accompanied by confirming yields and Fed pricing would replace the mixed cross-asset setup."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "VOLATILITY", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The CPI increases policy uncertainty while broad futures remain supported, creating two-sided index risk.",
+      "invalidation": "Clear convergence of rate expectations and equity breadth into a stable directional regime."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher short-rate expectations and a firmer dollar pressure gold, while geopolitical risk and elevated oil preserve safe-haven demand.",
+      "invalidation": "A simultaneous sharp fall in yields and DXY, or a clear geopolitical de-escalation, would resolve the two-sided setup."
+    },
+    {
+      "instrument": "XAGUSD",
+      "immediate": {"direction": "VOLATILITY", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Silver faces the same dollar/rate headwind as gold but with additional cyclical sensitivity, increasing two-sided volatility risk.",
+      "invalidation": "A stable directional move in DXY, yields and broad risk assets would reduce the mixed impulse."
+    }
+  ]
+}
