@@ -1,0 +1,58 @@
+{
+  "prediction_id": "ff-1417745-uk-gdp-july-2026",
+  "event_id": "forex-factory-1417745",
+  "created_at_utc": "2026-09-11T06:45:22.321022Z",
+  "event_time_utc": "2026-09-11T06:04:00Z",
+  "published_at_utc": "2026-09-11T06:04:00Z",
+  "source_time_text": "Sep 10, 11:04pm",
+  "observed_at_utc": "2026-09-11T06:45:22.321022Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["UK", "GDP", "growth", "BoE", "macro"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417745-gdp-monthly-estimate-uk-july-2026",
+    "headline": "GDP monthly estimate, UK: July 2026",
+    "original_source": "ons.gov.uk"
+  },
+  "story_summary": "UK monthly GDP grew 0.4% in July versus a 0.0% consensus, while three-month GDP grew 0.4%. Services were strong, but production and construction declined over the three-month period.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.09, "timestamp_utc": "2026-09-11T06:45:22.321022Z", "direction": "UP", "regime": "FIRM_USD", "source": "Investing.com real-time derived / cross-checked Reuters", "freshness_seconds": 0},
+      "US2Y": {"value": 4.596, "unit": "%", "timestamp_utc": "2026-09-11T05:54:11Z", "direction": "UP", "regime": "HAWKISH_HIGH_YIELD", "source": "Reuters", "freshness_seconds": 3071},
+      "US10Y": {"value": 4.97, "unit": "%", "timestamp_utc": "2026-09-11T05:54:11Z", "direction": "UP", "regime": "NEAR_5_PERCENT_BREAKOUT", "source": "Reuters", "freshness_seconds": 3071},
+      "VIX": {"value": 16.44, "timestamp_utc": "2026-09-11T06:45:22.321022Z", "direction": "FLAT", "regime": "LOW_MODERATE_VOLATILITY", "source": "Investing.com real-time derived", "freshness_seconds": 0},
+      "WTI": {"value": 101.10, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T05:55:00Z", "direction": "DOWN_INTRADAY", "regime": "VERY_HIGH_ENERGY_PRICE", "source": "Reuters", "freshness_seconds": 3022},
+      "BRENT": {"value": 105.62, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T05:55:00Z", "direction": "DOWN_INTRADAY", "regime": "VERY_HIGH_ENERGY_PRICE", "source": "Reuters", "freshness_seconds": 3022}
+    },
+    "regimes": {
+      "rates": "GLOBAL_YIELDS_RISING",
+      "risk": "RISK_OFF_INFLATIONARY",
+      "energy": "ELEVATED_BUT_PULLING_BACK_INTRADAY",
+      "usd": "FIRM",
+      "volatility": "LOW_MODERATE"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "sample_status_used": "ACTIONABLE",
+    "material_confidence_adjustment": true,
+    "note": "Current facts were already conflicting for UK100; ACTIONABLE v2 mixed-neutral calibration supported confidence 4 instead of a weaker neutral confidence."
+  },
+  "predictions": [
+    {
+      "instrument": "UK100",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The large upside GDP surprise is growth-positive, but it also reinforces higher-for-longer BoE expectations and sterling strength, while very high oil and global yields weigh on FTSE valuation and exporters.",
+      "invalidation": "A sharp fall in UK/global yields with stable or weaker GBP would turn the growth surprise more clearly bullish; a fresh oil/yield spike would tilt the setup bearish."
+    }
+  ]
+}
