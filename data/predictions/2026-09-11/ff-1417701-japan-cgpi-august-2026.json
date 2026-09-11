@@ -1,0 +1,62 @@
+{
+  "prediction_id": "ff-1417701-japan-cgpi-august-2026",
+  "event_id": "forex-factory-1417701",
+  "created_at_utc": "2026-09-11T02:25:24Z",
+  "event_time_utc": "2026-09-10T23:50:00Z",
+  "published_at_utc": "2026-09-10T23:52:00Z",
+  "source_time_text": "Sep 11, 12:52am",
+  "observed_at_utc": "2026-09-11T02:25:24Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["JPY", "Japan", "PPI", "inflation", "BOJ"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory / Bank of Japan",
+    "url": "https://www.forexfactory.com/news/1417701-japan-monthly-report-on-the-corporate-goods-price",
+    "headline": "Japan: Monthly Report on the Corporate Goods Price Index (Preliminary Figures for August 2026)"
+  },
+  "event_facts": {
+    "PPI_yoy_actual_pct": 7.6,
+    "forecast_pct": 7.4,
+    "previous_pct": 7.7
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.081, "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "firm", "source": "Reuters", "freshness": "current_session"},
+      "US2Y": {"value": 4.55, "unit": "pct", "timestamp_utc": "2026-09-10T21:30:00Z", "direction": "UP", "regime": "high_yield", "source": "MarketWatch/Dow Jones", "freshness": "latest_available_reference"},
+      "US10Y": {"value": 4.95, "unit": "pct", "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "near_5pct_high_yield", "source": "Reuters", "freshness": "current_session"},
+      "VIX": {"value": 16.46, "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "ELEVATED", "regime": "moderate_risk", "source": "Investing.com derived", "freshness": "latest_available_reference"},
+      "WTI": {"value": 103.45, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "energy_shock", "source": "Reuters", "freshness": "current_session"},
+      "BRENT": {"value": 108.68, "unit": "USD/bbl", "timestamp_utc": "2026-09-11T02:00:00Z", "direction": "UP", "regime": "energy_shock", "source": "Reuters", "freshness": "current_session"}
+    },
+    "regimes": {
+      "usd": "firm",
+      "rates": "high_and_rising",
+      "volatility": "moderate",
+      "oil": "severe_energy_shock",
+      "global_risk": "risk_off"
+    }
+  },
+  "learning_profile_v2": {
+    "profile_version": "2.0.0",
+    "segment_used": "confidence_calibration/directional/1-4/15m",
+    "sample_status": "ACTIONABLE",
+    "recommendation": "REDUCE_OR_AVOID",
+    "application": "Reduced the immediate directional confidence to 4/10; current inflation and market facts still support a DOWN bias for NI225."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Japan PPI rose 7.6% y/y versus 7.4% expected, reinforcing BOJ tightening risk and potential yen support, which is negative for rate-sensitive and exporter-heavy Nikkei equities; the concurrent global oil shock and high yields reinforce the near-term downside pressure.",
+      "invalidation": "A sharp decline in Japanese/global yields, a weaker yen despite the inflation surprise, or broad risk-on reversal in Asian equities would invalidate the immediate DOWN thesis."
+    }
+  ]
+}
