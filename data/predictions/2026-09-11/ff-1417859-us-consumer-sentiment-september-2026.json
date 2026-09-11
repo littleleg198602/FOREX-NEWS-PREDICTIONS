@@ -1,0 +1,132 @@
+{
+  "prediction_id": "ff-1417859-us-consumer-sentiment-september-2026",
+  "event_id": "ff-news-1417859",
+  "created_at_utc": "2026-09-11T15:22:36Z",
+  "event_time_utc": "2026-09-11T14:00:00Z",
+  "published_at_utc": "2026-09-11T14:04:00Z",
+  "source_time_text": "Sep 11, 3:04pm",
+  "observed_at_utc": "2026-09-11T15:22:36Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["US", "consumer_sentiment", "inflation_expectations", "Fed"],
+  "headline": "US consumer confidence sinks in September",
+  "source_url": "https://www.forexfactory.com/news/1417859-us-consumer-confidence-sinks-in-september",
+  "facts_at_prediction": {
+    "uom_consumer_sentiment": 47.8,
+    "uom_consumer_sentiment_expected": 51.0,
+    "uom_current_conditions": 50.9,
+    "uom_current_conditions_expected": 51.3,
+    "uom_expectations": 45.8,
+    "uom_expectations_expected": 51.0,
+    "uom_inflation_expectations_1y_pct": 4.6,
+    "uom_inflation_expectations_1y_expected_pct": 4.2,
+    "uom_inflation_expectations_5_10y_pct": 3.4,
+    "uom_inflation_expectations_5_10y_expected_pct": 3.3
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.10,
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "UP",
+        "regime": "FIRM",
+        "source": "web market snapshot / DXY current range 99.10-99.15",
+        "freshness": "current-page observation; underlying quote timestamp not exposed"
+      },
+      "US2Y": {
+        "value": 4.598,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "WSJ market report observed during prediction run",
+        "freshness": "same-day; exact underlying quote timestamp not exposed"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "FLAT_TO_DOWN_FROM_HIGH",
+        "regime": "VERY_HIGH",
+        "source": "WSJ/AP same-day market reports observed during prediction run",
+        "freshness": "same-day; exact underlying quote timestamp not exposed"
+      },
+      "VIX": {
+        "value": 18.824,
+        "timestamp_utc": "2026-09-11T08:43:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "Vantage Markets / TradingView snapshot",
+        "freshness": "stale_about_6h40m_at_prediction"
+      },
+      "WTI": {
+        "value": 99.07,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "DOWN",
+        "regime": "HIGH_BUT_EASING",
+        "source": "same-day Reuters/UOL market reporting observed during prediction run",
+        "freshness": "same-day current report; exact underlying quote timestamp not exposed"
+      },
+      "BRENT": {
+        "value": 104.35,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T15:22:36Z",
+        "direction": "DOWN",
+        "regime": "HIGH_BUT_EASING",
+        "source": "same-day Reuters/UOL market reporting observed during prediction run",
+        "freshness": "same-day current report; exact underlying quote timestamp not exposed"
+      }
+    },
+    "regimes": {
+      "rates": "VERY_HIGH_HAWKISH",
+      "usd": "FIRM",
+      "volatility": "ELEVATED",
+      "energy": "HIGH_BUT_EASING",
+      "risk": "CONFLICTED_RISK_ON_REBOUND_VS_STAGFLATION_SIGNAL"
+    }
+  },
+  "learning_profile": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "note": "ACTIONABLE v2 calibration shows low-confidence directional forecasts underperform while MIXED 1-4 has strong leakage-safe hit rates; current macro/context conflict therefore favors MIXED rather than forcing a weak direction."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Sharp sentiment miss is growth-negative, while hotter short- and long-run inflation expectations are hawkish; falling oil and a live equity rebound offset the bearish macro impulse.",
+      "invalidation": "A sustained break lower in equities together with renewed rises in oil and Treasury yields would shift the setup bearish; a continued oil/yield decline with broad risk-on breadth would shift it bullish."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher inflation expectations and very high Treasury yields pressure duration-sensitive tech, but easing oil and the current risk-on rebound counter the weak sentiment data.",
+      "invalidation": "A renewed rise in US2Y/US10Y with weakening breadth would turn the signal bearish; a decisive yield retreat would turn it bullish."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Weak consumer expectations hurt cyclical growth while inflation expectations raise rate risk; oil relief and positive index momentum offset part of that pressure.",
+      "invalidation": "Clear confirmation of either broad risk-off with rising yields or durable risk-on with falling yields invalidates the mixed setup."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher inflation expectations and weaker confidence support gold defensively, but a firm DXY and very high US yields are strong offsets.",
+      "invalidation": "A decisive fall in real/nominal yields and DXY would make gold bullish; renewed yield and dollar strength would make it bearish."
+    }
+  ]
+}
