@@ -12,6 +12,7 @@ on:
       - "src/prediction/**"
       - "schemas/**"
       - "tests/**"
+      - "tools/**"
       - "config/instruments.yaml"
       - "config/market_context.yaml"
       - "config/evaluation.yaml"
@@ -23,7 +24,7 @@ on:
     - cron: "17 * * * *"
 
 concurrency:
-  group: evaluate-predictions-main
+  group: evaluate-predictions-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -58,19 +59,20 @@ jobs:
       - name: Smoke test Yahoo tracked and context data
         run: python -m src.market_data.smoke_test
 
-      - name: Evaluate all predictions with leakage-safe v2
-        run: python -m src.evaluation.evaluate_all
+      - name: Evaluate all predictions with horizon-aware model 2 support
+        run: python -m src.evaluation.evaluate_all_model2
 
-      - name: Build v2 performance statistics
-        run: python -m src.statistics.build_stats
+      - name: Build v2 performance statistics and directional coverage
+        run: python -m src.statistics.build_stats_model2
 
-      - name: Build v2 context-aware learning profile
-        run: python -m src.learning.build_learning_profile
+      - name: Build evidence-aware learning profile
+        run: python -m src.learning.build_learning_profile_model2
 
       - name: Build prediction quality audit
         run: PYTHONPATH=. python tools/prediction_quality_audit.py
 
       - name: Commit v2 evaluation results and statistics
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -99,8 +101,8 @@ jobs:
             git reset --hard origin/main
             python -m pytest tests -q
             python -m src.prediction.validate_all
-            python -m src.evaluation.evaluate_all
-            python -m src.statistics.build_stats
-            python -m src.learning.build_learning_profile
+            python -m src.evaluation.evaluate_all_model2
+            python -m src.statistics.build_stats_model2
+            python -m src.learning.build_learning_profile_model2
             PYTHONPATH=. python tools/prediction_quality_audit.py
           done
