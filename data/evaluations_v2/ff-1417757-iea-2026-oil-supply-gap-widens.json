@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T09:24:24+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T09:24:24+00:00",
   "prediction_latency_seconds": 4800.0,
-  "evaluated_at_utc": "2026-09-11T09:43:39.865247+00:00",
+  "evaluated_at_utc": "2026-09-11T13:21:10.793752+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -118,15 +118,17 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T10:24:24+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 738.4
+        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-11T09:39:24+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 738.4
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T10:24:24+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -156,15 +158,17 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T10:24:24+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 727.4
+        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-11T09:39:24+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 727.4
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T10:24:24+00:00"
         },
         "next_session": {
           "status": "PENDING",
@@ -180,7 +184,7 @@
     {
       "prediction_id": "ff-1417757-iea-2026-oil-supply-gap-widens",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
@@ -194,14 +198,41 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
-        "15m": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-11T09:39:24+00:00",
-          "reason": "no complete traded bar available at/after target"
-        },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T10:24:24+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T10:24:24+00:00",
+          "actual_price_time_utc": "2026-09-11T10:25:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T10:24:00+00:00",
+          "market_delay_minutes": 0.6,
+          "price": 6316.56005859375,
+          "change_pct": 0.173813,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.273729,
+          "post_event_range_pct": 0.232804,
+          "mfe_pct": 0.014906,
+          "mae_pct": -0.217898,
+          "directional_threshold_pct": 0.027373,
+          "actual_direction_thresholded": "UP"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "actual_price_time_utc": "2026-09-11T09:40:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T09:39:00+00:00",
+          "market_delay_minutes": 0.6,
+          "price": 6308.240234375,
+          "change_pct": 0.04187,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.068988,
+          "post_event_range_pct": 0.056776,
+          "mfe_pct": 0.014906,
+          "mae_pct": -0.04187,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "UP"
         },
         "next_session": {
           "status": "PENDING",
@@ -217,7 +248,7 @@
     {
       "prediction_id": "ff-1417757-iea-2026-oil-supply-gap-widens",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
@@ -231,14 +262,41 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
-        "15m": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-11T09:39:24+00:00",
-          "reason": "no complete traded bar available at/after target"
-        },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T10:24:24+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T10:24:24+00:00",
+          "actual_price_time_utc": "2026-09-11T10:25:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T10:24:00+00:00",
+          "market_delay_minutes": 0.6,
+          "price": 25535.689453125,
+          "change_pct": 0.15524,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.338164,
+          "post_event_range_pct": 0.223012,
+          "mfe_pct": 0.024115,
+          "mae_pct": -0.198897,
+          "directional_threshold_pct": 0.033816,
+          "actual_direction_thresholded": "UP"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "actual_price_time_utc": "2026-09-11T09:40:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T09:39:00+00:00",
+          "market_delay_minutes": 0.6,
+          "price": 25507.830078125,
+          "change_pct": 0.045971,
+          "actual_direction": "UP",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.081576,
+          "post_event_range_pct": 0.070086,
+          "mfe_pct": 0.024115,
+          "mae_pct": -0.045971,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "UP"
         },
         "next_session": {
           "status": "PENDING",
@@ -254,7 +312,7 @@
     {
       "prediction_id": "ff-1417757-iea-2026-oil-supply-gap-widens",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -268,14 +326,39 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-11T09:39:24+00:00",
-          "reason": "no complete traded bar available at/after target"
-        },
         "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T10:24:24+00:00"
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T10:24:24+00:00",
+          "actual_price_time_utc": "2026-09-11T10:25:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T10:24:00+00:00",
+          "market_delay_minutes": 0.6,
+          "price": 4390.39990234375,
+          "change_pct": 0.075216,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.366976,
+          "post_event_range_pct": 0.216544,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.366976
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "actual_price_time_utc": "2026-09-11T09:40:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T09:39:00+00:00",
+          "market_delay_minutes": 0.6,
+          "price": 4383.89990234375,
+          "change_pct": -0.072946,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.109407,
+          "post_event_range_pct": 0.102573,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.109407
         },
         "next_session": {
           "status": "PENDING",

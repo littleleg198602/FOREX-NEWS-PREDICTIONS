@@ -1,0 +1,278 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-20260911-us-cpi-august-2026",
+  "event_id": "forex-factory-us-cpi-august-2026",
+  "event_time_utc": "2026-09-11T12:30:00+00:00",
+  "prediction_time_utc": "2026-09-11T13:17:58+00:00",
+  "evaluation_anchor_time_utc": "2026-09-11T13:17:58+00:00",
+  "prediction_latency_seconds": 2878.0,
+  "evaluated_at_utc": "2026-09-11T13:21:12.596800+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "US_CPI",
+    "INFLATION",
+    "FED",
+    "RATES"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.11,
+        "timestamp_utc": "2026-09-11T13:10:00Z",
+        "direction": "UP",
+        "source": "MarketWatch post-CPI snapshot via web search",
+        "freshness": "minutes",
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.596,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T12:55:00Z",
+        "direction": "UP",
+        "source": "Barron's/MarketWatch post-CPI reporting via web search",
+        "freshness": "tens_of_minutes",
+        "regime": "RISING"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T13:05:00Z",
+        "direction": "MIXED_UP",
+        "source": "WSJ/Reuters post-CPI reporting via web search",
+        "freshness": "minutes",
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "value": 17.5,
+        "timestamp_utc": "2026-09-11T13:10:00Z",
+        "direction": "ELEVATED",
+        "source": "current market snapshot indexed by web search",
+        "freshness": "minutes",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 99.52,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T11:32:00Z",
+        "direction": "DOWN",
+        "source": "Reuters",
+        "freshness": "under_2_hours",
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "value": 104.18,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T11:32:00Z",
+        "direction": "DOWN",
+        "source": "Reuters",
+        "freshness": "under_2_hours",
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-20260911-us-cpi-august-2026",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29103.514,
+      "reference_price_time_utc": "2026-09-10T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 960.967,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:32:58+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T17:17:58+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20260911-us-cpi-august-2026",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7591.7,
+      "reference_price_time_utc": "2026-09-10T21:06:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T21:05:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 971.967,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:32:58+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T17:17:58+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20260911-us-cpi-august-2026",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52064.1,
+      "reference_price_time_utc": "2026-09-10T21:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T21:06:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 970.967,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:32:58+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T17:17:58+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20260911-us-cpi-august-2026",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4426.2998046875,
+      "reference_price_time_utc": "2026-09-11T13:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T13:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.967,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:32:58+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T17:17:58+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20260911-us-cpi-august-2026",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 65.30000305175781,
+      "reference_price_time_utc": "2026-09-11T13:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T13:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.967,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:32:58+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T17:17:58+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
