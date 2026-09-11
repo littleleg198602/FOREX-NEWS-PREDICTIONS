@@ -1,0 +1,135 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417734-boj-rate-hike-next-week",
+  "event_id": "forex-factory-1417734",
+  "event_time_utc": "2026-09-11T05:17:00+00:00",
+  "prediction_time_utc": "2026-09-11T06:45:22.321022+00:00",
+  "evaluation_anchor_time_utc": "2026-09-11T06:45:22.321022+00:00",
+  "prediction_latency_seconds": 5302.321,
+  "evaluated_at_utc": "2026-09-11T06:47:51.187464+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "Japan",
+    "BOJ",
+    "rates",
+    "inflation",
+    "monetary_policy"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.09,
+        "timestamp_utc": "2026-09-11T06:45:22.321022Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com real-time derived / cross-checked Reuters",
+        "freshness_seconds": 0
+      },
+      "US2Y": {
+        "value": 4.596,
+        "unit": "%",
+        "timestamp_utc": "2026-09-11T05:54:11Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_seconds": 3071
+      },
+      "US10Y": {
+        "value": 4.97,
+        "unit": "%",
+        "timestamp_utc": "2026-09-11T05:54:11Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_seconds": 3071
+      },
+      "VIX": {
+        "value": 16.44,
+        "timestamp_utc": "2026-09-11T06:45:22.321022Z",
+        "direction": "FLAT",
+        "regime": "LOW",
+        "source": "Investing.com real-time derived",
+        "freshness_seconds": 0
+      },
+      "WTI": {
+        "value": 101.1,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-11T05:55:00Z",
+        "direction": "DOWN_INTRADAY",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_seconds": 3022
+      },
+      "BRENT": {
+        "value": 105.62,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-11T05:55:00Z",
+        "direction": "DOWN_INTRADAY",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_seconds": 3022
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417734-boj-rate-hike-next-week",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 64006.421875,
+      "reference_price_time_utc": "2026-09-11T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 15.372,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T07:00:22.321022+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T07:45:22.321022+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:45:22.321022+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
