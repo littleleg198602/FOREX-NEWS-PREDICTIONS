@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-09T13:47:53+00:00",
   "evaluation_anchor_time_utc": "2026-09-09T13:47:53+00:00",
   "prediction_latency_seconds": 2040.0,
-  "evaluated_at_utc": "2026-09-11T13:20:51.434210+00:00",
+  "evaluated_at_utc": "2026-09-11T14:00:54.754022+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -148,6 +148,24 @@
           "directional_threshold_pct": 0.049499,
           "actual_direction_thresholded": "NO_MOVE"
         },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-09T17:47:53+00:00",
+          "actual_price_time_utc": "2026-09-09T17:48:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-09T17:47:00+00:00",
+          "market_delay_minutes": 0.12,
+          "price": 4459.2001953125,
+          "change_pct": -0.123189,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.097498,
+          "post_event_range_pct": 1.292364,
+          "mfe_pct": 0.27549,
+          "mae_pct": -1.016874,
+          "directional_threshold_pct": 0.10975,
+          "actual_direction_thresholded": "DOWN"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-10",
@@ -167,24 +185,6 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 2.12556
-        },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-09T17:47:53+00:00",
-          "actual_price_time_utc": "2026-09-09T17:48:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-09T17:47:00+00:00",
-          "market_delay_minutes": 0.12,
-          "price": 4459.2001953125,
-          "change_pct": -0.123189,
-          "actual_direction": "DOWN",
-          "correct": false,
-          "score_type": "directional",
-          "baseline_range_pct": 1.097498,
-          "post_event_range_pct": 1.292364,
-          "mfe_pct": 0.27549,
-          "mae_pct": -1.016874,
-          "directional_threshold_pct": 0.10975,
-          "actual_direction_thresholded": "DOWN"
         }
       }
     },
@@ -241,6 +241,13 @@
           "directional_threshold_pct": 0.026281,
           "actual_direction_thresholded": "UP"
         },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-09T17:47:53+00:00",
+          "first_available_price_time_utc": "2026-09-10T07:03:00+00:00",
+          "market_delay_minutes": 795.12,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-10",
@@ -260,13 +267,6 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 1.55412
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-09T17:47:53+00:00",
-          "first_available_price_time_utc": "2026-09-10T07:03:00+00:00",
-          "market_delay_minutes": 795.12,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       }
     },
@@ -323,6 +323,13 @@
           "directional_threshold_pct": 0.016348,
           "actual_direction_thresholded": "UP"
         },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-09T17:47:53+00:00",
+          "first_available_price_time_utc": "2026-09-10T07:01:00+00:00",
+          "market_delay_minutes": 793.12,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-10",
@@ -342,13 +349,6 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 1.897535
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-09T17:47:53+00:00",
-          "first_available_price_time_utc": "2026-09-10T07:01:00+00:00",
-          "market_delay_minutes": 793.12,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       }
     },
@@ -405,6 +405,13 @@
           "directional_threshold_pct": 0.017542,
           "actual_direction_thresholded": "DOWN"
         },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-09T17:47:53+00:00",
+          "first_available_price_time_utc": "2026-09-10T07:01:00+00:00",
+          "market_delay_minutes": 793.12,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-10",
@@ -424,20 +431,13 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 1.658042
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-09T17:47:53+00:00",
-          "first_available_price_time_utc": "2026-09-10T07:01:00+00:00",
-          "market_delay_minutes": 793.12,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       }
     },
     {
       "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -487,11 +487,6 @@
           "directional_threshold_pct": 0.01414,
           "actual_direction_thresholded": "DOWN"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "MIXED"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T17:47:53+00:00",
@@ -509,13 +504,33 @@
           "mae_pct": -0.079718,
           "directional_threshold_pct": 0.017995,
           "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-10",
+          "actual_price_time_utc": "2026-09-10T21:06:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T21:05:00+00:00",
+          "price": 7591.7,
+          "change_pct": -0.789454,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.477254,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.428637,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.477254
         }
       }
     },
     {
       "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -565,11 +580,6 @@
           "directional_threshold_pct": 0.023277,
           "actual_direction_thresholded": "UP"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "MIXED"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T17:47:53+00:00",
@@ -587,13 +597,33 @@
           "mae_pct": -0.358549,
           "directional_threshold_pct": 0.029057,
           "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-10",
+          "actual_price_time_utc": "2026-09-10T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T21:16:00+00:00",
+          "price": 29103.514,
+          "change_pct": -1.197701,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.771051,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.718364,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.771051
         }
       }
     },
     {
       "prediction_id": "ff-1417156-oil-rises-past-100-middle-east-attacks",
       "instrument": "WS30",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^DJI",
       "yahoo_proxy_for": null,
@@ -643,11 +673,6 @@
           "directional_threshold_pct": 0.027603,
           "actual_direction_thresholded": "DOWN"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "MIXED"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T17:47:53+00:00",
@@ -665,6 +690,26 @@
           "mae_pct": -0.198063,
           "directional_threshold_pct": 0.063293,
           "actual_direction_thresholded": "UP"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-10",
+          "actual_price_time_utc": "2026-09-10T21:07:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T21:06:00+00:00",
+          "price": 52064.1,
+          "change_pct": -0.730847,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.749873,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.627563,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.749873
         }
       }
     },
@@ -697,6 +742,12 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 437.883
         },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-09T17:47:53+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 437.883
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-10",
@@ -716,12 +767,6 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 1.191672
-        },
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-09T17:47:53+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 437.883
         }
       }
     },
@@ -776,6 +821,23 @@
           "mae_pct": null,
           "neutral_envelope_pct": 0.925786
         },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-09T17:47:53+00:00",
+          "actual_price_time_utc": "2026-09-09T17:48:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-09T17:47:00+00:00",
+          "market_delay_minutes": 0.12,
+          "price": 68.58999633789062,
+          "change_pct": 0.793524,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 2.784723,
+          "post_event_range_pct": 2.578993,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 2.784723
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-10",
@@ -795,23 +857,6 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 4.085241
-        },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-09T17:47:53+00:00",
-          "actual_price_time_utc": "2026-09-09T17:48:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-09T17:47:00+00:00",
-          "market_delay_minutes": 0.12,
-          "price": 68.58999633789062,
-          "change_pct": 0.793524,
-          "actual_direction": "UP",
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 2.784723,
-          "post_event_range_pct": 2.578993,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "neutral_envelope_pct": 2.784723
         }
       }
     }

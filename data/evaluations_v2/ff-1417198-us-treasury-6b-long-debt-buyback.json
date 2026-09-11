@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-09T16:17:09+00:00",
   "evaluation_anchor_time_utc": "2026-09-09T16:17:09+00:00",
   "prediction_latency_seconds": 1869.0,
-  "evaluated_at_utc": "2026-09-11T13:20:52.944302+00:00",
+  "evaluated_at_utc": "2026-09-11T14:00:57.308599+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -97,7 +97,7 @@
     {
       "prediction_id": "ff-1417198-us-treasury-6b-long-debt-buyback",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -147,11 +147,6 @@
           "directional_threshold_pct": 0.019029,
           "actual_direction_thresholded": "UP"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "MIXED"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T20:17:09+00:00",
@@ -169,13 +164,33 @@
           "mae_pct": -0.267158,
           "directional_threshold_pct": 0.077304,
           "actual_direction_thresholded": "UP"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-10",
+          "actual_price_time_utc": "2026-09-10T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T21:16:00+00:00",
+          "price": 29103.514,
+          "change_pct": -0.942366,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.773043,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.72022,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.773043
         }
       }
     },
     {
       "prediction_id": "ff-1417198-us-treasury-6b-long-debt-buyback",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -225,11 +240,6 @@
           "directional_threshold_pct": 0.01236,
           "actual_direction_thresholded": "UP"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "MIXED"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T20:17:09+00:00",
@@ -247,13 +257,33 @@
           "mae_pct": -0.253762,
           "directional_threshold_pct": 0.047868,
           "actual_direction_thresholded": "UP"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-10",
+          "actual_price_time_utc": "2026-09-10T21:06:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T21:05:00+00:00",
+          "price": 7591.7,
+          "change_pct": -0.493356,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.478679,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.429917,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.478679
         }
       }
     },
     {
       "prediction_id": "ff-1417198-us-treasury-6b-long-debt-buyback",
       "instrument": "WS30",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^DJI",
       "yahoo_proxy_for": null,
@@ -301,11 +331,6 @@
           "mae_pct": null,
           "neutral_envelope_pct": 0.142342
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-10",
-          "predicted_direction": "MIXED"
-        },
         "4h": {
           "status": "DONE",
           "target_time_utc": "2026-09-09T20:17:09+00:00",
@@ -321,6 +346,26 @@
           "post_event_range_pct": 0.402542,
           "mfe_pct": null,
           "mae_pct": null,
+          "neutral_envelope_pct": 0.751549
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-10",
+          "actual_price_time_utc": "2026-09-10T21:07:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-10T21:06:00+00:00",
+          "price": 52064.1,
+          "change_pct": -0.509035,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.751549,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.628965,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 0.751549
         }
       }
@@ -376,6 +421,23 @@
           "mae_pct": null,
           "neutral_envelope_pct": 0.198252
         },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-09T20:17:09+00:00",
+          "actual_price_time_utc": "2026-09-09T20:18:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-09T20:17:00+00:00",
+          "market_delay_minutes": 0.85,
+          "price": 4441.2998046875,
+          "change_pct": 0.058567,
+          "actual_direction": "NO_MOVE",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.344993,
+          "post_event_range_pct": 0.696159,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 1.344993
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-10",
@@ -395,23 +457,6 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 2.138011
-        },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-09T20:17:09+00:00",
-          "actual_price_time_utc": "2026-09-09T20:18:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-09T20:17:00+00:00",
-          "market_delay_minutes": 0.85,
-          "price": 4441.2998046875,
-          "change_pct": 0.058567,
-          "actual_direction": "NO_MOVE",
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 1.344993,
-          "post_event_range_pct": 0.696159,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "neutral_envelope_pct": 1.344993
         }
       }
     }

@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T13:17:58+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T13:17:58+00:00",
   "prediction_latency_seconds": 2878.0,
-  "evaluated_at_utc": "2026-09-11T13:21:12.596800+00:00",
+  "evaluated_at_utc": "2026-09-11T14:01:35.361864+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -111,13 +111,15 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:32:58+00:00"
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T13:32:58+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 960.967
         },
         "4h": {
           "status": "PENDING",
@@ -125,7 +127,7 @@
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-11",
           "predicted_direction": "MIXED"
         }
       }
@@ -147,13 +149,15 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:32:58+00:00"
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T13:32:58+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 971.967
         },
         "4h": {
           "status": "PENDING",
@@ -161,7 +165,7 @@
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-11",
           "predicted_direction": "MIXED"
         }
       }
@@ -183,13 +187,15 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:32:58+00:00"
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T13:32:58+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 970.967
         },
         "4h": {
           "status": "PENDING",
@@ -197,7 +203,7 @@
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-11",
           "predicted_direction": "MIXED"
         }
       }
@@ -205,27 +211,41 @@
     {
       "prediction_id": "ff-20260911-us-cpi-august-2026",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4426.2998046875,
-      "reference_price_time_utc": "2026-09-11T13:12:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T13:11:00+00:00",
+      "reference_price": 4425.7998046875,
+      "reference_price_time_utc": "2026-09-11T13:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T13:16:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 5.967,
+      "reference_age_minutes": 0.967,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:32:58+00:00"
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T13:32:58+00:00",
+          "actual_price_time_utc": "2026-09-11T13:33:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T13:32:00+00:00",
+          "market_delay_minutes": 0.03,
+          "price": 4426.7998046875,
+          "change_pct": 0.022595,
+          "actual_direction": "NO_MOVE",
+          "correct": true,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.311804,
+          "post_event_range_pct": 0.418004,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 1.340599,
+          "volatility_ratio_threshold": 1.25
         },
         "4h": {
           "status": "PENDING",
@@ -241,27 +261,41 @@
     {
       "prediction_id": "ff-20260911-us-cpi-august-2026",
       "instrument": "XAGUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "yahoo_proxy_for": "XAGUSD",
       "yahoo_proxy_type": "COMEX silver futures",
-      "reference_price": 65.30000305175781,
-      "reference_price_time_utc": "2026-09-11T13:12:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T13:11:00+00:00",
+      "reference_price": 65.30999755859375,
+      "reference_price_time_utc": "2026-09-11T13:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T13:16:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 5.967,
+      "reference_age_minutes": 0.967,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:32:58+00:00"
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T14:17:58+00:00"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T13:32:58+00:00",
+          "actual_price_time_utc": "2026-09-11T13:33:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T13:32:00+00:00",
+          "market_delay_minutes": 0.03,
+          "price": 65.33000183105469,
+          "change_pct": 0.03063,
+          "actual_direction": "NO_MOVE",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.689029,
+          "post_event_range_pct": 0.711995,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 1.033332,
+          "volatility_ratio_threshold": 1.25
         },
         "4h": {
           "status": "PENDING",
