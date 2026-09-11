@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T04:16:16+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T04:16:16+00:00",
   "prediction_latency_seconds": 16756.0,
-  "evaluated_at_utc": "2026-09-11T04:19:59.548334+00:00",
+  "evaluated_at_utc": "2026-09-11T04:43:26.367763+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -93,36 +93,50 @@
     {
       "prediction_id": "ff-1417728-trump-no-regrets-iran-war-economic-pressure",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4358.89990234375,
-      "reference_price_time_utc": "2026-09-11T04:10:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T04:09:00+00:00",
+      "reference_price": 4361.5,
+      "reference_price_time_utc": "2026-09-11T04:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T04:15:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 6.267,
+      "reference_age_minutes": 0.267,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 3,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-11T04:31:16+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T05:16:16+00:00"
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T08:16:16+00:00"
         },
-        "next_session": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T04:31:16+00:00",
+          "actual_price_time_utc": "2026-09-11T04:32:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T04:31:00+00:00",
+          "market_delay_minutes": 0.73,
+          "price": 4369.60009765625,
+          "change_pct": 0.185718,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.522763,
+          "post_event_range_pct": 0.243038,
+          "mfe_pct": 0.208646,
+          "mae_pct": -0.034392,
+          "directional_threshold_pct": 0.052276,
+          "actual_direction_thresholded": "UP"
+        },
+        "1h": {
           "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
+          "target_time_utc": "2026-09-11T05:16:16+00:00"
         }
       }
     },
@@ -143,22 +157,24 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-11T04:31:16+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T05:16:16+00:00"
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T08:16:16+00:00"
         },
-        "next_session": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T04:31:16+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 430.267
+        },
+        "1h": {
           "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
+          "target_time_utc": "2026-09-11T05:16:16+00:00"
         }
       }
     },
@@ -179,22 +195,24 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-11T04:31:16+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T05:16:16+00:00"
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T08:16:16+00:00"
         },
-        "next_session": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T04:31:16+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 419.267
+        },
+        "1h": {
           "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED"
+          "target_time_utc": "2026-09-11T05:16:16+00:00"
         }
       }
     }
