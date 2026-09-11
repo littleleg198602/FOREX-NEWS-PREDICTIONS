@@ -1,0 +1,136 @@
+{
+  "prediction_id": "ff-1417757-iea-2026-oil-supply-gap-widens",
+  "event_id": "forex_factory_news_1417757",
+  "created_at_utc": "2026-09-11T09:24:24Z",
+  "event_time_utc": "2026-09-11T08:04:24Z",
+  "published_at_utc": "2026-09-11T08:04:24Z",
+  "source_time_text": "1 hr 20 min ago",
+  "observed_at_utc": "2026-09-11T09:24:24Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": ["IEA", "oil", "energy_inflation", "geopolitics", "global_macro"],
+  "headline": "IEA: 2026 world oil demand to drop by 2.5 million bpd; supply gap widens as Gulf recovery is delayed",
+  "source": {
+    "publisher": "LiveSquawk / IEA",
+    "via": "Forex Factory",
+    "forex_factory_url": "https://www.forexfactory.com/news/1417757-iea-2026-world-oil-demand-to-drop-by"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.09,
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "FIRM",
+        "source": "Reuters",
+        "freshness": "same-day pre-prediction quote; exact quote timestamp not provided"
+      },
+      "US2Y": {
+        "value": 4.5961,
+        "unit": "percent",
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "Reuters",
+        "freshness": "same-day pre-prediction quote; exact quote timestamp not provided"
+      },
+      "US10Y": {
+        "value": 4.946,
+        "unit": "percent",
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "VERY_HIGH",
+        "source": "Reuters",
+        "freshness": "same-day pre-prediction quote; exact quote timestamp not provided"
+      },
+      "VIX": {
+        "value": 17.53,
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "MODERATE",
+        "source": "Global Invest Daily market snapshot",
+        "freshness": "same-day pre-prediction snapshot; exact quote timestamp not provided"
+      },
+      "WTI": {
+        "value": 100.69,
+        "unit": "USD/bbl",
+        "as_of_utc": "2026-09-11T07:58:00Z",
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "DOWN_INTRADAY_UP_WEEKLY",
+        "regime": "VERY_HIGH",
+        "source": "WSJ",
+        "freshness": "about 1h26m old at decision time"
+      },
+      "BRENT": {
+        "value": 105.36,
+        "unit": "USD/bbl",
+        "as_of_utc": "2026-09-11T07:58:00Z",
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "DOWN_INTRADAY_UP_WEEKLY",
+        "regime": "VERY_HIGH",
+        "source": "WSJ",
+        "freshness": "about 1h26m old at decision time"
+      }
+    },
+    "regimes": {
+      "rates": "GLOBAL_YIELDS_STRESSED",
+      "energy": "SEVERE_ENERGY_INFLATION_PRESSURE",
+      "usd": "FIRM",
+      "volatility": "RISING_MODERATE",
+      "risk": "RISK_OFF_BIAS"
+    }
+  },
+  "learning_profile_v2": {
+    "generated_at_utc": "2026-09-11T07:58:40.343986+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No ACTIONABLE context-aware segment was used to override current facts; generic calibration was not used for a material confidence change."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The IEA now sees a larger 2026 oil supply deficit and delayed normalization of Gulf flows, reinforcing energy-inflation and higher-rate pressure on broad U.S. equities even as crude is correcting intraday.",
+      "invalidation": "A durable de-escalation that restores Gulf supply expectations and drives oil and Treasury yields sharply lower."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Persistent energy inflation keeps long yields near 5%, creating an especially negative discount-rate backdrop for duration-sensitive technology shares.",
+      "invalidation": "A durable de-escalation that restores Gulf supply expectations and drives oil and Treasury yields sharply lower."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A wider oil supply gap adds to euro-area energy inflation risk immediately after an ECB rate hike, weighing on European equity valuations and growth expectations.",
+      "invalidation": "A sharp sustained oil decline or evidence that Gulf supply normalization will occur materially sooner than the IEA now expects."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 3},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Germany is highly exposed to energy costs and restrictive financial conditions, so a larger projected oil deficit is a modest additional headwind.",
+      "invalidation": "A sharp sustained oil decline or evidence that Gulf supply normalization will occur materially sooner than the IEA now expects."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Supply-tightness and geopolitical risk support safe-haven demand, but a firm dollar and Treasury yields near 5% raise gold's opportunity cost, leaving the net signal conflicted.",
+      "invalidation": "A decisive break in either direction in real yields and the dollar that resolves the current safe-haven versus rates conflict."
+    }
+  ]
+}
