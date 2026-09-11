@@ -68,7 +68,7 @@ jobs:
         run: python -m src.learning.build_learning_profile
 
       - name: Build prediction quality audit
-        run: python tools/prediction_quality_audit.py
+        run: PYTHONPATH=. python tools/prediction_quality_audit.py
 
       - name: Commit v2 evaluation results and statistics
         run: |
@@ -102,5 +102,5 @@ jobs:
             python -m src.evaluation.evaluate_all
             python -m src.statistics.build_stats
             python -m src.learning.build_learning_profile
-            python tools/prediction_quality_audit.py
+            PYTHONPATH=. python tools/prediction_quality_audit.py
           done
