@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T09:24:24+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T09:24:24+00:00",
   "prediction_latency_seconds": 4800.0,
-  "evaluated_at_utc": "2026-09-11T09:28:55.022197+00:00",
+  "evaluated_at_utc": "2026-09-11T09:43:39.865247+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -119,21 +119,23 @@
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T09:39:24+00:00"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 738.4
         },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T10:24:24+00:00"
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:24:24+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
         }
       }
     },
@@ -155,21 +157,23 @@
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T09:39:24+00:00"
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 727.4
         },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T10:24:24+00:00"
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:24:24+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
         }
       }
     },
@@ -181,31 +185,32 @@
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6305.43017578125,
-      "reference_price_time_utc": "2026-09-11T09:14:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T09:13:00+00:00",
+      "reference_price": 6305.60009765625,
+      "reference_price_time_utc": "2026-09-11T09:24:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T09:23:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 10.4,
+      "reference_age_minutes": 0.4,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T09:39:24+00:00"
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "reason": "no complete traded bar available at/after target"
         },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T10:24:24+00:00"
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:24:24+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
         }
       }
     },
@@ -217,31 +222,32 @@
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25490.66015625,
-      "reference_price_time_utc": "2026-09-11T09:14:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T09:13:00+00:00",
+      "reference_price": 25496.109375,
+      "reference_price_time_utc": "2026-09-11T09:24:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T09:23:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 10.4,
+      "reference_age_minutes": 0.4,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 3,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T09:39:24+00:00"
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "reason": "no complete traded bar available at/after target"
         },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T10:24:24+00:00"
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:24:24+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
         }
       }
     },
@@ -253,31 +259,32 @@
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4385.5,
-      "reference_price_time_utc": "2026-09-11T09:19:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T09:18:00+00:00",
+      "reference_price": 4387.10009765625,
+      "reference_price_time_utc": "2026-09-11T09:24:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T09:23:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 5.4,
+      "reference_age_minutes": 0.4,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T09:39:24+00:00"
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-11T09:39:24+00:00",
+          "reason": "no complete traded bar available at/after target"
         },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-11T10:24:24+00:00"
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T13:24:24+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
         }
       }
     }
