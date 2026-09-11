@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T15:58:08+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T15:58:08+00:00",
   "prediction_latency_seconds": 1620.0,
-  "evaluated_at_utc": "2026-09-11T16:01:10.116402+00:00",
+  "evaluated_at_utc": "2026-09-11T17:59:12.985153+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -105,7 +105,7 @@
     {
       "prediction_id": "ff-1417869-gulf-iran-hormuz-reopening-framework",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -119,29 +119,55 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:13:08+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:58:08+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:58:08+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T16:13:08+00:00",
+          "actual_price_time_utc": "2026-09-11T16:14:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T16:13:00+00:00",
+          "market_delay_minutes": 0.87,
+          "price": 7669.22998046875,
+          "change_pct": -0.01734,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.104556,
+          "post_event_range_pct": 0.080436,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.104556
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T16:58:08+00:00",
+          "actual_price_time_utc": "2026-09-11T16:59:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T16:58:00+00:00",
+          "market_delay_minutes": 0.87,
+          "price": 7669.93994140625,
+          "change_pct": -0.008084,
+          "actual_direction": "NO_MOVE",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.310797,
+          "post_event_range_pct": 0.178086,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.310797
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:58:08+00:00"
         }
       }
     },
     {
       "prediction_id": "ff-1417869-gulf-iran-hormuz-reopening-framework",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -155,22 +181,48 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:13:08+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:58:08+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:58:08+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T16:13:08+00:00",
+          "actual_price_time_utc": "2026-09-11T16:14:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T16:13:00+00:00",
+          "market_delay_minutes": 0.87,
+          "price": 29425.875,
+          "change_pct": -0.033276,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.124729,
+          "post_event_range_pct": 0.115977,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.124729
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T16:58:08+00:00",
+          "actual_price_time_utc": "2026-09-11T16:59:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T16:58:00+00:00",
+          "market_delay_minutes": 0.87,
+          "price": 29417.072265625,
+          "change_pct": -0.063181,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.452848,
+          "post_event_range_pct": 0.293284,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.452848
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:58:08+00:00"
         }
       }
     },
@@ -182,31 +234,35 @@
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25557.349609375,
-      "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
+      "reference_price": 25568.56,
+      "reference_price_time_utc": "2026-09-11T15:31:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:30:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 28.133,
+      "reference_age_minutes": 27.133,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:13:08+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:58:08+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:58:08+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T16:13:08+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 27.133
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T16:58:08+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 27.133
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:58:08+00:00"
         }
       }
     },
@@ -227,58 +283,88 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:13:08+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:58:08+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:58:08+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T16:13:08+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 28.133
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T16:58:08+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 28.133
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:58:08+00:00"
         }
       }
     },
     {
       "prediction_id": "ff-1417869-gulf-iran-hormuz-reopening-framework",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4414.89990234375,
-      "reference_price_time_utc": "2026-09-11T15:52:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-11T15:51:00+00:00",
+      "reference_price": 4407.7998046875,
+      "reference_price_time_utc": "2026-09-11T15:58:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:57:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 6.133,
+      "reference_age_minutes": 0.133,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:13:08+00:00"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T16:58:08+00:00"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-11T19:58:08+00:00"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T16:13:08+00:00",
+          "actual_price_time_utc": "2026-09-11T16:14:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T16:13:00+00:00",
+          "market_delay_minutes": 0.87,
+          "price": 4406.5,
+          "change_pct": -0.029489,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.208725,
+          "post_event_range_pct": 0.186027,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.208725
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T16:58:08+00:00",
+          "actual_price_time_utc": "2026-09-11T16:59:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T16:58:00+00:00",
+          "market_delay_minutes": 0.87,
+          "price": 4404.2001953125,
+          "change_pct": -0.081665,
+          "actual_direction": "DOWN",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.401565,
+          "post_event_range_pct": 0.478699,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.401565
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T19:58:08+00:00"
         }
       }
     }

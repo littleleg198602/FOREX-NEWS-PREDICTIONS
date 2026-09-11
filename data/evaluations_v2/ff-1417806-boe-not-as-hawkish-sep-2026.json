@@ -1,0 +1,135 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417806-boe-not-as-hawkish-sep-2026",
+  "event_id": "forex-factory-news-1417806",
+  "event_time_utc": "2026-09-11T17:51:10+00:00",
+  "prediction_time_utc": "2026-09-11T17:56:10+00:00",
+  "evaluation_anchor_time_utc": "2026-09-11T17:56:10+00:00",
+  "prediction_latency_seconds": 300.0,
+  "evaluated_at_utc": "2026-09-11T17:59:11.884733+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "UK",
+    "BOE",
+    "monetary_policy",
+    "inflation",
+    "energy"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.172,
+        "as_of_utc": "2026-09-11T10:28:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "The Edge Asia Market Wrap",
+        "freshness": "stale_intraday"
+      },
+      "US2Y": {
+        "value": 4.61,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T16:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "WSJ market report",
+        "freshness": "intraday_recent_approx"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "as_of_utc": "2026-09-11T16:30:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "FALLING",
+        "source": "WSJ market report",
+        "freshness": "intraday_recent_approx"
+      },
+      "VIX": {
+        "value": 17.18,
+        "as_of_utc": "2026-09-11T10:28:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "The Edge Asia Market Wrap",
+        "freshness": "stale_intraday"
+      },
+      "WTI": {
+        "value": 99.68,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T16:05:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "FALLING",
+        "source": "crudeoilprices.today",
+        "freshness": "intraday_recent"
+      },
+      "BRENT": {
+        "value": 105.05,
+        "unit": "USD_per_barrel",
+        "as_of_utc": "2026-09-11T16:05:00Z",
+        "direction": "DOWN_FROM_SESSION_HIGH",
+        "regime": "FALLING",
+        "source": "crudeoilprices.today",
+        "freshness": "intraday_recent"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417806-boe-not-as-hawkish-sep-2026",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10650.44,
+      "reference_price_time_utc": "2026-09-11T15:36:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:35:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 140.167,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T18:11:10+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T18:56:10+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T21:56:10+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
