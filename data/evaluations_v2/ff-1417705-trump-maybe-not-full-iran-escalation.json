@@ -1,0 +1,208 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417705-trump-maybe-not-full-iran-escalation",
+  "event_id": "ff-1417705",
+  "event_time_utc": "2026-09-10T23:38:18+00:00",
+  "prediction_time_utc": "2026-09-11T00:32:18+00:00",
+  "evaluation_anchor_time_utc": "2026-09-11T00:32:18+00:00",
+  "prediction_latency_seconds": 3240.0,
+  "evaluated_at_utc": "2026-09-11T00:36:09.585484+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "US",
+    "Iran",
+    "geopolitics",
+    "deescalation",
+    "energy",
+    "risk_sentiment"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 98.738,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "short_term_direction": "FLAT_TO_UP",
+        "regime": "FLAT",
+        "source": "Barron's same-session market report surfaced by web search",
+        "freshness": "latest same-session quoted DXY level available before prediction; several hours old"
+      },
+      "US2Y": {
+        "value": 4.58,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Financial Times same-session bond-market report",
+        "freshness": "latest completed US session context available before prediction"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "AP/Reuters/MarketWatch same-session closing reports",
+        "freshness": "latest completed US session context available before prediction"
+      },
+      "VIX": {
+        "value": 16.51,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "short_term_direction": "UP",
+        "regime": "LOW",
+        "source": "MarketWatch same-session report",
+        "freshness": "same-session quoted level available before prediction"
+      },
+      "WTI": {
+        "value": 102.48,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters September 10 settlement report",
+        "freshness": "latest completed session settlement"
+      },
+      "BRENT": {
+        "value": 107.63,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-10T20:30:00Z",
+        "short_term_direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters September 10 settlement report",
+        "freshness": "latest completed session settlement"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417705-trump-maybe-not-full-iran-escalation",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7591.7,
+      "reference_price_time_utc": "2026-09-10T21:06:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T21:05:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 206.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T00:47:18+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T01:32:18+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T04:32:18+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417705-trump-maybe-not-full-iran-escalation",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29103.514,
+      "reference_price_time_utc": "2026-09-10T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 195.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T00:47:18+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T01:32:18+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T04:32:18+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417705-trump-maybe-not-full-iran-escalation",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4358.7998046875,
+      "reference_price_time_utc": "2026-09-11T00:27:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T00:26:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T00:47:18+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T01:32:18+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T04:32:18+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
