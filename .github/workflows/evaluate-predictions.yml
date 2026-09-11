@@ -23,7 +23,7 @@ on:
     - cron: "17 * * * *"
 
 concurrency:
-  group: evaluate-predictions-main
+  group: evaluate-predictions-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -71,6 +71,7 @@ jobs:
         run: PYTHONPATH=. python tools/prediction_quality_audit.py
 
       - name: Commit v2 evaluation results and statistics
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
