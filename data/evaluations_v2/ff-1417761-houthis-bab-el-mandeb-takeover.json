@@ -1,0 +1,358 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+  "event_id": "forex_factory_news_1417761",
+  "event_time_utc": "2026-09-11T08:31:24+00:00",
+  "prediction_time_utc": "2026-09-11T09:24:24+00:00",
+  "evaluation_anchor_time_utc": "2026-09-11T09:24:24+00:00",
+  "prediction_latency_seconds": 3180.0,
+  "evaluated_at_utc": "2026-09-11T09:28:55.618290+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "geopolitics",
+    "Middle_East",
+    "Red_Sea",
+    "oil",
+    "shipping",
+    "energy_inflation"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.09,
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "same-day pre-prediction quote; exact quote timestamp not provided"
+      },
+      "US2Y": {
+        "value": 4.5961,
+        "unit": "percent",
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "same-day pre-prediction quote; exact quote timestamp not provided"
+      },
+      "US10Y": {
+        "value": 4.946,
+        "unit": "percent",
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "same-day pre-prediction quote; exact quote timestamp not provided"
+      },
+      "VIX": {
+        "value": 17.53,
+        "as_of_utc": null,
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Global Invest Daily market snapshot",
+        "freshness": "same-day pre-prediction snapshot; exact quote timestamp not provided"
+      },
+      "WTI": {
+        "value": 100.69,
+        "unit": "USD/bbl",
+        "as_of_utc": "2026-09-11T07:58:00Z",
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "DOWN_INTRADAY_UP_WEEKLY",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness": "about 1h26m old at decision time"
+      },
+      "BRENT": {
+        "value": 105.36,
+        "unit": "USD/bbl",
+        "as_of_utc": "2026-09-11T07:58:00Z",
+        "observed_at_utc": "2026-09-11T09:24:24Z",
+        "direction": "DOWN_INTRADAY_UP_WEEKLY",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness": "about 1h26m old at decision time"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7591.7,
+      "reference_price_time_utc": "2026-09-10T21:06:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T21:05:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 738.4,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T09:39:24+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:24:24+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29103.514,
+      "reference_price_time_utc": "2026-09-10T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-10T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 727.4,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T09:39:24+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:24:24+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6305.43017578125,
+      "reference_price_time_utc": "2026-09-11T09:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T09:13:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.4,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T09:39:24+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:24:24+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25490.66015625,
+      "reference_price_time_utc": "2026-09-11T09:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T09:13:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.4,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T09:39:24+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:24:24+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8741.2001953125,
+      "reference_price_time_utc": "2026-09-11T06:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T06:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 192.4,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T09:39:24+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:24:24+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4385.5,
+      "reference_price_time_utc": "2026-09-11T09:19:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T09:18:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.4,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T09:39:24+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:24:24+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417761-houthis-bab-el-mandeb-takeover",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.51499938964844,
+      "reference_price_time_utc": "2026-09-11T09:19:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T09:18:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.4,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T09:39:24+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T10:24:24+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-11T13:24:24+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
