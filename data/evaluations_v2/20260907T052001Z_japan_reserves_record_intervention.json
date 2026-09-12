@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-07T05:20:01+00:00",
   "evaluation_anchor_time_utc": "2026-09-07T05:20:01+00:00",
   "prediction_latency_seconds": 5041.0,
-  "evaluated_at_utc": "2026-09-12T00:21:29.875147+00:00",
+  "evaluated_at_utc": "2026-09-12T05:33:22.873822+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -106,6 +106,13 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T09:20:01+00:00",
+          "first_available_price_time_utc": "2026-09-08T00:01:00+00:00",
+          "market_delay_minutes": 880.98,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-08",
@@ -144,13 +151,6 @@
           "mae_pct": -0.106348,
           "directional_threshold_pct": 0.024605,
           "actual_direction_thresholded": "NO_MOVE"
-        },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-07T09:20:01+00:00",
-          "first_available_price_time_utc": "2026-09-08T00:01:00+00:00",
-          "market_delay_minutes": 880.98,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "15m": {
           "status": "DONE",
