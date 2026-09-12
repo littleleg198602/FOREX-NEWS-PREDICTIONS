@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-04T12:08:07+00:00",
   "evaluation_anchor_time_utc": "2026-09-04T12:08:07+00:00",
   "prediction_latency_seconds": 6607.0,
-  "evaluated_at_utc": "2026-09-12T05:48:39.168568+00:00",
+  "evaluated_at_utc": "2026-09-12T10:49:09.456881+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "1.1.1",
@@ -96,6 +96,24 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "evaluations": {
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T16:08:07+00:00",
+          "actual_price_time_utc": "2026-09-04T16:09:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T16:08:00+00:00",
+          "market_delay_minutes": 0.88,
+          "price": 4483.0,
+          "change_pct": -0.721944,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.465054,
+          "post_event_range_pct": 2.469218,
+          "mfe_pct": 0.174947,
+          "mae_pct": -2.294271,
+          "directional_threshold_pct": 0.046505,
+          "actual_direction_thresholded": "DOWN"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-08",
@@ -132,24 +150,6 @@
           "mfe_pct": 0.019929,
           "mae_pct": -0.112944,
           "directional_threshold_pct": 0.012845,
-          "actual_direction_thresholded": "DOWN"
-        },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-04T16:08:07+00:00",
-          "actual_price_time_utc": "2026-09-04T16:09:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-04T16:08:00+00:00",
-          "market_delay_minutes": 0.88,
-          "price": 4483.0,
-          "change_pct": -0.721944,
-          "actual_direction": "DOWN",
-          "correct": false,
-          "score_type": "directional",
-          "baseline_range_pct": 0.465054,
-          "post_event_range_pct": 2.469218,
-          "mfe_pct": 0.174947,
-          "mae_pct": -2.294271,
-          "directional_threshold_pct": 0.046505,
           "actual_direction_thresholded": "DOWN"
         },
         "1h": {
@@ -189,6 +189,23 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "evaluations": {
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-04T16:08:07+00:00",
+          "actual_price_time_utc": "2026-09-04T16:09:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-04T16:08:00+00:00",
+          "market_delay_minutes": 0.88,
+          "price": 66.74500274658203,
+          "change_pct": -1.118514,
+          "actual_direction": "DOWN",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.822223,
+          "post_event_range_pct": 3.651858,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.822223
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-08",
@@ -226,23 +243,6 @@
           "mae_pct": null,
           "neutral_envelope_pct": 0.244446
         },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-04T16:08:07+00:00",
-          "actual_price_time_utc": "2026-09-04T16:09:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-04T16:08:00+00:00",
-          "market_delay_minutes": 0.88,
-          "price": 66.74500274658203,
-          "change_pct": -1.118514,
-          "actual_direction": "DOWN",
-          "correct": false,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 0.822223,
-          "post_event_range_pct": 3.651858,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "neutral_envelope_pct": 0.822223
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-04T13:08:07+00:00",
@@ -279,6 +279,13 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "evaluations": {
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-04T16:08:07+00:00",
+          "first_available_price_time_utc": "2026-09-07T07:01:00+00:00",
+          "market_delay_minutes": 3772.88,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-07",
@@ -317,13 +324,6 @@
           "directional_threshold_pct": 0.010643,
           "actual_direction_thresholded": "UP"
         },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-04T16:08:07+00:00",
-          "first_available_price_time_utc": "2026-09-07T07:01:00+00:00",
-          "market_delay_minutes": 3772.88,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-04T13:08:07+00:00",
@@ -361,6 +361,13 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "evaluations": {
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-04T16:08:07+00:00",
+          "first_available_price_time_utc": "2026-09-07T07:03:00+00:00",
+          "market_delay_minutes": 3774.88,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-07",
@@ -399,13 +406,6 @@
           "directional_threshold_pct": 0.012589,
           "actual_direction_thresholded": "UP"
         },
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-04T16:08:07+00:00",
-          "first_available_price_time_utc": "2026-09-07T07:03:00+00:00",
-          "market_delay_minutes": 3774.88,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-04T13:08:07+00:00",
@@ -443,6 +443,12 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "evaluations": {
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T16:08:07+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 918.117
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-04",
@@ -466,12 +472,6 @@
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-04T12:23:07+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 918.117
-        },
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-04T16:08:07+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 918.117
         },
@@ -500,6 +500,12 @@
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "evaluations": {
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-04T16:08:07+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 892.117
+        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-04",
@@ -523,12 +529,6 @@
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-04T12:23:07+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 892.117
-        },
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-04T16:08:07+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 892.117
         },
