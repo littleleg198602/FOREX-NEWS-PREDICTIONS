@@ -1,0 +1,125 @@
+{
+  "prediction_id": "ff-20260912-further-yen-gains-constrain-boj-tightening",
+  "event_id": "ff-latest-further-yen-gains-constrain-boj-tightening",
+  "created_at_utc": "2026-09-12T05:30:56Z",
+  "event_time_utc": "2026-09-12T05:19:56Z",
+  "published_at_utc": "2026-09-12T05:19:56Z",
+  "source_time_text": "11 min ago",
+  "observed_at_utc": "2026-09-12T05:30:56Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "BOJ",
+    "Japan",
+    "JPY",
+    "rates",
+    "central_bank",
+    "market_analysis"
+  ],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Further yen gains could constrain Bank of Japan tightening",
+  "source_url": "https://www.omfif.org/2026/09/further-yen-gains-could-constrain-bank-of-japan-tightening/",
+  "source": "Forex Factory / OMFIF",
+  "story_context": "OMFIF argues the BOJ should continue normalising policy, with a 25bp September hike widely expected, but warns that an excessive yen rally could squeeze exporters and force the Bank to preserve flexibility over subsequent hikes. The yen had strengthened rapidly, with USD/JPY falling toward 154 from above 160 in less than a week.",
+  "market_context_at_prediction": {
+    "observed_at_utc": "2026-09-12T05:30:56Z",
+    "market_state": "weekend_closed_last_available_friday_data",
+    "series": {
+      "DXY": {
+        "value": 99.14,
+        "source_time_text": "Sep 11, 2026 close",
+        "observed_at_utc": "2026-09-12T05:30:56Z",
+        "direction": "UP",
+        "regime": "FIRM",
+        "source": "Investing.com historical DXY",
+        "freshness": "last_available_friday_close"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "source_time_text": "Sep 11, 2026 Treasury curve; page built 2026-09-11T23:51:00Z",
+        "observed_at_utc": "2026-09-12T05:30:56Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "US Treasury via YieldCurvesToday",
+        "freshness": "about 5h40m from source build"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "source_time_text": "Sep 11, 2026 Treasury curve; page built 2026-09-11T23:51:00Z",
+        "observed_at_utc": "2026-09-12T05:30:56Z",
+        "direction": "UP",
+        "regime": "VERY_HIGH_NEAR_5PCT",
+        "source": "US Treasury via YieldCurvesToday",
+        "freshness": "about 5h40m from source build"
+      },
+      "VIX": {
+        "value": 15.84,
+        "source_time_text": "Sep 11, 2026 close",
+        "observed_at_utc": "2026-09-12T05:30:56Z",
+        "direction": "DOWN",
+        "regime": "LOWER_RISK_AVERSION",
+        "source": "StockMarketWatch daily market digest",
+        "freshness": "last_available_friday_close"
+      },
+      "WTI": {
+        "value": 100.13,
+        "unit": "USD_per_barrel",
+        "source_time_text": "Sep 11, 2026 close",
+        "observed_at_utc": "2026-09-12T05:30:56Z",
+        "direction": "DOWN",
+        "regime": "ELEVATED_ABOVE_100",
+        "source": "StockMarketWatch daily market digest",
+        "freshness": "last_available_friday_close"
+      },
+      "BRENT": {
+        "value": 101.1964,
+        "unit": "USD_per_barrel",
+        "source_time_text": "Sep 11, 2026; last update 9:14 PM AEST",
+        "observed_at_utc": "2026-09-12T05:30:56Z",
+        "direction": "DOWN",
+        "regime": "ELEVATED_ABOVE_100",
+        "source": "Twelve Data Brent spot historical data",
+        "freshness": "last_available_friday_observation"
+      }
+    },
+    "regimes": {
+      "rates": "restrictive_high_us_yields",
+      "risk": "risk_aversion_eased_into_friday_close",
+      "energy": "elevated_but_falling",
+      "usd": "firm",
+      "japan": "yen_appreciation_and_expected_boj_hike_create_offsetting_equity_forces"
+    }
+  },
+  "learning_context": {
+    "profile_version": "2.0.0",
+    "profile_generated_at_utc": "2026-09-12T00:22:19.660340+00:00",
+    "material_adjustment": true,
+    "applied_segment": "confidence_calibration/mixed_neutral/confidence_1-4",
+    "sample_status": "ACTIONABLE",
+    "recommendation": "BOOST_CONFIDENCE",
+    "note": "The current facts are intrinsically two-sided for NI225: further yen strength pressures exporters while a more flexible BOJ path can limit additional tightening. The ACTIONABLE leakage-safe mixed/neutral segment supports retaining a MIXED call at confidence 4 rather than forcing a low-confidence directional forecast."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4
+      },
+      "mechanism": "A stronger yen is a headwind for Japan's export-heavy Nikkei constituents, while the same yen appreciation can make the BOJ more cautious about repeated rate hikes. Those forces offset each other, and the weekend timing means the next traded session will absorb the information together with any new BOJ or FX developments.",
+      "invalidation": "A renewed sharp yen rally alongside explicit BOJ guidance for consecutive hikes would make the setup more bearish for NI225; a material yen reversal plus dovish BOJ guidance would make it more bullish."
+    }
+  ]
+}
