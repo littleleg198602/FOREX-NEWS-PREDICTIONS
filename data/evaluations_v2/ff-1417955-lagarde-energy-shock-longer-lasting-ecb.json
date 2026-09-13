@@ -1,0 +1,250 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417955-lagarde-energy-shock-longer-lasting-ecb",
+  "event_id": "ff-1417955",
+  "event_time_utc": "2026-09-13T04:22:09+00:00",
+  "prediction_time_utc": "2026-09-13T05:00:09+00:00",
+  "evaluation_anchor_time_utc": "2026-09-13T05:00:09+00:00",
+  "prediction_latency_seconds": 2280.0,
+  "evaluated_at_utc": "2026-09-13T05:04:08.831367+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "ECB",
+    "monetary_policy",
+    "inflation",
+    "energy",
+    "Europe",
+    "rates"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T21:00:00Z",
+        "direction": "FLAT",
+        "regime": "FLAT",
+        "source": "Investing.com Sep 11 close",
+        "freshness": "previous_session_close_weekend",
+        "freshness_hours_approx": 32.0
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Sep 11 Treasury close",
+        "freshness": "previous_session_close_weekend",
+        "freshness_hours_approx": 33.0
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN_FROM_INTRADAY_HIGH",
+        "regime": "FALLING",
+        "source": "Sep 11 Treasury close",
+        "freshness": "previous_session_close_weekend",
+        "freshness_hours_approx": 33.0
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "Cboe Sep 11 close",
+        "freshness": "previous_session_close_weekend",
+        "freshness_hours_approx": 33.0
+      },
+      "WTI": {
+        "value": 100.05,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T18:30:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters Friday settlement",
+        "freshness": "previous_session_settlement_weekend",
+        "freshness_hours_approx": 34.5
+      },
+      "BRENT": {
+        "value": 104.61,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T18:30:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters Friday settlement",
+        "freshness": "previous_session_settlement_weekend",
+        "freshness_hours_approx": 34.5
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417955-lagarde-energy-shock-longer-lasting-ecb",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6322.830078125,
+      "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2250.15,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T05:15:09+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T06:00:09+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T09:00:09+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417955-lagarde-energy-shock-longer-lasting-ecb",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25568.56,
+      "reference_price_time_utc": "2026-09-11T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2219.15,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T05:15:09+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T06:00:09+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T09:00:09+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417955-lagarde-energy-shock-longer-lasting-ecb",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8177.330078125,
+      "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2250.15,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T05:15:09+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T06:00:09+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T09:00:09+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417955-lagarde-energy-shock-longer-lasting-ecb",
+      "instrument": "SPA35",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^IBEX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 19828.19921875,
+      "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2250.15,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T05:15:09+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T06:00:09+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T09:00:09+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    }
+  ]
+}
