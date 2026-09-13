@@ -1,21 +1,21 @@
 {
   "evaluation_version": "2.0.0",
   "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
-  "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
-  "event_id": "forex_factory:1417951",
-  "event_time_utc": "2026-09-13T12:02:00+00:00",
-  "prediction_time_utc": "2026-09-13T12:28:49+00:00",
-  "evaluation_anchor_time_utc": "2026-09-13T12:28:49+00:00",
-  "prediction_latency_seconds": 1609.0,
-  "evaluated_at_utc": "2026-09-13T16:13:12.883557+00:00",
+  "prediction_id": "ff-1417975-trump-china-iran-deescalation",
+  "event_id": "forex-factory-1417975",
+  "event_time_utc": "2026-09-13T12:48:00+00:00",
+  "prediction_time_utc": "2026-09-13T16:10:07+00:00",
+  "evaluation_anchor_time_utc": "2026-09-13T16:10:07+00:00",
+  "prediction_latency_seconds": 12127.0,
+  "evaluated_at_utc": "2026-09-13T16:13:14.570646+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
   "categories": [
-    "US_RATES",
-    "TREASURY",
-    "RECESSION_RISK",
-    "FISCAL_POLICY"
+    "geopolitics",
+    "us_china",
+    "iran",
+    "risk_sentiment"
   ],
   "is_example": false,
   "backfilled": false,
@@ -28,56 +28,56 @@
     "source": null,
     "series": {
       "DXY": {
-        "value": 99.03,
-        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "value": 99.1,
+        "as_of_utc": "2026-09-11T20:32:00Z",
         "direction": "FLAT",
-        "regime": "FLAT",
-        "source": "Investing.com historical close",
-        "freshness": "last_completed_session"
+        "source": "last completed US session / public market close",
+        "freshness": "market_closed_weekend",
+        "regime": "FLAT"
       },
       "US2Y": {
         "value": 4.63,
         "unit": "percent",
-        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "as_of_utc": "2026-09-11T20:00:00Z",
         "direction": "UP",
-        "regime": "RISING",
-        "source": "U.S. Treasury via Statistics of the World",
-        "freshness": "last_completed_session"
+        "source": "last completed US session / Treasury close",
+        "freshness": "market_closed_weekend",
+        "regime": "RISING"
       },
       "US10Y": {
-        "value": 4.96,
+        "value": 4.97,
         "unit": "percent",
-        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "as_of_utc": "2026-09-11T20:00:00Z",
         "direction": "UP",
-        "regime": "RISING",
-        "source": "U.S. Treasury via Statistics of the World",
-        "freshness": "last_completed_session"
+        "source": "last completed US session / Treasury close",
+        "freshness": "market_closed_weekend",
+        "regime": "RISING"
       },
       "VIX": {
         "value": 15.84,
-        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "as_of_utc": "2026-09-11T20:00:00Z",
         "direction": "DOWN",
-        "regime": "LOW",
-        "source": "Stock Market Watch close",
-        "freshness": "last_completed_session"
+        "source": "CBOE last completed session close",
+        "freshness": "market_closed_weekend",
+        "regime": "LOW"
       },
       "WTI": {
         "value": 100.05,
         "unit": "USD_per_barrel",
-        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "as_of_utc": "2026-09-11T18:30:00Z",
         "direction": "DOWN",
-        "regime": "FALLING",
-        "source": "market close reported by Thrive in Markets",
-        "freshness": "last_completed_session"
+        "source": "Reuters settlement / last completed session",
+        "freshness": "market_closed_weekend",
+        "regime": "FALLING"
       },
       "BRENT": {
         "value": 104.61,
         "unit": "USD_per_barrel",
-        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "as_of_utc": "2026-09-11T18:30:00Z",
         "direction": "DOWN",
-        "regime": "FALLING",
-        "source": "Investing.com historical close",
-        "freshness": "last_completed_session"
+        "source": "Reuters settlement / last completed session",
+        "freshness": "market_closed_weekend",
+        "regime": "FALLING"
       }
     },
     "regimes": {
@@ -95,7 +95,7 @@
   },
   "results": [
     {
-      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "prediction_id": "ff-1417975-trump-china-iran-deescalation",
       "instrument": "SP500",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -106,36 +106,32 @@
       "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2381.817,
+      "reference_age_minutes": 2603.117,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T13:28:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2381.817
-        },
         "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T12:43:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2381.817
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:25:07+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T17:10:07+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T20:10:07+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-13T16:28:49+00:00"
         }
       }
     },
     {
-      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "prediction_id": "ff-1417975-trump-china-iran-deescalation",
       "instrument": "NDX",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -146,36 +142,32 @@
       "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2351.817,
+      "reference_age_minutes": 2573.117,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T13:28:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2351.817
-        },
         "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T12:43:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2351.817
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:25:07+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T17:10:07+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T20:10:07+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-13T16:28:49+00:00"
         }
       }
     },
     {
-      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "prediction_id": "ff-1417975-trump-china-iran-deescalation",
       "instrument": "WS30",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -186,36 +178,32 @@
       "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2381.817,
+      "reference_age_minutes": 2603.117,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T13:28:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2381.817
-        },
         "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T12:43:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2381.817
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:25:07+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T17:10:07+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T20:10:07+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-13T16:28:49+00:00"
         }
       }
     },
     {
-      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "prediction_id": "ff-1417975-trump-china-iran-deescalation",
       "instrument": "XAUUSD",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -226,31 +214,27 @@
       "reference_price_time_utc": "2026-09-11T21:00:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T20:59:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2368.817,
+      "reference_age_minutes": 2590.117,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T13:28:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2368.817
-        },
         "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T12:43:49+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2368.817
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:25:07+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T17:10:07+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T20:10:07+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-13T16:28:49+00:00"
         }
       }
     }
