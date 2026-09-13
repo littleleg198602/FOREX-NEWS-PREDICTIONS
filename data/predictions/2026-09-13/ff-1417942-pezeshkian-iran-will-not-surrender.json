@@ -1,0 +1,83 @@
+{
+  "prediction_id": "ff-1417942-pezeshkian-iran-will-not-surrender",
+  "event_id": "ff-1417942",
+  "created_at_utc": "2026-09-13T03:53:28Z",
+  "event_time_utc": "2026-09-12T17:35:00Z",
+  "published_at_utc": "2026-09-12T17:35:00Z",
+  "source_time_text": "Sep 12, 5:35pm",
+  "observed_at_utc": "2026-09-13T03:53:28Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 900,
+  "source_timezone": "Forex Factory displayed time; UTC mapping follows repository convention for FF absolute timestamps",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "Middle_East", "Iran", "US", "BRICS", "risk_sentiment"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Tehran won't surrender to the U.S., Iranian President Pezeshkian says, as India's Modi urges dialogue and peace",
+  "source_url": "https://www.forexfactory.com/news/1417942-tehran-wont-surrender-to-the-us-iranian-president",
+  "summary": "Iranian President Masoud Pezeshkian said Iran will not surrender to the United States or Israel and portrayed Iran as successfully resisting them, while India's Prime Minister Modi urged dialogue and peace. The rhetoric keeps geopolitical tail risk elevated but does not itself announce a new military action, sanction, blockade change or diplomatic breakdown, so the directional market signal is weak and conflicting.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.095, "timestamp_utc": "2026-09-11T21:00:00Z", "direction": "FLAT_TO_UP", "regime": "FIRM", "source": "GSD US market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 30.9},
+      "US2Y": {"value": 4.63, "unit": "percent", "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "UP", "regime": "HAWKISH_HIGH", "source": "GSD US market close / Treasury market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 31.9},
+      "US10Y": {"value": 4.971, "unit": "percent", "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "UP", "regime": "NEAR_5_PERCENT", "source": "GSD US market close / Treasury market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 31.9},
+      "VIX": {"value": 15.84, "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "regime": "FEAR_EASING", "source": "GSD US market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 31.9},
+      "WTI": {"value": 100.05, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "regime": "HIGH_BUT_PULLING_BACK", "source": "Reuters Friday settlement", "freshness": "previous_session_settlement_weekend", "freshness_hours_approx": 33.4},
+      "BRENT": {"value": 104.61, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "regime": "HIGH_BUT_PULLING_BACK", "source": "Reuters Friday settlement", "freshness": "previous_session_settlement_weekend", "freshness_hours_approx": 33.4}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HAWKISH_HIGH",
+      "risk": "FEAR_EASING_BUT_GEOPOLITICAL_RISK_HIGH",
+      "energy": "HIGH_BUT_PULLING_BACK",
+      "market_status": "WEEKEND_CLOSED"
+    }
+  },
+  "learning_profile": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "effect": "ACTIONABLE v2 mixed-neutral low-confidence segments have substantially stronger leakage-safe results than weak directional low-confidence segments, supporting a MIXED 4/10 forecast where the current geopolitical rhetoric lacks a concrete new market transmission shock."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Iran's defiant rhetoric preserves safe-haven tail risk for gold, but there is no new military or shipping shock and the firm dollar/high Treasury-yield backdrop offsets the haven impulse.",
+      "invalidation": "A concrete escalation such as new US-Israel strikes, a fresh Hormuz disruption or a sharp oil spike would shift gold toward UP; a verified de-escalation agreement would weaken the haven bid."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Defiant Iranian rhetoric is a mild risk-off input, but without a new action it competes with easing Friday fear gauges and already-high energy/rate risks that markets had largely absorbed before the weekend.",
+      "invalidation": "A concrete escalation that lifts oil and Treasury inflation expectations together would shift the setup toward DOWN; credible de-escalation plus lower oil and yields would shift it toward UP."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Geopolitical risk is negative for risk appetite, while near-5% US10Y remains a valuation headwind, but the story adds rhetoric rather than a fresh measurable shock to growth, energy supply or rates.",
+      "invalidation": "A new geopolitical event that pushes oil and long yields materially higher would favor DOWN; a clear diplomatic breakthrough and falling yields would favor UP."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "European cyclicals remain sensitive to Middle East energy risk, but Pezeshkian's statement does not change actual oil flows or the Hormuz operating situation by itself.",
+      "invalidation": "A fresh supply disruption or material Brent spike would shift the DAX setup toward DOWN; verified de-escalation and lower energy prices would favor UP."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The rhetoric sustains geopolitical uncertainty but adds no confirmed change to energy supply, sanctions or monetary policy, leaving the immediate European equity impulse conflicted.",
+      "invalidation": "A concrete escalation that materially raises Brent would turn the setup bearish; a credible regional de-escalation that lowers energy risk would turn it bullish."
+    }
+  ]
+}
