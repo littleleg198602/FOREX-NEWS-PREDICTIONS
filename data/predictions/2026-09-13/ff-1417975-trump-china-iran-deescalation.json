@@ -1,0 +1,76 @@
+{
+  "prediction_id": "ff-1417975-trump-china-iran-deescalation",
+  "event_id": "forex-factory-1417975",
+  "created_at_utc": "2026-09-13T16:10:07Z",
+  "event_time_utc": "2026-09-13T12:48:00Z",
+  "published_at_utc": "2026-09-13T14:27:00Z",
+  "source_time_text": "Sep 13, 2026 8:48am; Added at 10:27am",
+  "observed_at_utc": "2026-09-13T16:10:07Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "us_china", "iran", "risk_sentiment"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417975-trump-on-china-not-concerned-xi-will-cancel",
+    "headline": "Trump on China: not concerned Xi will cancel summit, says China has treated US fairly over recent years"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.10, "as_of_utc": "2026-09-11T20:32:00Z", "direction": "FLAT", "source": "last completed US session / public market close", "freshness": "market_closed_weekend"},
+      "US2Y": {"value": 4.63, "unit": "percent", "as_of_utc": "2026-09-11T20:00:00Z", "direction": "UP", "source": "last completed US session / Treasury close", "freshness": "market_closed_weekend"},
+      "US10Y": {"value": 4.97, "unit": "percent", "as_of_utc": "2026-09-11T20:00:00Z", "direction": "UP", "source": "last completed US session / Treasury close", "freshness": "market_closed_weekend"},
+      "VIX": {"value": 15.84, "as_of_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "source": "CBOE last completed session close", "freshness": "market_closed_weekend"},
+      "WTI": {"value": 100.05, "unit": "USD_per_barrel", "as_of_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "source": "Reuters settlement / last completed session", "freshness": "market_closed_weekend"},
+      "BRENT": {"value": 104.61, "unit": "USD_per_barrel", "as_of_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "source": "Reuters settlement / last completed session", "freshness": "market_closed_weekend"}
+    },
+    "regimes": {
+      "rates": "HIGH_AND_RISING",
+      "volatility": "LOWER_BUT_GEOPOLITICALLY_FRAGILE",
+      "oil": "EXTREMELY_ELEVATED_DESPITE_DAILY_PULLBACK",
+      "usd": "RANGE_FLAT",
+      "overall": "CONFLICTING_RISK_WITH_ELEVATED_ENERGY_AND_RATE_PRESSURE"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Trump's softer language toward China and claim that Iran is eager for a deal are marginally risk-positive, but neither constitutes a signed agreement or policy change and high oil/rates remain major headwinds.",
+      "invalidation": "A concrete US-China or Iran de-escalation agreement plus lower oil would turn the bias bullish; renewed confrontation or another energy shock would turn it bearish."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Improved US-China rhetoric helps technology risk sentiment at the margin, but elevated Treasury yields constrain valuation upside and no formal trade deal was announced.",
+      "invalidation": "A concrete US-China agreement with falling yields would make the setup bullish; renewed tariff threats or higher yields would make it bearish."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lower perceived geopolitical and trade tension is supportive, but the signal is rhetorical and offset by high energy prices and rates.",
+      "invalidation": "Confirmed de-escalation with cheaper oil would improve the bias; fresh confrontation would reverse it."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Softer geopolitical rhetoric slightly reduces safe-haven demand, while persistent Gulf risk and high inflation/rate uncertainty keep gold support intact.",
+      "invalidation": "A verified Iran deal and sustained risk-on move would weaken gold; renewed conflict or a sharp risk-off shock would strengthen it."
+    }
+  ],
+  "learning_application": {
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "basis": "ACTIONABLE v2 calibration favors low-confidence MIXED/neutral predictions over weak directional calls; the current information is rhetoric without a binding agreement, so confidence remains 4/10 and direction MIXED."
+  }
+}
