@@ -1,0 +1,139 @@
+{
+  "prediction_id": "ff-1417989-saudi-amendments-hormuz-proposal",
+  "event_id": "forex_factory_1417989",
+  "created_at_utc": "2026-09-13T22:10:56Z",
+  "event_time_utc": "2026-09-13T21:24:56Z",
+  "published_at_utc": "2026-09-13T21:24:56Z",
+  "source_time_text": "46 min ago",
+  "observed_at_utc": "2026-09-13T22:10:56Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "geopolitics",
+    "saudi_arabia",
+    "iran",
+    "hormuz",
+    "oil_supply",
+    "risk_sentiment"
+  ],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "headline": "Saudi Arabia submitted amendments to the Omani-Iranian proposal regarding Hormuz",
+    "source_url": "https://www.forexfactory.com/news/1417989-saudi-arabia-submitted-amendments-to-the-omani-iranian-proposal",
+    "origin": "@BarakRavid"
+  },
+  "summary": "A Gulf official said Saudi Arabia submitted amendments to the Omani-Iranian Hormuz proposal because Riyadh was concerned the wording could establish a new status quo in the strait that would be unacceptable to Saudi Arabia and other GCC states. The update adds negotiating friction but does not itself constitute a breakdown in talks or a new shipping disruption.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T21:00:00Z",
+        "direction": "SLIGHT_DOWN",
+        "regime": "STABLE",
+        "source": "Investing.com historical data",
+        "freshness": "last_complete_session_no_reliable_new_complete_bar"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "last_complete_session"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "SLIGHT_UP",
+        "regime": "VERY_HIGH",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "last_complete_session"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:15:00Z",
+        "direction": "DOWN",
+        "regime": "MODERATE",
+        "source": "Investing.com historical data",
+        "freshness": "last_complete_session_no_reliable_new_complete_bar"
+      },
+      "WTI": {
+        "value": 100.05,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T20:30:00Z",
+        "direction": "DOWN_DAILY_UP_WEEKLY",
+        "regime": "VERY_HIGH_GEOPOLITICAL_PREMIUM",
+        "source": "Reuters settlement",
+        "freshness": "last_complete_session_no_reliable_new_complete_bar"
+      },
+      "BRENT": {
+        "value": 104.61,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T18:30:00Z",
+        "direction": "DOWN_DAILY_UP_WEEKLY",
+        "regime": "VERY_HIGH_GEOPOLITICAL_PREMIUM",
+        "source": "Reuters settlement",
+        "freshness": "last_complete_session_no_reliable_new_complete_bar"
+      }
+    },
+    "regimes": {
+      "rates": "HIGH_AND_HAWKISH",
+      "risk": "FRAGILE_BUT_VIX_EASED_FRIDAY",
+      "energy": "VERY_HIGH_SUPPLY_RISK",
+      "usd": "STABLE",
+      "data_freshness": "LATEST_RELIABLE_COMPLETE_MARKET_CONTEXT_FROM_PRIOR_SESSION"
+    }
+  },
+  "learning_adjustment": {
+    "profile_version": "2.0.0",
+    "segment_status": "ACTIONABLE",
+    "basis": "Current facts are only incrementally risk-negative because the postponement was already known. Leakage-safe v2 calibration shows strong performance for low-confidence MIXED/neutral signals and weak short-horizon performance for low-confidence directional calls; this supported keeping the forecast neutral rather than forcing a direction.",
+    "material_confidence_change": true
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Saudi objections add friction to Hormuz diplomacy and preserve geopolitical support for gold, but the information is incremental to the already-known postponement and does not yet create a fresh directional shock.",
+      "invalidation": "A concrete Saudi-backed compromise on Hormuz would weaken the geopolitical bid; a breakdown in negotiations or new shipping disruption would instead turn the signal bullish for gold."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Negotiating friction is mildly risk-negative through oil and inflation risk, but no new supply disruption has occurred and the prior postponement already captured much of the downside information.",
+      "invalidation": "A clear Hormuz compromise plus lower oil would shift the signal upward; a collapse in talks with higher oil would shift it downward."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "High Treasury yields make growth equities sensitive to renewed oil-driven inflation, but the Saudi amendment story alone is not a sufficient new catalyst for a directional call.",
+      "invalidation": "A material oil move tied to confirmed diplomatic progress or breakdown would provide a clearer directional signal."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "European equities remain exposed to high energy prices, while Saudi resistance to the draft adds uncertainty without yet worsening physical supply conditions.",
+      "invalidation": "A concrete Hormuz accord and falling crude would turn the setup positive; renewed disruption would turn it negative."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The update prolongs diplomatic uncertainty around a major energy route, but it is incremental and not enough to override the absence of a new physical supply shock.",
+      "invalidation": "A signed or clearly agreed Hormuz framework would reduce the risk premium; a negotiation breakdown with higher crude would create downside pressure."
+    }
+  ]
+}
