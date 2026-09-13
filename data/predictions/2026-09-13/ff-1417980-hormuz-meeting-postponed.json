@@ -1,0 +1,145 @@
+{
+  "prediction_id": "ff-1417980-hormuz-meeting-postponed",
+  "event_id": "forex_factory_1417980",
+  "created_at_utc": "2026-09-13T20:40:22Z",
+  "event_time_utc": "2026-09-13T20:23:22Z",
+  "published_at_utc": "2026-09-13T20:23:22Z",
+  "source_time_text": "17 min ago",
+  "observed_at_utc": "2026-09-13T20:40:22Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "geopolitics",
+    "iran",
+    "hormuz",
+    "oil_supply",
+    "risk_sentiment"
+  ],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "headline": "Iran says Hormuz meeting with Gulf states postponed at request of regional countries",
+    "source_url": "https://www.forexfactory.com/news/1417980-iran-says-hormuz-meeting-with-gulf-states-postponed",
+    "origin": "investinglive.com"
+  },
+  "summary": "Iran said the planned Monday Oman meeting with Gulf Arab states on possible Strait of Hormuz arrangements was postponed. Tehran and Muscat described it as a joint delay requested by certain regional countries, reducing the probability of an immediate diplomatic breakthrough on shipping access.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T21:00:00Z",
+        "direction": "SLIGHT_DOWN",
+        "regime": "STABLE",
+        "source": "Investing.com historical data",
+        "freshness": "weekend_closed_last_complete_session"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "weekend_closed_last_complete_session"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "SLIGHT_UP",
+        "regime": "VERY_HIGH",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "weekend_closed_last_complete_session"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:15:00Z",
+        "direction": "DOWN",
+        "regime": "MODERATE",
+        "source": "Investing.com historical data",
+        "freshness": "weekend_closed_last_complete_session"
+      },
+      "WTI": {
+        "value": 100.05,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T20:30:00Z",
+        "direction": "DOWN_DAILY_UP_WEEKLY",
+        "regime": "VERY_HIGH_GEOPOLITICAL_PREMIUM",
+        "source": "Reuters settlement",
+        "freshness": "weekend_closed_last_complete_session"
+      },
+      "BRENT": {
+        "value": 104.61,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T18:30:00Z",
+        "direction": "DOWN_DAILY_UP_WEEKLY",
+        "regime": "VERY_HIGH_GEOPOLITICAL_PREMIUM",
+        "source": "Reuters settlement",
+        "freshness": "weekend_closed_last_complete_session"
+      }
+    },
+    "regimes": {
+      "rates": "HIGH_AND_HAWKISH",
+      "risk": "FRAGILE_BUT_VIX_EASED_FRIDAY",
+      "energy": "VERY_HIGH_SUPPLY_RISK",
+      "usd": "STABLE",
+      "data_freshness": "WEEKEND_MARKETS_CLOSED"
+    }
+  },
+  "learning_adjustment": {
+    "profile_version": "2.0.0",
+    "segment_status": "ACTIONABLE",
+    "basis": "Directional confidence 5-6 has weak leakage-safe short-horizon performance; confidence capped at 5 rather than mechanically increasing despite the clear geopolitical mechanism.",
+    "material_confidence_change": true
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Postponement reduces the chance of an immediate Hormuz de-escalation and supports geopolitical hedging demand for gold.",
+      "invalidation": "A rescheduled near-term meeting with concrete shipping guarantees or reopening terms, accompanied by a sharp fall in crude oil risk premium."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Lower odds of a rapid Hormuz agreement sustain energy-driven inflation risk and a high-rate backdrop that pressures broad U.S. equity valuations.",
+      "invalidation": "Rapid diplomatic progress that materially lowers oil prices and Treasury yields before the cash-session response."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Persistent oil and inflation risk reinforces elevated Treasury yields, which are particularly adverse for long-duration growth valuations.",
+      "invalidation": "A clear Hormuz de-escalation plus falling long-end U.S. yields."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Europe is highly exposed to energy-cost shocks; delayed Hormuz diplomacy keeps input-cost and ECB inflation risks elevated.",
+      "invalidation": "Concrete shipping normalization and a large crude-price retracement before European markets reopen."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Delayed de-escalation keeps the energy shock and restrictive-rate risk active for major euro-area equities.",
+      "invalidation": "A credible near-term Hormuz accord that sharply compresses the energy risk premium."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "The renewed uncertainty around Gulf shipping is mildly negative for European risk sentiment and energy-sensitive margins.",
+      "invalidation": "Immediate resumption of talks with concrete de-escalation measures and falling crude prices."
+    }
+  ]
+}
