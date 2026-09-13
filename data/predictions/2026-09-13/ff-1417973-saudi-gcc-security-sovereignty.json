@@ -1,0 +1,76 @@
+{
+  "prediction_id": "ff-1417973-saudi-gcc-security-sovereignty",
+  "event_id": "forex-factory-1417973",
+  "created_at_utc": "2026-09-13T16:10:07Z",
+  "event_time_utc": "2026-09-13T11:27:00Z",
+  "published_at_utc": "2026-09-13T12:25:00Z",
+  "source_time_text": "Sep 13, 2026 7:27am; Added at 8:25am",
+  "observed_at_utc": "2026-09-13T16:10:07Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "middle_east", "gulf_security", "oil_risk"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417973-saudi-foreign-minister-the-security-of-the-arabian",
+    "headline": "Saudi Foreign Minister: The security of the Arabian Gulf will not be stable without respecting the sovereignty and independence of its states"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.10, "as_of_utc": "2026-09-11T20:32:00Z", "direction": "FLAT", "source": "last completed US session / public market close", "freshness": "market_closed_weekend"},
+      "US2Y": {"value": 4.63, "unit": "percent", "as_of_utc": "2026-09-11T20:00:00Z", "direction": "UP", "source": "last completed US session / Treasury close", "freshness": "market_closed_weekend"},
+      "US10Y": {"value": 4.97, "unit": "percent", "as_of_utc": "2026-09-11T20:00:00Z", "direction": "UP", "source": "last completed US session / Treasury close", "freshness": "market_closed_weekend"},
+      "VIX": {"value": 15.84, "as_of_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "source": "CBOE last completed session close", "freshness": "market_closed_weekend"},
+      "WTI": {"value": 100.05, "unit": "USD_per_barrel", "as_of_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "source": "Reuters settlement / last completed session", "freshness": "market_closed_weekend"},
+      "BRENT": {"value": 104.61, "unit": "USD_per_barrel", "as_of_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "source": "Reuters settlement / last completed session", "freshness": "market_closed_weekend"}
+    },
+    "regimes": {
+      "rates": "HIGH_AND_RISING",
+      "volatility": "LOWER_BUT_GEOPOLITICALLY_FRAGILE",
+      "oil": "EXTREMELY_ELEVATED_DESPITE_DAILY_PULLBACK",
+      "usd": "RANGE_FLAT",
+      "overall": "CONFLICTING_RISK_WITH_ELEVATED_ENERGY_AND_RATE_PRESSURE"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "GCC security rhetoric preserves a geopolitical risk premium, but no new military action, sanctions, or shipping disruption was announced.",
+      "invalidation": "A concrete new attack on GCC infrastructure or shipping would shift gold risk upward; a verified de-escalation agreement would weaken the safe-haven impulse."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "The statement reinforces Gulf geopolitical risk but does not materially change supply, policy, or military facts yet.",
+      "invalidation": "A fresh attack or renewed oil spike would turn the equity bias bearish; concrete de-escalation and falling oil would turn it bullish."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Geopolitical risk is a headwind, while the absence of a new actionable escalation limits directional conviction; high yields remain an independent valuation pressure.",
+      "invalidation": "A fresh regional escalation plus higher oil and yields would turn the setup bearish; verified de-escalation would improve the risk outlook."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Europe is sensitive to energy risk, but this statement alone adds rhetoric rather than a new supply disruption.",
+      "invalidation": "A renewed oil spike tied to a concrete Gulf disruption would make the setup bearish; sustained de-escalation and cheaper energy would improve it."
+    }
+  ],
+  "learning_application": {
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "basis": "ACTIONABLE v2 confidence calibration shows low-confidence directional predictions underperform while low-confidence MIXED/neutral segments perform strongly; because current facts are rhetorical rather than a new concrete escalation, the profile supports MIXED 4/10 rather than forcing a directional call."
+  }
+}
