@@ -1,0 +1,130 @@
+{
+  "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+  "event_id": "forex_factory:1417951",
+  "created_at_utc": "2026-09-13T12:28:49Z",
+  "event_time_utc": "2026-09-13T12:02:00Z",
+  "published_at_utc": "2026-09-13T12:02:00Z",
+  "observed_at_utc": "2026-09-13T12:28:49Z",
+  "source_time_text": "Sep 13, 2:02pm | 24 min ago",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "US_RATES",
+    "TREASURY",
+    "RECESSION_RISK",
+    "FISCAL_POLICY"
+  ],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "provider": "Forex Factory",
+    "source_name": "New York Post",
+    "headline": "Bessent’s attempts to suppress interest rates could spark a recession",
+    "url": "https://www.forexfactory.com/news/1417951-bessents-attempts-to-suppress-interest-rates-could-spark"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "FLAT",
+        "regime": "STABLE_AROUND_99",
+        "source": "Investing.com historical close",
+        "freshness": "last_completed_session"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "U.S. Treasury via Statistics of the World",
+        "freshness": "last_completed_session"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "VERY_HIGH_NEAR_5PCT",
+        "source": "U.S. Treasury via Statistics of the World",
+        "freshness": "last_completed_session"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW_FALLING",
+        "source": "Stock Market Watch close",
+        "freshness": "last_completed_session"
+      },
+      "WTI": {
+        "value": 100.05,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "ELEVATED_ABOVE_100",
+        "source": "market close reported by Thrive in Markets",
+        "freshness": "last_completed_session"
+      },
+      "BRENT": {
+        "value": 104.61,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "ELEVATED_ABOVE_100",
+        "source": "Investing.com historical close",
+        "freshness": "last_completed_session"
+      }
+    },
+    "regimes": {
+      "rates": "HIGH_AND_RISING",
+      "risk": "LOW_VIX_BUT_MACRO_FRAGILE",
+      "energy": "ELEVATED_BUT_PULLING_BACK",
+      "usd": "STABLE"
+    },
+    "note": "Weekend prediction context uses the latest completed market session available before the prediction decision; no later market information is used."
+  },
+  "learning_profile": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "reason": "ACTIONABLE v2 confidence calibration shows low-confidence directional forecasts underperform while low-confidence mixed_neutral forecasts are materially stronger; this supported retaining a MIXED 4/10 forecast rather than forcing a weak directional call."
+  },
+  "summary": "A new Forex Factory article argues that Treasury Secretary Scott Bessent's attempts to suppress borrowing costs have coincided with higher yields and could ultimately contribute to a credit chokehold or recession. The item is analysis/commentary rather than a new policy announcement or data release, so the immediate directional edge is limited despite elevated Treasury yields.",
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher long-term yields and recession concerns are negative for valuation and growth, but the story is commentary rather than a new policy action and Friday risk sentiment improved as VIX fell.",
+      "invalidation": "A decisive fresh move in Treasury yields accompanied by new Treasury policy details or recession-sensitive macro data would replace this neutral setup with a directional one."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Nasdaq valuations are especially sensitive to yields, but no new actionable Treasury measure is announced in the story and current evidence is insufficient for a directional forecast.",
+      "invalidation": "A renewed sharp rise in US10Y toward or through 5% with weak equity futures would turn the setup bearish; a material yield retreat would turn it bullish."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Recession risk is negative for cyclicals, while potentially lower administered funding pressure would be supportive; the article itself does not resolve that conflict.",
+      "invalidation": "Concrete Treasury issuance or intervention changes that materially move the yield curve would invalidate the neutral forecast."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Recession and fiscal concerns can support gold, but near-5% US10Y yields and a stable dollar offset the safe-haven impulse.",
+      "invalidation": "A sharp yield decline with rising recession fear would favor gold upside; a renewed dollar-and-yield surge would favor downside."
+    }
+  ]
+}
