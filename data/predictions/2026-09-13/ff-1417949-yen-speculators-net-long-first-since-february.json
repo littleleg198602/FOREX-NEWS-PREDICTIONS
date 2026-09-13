@@ -1,0 +1,54 @@
+{
+  "prediction_id": "ff-1417949-yen-speculators-net-long-first-since-february",
+  "event_id": "ff-1417949",
+  "created_at_utc": "2026-09-13T05:00:09Z",
+  "event_time_utc": "2026-09-13T04:17:09Z",
+  "published_at_utc": "2026-09-13T04:17:09Z",
+  "source_time_text": "43 min ago",
+  "observed_at_utc": "2026-09-13T05:00:09Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["Japan", "JPY", "CFTC", "positioning", "BOJ", "equities"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "Speculators turn net long on yen for first time since February",
+  "source_url": "https://www.forexfactory.com/news/1417949-speculators-turn-net-long-on-yen-for-first",
+  "summary": "CFTC data showed net non-commercial yen positioning at 10,796 long contracts in the week to September 8, reversing from 92,227 net shorts a week earlier and turning net long for the first time since February. The move confirms strong yen momentum alongside expectations for faster Bank of Japan tightening, although some of that view may already be priced.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.03, "timestamp_utc": "2026-09-11T21:00:00Z", "direction": "FLAT", "regime": "FIRM", "source": "Investing.com Sep 11 close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 32.0},
+      "US2Y": {"value": 4.63, "unit": "percent", "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "UP", "regime": "HAWKISH_HIGH", "source": "Sep 11 Treasury close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 33.0},
+      "US10Y": {"value": 4.96, "unit": "percent", "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "DOWN_FROM_INTRADAY_HIGH", "regime": "NEAR_5_PERCENT", "source": "Sep 11 Treasury close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 33.0},
+      "VIX": {"value": 15.84, "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "regime": "FEAR_EASING", "source": "Cboe Sep 11 close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 33.0},
+      "WTI": {"value": 100.05, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "regime": "HIGH_BUT_PULLING_BACK", "source": "Reuters Friday settlement", "freshness": "previous_session_settlement_weekend", "freshness_hours_approx": 34.5},
+      "BRENT": {"value": 104.61, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "regime": "HIGH_BUT_PULLING_BACK", "source": "Reuters Friday settlement", "freshness": "previous_session_settlement_weekend", "freshness_hours_approx": 34.5}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HAWKISH_HIGH",
+      "risk": "FEAR_EASING_BUT_RATE_RISK_HIGH",
+      "energy": "HIGH_BUT_PULLING_BACK",
+      "market_status": "WEEKEND_CLOSED"
+    }
+  },
+  "learning_profile": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_adjustment": true,
+    "effect": "ACTIONABLE v2 directional low-confidence segments are weak, so confidence remains restrained even though current positioning and BOJ expectations create a clear yen-strength transmission channel into Japanese exporters."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "A large swing from heavy speculative yen shorts to net longs confirms stronger yen momentum. A stronger yen reduces translated overseas earnings and competitiveness for Nikkei exporters, while faster BOJ tightening expectations raise the domestic discount-rate headwind.",
+      "invalidation": "A sharp reversal weaker in the yen, softer BOJ tightening expectations, or a strong global risk-on move sufficient to overwhelm currency pressure would invalidate the bearish NI225 setup."
+    }
+  ]
+}
