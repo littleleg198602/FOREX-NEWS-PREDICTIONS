@@ -1,0 +1,147 @@
+{
+  "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+  "event_id": "forex_factory_1417996",
+  "created_at_utc": "2026-09-13T23:19:50Z",
+  "event_time_utc": "2026-09-13T23:10:50Z",
+  "published_at_utc": "2026-09-13T23:10:50Z",
+  "source_time_text": "9 min ago",
+  "observed_at_utc": "2026-09-13T23:19:50Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "geopolitics",
+    "saudi_arabia",
+    "hormuz",
+    "oil_supply",
+    "infrastructure_attack",
+    "inflation_risk",
+    "risk_sentiment"
+  ],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "headline": "Oil prices rise after Saudi Arabia shut down critical pipeline that bypasses Strait of Hormuz",
+    "source_url": "https://www.forexfactory.com/news/1417996-oil-prices-rise-after-saudi-arabia-shut-down",
+    "origin": "CNBC"
+  },
+  "summary": "Saudi Arabia shut its critical East-West crude pipeline after drones launched from Iraq damaged the route. The pipeline is especially important because it bypasses the Strait of Hormuz; WTI was reported up 2.3% to $102.38 and Brent up 2.3% to $107.02 by 6:02 p.m. ET. The duration and severity of the outage were not yet disclosed at prediction time.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "FLAT_TO_SLIGHT_DOWN",
+        "regime": "STABLE",
+        "source": "Investing.com historical/technical data",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "UP",
+        "regime": "HIGH_RISING",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "SLIGHT_UP",
+        "regime": "VERY_HIGH_NEAR_5PCT",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:15:00Z",
+        "direction": "DOWN",
+        "regime": "MODERATE_BUT_STALE_BEFORE_NEW_OIL_SHOCK",
+        "source": "Investing.com historical data",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "WTI": {
+        "value": 102.38,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-13T22:02:00Z",
+        "direction": "SHARP_UP",
+        "regime": "VERY_HIGH_SUPPLY_SHOCK",
+        "source": "CNBC via Forex Factory",
+        "freshness": "current_sunday_futures_quote_reported_in_story"
+      },
+      "BRENT": {
+        "value": 107.02,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-13T22:02:00Z",
+        "direction": "SHARP_UP",
+        "regime": "VERY_HIGH_SUPPLY_SHOCK",
+        "source": "CNBC via Forex Factory",
+        "freshness": "current_sunday_futures_quote_reported_in_story"
+      }
+    },
+    "regimes": {
+      "rates": "HIGH_AND_HAWKISH",
+      "risk": "NEW_WEEKEND_RISK_OFF_SHOCK_AHEAD_OF_CASH_OPEN",
+      "energy": "VERY_HIGH_AND_RISING_ON_PHYSICAL_SUPPLY_DISRUPTION",
+      "usd": "STABLE_LAST_COMPLETE_SESSION",
+      "data_freshness": "OIL_CURRENT_SUNDAY_FUTURES_OTHER_MACRO_SERIES_LAST_COMPLETE_FRIDAY_SESSION"
+    }
+  },
+  "learning_adjustment": {
+    "profile_version": "2.0.0",
+    "segment_status": "ACTIONABLE",
+    "basis": "Leakage-safe v2 confidence calibration shows weak short-horizon hit rates for directional confidence buckets 1-4 and 5-6, while low-confidence MIXED performs strongly. The physical pipeline shutdown is nevertheless a new, material supply shock, so current facts override a neutral classification; v2 evidence only capped directional confidence rather than changing direction.",
+    "material_confidence_change": true
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "A shutdown of the Saudi bypass pipeline tightens physical oil supply, pushes energy prices and inflation expectations higher, and adds pressure to already-elevated Treasury yields, creating a direct risk-off headwind for broad U.S. equities.",
+      "invalidation": "Rapid confirmation that the East-West pipeline is fully restored with WTI and Brent reversing the weekend spike would materially weaken the bearish signal."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Growth equities are especially exposed to renewed inflation and discount-rate pressure when an oil supply shock arrives with the U.S. 10-year yield already near 5%.",
+      "invalidation": "A fast pipeline restart and simultaneous decline in crude and Treasury yields would invalidate the immediate downside thesis."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Germany and European cyclicals are vulnerable to higher imported energy costs; the outage affects a route designed specifically to bypass blocked Hormuz flows and therefore raises the effective supply-risk premium.",
+      "invalidation": "Confirmed rapid restoration of Saudi export capacity or a major diplomatic de-escalation that drives crude back below the pre-shock level would weaken the call."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 6},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Higher crude prices worsen the European inflation-growth tradeoff and reinforce pressure from tighter monetary policy, while the physical infrastructure outage raises near-term geopolitical risk.",
+      "invalidation": "A quick pipeline reopening accompanied by a full reversal in Brent would remove the core physical-supply mechanism."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "French equities face the same energy and risk-premium shock as the broader euro area, though index sector composition makes the effect less direct than for the most rate-sensitive markets.",
+      "invalidation": "Rapid restoration of the pipeline and normalization of oil prices would reduce the downside pressure."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 4},
+      "mechanism": "A confirmed attack-driven shutdown of critical Saudi export infrastructure increases geopolitical and tail-risk demand for gold, although very high U.S. yields limit confidence in the upside response.",
+      "invalidation": "A fast repair, meaningful regional de-escalation and falling crude without a broader risk-off move would weaken safe-haven demand for gold."
+    }
+  ]
+}
