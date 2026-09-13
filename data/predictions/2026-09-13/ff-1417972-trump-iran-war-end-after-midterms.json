@@ -1,0 +1,123 @@
+{
+  "prediction_id": "ff-1417972-trump-iran-war-end-after-midterms",
+  "event_id": "forex-factory-1417972",
+  "created_at_utc": "2026-09-13T18:29:29Z",
+  "event_time_utc": "2026-09-13T17:22:00Z",
+  "published_at_utc": "2026-09-13T17:22:00Z",
+  "source_time_text": "Sep 13, 6:22pm",
+  "observed_at_utc": "2026-09-13T18:29:29Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "iran", "oil", "deescalation", "us"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "source": {
+    "publisher": "Forex Factory",
+    "source_url": "https://www.forexfactory.com/news/1417972-trump-reiterates-that-he-sees-iran-war-ending",
+    "headline": "Trump reiterates that he sees Iran war ending after US midterm elections"
+  },
+  "summary": "President Trump reiterated that he expects the Iran war to end this year, possibly around or shortly after the November US midterm elections, and said gasoline prices would then fall sharply. He also said Iran is eager to reach a deal. This is potentially risk-positive and oil-negative rhetoric, but it is not a concrete ceasefire, signed agreement, or immediate change to supply conditions.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T21:00:00Z",
+        "direction": "FLAT",
+        "regime": "RANGE",
+        "source": "Investing.com historical data",
+        "freshness": "last completed trading-day close; weekend market closed"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_YIELD",
+        "source": "US Treasury / market close summary",
+        "freshness": "last completed trading-day close; weekend market closed"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_YIELD",
+        "source": "US Treasury / market close summary",
+        "freshness": "last completed trading-day close; weekend market closed"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:15:00Z",
+        "direction": "DOWN",
+        "regime": "MODERATE",
+        "source": "Cboe close reported in market summary",
+        "freshness": "last completed trading-day close; weekend market closed"
+      },
+      "WTI": {
+        "value": 100.05,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-11T18:30:00Z",
+        "direction": "DOWN",
+        "regime": "ELEVATED",
+        "source": "Reuters settlement",
+        "freshness": "last completed trading-day settlement; weekend market closed"
+      },
+      "BRENT": {
+        "value": 104.61,
+        "unit": "USD/bbl",
+        "timestamp_utc": "2026-09-11T18:30:00Z",
+        "direction": "DOWN",
+        "regime": "ELEVATED",
+        "source": "Reuters settlement",
+        "freshness": "last completed trading-day settlement; weekend market closed"
+      }
+    },
+    "regimes": {
+      "usd": "RANGE",
+      "rates": "HIGH_AND_RISING",
+      "volatility": "MODERATE_FALLING",
+      "energy": "ELEVATED_BUT_PULLING_BACK",
+      "overall": "CONFLICTING_RISK_SIGNALS"
+    }
+  },
+  "learning_profile": {
+    "profile_version": "2.0.0",
+    "used_for_material_adjustment": true,
+    "basis": "ACTIONABLE v2 mixed_neutral confidence 1-4 segments show materially stronger leakage-safe outcomes than weak low-confidence directional signals; current facts remain primary and the profile does not override them."
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Prospective Iran de-escalation and lower future oil prices would support risk assets, but there is no signed deal or immediate supply restoration and rates remain high.",
+      "invalidation": "A concrete ceasefire or Hormuz reopening with a sharp oil decline would turn the signal more bullish; renewed attacks or failed talks would turn it bearish."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Lower geopolitical and energy risk would help growth equities, but elevated Treasury yields offset the benefit and the statement is only forward-looking rhetoric.",
+      "invalidation": "A verified de-escalation accompanied by lower oil and yields would turn the setup bullish; escalation and higher yields would turn it bearish."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Potentially lower future energy costs are supportive, but the timing is distant and no immediate change in war or oil supply has occurred.",
+      "invalidation": "A concrete near-term peace arrangement and sustained oil selloff would turn the signal bullish; renewed military escalation would turn it bearish."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "MIXED", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "De-escalation rhetoric can reduce safe-haven demand, but ongoing conflict, elevated oil and high geopolitical uncertainty continue to support gold.",
+      "invalidation": "A signed peace or ceasefire with materially lower oil would make the gold signal more bearish; renewed escalation would make it bullish."
+    }
+  ]
+}
