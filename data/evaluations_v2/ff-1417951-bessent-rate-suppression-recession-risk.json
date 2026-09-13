@@ -1,0 +1,242 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+  "event_id": "forex_factory:1417951",
+  "event_time_utc": "2026-09-13T12:02:00+00:00",
+  "prediction_time_utc": "2026-09-13T12:28:49+00:00",
+  "evaluation_anchor_time_utc": "2026-09-13T12:28:49+00:00",
+  "prediction_latency_seconds": 1609.0,
+  "evaluated_at_utc": "2026-09-13T12:31:49.638186+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "US_RATES",
+    "TREASURY",
+    "RECESSION_RISK",
+    "FISCAL_POLICY"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "FLAT",
+        "regime": "FLAT",
+        "source": "Investing.com historical close",
+        "freshness": "last_completed_session"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "U.S. Treasury via Statistics of the World",
+        "freshness": "last_completed_session"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "U.S. Treasury via Statistics of the World",
+        "freshness": "last_completed_session"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "Stock Market Watch close",
+        "freshness": "last_completed_session"
+      },
+      "WTI": {
+        "value": 100.05,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "market close reported by Thrive in Markets",
+        "freshness": "last_completed_session"
+      },
+      "BRENT": {
+        "value": 104.61,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Investing.com historical close",
+        "freshness": "last_completed_session"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7656.98,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2381.817,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T12:43:49+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T13:28:49+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:28:49+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29368.44,
+      "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2351.817,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T12:43:49+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T13:28:49+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:28:49+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52573.29,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2381.817,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T12:43:49+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T13:28:49+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:28:49+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417951-bessent-rate-suppression-recession-risk",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4408.89990234375,
+      "reference_price_time_utc": "2026-09-11T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2368.817,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T12:43:49+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T13:28:49+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T16:28:49+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
