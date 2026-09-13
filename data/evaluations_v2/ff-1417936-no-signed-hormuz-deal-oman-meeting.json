@@ -1,24 +1,25 @@
 {
   "evaluation_version": "2.0.0",
   "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
-  "prediction_id": "ff-1417937-bahrain-rejects-hormuz-meeting",
-  "event_id": "ff-1417937",
-  "event_time_utc": "2026-09-12T19:00:00+00:00",
-  "prediction_time_utc": "2026-09-12T19:13:37+00:00",
-  "evaluation_anchor_time_utc": "2026-09-12T19:13:37+00:00",
-  "prediction_latency_seconds": 817.0,
-  "evaluated_at_utc": "2026-09-13T00:57:09.626144+00:00",
+  "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
+  "event_id": "ff-1417936",
+  "event_time_utc": "2026-09-12T17:30:00+00:00",
+  "prediction_time_utc": "2026-09-13T00:54:19+00:00",
+  "evaluation_anchor_time_utc": "2026-09-13T00:54:19+00:00",
+  "prediction_latency_seconds": 26659.0,
+  "evaluated_at_utc": "2026-09-13T00:57:12.738738+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
   "categories": [
     "geopolitics",
     "Middle_East",
-    "Bahrain",
     "Iran",
+    "Oman",
     "Hormuz",
     "oil",
-    "shipping"
+    "shipping",
+    "diplomacy"
   ],
   "is_example": false,
   "backfilled": false,
@@ -37,7 +38,7 @@
         "regime": "FLAT",
         "source": "GSD US market close",
         "freshness": "previous_session_close_weekend",
-        "freshness_hours_approx": 22.2
+        "freshness_hours_approx": 27.9
       },
       "US2Y": {
         "value": 4.63,
@@ -47,7 +48,7 @@
         "regime": "RISING",
         "source": "GSD US market close / Treasury market close",
         "freshness": "previous_session_close_weekend",
-        "freshness_hours_approx": 23.2
+        "freshness_hours_approx": 28.9
       },
       "US10Y": {
         "value": 4.971,
@@ -57,7 +58,7 @@
         "regime": "RISING",
         "source": "GSD US market close / Treasury market close",
         "freshness": "previous_session_close_weekend",
-        "freshness_hours_approx": 23.2
+        "freshness_hours_approx": 28.9
       },
       "VIX": {
         "value": 15.84,
@@ -66,7 +67,7 @@
         "regime": "LOW",
         "source": "GSD US market close",
         "freshness": "previous_session_close_weekend",
-        "freshness_hours_approx": 23.2
+        "freshness_hours_approx": 28.9
       },
       "WTI": {
         "value": 100.05,
@@ -76,7 +77,7 @@
         "regime": "FALLING",
         "source": "Reuters Friday settlement",
         "freshness": "previous_session_settlement_weekend",
-        "freshness_hours_approx": 24.7
+        "freshness_hours_approx": 30.4
       },
       "BRENT": {
         "value": 104.61,
@@ -86,7 +87,7 @@
         "regime": "FALLING",
         "source": "Reuters Friday settlement",
         "freshness": "previous_session_settlement_weekend",
-        "freshness_hours_approx": 24.7
+        "freshness_hours_approx": 30.4
       }
     },
     "regimes": {
@@ -104,7 +105,7 @@
   },
   "results": [
     {
-      "prediction_id": "ff-1417937-bahrain-rejects-hormuz-meeting",
+      "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
       "instrument": "XAUUSD",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -115,38 +116,32 @@
       "reference_price_time_utc": "2026-09-11T21:00:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T20:59:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 1333.617,
+      "reference_age_minutes": 1674.317,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T23:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1333.617
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:09:19+00:00"
         },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T20:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1333.617
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:54:19+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T04:54:19+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "UP"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T19:28:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1333.617
         }
       }
     },
     {
-      "prediction_id": "ff-1417937-bahrain-rejects-hormuz-meeting",
+      "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
       "instrument": "SP500",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -157,38 +152,32 @@
       "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 1346.617,
+      "reference_age_minutes": 1687.317,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T23:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1346.617
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:09:19+00:00"
         },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T20:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1346.617
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:54:19+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T04:54:19+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "DOWN"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T19:28:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1346.617
         }
       }
     },
     {
-      "prediction_id": "ff-1417937-bahrain-rejects-hormuz-meeting",
+      "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
       "instrument": "NDX",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -199,38 +188,32 @@
       "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 1316.617,
+      "reference_age_minutes": 1657.317,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T23:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1316.617
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:09:19+00:00"
         },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T20:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1316.617
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:54:19+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T04:54:19+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "DOWN"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T19:28:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1316.617
         }
       }
     },
     {
-      "prediction_id": "ff-1417937-bahrain-rejects-hormuz-meeting",
+      "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
       "instrument": "GDAXI",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -241,38 +224,32 @@
       "reference_price_time_utc": "2026-09-11T16:01:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T16:00:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 1632.617,
+      "reference_age_minutes": 1973.317,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T23:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1632.617
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:09:19+00:00"
         },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T20:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1632.617
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:54:19+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T04:54:19+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "DOWN"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T19:28:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1632.617
         }
       }
     },
     {
-      "prediction_id": "ff-1417937-bahrain-rejects-hormuz-meeting",
+      "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
       "instrument": "STOXX50",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -283,38 +260,32 @@
       "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 1663.617,
+      "reference_age_minutes": 2004.317,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T23:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1663.617
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:09:19+00:00"
         },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T20:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1663.617
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:54:19+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T04:54:19+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "DOWN"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T19:28:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1663.617
         }
       }
     },
     {
-      "prediction_id": "ff-1417937-bahrain-rejects-hormuz-meeting",
+      "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
       "instrument": "FCHI40",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -325,33 +296,27 @@
       "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 1663.617,
+      "reference_age_minutes": 2004.317,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T23:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1663.617
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:09:19+00:00"
         },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T20:13:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1663.617
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T01:54:19+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T04:54:19+00:00"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "DOWN"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-12T19:28:37+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 1663.617
         }
       }
     }
