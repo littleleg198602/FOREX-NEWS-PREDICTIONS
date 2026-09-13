@@ -1,0 +1,317 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+  "event_id": "forex_factory_1417996",
+  "event_time_utc": "2026-09-13T23:10:50+00:00",
+  "prediction_time_utc": "2026-09-13T23:19:50+00:00",
+  "evaluation_anchor_time_utc": "2026-09-13T23:19:50+00:00",
+  "prediction_latency_seconds": 540.0,
+  "evaluated_at_utc": "2026-09-13T23:23:13.802958+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "geopolitics",
+    "saudi_arabia",
+    "hormuz",
+    "oil_supply",
+    "infrastructure_attack",
+    "inflation_risk",
+    "risk_sentiment"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.03,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "FLAT_TO_SLIGHT_DOWN",
+        "regime": "FLAT",
+        "source": "Investing.com historical/technical data",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "unit": "percent",
+        "timestamp_utc": "2026-09-11T23:51:00Z",
+        "direction": "SLIGHT_UP",
+        "regime": "UNKNOWN",
+        "source": "U.S. Treasury par yield data via Treasury Rate Watch",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:15:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "Investing.com historical data",
+        "freshness": "last_complete_session_market_closed"
+      },
+      "WTI": {
+        "value": 102.38,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-13T22:02:00Z",
+        "direction": "SHARP_UP",
+        "regime": "UNKNOWN",
+        "source": "CNBC via Forex Factory",
+        "freshness": "current_sunday_futures_quote_reported_in_story"
+      },
+      "BRENT": {
+        "value": 107.02,
+        "unit": "USD_per_barrel",
+        "timestamp_utc": "2026-09-13T22:02:00Z",
+        "direction": "SHARP_UP",
+        "regime": "UNKNOWN",
+        "source": "CNBC via Forex Factory",
+        "freshness": "current_sunday_futures_quote_reported_in_story"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7656.98,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3032.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T23:34:50+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T00:19:50+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T03:19:50+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29368.44,
+      "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3002.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T23:34:50+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T00:19:50+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T03:19:50+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25568.56,
+      "reference_price_time_utc": "2026-09-11T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3318.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T23:34:50+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T00:19:50+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T03:19:50+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6322.830078125,
+      "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3349.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T23:34:50+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T00:19:50+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T03:19:50+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8177.330078125,
+      "reference_price_time_utc": "2026-09-11T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3349.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T23:34:50+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T00:19:50+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T03:19:50+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1417996-saudi-east-west-pipeline-shutdown",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4381.7001953125,
+      "reference_price_time_utc": "2026-09-13T23:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-13T23:13:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-13T23:34:50+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T00:19:50+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T03:19:50+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP"
+        }
+      }
+    }
+  ]
+}
