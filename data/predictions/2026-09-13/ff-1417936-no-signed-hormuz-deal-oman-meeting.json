@@ -1,0 +1,90 @@
+{
+  "prediction_id": "ff-1417936-no-signed-hormuz-deal-oman-meeting",
+  "event_id": "ff-1417936",
+  "created_at_utc": "2026-09-13T00:54:19Z",
+  "event_time_utc": "2026-09-12T17:30:00Z",
+  "published_at_utc": "2026-09-12T17:30:00Z",
+  "source_time_text": "Sep 12, 5:30pm",
+  "observed_at_utc": "2026-09-13T00:54:19Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 900,
+  "source_timezone": "Forex Factory displayed time; UTC mapping follows repository convention for FF absolute timestamps",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "Middle_East", "Iran", "Oman", "Hormuz", "oil", "shipping", "diplomacy"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "headline": "No signed Hormuz deal expected yet from Oman meeting on Monday, Iranian official says",
+  "source_url": "https://www.forexfactory.com/news/1417936-no-signed-hormuz-deal-expected-yet-from-oman",
+  "summary": "A senior Iranian official said Monday's Oman meeting with Gulf states will discuss Hormuz and other regional issues but is not expected to produce a signed agreement over the blockaded strait. Iran still wants a framework allowing it to collect fees from ships using the strait, which Oman rejects. This is a substantive negative update for near-term de-escalation expectations beyond Bahrain's previously covered refusal to attend, although the talks themselves remain scheduled.",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.095, "timestamp_utc": "2026-09-11T21:00:00Z", "direction": "FLAT_TO_UP", "regime": "FIRM", "source": "GSD US market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 27.9},
+      "US2Y": {"value": 4.63, "unit": "percent", "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "UP", "regime": "HAWKISH_HIGH", "source": "GSD US market close / Treasury market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 28.9},
+      "US10Y": {"value": 4.971, "unit": "percent", "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "UP", "regime": "NEAR_5_PERCENT", "source": "GSD US market close / Treasury market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 28.9},
+      "VIX": {"value": 15.84, "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "regime": "FEAR_EASING", "source": "GSD US market close", "freshness": "previous_session_close_weekend", "freshness_hours_approx": 28.9},
+      "WTI": {"value": 100.05, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "regime": "HIGH_BUT_PULLING_BACK", "source": "Reuters Friday settlement", "freshness": "previous_session_settlement_weekend", "freshness_hours_approx": 30.4},
+      "BRENT": {"value": 104.61, "unit": "USD_per_barrel", "timestamp_utc": "2026-09-11T18:30:00Z", "direction": "DOWN", "regime": "HIGH_BUT_PULLING_BACK", "source": "Reuters Friday settlement", "freshness": "previous_session_settlement_weekend", "freshness_hours_approx": 30.4}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HAWKISH_HIGH",
+      "risk": "FEAR_EASING_BUT_GEOPOLITICAL_RISK_HIGH",
+      "energy": "HIGH_BUT_PULLING_BACK",
+      "market_status": "WEEKEND_CLOSED"
+    }
+  },
+  "learning_profile": {
+    "source": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "material_adjustment": false,
+    "effect": "No context-aware ACTIONABLE v2 segment was identified that justified a material confidence change for this exact weekend high-rates/high-energy geopolitical setup; current facts and pre-prediction context therefore determine the forecast."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5},
+      "next_session": {"direction": "UP", "confidence": 5},
+      "mechanism": "Reduced odds of a near-term signed Hormuz agreement preserve geopolitical and energy-supply risk, supporting safe-haven demand for gold.",
+      "invalidation": "A credible signed shipping-security framework or verified reopening of Hormuz accompanied by a sharp decline in crude would weaken the bullish gold setup."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "The absence of an expected signed Hormuz deal keeps the risk of oil above $100 and persistent inflation pressure elevated, a negative combination for broad US equities.",
+      "invalidation": "A concrete de-escalation agreement, materially lower crude and easing Treasury yields before the next session would invalidate the bearish setup."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Persistent energy-driven inflation risk can keep long Treasury yields near 5%, pressuring long-duration technology valuations.",
+      "invalidation": "A durable Hormuz breakthrough that pushes both crude and US10Y materially lower would invalidate the downside thesis."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "Europe remains sensitive to imported energy costs; delayed Hormuz resolution preserves a macro headwind for German cyclicals and industry.",
+      "invalidation": "A verified reopening or enforceable shipping-security agreement with a sustained Brent decline would invalidate the bearish call."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "No near-term signed Hormuz agreement increases the chance that high energy prices and inflation pressure persist into the next European session.",
+      "invalidation": "A concrete regional agreement and materially lower crude before the European open would invalidate the downside setup."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 5},
+      "mechanism": "French equities share Europe's exposure to elevated imported energy costs and risk-off sentiment if Hormuz remains blocked without an agreement.",
+      "invalidation": "A credible regional shipping agreement accompanied by a sharp fall in Brent would invalidate the bearish setup."
+    }
+  ]
+}
