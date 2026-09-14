@@ -1,0 +1,265 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418069-ecb-schnabel-energy-concern-m2",
+  "event_id": "ff-1418069",
+  "event_time_utc": "2026-09-14T10:05:20+00:00",
+  "prediction_time_utc": "2026-09-14T10:31:05+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T10:31:05+00:00",
+  "prediction_latency_seconds": 1545.0,
+  "evaluated_at_utc": "2026-09-14T10:32:20.811613+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "ECB",
+    "ENERGY",
+    "INFLATION",
+    "RATES"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 23,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "ECB hawkish repricing from renewed energy-inflation risk",
+    "market_expectations": {
+      "source": "Reuters/market pricing",
+      "expected_value": "Further ECB tightening risk remains elevated after recent hike and energy shock",
+      "implied_probability": null,
+      "distribution_notes": "European yields remain near multi-year highs; German 10Y about 3.52%."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "European equities and yields had already reacted to the broader energy shock and prior hawkish ECB comments before this Schnabel headline.",
+      "observed_reaction": {
+        "DAX_session_pct": -0.52,
+        "US500_futures_pct": -0.83,
+        "Germany_10Y_pct": 3.5218
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "99.26, firmer",
+        "US2Y": "4.632%, near session high",
+        "US10Y": "4.959%, elevated near 5%",
+        "VIX": "18.13, +14.46%",
+        "WTI": "102.51, +2.46%",
+        "Brent": "107.25, +2.52%",
+        "Germany10Y": "3.5218%, +0.55%",
+        "DAX": "25423.78, -0.52%"
+      }
+    },
+    "decision_notes": "Residual-move forecast: headline reinforces an existing hawkish-energy regime rather than creating a fresh shock. Directional edge is strongest only at short horizons."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.26,
+        "timestamp": "2026-09-14T10:28:20Z",
+        "direction": "UP",
+        "source": "Investing.com",
+        "freshness": "intraday",
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.632,
+        "timestamp": "2026-09-14T10:28:20Z",
+        "direction": "FLAT_TO_UP",
+        "source": "Investing.com",
+        "freshness": "real-time snapshot",
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "value": 4.959,
+        "timestamp": "2026-09-14T10:28:20Z",
+        "direction": "ELEVATED",
+        "source": "Investing.com",
+        "freshness": "intraday",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 18.13,
+        "timestamp": "2026-09-14T10:28:20Z",
+        "direction": "UP",
+        "source": "Investing.com",
+        "freshness": "real-time snapshot",
+        "regime": "ELEVATED"
+      },
+      "WTI": {
+        "value": 102.51,
+        "timestamp": "2026-09-14T10:28:20Z",
+        "direction": "UP",
+        "source": "Investing.com",
+        "freshness": "intraday",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 107.25,
+        "timestamp": "2026-09-14T10:28:20Z",
+        "direction": "UP",
+        "source": "Investing.com",
+        "freshness": "intraday",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "UNKNOWN",
+      "VIX": "ELEVATED",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418069-ecb-schnabel-energy-concern-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25439.890625,
+      "reference_price_time_utc": "2026-09-14T10:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T10:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 13.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:46:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T11:31:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:31:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418069-ecb-schnabel-energy-concern-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6260.77001953125,
+      "reference_price_time_utc": "2026-09-14T10:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T10:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 13.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:46:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T11:31:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:31:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418069-ecb-schnabel-energy-concern-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8117.0498046875,
+      "reference_price_time_utc": "2026-09-14T10:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T10:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 13.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:46:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T11:31:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:31:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
