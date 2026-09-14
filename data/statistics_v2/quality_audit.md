@@ -1,11 +1,11 @@
 # Prediction quality audit
 
-Generated: 2026-09-14T00:22:54.739369+00:00
+Generated: 2026-09-14T01:10:13.785852+00:00
 
 ## Directional accuracy
 
 - 15m: 66/166 = 39.76%
-- 1h: 62/159 = 38.99%
+- 1h: 63/160 = 39.38%
 - 4h: 46/117 = 39.32%
 - next_session: 50/107 = 46.73%
 
@@ -17,7 +17,7 @@ Generated: 2026-09-14T00:22:54.739369+00:00
 
 ## Realized direction instability
 
-- 15m_vs_1h: class changed 36.54% of 156 comparable rows; full UP/DOWN reversal 18.59%
+- 15m_vs_1h: class changed 36.31% of 157 comparable rows; full UP/DOWN reversal 18.47%
 - 1h_vs_4h: class changed 34.51% of 113 comparable rows; full UP/DOWN reversal 13.27%
 - 15m_vs_4h: class changed 38.94% of 113 comparable rows; full UP/DOWN reversal 15.93%
 
