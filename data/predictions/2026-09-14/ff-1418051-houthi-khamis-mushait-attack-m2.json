@@ -1,0 +1,156 @@
+{
+  "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m2",
+  "event_id": "ff-1418051-houthi-khamis-mushait-attack",
+  "event_cluster_id": "saudi-houthi-energy-escalation-sep-2026",
+  "created_at_utc": "2026-09-14T08:20:30Z",
+  "event_time_utc": "2026-09-14T08:03:00Z",
+  "published_at_utc": "2026-09-14T08:03:00Z",
+  "source_time_text": "9 min ago",
+  "observed_at_utc": "2026-09-14T08:12:00Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 90,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "saudi_arabia", "houthis", "oil", "risk_sentiment"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1418051-yemens-houthis-say-they-attacked-saudis-khamis-mushait",
+  "headline": "Yemen's Houthis say they attacked Saudi's Khamis Mushait air base",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 17.5,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "The Houthi claim confirms that the earlier Saudi civil-defense warning was tied to an actual military escalation, but oil and risk assets had already moved materially on the broader Saudi/Hormuz supply shock before this headline.",
+    "market_expectations": {
+      "source": "contemporaneous market reports",
+      "expected_value": "Fed tightening risk remains elevated as oil-driven inflation pressure persists",
+      "implied_probability": 0.87,
+      "distribution_notes": "Contemporaneous reports put the probability of a Fed hike this week near 86-87%."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The attack claim is fresh relative to Forex Factory, but the broader Saudi/Hormuz escalation had already lifted WTI/Brent roughly 3% and pushed U.S. equity futures lower before the decision. The forecast therefore targets only residual movement from now.",
+      "observed_reaction": {
+        "WTI": 102.93,
+        "BRENT": 107.54,
+        "SP500_futures_prior_move_pct": -0.5,
+        "NDX_futures_prior_move_pct": -1.1,
+        "gold_spot": 4321.26,
+        "gold_session_move_pct": -0.6
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "CONFIRMED: WTI about $102.93 and Brent about $107.54, both sharply higher on Saudi/Hormuz supply risk.",
+        "equity_futures": "CONFIRMED risk-off: S&P 500 futures about -0.5% and Nasdaq 100 futures about -1.1% in contemporaneous reports.",
+        "US10Y": "CONFIRMED inflation/rates headwind near 4.97%.",
+        "DXY": "Firm/rising dollar adds pressure to precious metals.",
+        "gold": "CONFLICTING: spot gold was down about 0.6% despite geopolitical escalation because higher oil strengthened rate-hike expectations."
+      }
+    },
+    "decision_notes": "This is a substantive follow-up to the earlier Khamis Mushait warning, not an independent first shock. Residual downside in equities remains plausible, but the broad move is already partly priced. For gold, safe-haven and rate/dollar channels conflict, so M2 avoids the control model's simple UP call. No ACTIONABLE model-2 evidence segment exists yet in the leakage-safe learning profile, so learning does not materially alter confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.39, "timestamp_utc": "2026-09-14T08:12:00Z", "direction": "UP", "regime": "FIRM", "source": "contemporaneous market reports / Investing.com intraday range", "freshness": "intraday"},
+      "US2Y": {"value": 4.56, "timestamp_utc": "2026-09-10T20:00:00Z", "direction": "UP", "regime": "HAWKISH", "source": "latest verified daily Treasury snapshot", "freshness": "stale_daily_reference"},
+      "US10Y": {"value": 4.97, "timestamp_utc": "2026-09-14T08:12:00Z", "direction": "UP", "regime": "NEAR_5_PERCENT", "source": "contemporaneous market reports", "freshness": "intraday"},
+      "VIX": {"value": 15.84, "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "regime": "MODERATE", "source": "latest prior close available", "freshness": "previous_market_day"},
+      "WTI": {"value": 102.93, "timestamp_utc": "2026-09-14T07:00:00Z", "direction": "UP", "regime": "SUPPLY_SHOCK_HIGH", "source": "Reuters", "freshness": "intraday"},
+      "BRENT": {"value": 107.54, "timestamp_utc": "2026-09-14T07:00:00Z", "direction": "UP", "regime": "SUPPLY_SHOCK_HIGH", "source": "Reuters", "freshness": "intraday"}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "front_end_rates": "HAWKISH_STALE_LEVEL",
+      "long_rates": "HIGH_RISING",
+      "volatility": "MODERATE_STALE_REFERENCE",
+      "oil": "HIGH_RISING_SUPPLY_RISK",
+      "risk_assets": "RISK_OFF_PREOPEN"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "The attack claim reinforces an already active Saudi/Hormuz risk-off impulse, but part of the equity reaction is already priced."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The next session will depend more on fresh escalation, oil persistence and Fed repricing than on this single follow-up headline."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "Fresh confirmation of an actual attack can extend risk-off pressure briefly while oil remains elevated."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "Oil, high yields and already-negative futures provide cross-asset confirmation for residual downside."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "A meaningful part of the geopolitical and oil shock is already priced, increasing fade/rebound risk without another escalation."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Later direction becomes conditional on new Saudi/Hormuz developments and Fed expectations rather than this update alone."}
+      },
+      "mechanism": "A confirmed military escalation in Saudi Arabia raises risk premia and reinforces oil-driven inflation pressure, which weighs on broad equities through both risk sentiment and rates.",
+      "invalidation": "A rapid de-escalation, no material damage/retaliation, and a reversal lower in oil and Treasury yields.",
+      "counter_case": "Because futures were already lower before the decision, the headline may be fully absorbed and buyers could fade the geopolitical dip if no further escalation follows.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "DOWN_PREOPEN",
+        "trend_1h": "DOWN_PREOPEN",
+        "session_location": "BELOW_PRIOR_CLOSE_FUTURES",
+        "extension_state": "PARTLY_EXTENDED",
+        "market_open": false,
+        "source": "contemporaneous U.S. index-futures reports",
+        "observed_at_utc": "2026-09-14T08:12:00Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "Nasdaq futures were already under stronger pressure, and higher oil/yields reinforce the duration headwind."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The move is already extended and separate AI-sector weakness complicates attribution to this geopolitical headline."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "Risk-off confirmation plus near-5% US10Y favors another short residual leg lower."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "High yields and oil remain adverse for long-duration growth shares if the geopolitical premium persists."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Nasdaq futures were already down materially and non-geopolitical AI headlines are also driving the move, reducing clean residual edge."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fresh Fed and AI news may dominate over this specific attack claim by the next session."}
+      },
+      "mechanism": "The attack reinforces oil-driven inflation and high-yield pressure, particularly negative for duration-sensitive technology valuations.",
+      "invalidation": "A sharp reversal in oil and Treasury yields or a strong technology-specific rebound that overwhelms geopolitical risk.",
+      "counter_case": "The Nasdaq selloff may already be overextended and driven partly by separate AI-safety headlines, allowing a rebound even if geopolitical risk stays elevated.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "DOWN_PREOPEN",
+        "trend_1h": "DOWN_PREOPEN",
+        "session_location": "LOWER_FUTURES_RANGE",
+        "extension_state": "EXTENDED",
+        "market_open": false,
+        "source": "contemporaneous Nasdaq-100 futures reports",
+        "observed_at_utc": "2026-09-14T08:12:00Z"
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5, "rationale": "The headline raises safe-haven demand but current gold price action is being dominated by the opposite yield/dollar channel."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Gold remains caught between geopolitical support and tighter-policy expectations from expensive oil."},
+      "horizons": {
+        "15m": {"direction": "VOLATILITY", "confidence": 5, "rationale": "A fresh attack claim can trigger safe-haven bursts, but firm DXY and high yields can immediately cap or reverse them."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "Cross-asset evidence is directly conflicting: geopolitical risk supports gold while oil-driven Fed pricing and yields pressure it."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Without a further escalation, the rates channel may remain dominant; another attack could quickly restore safe-haven leadership."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The balance depends on whether conflict escalation or monetary tightening expectations become the dominant driver."}
+      },
+      "mechanism": "Geopolitical escalation is bullish for safe-haven demand, while the same escalation lifts oil, inflation expectations, yields and the dollar, which are bearish for non-yielding gold.",
+      "invalidation": "A decisive break in the cross-asset conflict: either sharply lower yields/DXY with continued escalation, or clear de-escalation with persistent high yields.",
+      "counter_case": "If the attack triggers a broader Saudi retaliation or further infrastructure damage, safe-haven demand could overwhelm the rates headwind and push gold sharply higher.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "DOWN",
+        "trend_1h": "DOWN",
+        "session_location": "LOWER_PART_OF_SESSION_RANGE",
+        "extension_state": "EXTENDED",
+        "market_open": true,
+        "source": "Reuters spot-gold snapshot around $4,321.26, down about 0.6% on the session",
+        "observed_at_utc": "2026-09-14T08:12:00Z"
+      }
+    }
+  ]
+}
