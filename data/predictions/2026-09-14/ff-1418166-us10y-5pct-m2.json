@@ -1,0 +1,155 @@
+{
+  "prediction_id": "ff-1418166-us10y-5pct-m2",
+  "event_id": "ff-1418166-us10y-5pct",
+  "event_cluster_id": "us-rates-fed-sep2026",
+  "created_at_utc": "2026-09-14T18:48:12Z",
+  "event_time_utc": "2026-09-14T18:24:12Z",
+  "published_at_utc": "2026-09-14T18:24:12Z",
+  "source_time_text": "24 min ago",
+  "observed_at_utc": "2026-09-14T18:48:12Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["RATES", "FED", "BONDS", "INFLATION"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1418166-us-10-year-treasury-yield-climbs-to-5-for",
+  "headline": "US: 10-year Treasury yield climbs to 5% for the first time since 2023",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 24,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "US10Y briefly breaking 5% as oil-driven inflation and Fed-hike expectations lift long-term discount rates",
+    "market_expectations": {
+      "source": "Reuters/CME references in contemporaneous coverage",
+      "expected_value": "25bp Fed hike this week",
+      "implied_probability": 0.89,
+      "distribution_notes": "Contemporaneous reports placed a quarter-point hike probability near 87-89%."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "FADED",
+      "reason": "US10Y briefly reached roughly 5.01% but retreated near 4.96% by decision time; equities also recovered part of their initial losses.",
+      "observed_reaction": {
+        "US10Y_peak_pct": 5.011,
+        "US10Y_decision_pct": 4.96,
+        "gold_futures_day_pct": -1.89,
+        "oil_pullback_note": "WTI and Brent had pulled back materially from intraday highs while remaining elevated."
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firmer near 99.60, bearish for gold and long-duration equities",
+        "US2Y": "elevated around 4.65%, consistent with tighter policy expectations",
+        "US10Y": "rejected the 5% area and eased near 4.96%, reducing immediate pressure",
+        "VIX": "elevated versus prior sessions but not showing a fresh panic spike at decision time",
+        "WTI": "around 100.96 after pulling back from above 104",
+        "BRENT": "around 105.46 after pulling back from near 110",
+        "equities": "major US indices remained softer but had recovered part of the initial decline"
+      }
+    },
+    "decision_notes": "Forecast targets residual movement from decision time, not the already-observed initial reaction to the 5% threshold."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.596, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "UP", "regime": "FIRM", "source": "contemporaneous market coverage", "freshness_minutes": 60},
+      "US2Y": {"value": 4.647, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "UP", "regime": "ELEVATED", "source": "contemporaneous market coverage", "freshness_minutes": 60},
+      "US10Y": {"value": 4.96, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "DOWN_FROM_PEAK", "regime": "VERY_HIGH", "source": "Reuters/MarketWatch contemporaneous coverage", "freshness_minutes": 15},
+      "VIX": {"value": 18.1, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "UP", "regime": "ELEVATED", "source": "same-day market coverage", "freshness_minutes": 90},
+      "WTI": {"value": 100.96, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "DOWN_FROM_PEAK", "regime": "HIGH", "source": "MarketWatch contemporaneous coverage", "freshness_minutes": 30},
+      "BRENT": {"value": 105.46, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "DOWN_FROM_PEAK", "regime": "HIGH", "source": "MarketWatch contemporaneous coverage", "freshness_minutes": 30}
+    },
+    "regimes": {
+      "rates": "VERY_HIGH_BUT_REJECTING_EXTREME",
+      "usd": "FIRM",
+      "volatility": "ELEVATED",
+      "oil": "HIGH_BUT_OFF_HIGHS",
+      "risk": "CAUTIOUS_RISK_OFF"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "The 5% yield shock has faded from its peak, limiting a fresh directional impulse."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Rates remain restrictive, but the rejection of 5% reduces confidence in immediate continuation."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "Residual move is unclear after US10Y backed away from 5%."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "High yields cap upside but partial reversal in rates argues against chasing downside."},
+        "4h": {"direction": "DOWN", "confidence": 4, "rationale": "Persistently high discount rates can reassert pressure on long-duration tech if yields stabilize near current levels."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fed expectations remain restrictive, but much of the threshold shock is already absorbed."}
+      },
+      "mechanism": "Long-duration tech is highly sensitive to discount-rate changes around the 5% US10Y threshold.",
+      "invalidation": "A sustained US10Y break back above 5.01% with renewed VIX acceleration would strengthen the bearish case; a drop toward 4.90% would weaken it.",
+      "counter_case": "Dip-buying and a continued retreat in yields could produce a relief rebound despite still-high absolute rates.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "recovering_from_initial_weakness",
+        "trend_1h": "soft_but_stabilizing",
+        "session_location": "below_session_high_after_partial_recovery",
+        "extension_state": "rejection",
+        "market_open": true,
+        "source": "contemporaneous market coverage",
+        "observed_at_utc": "2026-09-14T18:48:12Z"
+      }
+    },
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "The rate shock is material but no longer intensifying at decision time."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "High yields remain a valuation headwind while fading oil and yield extremes temper continuation risk."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "US10Y rejected 5%, creating two-sided residual risk."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "Valuation pressure persists but is offset by the retreat in yields and oil from intraday highs."},
+        "4h": {"direction": "DOWN", "confidence": 4, "rationale": "If yields remain near 5%, broader equity valuation pressure can re-emerge."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The next move depends more on whether 5% becomes sustained than on the already-seen threshold touch."}
+      },
+      "mechanism": "A near-5% risk-free yield raises the equity discount rate and competes with stocks for capital.",
+      "invalidation": "A decisive yield retreat and easing Fed-hike pricing would remove the main bearish driver.",
+      "counter_case": "The 5% rejection may mark a near-term rates peak and support a broad relief rally.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "stabilizing",
+        "trend_1h": "soft_but_off_lows",
+        "session_location": "below_session_high_after_partial_recovery",
+        "extension_state": "rejection",
+        "market_open": true,
+        "source": "contemporaneous market coverage",
+        "observed_at_utc": "2026-09-14T18:48:12Z"
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "Gold already sold off sharply and the yield spike has partially reversed."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Dollar and yields remain headwinds but geopolitical demand and oversold conditions create offsetting forces."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "A large prior decline plus falling yields from the peak makes further immediate downside less clean."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "Firm DXY conflicts with the pullback in US10Y from 5%."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Rates remain bearish for gold, but safe-haven demand and prior absorption limit conviction."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Direction depends on whether yields re-break 5% or continue retreating."}
+      },
+      "mechanism": "Higher yields and a stronger dollar raise the opportunity cost of holding gold, but geopolitical risk offsets part of that pressure.",
+      "invalidation": "A renewed US10Y breakout above 5% with DXY strength would turn the setup more bearish; a sharp yield decline would favor gold recovery.",
+      "counter_case": "Geopolitical safe-haven demand could overpower the rates channel if Middle East tensions worsen again.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "weak_but_extended",
+        "trend_1h": "down",
+        "session_location": "near_lower_session_range_after_large_daily_drop",
+        "extension_state": "extended",
+        "market_open": true,
+        "source": "contemporaneous market coverage",
+        "observed_at_utc": "2026-09-14T18:48:12Z"
+      }
+    }
+  ]
+}
