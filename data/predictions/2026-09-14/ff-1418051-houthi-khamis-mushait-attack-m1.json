@@ -1,0 +1,62 @@
+{
+  "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m1",
+  "event_id": "ff-1418051-houthi-khamis-mushait-attack",
+  "event_cluster_id": "saudi-houthi-energy-escalation-sep-2026",
+  "created_at_utc": "2026-09-14T08:20:10Z",
+  "event_time_utc": "2026-09-14T08:03:00Z",
+  "published_at_utc": "2026-09-14T08:03:00Z",
+  "source_time_text": "9 min ago",
+  "observed_at_utc": "2026-09-14T08:12:00Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 90,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "saudi_arabia", "houthis", "oil", "risk_sentiment"],
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy-control-frozen",
+  "source_url": "https://www.forexfactory.com/news/1418051-yemens-houthis-say-they-attacked-saudis-khamis-mushait",
+  "headline": "Yemen's Houthis say they attacked Saudi's Khamis Mushait air base",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.39, "timestamp_utc": "2026-09-14T08:12:00Z", "direction": "UP", "regime": "FIRM", "source": "contemporaneous market reports", "freshness": "intraday"},
+      "US2Y": {"value": 4.56, "timestamp_utc": "2026-09-10T20:00:00Z", "direction": "UP", "regime": "HAWKISH", "source": "latest verified daily Treasury snapshot", "freshness": "stale_daily_reference"},
+      "US10Y": {"value": 4.97, "timestamp_utc": "2026-09-14T08:12:00Z", "direction": "UP", "regime": "NEAR_5_PERCENT", "source": "contemporaneous market reports", "freshness": "intraday"},
+      "VIX": {"value": 15.84, "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "regime": "MODERATE", "source": "latest prior close available", "freshness": "previous_market_day"},
+      "WTI": {"value": 102.93, "timestamp_utc": "2026-09-14T07:00:00Z", "direction": "UP", "regime": "SUPPLY_SHOCK_HIGH", "source": "Reuters", "freshness": "intraday"},
+      "BRENT": {"value": 107.54, "timestamp_utc": "2026-09-14T07:00:00Z", "direction": "UP", "regime": "SUPPLY_SHOCK_HIGH", "source": "Reuters", "freshness": "intraday"}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "front_end_rates": "HAWKISH",
+      "long_rates": "HIGH_RISING",
+      "volatility": "MODERATE_STALE_REFERENCE",
+      "oil": "HIGH_RISING_SUPPLY_RISK"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "UP", "confidence": 5, "rationale": "A claimed attack on a Saudi military base raises geopolitical safe-haven demand."},
+      "next_session": {"direction": "UP", "confidence": 4, "rationale": "Continued regional escalation can preserve a geopolitical risk premium."},
+      "mechanism": "Escalating Middle East conflict increases demand for defensive assets.",
+      "invalidation": "Rapid de-escalation or confirmation that the attack caused no meaningful escalation while yields and the dollar keep rising."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "A fresh military escalation in Saudi Arabia is risk-off for broad equities."},
+      "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "Higher geopolitical and energy risk can pressure broad U.S. equities."},
+      "mechanism": "Geopolitical risk and higher oil raise inflation and risk-premium pressure.",
+      "invalidation": "No further escalation and a clear reversal lower in oil prices and Treasury yields."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "Risk-off sentiment plus higher oil and yields are negative for duration-sensitive technology shares."},
+      "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "Persistently high yields and geopolitical risk remain headwinds for growth equities."},
+      "mechanism": "Oil-driven inflation pressure reinforces high yields and risk aversion.",
+      "invalidation": "A strong reversal in yields/oil or a broad risk-on rebound."
+    }
+  ]
+}
