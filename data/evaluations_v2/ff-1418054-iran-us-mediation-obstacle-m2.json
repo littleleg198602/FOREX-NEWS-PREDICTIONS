@@ -1,0 +1,264 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m2",
+  "event_id": "ff-1418054-iran-us-mediation-obstacle",
+  "event_time_utc": "2026-09-14T08:36:48+00:00",
+  "prediction_time_utc": "2026-09-14T09:13:40+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T09:13:40+00:00",
+  "prediction_latency_seconds": 2212.0,
+  "evaluated_at_utc": "2026-09-14T09:18:01.468500+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "diplomacy",
+    "oil",
+    "risk_sentiment"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 36.4,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "The quote marginally reduces near-term de-escalation odds, but the broader Iran/Hormuz conflict, pipeline outage and oil shock were already heavily reflected in risk assets before this headline.",
+    "market_expectations": {
+      "source": "contemporaneous market reports",
+      "expected_value": "Fed hike this week remains heavily priced while Middle East de-escalation remains uncertain",
+      "implied_probability": 0.86,
+      "distribution_notes": "Reuters and market reports put a Fed hike near 86%; no fresh diplomatic breakthrough was priced."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The specific quote is fresh, but oil near $103/$108, elevated yields and weaker risk sentiment already reflected the broader diplomatic and supply-risk backdrop. The residual forecast is from the decision time, not from the original conflict shock.",
+      "observed_reaction": {
+        "WTI": 102.94,
+        "BRENT": 107.81,
+        "US10Y": 4.97,
+        "SP500_futures_prior_move_pct": -0.5,
+        "NDX_futures_prior_move_pct": -1.1
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "CONFIRMED geopolitical premium remains high with WTI about 102.94 and Brent about 107.81.",
+        "rates": "CONFIRMED inflation headwind with US10Y near 4.97%.",
+        "equities": "CONFIRMED broader risk-off backdrop, but most of it preceded this specific quote.",
+        "gold": "CONFLICTING because safe-haven support is offset by firm USD and high yields."
+      }
+    },
+    "decision_notes": "Treat as continuation of the Iran/Hormuz diplomacy cluster, not a fresh independent shock. No ACTIONABLE model-2 evidence segment exists in the leakage-safe profile, so learning does not alter confidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.39,
+        "timestamp_utc": "2026-09-14T08:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market reports; exact intraday level from latest verified snapshot",
+        "freshness": "~1h_reference"
+      },
+      "US2Y": {
+        "value": 4.56,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "latest verified daily Treasury snapshot",
+        "freshness": "stale_daily_reference"
+      },
+      "US10Y": {
+        "value": 4.97,
+        "timestamp_utc": "2026-09-14T09:10:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market reports",
+        "freshness": "intraday"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "latest prior close available",
+        "freshness": "previous_market_day"
+      },
+      "WTI": {
+        "value": 102.94,
+        "timestamp_utc": "2026-09-14T09:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Morning Bid",
+        "freshness": "intraday"
+      },
+      "BRENT": {
+        "value": 107.81,
+        "timestamp_utc": "2026-09-14T09:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Morning Bid",
+        "freshness": "intraday"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7656.98,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3626.667,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:28:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:13:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:13:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29368.44,
+      "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3596.667,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:28:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:13:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:13:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4349.39990234375,
+      "reference_price_time_utc": "2026-09-14T09:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:08:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.667,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:28:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:13:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:13:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

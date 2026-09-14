@@ -1,20 +1,20 @@
 {
   "evaluation_version": "2.0.0",
   "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
-  "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m1",
-  "event_id": "ff-1418051-houthi-khamis-mushait-attack",
-  "event_time_utc": "2026-09-14T08:03:00+00:00",
-  "prediction_time_utc": "2026-09-14T08:20:10+00:00",
-  "evaluation_anchor_time_utc": "2026-09-14T08:20:10+00:00",
-  "prediction_latency_seconds": 1030.0,
-  "evaluated_at_utc": "2026-09-14T09:17:58.881349+00:00",
+  "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m1",
+  "event_id": "ff-1418054-iran-us-mediation-obstacle",
+  "event_time_utc": "2026-09-14T08:36:48+00:00",
+  "prediction_time_utc": "2026-09-14T09:13:20+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T09:13:20+00:00",
+  "prediction_latency_seconds": 2192.0,
+  "evaluated_at_utc": "2026-09-14T09:18:01.001721+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control-frozen",
   "categories": [
     "geopolitics",
-    "saudi_arabia",
-    "houthis",
+    "iran",
+    "diplomacy",
     "oil",
     "risk_sentiment"
   ],
@@ -34,8 +34,8 @@
         "timestamp_utc": "2026-09-14T08:12:00Z",
         "direction": "UP",
         "regime": "RISING",
-        "source": "contemporaneous market reports",
-        "freshness": "intraday"
+        "source": "contemporaneous market reports; exact intraday level from latest verified snapshot",
+        "freshness": "~1h_reference"
       },
       "US2Y": {
         "value": 4.56,
@@ -47,7 +47,7 @@
       },
       "US10Y": {
         "value": 4.97,
-        "timestamp_utc": "2026-09-14T08:12:00Z",
+        "timestamp_utc": "2026-09-14T09:10:00Z",
         "direction": "UP",
         "regime": "RISING",
         "source": "contemporaneous market reports",
@@ -62,19 +62,19 @@
         "freshness": "previous_market_day"
       },
       "WTI": {
-        "value": 102.93,
-        "timestamp_utc": "2026-09-14T07:00:00Z",
+        "value": 102.94,
+        "timestamp_utc": "2026-09-14T09:00:00Z",
         "direction": "UP",
         "regime": "RISING",
-        "source": "Reuters",
+        "source": "Reuters Morning Bid",
         "freshness": "intraday"
       },
       "BRENT": {
-        "value": 107.54,
-        "timestamp_utc": "2026-09-14T07:00:00Z",
+        "value": 107.81,
+        "timestamp_utc": "2026-09-14T09:00:00Z",
         "direction": "UP",
         "regime": "RISING",
-        "source": "Reuters",
+        "source": "Reuters Morning Bid",
         "freshness": "intraday"
       }
     },
@@ -93,66 +93,51 @@
   },
   "results": [
     {
-      "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m1",
+      "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m1",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "PENDING",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4351.0,
-      "reference_price_time_utc": "2026-09-14T08:20:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-14T08:19:00+00:00",
+      "reference_price": 4348.5,
+      "reference_price_time_utc": "2026-09-14T09:08:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:07:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 0.167,
+      "reference_age_minutes": 5.333,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "legacy_immediate_fallback",
       "predicted_immediate_direction": "UP",
-      "predicted_confidence": 5,
+      "predicted_confidence": 4,
       "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:28:20+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:13:20+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
         "4h": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-14T12:20:10+00:00",
+          "target_time_utc": "2026-09-14T13:13:20+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 4
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "UP",
           "forecast_source": "legacy_fallback"
-        },
-        "15m": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-14T08:35:10+00:00",
-          "actual_price_time_utc": "2026-09-14T08:36:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-14T08:35:00+00:00",
-          "market_delay_minutes": 0.83,
-          "price": 4353.5,
-          "change_pct": 0.057458,
-          "actual_direction": "UP",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "forecast_source": "legacy_fallback",
-          "correct": true,
-          "score_type": "directional",
-          "baseline_range_pct": 0.188456,
-          "post_event_range_pct": 0.117217,
-          "mfe_pct": 0.082742,
-          "mae_pct": -0.034475,
-          "directional_threshold_pct": 0.018846,
-          "actual_direction_thresholded": "UP"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T09:20:10+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5
         }
       }
     },
     {
-      "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m1",
+      "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m1",
       "instrument": "SP500",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -163,42 +148,40 @@
       "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 3573.167,
+      "reference_age_minutes": 3626.333,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "legacy_immediate_fallback",
       "predicted_immediate_direction": "DOWN",
-      "predicted_confidence": 5,
+      "predicted_confidence": 4,
       "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:28:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:13:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
         "4h": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-14T12:20:10+00:00",
+          "target_time_utc": "2026-09-14T13:13:20+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 4
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-14T08:35:10+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 3573.167
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T09:20:10+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
         }
       }
     },
     {
-      "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m1",
+      "prediction_id": "ff-1418054-iran-us-mediation-obstacle-m1",
       "instrument": "NDX",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -209,37 +192,35 @@
       "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
       "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 3543.167,
+      "reference_age_minutes": 3596.333,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "legacy_immediate_fallback",
       "predicted_immediate_direction": "DOWN",
-      "predicted_confidence": 5,
+      "predicted_confidence": 4,
       "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:28:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:13:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
         "4h": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-14T12:20:10+00:00",
+          "target_time_utc": "2026-09-14T13:13:20+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 4
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-14T08:35:10+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 3543.167
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T09:20:10+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
         }
       }
     }

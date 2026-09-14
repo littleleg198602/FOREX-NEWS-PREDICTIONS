@@ -1,0 +1,263 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418052-ecb-kazimir-upside-inflation-m2",
+  "event_id": "ff-1418052-ecb-kazimir-upside-inflation",
+  "event_time_utc": "2026-09-14T08:26:48+00:00",
+  "prediction_time_utc": "2026-09-14T09:14:20+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T09:14:20+00:00",
+  "prediction_latency_seconds": 2852.0,
+  "evaluated_at_utc": "2026-09-14T09:18:00.528204+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "ecb",
+    "rates",
+    "inflation",
+    "energy",
+    "eurozone_equities"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 47.2,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Kazimir reinforced that Eurozone inflation risks are skewed upward because of energy and that the ECB is prepared to act, adding to already-elevated European yield and oil pressure.",
+    "market_expectations": {
+      "source": "Reuters",
+      "expected_value": "Further ECB tightening remains plausible after the latest hike",
+      "implied_probability": 0.6,
+      "distribution_notes": "Reuters reported markets around a 60% probability of another ECB hike at the October meeting."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The ECB had already hiked and energy inflation was already a major market theme; European shares were mixed/slightly lower and German 10Y yields had already reached a 15-year high before the decision. Kazimir reinforces rather than creates the regime.",
+      "observed_reaction": {
+        "STOXX600": 638.95,
+        "GER10Y": 3.532,
+        "WTI": 102.94,
+        "BRENT": 107.81
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "euro_rates": "CONFIRMED: German 10Y Bund yield around 3.532%, a 15-year high.",
+        "oil": "CONFIRMED: Brent about 107.81 and WTI about 102.94 keep energy inflation elevated.",
+        "europe_equities": "CONFIRMED but modest: STOXX 600 around 638.95 with most regional markets lower/mixed.",
+        "policy_pricing": "CONFIRMED: Reuters cited about 60% odds of an October ECB hike."
+      }
+    },
+    "decision_notes": "The signal is genuinely hawkish but incremental. M2 therefore expects some near-term downside residual, while reducing conviction beyond 1h because much of the energy/rates regime is already priced. No ACTIONABLE model-2 learning segment exists yet, so confidence is not materially adjusted by learning."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.39,
+        "timestamp_utc": "2026-09-14T08:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market reports; exact intraday level from latest verified snapshot",
+        "freshness": "~1h_reference"
+      },
+      "US2Y": {
+        "value": 4.56,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "latest verified daily Treasury snapshot",
+        "freshness": "stale_daily_reference"
+      },
+      "US10Y": {
+        "value": 4.97,
+        "timestamp_utc": "2026-09-14T09:10:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market reports",
+        "freshness": "intraday"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "latest prior close available",
+        "freshness": "previous_market_day"
+      },
+      "WTI": {
+        "value": 102.94,
+        "timestamp_utc": "2026-09-14T09:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Morning Bid",
+        "freshness": "intraday"
+      },
+      "BRENT": {
+        "value": 107.81,
+        "timestamp_utc": "2026-09-14T09:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Morning Bid",
+        "freshness": "intraday"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418052-ecb-kazimir-upside-inflation-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25420.58984375,
+      "reference_price_time_utc": "2026-09-14T09:03:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:02:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:29:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:14:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:14:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418052-ecb-kazimir-upside-inflation-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6264.97021484375,
+      "reference_price_time_utc": "2026-09-14T09:03:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:02:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:29:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:14:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:14:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418052-ecb-kazimir-upside-inflation-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8121.89990234375,
+      "reference_price_time_utc": "2026-09-14T09:03:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:02:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:29:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:14:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:14:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
