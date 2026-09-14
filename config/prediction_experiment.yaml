@@ -1,0 +1,32 @@
+version: 1
+mode: parallel_shadow
+started_at_utc: "2026-09-14T05:35:00Z"
+
+control:
+  model_version: "1.1.1"
+  label: "baseline-control"
+  mutable: false
+  description: "Frozen legacy forecasting logic for out-of-sample comparison only."
+
+candidate:
+  model_version: "2.0.0"
+  label: "information-rich-candidate"
+  mutable: false
+  description: "Evidence-rich, horizon-specific forecasting using surprise, absorption, cross-asset confirmation, technical/location state and counter-case."
+
+comparison_rules:
+  same_event_id: true
+  same_decision_timestamp_window_seconds: 120
+  separate_prediction_id_per_model: true
+  no_cross_model_learning: true
+  no_hindsight_edits: true
+  evaluate_same_horizons: ["15m", "1h", "4h", "next_session"]
+  primary_metric: "directional_hit_rate"
+  secondary_metrics: ["directional_coverage", "mixed_accuracy", "volatility_accuracy"]
+  minimum_independent_events_before_promotion: 30
+  promotion_rule: "Candidate may replace control only after materially better out-of-sample performance on independent live events; do not tune thresholds to force promotion."
+
+storage:
+  shared_root: "data/predictions"
+  filename_suffix_control: "-m1"
+  filename_suffix_candidate: "-m2"
