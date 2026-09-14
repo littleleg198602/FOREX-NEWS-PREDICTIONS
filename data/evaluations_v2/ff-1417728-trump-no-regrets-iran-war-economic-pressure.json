@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T04:16:16+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T04:16:16+00:00",
   "prediction_latency_seconds": 16756.0,
-  "evaluated_at_utc": "2026-09-14T11:50:00.347740+00:00",
+  "evaluated_at_utc": "2026-09-14T14:01:50.568685+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -143,24 +143,6 @@
           "directional_threshold_pct": 0.052276,
           "actual_direction_thresholded": "UP"
         },
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-11T08:16:16+00:00",
-          "actual_price_time_utc": "2026-09-11T08:17:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-11T08:16:00+00:00",
-          "market_delay_minutes": 0.73,
-          "price": 4390.0,
-          "change_pct": 0.653445,
-          "actual_direction": "UP",
-          "correct": true,
-          "score_type": "directional",
-          "baseline_range_pct": 0.901073,
-          "post_event_range_pct": 0.962971,
-          "mfe_pct": 0.92858,
-          "mae_pct": -0.034392,
-          "directional_threshold_pct": 0.090107,
-          "actual_direction_thresholded": "UP"
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-13",
@@ -180,6 +162,24 @@
           "mae_pct": null,
           "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
           "neutral_envelope_pct": 2.565629
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-11T08:16:16+00:00",
+          "actual_price_time_utc": "2026-09-11T08:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T08:16:00+00:00",
+          "market_delay_minutes": 0.73,
+          "price": 4390.0,
+          "change_pct": 0.653445,
+          "actual_direction": "UP",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.901073,
+          "post_event_range_pct": 0.962971,
+          "mfe_pct": 0.92858,
+          "mae_pct": -0.034392,
+          "directional_threshold_pct": 0.090107,
+          "actual_direction_thresholded": "UP"
         }
       },
       "forecast_structure": "legacy_immediate_fallback"
@@ -187,7 +187,7 @@
     {
       "prediction_id": "ff-1417728-trump-no-regrets-iran-war-economic-pressure",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -213,17 +213,32 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 430.267
         },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-11",
+          "actual_price_time_utc": "2026-09-11T20:47:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+          "price": 7656.98,
+          "change_pct": 0.859886,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.432048,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.530448,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.432048,
+          "forecast_source": "legacy_fallback"
+        },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-11T08:16:16+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 430.267
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-11",
-          "predicted_direction": "MIXED",
-          "forecast_source": "legacy_fallback"
         }
       },
       "forecast_structure": "legacy_immediate_fallback"
@@ -231,7 +246,7 @@
     {
       "prediction_id": "ff-1417728-trump-no-regrets-iran-war-economic-pressure",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -257,17 +272,32 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 419.267
         },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-11",
+          "actual_price_time_utc": "2026-09-11T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+          "price": 29368.44,
+          "change_pct": 0.910289,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.727072,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.536957,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.727072,
+          "forecast_source": "legacy_fallback"
+        },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-11T08:16:16+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 419.267
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-11",
-          "predicted_direction": "MIXED",
-          "forecast_source": "legacy_fallback"
         }
       },
       "forecast_structure": "legacy_immediate_fallback"

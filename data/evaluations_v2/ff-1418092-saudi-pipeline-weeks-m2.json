@@ -1,0 +1,356 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418092-saudi-pipeline-weeks-m2",
+  "event_id": "ff-1418092-saudi-pipeline-weeks",
+  "event_time_utc": "2026-09-14T12:43:00+00:00",
+  "prediction_time_utc": "2026-09-14T13:57:05+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T13:57:05+00:00",
+  "prediction_latency_seconds": 4445.0,
+  "evaluated_at_utc": "2026-09-14T14:02:38.689983+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "OIL",
+    "GEOPOLITICS",
+    "SAUDI_ARABIA",
+    "SUPPLY_SHOCK",
+    "INCREMENTAL_UPDATE"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 73.2,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "The newly reported 3-5 week repair timeline turns a known Saudi pipeline shutdown into a more persistent physical oil-supply constraint, reinforcing inflation and risk-off pressure.",
+    "market_expectations": {
+      "source": "contemporaneous Reuters/AP/market reporting",
+      "expected_value": "Saudi East-West pipeline largely offline for 3-5 weeks with possible partial operation during repairs",
+      "implied_probability": null,
+      "distribution_notes": "The outage itself was already known; the new information is the multi-week duration and limited partial-operation possibility."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The pipeline shutdown and broader Middle East supply risk were already in prices before the AP repair-duration update. Oil had already surged above $108 Brent and equities were risk-off; the forecast therefore targets only residual movement from the decision time.",
+      "observed_reaction": {
+        "Brent": "around $109.14 in contemporaneous WSJ reporting, +4.3%",
+        "WTI": "around $104.46 in contemporaneous WSJ reporting, +4.4%",
+        "US10Y": "around 4.95-4.98% after reaching 4.9915%",
+        "Nasdaq": "about -1.2% in contemporaneous AP reporting",
+        "gold": "about -1.8% to $4,271.59 in Reuters reporting despite geopolitical risk"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "around 99.45-99.59, firm/up on the day",
+        "US2Y": "around 4.63% in latest available contemporaneous context, elevated",
+        "US10Y": "around 4.95-4.98%, high-yield regime",
+        "VIX": "around 18.1 in latest available intraday context, elevated/risk-off",
+        "WTI": "around $104.46, sharply higher",
+        "BRENT": "around $109.14, sharply higher",
+        "equities": "Nasdaq and broader risk assets lower",
+        "gold": "falling despite geopolitical risk, showing the rates/USD channel is currently offsetting safe-haven demand"
+      }
+    },
+    "decision_notes": "The update is materially new because it adds a 3-5 week repair horizon, but it arrives after a large oil/rates/equity reaction. M2 therefore treats it as a persistent supply-shock confirmation rather than a fresh unpriced shock. Leakage-safe v2 learning was reviewed; no candidate-specific ACTIONABLE model-2 evidence segment was used to alter confidence materially."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.59,
+        "timestamp_utc": "2026-09-14T11:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/recent contemporaneous market reporting",
+        "freshness_minutes": 147
+      },
+      "US2Y": {
+        "value": 4.63,
+        "timestamp_utc": "2026-09-14T10:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "latest available contemporaneous market context",
+        "freshness_minutes": 207
+      },
+      "US10Y": {
+        "value": 4.95,
+        "timestamp_utc": "2026-09-14T13:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/AP contemporaneous reporting",
+        "freshness_minutes": 27
+      },
+      "VIX": {
+        "value": 18.13,
+        "timestamp_utc": "2026-09-14T10:30:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "latest available contemporaneous market context",
+        "freshness_minutes": 207
+      },
+      "WTI": {
+        "value": 104.46,
+        "timestamp_utc": "2026-09-14T13:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Wall Street Journal contemporaneous reporting",
+        "freshness_minutes": 12
+      },
+      "BRENT": {
+        "value": 109.14,
+        "timestamp_utc": "2026-09-14T13:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Wall Street Journal contemporaneous reporting",
+        "freshness_minutes": 12
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "ELEVATED",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7613.22021484375,
+      "reference_price_time_utc": "2026-09-14T13:57:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:56:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:12:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:57:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:57:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28993.03125,
+      "reference_price_time_utc": "2026-09-14T13:57:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:56:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:12:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:57:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:57:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25450.560546875,
+      "reference_price_time_utc": "2026-09-14T13:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:12:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:57:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:57:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6260.5498046875,
+      "reference_price_time_utc": "2026-09-14T13:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:12:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:57:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:57:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4317.39990234375,
+      "reference_price_time_utc": "2026-09-14T13:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:12:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:57:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:57:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

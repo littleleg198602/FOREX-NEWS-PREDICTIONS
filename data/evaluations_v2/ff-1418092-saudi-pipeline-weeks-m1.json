@@ -1,0 +1,384 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418092-saudi-pipeline-weeks-m1",
+  "event_id": "ff-1418092-saudi-pipeline-weeks",
+  "event_time_utc": "2026-09-14T12:43:00+00:00",
+  "prediction_time_utc": "2026-09-14T13:56:45+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T13:56:45+00:00",
+  "prediction_latency_seconds": 4425.0,
+  "evaluated_at_utc": "2026-09-14T14:02:37.332511+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy-control-frozen",
+  "categories": [
+    "OIL",
+    "GEOPOLITICS",
+    "SAUDI_ARABIA",
+    "SUPPLY_SHOCK"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-14T13:56:45+00:00",
+    "captured_for_event_time_utc": "2026-09-14T13:56:45+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 99.68900299072266,
+        "timestamp_utc": "2026-09-14T13:53:00+00:00",
+        "available_at_utc": "2026-09-14T13:53:00+00:00",
+        "age_minutes": 3.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.030109,
+        "change_pct_240m": 0.161767,
+        "change_abs_60m": 0.030006,
+        "raw_change_pct_60m": 0.030109,
+        "raw_change_abs_60m": 0.030006,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 102.03515625,
+        "timestamp_utc": "2026-09-14T13:53:00+00:00",
+        "available_at_utc": "2026-09-14T13:53:00+00:00",
+        "age_minutes": 3.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.019138,
+        "change_pct_240m": 0.057392,
+        "change_abs_60m": 0.019531,
+        "raw_change_pct_60m": -0.019138,
+        "raw_change_abs_60m": -0.019531,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 4.986999988555908,
+        "timestamp_utc": "2026-09-14T13:48:00+00:00",
+        "available_at_utc": "2026-09-14T13:48:00+00:00",
+        "age_minutes": 8.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": 0.040127,
+        "change_pct_240m": 0.241208,
+        "change_abs_60m": 0.002,
+        "raw_change_pct_60m": 0.040127,
+        "raw_change_abs_60m": 0.002,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 17.3700008392334,
+        "timestamp_utc": "2026-09-14T13:48:00+00:00",
+        "available_at_utc": "2026-09-14T13:48:00+00:00",
+        "age_minutes": 8.75,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -2.250983,
+        "change_pct_240m": -3.873818,
+        "change_abs_60m": -0.4,
+        "raw_change_pct_60m": -2.250983,
+        "raw_change_abs_60m": -0.4,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 103.80000305175781,
+        "timestamp_utc": "2026-09-14T13:53:00+00:00",
+        "available_at_utc": "2026-09-14T13:53:00+00:00",
+        "age_minutes": 3.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.469842,
+        "change_pct_240m": 1.002244,
+        "change_abs_60m": -0.489998,
+        "raw_change_pct_60m": -0.469842,
+        "raw_change_abs_60m": -0.489998,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 108.95999908447266,
+        "timestamp_utc": "2026-09-14T13:53:00+00:00",
+        "available_at_utc": "2026-09-14T13:53:00+00:00",
+        "age_minutes": 3.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.027524,
+        "change_pct_240m": 1.329862,
+        "change_abs_60m": -0.029999,
+        "raw_change_pct_60m": -0.027524,
+        "raw_change_abs_60m": -0.029999,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7613.14990234375,
+      "reference_price_time_utc": "2026-09-14T13:56:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:55:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:11:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28987.607421875,
+      "reference_price_time_utc": "2026-09-14T13:56:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:55:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:11:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m1",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25451.140625,
+      "reference_price_time_utc": "2026-09-14T13:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:11:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m1",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6260.5498046875,
+      "reference_price_time_utc": "2026-09-14T13:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:11:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:56:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418092-saudi-pipeline-weeks-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4317.39990234375,
+      "reference_price_time_utc": "2026-09-14T13:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T13:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:11:45+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T14:56:45+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T17:56:45+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}
