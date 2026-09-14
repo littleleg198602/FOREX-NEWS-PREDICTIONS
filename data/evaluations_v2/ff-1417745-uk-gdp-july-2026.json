@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-11T06:45:22.321022+00:00",
   "evaluation_anchor_time_utc": "2026-09-11T06:45:22.321022+00:00",
   "prediction_latency_seconds": 2482.321,
-  "evaluated_at_utc": "2026-09-14T06:19:08.637446+00:00",
+  "evaluated_at_utc": "2026-09-14T07:16:00.675705+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -98,7 +98,7 @@
     {
       "prediction_id": "ff-1417745-uk-gdp-july-2026",
       "instrument": "UK100",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FTSE",
       "yahoo_proxy_for": null,
@@ -112,15 +112,30 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-11",
+          "actual_price_time_utc": "2026-09-11T15:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-11T15:35:00+00:00",
+          "price": 10650.44,
+          "change_pct": 0.391369,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.883028,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.060806,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.883028,
+          "forecast_source": "legacy_fallback"
+        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-11T07:00:22.321022+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 909.372
-        },
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-11T07:45:22.321022+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 909.372
         },
@@ -130,11 +145,11 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 909.372
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-11",
-          "predicted_direction": "MIXED",
-          "forecast_source": "legacy_fallback"
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-11T07:45:22.321022+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 909.372
         }
       },
       "forecast_structure": "legacy_immediate_fallback"

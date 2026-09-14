@@ -1,0 +1,184 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418031-gold-oil-fed-m1",
+  "event_id": "ff-1418031-gold-oil-fed",
+  "event_time_utc": "2026-09-14T06:39:00+00:00",
+  "prediction_time_utc": "2026-09-14T07:14:10+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T07:14:10+00:00",
+  "prediction_latency_seconds": 2110.0,
+  "evaluated_at_utc": "2026-09-14T07:16:28.739367+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "1.1.1",
+  "categories": [
+    "gold",
+    "oil",
+    "fed",
+    "rates",
+    "inflation"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.09,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "source": "Investing.com search snapshot",
+        "freshness": "intraday",
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "timestamp_utc": "2026-09-11T22:05:00Z",
+        "direction": "UP",
+        "source": "US Treasury/YCharts latest available",
+        "freshness": "previous_market_day",
+        "regime": "RISING"
+      },
+      "US10Y": {
+        "value": 4.97,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "source": "contemporaneous market reports",
+        "freshness": "intraday",
+        "regime": "RISING"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "source": "latest prior close available",
+        "freshness": "previous_market_day",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 102.15,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "source": "Reuters",
+        "freshness": "intraday",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 106.72,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "source": "Reuters",
+        "freshness": "intraday",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418031-gold-oil-fed-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4362.89990234375,
+      "reference_price_time_utc": "2026-09-14T07:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T07:06:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 7.167,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T07:29:10+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:14:10+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T11:14:10+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418031-gold-oil-fed-m1",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.13500213623047,
+      "reference_price_time_utc": "2026-09-14T07:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T07:06:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 7.167,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T07:29:10+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:14:10+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T11:14:10+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

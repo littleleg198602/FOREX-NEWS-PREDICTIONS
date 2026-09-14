@@ -1,0 +1,219 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418031-gold-oil-fed-m2",
+  "event_id": "ff-1418031-gold-oil-fed",
+  "event_time_utc": "2026-09-14T06:39:00+00:00",
+  "prediction_time_utc": "2026-09-14T07:14:41+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T07:14:41+00:00",
+  "prediction_latency_seconds": 2141.0,
+  "evaluated_at_utc": "2026-09-14T07:16:29.300059+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "gold",
+    "oil",
+    "fed",
+    "rates",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "MARKET_RECAP",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 35.4,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Oil-driven inflation pressure has raised Fed hike expectations and Treasury yields, creating a yield and dollar headwind for precious metals.",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch contemporaneous report",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.87,
+      "distribution_notes": "Rate-hike probability reported near 87%, versus about 67% before the latest inflation data."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "The article itself described gold already down 0.3% at 03:30 GMT, and a later contemporaneous Reuters snapshot showed spot gold around $4,327.09, below the article's $4,334.31 level. The forecast therefore targets residual movement from decision time, not the initial headline reaction.",
+      "observed_reaction": {
+        "article_spot_gold": 4334.31,
+        "later_predecision_spot_gold": 4327.09,
+        "approx_change_pct": -0.17
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "Around 99.09 and described as at an 11-day high; firm dollar confirms pressure on gold.",
+        "US10Y": "Around 4.97%, near the 5% threshold; high yields confirm the opportunity-cost headwind.",
+        "WTI": "Around $102.15 and rising on supply risk.",
+        "BRENT": "Around $106.72 and rising on supply risk.",
+        "gold": "Spot gold continued below the article's earlier quoted level, confirming rather than reversing the initial move."
+      }
+    },
+    "decision_notes": "This is a delayed market recap rather than a fresh catalyst. Because much of the bearish gold reaction is already visible, M2 reduces continuation conviction and allows MIXED outcomes at longer horizons. No ACTIONABLE model-2 evidence segment exists yet in the leakage-safe profile; legacy model-1 learning is not used to alter M2 confidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.09,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com search snapshot / contemporaneous dollar report",
+        "freshness": "intraday"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "timestamp_utc": "2026-09-11T22:05:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "US Treasury/YCharts latest available",
+        "freshness": "previous_market_day"
+      },
+      "US10Y": {
+        "value": 4.97,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market reports",
+        "freshness": "intraday"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "latest prior close available",
+        "freshness": "previous_market_day"
+      },
+      "WTI": {
+        "value": 102.15,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "intraday"
+      },
+      "BRENT": {
+        "value": 106.72,
+        "timestamp_utc": "2026-09-14T07:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "intraday"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418031-gold-oil-fed-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4362.89990234375,
+      "reference_price_time_utc": "2026-09-14T07:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T07:06:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 7.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T07:29:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:14:41+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T11:14:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418031-gold-oil-fed-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.13500213623047,
+      "reference_price_time_utc": "2026-09-14T07:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T07:06:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 7.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T07:29:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:14:41+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T11:14:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
