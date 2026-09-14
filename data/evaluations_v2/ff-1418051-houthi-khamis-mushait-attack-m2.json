@@ -1,0 +1,266 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m2",
+  "event_id": "ff-1418051-houthi-khamis-mushait-attack",
+  "event_time_utc": "2026-09-14T08:03:00+00:00",
+  "prediction_time_utc": "2026-09-14T08:20:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T08:20:30+00:00",
+  "prediction_latency_seconds": 1050.0,
+  "evaluated_at_utc": "2026-09-14T08:21:06.269948+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "saudi_arabia",
+    "houthis",
+    "oil",
+    "risk_sentiment"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 17.5,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "The Houthi claim confirms that the earlier Saudi civil-defense warning was tied to an actual military escalation, but oil and risk assets had already moved materially on the broader Saudi/Hormuz supply shock before this headline.",
+    "market_expectations": {
+      "source": "contemporaneous market reports",
+      "expected_value": "Fed tightening risk remains elevated as oil-driven inflation pressure persists",
+      "implied_probability": 0.87,
+      "distribution_notes": "Contemporaneous reports put the probability of a Fed hike this week near 86-87%."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The attack claim is fresh relative to Forex Factory, but the broader Saudi/Hormuz escalation had already lifted WTI/Brent roughly 3% and pushed U.S. equity futures lower before the decision. The forecast therefore targets only residual movement from now.",
+      "observed_reaction": {
+        "WTI": 102.93,
+        "BRENT": 107.54,
+        "SP500_futures_prior_move_pct": -0.5,
+        "NDX_futures_prior_move_pct": -1.1,
+        "gold_spot": 4321.26,
+        "gold_session_move_pct": -0.6
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "CONFIRMED: WTI about $102.93 and Brent about $107.54, both sharply higher on Saudi/Hormuz supply risk.",
+        "equity_futures": "CONFIRMED risk-off: S&P 500 futures about -0.5% and Nasdaq 100 futures about -1.1% in contemporaneous reports.",
+        "US10Y": "CONFIRMED inflation/rates headwind near 4.97%.",
+        "DXY": "Firm/rising dollar adds pressure to precious metals.",
+        "gold": "CONFLICTING: spot gold was down about 0.6% despite geopolitical escalation because higher oil strengthened rate-hike expectations."
+      }
+    },
+    "decision_notes": "This is a substantive follow-up to the earlier Khamis Mushait warning, not an independent first shock. Residual downside in equities remains plausible, but the broad move is already partly priced. For gold, safe-haven and rate/dollar channels conflict, so M2 avoids the control model's simple UP call. No ACTIONABLE model-2 evidence segment exists yet in the leakage-safe learning profile, so learning does not materially alter confidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.39,
+        "timestamp_utc": "2026-09-14T08:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market reports / Investing.com intraday range",
+        "freshness": "intraday"
+      },
+      "US2Y": {
+        "value": 4.56,
+        "timestamp_utc": "2026-09-10T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "latest verified daily Treasury snapshot",
+        "freshness": "stale_daily_reference"
+      },
+      "US10Y": {
+        "value": 4.97,
+        "timestamp_utc": "2026-09-14T08:12:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market reports",
+        "freshness": "intraday"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "latest prior close available",
+        "freshness": "previous_market_day"
+      },
+      "WTI": {
+        "value": 102.93,
+        "timestamp_utc": "2026-09-14T07:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "intraday"
+      },
+      "BRENT": {
+        "value": 107.54,
+        "timestamp_utc": "2026-09-14T07:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness": "intraday"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7656.98,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3573.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:35:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:20:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:20:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29368.44,
+      "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3543.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:35:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:20:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:20:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4355.0,
+      "reference_price_time_utc": "2026-09-14T08:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T08:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:35:30+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:20:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:20:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

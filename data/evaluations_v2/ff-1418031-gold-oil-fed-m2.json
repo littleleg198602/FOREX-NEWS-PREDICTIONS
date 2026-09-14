@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-14T07:14:41+00:00",
   "evaluation_anchor_time_utc": "2026-09-14T07:14:41+00:00",
   "prediction_latency_seconds": 2141.0,
-  "evaluated_at_utc": "2026-09-14T07:16:29.300059+00:00",
+  "evaluated_at_utc": "2026-09-14T08:21:05.355524+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -130,32 +130,26 @@
     {
       "prediction_id": "ff-1418031-gold-oil-fed-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4362.89990234375,
-      "reference_price_time_utc": "2026-09-14T07:07:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-14T07:06:00+00:00",
+      "reference_price": 4363.39990234375,
+      "reference_price_time_utc": "2026-09-14T07:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T07:13:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 7.683,
+      "reference_age_minutes": 0.683,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-14T07:29:41+00:00",
+          "session_local_date": null,
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T08:14:41+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "forecast_source": "horizons"
         },
         "4h": {
           "status": "PENDING",
@@ -163,43 +157,58 @@
           "predicted_direction": "MIXED",
           "predicted_confidence": 5
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T07:29:41+00:00",
+          "actual_price_time_utc": "2026-09-14T07:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T07:29:00+00:00",
+          "market_delay_minutes": 0.32,
+          "price": 4357.2998046875,
+          "change_pct": -0.139801,
+          "actual_direction": "DOWN",
           "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.132931,
+          "post_event_range_pct": 0.178755,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.132931
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T08:14:41+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         }
       }
     },
     {
       "prediction_id": "ff-1418031-gold-oil-fed-m2",
       "instrument": "XAGUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "yahoo_proxy_for": "XAGUSD",
       "yahoo_proxy_type": "COMEX silver futures",
-      "reference_price": 64.13500213623047,
-      "reference_price_time_utc": "2026-09-14T07:07:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-14T07:06:00+00:00",
+      "reference_price": 64.16999816894531,
+      "reference_price_time_utc": "2026-09-14T07:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T07:13:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 7.683,
+      "reference_age_minutes": 0.683,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-14T07:29:41+00:00",
+          "session_local_date": null,
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T08:14:41+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "forecast_source": "horizons"
         },
         "4h": {
           "status": "PENDING",
@@ -207,11 +216,32 @@
           "predicted_direction": "MIXED",
           "predicted_confidence": 4
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T07:29:41+00:00",
+          "actual_price_time_utc": "2026-09-14T07:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T07:29:00+00:00",
+          "market_delay_minutes": 0.32,
+          "price": 64.0250015258789,
+          "change_pct": -0.225957,
+          "actual_direction": "DOWN",
           "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.241544,
+          "post_event_range_pct": 0.296092,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.241544
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T08:14:41+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         }
       }
     }
