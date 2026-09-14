@@ -1,0 +1,157 @@
+{
+  "prediction_id": "ff-1418177-algaya-hormuz-mine-m2",
+  "event_id": "ff-1418177-algaya-hormuz-mine",
+  "event_cluster_id": "hormuz-shipping-conflict-sep2026",
+  "created_at_utc": "2026-09-14T19:50:17Z",
+  "event_time_utc": "2026-09-14T19:00:00Z",
+  "published_at_utc": "2026-09-14T19:00:00Z",
+  "source_time_text": "Sep 14, 9:00pm",
+  "observed_at_utc": "2026-09-14T19:50:17Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "ENERGY", "HORMUZ", "SHIPPING"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1418177-irgc-supertanker-algaya-engulfed-in-flames-after-reportedly",
+  "headline": "IRGC: Supertanker Algaya Engulfed in Flames After Reportedly Striking Naval Mine in Strait of Hormuz",
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 50.3,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Fresh physical shipping-security shock in the Strait of Hormuz after a reported tanker mine strike, challenging the prior de-escalation narrative that oil flow was normalizing",
+    "market_expectations": {
+      "source": "Contemporaneous market coverage",
+      "expected_value": "Oil and equity markets were already pricing severe Hormuz disruption and elevated Fed tightening risk before this headline.",
+      "implied_probability": null,
+      "distribution_notes": "The new information is the reported mine strike and tanker fire, not the pre-existing closure/risk premium."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The broader Hormuz disruption and high-oil regime were already priced before the headline, but a fresh tanker mine strike is a distinct physical escalation that can create residual risk-off and oil upside from decision time.",
+      "observed_reaction": {
+        "headline_age_minutes": 50.3,
+        "oil_context": "WTI remained around 103 and Brent around 109 in contemporaneous delayed quotes, already elevated on the day.",
+        "equity_context": "US risk assets were already under pressure and VIX elevated before the tanker headline."
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "around 99.5 and firm on the day, consistent with defensive USD demand",
+        "US2Y": "around 4.65%, elevated as Fed-tightening expectations remain restrictive",
+        "US10Y": "around 4.96%, still very high despite retreating from the 5% threshold",
+        "VIX": "around 18.1 and materially above the prior close, confirming elevated risk aversion",
+        "WTI": "around 103.0, high and up on the day",
+        "BRENT": "around 109.2, high and up strongly on the day",
+        "local_confirmation": "The story concerns a physical tanker incident in Hormuz, directly reinforcing the oil/shipping risk channel."
+      }
+    },
+    "decision_notes": "Forecast targets residual movement from 19:50Z. The prior Hormuz risk premium is treated as already present; only the incremental tanker-mine shock is forecast."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.53, "timestamp_utc": "2026-09-14T17:33:00Z", "direction": "FIRM", "regime": "FIRM", "source": "Investing.com same-day technical snapshot", "freshness_minutes": 137},
+      "US2Y": {"value": 4.647, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "UP", "regime": "ELEVATED", "source": "contemporaneous market coverage from prior verified snapshot", "freshness_minutes": 62},
+      "US10Y": {"value": 4.96, "timestamp_utc": "2026-09-14T18:48:12Z", "direction": "DOWN_FROM_PEAK", "regime": "VERY_HIGH", "source": "Reuters/MarketWatch contemporaneous coverage from prior verified snapshot", "freshness_minutes": 62},
+      "VIX": {"value": 18.13, "timestamp_utc": "2026-09-14T19:49:00Z", "direction": "UP", "regime": "ELEVATED", "source": "Investing.com same-day real-time derived snapshot", "freshness_minutes": 2},
+      "WTI": {"value": 103.08, "timestamp_utc": "2026-09-14T19:49:00Z", "direction": "UP", "regime": "HIGH", "source": "OilRate delayed same-day quote", "freshness_minutes": 2},
+      "BRENT": {"value": 109.21, "timestamp_utc": "2026-09-14T19:49:00Z", "direction": "UP", "regime": "HIGH", "source": "OilRate delayed same-day quote", "freshness_minutes": 2}
+    },
+    "regimes": {
+      "rates": "VERY_HIGH",
+      "usd": "FIRM",
+      "volatility": "ELEVATED_RISK_OFF",
+      "oil": "HIGH_AND_RISING",
+      "risk": "RISK_OFF"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 6, "rationale": "A fresh physical Hormuz shipping shock reinforces the oil-inflation and risk-off channels while VIX is already elevated."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The next session depends on confirmation of lasting shipping disruption versus rapid containment or de-escalation."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 6, "rationale": "The headline is a fresh escalation with direct implications for shipping safety and oil supply risk."},
+        "1h": {"direction": "DOWN", "confidence": 6, "rationale": "Elevated VIX and oil provide cross-asset confirmation for a residual risk-off move."},
+        "4h": {"direction": "DOWN", "confidence": 5, "rationale": "If the incident remains credible and Hormuz risk persists, inflation and supply concerns can continue to weigh on broad equities."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "A large pre-existing Hormuz risk premium limits conviction beyond the immediate reaction window."
+        }
+      },
+      "mechanism": "A tanker mine incident raises the probability of shipping disruption, supports crude prices and increases inflation/risk premia for equities.",
+      "invalidation": "Official disconfirmation, rapid containment with no broader shipping interruption, and a sustained reversal lower in crude and VIX.",
+      "counter_case": "Markets may treat the report as already embedded in the broader Hormuz closure narrative, producing little incremental downside or a relief reversal if no follow-up disruption occurs.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "risk_off_bias",
+        "trend_1h": "soft",
+        "session_location": "US cash session late-day with risk assets already below stronger prior levels",
+        "extension_state": "unknown",
+        "market_open": true,
+        "source": "contemporaneous same-day market coverage",
+        "observed_at_utc": "2026-09-14T19:50:17Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 6, "rationale": "The oil shock compounds already-high discount rates, making long-duration tech especially sensitive to renewed risk-off."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The next-session outcome depends on whether oil and yields sustain the escalation premium or fade after containment."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 6, "rationale": "Fresh geopolitical escalation adds to an already fragile tech tape."},
+        "1h": {"direction": "DOWN", "confidence": 6, "rationale": "High oil, elevated VIX and very high Treasury yields create aligned short-horizon pressure."},
+        "4h": {"direction": "DOWN", "confidence": 5, "rationale": "Persistent oil-risk premium would reinforce inflation and discount-rate pressure on growth equities."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The market could mean-revert if the tanker event proves isolated and crude does not extend higher."
+        }
+      },
+      "mechanism": "NDX is exposed to both the broad risk-off shock and the valuation effect of oil-driven inflation keeping rates high.",
+      "invalidation": "Rapid de-escalation plus falling oil, VIX and Treasury yields.",
+      "counter_case": "If the incident is isolated and already discounted, dip-buying into late-session weakness could overpower the headline effect.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "risk_off_bias",
+        "trend_1h": "down_to_soft",
+        "session_location": "US cash session late-day after a weak technology session",
+        "extension_state": "extended",
+        "market_open": true,
+        "source": "contemporaneous same-day market coverage",
+        "observed_at_utc": "2026-09-14T19:50:17Z"
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {"direction": "VOLATILITY", "confidence": 6, "rationale": "Fresh safe-haven demand conflicts with a firm dollar and very high Treasury yields, making two-way volatility more likely than a clean directional move."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The safe-haven and rates channels remain in direct conflict beyond the immediate headline window."},
+      "horizons": {
+        "15m": {"direction": "VOLATILITY", "confidence": 6, "rationale": "A physical Hormuz escalation can trigger safe-haven buying, but the strong USD/high-yield backdrop caps directional conviction."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "Geopolitical support and rates pressure are both material, producing conflicting cross-asset signals."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Gold's response depends on whether safe-haven demand can overcome the dollar and yield headwinds."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Continuation requires either worsening geopolitics or a clear rates/dollar reversal."
+        }
+      },
+      "mechanism": "Gold receives safe-haven demand from geopolitical escalation but faces opposing pressure from elevated real/nominal yields and a firm dollar.",
+      "invalidation": "A decisive safe-haven breakout with falling yields would turn the call bullish; rapid de-escalation with continued yield strength would turn it bearish.",
+      "counter_case": "If the tanker event materially broadens the conflict, safe-haven demand could overpower the rates channel and drive a sustained gold rally.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "unknown",
+        "trend_1h": "weak_on_day",
+        "session_location": "below earlier session levels after prior rates-driven weakness",
+        "extension_state": "unknown",
+        "market_open": true,
+        "source": "contemporaneous same-day market coverage",
+        "observed_at_utc": "2026-09-14T19:50:17Z"
+      }
+    }
+  ]
+}
