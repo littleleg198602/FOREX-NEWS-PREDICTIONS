@@ -1,0 +1,354 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418064-iran-hormuz-vessel-restrictions-m2",
+  "event_id": "ff-1418064-iran-hormuz-vessel-restrictions",
+  "event_time_utc": "2026-09-14T09:14:42+00:00",
+  "prediction_time_utc": "2026-09-14T09:41:42+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T09:41:42+00:00",
+  "prediction_latency_seconds": 1620.0,
+  "evaluated_at_utc": "2026-09-14T09:47:17.944100+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "HORMUZ",
+    "OIL_SUPPLY",
+    "SHIPPING_RESTRICTIONS"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 27.0,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Incremental tightening of Hormuz passage risk within an already heavily priced geopolitical/oil shock.",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch via Reuters",
+      "expected_value": "Fed 25bp hike this week",
+      "implied_probability": 0.89,
+      "distribution_notes": "High oil and inflation keep tightening expectations elevated."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Oil and equity risk-off moves were already substantial before detection; this headline adds enforcement detail rather than opening a new conflict.",
+      "observed_reaction": {
+        "WTI_pct_session": 2.9,
+        "BRENT_pct_session": 2.75,
+        "SP500_futures_pct": -0.78,
+        "VIX_pct": 14.2
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "99.26, +0.42%, firm",
+        "US2Y": "4.632%, still high",
+        "US10Y": "4.963%, near 5%",
+        "VIX": "18.09, +14.2%",
+        "WTI": "102.95, +2.9%",
+        "BRENT": "107.49, +2.75%",
+        "gold": "4325.97, -1.88%, safe-haven bid conflicted by dollar/yields",
+        "SP500_futures": "7596.9, -0.78%"
+      }
+    },
+    "decision_notes": "Residual-move forecast from detection time; headline is a continuation of the Hormuz cluster, not an independent fresh war shock."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.26,
+        "timestamp_utc": "2026-09-14T09:41:42Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com",
+        "freshness_minutes": 1
+      },
+      "US2Y": {
+        "value": 4.632,
+        "timestamp_utc": "2026-09-14T09:19:29Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Investing.com",
+        "freshness_minutes": 22
+      },
+      "US10Y": {
+        "value": 4.963,
+        "timestamp_utc": "2026-09-14T09:41:42Z",
+        "direction": "DOWN_SLIGHTLY",
+        "regime": "FALLING",
+        "source": "Investing.com",
+        "freshness_minutes": 1
+      },
+      "VIX": {
+        "value": 18.09,
+        "timestamp_utc": "2026-09-14T09:41:42Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "Investing.com",
+        "freshness_minutes": 1
+      },
+      "WTI": {
+        "value": 102.95,
+        "timestamp_utc": "2026-09-14T09:41:42Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com",
+        "freshness_minutes": 1
+      },
+      "BRENT": {
+        "value": 107.49,
+        "timestamp_utc": "2026-09-14T09:41:42Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com",
+        "freshness_minutes": 1
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "ELEVATED",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418064-iran-hormuz-vessel-restrictions-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7656.98,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3654.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:56:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:41:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:41:42+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418064-iran-hormuz-vessel-restrictions-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29368.44,
+      "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3624.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:56:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:41:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:41:42+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418064-iran-hormuz-vessel-restrictions-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25398.490234375,
+      "reference_price_time_utc": "2026-09-14T09:33:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:32:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:56:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:41:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:41:42+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418064-iran-hormuz-vessel-restrictions-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6257.1201171875,
+      "reference_price_time_utc": "2026-09-14T09:33:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:32:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:56:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:41:42+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:41:42+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418064-iran-hormuz-vessel-restrictions-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4327.0,
+      "reference_price_time_utc": "2026-09-14T09:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.7,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T09:56:42+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:41:42+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T13:41:42+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

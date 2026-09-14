@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-14T09:14:20+00:00",
   "evaluation_anchor_time_utc": "2026-09-14T09:14:20+00:00",
   "prediction_latency_seconds": 2852.0,
-  "evaluated_at_utc": "2026-09-14T09:18:00.528204+00:00",
+  "evaluated_at_utc": "2026-09-14T09:47:13.056658+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -130,33 +130,21 @@
     {
       "prediction_id": "ff-1418052-ecb-kazimir-upside-inflation-m2",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25420.58984375,
-      "reference_price_time_utc": "2026-09-14T09:03:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-14T09:02:00+00:00",
+      "reference_price": 25376.509765625,
+      "reference_price_time_utc": "2026-09-14T09:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:13:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.333,
+      "reference_age_minutes": 0.333,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T09:29:20+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T10:14:20+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-14T13:14:20+00:00",
@@ -168,39 +156,54 @@
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:14:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T09:29:20+00:00",
+          "actual_price_time_utc": "2026-09-14T09:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T09:29:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 25392.55078125,
+          "change_pct": 0.063212,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.215789,
+          "post_event_range_pct": 0.212603,
+          "mfe_pct": 0.14742,
+          "mae_pct": -0.065182,
+          "directional_threshold_pct": 0.021579,
+          "actual_direction_thresholded": "UP"
         }
       }
     },
     {
       "prediction_id": "ff-1418052-ecb-kazimir-upside-inflation-m2",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6264.97021484375,
-      "reference_price_time_utc": "2026-09-14T09:03:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-14T09:02:00+00:00",
+      "reference_price": 6254.1201171875,
+      "reference_price_time_utc": "2026-09-14T09:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:13:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.333,
+      "reference_age_minutes": 0.333,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T09:29:20+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T10:14:20+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-14T13:14:20+00:00",
@@ -212,39 +215,54 @@
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:14:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T09:29:20+00:00",
+          "actual_price_time_utc": "2026-09-14T09:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T09:29:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 6256.490234375,
+          "change_pct": 0.037897,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.214741,
+          "post_event_range_pct": 0.175252,
+          "mfe_pct": 0.137355,
+          "mae_pct": -0.037897,
+          "directional_threshold_pct": 0.021474,
+          "actual_direction_thresholded": "UP"
         }
       }
     },
     {
       "prediction_id": "ff-1418052-ecb-kazimir-upside-inflation-m2",
       "instrument": "FCHI40",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FCHI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 8121.89990234375,
-      "reference_price_time_utc": "2026-09-14T09:03:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-14T09:02:00+00:00",
+      "reference_price": 8111.60986328125,
+      "reference_price_time_utc": "2026-09-14T09:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T09:13:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.333,
+      "reference_age_minutes": 0.333,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T09:29:20+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 4
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-14T10:14:20+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 4
-        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-14T13:14:20+00:00",
@@ -256,6 +274,33 @@
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T10:14:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T09:29:20+00:00",
+          "actual_price_time_utc": "2026-09-14T09:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T09:29:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 8115.56005859375,
+          "change_pct": 0.048698,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.173953,
+          "post_event_range_pct": 0.151265,
+          "mfe_pct": 0.102567,
+          "mae_pct": -0.048698,
+          "directional_threshold_pct": 0.017395,
+          "actual_direction_thresholded": "UP"
         }
       }
     }
