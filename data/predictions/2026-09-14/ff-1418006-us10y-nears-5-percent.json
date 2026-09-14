@@ -1,0 +1,128 @@
+{
+  "prediction_id": "ff-1418006-us10y-nears-5-percent",
+  "event_id": "ff-1418006",
+  "created_at_utc": "2026-09-14T04:19:11Z",
+  "event_time_utc": "2026-09-14T03:39:11Z",
+  "published_at_utc": "2026-09-14T03:39:11Z",
+  "source_time_text": "40 min ago",
+  "observed_at_utc": "2026-09-14T04:19:11Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "us_rates",
+    "treasuries",
+    "inflation",
+    "fed",
+    "equities"
+  ],
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1418006-the-10-year-treasury-is-closing-in-on-5",
+    "headline": "The 10-year Treasury is closing in on 5%. How it gets there matters more",
+    "impact": "Latest Story"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.125,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "FIRM",
+        "source": "Reuters Monday dollar report plus latest available DXY quote snapshot",
+        "freshness": "current_session_direction_with_latest_available_quote"
+      },
+      "US2Y": {
+        "value": 4.5725,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "HIGH_HAWKISH",
+        "source": "MarketWatch Sep 11 close/latest quoted level",
+        "freshness": "last_cash_session_quote_before_prediction"
+      },
+      "US10Y": {
+        "value": 4.97,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "VERY_HIGH_NEAR_5_PERCENT",
+        "source": "Forex Factory/CNBC story and Sunday-Monday market reporting",
+        "freshness": "current_pre_prediction_market_quote"
+      },
+      "VIX": {
+        "value": 15.85,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW_TO_MODERATE",
+        "source": "latest U.S. cash-session VIX close available before prediction",
+        "freshness": "last_cash_session_close"
+      },
+      "WTI": {
+        "value": 102.48,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "SUPPLY_SHOCK_ELEVATED",
+        "source": "Reuters Monday Asia/global markets report",
+        "freshness": "current_session_quote_reported_before_prediction"
+      },
+      "BRENT": {
+        "value": 107.36,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "SUPPLY_SHOCK_ELEVATED",
+        "source": "Reuters Monday Asia/global markets report",
+        "freshness": "current_session_quote_reported_before_prediction"
+      }
+    },
+    "regimes": {
+      "usd": "firm",
+      "rates": "very_high_hawkish_near_5pct_10y",
+      "volatility": "cash_vix_low_but_stale_vs_overnight_risk",
+      "energy": "supply_shock_elevated",
+      "geopolitics": "escalation_risk",
+      "equities": "overnight_risk_off"
+    }
+  },
+  "learning_profile": {
+    "path": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-14T01:07:47.138363+00:00",
+    "material_confidence_adjustment": true,
+    "note": "Current macro facts support a bearish rates-sensitive equity signal, but ACTIONABLE v2 directional confidence calibration for model 1.1.1 argues against stronger confidence, so confidence is capped rather than the direction being changed."
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "A 10-year Treasury yield near 5%, combined with renewed oil-driven inflation pressure and rising Fed hike odds, raises the discount rate applied to long-duration growth equities.",
+      "invalidation": "US10Y falls materially away from 5% and oil/rate-hike expectations ease while Nasdaq futures recover."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "DOWN", "confidence": 5},
+      "next_session": {"direction": "DOWN", "confidence": 4},
+      "mechanism": "Near-5% long yields tighten financial conditions and pressure equity valuation multiples while elevated crude keeps inflation risk high.",
+      "invalidation": "A clear retreat in Treasury yields and crude prices restores a risk-on backdrop."
+    },
+    {
+      "instrument": "WS30",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Higher long-term borrowing costs and inflation pressure are negative for cyclicals, though the Dow is less duration-sensitive than Nasdaq.",
+      "invalidation": "US10Y retreats and economically sensitive sectors strengthen despite the rates backdrop."
+    },
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "DOWN", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Rising real/nominal yields and higher Fed hike expectations are a direct headwind for non-yielding gold, partly offset by geopolitical demand.",
+      "invalidation": "Safe-haven demand overwhelms the rates channel or Treasury yields reverse lower sharply."
+    }
+  ]
+}
