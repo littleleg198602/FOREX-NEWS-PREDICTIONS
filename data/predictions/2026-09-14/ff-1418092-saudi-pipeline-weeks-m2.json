@@ -1,0 +1,167 @@
+{
+  "prediction_id": "ff-1418092-saudi-pipeline-weeks-m2",
+  "event_id": "ff-1418092-saudi-pipeline-weeks",
+  "event_cluster_id": "saudi-east-west-pipeline-2026-09",
+  "created_at_utc": "2026-09-14T13:57:05Z",
+  "event_time_utc": "2026-09-14T12:43:00Z",
+  "published_at_utc": "2026-09-14T12:43:00Z",
+  "source_time_text": "Added at 1:43pm",
+  "observed_at_utc": "2026-09-14T13:56:13Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["OIL", "GEOPOLITICS", "SAUDI_ARABIA", "SUPPLY_SHOCK", "INCREMENTAL_UPDATE"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1418092-saudi-oil-pipeline-hit-in-strikes-will-be",
+  "headline": "Saudi oil pipeline hit in strikes will be mostly out of service for several weeks for repair",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 73.2,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "The newly reported 3-5 week repair timeline turns a known Saudi pipeline shutdown into a more persistent physical oil-supply constraint, reinforcing inflation and risk-off pressure.",
+    "market_expectations": {
+      "source": "contemporaneous Reuters/AP/market reporting",
+      "expected_value": "Saudi East-West pipeline largely offline for 3-5 weeks with possible partial operation during repairs",
+      "implied_probability": null,
+      "distribution_notes": "The outage itself was already known; the new information is the multi-week duration and limited partial-operation possibility."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The pipeline shutdown and broader Middle East supply risk were already in prices before the AP repair-duration update. Oil had already surged above $108 Brent and equities were risk-off; the forecast therefore targets only residual movement from the decision time.",
+      "observed_reaction": {
+        "Brent": "around $109.14 in contemporaneous WSJ reporting, +4.3%",
+        "WTI": "around $104.46 in contemporaneous WSJ reporting, +4.4%",
+        "US10Y": "around 4.95-4.98% after reaching 4.9915%",
+        "Nasdaq": "about -1.2% in contemporaneous AP reporting",
+        "gold": "about -1.8% to $4,271.59 in Reuters reporting despite geopolitical risk"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "around 99.45-99.59, firm/up on the day",
+        "US2Y": "around 4.63% in latest available contemporaneous context, elevated",
+        "US10Y": "around 4.95-4.98%, high-yield regime",
+        "VIX": "around 18.1 in latest available intraday context, elevated/risk-off",
+        "WTI": "around $104.46, sharply higher",
+        "BRENT": "around $109.14, sharply higher",
+        "equities": "Nasdaq and broader risk assets lower",
+        "gold": "falling despite geopolitical risk, showing the rates/USD channel is currently offsetting safe-haven demand"
+      }
+    },
+    "decision_notes": "The update is materially new because it adds a 3-5 week repair horizon, but it arrives after a large oil/rates/equity reaction. M2 therefore treats it as a persistent supply-shock confirmation rather than a fresh unpriced shock. Leakage-safe v2 learning was reviewed; no candidate-specific ACTIONABLE model-2 evidence segment was used to alter confidence materially."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.59, "timestamp_utc": "2026-09-14T11:30:00Z", "direction": "UP", "regime": "STRONG", "source": "Reuters/recent contemporaneous market reporting", "freshness_minutes": 147},
+      "US2Y": {"value": 4.63, "timestamp_utc": "2026-09-14T10:30:00Z", "direction": "UP", "regime": "HAWKISH", "source": "latest available contemporaneous market context", "freshness_minutes": 207},
+      "US10Y": {"value": 4.95, "timestamp_utc": "2026-09-14T13:30:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "Reuters/AP contemporaneous reporting", "freshness_minutes": 27},
+      "VIX": {"value": 18.13, "timestamp_utc": "2026-09-14T10:30:00Z", "direction": "UP", "regime": "RISK_OFF", "source": "latest available contemporaneous market context", "freshness_minutes": 207},
+      "WTI": {"value": 104.46, "timestamp_utc": "2026-09-14T13:45:00Z", "direction": "UP", "regime": "ENERGY_SHOCK", "source": "Wall Street Journal contemporaneous reporting", "freshness_minutes": 12},
+      "BRENT": {"value": 109.14, "timestamp_utc": "2026-09-14T13:45:00Z", "direction": "UP", "regime": "ENERGY_SHOCK", "source": "Wall Street Journal contemporaneous reporting", "freshness_minutes": 12}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HAWKISH_HIGH_YIELD",
+      "volatility": "ELEVATED",
+      "oil": "ENERGY_SHOCK",
+      "risk": "RISK_OFF"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "The multi-week repair timeline reinforces an already-active oil/inflation shock, but much of the first reaction is already priced."},
+      "next_session": {"direction": "DOWN", "confidence": 4, "rationale": "Persistent supply constraints remain a headwind if oil stays above the pre-update range, though new policy/geopolitical headlines can dominate."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "Oil and yields remain elevated and cross-asset risk-off confirmation is intact."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "A 3-5 week repair horizon supports continued inflation-risk repricing, but the edge is moderated by partial absorption."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "The initial selloff is already extended and intraday dip-buying or oil stabilization can offset the headline."},
+        "next_session": {"direction": "DOWN", "confidence": 4, "rationale": "The persistent physical supply constraint remains a macro headwind unless repair progress or de-escalation improves."
+        }
+      },
+      "mechanism": "A prolonged Saudi export-bypass outage sustains oil inflation, hawkish rate pricing and risk-off pressure on broad equities.",
+      "invalidation": "Brent/WTI reverse sharply lower or Saudi Arabia restores most pipeline capacity materially sooner than 3-5 weeks.",
+      "counter_case": "The outage duration may already be largely priced after the oil spike, allowing equities to rebound if yields retreat or partial pipeline operations resume quickly.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN_TO_MIXED", "trend_1h": "DOWN", "session_location": "US_CASH_SESSION_WEAK", "extension_state": "EXTENDED", "market_open": true, "source": "AP/Reuters contemporaneous market reporting", "observed_at_utc": "2026-09-14T13:56:13Z"}
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "The oil-driven inflation shock keeps Treasury yields high and adds pressure to long-duration technology valuations."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Tech already sold off materially, so fresh AI/Fed headlines may dominate by the next session."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "High oil and yields remain directly adverse to duration-sensitive tech while risk sentiment is weak."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "Persistent supply-shock confirmation supports continued pressure, though the move is partly priced."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Nasdaq is already down materially, increasing rebound risk even while macro conditions remain bearish."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fresh Fed and AI-sector information is likely to dominate over this incremental pipeline update."
+        }
+      },
+      "mechanism": "Oil-driven inflation and high yields raise discount rates and reduce risk appetite for technology stocks.",
+      "invalidation": "Oil and Treasury yields fall materially or strong tech-specific buying reverses the risk-off tape.",
+      "counter_case": "An extended intraday selloff can trigger aggressive dip-buying if yields stop rising, especially because the pipeline outage itself was already known.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN", "trend_1h": "DOWN", "session_location": "US_CASH_SESSION_WEAK", "extension_state": "EXTENDED", "market_open": true, "source": "AP contemporaneous market reporting", "observed_at_utc": "2026-09-14T13:56:13Z"}
+    },
+    {
+      "instrument": "GDAXI",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "Europe remains vulnerable to persistent energy-price inflation and higher-rate expectations."},
+      "next_session": {"direction": "DOWN", "confidence": 4, "rationale": "A multi-week supply disruption keeps the European energy/inflation backdrop unfavorable if oil remains elevated."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "The persistent oil shock remains a direct macro headwind for German equities."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "The repair timeline confirms that the supply constraint is not a one-day disturbance."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "European markets have already absorbed much of the oil/rates shock and may stabilize intraday."},
+        "next_session": {"direction": "DOWN", "confidence": 4, "rationale": "Persistent high energy costs remain a negative carry into the next session."
+        }
+      },
+      "mechanism": "High oil raises European input costs and inflation expectations while supporting tighter monetary-policy pricing.",
+      "invalidation": "Oil retraces sharply or partial Saudi pipeline operations materially reduce the expected supply loss.",
+      "counter_case": "Energy shares and a stabilization in yields could cushion the DAX if the outage duration is already fully discounted.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "WEAK", "trend_1h": "DOWN", "session_location": "EUROPE_SESSION_WEAK", "extension_state": "EXTENDED", "market_open": true, "source": "contemporaneous European market reporting", "observed_at_utc": "2026-09-14T13:56:13Z"}
+    },
+    {
+      "instrument": "STOXX50",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "The new multi-week repair estimate reinforces the European energy-inflation headwind."},
+      "next_session": {"direction": "DOWN", "confidence": 4, "rationale": "Persistent oil stress is likely to remain a drag unless supply-route risk improves."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "Cross-asset oil/rates confirmation remains bearish."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "The duration update supports continued risk-off pressure after the known shutdown."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Partial absorption and sector rotation can reduce directional follow-through."},
+        "next_session": {"direction": "DOWN", "confidence": 4, "rationale": "A multi-week energy supply constraint remains a macro negative into the next session."
+        }
+      },
+      "mechanism": "Persistent elevated oil prices increase inflation and margin pressure across euro-area equities.",
+      "invalidation": "Oil falls sharply or Saudi export capacity returns materially faster than reported.",
+      "counter_case": "The market may have already discounted much of the outage, while energy-sector gains can offset weakness elsewhere.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "WEAK", "trend_1h": "DOWN", "session_location": "EUROPE_SESSION_WEAK", "extension_state": "EXTENDED", "market_open": true, "source": "contemporaneous European market reporting", "observed_at_utc": "2026-09-14T13:56:13Z"}
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "Geopolitical support conflicts with a strong USD/high-yield regime that has already pushed gold sharply lower."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Safe-haven demand and hawkish rate pressure remain in direct conflict."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "The supply-risk headline is supportive, but current price action shows rates/USD are dominating."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "Gold is already down about 1.8%, so chasing either direction after this delayed update has weak residual edge."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Safe-haven demand could re-emerge if geopolitical risk escalates, while high yields remain bearish."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The next move depends more on Fed/yield dynamics and fresh escalation than on this repair-duration update."
+        }
+      },
+      "mechanism": "Geopolitical safe-haven demand is offset by rising oil-driven inflation expectations, stronger Fed-hike pricing and elevated real-rate proxies.",
+      "invalidation": "A decisive break in either the rates/USD channel or geopolitical escalation would end the mixed regime.",
+      "counter_case": "A new attack on Saudi infrastructure or shipping could rapidly revive safe-haven buying and push gold higher despite yields.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN_TO_MIXED", "trend_1h": "DOWN", "session_location": "NEAR_SESSION_LOW_AFTER_SHARP_SELLING", "extension_state": "EXTENDED", "market_open": true, "source": "Reuters contemporaneous gold reporting", "observed_at_utc": "2026-09-14T13:56:13Z"}
+    }
+  ]
+}
