@@ -1,0 +1,310 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418073-us-dollar-fed-expectations-m2",
+  "event_id": "ff-1418073-us-dollar-fed-expectations",
+  "event_time_utc": "2026-09-14T11:04:59+00:00",
+  "prediction_time_utc": "2026-09-14T11:51:20+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T11:51:20+00:00",
+  "prediction_latency_seconds": 2781.0,
+  "evaluated_at_utc": "2026-09-14T11:50:35.198677+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "FED",
+    "USD",
+    "OIL",
+    "RATES",
+    "MARKET_RECAP"
+  ],
+  "evidence": {
+    "article_role": "MARKET_RECAP",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 46.0,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "Fed hike expectations reinforced by high oil prices, supporting the USD and pressuring duration-sensitive risk assets and precious metals.",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch contemporaneous report",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.9,
+      "distribution_notes": "Reuters reported roughly 90% probability of a rate hike, up from around 60% one week earlier."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The article itself describes an already-observed broad USD rally and existing pressure from oil/rates; forecast target is residual movement from decision time, not the initial reaction.",
+      "observed_reaction": {
+        "DXY": "+~0.5% to 99.59, two-week high",
+        "USDJPY": "+~0.7% to 154.61",
+        "Brent": "~$108/bbl, +~3%",
+        "European_equities": "STOXX 600 about -0.3%; technology sector about -2%",
+        "US_futures": "lower in contemporaneous Reuters reporting"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "99.59, strong/up",
+        "US10Y": "about 4.95% after touching 4.9915%, elevated",
+        "oil": "Brent around 107.61-108 and WTI around 102.53, elevated/up",
+        "Fed_pricing": "~90% probability of a hike",
+        "equities": "European tech weak and US futures lower",
+        "gold": "already under pressure earlier in the session"
+      }
+    },
+    "decision_notes": "Because this is a delayed market recap with low novelty, M2 discounts the headline and forecasts only residual move. No candidate-specific ACTIONABLE learning segment was used to override current facts; confidence remains moderate/low."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.59,
+        "timestamp_utc": "2026-09-14T11:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 21
+      },
+      "US2Y": {
+        "value": 4.63,
+        "timestamp_utc": "2026-09-14T10:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "recent contemporaneous market context",
+        "freshness_minutes": 81
+      },
+      "US10Y": {
+        "value": 4.95,
+        "timestamp_utc": "2026-09-14T11:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 21
+      },
+      "VIX": {
+        "value": 18.13,
+        "timestamp_utc": "2026-09-14T10:30:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "recent contemporaneous market context",
+        "freshness_minutes": 81
+      },
+      "WTI": {
+        "value": 102.53,
+        "timestamp_utc": "2026-09-14T11:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 21
+      },
+      "BRENT": {
+        "value": 107.61,
+        "timestamp_utc": "2026-09-14T11:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 21
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "ELEVATED",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418073-us-dollar-fed-expectations-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4333.60009765625,
+      "reference_price_time_utc": "2026-09-14T11:41:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T11:40:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:06:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:51:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T15:51:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418073-us-dollar-fed-expectations-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 63.45000076293945,
+      "reference_price_time_utc": "2026-09-14T11:41:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T11:40:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:06:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:51:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T15:51:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418073-us-dollar-fed-expectations-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29368.44,
+      "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3754.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:06:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:51:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T15:51:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418073-us-dollar-fed-expectations-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7656.98,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3784.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:06:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T12:51:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T15:51:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
