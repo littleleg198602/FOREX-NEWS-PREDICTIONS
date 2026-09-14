@@ -1,0 +1,239 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418006-us10y-nears-5-percent",
+  "event_id": "ff-1418006",
+  "event_time_utc": "2026-09-14T03:39:11+00:00",
+  "prediction_time_utc": "2026-09-14T04:19:11+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T04:19:11+00:00",
+  "prediction_latency_seconds": 2400.0,
+  "evaluated_at_utc": "2026-09-14T04:22:35.114498+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "us_rates",
+    "treasuries",
+    "inflation",
+    "fed",
+    "equities"
+  ],
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.125,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Monday dollar report plus latest available DXY quote snapshot",
+        "freshness": "current_session_direction_with_latest_available_quote"
+      },
+      "US2Y": {
+        "value": 4.5725,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "MarketWatch Sep 11 close/latest quoted level",
+        "freshness": "last_cash_session_quote_before_prediction"
+      },
+      "US10Y": {
+        "value": 4.97,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Forex Factory/CNBC story and Sunday-Monday market reporting",
+        "freshness": "current_pre_prediction_market_quote"
+      },
+      "VIX": {
+        "value": 15.85,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "latest U.S. cash-session VIX close available before prediction",
+        "freshness": "last_cash_session_close"
+      },
+      "WTI": {
+        "value": 102.48,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Monday Asia/global markets report",
+        "freshness": "current_session_quote_reported_before_prediction"
+      },
+      "BRENT": {
+        "value": 107.36,
+        "timestamp_utc": "2026-09-14T04:19:11Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Monday Asia/global markets report",
+        "freshness": "current_session_quote_reported_before_prediction"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418006-us10y-nears-5-percent",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29368.44,
+      "reference_price_time_utc": "2026-09-11T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3302.183,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T04:34:11+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T05:19:11+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:19:11+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418006-us10y-nears-5-percent",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7656.98,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3332.183,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T04:34:11+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T05:19:11+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:19:11+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418006-us10y-nears-5-percent",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52573.29,
+      "reference_price_time_utc": "2026-09-11T20:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-11T20:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3332.183,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T04:34:11+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T05:19:11+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:19:11+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418006-us10y-nears-5-percent",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4370.10009765625,
+      "reference_price_time_utc": "2026-09-14T04:13:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T04:12:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.183,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T04:34:11+00:00"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T05:19:11+00:00"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-14T08:19:11+00:00"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED"
+        }
+      }
+    }
+  ]
+}
