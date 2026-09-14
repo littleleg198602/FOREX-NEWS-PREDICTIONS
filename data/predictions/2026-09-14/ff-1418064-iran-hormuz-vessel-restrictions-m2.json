@@ -1,0 +1,99 @@
+{
+  "event_id": "ff-1418064-iran-hormuz-vessel-restrictions",
+  "event_cluster_id": "hormuz-shipping-restrictions-2026-09",
+  "created_at_utc": "2026-09-14T09:41:42Z",
+  "event_time_utc": "2026-09-14T09:14:42Z",
+  "published_at_utc": "2026-09-14T09:14:42Z",
+  "source_time_text": "27 min ago",
+  "observed_at_utc": "2026-09-14T09:41:42Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GEOPOLITICS", "HORMUZ", "OIL_SUPPLY", "SHIPPING_RESTRICTIONS"],
+  "source_url": "https://www.forexfactory.com/news/1418064-irans-persian-gulf-strait-authority-vessels-will-face",
+  "headline": "Iran's Persian Gulf Strait Authority: Vessels will face restrictions on future passage, including fines, detention, or confiscation",
+  "prediction_id": "ff-1418064-iran-hormuz-vessel-restrictions-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value":99.26,"timestamp_utc":"2026-09-14T09:41:42Z","direction":"UP","regime":"FIRM","source":"Investing.com","freshness_minutes":1},
+      "US2Y": {"value":4.632,"timestamp_utc":"2026-09-14T09:19:29Z","direction":"DOWN","regime":"HIGH","source":"Investing.com","freshness_minutes":22},
+      "US10Y": {"value":4.963,"timestamp_utc":"2026-09-14T09:41:42Z","direction":"DOWN_SLIGHTLY","regime":"VERY_HIGH","source":"Investing.com","freshness_minutes":1},
+      "VIX": {"value":18.09,"timestamp_utc":"2026-09-14T09:41:42Z","direction":"UP","regime":"ELEVATED","source":"Investing.com","freshness_minutes":1},
+      "WTI": {"value":102.95,"timestamp_utc":"2026-09-14T09:41:42Z","direction":"UP","regime":"GEOPOLITICAL_RISK_PREMIUM","source":"Investing.com","freshness_minutes":1},
+      "BRENT": {"value":107.49,"timestamp_utc":"2026-09-14T09:41:42Z","direction":"UP","regime":"GEOPOLITICAL_RISK_PREMIUM","source":"Investing.com","freshness_minutes":1}
+    },
+    "regimes": {"risk":"RISK_OFF","rates":"HIGH_YIELDS","energy":"SUPPLY_RISK","usd":"FIRM","volatility":"ELEVATED"}
+  },
+  "evidence": {
+    "article_role":"INCREMENTAL_UPDATE",
+    "source_quality":"SECONDARY",
+    "source_verified":true,
+    "news_age_minutes":27.0,
+    "novelty":"MEDIUM",
+    "attention":"HIGH",
+    "dominant_driver":"Incremental tightening of Hormuz passage risk within an already heavily priced geopolitical/oil shock.",
+    "market_expectations":{"source":"Reuters/CME FedWatch via Reuters","expected_value":"Fed 25bp hike this week","implied_probability":0.89,"distribution_notes":"High oil and inflation keep tightening expectations elevated."},
+    "surprise":null,
+    "absorption":{"state":"PARTIALLY_PRICED","reason":"Oil and equity risk-off moves were already substantial before detection; this headline adds enforcement detail rather than opening a new conflict.","observed_reaction":{"WTI_pct_session":2.90,"BRENT_pct_session":2.75,"SP500_futures_pct":-0.78,"VIX_pct":14.20}},
+    "cross_asset_confirmation":{"verdict":"CONFIRMED","observations":{"DXY":"99.26, +0.42%, firm","US2Y":"4.632%, still high","US10Y":"4.963%, near 5%","VIX":"18.09, +14.2%","WTI":"102.95, +2.9%","BRENT":"107.49, +2.75%","gold":"4325.97, -1.88%, safe-haven bid conflicted by dollar/yields","SP500_futures":"7596.9, -0.78%"}},
+    "decision_notes":"Residual-move forecast from detection time; headline is a continuation of the Hormuz cluster, not an independent fresh war shock."
+  },
+  "predictions": [
+    {
+      "instrument":"SP500","relevance":"DIRECT",
+      "immediate":{"direction":"DOWN","confidence":5,"rationale":"Risk-off/oil shock confirmed but partly priced."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"Further direction depends on actual enforcement and oil follow-through."},
+      "horizons":{"15m":{"direction":"DOWN","confidence":5,"rationale":"Incremental shipping restriction headline can extend current risk-off move."},"1h":{"direction":"DOWN","confidence":5,"rationale":"Oil/VIX/dollar confirmation supports residual downside."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Move is already extended and other drivers are mixed."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Needs evidence of actual detentions/disruption to sustain a new leg lower."}},
+      "mechanism":"Hormuz enforcement risk -> oil/inflation risk -> tighter financial conditions and lower equities.",
+      "invalidation":"Shipping remains normal, no enforcement occurs, and crude/VIX reverse.",
+      "counter_case":"Because the story is incremental and equities are already weak, absence of enforcement could trigger a relief rebound.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"DOWN","trend_1h":"DOWN","session_location":"PREMARKET_WEAK","extension_state":"extended","market_open":false,"source":"Reuters/Investing.com pre-decision snapshots","observed_at_utc":"2026-09-14T09:41:42Z"}
+    },
+    {
+      "instrument":"NDX","relevance":"DIRECT",
+      "immediate":{"direction":"DOWN","confidence":5,"rationale":"Risk-off plus high yields hit duration-sensitive tech."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"AI selloff already contributes heavily; geopolitical residual may fade."},
+      "horizons":{"15m":{"direction":"DOWN","confidence":5,"rationale":"Confirmed risk-off tape can extend briefly."},"1h":{"direction":"DOWN","confidence":5,"rationale":"High yields and oil reinforce tech downside."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Headline is partly priced and tech has separate AI-driven weakness."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Needs new physical disruption for continued geopolitical downside."}},
+      "mechanism":"Oil/inflation and near-5% long yields raise discount-rate pressure on growth equities.",
+      "invalidation":"Oil/yields reverse and tech selling stabilizes.",
+      "counter_case":"A relief bounce is plausible if no actual ship detention follows and AI-related selling exhausts.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"DOWN","trend_1h":"DOWN","session_location":"PREMARKET_WEAK","extension_state":"extended","market_open":false,"source":"Reuters pre-decision futures snapshot","observed_at_utc":"2026-09-14T09:41:42Z"}
+    },
+    {
+      "instrument":"GDAXI","relevance":"DIRECT",
+      "immediate":{"direction":"DOWN","confidence":5,"rationale":"Europe remains exposed to imported-energy inflation."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"Already high Bund yields/oil may have absorbed much of the shock."},
+      "horizons":{"15m":{"direction":"DOWN","confidence":5,"rationale":"Fresh enforcement wording can pressure European risk assets."},"1h":{"direction":"DOWN","confidence":5,"rationale":"Energy and rate backdrop confirms downside."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Incremental nature and existing selloff reduce residual edge."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Continuation requires actual shipping disruption."}},
+      "mechanism":"Higher oil import costs and inflation risk tighten European financial conditions.",
+      "invalidation":"Brent reverses and shipping restrictions remain rhetorical.",
+      "counter_case":"European indices can rebound if the authority's warning is not enforced and oil retraces.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"DOWN","trend_1h":"DOWN","session_location":"LOWER_HALF","extension_state":"extended","market_open":true,"source":"European market/news pre-decision context","observed_at_utc":"2026-09-14T09:41:42Z"}
+    },
+    {
+      "instrument":"STOXX50","relevance":"DIRECT",
+      "immediate":{"direction":"DOWN","confidence":5,"rationale":"Broad euro-area risk-off/energy sensitivity."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"Partly priced geopolitical premium limits residual certainty."},
+      "horizons":{"15m":{"direction":"DOWN","confidence":5,"rationale":"Incremental Hormuz restriction supports near-term risk-off."},"1h":{"direction":"DOWN","confidence":5,"rationale":"Oil and yields confirm inflationary pressure."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Existing positioning and extension raise reversal risk."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Actual enforcement is needed for persistent downside."}},
+      "mechanism":"Shipping risk raises energy costs and weighs on euro-area equities.",
+      "invalidation":"No enforcement plus falling crude and yields.",
+      "counter_case":"A relief rally can emerge if the new restriction language proves administrative rather than disruptive.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"DOWN","trend_1h":"DOWN","session_location":"LOWER_HALF","extension_state":"extended","market_open":true,"source":"European market/news pre-decision context","observed_at_utc":"2026-09-14T09:41:42Z"}
+    },
+    {
+      "instrument":"XAUUSD","relevance":"SECONDARY",
+      "immediate":{"direction":"VOLATILITY","confidence":5,"rationale":"Geopolitical bid conflicts with strong dollar/high yields and an existing gold selloff."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"No clear cross-asset confirmation for a safe-haven upside call."},
+      "horizons":{"15m":{"direction":"VOLATILITY","confidence":5,"rationale":"Headline can spark two-way safe-haven/rates reaction."},"1h":{"direction":"MIXED","confidence":4,"rationale":"Dollar/yields remain a strong bearish offset."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Need either oil escalation or yield reversal for directional edge."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Conflicting geopolitical and rates forces remain unresolved."}},
+      "mechanism":"Hormuz risk supports haven demand, while DXY and high yields suppress non-yielding gold.",
+      "invalidation":"Clear break in cross-asset balance: either yields/DXY fall sharply or geopolitical risk fades.",
+      "counter_case":"Gold can continue lower despite escalation if Fed tightening expectations and the dollar remain dominant.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"DOWN","trend_1h":"DOWN","session_location":"SESSION_LOW_AREA","extension_state":"extended","market_open":true,"source":"Reuters/Investing.com pre-decision snapshot","observed_at_utc":"2026-09-14T09:41:42Z"}
+    }
+  ]
+}
