@@ -1,0 +1,130 @@
+{
+  "prediction_id": "ff-1418031-gold-oil-fed-m2",
+  "event_id": "ff-1418031-gold-oil-fed",
+  "event_cluster_id": "fed-oil-inflation-sep-2026",
+  "created_at_utc": "2026-09-14T07:14:41Z",
+  "event_time_utc": "2026-09-14T06:39:00Z",
+  "published_at_utc": "2026-09-14T06:39:00Z",
+  "source_time_text": "Sep 14, 7:39am | 1 min ago",
+  "observed_at_utc": "2026-09-14T07:12:24Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["gold", "oil", "fed", "rates", "inflation"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1418031-gold-slips-as-oil-rally-fans-rate-hike",
+  "headline": "Gold slips as oil rally fans rate hike bets ahead of Fed meeting",
+  "evidence": {
+    "article_role": "MARKET_RECAP",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 35.4,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Oil-driven inflation pressure has raised Fed hike expectations and Treasury yields, creating a yield and dollar headwind for precious metals.",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch contemporaneous report",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.87,
+      "distribution_notes": "Rate-hike probability reported near 87%, versus about 67% before the latest inflation data."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "The article itself described gold already down 0.3% at 03:30 GMT, and a later contemporaneous Reuters snapshot showed spot gold around $4,327.09, below the article's $4,334.31 level. The forecast therefore targets residual movement from decision time, not the initial headline reaction.",
+      "observed_reaction": {
+        "article_spot_gold": 4334.31,
+        "later_predecision_spot_gold": 4327.09,
+        "approx_change_pct": -0.17
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "Around 99.09 and described as at an 11-day high; firm dollar confirms pressure on gold.",
+        "US10Y": "Around 4.97%, near the 5% threshold; high yields confirm the opportunity-cost headwind.",
+        "WTI": "Around $102.15 and rising on supply risk.",
+        "BRENT": "Around $106.72 and rising on supply risk.",
+        "gold": "Spot gold continued below the article's earlier quoted level, confirming rather than reversing the initial move."
+      }
+    },
+    "decision_notes": "This is a delayed market recap rather than a fresh catalyst. Because much of the bearish gold reaction is already visible, M2 reduces continuation conviction and allows MIXED outcomes at longer horizons. No ACTIONABLE model-2 evidence segment exists yet in the leakage-safe profile; legacy model-1 learning is not used to alter M2 confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.09, "timestamp_utc": "2026-09-14T07:12:00Z", "direction": "UP", "regime": "FIRM", "source": "Investing.com search snapshot / contemporaneous dollar report", "freshness": "intraday"},
+      "US2Y": {"value": 4.63, "timestamp_utc": "2026-09-11T22:05:00Z", "direction": "UP", "regime": "HAWKISH", "source": "US Treasury/YCharts latest available", "freshness": "previous_market_day"},
+      "US10Y": {"value": 4.97, "timestamp_utc": "2026-09-14T07:12:00Z", "direction": "UP", "regime": "NEAR_5_PERCENT", "source": "contemporaneous market reports", "freshness": "intraday"},
+      "VIX": {"value": 15.84, "timestamp_utc": "2026-09-11T20:00:00Z", "direction": "DOWN", "regime": "MODERATE", "source": "latest prior close available", "freshness": "previous_market_day"},
+      "WTI": {"value": 102.15, "timestamp_utc": "2026-09-14T07:12:00Z", "direction": "UP", "regime": "SUPPLY_SHOCK_HIGH", "source": "Reuters", "freshness": "intraday"},
+      "BRENT": {"value": 106.72, "timestamp_utc": "2026-09-14T07:12:00Z", "direction": "UP", "regime": "SUPPLY_SHOCK_HIGH", "source": "Reuters", "freshness": "intraday"}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "front_end_rates": "HAWKISH",
+      "long_rates": "HIGH_RISING",
+      "volatility": "MODERATE_STALE_REFERENCE",
+      "oil": "HIGH_RISING_SUPPLY_RISK",
+      "precious_metals": "YIELD_HEADWIND"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "The bearish macro impulse is confirmed, but the article is already partly absorbed and the residual 15-minute move has lower edge."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fed risk and high yields remain negative, but safe-haven demand and event risk can offset the rate headwind over a full session."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "Gold has already extended lower since the article's quoted price, reducing fresh continuation edge."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "Firm DXY, near-5% US10Y and 87% hike pricing keep the dominant macro pressure bearish if those confirmations persist."},
+        "4h": {"direction": "MIXED", "confidence": 5, "rationale": "The yield headwind remains, but geopolitical safe-haven demand and pre-Fed positioning can produce mean reversion after the initial decline."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Direction depends increasingly on fresh Fed/oil headlines rather than this already-absorbed recap."
+        }
+      },
+      "mechanism": "Higher oil raises inflation expectations and Fed-hike pricing; higher yields and a firmer dollar raise the opportunity cost of holding gold.",
+      "invalidation": "A sharp drop in Treasury yields or DXY, dovish Fed repricing, or a fresh geopolitical escalation that triggers dominant safe-haven demand.",
+      "counter_case": "Gold can rebound despite high yields if geopolitical risk intensifies or if the market decides the expected Fed hike is fully priced and begins fading the dollar/yield move.",
+      "technical_state": {
+        "reaction_since_event_pct": -0.17,
+        "trend_5_15m": "DOWN",
+        "trend_1h": "DOWN",
+        "session_location": "LOWER_PART_OF_SESSION_RANGE",
+        "extension_state": "EXTENDED_CONTINUATION",
+        "market_open": true,
+        "source": "Forex Factory article plus contemporaneous Reuters spot-gold snapshot",
+        "observed_at_utc": "2026-09-14T07:12:24Z"
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "relevance": "SECONDARY",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "Silver shares the rates/dollar headwind but the story is gold-specific and silver has stronger industrial-demand sensitivity."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Competing precious-metal and growth channels reduce directional conviction beyond the immediate window."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "Secondary exposure and lack of a fresh silver-specific catalyst limit edge."},
+        "1h": {"direction": "DOWN", "confidence": 4, "rationale": "If yields and DXY remain firm, silver should retain a mild downside bias."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Industrial-demand and safe-haven effects can offset the monetary-policy headwind."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The article alone is insufficient for a strong next-session silver direction."
+        }
+      },
+      "mechanism": "Higher yields and a firmer dollar weigh on precious metals, while oil-driven inflation and growth concerns create mixed secondary effects for silver.",
+      "invalidation": "A clear reversal in DXY/yields or a strong silver-specific industrial/safe-haven impulse.",
+      "counter_case": "Silver may outperform gold if industrial-demand expectations improve or if safe-haven flows broaden across precious metals.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "UNKNOWN",
+        "trend_1h": "UNKNOWN",
+        "session_location": "UNKNOWN",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "No sufficiently fresh silver-specific price snapshot available before decision",
+        "observed_at_utc": "2026-09-14T07:12:24Z"
+      }
+    }
+  ]
+}
