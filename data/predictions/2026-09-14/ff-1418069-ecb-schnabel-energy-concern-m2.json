@@ -1,0 +1,128 @@
+{
+  "prediction_id": "ff-1418069-ecb-schnabel-energy-concern-m2",
+  "event_id": "ff-1418069",
+  "event_cluster_id": "ecb-energy-inflation-sep14",
+  "created_at_utc": "2026-09-14T10:31:05Z",
+  "event_time_utc": "2026-09-14T10:05:20Z",
+  "published_at_utc": "2026-09-14T10:05:20Z",
+  "source_time_text": "23 min ago",
+  "observed_at_utc": "2026-09-14T10:28:20Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "source_url": "https://www.forexfactory.com/news/1418069-ecbs-schnabel-recent-energy-price-developments-are-quite",
+  "headline": "ECB's Schnabel: Recent Energy Price Developments Are Quite Concerning",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["ECB", "ENERGY", "INFLATION", "RATES"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 23,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "ECB hawkish repricing from renewed energy-inflation risk",
+    "market_expectations": {
+      "source": "Reuters/market pricing",
+      "expected_value": "Further ECB tightening risk remains elevated after recent hike and energy shock",
+      "implied_probability": null,
+      "distribution_notes": "European yields remain near multi-year highs; German 10Y about 3.52%."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "European equities and yields had already reacted to the broader energy shock and prior hawkish ECB comments before this Schnabel headline.",
+      "observed_reaction": {
+        "DAX_session_pct": -0.52,
+        "US500_futures_pct": -0.83,
+        "Germany_10Y_pct": 3.5218
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "99.26, firmer",
+        "US2Y": "4.632%, near session high",
+        "US10Y": "4.959%, elevated near 5%",
+        "VIX": "18.13, +14.46%",
+        "WTI": "102.51, +2.46%",
+        "Brent": "107.25, +2.52%",
+        "Germany10Y": "3.5218%, +0.55%",
+        "DAX": "25423.78, -0.52%"
+      }
+    },
+    "decision_notes": "Residual-move forecast: headline reinforces an existing hawkish-energy regime rather than creating a fresh shock. Directional edge is strongest only at short horizons."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.26, "timestamp": "2026-09-14T10:28:20Z", "direction": "UP", "source": "Investing.com", "freshness": "intraday"},
+      "US2Y": {"value": 4.632, "timestamp": "2026-09-14T10:28:20Z", "direction": "FLAT_TO_UP", "source": "Investing.com", "freshness": "real-time snapshot"},
+      "US10Y": {"value": 4.959, "timestamp": "2026-09-14T10:28:20Z", "direction": "ELEVATED", "source": "Investing.com", "freshness": "intraday"},
+      "VIX": {"value": 18.13, "timestamp": "2026-09-14T10:28:20Z", "direction": "UP", "source": "Investing.com", "freshness": "real-time snapshot"},
+      "WTI": {"value": 102.51, "timestamp": "2026-09-14T10:28:20Z", "direction": "UP", "source": "Investing.com", "freshness": "intraday"},
+      "BRENT": {"value": 107.25, "timestamp": "2026-09-14T10:28:20Z", "direction": "UP", "source": "Investing.com", "freshness": "intraday"}
+    },
+    "regimes": {
+      "rates": "HIGH_AND_HAWKISH",
+      "volatility": "RISING_RISK_OFF",
+      "energy": "SUPPLY_SHOCK_HIGH",
+      "usd": "FIRM",
+      "europe_equities": "WEAK"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 4, "rationale": "Hawkish energy-inflation reinforcement with confirmed weak equity/rate backdrop, but partly priced."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "By next session the residual effect depends more on energy prices and subsequent ECB communication."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 4, "rationale": "Fresh ECB hawkish reinforcement can pressure DAX at the margin despite prior weakness."},
+        "1h": {"direction": "DOWN", "confidence": 4, "rationale": "Cross-asset confirmation supports mild continuation while energy and yields stay elevated."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Headline is incremental and increasingly absorbed; broader risk drivers dominate."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "No independent catalyst edge remains without further energy or ECB escalation."}
+      },
+      "mechanism": "Energy inflation -> higher ECB tightening expectations and yields -> valuation pressure on German equities.",
+      "invalidation": "Sharp drop in oil/gas prices, lower European yields, or dovish ECB follow-up.",
+      "counter_case": "The market may treat Schnabel as repetition of already-known ECB concern, causing no further selloff or a relief rebound.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN", "trend_1h": "DOWN", "session_location": "LOWER_HALF", "extension_state": "EXTENDED", "market_open": true, "source": "Investing.com/Reuters intraday snapshot", "observed_at_utc": "2026-09-14T10:28:20Z"}
+    },
+    {
+      "instrument": "STOXX50",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 4, "rationale": "Euro-area equities face a modest residual hawkish-rate headwind."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Most of the information is already embedded in the existing ECB-energy regime."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 4, "rationale": "ECB energy concern is directly negative for euro-area rate-sensitive valuations."},
+        "1h": {"direction": "DOWN", "confidence": 4, "rationale": "High energy prices and elevated yields confirm a mild continuation risk."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Incremental headline likely loses independent influence as absorption increases."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Next-session direction depends on fresh energy and policy information."}
+      },
+      "mechanism": "ECB hawkish repricing from energy inflation raises discount rates across euro-area equities.",
+      "invalidation": "Energy and yields reverse lower or ECB rhetoric softens.",
+      "counter_case": "Because the energy shock and hawkish ECB stance are already well known, the index could stabilize despite the headline.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN", "trend_1h": "DOWN", "session_location": "LOWER_HALF", "extension_state": "EXTENDED", "market_open": true, "source": "Reuters/European market snapshot", "observed_at_utc": "2026-09-14T10:28:20Z"}
+    },
+    {
+      "instrument": "FCHI40",
+      "relevance": "SECONDARY",
+      "immediate": {"direction": "DOWN", "confidence": 4, "rationale": "French equities share the ECB-rate and energy-cost headwind, though less directly than DAX."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Residual impact should fade without a further policy or energy shock."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 4, "rationale": "Short-run euro-area risk sentiment remains weak after the ECB comment."},
+        "1h": {"direction": "DOWN", "confidence": 4, "rationale": "Energy/rates backdrop confirms modest downside pressure."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "The story is incremental and likely absorbed by broader market drivers."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "No durable independent edge from this comment alone."}
+      },
+      "mechanism": "Higher expected ECB rates and energy costs weigh on French large-cap valuations.",
+      "invalidation": "European yields and energy prices fall sharply or ECB officials soften the message.",
+      "counter_case": "Sector composition and already-heavy positioning may cushion the CAC even if rates remain high.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN", "trend_1h": "DOWN", "session_location": "LOWER_HALF", "extension_state": "EXTENDED", "market_open": true, "source": "AP/Reuters European market snapshot", "observed_at_utc": "2026-09-14T10:28:20Z"}
+    }
+  ]
+}
