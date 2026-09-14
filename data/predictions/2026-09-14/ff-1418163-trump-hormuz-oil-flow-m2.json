@@ -1,0 +1,128 @@
+{
+  "prediction_id": "ff-1418163-trump-hormuz-oil-flow-m2",
+  "event_id": "ff-1418163-trump-hormuz-oil-flow",
+  "event_cluster_id": "hormuz-oil-flow-2026-09",
+  "created_at_utc": "2026-09-14T17:18:20Z",
+  "event_time_utc": "2026-09-14T16:26:00Z",
+  "published_at_utc": "2026-09-14T16:26:00Z",
+  "source_time_text": "Sep 14, 6:26pm | 33 min ago",
+  "observed_at_utc": "2026-09-14T17:18:01Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["OIL", "GEOPOLITICS", "HORMUZ", "DEESCALATION", "INCREMENTAL_UPDATE"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1418163-trump-oil-is-flowing-through-the-hormuz-strait",
+  "headline": "Trump: Oil is flowing through the Hormuz Strait. The Countries of the World, should, and will, reimburse the US",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 52.0,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Trump's claim that oil is flowing through Hormuz is a de-escalatory shipping-supply signal, but the physical scale of restored flows is not independently confirmed and the market remains in a high-oil, high-yield risk-off regime.",
+    "market_expectations": {
+      "source": "Reuters/CME contemporaneous reporting",
+      "expected_value": "Markets still price a high probability of a Fed rate hike while oil remains above $100 WTI and around $108 Brent.",
+      "implied_probability": 88.1,
+      "distribution_notes": "The Fed rate monitor showed 88.1% probability of a 25bp hike at the September meeting; the Hormuz statement may reduce energy-risk premium only if real shipping flows materially improve."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The statement was roughly 52 minutes old at decision time and followed earlier de-escalatory Trump comments that had already helped U.S. equities recover from session lows. Direct post-headline oil-flow and index reaction was not reliably available, so the forecast targets only residual movement from the decision time.",
+      "observed_reaction": {
+        "SP500": "Reuters reported the S&P 500 down about 0.42% earlier in the U.S. session, with losses narrowing after earlier Trump comments on Iran.",
+        "oil": "Reuters still showed Brent around $108.52 and WTI around $103.81 before this decision window, indicating that a large supply-risk premium remained in place.",
+        "verification": "No independent evidence in the checked sources quantified restored Hormuz shipping volumes after Trump's claim."
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "Dollar index up almost 0.6% on the day after touching 99.648, consistent with a strong-dollar/risk-off regime.",
+        "US2Y": "around 4.63%, elevated, with near-term Fed tightening heavily priced.",
+        "US10Y": "around 4.96-4.98%, a high-yield regime.",
+        "VIX": "latest available intraday context around 18, elevated versus the prior close.",
+        "WTI": "around $103.81 in contemporaneous Reuters reporting, still sharply higher on the day.",
+        "BRENT": "around $108.52 in contemporaneous Reuters reporting, still sharply higher on the day.",
+        "equities": "S&P 500 and Nasdaq remained lower in the U.S. session despite some recovery from earlier lows.",
+        "gold": "High USD and yields remain a counterforce to any safe-haven bid."
+      }
+    },
+    "decision_notes": "This is an authenticated primary-source statement but not independent confirmation of materially normalized shipping. Because the headline is delayed and the oil/rates regime remains stressed, M2 avoids treating it as a fresh full de-escalation shock. Leakage-safe v2 learning was reviewed; no model-2 ACTIONABLE evidence segment was used to materially alter confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.648, "timestamp_utc": "2026-09-14T15:40:00Z", "direction": "UP", "regime": "STRONG", "source": "Reuters contemporaneous market report", "freshness_minutes": 98},
+      "US2Y": {"value": 4.632, "timestamp_utc": "2026-09-14T17:18:01Z", "direction": "UP", "regime": "HAWKISH", "source": "Investing.com real-time page observed during decision", "freshness_minutes": 0},
+      "US10Y": {"value": 4.963, "timestamp_utc": "2026-09-14T17:18:01Z", "direction": "HIGH", "regime": "HIGH_YIELD", "source": "Investing.com real-time page observed during decision", "freshness_minutes": 0},
+      "VIX": {"value": 18.13, "timestamp_utc": "2026-09-14T13:56:00Z", "direction": "UP", "regime": "ELEVATED", "source": "latest available intraday context from prior verified market snapshot", "freshness_minutes": 202},
+      "WTI": {"value": 103.81, "timestamp_utc": "2026-09-14T15:40:00Z", "direction": "UP", "regime": "ENERGY_SHOCK", "source": "Reuters contemporaneous U.S. market report", "freshness_minutes": 98},
+      "BRENT": {"value": 108.52, "timestamp_utc": "2026-09-14T15:40:00Z", "direction": "UP", "regime": "ENERGY_SHOCK", "source": "Reuters contemporaneous U.S. market report", "freshness_minutes": 98}
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "HAWKISH_HIGH_YIELD",
+      "volatility": "ELEVATED",
+      "oil": "ENERGY_SHOCK",
+      "risk": "RISK_OFF_WITH_PARTIAL_RECOVERY"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "The Hormuz-flow claim is de-escalatory, but it is delayed, not independently quantified and conflicts with still-elevated oil, yields and risk-off conditions."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "By the next session, verified shipping data, oil prices and Fed expectations should dominate over this single statement."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "The headline has already circulated for nearly an hour and current cross-asset confirmation is conflicting."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "A residual relief move is possible if oil softens, but high yields and AI-driven equity weakness limit directional conviction."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Verification of actual shipping flows and fresh geopolitical headlines are more likely to determine follow-through."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The market needs physical evidence of normalized Hormuz traffic before a persistent de-escalation trend is credible."}
+      },
+      "mechanism": "Improved Hormuz oil flows would lower energy-risk premium and inflation pressure, but the current statement alone does not establish normalization.",
+      "invalidation": "Verified broad resumption of tanker traffic together with a sharp oil decline would favor a clearer UP equity call; renewed disruption would favor DOWN.",
+      "counter_case": "If Trump's statement accurately precedes a material normalization of shipping, oil could fall quickly and equities could rally more strongly than M2's mixed forecast.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "UNKNOWN", "trend_1h": "RECOVERING_FROM_EARLIER_WEAKNESS", "session_location": "BELOW_PRIOR_CLOSE_AFTER_PARTIAL_RECOVERY", "extension_state": "RANGE", "market_open": true, "source": "Reuters contemporaneous U.S. market reporting", "observed_at_utc": "2026-09-14T17:18:01Z"}
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "Lower oil risk would help duration-sensitive tech, but AI-specific selling and high Treasury yields remain powerful opposing drivers."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Tech-specific AI headlines and Fed repricing are likely to dominate by the next session unless oil falls materially."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "The de-escalation signal is stale enough that residual edge is limited, while tech-specific risk remains active."},
+        "1h": {"direction": "MIXED", "confidence": 5, "rationale": "Potential oil relief conflicts with elevated discount rates and ongoing semiconductor weakness."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Fresh AI, Fed and verified shipping information should dominate the delayed headline."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Without a sustained drop in oil and yields, the statement alone is insufficient for a durable tech rebound call."}
+      },
+      "mechanism": "A lower energy-risk premium can reduce inflation and yield pressure, but technology equities face a separate AI-risk driver.",
+      "invalidation": "A verified normalization of Hormuz traffic plus falling oil/yields would strengthen the UP case; renewed attacks or rising yields would strengthen DOWN.",
+      "counter_case": "A sharp oil reversal could trigger a stronger duration rally if investors simultaneously fade the AI selloff.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "UNKNOWN", "trend_1h": "WEAK_TO_RECOVERING", "session_location": "BELOW_PRIOR_CLOSE", "extension_state": "RANGE", "market_open": true, "source": "Reuters contemporaneous U.S. market reporting", "observed_at_utc": "2026-09-14T17:18:01Z"}
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "De-escalation can reduce safe-haven demand, but high USD/yields already pressure gold and the shipping claim lacks physical confirmation."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Gold's next-session direction depends more on Fed/yield dynamics and verified geopolitical developments."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "The delayed de-escalation headline has weak residual edge against an already bearish rates/USD backdrop."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Safe-haven unwinding is possible, but gold may also stabilize if equities remain risk-off."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Fresh Fed expectations and any verified Hormuz development should dominate."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The balance between high yields and geopolitical hedging remains unresolved."
+      },
+      "mechanism": "A credible Hormuz normalization would reduce geopolitical demand for gold, while elevated dollar and yields already exert downward pressure.",
+      "invalidation": "Renewed attacks or evidence that shipping remains blocked would revive safe-haven support; a sharp fall in yields could also lift gold.",
+      "counter_case": "If broader risk sentiment deteriorates despite the oil-flow claim, safe-haven demand could return and push gold higher.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "UNKNOWN", "trend_1h": "WEAK", "session_location": "UNDER_PRESSURE_IN_HIGH_YIELD_REGIME", "extension_state": "UNKNOWN", "market_open": true, "source": "Reuters contemporaneous cross-asset reporting", "observed_at_utc": "2026-09-14T17:18:01Z"}
+    }
+  ]
+}
