@@ -1,0 +1,133 @@
+{
+  "prediction_id": "ff-1417999-saudi-civil-defense-early-warning",
+  "event_id": "ff-1417999",
+  "created_at_utc": "2026-09-14T00:17:32Z",
+  "event_time_utc": "2026-09-13T23:32:32Z",
+  "published_at_utc": "2026-09-13T23:32:32Z",
+  "source_time_text": "45 min ago",
+  "observed_at_utc": "2026-09-14T00:17:32Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "geopolitics",
+    "saudi_arabia",
+    "middle_east_security",
+    "energy_risk"
+  ],
+  "source": {
+    "provider": "Forex Factory",
+    "url": "https://www.forexfactory.com/news/1417999-early-warning-issued-in-khamis-mushait-to-signal",
+    "headline": "Early warning issued in Khamis Mushait to signal possible threat: Saudi civil defense",
+    "impact": "Low Impact Breaking"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.07,
+        "timestamp_utc": "2026-09-14T00:17:32Z",
+        "direction": "UP",
+        "regime": "FIRM",
+        "source": "Investing.com real-time derived quote observed during prediction run",
+        "freshness": "live_or_delayed_quote_observed_at_prediction"
+      },
+      "US2Y": {
+        "value": 4.63,
+        "timestamp_utc": "2026-09-11T19:30:00Z",
+        "direction": "UP",
+        "regime": "HIGH_HAWKISH",
+        "source": "U.S. Treasury daily par yield / Treasury Rate Watch",
+        "freshness": "last_official_business_day_close_market_closed"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "timestamp_utc": "2026-09-11T19:30:00Z",
+        "direction": "UP",
+        "regime": "VERY_HIGH_HAWKISH",
+        "source": "U.S. Treasury daily par yield / Treasury Rate Watch",
+        "freshness": "last_official_business_day_close_market_closed"
+      },
+      "VIX": {
+        "value": 15.84,
+        "timestamp_utc": "2026-09-11T20:00:00Z",
+        "direction": "DOWN",
+        "regime": "LOW_TO_MODERATE",
+        "source": "Friday Sep 11 market close reported by StockMarketWatch",
+        "freshness": "last_cash_session_close_market_closed"
+      },
+      "WTI": {
+        "value": 102.74,
+        "timestamp_utc": "2026-09-14T00:17:32Z",
+        "direction": "UP",
+        "regime": "SUPPLY_SHOCK_ELEVATED",
+        "source": "Investing.com real-time derived WTI quote observed during prediction run",
+        "freshness": "live_quote_observed_at_prediction"
+      },
+      "BRENT": {
+        "value": 107.02,
+        "timestamp_utc": "2026-09-13T22:02:00Z",
+        "direction": "UP",
+        "regime": "SUPPLY_SHOCK_ELEVATED",
+        "source": "CNBC quote at 6:02 p.m. ET reported on Forex Factory",
+        "freshness": "latest_timestamped_quote_available_before_prediction"
+      }
+    },
+    "regimes": {
+      "usd": "firm",
+      "rates": "high_hawkish",
+      "volatility": "cash_vix_low_but_stale_weekend",
+      "energy": "supply_shock_elevated",
+      "geopolitics": "escalation_risk"
+    }
+  },
+  "learning_profile": {
+    "path": "data/statistics_v2/learning_profile.json",
+    "profile_version": "2.0.0",
+    "generated_at_utc": "2026-09-13T23:23:15.868010+00:00",
+    "material_confidence_adjustment": false,
+    "note": "No context-aware ACTIONABLE segment was used to mechanically alter this forecast; current facts and pre-prediction context dominate."
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "A fresh Saudi civil-defense threat warning, following recent attacks on regional energy infrastructure, can widen geopolitical risk premium, but no confirmed new strike is reported yet.",
+      "invalidation": "Warning is lifted without incident and no follow-on attack or energy disruption occurs."
+    },
+    {
+      "instrument": "SP500",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Possible fresh Saudi security escalation can increase headline-driven risk while oil is already above $100, but the warning alone is insufficient for a clean directional call.",
+      "invalidation": "No incident follows and crude/risk futures normalize toward pre-warning levels."
+    },
+    {
+      "instrument": "NDX",
+      "immediate": {"direction": "VOLATILITY", "confidence": 5},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Growth equities are sensitive to an energy-driven inflation/rates shock, but without a confirmed attack the highest-conviction forecast is volatility rather than direction.",
+      "invalidation": "No incident follows and energy prices/rates do not extend higher."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {"direction": "VOLATILITY", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "European cyclicals remain exposed to Middle East energy-risk headlines, though the current item is only a warning and not a confirmed supply disruption.",
+      "invalidation": "The warning expires without escalation and oil retraces."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {"direction": "VOLATILITY", "confidence": 4},
+      "next_session": {"direction": "MIXED", "confidence": 4},
+      "mechanism": "Elevated oil and regional security risk increase headline sensitivity for European equities, but the absence of a confirmed event prevents a strong directional forecast.",
+      "invalidation": "No follow-on incident and a material easing in oil/geopolitical risk premium."
+    }
+  ]
+}
