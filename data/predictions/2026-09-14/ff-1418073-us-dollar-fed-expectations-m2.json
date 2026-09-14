@@ -1,0 +1,144 @@
+{
+  "prediction_id": "ff-1418073-us-dollar-fed-expectations-m2",
+  "event_id": "ff-1418073-us-dollar-fed-expectations",
+  "event_cluster_id": "fed-hike-oil-dollar-2026-09-14",
+  "created_at_utc": "2026-09-14T11:51:20Z",
+  "event_time_utc": "2026-09-14T11:04:59Z",
+  "published_at_utc": "2026-09-14T11:04:59Z",
+  "source_time_text": "41 min ago",
+  "observed_at_utc": "2026-09-14T11:45:59Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["FED", "USD", "OIL", "RATES", "MARKET_RECAP"],
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1418073-us-dollar-jumps-on-fed-expectations",
+  "headline": "US Dollar Jumps on Fed Expectations",
+  "evidence": {
+    "article_role": "MARKET_RECAP",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 46.0,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "Fed hike expectations reinforced by high oil prices, supporting the USD and pressuring duration-sensitive risk assets and precious metals.",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch contemporaneous report",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.90,
+      "distribution_notes": "Reuters reported roughly 90% probability of a rate hike, up from around 60% one week earlier."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The article itself describes an already-observed broad USD rally and existing pressure from oil/rates; forecast target is residual movement from decision time, not the initial reaction.",
+      "observed_reaction": {
+        "DXY": "+~0.5% to 99.59, two-week high",
+        "USDJPY": "+~0.7% to 154.61",
+        "Brent": "~$108/bbl, +~3%",
+        "European_equities": "STOXX 600 about -0.3%; technology sector about -2%",
+        "US_futures": "lower in contemporaneous Reuters reporting"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "99.59, strong/up",
+        "US10Y": "about 4.95% after touching 4.9915%, elevated",
+        "oil": "Brent around 107.61-108 and WTI around 102.53, elevated/up",
+        "Fed_pricing": "~90% probability of a hike",
+        "equities": "European tech weak and US futures lower",
+        "gold": "already under pressure earlier in the session"
+      }
+    },
+    "decision_notes": "Because this is a delayed market recap with low novelty, M2 discounts the headline and forecasts only residual move. No candidate-specific ACTIONABLE learning segment was used to override current facts; confidence remains moderate/low."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.59, "timestamp_utc": "2026-09-14T11:30:00Z", "direction": "UP", "regime": "STRONG", "source": "Reuters", "freshness_minutes": 21},
+      "US2Y": {"value": 4.63, "timestamp_utc": "2026-09-14T10:30:00Z", "direction": "UP", "regime": "HAWKISH", "source": "recent contemporaneous market context", "freshness_minutes": 81},
+      "US10Y": {"value": 4.95, "timestamp_utc": "2026-09-14T11:30:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "Reuters", "freshness_minutes": 21},
+      "VIX": {"value": 18.13, "timestamp_utc": "2026-09-14T10:30:00Z", "direction": "UP", "regime": "RISK_OFF", "source": "recent contemporaneous market context", "freshness_minutes": 81},
+      "WTI": {"value": 102.53, "timestamp_utc": "2026-09-14T11:30:00Z", "direction": "UP", "regime": "ENERGY_SHOCK", "source": "Reuters", "freshness_minutes": 21},
+      "BRENT": {"value": 107.61, "timestamp_utc": "2026-09-14T11:30:00Z", "direction": "UP", "regime": "ENERGY_SHOCK", "source": "Reuters", "freshness_minutes": 21}
+    },
+    "regimes": {
+      "usd": "STRONG",
+      "rates": "HAWKISH_HIGH_YIELD",
+      "volatility": "ELEVATED",
+      "oil": "ENERGY_SHOCK",
+      "risk": "RISK_OFF"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "Strong USD and elevated yields remain bearish, but much of the move is already priced."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fed/oil pressure remains bearish but geopolitical safe-haven demand creates two-sided risk."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "Cross-asset USD/rates confirmation still points lower from current levels."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Headline is stale/partly priced and gold has competing safe-haven support."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Residual bearish rate pressure competes with geopolitical demand."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Outcome increasingly depends on fresh Fed and Middle East news rather than this recap."}
+      },
+      "mechanism": "Higher Fed hike pricing and stronger DXY raise the opportunity cost of non-yielding gold.",
+      "invalidation": "A sharp drop in DXY/yields or fresh geopolitical escalation that dominates the rate channel.",
+      "counter_case": "Gold could reverse higher if safe-haven flows overwhelm the stronger-dollar/rates channel.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN_TO_MIXED", "trend_1h": "DOWN", "session_location": "WEAK_AFTER_EARLIER_SELLING", "extension_state": "EXTENDED", "market_open": true, "source": "contemporaneous market/news observations", "observed_at_utc": "2026-09-14T11:51:20Z"}
+    },
+    {
+      "instrument": "XAGUSD",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 4, "rationale": "USD/rates are bearish, but silver's industrial component and already-absorbed move reduce confidence."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Macro pressure persists but residual edge from this story is limited."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 4, "rationale": "Strong USD and hawkish pricing remain immediate headwinds."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Partial absorption reduces continuation edge."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Industrial and safe-haven channels conflict with rates/USD."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fresh macro/geopolitical catalysts are likely to dominate."}
+      },
+      "mechanism": "Stronger USD and higher expected rates pressure silver valuation.",
+      "invalidation": "Dollar/yields reverse sharply or commodity/safe-haven demand strengthens.",
+      "counter_case": "Silver can outperform if geopolitical demand or broader commodity buying accelerates.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "UNKNOWN", "trend_1h": "WEAK", "session_location": "UNKNOWN", "extension_state": "UNKNOWN", "market_open": true, "source": "contemporaneous market/news observations", "observed_at_utc": "2026-09-14T11:51:20Z"}
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "Higher yields and AI-risk headlines pressure long-duration tech, with futures already weak."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Much of the macro repricing is visible already and cash-market reaction may differ."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "Rates and risk-off confirmation remain unfavorable for tech futures."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "Continuation risk remains while yields stay near 5% and oil is elevated."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Pre-open weakness may be partly absorbed before the U.S. cash session develops."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fresh Fed expectations and tech-specific news will dominate beyond this recap."}
+      },
+      "mechanism": "Higher discount rates and AI sentiment concerns pressure duration-sensitive tech valuations.",
+      "invalidation": "Treasury yields retreat materially and AI-risk sentiment reverses.",
+      "counter_case": "A yield reversal or strong dip-buying at the U.S. open could trigger a sharp rebound.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN", "trend_1h": "DOWN", "session_location": "PRE_US_OPEN_FUTURES_WEAK", "extension_state": "EXTENDED", "market_open": false, "source": "Reuters contemporaneous futures commentary", "observed_at_utc": "2026-09-14T11:51:20Z"}
+    },
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "DOWN", "confidence": 5, "rationale": "Oil/rates/dollar mix remains risk-off, but headline is partly priced."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Residual impact from this recap should fade relative to new catalysts."},
+      "horizons": {
+        "15m": {"direction": "DOWN", "confidence": 5, "rationale": "Cross-asset confirmation remains bearish into the U.S. pre-open."},
+        "1h": {"direction": "DOWN", "confidence": 4, "rationale": "High oil and yields maintain pressure, though continuation edge is modest."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Cash-session price discovery may absorb the pre-open move."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fresh Fed and geopolitical developments will dominate by the next session."}
+      },
+      "mechanism": "Higher energy costs and tighter expected policy weigh on broad equity risk appetite.",
+      "invalidation": "Oil and Treasury yields reverse lower while risk sentiment improves.",
+      "counter_case": "A relief move can emerge if the Fed repricing stalls and investors buy the pre-open dip.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "DOWN", "trend_1h": "DOWN", "session_location": "PRE_US_OPEN_FUTURES_WEAK", "extension_state": "EXTENDED", "market_open": false, "source": "Reuters contemporaneous futures commentary", "observed_at_utc": "2026-09-14T11:51:20Z"}
+    }
+  ]
+}
