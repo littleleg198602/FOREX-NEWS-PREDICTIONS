@@ -1,0 +1,172 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418359-bessent-stronger-yen-m2",
+  "event_id": "ff-1418359-bessent-stronger-yen",
+  "event_time_utc": "2026-09-15T16:08:02+00:00",
+  "prediction_time_utc": "2026-09-15T16:13:02+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T16:13:02+00:00",
+  "prediction_latency_seconds": 300.0,
+  "evaluated_at_utc": "2026-09-15T16:17:45.512808+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "JPY",
+    "policy",
+    "intervention",
+    "US Treasury"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 5,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Renewed explicit US Treasury support for a stronger yen and confirmation of US-Japan intervention coordination.",
+    "market_expectations": {
+      "source": "Reuters/market reporting",
+      "expected_value": null,
+      "implied_probability": 0.8,
+      "distribution_notes": "BOJ September hike expectations are already elevated; Reuters reporting showed an 80% probability context."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The yen-support/intervention stance is not new and Tokyo cash trading had already closed; USD/JPY had traded around 154.9 during Tokyo hours.",
+      "observed_reaction": {
+        "NI225_cash_close_pct": -0.01,
+        "USDJPY_late_tokyo": 154.9
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "USDJPY": "Around 154.9 in late Tokyo trade, weaker yen on the day despite policy support rhetoric.",
+        "US10Y": "About 4.94%, still high.",
+        "DXY": "About 99.09-99.62 depending delayed source.",
+        "oil": "WTI about 103, Brent about 106.08; high energy costs remain a Japan headwind."
+      }
+    },
+    "decision_notes": "Residual forecast only. Cash Nikkei is closed; fixed 15m/1h/4h horizons are not substituted with the next cash open. M2 learning profile has no ACTIONABLE model-2 segment applicable here, so confidence is unchanged."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.09,
+        "observed_at_utc": "2026-09-15T15:58:00Z",
+        "direction": "firm",
+        "source": "WellsTrack delayed snapshot",
+        "freshness_minutes": 15,
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.68,
+        "observed_at_utc": "2026-09-15T14:41:00Z",
+        "direction": "high/firm",
+        "source": "earlier same-day market snapshot",
+        "freshness_minutes": 92,
+        "regime": "RISING"
+      },
+      "US10Y": {
+        "value": 4.94,
+        "observed_at_utc": "2026-09-15T15:58:00Z",
+        "direction": "below earlier 5% test",
+        "source": "WellsTrack delayed snapshot",
+        "freshness_minutes": 15,
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 17.1,
+        "observed_at_utc": "2026-09-14T20:00:00Z",
+        "direction": "elevated",
+        "source": "prior close",
+        "freshness_minutes": 1213,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 103.0,
+        "observed_at_utc": "2026-09-15T15:58:00Z",
+        "direction": "elevated",
+        "source": "WellsTrack delayed snapshot",
+        "freshness_minutes": 15,
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 106.08,
+        "observed_at_utc": "2026-09-15T15:58:00Z",
+        "direction": "elevated",
+        "source": "WellsTrack delayed snapshot",
+        "freshness_minutes": 15,
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418359-bessent-stronger-yen-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 63611.83984375,
+      "reference_price_time_utc": "2026-09-15T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 583.033,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T16:28:02+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T17:13:02+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T20:13:02+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
