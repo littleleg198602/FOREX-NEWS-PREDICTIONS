@@ -100,6 +100,17 @@ def main() -> int:
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
+    # Keep the failure details in the Actions log even when the generated
+    # data_health.json cannot be committed because validation exits non-zero.
+    for record in report["records"]:
+        if record.get("status") != "HARD_FAIL":
+            continue
+        print(f"HARD_FAIL {record.get('path')}")
+        for error in record.get("errors", []):
+            print(f"  - {error}")
+        for warning in record.get("warnings", []):
+            print(f"  ! {warning}")
+
     print(
         "prediction_validation "
         f"total={report['total_files']} valid={report['valid']} "
