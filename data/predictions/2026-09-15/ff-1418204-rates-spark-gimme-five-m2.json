@@ -1,0 +1,52 @@
+{
+  "prediction_id": "ff-1418204-rates-spark-gimme-five-m2",
+  "event_id": "ff-1418204-rates-spark-gimme-five",
+  "event_cluster_id": "fed-sep-2026-hike-pricing",
+  "created_at_utc": "2026-09-15T04:25:26Z",
+  "event_time_utc": "2026-09-15T03:00:00Z",
+  "published_at_utc": "2026-09-15T03:00:00Z",
+  "source_time_text": "Sep 14, 11:00pm FF",
+  "observed_at_utc": "2026-09-15T04:25:25Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["FED", "RATES", "US_MACRO"],
+  "source_url": "https://www.forexfactory.com/news/1418204-rates-spark-gimme-five",
+  "headline": "Rates Spark: Gimme five",
+  "evidence": {
+    "article_role": "COMMENTARY",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 85.4,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Renewed risk that US 10-year Treasury yields retest 5% as high real yields, issuance pressure and oil-related inflation risk persist into the FOMC",
+    "market_expectations": {"source":"Reuters/CME FedWatch contemporaneous reports","expected_value":"25bp Fed hike","implied_probability":0.93,"distribution_notes":"A September hike is already near fully priced, so residual market sensitivity is increasingly about guidance and whether long yields sustain or break above 5%."},
+    "surprise": null,
+    "absorption": {"state":"PARTIALLY_PRICED","reason":"US10Y already traded above 5% on Monday and then faded below it; the article adds a fresh framework for a retest rather than a new data shock.","observed_reaction":{"US10Y":"touched about 5.014% then eased near 4.95%","DXY":"firm near a two-week high around 99.55","US_equities":"Monday close was already weaker, with S&P 500 -0.48% and Nasdaq -0.56%"}},
+    "cross_asset_confirmation": {"verdict":"CONFIRMED","observations":{"DXY":"99.55, firm near two-week high","US2Y":"about 4.65%, elevated","US10Y":"about 4.95% after a 5.014% intraday high","VIX":"17.10 at latest completed US close, +7.95%","WTI":"about 102-103 USD/bbl in latest contemporaneous reports","BRENT":"about 107 USD/bbl in latest contemporaneous reports"}},
+    "decision_notes":"Residual-move forecast only. This is analysis/commentary, not a fresh release. The 5% yield shock has already occurred once, so short-horizon directional confidence is capped; renewed yield confirmation would matter more than the headline itself. No M2 learning segment was used to change confidence because no clearly applicable ACTIONABLE model-2 evidence segment was established from the leakage-safe profile."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY":{"value":99.55,"timestamp":"2026-09-15T03:30:00Z","direction":"UP/FIRM","source":"Reuters Sep 15 contemporaneous market report","freshness_minutes":55},
+      "US2Y":{"value":4.65,"timestamp":"2026-09-15T01:47:00Z","direction":"ELEVATED","source":"latest contemporaneous Treasury market context","freshness_minutes":158},
+      "US10Y":{"value":4.95,"timestamp":"2026-09-15T03:30:00Z","direction":"BELOW_5PCT_AFTER_REJECTION","source":"Reuters/current market reports","freshness_minutes":55},
+      "VIX":{"value":17.10,"timestamp":"2026-09-14T20:00:00Z","direction":"UP/ELEVATED","source":"latest completed US session close","freshness_minutes":505},
+      "WTI":{"value":102.7,"timestamp":"2026-09-15T03:30:00Z","direction":"ELEVATED","source":"latest contemporaneous market reports","freshness_minutes":55},
+      "BRENT":{"value":107.0,"timestamp":"2026-09-15T03:30:00Z","direction":"ELEVATED","source":"Reuters Sep 15 contemporaneous market report","freshness_minutes":55}
+    },
+    "regimes":{"rates":"HAWKISH_HIGH_REAL_YIELDS","usd":"FIRM","volatility":"ELEVATED","oil":"SUPPLY_RISK_ELEVATED","cross_asset":"RISK_OFF_CONFIRMED_BUT_RATE_SHOCK_PARTLY_PRICED"}
+  },
+  "predictions": [
+    {"instrument":"NDX","relevance":"DIRECT","immediate":{"direction":"MIXED","confidence":5,"rationale":"The 5% yield shock is partly priced, limiting a clean immediate residual call."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"FOMC guidance and whether US10Y sustains above 5% dominate the next session."},"horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"Commentary arrives after the first 5% test; without a fresh yield breakout the residual impulse is weak."},"1h":{"direction":"DOWN","confidence":5,"rationale":"A renewed move toward 5% in long yields would pressure long-duration technology valuations."},"4h":{"direction":"VOLATILITY","confidence":5,"rationale":"Pre-FOMC positioning around the 5% yield threshold creates asymmetric two-way volatility risk."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"A hike is heavily priced; guidance and the long-end reaction matter more than the expected decision."}},"mechanism":"Higher real discount rates compress long-duration technology valuations.","invalidation":"US10Y decisively retreats from 5% while DXY softens and risk appetite improves.","counter_case":"Because the first 5% break already failed and a hike is near fully priced, a yield retreat can trigger a technology relief rally.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"UNKNOWN","trend_1h":"rate pressure remains elevated but no fresh breakout confirmed","session_location":"Asia session / US cash closed","extension_state":"rejection below prior 5% yield breakout","market_open":false,"source":"latest completed US close and contemporaneous Asia market reports","observed_at_utc":"2026-09-15T04:25:25Z"}},
+    {"instrument":"SP500","relevance":"DIRECT","immediate":{"direction":"MIXED","confidence":5,"rationale":"High yields are bearish but the major repricing preceded this commentary."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Near-full hike pricing raises relief-rally risk if long yields fail to break higher."},"horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"No new data shock and substantial prior absorption reduce immediate edge."},"1h":{"direction":"DOWN","confidence":5,"rationale":"A 5% US10Y retest would renew broad multiple compression and risk-off pressure."},"4h":{"direction":"VOLATILITY","confidence":5,"rationale":"The 5% threshold and FOMC proximity favor unstable two-way price action over a clean trend."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"The expected hike is largely priced and the yield response will determine direction."}},"mechanism":"Higher real yields pressure broad equity multiples while high oil sustains inflation risk.","invalidation":"Sustained fall in US10Y and oil with a softer dollar.","counter_case":"A failed 5% retest can ease financial-condition fears and produce a broad relief rally.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"UNKNOWN","trend_1h":"UNKNOWN while US cash is closed","session_location":"Asia session / US cash closed","extension_state":"prior rate selloff partly extended","market_open":false,"source":"latest completed US close and contemporaneous Asia market reports","observed_at_utc":"2026-09-15T04:25:25Z"}},
+    {"instrument":"XAUUSD","relevance":"SECONDARY","immediate":{"direction":"MIXED","confidence":5,"rationale":"High real yields and firm USD are bearish, but geopolitical and oil risk support haven demand."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Rates and haven demand remain in direct conflict into the FOMC."},"horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"The rates story is partly priced and gold faces offsetting haven demand."},"1h":{"direction":"DOWN","confidence":5,"rationale":"A renewed US10Y/DXY push higher would increase the opportunity-cost headwind for gold."},"4h":{"direction":"VOLATILITY","confidence":5,"rationale":"A 5% yield retest versus Middle East risk creates competing strong drivers."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"FOMC guidance, real yields and geopolitical headlines can pull gold in opposite directions."}},"mechanism":"Higher real yields and USD pressure gold while geopolitical supply risk supports safe-haven demand.","invalidation":"A sharp yield/DXY reversal or fresh material Middle East escalation would favor upside instead.","counter_case":"If the 5% yield level rejects again or Hormuz risk escalates, safe-haven buying can overpower the rates headwind.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"UNKNOWN","trend_1h":"UNKNOWN","session_location":"global Asia session","extension_state":"conflicting macro drivers / range risk","market_open":true,"source":"contemporaneous macro market reports","observed_at_utc":"2026-09-15T04:25:25Z"}}
+  ]
+}
