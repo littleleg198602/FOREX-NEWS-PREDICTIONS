@@ -1,0 +1,230 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418310-empire-state-sep-7-6-m2",
+  "event_id": "ff-1418310-empire-state-sep-7-6",
+  "event_time_utc": "2026-09-15T13:00:00+00:00",
+  "prediction_time_utc": "2026-09-15T13:24:32+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T13:24:32+00:00",
+  "prediction_latency_seconds": 1472.0,
+  "evaluated_at_utc": "2026-09-15T13:30:17.314885+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US macro",
+    "manufacturing",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 24.5,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Empire State growth miss combined with stronger price pressures",
+    "market_expectations": {
+      "source": "WSJ consensus",
+      "expected_value": 15,
+      "implied_probability": null,
+      "distribution_notes": null
+    },
+    "surprise": {
+      "actual": 7.6,
+      "consensus": 15,
+      "previous": 20.6,
+      "revised_previous": null,
+      "surprise_direction": "STAGFLATIONARY",
+      "components": {
+        "new_orders": "edged up",
+        "shipments": "slightly down",
+        "employees_index": 10.6,
+        "average_workweek": 17,
+        "prices_paid": "up 5 points",
+        "prices_received": "up 5 points",
+        "delivery_times": "significantly longer"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "About 25 minutes elapsed; equity futures were already lower from oil/rates.",
+      "observed_reaction": {
+        "equity_futures": "roughly -0.5% pre-open",
+        "US10Y": "around 5.03"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "US10Y": "high around 5.03",
+        "DXY": "firm around 99.6",
+        "equity_futures": "lower",
+        "oil": "elevated"
+      }
+    },
+    "decision_notes": "Headline miss is dovish for growth, but stronger price components limit rate relief and create stagflationary mix."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.6,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "firm/up",
+        "source": "web contemporaneous range",
+        "freshness_minutes": 10,
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.68,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up",
+        "source": "web market reports",
+        "freshness_minutes": 30,
+        "regime": "RISING"
+      },
+      "US10Y": {
+        "value": 5.03,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up/high",
+        "source": "web market reports",
+        "freshness_minutes": 30,
+        "regime": "RISING"
+      },
+      "VIX": {
+        "value": 17.1,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up/moderate",
+        "source": "EnergyRiskIQ",
+        "freshness_minutes": 60,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 102.76,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up",
+        "source": "EnergyRiskIQ",
+        "freshness_minutes": 60,
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 107.46,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up",
+        "source": "EnergyRiskIQ",
+        "freshness_minutes": 60,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418310-empire-state-sep-7-6-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29127.158,
+      "reference_price_time_utc": "2026-09-14T21:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T21:15:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 968.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T13:39:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T14:24:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T17:24:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418310-empire-state-sep-7-6-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7619.98,
+      "reference_price_time_utc": "2026-09-14T20:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T20:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 1009.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T13:39:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T14:24:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T17:24:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-15",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

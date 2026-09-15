@@ -1,0 +1,270 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418302-adp-weekly-16250-m2",
+  "event_id": "ff-1418302-adp-weekly-16250",
+  "event_time_utc": "2026-09-15T12:41:32+00:00",
+  "prediction_time_utc": "2026-09-15T13:24:32+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T13:24:32+00:00",
+  "prediction_latency_seconds": 2580.0,
+  "evaluated_at_utc": "2026-09-15T13:30:14.997533+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US labor",
+    "Fed",
+    "rates"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 43,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "ADP weekly hiring stronger than expected, reinforcing hawkish rate pricing",
+    "market_expectations": {
+      "source": "InvestingLive",
+      "expected_value": 12000,
+      "implied_probability": 0.92,
+      "distribution_notes": "Fed 25bp hike already ~92-95% priced."
+    },
+    "surprise": {
+      "actual": 16250,
+      "consensus": 12000,
+      "previous": 12000,
+      "revised_previous": null,
+      "surprise_direction": "HAWKISH",
+      "components": {
+        "hiring_trend": "increased for second week",
+        "status": "preliminary"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Release is ~43 minutes old and yields/USD were already elevated on oil/Fed repricing.",
+      "observed_reaction": {
+        "US10Y": "around 5.03",
+        "DXY": "around 99.6"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "firm",
+        "US2Y": "~4.68 up",
+        "US10Y": "~5.03 high",
+        "equity_futures": "down roughly 0.5%",
+        "gold": "~4282, down ~0.4%"
+      }
+    },
+    "decision_notes": "Preliminary high-frequency data; residual edge is smaller because hike expectations are already near fully priced."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.6,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "firm/up",
+        "source": "web contemporaneous range",
+        "freshness_minutes": 10,
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.68,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up",
+        "source": "web market reports",
+        "freshness_minutes": 30,
+        "regime": "RISING"
+      },
+      "US10Y": {
+        "value": 5.03,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up/high",
+        "source": "web market reports",
+        "freshness_minutes": 30,
+        "regime": "RISING"
+      },
+      "VIX": {
+        "value": 17.1,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up/moderate",
+        "source": "EnergyRiskIQ",
+        "freshness_minutes": 60,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 102.76,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up",
+        "source": "EnergyRiskIQ",
+        "freshness_minutes": 60,
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 107.46,
+        "timestamp_utc": "2026-09-15T13:24:32Z",
+        "direction": "up",
+        "source": "EnergyRiskIQ",
+        "freshness_minutes": 60,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418302-adp-weekly-16250-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29127.158,
+      "reference_price_time_utc": "2026-09-14T21:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T21:15:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 968.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T13:39:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T14:24:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T17:24:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418302-adp-weekly-16250-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7619.98,
+      "reference_price_time_utc": "2026-09-14T20:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T20:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 1009.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T13:39:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T14:24:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T17:24:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-15",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418302-adp-weekly-16250-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4327.5,
+      "reference_price_time_utc": "2026-09-15T13:21:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T13:20:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T13:39:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T14:24:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T17:24:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
