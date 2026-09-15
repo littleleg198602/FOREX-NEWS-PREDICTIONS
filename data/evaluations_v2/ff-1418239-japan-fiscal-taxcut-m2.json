@@ -1,0 +1,161 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418239-japan-fiscal-taxcut-m2",
+  "event_id": "ff-1418239-japan-fiscal-taxcut",
+  "event_time_utc": "2026-09-15T05:57:00+00:00",
+  "prediction_time_utc": "2026-09-15T06:59:01+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T06:59:01+00:00",
+  "prediction_latency_seconds": 3721.0,
+  "evaluated_at_utc": "2026-09-15T07:05:00.090282+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "JAPAN",
+    "FISCAL_POLICY"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 62,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Japan fiscal credibility: tax cut to be funded without deficit-covering bonds",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Nikkei was already up roughly 0.4-0.8% in the morning while USD/JPY strengthened, so the fiscal headline did not trigger a clean new equity impulse.",
+      "observed_reaction": {
+        "NI225": "about +0.4% to +0.8% on session; attribution mixed"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "NI225": "positive session",
+        "USDJPY": "around 154.9, yen weaker",
+        "US10Y": "5.0266%, global yield headwind"
+      }
+    },
+    "decision_notes": "Residual move only; global rates/oil dominate more than this fiscal comment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.6,
+        "timestamp_utc": "2026-09-15T06:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/market snapshot",
+        "freshness_minutes": 14
+      },
+      "US2Y": {
+        "value": 4.65,
+        "timestamp_utc": "2026-09-15T06:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "market snapshot",
+        "freshness_minutes": 14
+      },
+      "US10Y": {
+        "value": 5.0266,
+        "timestamp_utc": "2026-09-15T06:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 14
+      },
+      "VIX": {
+        "value": 17.1,
+        "timestamp_utc": "2026-09-15T03:59:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Nexqual",
+        "freshness_minutes": 180
+      },
+      "WTI": {
+        "value": 102.91,
+        "timestamp_utc": "2026-09-15T03:59:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Nexqual",
+        "freshness_minutes": 180
+      },
+      "BRENT": {
+        "value": 106.98,
+        "timestamp_utc": "2026-09-15T06:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/market reports",
+        "freshness_minutes": 29
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418239-japan-fiscal-taxcut-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 63611.83984375,
+      "reference_price_time_utc": "2026-09-15T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 29.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T07:14:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T07:59:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T10:59:01+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

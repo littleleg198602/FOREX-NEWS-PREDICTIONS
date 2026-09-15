@@ -1,0 +1,222 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-germany-wholesale-aug2026-m2",
+  "event_id": "ff-germany-wholesale-aug2026",
+  "event_time_utc": "2026-09-15T06:00:00+00:00",
+  "prediction_time_utc": "2026-09-15T06:59:05+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T06:59:05+00:00",
+  "prediction_latency_seconds": 3545.0,
+  "evaluated_at_utc": "2026-09-15T07:05:01.239382+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "GERMANY",
+    "INFLATION",
+    "WHOLESALE_PRICES"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 59,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "German wholesale inflation acceleration led by energy/petroleum",
+    "surprise": {
+      "actual": {
+        "yoy": "6.8%"
+      },
+      "consensus": {
+        "yoy": "6.2%"
+      },
+      "previous": {
+        "yoy": "5.3%"
+      },
+      "surprise_direction": "HOTTER",
+      "components": {
+        "energy": "petroleum products and related energy categories were key drivers"
+      }
+    },
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "DAX remained around -0.5% while the hot inflation print reinforced an existing energy/rates headwind.",
+      "observed_reaction": {
+        "GDAXI": "about -0.5% on session"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "GDAXI": "about -0.5%",
+        "Brent": "~107",
+        "US10Y": "5.0266%",
+        "macro_regime": "higher yields and energy inflation"
+      }
+    },
+    "decision_notes": "Hot print confirms existing European inflation shock; residual downside edge is modest because DAX was already lower."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.6,
+        "timestamp_utc": "2026-09-15T06:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/market snapshot",
+        "freshness_minutes": 14
+      },
+      "US2Y": {
+        "value": 4.65,
+        "timestamp_utc": "2026-09-15T06:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "market snapshot",
+        "freshness_minutes": 14
+      },
+      "US10Y": {
+        "value": 5.0266,
+        "timestamp_utc": "2026-09-15T06:45:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 14
+      },
+      "VIX": {
+        "value": 17.1,
+        "timestamp_utc": "2026-09-15T03:59:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Nexqual",
+        "freshness_minutes": 180
+      },
+      "WTI": {
+        "value": 102.91,
+        "timestamp_utc": "2026-09-15T03:59:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Nexqual",
+        "freshness_minutes": 180
+      },
+      "BRENT": {
+        "value": 106.98,
+        "timestamp_utc": "2026-09-15T06:30:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/market reports",
+        "freshness_minutes": 29
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-germany-wholesale-aug2026-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25440.81,
+      "reference_price_time_utc": "2026-09-14T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 898.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T07:14:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T07:59:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T10:59:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-germany-wholesale-aug2026-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6254.56005859375,
+      "reference_price_time_utc": "2026-09-14T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 929.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T07:14:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T07:59:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T10:59:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
