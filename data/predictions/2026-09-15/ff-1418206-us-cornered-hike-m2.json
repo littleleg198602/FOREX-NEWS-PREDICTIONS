@@ -1,0 +1,52 @@
+{
+  "prediction_id": "ff-1418206-us-cornered-hike-m2",
+  "event_id": "ff-1418206-us-cornered-hike",
+  "event_cluster_id": "fed-sep-2026-hike-pricing",
+  "created_at_utc": "2026-09-15T01:17:35Z",
+  "event_time_utc": "2026-09-15T00:48:24Z",
+  "published_at_utc": "2026-09-15T00:48:24Z",
+  "source_time_text": "28 min ago",
+  "observed_at_utc": "2026-09-15T01:16:24Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["FED", "RATES", "US_MACRO"],
+  "source_url": "https://www.forexfactory.com/news/1418206-us-cornered-into-a-hike",
+  "headline": "US: Cornered into a hike?",
+  "evidence": {
+    "article_role": "COMMENTARY",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 28,
+    "novelty": "LOW",
+    "attention": "HIGH",
+    "dominant_driver": "Fed hike pricing reinforced by resilient US private domestic demand and energy-driven inflation risk",
+    "market_expectations": {"source":"contemporaneous market reports/Forex Factory context","expected_value":"25bp Fed hike","implied_probability":0.93,"distribution_notes":"A hike is already overwhelmingly priced; residual surprise is therefore limited unless policy guidance shifts further hawkish."},
+    "surprise": null,
+    "absorption": {"state":"PARTIALLY_PRICED","reason":"The article summarizes data already known and a rate-hike expectation already heavily reflected in Treasury yields and equity weakness.","observed_reaction":{"US10Y":"had already traded above 5% before easing","US_equities":"already under rate/oil pressure"}},
+    "cross_asset_confirmation": {"verdict":"CONFIRMED","observations":{"DXY":"firm near 99.6 in latest available context","US2Y":"about 4.68% in latest available context","US10Y":"about 4.96% after briefly exceeding 5%","VIX":"about 18.1 in latest available context","WTI":"about 103 USD/bbl","BRENT":"about 109 USD/bbl"}},
+    "decision_notes":"Residual-move forecast only. This is not a fresh data release; the dominant hawkish information is already substantially priced. Latest cross-asset observations are not tick-level and confidence is capped accordingly."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY":{"value":99.6,"timestamp":"2026-09-14T23:00:00Z","direction":"UP/FIRM","source":"latest available market reports","freshness_minutes":137},
+      "US2Y":{"value":4.677,"timestamp":"2026-09-14T23:00:00Z","direction":"UP","source":"latest available market reports","freshness_minutes":137},
+      "US10Y":{"value":4.96,"timestamp":"2026-09-14T23:00:00Z","direction":"FADED_FROM_5PCT_HIGH","source":"latest available market reports","freshness_minutes":137},
+      "VIX":{"value":18.1,"timestamp":"2026-09-14T23:00:00Z","direction":"ELEVATED","source":"latest available market reports","freshness_minutes":137},
+      "WTI":{"value":103.0,"timestamp":"2026-09-14T23:00:00Z","direction":"ELEVATED","source":"latest available market reports","freshness_minutes":137},
+      "BRENT":{"value":109.0,"timestamp":"2026-09-14T23:00:00Z","direction":"ELEVATED","source":"latest available market reports","freshness_minutes":137}
+    },
+    "regimes":{"rates":"HAWKISH_HIGH_YIELDS","usd":"FIRM","volatility":"ELEVATED","oil":"SUPPLY_RISK_ELEVATED","cross_asset":"RISK_OFF_BUT_PARTLY_PRICED"}
+  },
+  "predictions": [
+    {"instrument":"NDX","relevance":"DIRECT","immediate":{"direction":"MIXED","confidence":5,"rationale":"Hawkish backdrop is bearish but already substantially priced."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"FOMC event risk dominates after substantial pre-pricing."},"horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"Low-novelty commentary is unlikely to create a clean new impulse."},"1h":{"direction":"DOWN","confidence":5,"rationale":"High yields and firm hike pricing remain a valuation headwind if yields stay elevated."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Already-extended rate move raises reversal risk before the decision."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Near-fully priced hike makes guidance and yield reaction more important than the article."}},"mechanism":"Higher discount rates pressure long-duration technology valuations.","invalidation":"Sustained decline in Treasury yields and DXY with improving risk appetite.","counter_case":"Because a hike is already heavily priced and US10Y faded from above 5%, yields could retrace and tech could rebound.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"UNKNOWN","trend_1h":"UNKNOWN","session_location":"overnight/pre-US cash session","extension_state":"extended macro move / article low novelty","market_open":true,"source":"latest available market reports","observed_at_utc":"2026-09-15T01:16:24Z"}},
+    {"instrument":"SP500","relevance":"DIRECT","immediate":{"direction":"MIXED","confidence":5,"rationale":"Rate pressure persists but much of the repricing preceded the article."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"FOMC outcome and yield response dominate."},"horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"Commentary adds little incremental information."},"1h":{"direction":"DOWN","confidence":5,"rationale":"Elevated yields and oil remain a broad valuation/inflation headwind."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Absorption is high and yield retracement could offset hawkish pressure."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Near-full hike pricing limits residual directional edge."}},"mechanism":"Higher yields compress equity multiples while oil sustains inflation concerns.","invalidation":"US10Y falls decisively and oil risk premium contracts.","counter_case":"Heavy pre-pricing can trigger a relief rally even if the Fed hikes as expected.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"UNKNOWN","trend_1h":"UNKNOWN","session_location":"overnight/pre-US cash session","extension_state":"extended macro move / range risk","market_open":true,"source":"latest available market reports","observed_at_utc":"2026-09-15T01:16:24Z"}},
+    {"instrument":"XAUUSD","relevance":"SECONDARY","immediate":{"direction":"MIXED","confidence":5,"rationale":"High yields and firm USD are bearish, but geopolitical/oil risk supports haven demand."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Conflicting rate and safe-haven forces remain."},"horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"The hawkish information is old and gold faces opposing macro forces."},"1h":{"direction":"DOWN","confidence":5,"rationale":"If DXY and real-rate proxies stay firm, rate pressure should dominate."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Geopolitical risk and possible yield retracement limit downside conviction."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"FOMC guidance versus haven demand creates two-sided risk."}},"mechanism":"Higher nominal/real yields and USD pressure gold while geopolitical stress supports it.","invalidation":"Sharp fall in yields/DXY or renewed Middle East escalation.","counter_case":"Any yield reversal or fresh Hormuz escalation can rapidly restore safe-haven buying.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"UNKNOWN","trend_1h":"UNKNOWN","session_location":"global overnight","extension_state":"unknown","market_open":true,"source":"latest available market reports","observed_at_utc":"2026-09-15T01:16:24Z"}}
+  ]
+}
