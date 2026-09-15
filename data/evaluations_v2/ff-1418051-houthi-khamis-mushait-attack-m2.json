@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-14T08:20:30+00:00",
   "evaluation_anchor_time_utc": "2026-09-14T08:20:30+00:00",
   "prediction_latency_seconds": 1050.0,
-  "evaluated_at_utc": "2026-09-15T13:29:38.748682+00:00",
+  "evaluated_at_utc": "2026-09-15T13:35:01.456675+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -133,7 +133,7 @@
     {
       "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m2",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -148,13 +148,26 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-14T12:20:30+00:00",
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-14",
+          "actual_price_time_utc": "2026-09-14T20:35:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T20:34:00+00:00",
+          "price": 7619.98,
+          "change_pct": -0.483219,
+          "actual_direction": "DOWN",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 3573.5
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.525926,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.727577,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.525926,
+          "forecast_source": "horizons"
         },
         "15m": {
           "status": "MARKET_CLOSED",
@@ -164,17 +177,19 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 3573.5
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-14",
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-14T09:20:30+00:00",
           "predicted_direction": "DOWN",
           "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3573.5
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-14T12:20:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 3573.5
         }
@@ -183,7 +198,7 @@
     {
       "prediction_id": "ff-1418051-houthi-khamis-mushait-attack-m2",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -198,13 +213,26 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-14T12:20:30+00:00",
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-14",
+          "actual_price_time_utc": "2026-09-14T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T21:16:00+00:00",
+          "price": 29127.158,
+          "change_pct": -0.821569,
+          "actual_direction": "DOWN",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 3543.5
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.532114,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.418136,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.532114,
+          "forecast_source": "horizons"
         },
         "15m": {
           "status": "MARKET_CLOSED",
@@ -214,17 +242,19 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 3543.5
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-14",
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-14T09:20:30+00:00",
           "predicted_direction": "DOWN",
           "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3543.5
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-14T12:20:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 3543.5
         }
@@ -248,25 +278,11 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-14T12:20:30+00:00",
-          "actual_price_time_utc": "2026-09-14T12:21:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-14T12:20:00+00:00",
-          "market_delay_minutes": 0.5,
-          "price": 4327.60009765625,
-          "change_pct": -0.537805,
-          "actual_direction": "DOWN",
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-15",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4,
-          "forecast_source": "horizons",
-          "correct": true,
-          "score_type": "mixed_neutral",
-          "baseline_range_pct": 0.71937,
-          "post_event_range_pct": 0.891756,
-          "mfe_pct": null,
-          "mae_pct": null,
-          "neutral_envelope_pct": 0.71937
+          "forecast_source": "horizons"
         },
         "15m": {
           "status": "DONE",
@@ -289,12 +305,6 @@
           "volatility_ratio": 0.621985,
           "volatility_ratio_threshold": 1.25
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-15",
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-14T09:20:30+00:00",
@@ -314,6 +324,26 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 0.36313
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T12:20:30+00:00",
+          "actual_price_time_utc": "2026-09-14T12:21:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T12:20:00+00:00",
+          "market_delay_minutes": 0.5,
+          "price": 4327.60009765625,
+          "change_pct": -0.537805,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.71937,
+          "post_event_range_pct": 0.891756,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.71937
         }
       }
     }

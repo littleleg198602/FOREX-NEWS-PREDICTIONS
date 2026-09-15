@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-15T03:10:29+00:00",
   "evaluation_anchor_time_utc": "2026-09-15T03:10:29+00:00",
   "prediction_latency_seconds": 4229.0,
-  "evaluated_at_utc": "2026-09-15T13:30:09.522164+00:00",
+  "evaluated_at_utc": "2026-09-15T13:35:20.740797+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control",
@@ -178,12 +178,11 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-15T07:10:29+00:00",
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "forecast_source": "legacy_fallback"
         },
         "15m": {
           "status": "DONE",
@@ -206,12 +205,6 @@
           "directional_threshold_pct": 0.010956,
           "actual_direction_thresholded": "UP"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN",
-          "forecast_source": "legacy_fallback"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-15T04:10:29+00:00",
@@ -232,6 +225,13 @@
           "mae_pct": -0.171826,
           "directional_threshold_pct": 0.014532,
           "actual_direction_thresholded": "UP"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-15T07:10:29+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         }
       }
     }
