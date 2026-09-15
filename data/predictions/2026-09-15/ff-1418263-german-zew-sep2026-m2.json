@@ -1,0 +1,90 @@
+{
+  "prediction_id": "ff-1418263-german-zew-sep2026-m2",
+  "event_id": "ff-1418263-german-zew-sep2026",
+  "event_cluster_id": "2026-09-15-europe-macro-energy",
+  "created_at_utc": "2026-09-15T09:32:00Z",
+  "event_time_utc": "2026-09-15T09:00:00Z",
+  "published_at_utc": "2026-09-15T09:11:00Z",
+  "source_time_text": "Sep 15, 10:11am FF (Europe/London)",
+  "observed_at_utc": "2026-09-15T09:32:00Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["GERMANY", "ZEW", "MACRO", "SENTIMENT"],
+  "source": {"title": "The German ZEW Indicator of Economic Sentiment Stands at plus 34.7 Points", "url": "https://www.forexfactory.com/news/1418263-the-german-zew-indicator-of-economic-sentiment-stands", "provider": "ZEW"},
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 21,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "German ZEW expectations missed consensus while current conditions improved; high energy costs remain the larger European headwind.",
+    "surprise": {"actual": 34.7, "consensus": 39.8, "previous": 34.2, "revised_previous": null, "surprise_direction": "NEGATIVE_VS_CONSENSUS_BUT_SLIGHTLY_UP_VS_PREVIOUS", "components": {"current_situation": -47.1, "current_situation_previous": -61.1}},
+    "market_expectations": {"source": "Forex Factory calendar / ZEW", "expected_value": 39.8, "implied_probability": null, "distribution_notes": "Consensus expected a materially stronger rise than delivered."},
+    "absorption": {"state": "PARTIALLY_PRICED", "reason": "European equities were already weak from oil/inflation/yield pressure before and around the release; ZEW adds only incremental downside information.", "observed_reaction": {"GDAXI": "already under pressure; no clean standalone ZEW break isolated", "STOXX50": "broader European risk-off backdrop dominates"}},
+    "cross_asset_confirmation": {"verdict": "CONFLICTING", "observations": {"DXY": "~99.59 firm", "US10Y": "~4.96%, elevated", "WTI": "~102.6-103.0, elevated", "BRENT": "~106.8-107.2, elevated", "EURUSD": "~1.1538 weak", "European_equities": "already lower, but current-situation component improved materially"}},
+    "decision_notes": "Residual-move forecast from decision time; do not treat the consensus miss as a fresh large shock. No ACTIONABLE model-2 learning segment was used to alter confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.59, "observed_at_utc": "2026-09-15T09:03:00Z", "direction": "UP", "regime": "FIRM", "source": "contemporaneous market briefing", "freshness_minutes": 29},
+      "US2Y": {"value": null, "observed_at_utc": "2026-09-15T09:32:00Z", "direction": "UNKNOWN", "regime": "ELEVATED_UNKNOWN_LEVEL", "source": "no sufficiently fresh verified level found", "freshness_minutes": 0},
+      "US10Y": {"value": 4.96, "observed_at_utc": "2026-09-15T09:00:00Z", "direction": "MIXED", "regime": "VERY_HIGH", "source": "contemporaneous market briefing", "freshness_minutes": 32},
+      "VIX": {"value": 17.1, "observed_at_utc": "2026-09-14T20:00:00Z", "direction": "UP", "regime": "ELEVATED", "source": "last closed spot reference; stale", "freshness_minutes": 812},
+      "WTI": {"value": 102.59, "observed_at_utc": "2026-09-15T09:03:00Z", "direction": "UP", "regime": "HIGH", "source": "contemporaneous market briefing", "freshness_minutes": 29},
+      "BRENT": {"value": 106.78, "observed_at_utc": "2026-09-15T09:03:00Z", "direction": "UP", "regime": "HIGH", "source": "contemporaneous market briefing", "freshness_minutes": 29}
+    },
+    "regimes": {"global": "OIL_INFLATION_RISK_OFF", "europe": "HIGH_ENERGY_HIGH_YIELDS", "rates": "RESTRICTIVE"}
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI", "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "Consensus miss is negative, but the release is partly absorbed and current conditions improved."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fed/energy developments are likely to dominate the next session."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "Consensus miss is negative, but the release is partly absorbed and current conditions improved."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "Weak expectations plus expensive energy can keep pressure on German cyclicals."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Broader oil/yield regime dominates and the ZEW miss alone is not a large new catalyst."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Fed/energy developments are likely to dominate the next session."}
+      },
+      "mechanism": "ZEW expectations miss reduces growth optimism, but improved current conditions and pre-existing oil/rates risk limit incremental signal.",
+      "counter_case": "A fall in oil/yields or a relief bid in European cyclicals could overwhelm the modest ZEW miss.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "MIXED", "trend_1h": "DOWN", "session_location": "lower half / risk-off European session", "extension_state": "extended", "market_open": true, "source": "contemporaneous European market reports; no clean tick-isolated reaction", "observed_at_utc": "2026-09-15T09:32:00Z"}
+    },
+    {
+      "instrument": "STOXX50", "relevance": "SECONDARY",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "German miss is negative but secondary for the broader euro-area index and partly priced."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Next-session direction depends more on rates, oil and Fed repricing."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "German miss is negative but secondary for the broader euro-area index and partly priced."},
+        "1h": {"direction": "DOWN", "confidence": 4, "rationale": "German growth sensitivity and high energy costs modestly bias risk lower."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Cross-asset evidence is conflicting and the current-situation component improved."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Next-session direction depends more on rates, oil and Fed repricing."}
+      },
+      "mechanism": "ZEW expectations miss reduces growth optimism, but improved current conditions and pre-existing oil/rates risk limit incremental signal.",
+      "counter_case": "Improved German current conditions plus lower oil/yields could support a relief move.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "MIXED", "trend_1h": "DOWN", "session_location": "lower half / risk-off European session", "extension_state": "extended", "market_open": true, "source": "contemporaneous European market reports; no clean tick-isolated reaction", "observed_at_utc": "2026-09-15T09:32:00Z"}
+    },
+    {
+      "instrument": "FCHI40", "relevance": "SECONDARY",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "France is only indirectly affected and broader risk-off forces were already active."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "No durable independent French catalyst from this release."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "France is only indirectly affected and broader risk-off forces were already active."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "ZEW spillover is too weak for a high-conviction directional call."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Local drivers and oil/rates dominate over German survey spillover."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "No durable independent French catalyst from this release."}
+      },
+      "mechanism": "ZEW expectations miss reduces growth optimism, but improved current conditions and pre-existing oil/rates risk limit incremental signal.",
+      "counter_case": "A European relief rally would readily outweigh the indirect German sentiment miss.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "MIXED", "trend_1h": "DOWN", "session_location": "lower half / risk-off European session", "extension_state": "extended", "market_open": true, "source": "contemporaneous European market reports; no clean tick-isolated reaction", "observed_at_utc": "2026-09-15T09:32:00Z"}
+    }
+  ]
+}
