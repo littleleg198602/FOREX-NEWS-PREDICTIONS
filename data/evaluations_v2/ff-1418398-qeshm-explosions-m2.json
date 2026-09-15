@@ -1,0 +1,250 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418398-qeshm-explosions-m2",
+  "event_id": "ff-1418398-qeshm-explosions",
+  "event_time_utc": "2026-09-15T22:06:00+00:00",
+  "prediction_time_utc": "2026-09-15T23:02:26+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T23:02:26+00:00",
+  "prediction_latency_seconds": 3386.0,
+  "evaluated_at_utc": "2026-09-15T23:06:57.374625+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "oil-risk"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 56.4,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Unexplained explosions on Iran's Qeshm Island add escalation risk near Hormuz.",
+    "market_expectations": null,
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Oil and yields were already elevated from the ongoing Iran/Hormuz shock before this headline.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "Brent/WTI remain very elevated, confirming geopolitical premium.",
+        "rates": "US10Y near 5% conflicts with a clean gold safe-haven call.",
+        "equities": "US cash session closed; residual reaction must be judged in overnight trading."
+      }
+    },
+    "decision_notes": "Residual-move forecast from decision time; not a forecast of the original headline reaction."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.3,
+        "observed_at_utc": "2026-09-15T23:02:26Z",
+        "direction": "firm",
+        "source": "contemporaneous web",
+        "freshness_minutes": 60,
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-15T23:02:26Z",
+        "direction": "high",
+        "source": "contemporaneous web",
+        "freshness_minutes": 60,
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.004,
+        "observed_at_utc": "2026-09-15T23:02:26Z",
+        "direction": "elevated",
+        "source": "WSJ contemporaneous report",
+        "freshness_minutes": 60,
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-15T23:02:26Z",
+        "direction": "unknown",
+        "source": "unavailable fresh quote",
+        "freshness_minutes": null,
+        "regime": "UNKNOWN"
+      },
+      "WTI": {
+        "value": 105.32,
+        "observed_at_utc": "2026-09-15T23:02:26Z",
+        "direction": "up",
+        "source": "contemporaneous report",
+        "freshness_minutes": 60,
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 108.73,
+        "observed_at_utc": "2026-09-15T23:02:26Z",
+        "direction": "up",
+        "source": "contemporaneous report",
+        "freshness_minutes": 60,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "UNKNOWN",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418398-qeshm-explosions-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7585.73,
+      "reference_price_time_utc": "2026-09-15T20:54:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T20:53:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 128.433,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T23:17:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T00:02:26+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T03:02:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418398-qeshm-explosions-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28937.838,
+      "reference_price_time_utc": "2026-09-15T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 105.433,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T23:17:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T00:02:26+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T03:02:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418398-qeshm-explosions-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4331.7001953125,
+      "reference_price_time_utc": "2026-09-15T22:57:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T22:56:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.433,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T23:17:26+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T00:02:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T03:02:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
