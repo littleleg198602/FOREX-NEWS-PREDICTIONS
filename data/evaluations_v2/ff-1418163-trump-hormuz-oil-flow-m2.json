@@ -1,0 +1,355 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418163-trump-hormuz-oil-flow-m2",
+  "event_id": "ff-1418163-trump-hormuz-oil-flow",
+  "event_time_utc": "2026-09-14T16:26:00+00:00",
+  "prediction_time_utc": "2026-09-14T17:18:20+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T17:18:20+00:00",
+  "prediction_latency_seconds": 3140.0,
+  "evaluated_at_utc": "2026-09-15T06:03:32.753633+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "OIL",
+    "GEOPOLITICS",
+    "HORMUZ",
+    "DEESCALATION",
+    "INCREMENTAL_UPDATE"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 52.0,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Trump's claim that oil is flowing through Hormuz is a de-escalatory shipping-supply signal, but the physical scale of restored flows is not independently confirmed and the market remains in a high-oil, high-yield risk-off regime.",
+    "market_expectations": {
+      "source": "Reuters/CME contemporaneous reporting",
+      "expected_value": "Markets still price a high probability of a Fed rate hike while oil remains above $100 WTI and around $108 Brent.",
+      "implied_probability": 88.1,
+      "distribution_notes": "The Fed rate monitor showed 88.1% probability of a 25bp hike at the September meeting; the Hormuz statement may reduce energy-risk premium only if real shipping flows materially improve."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The statement was roughly 52 minutes old at decision time and followed earlier de-escalatory Trump comments that had already helped U.S. equities recover from session lows. Direct post-headline oil-flow and index reaction was not reliably available, so the forecast targets only residual movement from the decision time.",
+      "observed_reaction": {
+        "SP500": "Reuters reported the S&P 500 down about 0.42% earlier in the U.S. session, with losses narrowing after earlier Trump comments on Iran.",
+        "oil": "Reuters still showed Brent around $108.52 and WTI around $103.81 before this decision window, indicating that a large supply-risk premium remained in place.",
+        "verification": "No independent evidence in the checked sources quantified restored Hormuz shipping volumes after Trump's claim."
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "Dollar index up almost 0.6% on the day after touching 99.648, consistent with a strong-dollar/risk-off regime.",
+        "US2Y": "around 4.63%, elevated, with near-term Fed tightening heavily priced.",
+        "US10Y": "around 4.96-4.98%, a high-yield regime.",
+        "VIX": "latest available intraday context around 18, elevated versus the prior close.",
+        "WTI": "around $103.81 in contemporaneous Reuters reporting, still sharply higher on the day.",
+        "BRENT": "around $108.52 in contemporaneous Reuters reporting, still sharply higher on the day.",
+        "equities": "S&P 500 and Nasdaq remained lower in the U.S. session despite some recovery from earlier lows.",
+        "gold": "High USD and yields remain a counterforce to any safe-haven bid."
+      }
+    },
+    "decision_notes": "This is an authenticated primary-source statement but not independent confirmation of materially normalized shipping. Because the headline is delayed and the oil/rates regime remains stressed, M2 avoids treating it as a fresh full de-escalation shock. Leakage-safe v2 learning was reviewed; no model-2 ACTIONABLE evidence segment was used to materially alter confidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.648,
+        "timestamp_utc": "2026-09-14T15:40:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters contemporaneous market report",
+        "freshness_minutes": 98
+      },
+      "US2Y": {
+        "value": 4.632,
+        "timestamp_utc": "2026-09-14T17:18:01Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing.com real-time page observed during decision",
+        "freshness_minutes": 0
+      },
+      "US10Y": {
+        "value": 4.963,
+        "timestamp_utc": "2026-09-14T17:18:01Z",
+        "direction": "HIGH",
+        "regime": "UNKNOWN",
+        "source": "Investing.com real-time page observed during decision",
+        "freshness_minutes": 0
+      },
+      "VIX": {
+        "value": 18.13,
+        "timestamp_utc": "2026-09-14T13:56:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "latest available intraday context from prior verified market snapshot",
+        "freshness_minutes": 202
+      },
+      "WTI": {
+        "value": 103.81,
+        "timestamp_utc": "2026-09-14T15:40:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters contemporaneous U.S. market report",
+        "freshness_minutes": 98
+      },
+      "BRENT": {
+        "value": 108.52,
+        "timestamp_utc": "2026-09-14T15:40:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters contemporaneous U.S. market report",
+        "freshness_minutes": 98
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "UNKNOWN",
+      "VIX": "ELEVATED",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418163-trump-hormuz-oil-flow-m2",
+      "instrument": "SP500",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7634.27001953125,
+      "reference_price_time_utc": "2026-09-14T17:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T17:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T17:33:20+00:00",
+          "actual_price_time_utc": "2026-09-14T17:34:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T17:33:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 7639.1201171875,
+          "change_pct": 0.063531,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.099418,
+          "post_event_range_pct": 0.12064,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.099418
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T18:18:20+00:00",
+          "actual_price_time_utc": "2026-09-14T18:19:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T18:18:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 7635.3701171875,
+          "change_pct": 0.01441,
+          "actual_direction": "NO_MOVE",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.21338,
+          "post_event_range_pct": 0.122738,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.21338
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T21:18:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418163-trump-hormuz-oil-flow-m2",
+      "instrument": "NDX",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29233.37109375,
+      "reference_price_time_utc": "2026-09-14T17:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T17:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T17:33:20+00:00",
+          "actual_price_time_utc": "2026-09-14T17:34:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T17:33:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 29253.349609375,
+          "change_pct": 0.068341,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.120013,
+          "post_event_range_pct": 0.153954,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.120013
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T18:18:20+00:00",
+          "actual_price_time_utc": "2026-09-14T18:19:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T18:18:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 29257.595703125,
+          "change_pct": 0.082866,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.302482,
+          "post_event_range_pct": 0.222663,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.302482
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T21:18:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418163-trump-hormuz-oil-flow-m2",
+      "instrument": "XAUUSD",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4352.0,
+      "reference_price_time_utc": "2026-09-14T17:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T17:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T17:33:20+00:00",
+          "actual_price_time_utc": "2026-09-14T17:34:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T17:33:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 4351.2001953125,
+          "change_pct": -0.018378,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.126379,
+          "post_event_range_pct": 0.11489,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.126379
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T18:18:20+00:00",
+          "actual_price_time_utc": "2026-09-14T18:19:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T18:18:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 4352.0,
+          "change_pct": 0.0,
+          "actual_direction": "NO_MOVE",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.484837,
+          "post_event_range_pct": 0.195312,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.484837
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T21:18:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "first_available_price_time_utc": "2026-09-14T22:01:00+00:00",
+          "market_delay_minutes": 42.67,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-15",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

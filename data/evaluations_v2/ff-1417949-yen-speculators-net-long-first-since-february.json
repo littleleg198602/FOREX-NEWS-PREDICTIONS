@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-13T05:00:09+00:00",
   "evaluation_anchor_time_utc": "2026-09-13T05:00:09+00:00",
   "prediction_latency_seconds": 2580.0,
-  "evaluated_at_utc": "2026-09-14T14:09:45.102881+00:00",
+  "evaluated_at_utc": "2026-09-15T06:03:00.685029+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -105,7 +105,7 @@
     {
       "prediction_id": "ff-1417949-yen-speculators-net-long-first-since-february",
       "instrument": "NI225",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^N225",
       "yahoo_proxy_for": null,
@@ -119,6 +119,34 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-14",
+          "actual_price_time_utc": "2026-09-14T06:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T06:29:00+00:00",
+          "price": 63633.5703125,
+          "change_pct": -0.582522,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.723875,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.50821,
+          "mfe_pct": 2.000178,
+          "mae_pct": 0.491967,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.172387,
+          "actual_direction_thresholded": "DOWN",
+          "forecast_source": "legacy_fallback"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-13T05:15:09+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 2790.15
+        },
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-13T09:00:09+00:00",
@@ -128,18 +156,6 @@
         "1h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-13T06:00:09+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2790.15
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-14",
-          "predicted_direction": "DOWN",
-          "forecast_source": "legacy_fallback"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-13T05:15:09+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 2790.15
         }

@@ -1,0 +1,316 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418206-us-cornered-hike-m2",
+  "event_id": "ff-1418206-us-cornered-hike",
+  "event_time_utc": "2026-09-15T00:48:24+00:00",
+  "prediction_time_utc": "2026-09-15T01:17:35+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T01:17:35+00:00",
+  "prediction_latency_seconds": 1751.0,
+  "evaluated_at_utc": "2026-09-15T06:03:44.380408+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "FED",
+    "RATES",
+    "US_MACRO"
+  ],
+  "evidence": {
+    "article_role": "COMMENTARY",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 28,
+    "novelty": "LOW",
+    "attention": "HIGH",
+    "dominant_driver": "Fed hike pricing reinforced by resilient US private domestic demand and energy-driven inflation risk",
+    "market_expectations": {
+      "source": "contemporaneous market reports/Forex Factory context",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.93,
+      "distribution_notes": "A hike is already overwhelmingly priced; residual surprise is therefore limited unless policy guidance shifts further hawkish."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The article summarizes data already known and a rate-hike expectation already heavily reflected in Treasury yields and equity weakness.",
+      "observed_reaction": {
+        "US10Y": "had already traded above 5% before easing",
+        "US_equities": "already under rate/oil pressure"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "firm near 99.6 in latest available context",
+        "US2Y": "about 4.68% in latest available context",
+        "US10Y": "about 4.96% after briefly exceeding 5%",
+        "VIX": "about 18.1 in latest available context",
+        "WTI": "about 103 USD/bbl",
+        "BRENT": "about 109 USD/bbl"
+      }
+    },
+    "decision_notes": "Residual-move forecast only. This is not a fresh data release; the dominant hawkish information is already substantially priced. Latest cross-asset observations are not tick-level and confidence is capped accordingly."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.6,
+        "timestamp": "2026-09-14T23:00:00Z",
+        "direction": "UP/FIRM",
+        "source": "latest available market reports",
+        "freshness_minutes": 137,
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.677,
+        "timestamp": "2026-09-14T23:00:00Z",
+        "direction": "UP",
+        "source": "latest available market reports",
+        "freshness_minutes": 137,
+        "regime": "RISING"
+      },
+      "US10Y": {
+        "value": 4.96,
+        "timestamp": "2026-09-14T23:00:00Z",
+        "direction": "FADED_FROM_5PCT_HIGH",
+        "source": "latest available market reports",
+        "freshness_minutes": 137,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "value": 18.1,
+        "timestamp": "2026-09-14T23:00:00Z",
+        "direction": "ELEVATED",
+        "source": "latest available market reports",
+        "freshness_minutes": 137,
+        "regime": "ELEVATED"
+      },
+      "WTI": {
+        "value": 103.0,
+        "timestamp": "2026-09-14T23:00:00Z",
+        "direction": "ELEVATED",
+        "source": "latest available market reports",
+        "freshness_minutes": 137,
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 109.0,
+        "timestamp": "2026-09-14T23:00:00Z",
+        "direction": "ELEVATED",
+        "source": "latest available market reports",
+        "freshness_minutes": 137,
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "ELEVATED",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418206-us-cornered-hike-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29127.158,
+      "reference_price_time_utc": "2026-09-14T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 240.583,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T01:32:35+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 240.583
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T02:17:35+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 240.583
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T05:17:35+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 240.583
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418206-us-cornered-hike-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7619.98,
+      "reference_price_time_utc": "2026-09-14T20:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T20:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 282.583,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T01:32:35+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 282.583
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T02:17:35+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 282.583
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T05:17:35+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 282.583
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418206-us-cornered-hike-m2",
+      "instrument": "XAUUSD",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4341.89990234375,
+      "reference_price_time_utc": "2026-09-15T01:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T01:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.583,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-15T01:32:35+00:00",
+          "actual_price_time_utc": "2026-09-15T01:33:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T01:32:00+00:00",
+          "market_delay_minutes": 0.42,
+          "price": 4344.60009765625,
+          "change_pct": 0.062189,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.32705,
+          "post_event_range_pct": 0.135883,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.32705
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-15T02:17:35+00:00",
+          "actual_price_time_utc": "2026-09-15T02:18:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T02:17:00+00:00",
+          "market_delay_minutes": 0.42,
+          "price": 4346.10009765625,
+          "change_pct": 0.096736,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.432997,
+          "post_event_range_pct": 0.419176,
+          "mfe_pct": 0.184251,
+          "mae_pct": -0.234925,
+          "directional_threshold_pct": 0.0433,
+          "actual_direction_thresholded": "UP"
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-15T05:17:35+00:00",
+          "actual_price_time_utc": "2026-09-15T05:18:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T05:17:00+00:00",
+          "market_delay_minutes": 0.42,
+          "price": 4338.7998046875,
+          "change_pct": -0.0714,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.456028,
+          "post_event_range_pct": 0.55967,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.456028
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

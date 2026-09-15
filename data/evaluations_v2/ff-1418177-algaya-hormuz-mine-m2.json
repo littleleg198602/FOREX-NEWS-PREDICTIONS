@@ -1,0 +1,355 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418177-algaya-hormuz-mine-m2",
+  "event_id": "ff-1418177-algaya-hormuz-mine",
+  "event_time_utc": "2026-09-14T19:00:00+00:00",
+  "prediction_time_utc": "2026-09-14T19:50:17+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T19:50:17+00:00",
+  "prediction_latency_seconds": 3017.0,
+  "evaluated_at_utc": "2026-09-15T06:03:37.434442+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "ENERGY",
+    "HORMUZ",
+    "SHIPPING"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 50.3,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Fresh physical shipping-security shock in the Strait of Hormuz after a reported tanker mine strike, challenging the prior de-escalation narrative that oil flow was normalizing",
+    "market_expectations": {
+      "source": "Contemporaneous market coverage",
+      "expected_value": "Oil and equity markets were already pricing severe Hormuz disruption and elevated Fed tightening risk before this headline.",
+      "implied_probability": null,
+      "distribution_notes": "The new information is the reported mine strike and tanker fire, not the pre-existing closure/risk premium."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The broader Hormuz disruption and high-oil regime were already priced before the headline, but a fresh tanker mine strike is a distinct physical escalation that can create residual risk-off and oil upside from decision time.",
+      "observed_reaction": {
+        "headline_age_minutes": 50.3,
+        "oil_context": "WTI remained around 103 and Brent around 109 in contemporaneous delayed quotes, already elevated on the day.",
+        "equity_context": "US risk assets were already under pressure and VIX elevated before the tanker headline."
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "around 99.5 and firm on the day, consistent with defensive USD demand",
+        "US2Y": "around 4.65%, elevated as Fed-tightening expectations remain restrictive",
+        "US10Y": "around 4.96%, still very high despite retreating from the 5% threshold",
+        "VIX": "around 18.1 and materially above the prior close, confirming elevated risk aversion",
+        "WTI": "around 103.0, high and up on the day",
+        "BRENT": "around 109.2, high and up strongly on the day",
+        "local_confirmation": "The story concerns a physical tanker incident in Hormuz, directly reinforcing the oil/shipping risk channel."
+      }
+    },
+    "decision_notes": "Forecast targets residual movement from 19:50Z. The prior Hormuz risk premium is treated as already present; only the incremental tanker-mine shock is forecast."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.53,
+        "timestamp_utc": "2026-09-14T17:33:00Z",
+        "direction": "FIRM",
+        "regime": "RISING",
+        "source": "Investing.com same-day technical snapshot",
+        "freshness_minutes": 137
+      },
+      "US2Y": {
+        "value": 4.647,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market coverage from prior verified snapshot",
+        "freshness_minutes": 62
+      },
+      "US10Y": {
+        "value": 4.96,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "DOWN_FROM_PEAK",
+        "regime": "FALLING",
+        "source": "Reuters/MarketWatch contemporaneous coverage from prior verified snapshot",
+        "freshness_minutes": 62
+      },
+      "VIX": {
+        "value": 18.13,
+        "timestamp_utc": "2026-09-14T19:49:00Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "Investing.com same-day real-time derived snapshot",
+        "freshness_minutes": 2
+      },
+      "WTI": {
+        "value": 103.08,
+        "timestamp_utc": "2026-09-14T19:49:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "OilRate delayed same-day quote",
+        "freshness_minutes": 2
+      },
+      "BRENT": {
+        "value": 109.21,
+        "timestamp_utc": "2026-09-14T19:49:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "OilRate delayed same-day quote",
+        "freshness_minutes": 2
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FALLING",
+      "VIX": "ELEVATED",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418177-algaya-hormuz-mine-m2",
+      "instrument": "SP500",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7629.83984375,
+      "reference_price_time_utc": "2026-09-14T19:50:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T19:49:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T20:05:17+00:00",
+          "actual_price_time_utc": "2026-09-14T20:06:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T20:05:00+00:00",
+          "market_delay_minutes": 0.72,
+          "price": 7619.98,
+          "change_pct": -0.129227,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.037355,
+          "post_event_range_pct": 0.147057,
+          "mfe_pct": 0.142072,
+          "mae_pct": -0.004985,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T20:50:17+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T23:50:17+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418177-algaya-hormuz-mine-m2",
+      "instrument": "NDX",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29201.806640625,
+      "reference_price_time_utc": "2026-09-14T19:50:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T19:49:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T20:05:17+00:00",
+          "actual_price_time_utc": "2026-09-14T20:06:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T20:05:00+00:00",
+          "market_delay_minutes": 0.72,
+          "price": 29127.158,
+          "change_pct": -0.25563,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.044458,
+          "post_event_range_pct": 0.251409,
+          "mfe_pct": 0.261127,
+          "mae_pct": 0.009718,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T20:50:17+00:00",
+          "actual_price_time_utc": "2026-09-14T20:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T20:50:00+00:00",
+          "market_delay_minutes": 0.72,
+          "price": 29127.158,
+          "change_pct": -0.25563,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.224435,
+          "post_event_range_pct": 0.251409,
+          "mfe_pct": 0.261127,
+          "mae_pct": 0.009718,
+          "directional_threshold_pct": 0.022443,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T23:50:17+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418177-algaya-hormuz-mine-m2",
+      "instrument": "XAUUSD",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4328.5,
+      "reference_price_time_utc": "2026-09-14T19:50:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T19:49:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.283,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T20:05:17+00:00",
+          "actual_price_time_utc": "2026-09-14T20:06:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T20:05:00+00:00",
+          "market_delay_minutes": 0.72,
+          "price": 4326.7001953125,
+          "change_pct": -0.04158,
+          "actual_direction": "DOWN",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.166344,
+          "post_event_range_pct": 0.138616,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "volatility_ratio": 0.833311,
+          "volatility_ratio_threshold": 1.25
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T20:50:17+00:00",
+          "actual_price_time_utc": "2026-09-14T20:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T20:50:00+00:00",
+          "market_delay_minutes": 0.72,
+          "price": 4338.10009765625,
+          "change_pct": 0.221788,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.457429,
+          "post_event_range_pct": 0.40661,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.457429
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T23:50:17+00:00",
+          "actual_price_time_utc": "2026-09-14T23:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T23:50:00+00:00",
+          "market_delay_minutes": 0.72,
+          "price": 4329.2998046875,
+          "change_pct": 0.018478,
+          "actual_direction": "NO_MOVE",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.732349,
+          "post_event_range_pct": 0.480543,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.732349
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-15",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

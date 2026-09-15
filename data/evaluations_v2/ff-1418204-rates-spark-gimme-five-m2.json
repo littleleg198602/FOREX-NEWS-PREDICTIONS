@@ -1,0 +1,299 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418204-rates-spark-gimme-five-m2",
+  "event_id": "ff-1418204-rates-spark-gimme-five",
+  "event_time_utc": "2026-09-15T03:00:00+00:00",
+  "prediction_time_utc": "2026-09-15T04:25:26+00:00",
+  "evaluation_anchor_time_utc": "2026-09-15T04:25:26+00:00",
+  "prediction_latency_seconds": 5126.0,
+  "evaluated_at_utc": "2026-09-15T06:03:41.587531+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "FED",
+    "RATES",
+    "US_MACRO"
+  ],
+  "evidence": {
+    "article_role": "COMMENTARY",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 85.4,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Renewed risk that US 10-year Treasury yields retest 5% as high real yields, issuance pressure and oil-related inflation risk persist into the FOMC",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch contemporaneous reports",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.93,
+      "distribution_notes": "A September hike is already near fully priced, so residual market sensitivity is increasingly about guidance and whether long yields sustain or break above 5%."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "US10Y already traded above 5% on Monday and then faded below it; the article adds a fresh framework for a retest rather than a new data shock.",
+      "observed_reaction": {
+        "US10Y": "touched about 5.014% then eased near 4.95%",
+        "DXY": "firm near a two-week high around 99.55",
+        "US_equities": "Monday close was already weaker, with S&P 500 -0.48% and Nasdaq -0.56%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "99.55, firm near two-week high",
+        "US2Y": "about 4.65%, elevated",
+        "US10Y": "about 4.95% after a 5.014% intraday high",
+        "VIX": "17.10 at latest completed US close, +7.95%",
+        "WTI": "about 102-103 USD/bbl in latest contemporaneous reports",
+        "BRENT": "about 107 USD/bbl in latest contemporaneous reports"
+      }
+    },
+    "decision_notes": "Residual-move forecast only. This is analysis/commentary, not a fresh release. The 5% yield shock has already occurred once, so short-horizon directional confidence is capped; renewed yield confirmation would matter more than the headline itself. No M2 learning segment was used to change confidence because no clearly applicable ACTIONABLE model-2 evidence segment was established from the leakage-safe profile."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.55,
+        "timestamp": "2026-09-15T03:30:00Z",
+        "direction": "UP/FIRM",
+        "source": "Reuters Sep 15 contemporaneous market report",
+        "freshness_minutes": 55,
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.65,
+        "timestamp": "2026-09-15T01:47:00Z",
+        "direction": "ELEVATED",
+        "source": "latest contemporaneous Treasury market context",
+        "freshness_minutes": 158,
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 4.95,
+        "timestamp": "2026-09-15T03:30:00Z",
+        "direction": "BELOW_5PCT_AFTER_REJECTION",
+        "source": "Reuters/current market reports",
+        "freshness_minutes": 55,
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 17.1,
+        "timestamp": "2026-09-14T20:00:00Z",
+        "direction": "UP/ELEVATED",
+        "source": "latest completed US session close",
+        "freshness_minutes": 505,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 102.7,
+        "timestamp": "2026-09-15T03:30:00Z",
+        "direction": "ELEVATED",
+        "source": "latest contemporaneous market reports",
+        "freshness_minutes": 55,
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 107.0,
+        "timestamp": "2026-09-15T03:30:00Z",
+        "direction": "ELEVATED",
+        "source": "Reuters Sep 15 contemporaneous market report",
+        "freshness_minutes": 55,
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418204-rates-spark-gimme-five-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29127.158,
+      "reference_price_time_utc": "2026-09-14T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 428.433,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T04:40:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 428.433
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T05:25:26+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 428.433
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T08:25:26+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418204-rates-spark-gimme-five-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7619.98,
+      "reference_price_time_utc": "2026-09-14T20:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T20:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 470.433,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T04:40:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 470.433
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T05:25:26+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 470.433
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T08:25:26+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418204-rates-spark-gimme-five-m2",
+      "instrument": "XAUUSD",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4343.7001953125,
+      "reference_price_time_utc": "2026-09-15T04:25:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T04:24:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.433,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-15T04:40:26+00:00",
+          "actual_price_time_utc": "2026-09-15T04:41:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T04:40:00+00:00",
+          "market_delay_minutes": 0.57,
+          "price": 4344.89990234375,
+          "change_pct": 0.027619,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.161153,
+          "post_event_range_pct": 0.094392,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.161153
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-15T05:25:26+00:00",
+          "actual_price_time_utc": "2026-09-15T05:26:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T05:25:00+00:00",
+          "market_delay_minutes": 0.57,
+          "price": 4337.10009765625,
+          "change_pct": -0.151946,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.25324,
+          "post_event_range_pct": 0.267056,
+          "mfe_pct": 0.165762,
+          "mae_pct": -0.101294,
+          "directional_threshold_pct": 0.025324,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-15T08:25:26+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

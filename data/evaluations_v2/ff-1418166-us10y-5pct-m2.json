@@ -1,0 +1,365 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418166-us10y-5pct-m2",
+  "event_id": "ff-1418166-us10y-5pct",
+  "event_time_utc": "2026-09-14T18:24:12+00:00",
+  "prediction_time_utc": "2026-09-14T18:48:12+00:00",
+  "evaluation_anchor_time_utc": "2026-09-14T18:48:12+00:00",
+  "prediction_latency_seconds": 1440.0,
+  "evaluated_at_utc": "2026-09-15T06:03:35.104920+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "RATES",
+    "FED",
+    "BONDS",
+    "INFLATION"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 24,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "US10Y briefly breaking 5% as oil-driven inflation and Fed-hike expectations lift long-term discount rates",
+    "market_expectations": {
+      "source": "Reuters/CME references in contemporaneous coverage",
+      "expected_value": "25bp Fed hike this week",
+      "implied_probability": 0.89,
+      "distribution_notes": "Contemporaneous reports placed a quarter-point hike probability near 87-89%."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "FADED",
+      "reason": "US10Y briefly reached roughly 5.01% but retreated near 4.96% by decision time; equities also recovered part of their initial losses.",
+      "observed_reaction": {
+        "US10Y_peak_pct": 5.011,
+        "US10Y_decision_pct": 4.96,
+        "gold_futures_day_pct": -1.89,
+        "oil_pullback_note": "WTI and Brent had pulled back materially from intraday highs while remaining elevated."
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firmer near 99.60, bearish for gold and long-duration equities",
+        "US2Y": "elevated around 4.65%, consistent with tighter policy expectations",
+        "US10Y": "rejected the 5% area and eased near 4.96%, reducing immediate pressure",
+        "VIX": "elevated versus prior sessions but not showing a fresh panic spike at decision time",
+        "WTI": "around 100.96 after pulling back from above 104",
+        "BRENT": "around 105.46 after pulling back from near 110",
+        "equities": "major US indices remained softer but had recovered part of the initial decline"
+      }
+    },
+    "decision_notes": "Forecast targets residual movement from decision time, not the already-observed initial reaction to the 5% threshold."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.596,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market coverage",
+        "freshness_minutes": 60
+      },
+      "US2Y": {
+        "value": 4.647,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "contemporaneous market coverage",
+        "freshness_minutes": 60
+      },
+      "US10Y": {
+        "value": 4.96,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "DOWN_FROM_PEAK",
+        "regime": "FALLING",
+        "source": "Reuters/MarketWatch contemporaneous coverage",
+        "freshness_minutes": 15
+      },
+      "VIX": {
+        "value": 18.1,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "UP",
+        "regime": "ELEVATED",
+        "source": "same-day market coverage",
+        "freshness_minutes": 90
+      },
+      "WTI": {
+        "value": 100.96,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "DOWN_FROM_PEAK",
+        "regime": "FALLING",
+        "source": "MarketWatch contemporaneous coverage",
+        "freshness_minutes": 30
+      },
+      "BRENT": {
+        "value": 105.46,
+        "timestamp_utc": "2026-09-14T18:48:12Z",
+        "direction": "DOWN_FROM_PEAK",
+        "regime": "FALLING",
+        "source": "MarketWatch contemporaneous coverage",
+        "freshness_minutes": 30
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FALLING",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418166-us10y-5pct-m2",
+      "instrument": "NDX",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29247.306640625,
+      "reference_price_time_utc": "2026-09-14T18:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T18:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.2,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T19:03:12+00:00",
+          "actual_price_time_utc": "2026-09-14T19:04:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T19:03:00+00:00",
+          "market_delay_minutes": 0.8,
+          "price": 29229.8359375,
+          "change_pct": -0.059734,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.080797,
+          "post_event_range_pct": 0.097305,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.080797
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T19:48:12+00:00",
+          "actual_price_time_utc": "2026-09-14T19:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T19:48:00+00:00",
+          "market_delay_minutes": 0.8,
+          "price": 29197.609375,
+          "change_pct": -0.169921,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.167129,
+          "post_event_range_pct": 0.224086,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.167129
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T22:48:12+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418166-us10y-5pct-m2",
+      "instrument": "SP500",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7635.8701171875,
+      "reference_price_time_utc": "2026-09-14T18:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T18:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.2,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T19:03:12+00:00",
+          "actual_price_time_utc": "2026-09-14T19:04:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T19:03:00+00:00",
+          "market_delay_minutes": 0.8,
+          "price": 7632.169921875,
+          "change_pct": -0.048458,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.057359,
+          "post_event_range_pct": 0.084472,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.057359
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T19:48:12+00:00",
+          "actual_price_time_utc": "2026-09-14T19:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T19:48:00+00:00",
+          "market_delay_minutes": 0.8,
+          "price": 7629.52978515625,
+          "change_pct": -0.083034,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.121925,
+          "post_event_range_pct": 0.12926,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.121925
+        },
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-14T22:48:12+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418166-us10y-5pct-m2",
+      "instrument": "XAUUSD",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4347.89990234375,
+      "reference_price_time_utc": "2026-09-14T18:48:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-14T18:47:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.2,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T19:03:12+00:00",
+          "actual_price_time_utc": "2026-09-14T19:04:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T19:03:00+00:00",
+          "market_delay_minutes": 0.8,
+          "price": 4345.7998046875,
+          "change_pct": -0.048301,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.144904,
+          "post_event_range_pct": 0.091998,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.144904
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T19:48:12+00:00",
+          "actual_price_time_utc": "2026-09-14T19:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T19:48:00+00:00",
+          "market_delay_minutes": 0.8,
+          "price": 4329.5,
+          "change_pct": -0.423191,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.232298,
+          "post_event_range_pct": 0.471492,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.232298
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-14T22:48:12+00:00",
+          "actual_price_time_utc": "2026-09-14T22:49:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-14T22:48:00+00:00",
+          "market_delay_minutes": 0.8,
+          "price": 4335.39990234375,
+          "change_pct": -0.287495,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.053378,
+          "post_event_range_pct": 0.602594,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 1.053378
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-15",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
