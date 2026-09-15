@@ -1,0 +1,99 @@
+{
+  "prediction_id": "ff-1418220-china-august-activity-m2",
+  "event_id": "ff-1418220-china-august-activity",
+  "event_cluster_id": "china-august-2026-activity",
+  "created_at_utc": "2026-09-15T03:10:29Z",
+  "event_time_utc": "2026-09-15T02:00:00Z",
+  "published_at_utc": "2026-09-15T02:01:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["china", "macro", "growth", "data_release"],
+  "source_url": "https://www.forexfactory.com/news/1418220-china-national-economy-remained-steady-with-innovation-led-and",
+  "source_time_text": "Sep 15, 3:01am FF / linked data released 02:00 UTC",
+  "observed_at_utc": "2026-09-15T03:10:29Z",
+  "time_source": "forex_factory_absolute_and_linked_event",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 70.5,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "China domestic demand remains weak despite a stronger industrial-production print",
+    "market_expectations": {
+      "source": "Forex Factory calendar / Reuters poll",
+      "expected_value": {"industrial_production_yoy": "4.8%", "retail_sales_yoy": "0.8%", "fixed_asset_investment_ytd_yoy": "-7.2%", "unemployment_rate": "5.2%"},
+      "implied_probability": null,
+      "distribution_notes": "The release was expected to show firmer production but still-soft domestic demand."
+    },
+    "surprise": {
+      "actual": {"industrial_production_yoy": "5.2%", "retail_sales_yoy": "0.4%", "fixed_asset_investment_ytd_yoy": "-7.2%", "unemployment_rate": "5.3%"},
+      "consensus": {"industrial_production_yoy": "4.8%", "retail_sales_yoy": "0.8%", "fixed_asset_investment_ytd_yoy": "-7.2%", "unemployment_rate": "5.2%"},
+      "previous": {"industrial_production_yoy": "4.5%", "retail_sales_yoy": "0.6%", "fixed_asset_investment_ytd_yoy": "-6.7%", "unemployment_rate": "5.2%"},
+      "revised_previous": null,
+      "surprise_direction": "MIXED_BUT_DOMESTIC_DEMAND_WEAK",
+      "components": {"production": "beat", "retail": "miss", "investment": "in_line_but_deteriorated", "unemployment": "worse"}
+    },
+    "absorption": {
+      "state": "NO_REACTION",
+      "reason": "About 70 minutes after the 02:00 UTC release, AUS200 was near 8,746, roughly +0.05% on the day and inside a narrow 8,734-8,768 range; the mixed release had not produced a clean directional break.",
+      "observed_reaction": {"AUS200_level": 8746.0, "AUS200_day_change_pct": 0.05, "AUDUSD": 0.7134, "copper_change_pct": -2.23}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "negative": "Retail sales missed, investment deteriorated, unemployment rose, copper was down about 2.2% and AUD was soft.",
+        "positive_or_offsetting": "Industrial production beat consensus and AUS200 itself remained roughly flat/slightly positive rather than extending lower."
+      }
+    },
+    "decision_notes": "Forecast is the residual move from the 03:10 UTC decision time, not the original 02:00 UTC data reaction. No M2 learning segment was used to alter confidence because no verified ACTIONABLE model-2 evidence segment specific to this setup was established from the available leakage-safe profile."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.55, "timestamp_utc": "2026-09-15T03:00:00Z", "direction": "UP", "regime": "FIRM", "source": "Reuters", "freshness_minutes": 10},
+      "US2Y": {"value": 4.67, "timestamp_utc": "2026-09-15T00:00:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "contemporaneous market reports", "freshness_minutes": 190},
+      "US10Y": {"value": 4.99, "timestamp_utc": "2026-09-15T03:00:00Z", "direction": "UP", "regime": "NEAR_5_PERCENT", "source": "Australian market snapshot / Reuters", "freshness_minutes": 10},
+      "VIX": {"value": 17.10, "timestamp_utc": "2026-09-14T20:00:00Z", "direction": "UP", "regime": "ELEVATED", "source": "US close market data", "freshness_minutes": 430},
+      "WTI": {"value": 102.68, "timestamp_utc": "2026-09-15T03:00:00Z", "direction": "UP", "regime": "ABOVE_100", "source": "Reuters", "freshness_minutes": 10},
+      "BRENT": {"value": 106.96, "timestamp_utc": "2026-09-15T03:00:00Z", "direction": "UP", "regime": "ELEVATED", "source": "Reuters", "freshness_minutes": 10},
+      "AUDUSD": {"value": 0.7134, "timestamp_utc": "2026-09-15T03:00:00Z", "direction": "SLIGHT_DOWN", "regime": "SOFT", "source": "Australian market snapshot", "freshness_minutes": 10},
+      "AU10Y": {"value": 5.37, "timestamp_utc": "2026-09-15T03:00:00Z", "direction": "UP", "regime": "HIGH_YIELD", "source": "Australian market snapshot", "freshness_minutes": 10},
+      "COPPER": {"value": 6.33, "timestamp_utc": "2026-09-15T03:00:00Z", "direction": "DOWN", "regime": "WEAK", "source": "Australian market snapshot", "freshness_minutes": 10},
+      "AUS200": {"value": 8746.0, "timestamp_utc": "2026-09-15T03:10:00Z", "direction": "FLAT", "regime": "RANGE", "source": "ADVFN", "freshness_minutes": 1}
+    },
+    "regimes": {"global_risk": "CAUTIOUS", "rates": "RESTRICTIVE", "oil": "ELEVATED", "china_growth": "MIXED_WEAK_DOMESTIC_DEMAND", "australia_equities": "RANGE"}
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "The China release is internally mixed and AUS200 has shown little net reaction more than an hour after the data."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Weak Chinese consumption/investment is offset by stronger production and potential stimulus expectations."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 5, "rationale": "No clean post-release break; current index action is range-bound."},
+        "1h": {"direction": "DOWN", "confidence": 5, "rationale": "Soft retail, deeper investment contraction, higher unemployment and weak copper can weigh on China-sensitive Australian cyclicals if the residual macro signal is repriced."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Production beat and stimulus expectations can offset the domestic-demand miss, while global oil/rates remain separate headwinds."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The mixed China signal lacks enough independent directional force to dominate the next Australian session."
+      },
+      "mechanism": "China is Australia's largest trade partner; weaker consumption and investment pressure miners/cyclicals, while stronger factory output partly offsets the demand signal.",
+      "invalidation": "A decisive AUS200 breakout above the session range with stronger AUD/copper would invalidate the residual bearish 1h case; a broad China-risk selloff would invalidate the neutral longer-horizon view.",
+      "counter_case": "The industrial-production beat may dominate, and weak domestic data may raise expectations for stronger Beijing stimulus, supporting Australian resource and China-sensitive equities.",
+      "technical_state": {
+        "reaction_since_event_pct": 0.05,
+        "trend_5_15m": "FLAT_TO_SLIGHT_UP",
+        "trend_1h": "RANGE",
+        "session_location": "MID_RANGE",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "ADVFN / Australian market snapshot",
+        "observed_at_utc": "2026-09-15T03:10:00Z"
+      }
+    }
+  ]
+}
