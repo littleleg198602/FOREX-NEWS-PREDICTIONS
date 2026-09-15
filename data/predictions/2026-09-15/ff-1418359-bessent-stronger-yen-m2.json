@@ -1,0 +1,67 @@
+{
+  "prediction_id": "ff-1418359-bessent-stronger-yen-m2",
+  "event_id": "ff-1418359-bessent-stronger-yen",
+  "event_cluster_id": "us-japan-yen-intervention-2026",
+  "created_at_utc": "2026-09-15T16:13:02Z",
+  "event_time_utc": "2026-09-15T16:08:02Z",
+  "published_at_utc": "2026-09-15T16:08:02Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["JPY", "policy", "intervention", "US Treasury"],
+  "source_time_text": "5 min ago",
+  "observed_at_utc": "2026-09-15T16:13:02Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "source_url": "https://www.forexfactory.com/news/1418359-us-treasurys-bessent-stronger-yen-is-better-for",
+  "headline": "US Treasury's Bessent: Stronger yen is better for US exporters",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 5,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Renewed explicit US Treasury support for a stronger yen and confirmation of US-Japan intervention coordination.",
+    "market_expectations": {"source": "Reuters/market reporting", "expected_value": null, "implied_probability": 0.8, "distribution_notes": "BOJ September hike expectations are already elevated; Reuters reporting showed an 80% probability context."},
+    "surprise": null,
+    "absorption": {"state": "PARTIALLY_PRICED", "reason": "The yen-support/intervention stance is not new and Tokyo cash trading had already closed; USD/JPY had traded around 154.9 during Tokyo hours.", "observed_reaction": {"NI225_cash_close_pct": -0.01, "USDJPY_late_tokyo": 154.9}},
+    "cross_asset_confirmation": {"verdict": "CONFLICTING", "observations": {"USDJPY": "Around 154.9 in late Tokyo trade, weaker yen on the day despite policy support rhetoric.", "US10Y": "About 4.94%, still high.", "DXY": "About 99.09-99.62 depending delayed source.", "oil": "WTI about 103, Brent about 106.08; high energy costs remain a Japan headwind."}},
+    "decision_notes": "Residual forecast only. Cash Nikkei is closed; fixed 15m/1h/4h horizons are not substituted with the next cash open. M2 learning profile has no ACTIONABLE model-2 segment applicable here, so confidence is unchanged."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.09, "observed_at_utc": "2026-09-15T15:58:00Z", "direction": "firm", "source": "WellsTrack delayed snapshot", "freshness_minutes": 15},
+      "US2Y": {"value": 4.68, "observed_at_utc": "2026-09-15T14:41:00Z", "direction": "high/firm", "source": "earlier same-day market snapshot", "freshness_minutes": 92},
+      "US10Y": {"value": 4.94, "observed_at_utc": "2026-09-15T15:58:00Z", "direction": "below earlier 5% test", "source": "WellsTrack delayed snapshot", "freshness_minutes": 15},
+      "VIX": {"value": 17.1, "observed_at_utc": "2026-09-14T20:00:00Z", "direction": "elevated", "source": "prior close", "freshness_minutes": 1213},
+      "WTI": {"value": 103.0, "observed_at_utc": "2026-09-15T15:58:00Z", "direction": "elevated", "source": "WellsTrack delayed snapshot", "freshness_minutes": 15},
+      "BRENT": {"value": 106.08, "observed_at_utc": "2026-09-15T15:58:00Z", "direction": "elevated", "source": "WellsTrack delayed snapshot", "freshness_minutes": 15},
+      "USDJPY": {"value": 154.9, "observed_at_utc": "2026-09-15T06:00:00Z", "direction": "yen weaker during Tokyo session", "source": "Tokyo Closing Bell", "freshness_minutes": 613},
+      "JGB10Y": {"value": 2.988, "observed_at_utc": "2026-09-14T06:00:00Z", "direction": "high", "source": "MOF via Tokyo Closing Bell", "freshness_minutes": 2053}
+    },
+    "regimes": {"rates": "HIGH", "usd": "FIRM", "volatility": "ELEVATED", "oil": "HIGH", "japan": "BOJ-tightening expectations / yen-intervention regime"}
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 3, "rationale": "Tokyo cash market is closed and the yen-support stance is partly known; no clean residual 15m directional edge."},
+      "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "If the stronger-yen policy signal carries into Tokyo, exporter-heavy Nikkei constituents face a valuation/earnings translation headwind."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 3, "rationale": "Cash market closed; incremental rhetoric is partly priced and cannot produce a clean cash-index reaction now."},
+        "1h": {"direction": "MIXED", "confidence": 3, "rationale": "No fresh cash-session confirmation; USD/JPY context conflicts with the stronger-yen message."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Policy support for yen is bearish for exporters, but the signal is not new and pre-BOJ positioning can dominate."},
+        "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "A renewed yen-strength impulse would pressure exporter-heavy Nikkei at the next Tokyo session."}
+      },
+      "mechanism": "Stronger yen reduces translated overseas earnings and competitiveness for Japanese exporters; intervention coordination raises the probability of yen-support action.",
+      "invalidation": "USD/JPY resumes a sustained rise above the recent 155 area or BOJ expectations turn materially less hawkish before Tokyo opens.",
+      "counter_case": "The comment may be dismissed as repetition; if USD/JPY stays firm and global tech stabilizes, Nikkei can rise despite yen-support rhetoric.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": null, "trend_1h": null, "session_location": "Tokyo cash closed after a nearly flat session", "extension_state": "range", "market_open": false, "source": "Tokyo Closing Bell / Forex Factory", "observed_at_utc": "2026-09-15T16:13:02Z"}
+    }
+  ]
+}
