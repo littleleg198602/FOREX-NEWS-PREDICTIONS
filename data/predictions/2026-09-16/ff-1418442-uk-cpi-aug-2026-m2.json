@@ -1,0 +1,44 @@
+{
+  "prediction_id": "ff-1418442-uk-cpi-aug-2026-m2",
+  "event_id": "ff-1418442-uk-cpi-aug-2026",
+  "event_cluster_id": "uk-2026-09-16-inflation",
+  "created_at_utc": "2026-09-16T06:49:45Z",
+  "event_time_utc": "2026-09-16T06:04:00Z",
+  "published_at_utc": "2026-09-16T06:04:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["uk","inflation","data_release"],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 45.75,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "UK headline CPI rose to 3.1% y/y as expected, driven mainly by motor fuels, while core CPI stayed 2.6% and services inflation 3.4%.",
+    "market_expectations": {"source":"consensus reported by Reuters/FXStreet","expected_value":"3.1% y/y headline; 2.6% core","implied_probability":null,"distribution_notes":"BoE hold is still the base case; market reports around 80% hold probability."},
+    "surprise": {"actual":{"headline_yoy":3.1,"headline_mom":0.5,"core_yoy":2.6,"services_yoy":3.4,"ppi_input_yoy":6.1,"ppi_output_yoy":3.7},"consensus":{"headline_yoy":3.1,"core_yoy":2.6},"previous":{"headline_yoy":2.9,"core_yoy":2.6},"revised_previous":{"ppi_input_yoy":5.8,"ppi_output_yoy":3.3},"surprise_direction":"NEUTRAL_HEADLINE","components":{"largest_upward_contribution":"transport, especially motor fuels","fuel_yoy_pct":23.0,"services_yoy":3.4}},
+    "absorption": {"state":"PARTIALLY_PRICED","reason":"Headline and core matched consensus; UK cash equities had not opened yet, but rates already carried a substantial inflation premium and GBP weakened slightly after the release.","observed_reaction":{"GBP":"slightly weaker after release","UK10Y_gilt_pct":5.41}},
+    "cross_asset_confirmation": {"verdict":"CONFLICTING","observations":{"UK10Y":"~5.41%, high-rate valuation headwind","GBP":"slightly weaker, not a hawkish confirmation","Brent":"~107.82, down ~0.9% but still elevated","WTI":"~104.87, down ~0.9% but still elevated","US10Y":"~4.993%, just below 5%","DXY":"near multi-week highs","US2Y":"~4.68% previous close / restrictive","VIX":"~17.2 previous close, mildly elevated"}},
+    "decision_notes": "Residual forecast from 06:49:45Z; UK100 cash market not yet open, so fixed 15m/1h horizons are not substituted with the later market open. No M2 ACTIONABLE learning segment was used to alter confidence."
+  },
+  "market_context_at_prediction": {"series":{"DXY":{"value":99.3,"observed_at_utc":"2026-09-16T06:49:45Z","direction":"firm","regime":"multi-week-high-area","source":"Reuters/market reports","freshness_minutes":60},"US2Y":{"value":4.68,"observed_at_utc":"2026-09-16T06:49:45Z","direction":"high","regime":"restrictive","source":"prior US close / current reporting","freshness_minutes":480},"US10Y":{"value":4.993,"observed_at_utc":"2026-09-16T06:49:45Z","direction":"slightly_down","regime":"near-5pct","source":"WSJ Asian trade","freshness_minutes":120},"VIX":{"value":17.2,"observed_at_utc":"2026-09-16T06:49:45Z","direction":"mildly_up","regime":"elevated","source":"prior US close","freshness_minutes":480},"WTI":{"value":104.87,"observed_at_utc":"2026-09-16T06:49:45Z","direction":"down","regime":"geopolitical-premium","source":"WSJ","freshness_minutes":120},"BRENT":{"value":107.82,"observed_at_utc":"2026-09-16T06:49:45Z","direction":"down","regime":"geopolitical-premium","source":"WSJ","freshness_minutes":120},"UK10Y":{"value":5.41,"observed_at_utc":"2026-09-16T06:49:45Z","direction":"high","regime":"highest-since-2007-area","source":"UK market reporting","freshness_minutes":180}},"regimes":{"global_rates":"high","oil":"elevated but easing","uk_inflation":"headline energy-driven; core stable","risk":"cautious pre-Fed"}},
+  "predictions": [{
+    "instrument":"UK100","relevance":"DIRECT",
+    "immediate":{"direction":"MIXED","confidence":5,"rationale":"CPI matched consensus and UK cash market is still closed; no clean residual directional edge."},
+    "next_session":{"direction":"MIXED","confidence":5,"rationale":"BoE decision and global rates should dominate after the initial inflation read."},
+    "horizons":{
+      "15m":{"direction":"MIXED","confidence":5,"rationale":"Cash market closed; headline/core matched consensus and GBP reaction is not hawkish."},
+      "1h":{"direction":"MIXED","confidence":5,"rationale":"Near the London open, high gilt yields conflict with a largely expected, energy-led CPI rise."},
+      "4h":{"direction":"MIXED","confidence":5,"rationale":"Stable core/services inflation offsets the headline acceleration; BoE hold remains base case."},
+      "next_session":{"direction":"MIXED","confidence":5,"rationale":"BoE decision and Fed spillover dominate the next session."}
+    },
+    "mechanism":"Expected headline inflation rise increases nominal-rate pressure, but stable core/services and weaker GBP limit a clean bearish equity signal.",
+    "invalidation":"A sharp gilt-yield rise with broad FTSE selling after the open would validate a bearish path; falling yields plus commodity strength would favor upside.",
+    "counter_case":"FTSE 100 can rise if falling oil/yields and its international revenue mix outweigh domestic inflation concerns.",
+    "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"not available - cash market closed","trend_1h":"not available - cash market closed","session_location":"pre-open","extension_state":"unknown","market_open":false,"source":"UK100 cash session status at decision time","observed_at_utc":"2026-09-16T06:49:45Z"}
+  }]
+}
