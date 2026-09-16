@@ -1,0 +1,64 @@
+{
+  "prediction_id": "ff-1418447-vdl-eu-china-trade-m2",
+  "event_id": "ff-1418447-vdl-eu-china-trade",
+  "event_cluster_id": "eu-china-trade-policy-2026",
+  "created_at_utc": "2026-09-16T08:01:38Z",
+  "event_time_utc": "2026-09-16T07:27:00Z",
+  "published_at_utc": "2026-09-16T07:27:00Z",
+  "source_time_text": "Sep 16, 2026 8:27am FF Europe/London",
+  "observed_at_utc": "2026-09-16T08:01:38Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["europe", "trade_policy", "china"],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 34.6,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Von der Leyen says EU-China trade deficit reached a tipping point and EU will use all available trade tools; no concrete tariff action announced yet.",
+    "market_expectations": null,
+    "surprise": null,
+    "absorption": {"state":"NO_REACTION","reason":"No reliable instrument-specific reaction since 07:27 UTC was available by decision time; broader European equities had been rebounding before the headline.","observed_reaction":{"pre_headline_DAX":"about +0.4% at 07:05 UTC"}},
+    "cross_asset_confirmation": {"verdict":"CONFLICTING","observations":{"europe_equities":"DAX/STOXX 600 were +0.4% before the headline","oil":"WTI/Brent pulling back but still elevated","rates":"US10Y and Bund yields easing from peaks","fed":"Fed hike ~93% priced for later today"}},
+    "decision_notes": "Fresh policy rhetoric, but residual forecast is from 08:01 UTC and avoids assuming the original headline reaction. Learning profile had no ACTIONABLE M2 evidence segment applicable enough to alter confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY":{"value":99.7,"observed_at_utc":"2026-09-16T07:17:00Z","direction":"UP","regime":"one-month-high-area","source":"fresh market report","freshness_minutes":45},
+      "US2Y":{"value":4.68,"observed_at_utc":"2026-09-16T08:00:00Z","direction":"ELEVATED","regime":"tightening-priced","source":"same-day market reporting","freshness_minutes":60},
+      "US10Y":{"value":4.993,"observed_at_utc":"2026-09-16T07:30:00Z","direction":"DOWN_FROM_HIGH","regime":"near-5pct","source":"WSJ same-day market report","freshness_minutes":32},
+      "VIX":{"value":17.2,"observed_at_utc":"2026-09-16T05:00:00Z","direction":"RISING","regime":"slight-caution","source":"same-day market monitor","freshness_minutes":182},
+      "WTI":{"value":104.19,"observed_at_utc":"2026-09-16T07:30:00Z","direction":"DOWN","regime":"elevated","source":"Reuters same-day market report","freshness_minutes":32},
+      "BRENT":{"value":107.53,"observed_at_utc":"2026-09-16T07:30:00Z","direction":"DOWN","regime":"elevated","source":"Reuters same-day market report","freshness_minutes":32},
+      "DE10Y":{"value":3.529,"observed_at_utc":"2026-09-16T07:30:00Z","direction":"DOWN","regime":"high","source":"WSJ same-day market report","freshness_minutes":32},
+      "GDAXI":{"value":null,"observed_at_utc":"2026-09-16T07:05:00Z","direction":"UP_0.4PCT","regime":"rebound","source":"Reuters same-day market report","freshness_minutes":57}
+    },
+    "regimes":{"europe_equities":"rebound after two down sessions","rates":"high but easing from peaks","oil":"elevated but pulling back","fed":"25bp hike ~93% priced","trade_policy":"new EU-China escalation rhetoric"}
+  },
+  "predictions": [
+    {
+      "instrument":"GDAXI","relevance":"DIRECT","immediate":{"direction":"MIXED","confidence":4,"rationale":"Fresh rhetoric but no immediate tariff measure; Fed/oil relief dominate current tape."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Policy follow-through is needed for a durable index effect."},
+      "horizons":{"15m":{"direction":"MIXED","confidence":4,"rationale":"No enacted measure and European equities were already rebounding."},"1h":{"direction":"MIXED","confidence":4,"rationale":"Trade friction is a headwind but falling oil/yields offset it."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Fed decision later today is likely to dominate."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Direction depends on concrete EU measures or Chinese retaliation."}},
+      "mechanism":"Potential EU-China trade escalation can pressure China-exposed exporters and industrials.","invalidation":"No concrete trade action and continued equity rebound despite the rhetoric.","counter_case":"Markets treat the speech as negotiating rhetoric; lower oil/yields and Fed relief extend the European rebound.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"unknown","trend_1h":"up/rebound before headline","session_location":"European cash morning","extension_state":"range/unknown","market_open":true,"source":"pre-decision Reuters market context; exact post-headline instrument reaction unavailable","observed_at_utc":"2026-09-16T08:01:38Z"}
+    },
+    {
+      "instrument":"STOXX50","relevance":"DIRECT","immediate":{"direction":"MIXED","confidence":4,"rationale":"Fresh rhetoric but no immediate tariff measure; Fed/oil relief dominate current tape."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Policy follow-through is needed for a durable index effect."},
+      "horizons":{"15m":{"direction":"MIXED","confidence":4,"rationale":"No enacted measure and European equities were already rebounding."},"1h":{"direction":"MIXED","confidence":4,"rationale":"Trade friction is a headwind but falling oil/yields offset it."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Fed decision later today is likely to dominate."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Direction depends on concrete EU measures or Chinese retaliation."}},
+      "mechanism":"Potential EU-China trade escalation can pressure China-exposed exporters and industrials.","invalidation":"No concrete trade action and continued equity rebound despite the rhetoric.","counter_case":"Markets treat the speech as negotiating rhetoric; lower oil/yields and Fed relief extend the European rebound.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"unknown","trend_1h":"up/rebound before headline","session_location":"European cash morning","extension_state":"range/unknown","market_open":true,"source":"pre-decision Reuters market context; exact post-headline instrument reaction unavailable","observed_at_utc":"2026-09-16T08:01:38Z"}
+    },
+    {
+      "instrument":"FCHI40","relevance":"SECONDARY","immediate":{"direction":"MIXED","confidence":4,"rationale":"Fresh rhetoric but no immediate tariff measure; Fed/oil relief dominate current tape."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Policy follow-through is needed for a durable index effect."},
+      "horizons":{"15m":{"direction":"MIXED","confidence":4,"rationale":"No enacted measure and European equities were already rebounding."},"1h":{"direction":"MIXED","confidence":4,"rationale":"Trade friction is a headwind but falling oil/yields offset it."},"4h":{"direction":"MIXED","confidence":4,"rationale":"Fed decision later today is likely to dominate."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Direction depends on concrete EU measures or Chinese retaliation."}},
+      "mechanism":"Potential EU-China trade escalation can pressure China-exposed exporters and industrials.","invalidation":"No concrete trade action and continued equity rebound despite the rhetoric.","counter_case":"Markets treat the speech as negotiating rhetoric; lower oil/yields and Fed relief extend the European rebound.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"unknown","trend_1h":"up/rebound before headline","session_location":"European cash morning","extension_state":"range/unknown","market_open":true,"source":"pre-decision Reuters market context; exact post-headline instrument reaction unavailable","observed_at_utc":"2026-09-16T08:01:38Z"}
+    }
+  ]
+}
