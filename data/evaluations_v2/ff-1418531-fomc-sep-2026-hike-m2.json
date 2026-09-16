@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T18:27:01+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T18:27:01+00:00",
   "prediction_latency_seconds": 1621.0,
-  "evaluated_at_utc": "2026-09-16T22:18:56.688014+00:00",
+  "evaluated_at_utc": "2026-09-16T22:58:58.115607+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -155,12 +155,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 8,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T19:27:01+00:00",
@@ -203,11 +197,18 @@
           "volatility_ratio": 3.946726,
           "volatility_ratio_threshold": 1.25
         },
-        "4h": {
+        "next_session": {
           "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-16T22:27:01+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         }
       }
     },
@@ -229,12 +230,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 8,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T19:27:01+00:00",
@@ -277,11 +272,18 @@
           "volatility_ratio": 3.628109,
           "volatility_ratio_threshold": 1.25
         },
-        "4h": {
+        "next_session": {
           "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-16T22:27:01+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         }
       }
     },
@@ -303,12 +305,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 7,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T19:27:01+00:00",
@@ -351,11 +347,18 @@
           "volatility_ratio": 1.941568,
           "volatility_ratio_threshold": 1.25
         },
-        "4h": {
+        "next_session": {
           "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-16T22:27:01+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         }
       }
     },
@@ -377,12 +380,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 8,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T19:27:01+00:00",
@@ -425,11 +422,31 @@
           "volatility_ratio": 3.692763,
           "volatility_ratio_threshold": 1.25
         },
-        "4h": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "session_local_date": null,
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
+          "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "actual_price_time_utc": "2026-09-16T22:28:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T22:27:00+00:00",
+          "market_delay_minutes": 0.98,
+          "price": 4299.39990234375,
+          "change_pct": -1.319746,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.496481,
+          "post_event_range_pct": 2.104712,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 1.496481
         }
       }
     },
@@ -451,12 +468,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 7,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T19:27:01+00:00",
@@ -499,11 +510,31 @@
           "volatility_ratio": 2.469914,
           "volatility_ratio_threshold": 1.25
         },
-        "4h": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "session_local_date": null,
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
+          "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "actual_price_time_utc": "2026-09-16T22:28:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T22:27:00+00:00",
+          "market_delay_minutes": 0.98,
+          "price": 63.38999938964844,
+          "change_pct": -1.407573,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 2.169681,
+          "post_event_range_pct": 3.05622,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 2.169681
         }
       }
     }
