@@ -1,0 +1,296 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418568-trump-rates-1pct-m1",
+  "event_id": "ff-1418568-trump-rates-1pct",
+  "event_time_utc": "2026-09-16T21:03:19+00:00",
+  "prediction_time_utc": "2026-09-16T22:13:19+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T22:13:19+00:00",
+  "prediction_latency_seconds": 4200.0,
+  "evaluated_at_utc": "2026-09-16T22:19:02.086565+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "us",
+    "fed",
+    "political_pressure",
+    "rates"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-16T22:13:19+00:00",
+    "captured_for_event_time_utc": "2026-09-16T22:13:19+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.33999633789062,
+        "timestamp_utc": "2026-09-16T22:05:00+00:00",
+        "available_at_utc": "2026-09-16T22:05:00+00:00",
+        "age_minutes": 8.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.021926,
+        "change_pct_240m": 0.406266,
+        "change_abs_60m": 0.021996,
+        "raw_change_pct_60m": 0.021926,
+        "raw_change_abs_60m": 0.021996,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.87890625,
+        "timestamp_utc": "2026-09-16T22:09:00+00:00",
+        "available_at_utc": "2026-09-16T22:09:00+00:00",
+        "age_minutes": 4.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.003834,
+        "change_pct_240m": 0.168421,
+        "change_abs_60m": 0.003906,
+        "raw_change_pct_60m": -0.003834,
+        "raw_change_abs_60m": -0.003906,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "ZN=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 105.6875,
+        "timestamp_utc": "2026-09-16T22:09:00+00:00",
+        "available_at_utc": "2026-09-16T22:09:00+00:00",
+        "age_minutes": 4.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 10Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.014786,
+        "change_pct_240m": 0.42691,
+        "change_abs_60m": -0.015625,
+        "raw_change_pct_60m": 0.014786,
+        "raw_change_abs_60m": 0.015625,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 17.709999084472656,
+        "timestamp_utc": "2026-09-16T20:15:00+00:00",
+        "available_at_utc": "2026-09-16T20:15:00+00:00",
+        "age_minutes": 118.32,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.0,
+        "change_pct_240m": 6.047894,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 102.04000091552734,
+        "timestamp_utc": "2026-09-16T22:10:00+00:00",
+        "available_at_utc": "2026-09-16T22:10:00+00:00",
+        "age_minutes": 3.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.019608,
+        "change_pct_240m": -0.361296,
+        "change_abs_60m": 0.020004,
+        "raw_change_pct_60m": 0.019608,
+        "raw_change_abs_60m": 0.020004,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 105.66999816894531,
+        "timestamp_utc": "2026-09-16T22:06:00+00:00",
+        "available_at_utc": "2026-09-16T22:06:00+00:00",
+        "age_minutes": 7.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.066288,
+        "change_pct_240m": -0.0662,
+        "change_abs_60m": 0.07,
+        "raw_change_pct_60m": 0.066288,
+        "raw_change_abs_60m": 0.07,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418568-trump-rates-1pct-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28945.06,
+      "reference_price_time_utc": "2026-09-16T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 56.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418568-trump-rates-1pct-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7551.81,
+      "reference_price_time_utc": "2026-09-16T20:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T20:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 101.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418568-trump-rates-1pct-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4298.2001953125,
+      "reference_price_time_utc": "2026-09-16T22:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T22:08:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

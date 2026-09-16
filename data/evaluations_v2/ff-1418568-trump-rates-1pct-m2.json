@@ -1,0 +1,266 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418568-trump-rates-1pct-m2",
+  "event_id": "ff-1418568-trump-rates-1pct",
+  "event_time_utc": "2026-09-16T21:03:19+00:00",
+  "prediction_time_utc": "2026-09-16T22:13:19+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T22:13:19+00:00",
+  "prediction_latency_seconds": 4200.0,
+  "evaluated_at_utc": "2026-09-16T22:19:02.728371+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "us",
+    "fed",
+    "political_pressure",
+    "rates"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 70.0,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Trump's explicit demand for 1% or lower rates immediately after Warsh's hawkish hike raises political pressure/Fed-independence risk, but it does not itself alter the policy path.",
+    "market_expectations": {
+      "source": "post-FOMC market pricing/context",
+      "expected_value": "Fed had just hiked to 3.75%-4.00% and signaled another hike was likely",
+      "implied_probability": null,
+      "distribution_notes": "Trump's desired 1% rate is far outside the current Fed path and therefore primarily political rhetoric unless followed by institutional action."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The post was about 70 minutes old at decision time and US cash markets had already closed after the hawkish Fed reaction. No clean Trump-specific price impulse can be isolated.",
+      "observed_reaction": {
+        "SP500_close_pct": -0.45,
+        "NDX_close_pct": 0.02,
+        "gold_close_pct": -0.69,
+        "US10Y_close_pct": 5.0
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "100.31, +0.63%, firm",
+        "US2Y": "4.738%, up 7.5bp",
+        "US10Y": "5.00%, up",
+        "VIX": "18.38, +6.9%",
+        "WTI": "102.43, down 3.2%",
+        "Brent": "105.83, down 2.7%",
+        "gold": "4263.19, down 0.69%",
+        "equities": "S&P -0.45%, NDX ~flat, Dow -1.21%"
+      }
+    },
+    "decision_notes": "Residual forecast from actual decision time. US cash market is closed, so fixed 15m/1h horizons are not substituted with next open. Leakage-safe M2 learning: ACTIONABLE mixed-neutral segments support keeping the short/medium call neutral; no directional confidence boost."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.31,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters close wrap",
+        "freshness_minutes": 133
+      },
+      "US2Y": {
+        "value": 4.738,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters close wrap",
+        "freshness_minutes": 133
+      },
+      "US10Y": {
+        "value": 5.0,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters close wrap",
+        "freshness_minutes": 133
+      },
+      "VIX": {
+        "value": 18.38,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "ELEVATED",
+        "source": "MarketWatch close report",
+        "freshness_minutes": 133
+      },
+      "WTI": {
+        "value": 102.43,
+        "observed_at_utc": "2026-09-16T18:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters settlement",
+        "freshness_minutes": 223
+      },
+      "BRENT": {
+        "value": 105.83,
+        "observed_at_utc": "2026-09-16T18:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters settlement",
+        "freshness_minutes": 223
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418568-trump-rates-1pct-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28945.06,
+      "reference_price_time_utc": "2026-09-16T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 56.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:13:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418568-trump-rates-1pct-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7551.81,
+      "reference_price_time_utc": "2026-09-16T20:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T20:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 101.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:13:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418568-trump-rates-1pct-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4298.2001953125,
+      "reference_price_time_utc": "2026-09-16T22:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T22:08:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:13:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
