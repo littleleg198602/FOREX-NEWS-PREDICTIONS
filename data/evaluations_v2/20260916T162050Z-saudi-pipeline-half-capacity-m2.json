@@ -1,0 +1,263 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260916T162050Z-saudi-pipeline-half-capacity-m2",
+  "event_id": "ff-1418526-saudi-pipeline-half-capacity",
+  "event_time_utc": "2026-09-16T16:20:50+00:00",
+  "prediction_time_utc": "2026-09-16T16:20:50+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T16:20:50+00:00",
+  "prediction_latency_seconds": 0.0,
+  "evaluated_at_utc": "2026-09-16T16:24:48.679254+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "oil",
+    "saudi_arabia",
+    "geopolitics",
+    "supply"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 0,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Saudi Arabia reportedly seeks to restore roughly half of East-West pipeline capacity within days by bypassing the damaged section; regular capacity may take about six weeks.",
+    "market_expectations": {
+      "source": "prior same-day reports",
+      "expected_value": "partial restoration possible, but timing uncertain",
+      "implied_probability": null,
+      "distribution_notes": "Prior reporting already suggested partial operation could resume sooner than full repairs."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "Oil had already fallen sharply as alternative Saudi supply routes eased concerns, and Forex Factory contemporaneous comments describe an additional abrupt oil drop/retracement on this headline.",
+      "observed_reaction": {
+        "WTI_same_day": 101.72,
+        "Brent_same_day": 105.12,
+        "qualitative": "fresh oil drop followed by partial retracement"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "oil": "WTI 101.72 and Brent 105.12, sharply lower intraday",
+        "US2Y": "4.632, lower",
+        "US10Y": "4.977, below 5%",
+        "VIX": "just below 17",
+        "equities": "S&P 500 +0.4% and Nasdaq +0.8% in same-day reporting",
+        "gold": "gold +1.4% before/around the broader oil-yield relief, creating some conflict for a direct gold short"
+      }
+    },
+    "decision_notes": "Source publication time is internally inconsistent with runtime clock. Record is preserved as backfilled/ineligible for normal hit-rate evaluation; forecast is residual from actual creation time."
+  },
+  "is_example": false,
+  "backfilled": true,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-16T16:20:50Z",
+        "direction": "unknown",
+        "regime": "UNKNOWN",
+        "source": "no sufficiently fresh verified quote found",
+        "freshness_minutes": null
+      },
+      "US2Y": {
+        "value": 4.632,
+        "observed_at_utc": "2026-09-16T16:20:50Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ same-day market report",
+        "freshness_minutes": 60
+      },
+      "US10Y": {
+        "value": 4.977,
+        "observed_at_utc": "2026-09-16T16:20:50Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ same-day market report",
+        "freshness_minutes": 60
+      },
+      "VIX": {
+        "value": 17.0,
+        "observed_at_utc": "2026-09-16T16:20:50Z",
+        "direction": "slightly_down",
+        "regime": "LOW",
+        "source": "Barron's same-day report",
+        "freshness_minutes": 120
+      },
+      "WTI": {
+        "value": 101.72,
+        "observed_at_utc": "2026-09-16T16:20:50Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters same-day market report",
+        "freshness_minutes": 60
+      },
+      "BRENT": {
+        "value": 105.12,
+        "observed_at_utc": "2026-09-16T16:20:50Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters same-day market report",
+        "freshness_minutes": 60
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260916T162050Z-saudi-pipeline-half-capacity-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7614.3798828125,
+      "reference_price_time_utc": "2026-09-16T16:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T16:19:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T16:35:50+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:20:50+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:20:50+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260916T162050Z-saudi-pipeline-half-capacity-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29182.62109375,
+      "reference_price_time_utc": "2026-09-16T16:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T16:19:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T16:35:50+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:20:50+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:20:50+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260916T162050Z-saudi-pipeline-half-capacity-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4391.60009765625,
+      "reference_price_time_utc": "2026-09-16T16:15:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T16:14:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T16:35:50+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:20:50+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:20:50+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "VOLATILITY",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

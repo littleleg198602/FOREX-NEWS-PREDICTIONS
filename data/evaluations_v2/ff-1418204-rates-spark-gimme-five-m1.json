@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-15T04:25:25+00:00",
   "evaluation_anchor_time_utc": "2026-09-15T04:25:25+00:00",
   "prediction_latency_seconds": 5125.0,
-  "evaluated_at_utc": "2026-09-16T11:59:03.543203+00:00",
+  "evaluated_at_utc": "2026-09-16T16:24:30.794158+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control-frozen",
@@ -162,7 +162,7 @@
     {
       "prediction_id": "ff-1418204-rates-spark-gimme-five-m1",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -177,18 +177,26 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-15T08:25:25+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 6,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 428.417
-        },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-15",
+          "actual_price_time_utc": "2026-09-15T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T21:16:00+00:00",
+          "price": 28937.838,
+          "change_pct": -0.649978,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.429883,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.829981,
+          "mfe_pct": 0.781379,
+          "mae_pct": -0.048602,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.142988,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "legacy_fallback"
         },
         "1h": {
@@ -206,13 +214,21 @@
           "predicted_confidence": 6,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 428.417
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T08:25:25+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 428.417
         }
       }
     },
     {
       "prediction_id": "ff-1418204-rates-spark-gimme-five-m1",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -227,18 +243,26 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-15T08:25:25+00:00",
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-15",
+          "actual_price_time_utc": "2026-09-15T20:54:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T20:53:00+00:00",
+          "price": 7585.73,
+          "change_pct": -0.449476,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
           "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 470.417
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-15",
-          "predicted_direction": "DOWN",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.73111,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.584907,
+          "mfe_pct": 0.620606,
+          "mae_pct": 0.035699,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.073111,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "legacy_fallback"
         },
         "1h": {
@@ -252,6 +276,14 @@
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-15T04:40:25+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 470.417
+        },
+        "4h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T08:25:25+00:00",
           "predicted_direction": "DOWN",
           "predicted_confidence": 5,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
@@ -277,27 +309,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-15T08:25:25+00:00",
-          "actual_price_time_utc": "2026-09-15T08:26:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-15T08:25:00+00:00",
-          "market_delay_minutes": 0.58,
-          "price": 4312.0,
-          "change_pct": -0.729797,
-          "actual_direction": "DOWN",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "forecast_source": "legacy_fallback",
-          "correct": true,
-          "score_type": "directional",
-          "baseline_range_pct": 0.791961,
-          "post_event_range_pct": 1.015266,
-          "mfe_pct": 0.913972,
-          "mae_pct": -0.101294,
-          "directional_threshold_pct": 0.079196,
-          "actual_direction_thresholded": "DOWN"
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": "2026-09-16",
@@ -345,6 +356,27 @@
           "mae_pct": -0.03913,
           "directional_threshold_pct": 0.016115,
           "actual_direction_thresholded": "UP"
+        },
+        "4h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-15T08:25:25+00:00",
+          "actual_price_time_utc": "2026-09-15T08:26:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T08:25:00+00:00",
+          "market_delay_minutes": 0.58,
+          "price": 4312.0,
+          "change_pct": -0.729797,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "legacy_fallback",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.791961,
+          "post_event_range_pct": 1.015266,
+          "mfe_pct": 0.913972,
+          "mae_pct": -0.101294,
+          "directional_threshold_pct": 0.079196,
+          "actual_direction_thresholded": "DOWN"
         }
       }
     }
