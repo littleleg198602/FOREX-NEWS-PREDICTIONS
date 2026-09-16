@@ -1,0 +1,58 @@
+{
+  "prediction_id": "ff-1418411-boj-cnbc-survey-m2",
+  "event_id": "ff-1418411-boj-cnbc-survey",
+  "event_cluster_id": "boj-sep18-2026-hike-pricing",
+  "created_at_utc": "2026-09-16T03:40:05Z",
+  "event_time_utc": "2026-09-16T01:18:00Z",
+  "published_at_utc": "2026-09-16T01:18:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["boj", "rates", "japan", "survey"],
+  "source_url": "https://www.forexfactory.com/news/1418411-boj-expected-to-hike-rates-by-25-basis",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 142.1,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "CNBC survey says 89% expect BOJ to hike 25bp to 1.25% on Friday, reinforcing an already strongly priced tightening consensus.",
+    "market_expectations": {"source": "CNBC survey via Forex Factory", "expected_value": "BOJ +25bp to 1.25%", "implied_probability": 0.89, "distribution_notes": "Reuters poll six days earlier also showed an overwhelming September-hike consensus, so this is confirmation rather than a new regime shift."},
+    "surprise": null,
+    "absorption": {"state": "PARTIALLY_PRICED", "reason": "The hike expectation was already widely priced before the CNBC survey; by decision time the story was over two hours old.", "observed_reaction": {"NI225": "around -0.2% at 63,359 in fresh Asian reporting", "USDJPY": "around 155.22, yen slightly weaker rather than stronger", "JGB10Y": "around 3.035%, yields elevated"}},
+    "cross_asset_confirmation": {"verdict": "CONFLICTING", "observations": {"NI225": "-0.2%, mild weakness", "USDJPY": "~155.22, yen weaker, not confirming a fresh hawkish yen impulse", "JGB10Y": "~3.035%, elevated and consistent with tightening expectations", "US10Y": "~4.9875% in Asian trade after briefly topping 5%, global valuation headwind", "WTI": "~104.87, still elevated", "BRENT": "~107.82, still elevated", "VIX": "17.2 prior close, cautious but not stressed", "DXY": "near two-week high / firm"}},
+    "decision_notes": "Forecast is strictly residual from 03:40 UTC; no attempt to forecast the original 01:18 UTC reaction. M2 learning profile has no ACTIONABLE model-2 segment applicable enough to change confidence; EARLY_SIGNAL ignored for material adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 99.61, "observed_at_utc": "2026-09-16T00:30:00Z", "direction": "firm", "regime": "near-two-week-high", "source": "MarketIndex morning wrap", "freshness_minutes": 190},
+      "US2Y": {"value": null, "observed_at_utc": "2026-09-16T03:40:05Z", "direction": "elevated", "regime": "restrictive", "source": "fresh market reports; no reliable exact quote captured", "freshness_minutes": 0},
+      "US10Y": {"value": 4.9875, "observed_at_utc": "2026-09-16T02:00:00Z", "direction": "slightly_down_from_5pct", "regime": "very_high", "source": "Reuters global markets wrap", "freshness_minutes": 100},
+      "VIX": {"value": 17.2, "observed_at_utc": "2026-09-15T20:00:00Z", "direction": "up", "regime": "cautious", "source": "MarketIndex prior close", "freshness_minutes": 460},
+      "WTI": {"value": 104.87, "observed_at_utc": "2026-09-16T03:00:00Z", "direction": "down", "regime": "elevated_geopolitical", "source": "WSJ early Asia", "freshness_minutes": 40},
+      "BRENT": {"value": 107.82, "observed_at_utc": "2026-09-16T03:00:00Z", "direction": "down", "regime": "elevated_geopolitical", "source": "WSJ early Asia", "freshness_minutes": 40},
+      "USDJPY": {"value": 155.22, "observed_at_utc": "2026-09-16T03:00:00Z", "direction": "yen_weaker", "regime": "pre_BOJ", "source": "WSJ Nikkei market report", "freshness_minutes": 40},
+      "JGB10Y": {"value": 3.035, "observed_at_utc": "2026-09-16T03:00:00Z", "direction": "up", "regime": "high", "source": "WSJ JGB report", "freshness_minutes": 40}
+    },
+    "regimes": {"rates": "globally restrictive/high", "japan_rates": "tightening expected", "oil": "elevated but easing in Asia", "risk": "cautious pre-Fed/BOJ"}
+  },
+  "predictions": [{
+    "instrument": "NI225",
+    "relevance": "DIRECT",
+    "immediate": {"direction": "MIXED", "confidence": 5, "rationale": "The survey mostly confirms an already-priced hike; yen action does not confirm a fresh hawkish shock."},
+    "next_session": {"direction": "VOLATILITY", "confidence": 6, "rationale": "Fed first and BOJ guidance later can dominate the already-priced hike expectation."},
+    "horizons": {
+      "15m": {"direction": "MIXED", "confidence": 5, "rationale": "Story is delayed and largely priced; no clean residual directional edge."},
+      "1h": {"direction": "MIXED", "confidence": 5, "rationale": "High JGB/US yields are negative, but weaker yen cushions exporters."},
+      "4h": {"direction": "MIXED", "confidence": 5, "rationale": "Pre-Fed positioning and oil/yield moves can overwhelm this survey confirmation."},
+      "next_session": {"direction": "VOLATILITY", "confidence": 6, "rationale": "Fed outcome plus BOJ meeting positioning creates two-sided gap/volatility risk."}
+    },
+    "mechanism": "BOJ tightening expectations raise domestic discount rates and can strengthen JPY, but the survey is confirmation of a consensus already in price.",
+    "invalidation": "A decisive yen strengthening move together with rising JGB yields and broad Nikkei selling would convert the residual view bearish.",
+    "counter_case": "If USD/JPY falls sharply while JGB yields rise and exporters weaken, the already-priced assumption is wrong and NI225 can sell off directionally.",
+    "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "mild_down/uncertain", "trend_1h": "mild_down", "session_location": "Tokyo morning", "extension_state": "range", "market_open": true, "source": "WSJ fresh Asian market report: Nikkei about -0.2% at 63,359.03", "observed_at_utc": "2026-09-16T03:00:00Z"}
+  }]
+}
