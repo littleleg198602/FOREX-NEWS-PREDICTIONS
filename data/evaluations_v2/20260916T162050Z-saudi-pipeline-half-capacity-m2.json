@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T16:20:50+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T16:20:50+00:00",
   "prediction_latency_seconds": 0.0,
-  "evaluated_at_utc": "2026-09-16T16:24:48.679254+00:00",
+  "evaluated_at_utc": "2026-09-16T17:05:24.402437+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -130,7 +130,7 @@
     {
       "prediction_id": "20260916T162050Z-saudi-pipeline-half-capacity-m2",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -146,10 +146,25 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-16T16:35:50+00:00",
+          "actual_price_time_utc": "2026-09-16T16:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T16:35:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 7609.3701171875,
+          "change_pct": -0.065793,
+          "actual_direction": "DOWN",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.038745,
+          "post_event_range_pct": 0.080902,
+          "mfe_pct": -0.001706,
+          "mae_pct": -0.082607,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "DOWN"
         },
         "1h": {
           "status": "PENDING",
@@ -157,24 +172,24 @@
           "predicted_direction": "MIXED",
           "predicted_confidence": 5
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-16T20:20:50+00:00",
-          "predicted_direction": "VOLATILITY",
-          "predicted_confidence": 6
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:20:50+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6
         }
       }
     },
     {
       "prediction_id": "20260916T162050Z-saudi-pipeline-half-capacity-m2",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -190,10 +205,25 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-16T16:35:50+00:00",
+          "actual_price_time_utc": "2026-09-16T16:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T16:35:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 29163.900390625,
+          "change_pct": -0.06415,
+          "actual_direction": "DOWN",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.071311,
+          "post_event_range_pct": 0.083807,
+          "mfe_pct": 0.000843,
+          "mae_pct": -0.082964,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "DOWN"
         },
         "1h": {
           "status": "PENDING",
@@ -201,43 +231,57 @@
           "predicted_direction": "MIXED",
           "predicted_confidence": 5
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-16T20:20:50+00:00",
-          "predicted_direction": "VOLATILITY",
-          "predicted_confidence": 6
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:20:50+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6
         }
       }
     },
     {
       "prediction_id": "20260916T162050Z-saudi-pipeline-half-capacity-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4391.60009765625,
-      "reference_price_time_utc": "2026-09-16T16:15:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-16T16:14:00+00:00",
+      "reference_price": 4391.5,
+      "reference_price_time_utc": "2026-09-16T16:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T16:19:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 5.833,
+      "reference_age_minutes": 0.833,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-16T16:35:50+00:00",
+          "actual_price_time_utc": "2026-09-16T16:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T16:35:00+00:00",
+          "market_delay_minutes": 0.17,
+          "price": 4389.5,
+          "change_pct": -0.045543,
+          "actual_direction": "DOWN",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.127521,
+          "post_event_range_pct": 0.134348,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.127521
         },
         "1h": {
           "status": "PENDING",
@@ -245,17 +289,17 @@
           "predicted_direction": "MIXED",
           "predicted_confidence": 5
         },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-16T20:20:50+00:00",
-          "predicted_direction": "VOLATILITY",
-          "predicted_confidence": 6
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "VOLATILITY",
           "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:20:50+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6
         }
       }
     }

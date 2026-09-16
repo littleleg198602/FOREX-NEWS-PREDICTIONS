@@ -1,0 +1,295 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418497-us-retail-sales-aug-2026-m1",
+  "event_id": "ff-1418497-us-retail-sales-aug-2026",
+  "event_time_utc": "2026-09-16T12:30:00+00:00",
+  "prediction_time_utc": "2026-09-16T16:59:08+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T16:59:08+00:00",
+  "prediction_latency_seconds": 16148.0,
+  "evaluated_at_utc": "2026-09-16T17:05:43.244465+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "us",
+    "retail_sales",
+    "data_release"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-16T16:59:08+00:00",
+    "captured_for_event_time_utc": "2026-09-16T16:59:08+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 99.69400024414062,
+        "timestamp_utc": "2026-09-16T16:56:00+00:00",
+        "available_at_utc": "2026-09-16T16:56:00+00:00",
+        "age_minutes": 3.13,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.012039,
+        "change_pct_240m": -0.01805,
+        "change_abs_60m": 0.012001,
+        "raw_change_pct_60m": 0.012039,
+        "raw_change_abs_60m": 0.012001,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 102.13671875,
+        "timestamp_utc": "2026-09-16T16:56:00+00:00",
+        "available_at_utc": "2026-09-16T16:56:00+00:00",
+        "age_minutes": 3.13,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.0153,
+        "change_pct_240m": -0.053572,
+        "change_abs_60m": -0.015625,
+        "raw_change_pct_60m": 0.0153,
+        "raw_change_abs_60m": 0.015625,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 4.954999923706055,
+        "timestamp_utc": "2026-09-16T16:51:00+00:00",
+        "available_at_utc": "2026-09-16T16:51:00+00:00",
+        "age_minutes": 8.13,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": 0.0,
+        "change_pct_240m": -0.44204,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 16.760000228881836,
+        "timestamp_utc": "2026-09-16T16:51:00+00:00",
+        "available_at_utc": "2026-09-16T16:51:00+00:00",
+        "age_minutes": 8.13,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.419411,
+        "change_pct_240m": 0.359278,
+        "change_abs_60m": 0.07,
+        "raw_change_pct_60m": 0.419411,
+        "raw_change_abs_60m": 0.07,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 102.6500015258789,
+        "timestamp_utc": "2026-09-16T16:56:00+00:00",
+        "available_at_utc": "2026-09-16T16:56:00+00:00",
+        "age_minutes": 3.13,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.637256,
+        "change_pct_240m": -1.468611,
+        "change_abs_60m": 0.650002,
+        "raw_change_pct_60m": 0.637256,
+        "raw_change_abs_60m": 0.650002,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 105.9800033569336,
+        "timestamp_utc": "2026-09-16T16:56:00+00:00",
+        "available_at_utc": "2026-09-16T16:56:00+00:00",
+        "age_minutes": 3.13,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.779764,
+        "change_pct_240m": -1.52388,
+        "change_abs_60m": 0.82,
+        "raw_change_pct_60m": 0.779764,
+        "raw_change_abs_60m": 0.82,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "RISING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418497-us-retail-sales-aug-2026-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29166.791015625,
+      "reference_price_time_utc": "2026-09-16T16:59:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T16:58:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.133,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:14:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:59:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:59:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418497-us-retail-sales-aug-2026-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7610.080078125,
+      "reference_price_time_utc": "2026-09-16T16:59:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T16:58:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.133,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:14:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:59:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:59:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418497-us-retail-sales-aug-2026-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4388.7998046875,
+      "reference_price_time_utc": "2026-09-16T16:56:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T16:55:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.133,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:14:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T17:59:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:59:08+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}
