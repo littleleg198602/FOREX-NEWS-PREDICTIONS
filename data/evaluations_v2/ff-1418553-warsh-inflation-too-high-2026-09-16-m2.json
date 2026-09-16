@@ -1,0 +1,351 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418553-warsh-inflation-too-high-2026-09-16-m2",
+  "event_id": "ff-1418553-warsh-inflation-too-high-2026-09-16",
+  "event_time_utc": "2026-09-16T18:34:00+00:00",
+  "prediction_time_utc": "2026-09-16T19:08:56+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T19:08:56+00:00",
+  "prediction_latency_seconds": 2096.0,
+  "evaluated_at_utc": "2026-09-16T19:14:14.076843+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "fed",
+    "rates",
+    "inflation",
+    "commentary"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 34.9,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Warsh said inflation is too high, summer data do not show improvement, price stability is the predominant focus, and he is hard-pressed to call financial conditions restrictive.",
+    "market_expectations": {
+      "source": "pre-FOMC market pricing",
+      "expected_value": "25bp hike was ~93% priced; press-conference tone was the key uncertainty",
+      "implied_probability": 0.93,
+      "distribution_notes": "The hike was expected; the residual surprise is the chair's hawkish framing and unwillingness to declare conditions restrictive."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "About 35 minutes after the first hawkish comments, US2Y had risen to 4.712% from 4.602% before the Fed; gold had fallen to an intraday low near $4,315 and S&P gains faded toward flat.",
+      "observed_reaction": {
+        "US2Y_before_fed": 4.602,
+        "US2Y_post_warsh": 4.712,
+        "XAUUSD_intraday_low": 4315.2,
+        "SP500_state": "initial post-Fed gain faded toward flat"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "US2Y": "4.712%, sharply higher from pre-Fed 4.602%",
+        "US10Y": "just under 5%, rising",
+        "gold": "fell from pre-Fed gains to about $4,315 intraday low",
+        "equities": "S&P initial gain faded toward flat as Warsh spoke",
+        "oil": "Brent lower near $105.63, a partial offset to inflation pressure"
+      }
+    },
+    "decision_notes": "This is a new press-conference information cluster, not a duplicate of the 2:00pm FOMC statement. Forecast targets residual move from 19:08:56Z only. M2 learning changed next-session MIXED confidence upward because model-2 mixed-neutral next_session is ACTIONABLE; directional 5-6 segments remain advisory."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.67,
+        "timestamp": "2026-09-16T12:30:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day market snapshot",
+        "freshness_minutes": 399
+      },
+      "US2Y": {
+        "value": 4.712,
+        "timestamp": "2026-09-16T18:50:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "WSJ live Fed coverage",
+        "freshness_minutes": 19
+      },
+      "US10Y": {
+        "value": 4.99,
+        "timestamp": "2026-09-16T18:50:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "WSJ/IBD live Fed coverage",
+        "freshness_minutes": 19
+      },
+      "VIX": {
+        "value": 16.81,
+        "timestamp": "2026-09-16T12:33:00Z",
+        "direction": "contained",
+        "regime": "LOW",
+        "source": "same-day market snapshot",
+        "freshness_minutes": 396
+      },
+      "WTI": {
+        "value": 103.41,
+        "timestamp": "2026-09-16T12:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market snapshot",
+        "freshness_minutes": 399
+      },
+      "BRENT": {
+        "value": 105.63,
+        "timestamp": "2026-09-16T18:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "AP same-day market report",
+        "freshness_minutes": 24
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418553-warsh-inflation-too-high-2026-09-16-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28937.779296875,
+      "reference_price_time_utc": "2026-09-16T19:08:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T19:07:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.933,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:23:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:08:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:08:56+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418553-warsh-inflation-too-high-2026-09-16-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7551.60009765625,
+      "reference_price_time_utc": "2026-09-16T19:08:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T19:07:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.933,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:23:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:08:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:08:56+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418553-warsh-inflation-too-high-2026-09-16-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51493.69140625,
+      "reference_price_time_utc": "2026-09-16T19:08:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T19:07:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.933,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:23:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:08:56+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:08:56+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418553-warsh-inflation-too-high-2026-09-16-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4325.2001953125,
+      "reference_price_time_utc": "2026-09-16T19:05:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T19:04:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.933,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:23:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:08:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:08:56+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418553-warsh-inflation-too-high-2026-09-16-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.12000274658203,
+      "reference_price_time_utc": "2026-09-16T19:05:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T19:04:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.933,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:23:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T20:08:56+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T23:08:56+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
