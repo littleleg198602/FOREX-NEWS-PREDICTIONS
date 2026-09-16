@@ -1,19 +1,19 @@
 # Prediction quality audit
 
-Generated: 2026-09-16T06:26:19.935448+00:00
+Generated: 2026-09-16T06:55:57.149948+00:00
 
 ## Directional accuracy
 
-- 15m: 95/232 = 40.95%
+- 15m: 95/233 = 40.77%
 - 1h: 95/229 = 41.48%
 - 4h: 59/149 = 39.6%
 - next_session: 87/153 = 56.86%
 
 ## Detection latency
 
-- events with usable latency: 209
-- mean: 55.91 min; median: 38.0 min
-- >=30 min: 62.68%; >=60 min: 25.84%
+- events with usable latency: 211
+- mean: 55.81 min; median: 38.0 min
+- >=30 min: 63.03%; >=60 min: 25.59%
 
 ## Realized direction instability
 

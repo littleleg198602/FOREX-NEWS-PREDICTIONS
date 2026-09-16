@@ -1,0 +1,202 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418442-uk-cpi-aug-2026-m2",
+  "event_id": "ff-1418442-uk-cpi-aug-2026",
+  "event_time_utc": "2026-09-16T06:04:00+00:00",
+  "prediction_time_utc": "2026-09-16T06:49:45+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T06:49:45+00:00",
+  "prediction_latency_seconds": 2745.0,
+  "evaluated_at_utc": "2026-09-16T06:52:54.554131+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "uk",
+    "inflation",
+    "data_release"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 45.75,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "UK headline CPI rose to 3.1% y/y as expected, driven mainly by motor fuels, while core CPI stayed 2.6% and services inflation 3.4%.",
+    "market_expectations": {
+      "source": "consensus reported by Reuters/FXStreet",
+      "expected_value": "3.1% y/y headline; 2.6% core",
+      "implied_probability": null,
+      "distribution_notes": "BoE hold is still the base case; market reports around 80% hold probability."
+    },
+    "surprise": {
+      "actual": {
+        "headline_yoy": 3.1,
+        "headline_mom": 0.5,
+        "core_yoy": 2.6,
+        "services_yoy": 3.4,
+        "ppi_input_yoy": 6.1,
+        "ppi_output_yoy": 3.7
+      },
+      "consensus": {
+        "headline_yoy": 3.1,
+        "core_yoy": 2.6
+      },
+      "previous": {
+        "headline_yoy": 2.9,
+        "core_yoy": 2.6
+      },
+      "revised_previous": {
+        "ppi_input_yoy": 5.8,
+        "ppi_output_yoy": 3.3
+      },
+      "surprise_direction": "NEUTRAL_HEADLINE",
+      "components": {
+        "largest_upward_contribution": "transport, especially motor fuels",
+        "fuel_yoy_pct": 23.0,
+        "services_yoy": 3.4
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Headline and core matched consensus; UK cash equities had not opened yet, but rates already carried a substantial inflation premium and GBP weakened slightly after the release.",
+      "observed_reaction": {
+        "GBP": "slightly weaker after release",
+        "UK10Y_gilt_pct": 5.41
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "UK10Y": "~5.41%, high-rate valuation headwind",
+        "GBP": "slightly weaker, not a hawkish confirmation",
+        "Brent": "~107.82, down ~0.9% but still elevated",
+        "WTI": "~104.87, down ~0.9% but still elevated",
+        "US10Y": "~4.993%, just below 5%",
+        "DXY": "near multi-week highs",
+        "US2Y": "~4.68% previous close / restrictive",
+        "VIX": "~17.2 previous close, mildly elevated"
+      }
+    },
+    "decision_notes": "Residual forecast from 06:49:45Z; UK100 cash market not yet open, so fixed 15m/1h horizons are not substituted with the later market open. No M2 ACTIONABLE learning segment was used to alter confidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.3,
+        "observed_at_utc": "2026-09-16T06:49:45Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Reuters/market reports",
+        "freshness_minutes": 60
+      },
+      "US2Y": {
+        "value": 4.68,
+        "observed_at_utc": "2026-09-16T06:49:45Z",
+        "direction": "high",
+        "regime": "UNKNOWN",
+        "source": "prior US close / current reporting",
+        "freshness_minutes": 480
+      },
+      "US10Y": {
+        "value": 4.993,
+        "observed_at_utc": "2026-09-16T06:49:45Z",
+        "direction": "slightly_down",
+        "regime": "FALLING",
+        "source": "WSJ Asian trade",
+        "freshness_minutes": 120
+      },
+      "VIX": {
+        "value": 17.2,
+        "observed_at_utc": "2026-09-16T06:49:45Z",
+        "direction": "mildly_up",
+        "regime": "LOW",
+        "source": "prior US close",
+        "freshness_minutes": 480
+      },
+      "WTI": {
+        "value": 104.87,
+        "observed_at_utc": "2026-09-16T06:49:45Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 120
+      },
+      "BRENT": {
+        "value": 107.82,
+        "observed_at_utc": "2026-09-16T06:49:45Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 120
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418442-uk-cpi-aug-2026-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10658.13,
+      "reference_price_time_utc": "2026-09-15T15:36:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T15:35:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 913.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T07:04:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T07:49:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T10:49:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
