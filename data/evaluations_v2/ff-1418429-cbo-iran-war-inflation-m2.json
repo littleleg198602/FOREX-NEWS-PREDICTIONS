@@ -1,0 +1,265 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418429-cbo-iran-war-inflation-m2",
+  "event_id": "ff-1418429-cbo-iran-war-inflation",
+  "event_time_utc": "2026-09-16T00:38:12+00:00",
+  "prediction_time_utc": "2026-09-16T06:20:39+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T06:20:39+00:00",
+  "prediction_latency_seconds": 20547.0,
+  "evaluated_at_utc": "2026-09-16T06:24:18.944930+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "inflation",
+    "fiscal"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 342.45,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "CBO quantifies the Iran war's inflation impulse at about +0.5 percentage point in early 2027 and ongoing fiscal/munitions costs.",
+    "market_expectations": {
+      "source": "CME FedWatch via Reuters",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.924,
+      "distribution_notes": "Fed decision later today dominates near-term rate pricing."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The source article was published about 5h42m before decision time and markets already carried a large Iran/oil inflation premium; oil was retracing from Tuesday's highs.",
+      "observed_reaction": {
+        "WTI": "~104.94, down intraday",
+        "BRENT": "~108.18, down intraday",
+        "US10Y": "~4.993%, just below 5%",
+        "XAUUSD": "~4328, up ~0.8% in same-day Reuters report"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firm near 99.69",
+        "US2Y": "~4.75% approximate, restrictive",
+        "US10Y": "4.993%, near multiyear high but slightly lower in Asia",
+        "VIX": "17.2, elevated but not panic",
+        "WTI": "104.94, retracing",
+        "BRENT": "108.18, retracing",
+        "gold": "4328.39, +0.8% in same-day report"
+      }
+    },
+    "decision_notes": "Delayed FF surfacing of an older source article; forecast targets residual move from 06:20:39Z, not the original publication reaction. M2 learning profile has no ACTIONABLE model-2 segment applicable enough to alter confidence; EARLY_SIGNAL ignored for material adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.69,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day market report",
+        "freshness_minutes": 120
+      },
+      "US2Y": {
+        "value": 4.75,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "elevated",
+        "regime": "UNKNOWN",
+        "source": "same-day market wrap; approximate",
+        "freshness_minutes": 180
+      },
+      "US10Y": {
+        "value": 4.993,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "slightly_lower",
+        "regime": "FALLING",
+        "source": "WSJ Asian trade report",
+        "freshness_minutes": 120
+      },
+      "VIX": {
+        "value": 17.2,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "elevated",
+        "regime": "LOW",
+        "source": "same-day ASX morning wrap",
+        "freshness_minutes": 180
+      },
+      "WTI": {
+        "value": 104.94,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "intraday public futures feed",
+        "freshness_minutes": 30
+      },
+      "BRENT": {
+        "value": 108.18,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "intraday public futures feed",
+        "freshness_minutes": 30
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418429-cbo-iran-war-inflation-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7585.73,
+      "reference_price_time_utc": "2026-09-15T20:54:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T20:53:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 566.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T06:35:39+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T07:20:39+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T10:20:39+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "VOLATILITY",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418429-cbo-iran-war-inflation-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28937.838,
+      "reference_price_time_utc": "2026-09-15T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 543.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T06:35:39+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T07:20:39+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T10:20:39+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "VOLATILITY",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418429-cbo-iran-war-inflation-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4366.7998046875,
+      "reference_price_time_utc": "2026-09-16T06:15:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T06:14:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T06:35:39+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T07:20:39+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T10:20:39+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "VOLATILITY",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
