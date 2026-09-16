@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T00:05:20+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T00:05:20+00:00",
   "prediction_latency_seconds": 860.0,
-  "evaluated_at_utc": "2026-09-16T00:05:55.148048+00:00",
+  "evaluated_at_utc": "2026-09-16T00:24:11.824316+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -137,21 +137,21 @@
       "yahoo_symbol": "^N225",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 63611.83984375,
-      "reference_price_time_utc": "2026-09-15T06:30:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-15T06:29:00+00:00",
+      "reference_price": 63365.51953125,
+      "reference_price_time_utc": "2026-09-16T00:05:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T00:04:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 1055.333,
+      "reference_age_minutes": 0.333,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-16T00:20:20+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
         },
         "1h": {
           "status": "PENDING",
@@ -159,17 +159,18 @@
           "predicted_direction": "DOWN",
           "predicted_confidence": 5
         },
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-16T00:20:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
+        },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-16T04:05:20+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
         }
       }
     }
