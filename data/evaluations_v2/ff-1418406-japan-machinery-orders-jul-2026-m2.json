@@ -1,0 +1,177 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418406-japan-machinery-orders-jul-2026-m2",
+  "event_id": "ff-1418406-japan-machinery-orders-jul-2026",
+  "event_time_utc": "2026-09-15T23:51:00+00:00",
+  "prediction_time_utc": "2026-09-16T00:05:20+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T00:05:20+00:00",
+  "prediction_latency_seconds": 860.0,
+  "evaluated_at_utc": "2026-09-16T00:05:55.148048+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "japan",
+    "machinery_orders",
+    "data_release"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 14.3,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "Core machinery orders fell 3.7% m/m versus -1.2% expected after +9.7%, a clear capex-leading-indicator miss.",
+    "market_expectations": {
+      "source": "Forex Factory calendar",
+      "expected_value": -1.2,
+      "implied_probability": null,
+      "distribution_notes": null
+    },
+    "surprise": {
+      "actual": -3.7,
+      "consensus": -1.2,
+      "previous": 9.7,
+      "revised_previous": null,
+      "surprise_direction": "NEGATIVE",
+      "components": {
+        "total_machinery_orders_mom": -5.5
+      }
+    },
+    "absorption": {
+      "state": "UNPRICED",
+      "reason": "Release is fresh at Tokyo open; clean reaction data not yet sufficiently established.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "US10Y": "~5.04%, global valuation headwind",
+        "JGB10Y": "~3.04%, 30-year high",
+        "USDJPY": "~152.9, yen relatively firm",
+        "oil": "Brent ~108.49, another Japan import-cost headwind"
+      }
+    },
+    "decision_notes": "Residual-move forecast from the actual decision time; simultaneous Japan releases are treated as one context cluster."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.3,
+        "observed_at_utc": "2026-09-16T00:05:20Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "fresh market reporting",
+        "freshness_minutes": 60
+      },
+      "US2Y": {
+        "value": 4.75,
+        "observed_at_utc": "2026-09-16T00:05:20Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "fresh market reporting; approximate",
+        "freshness_minutes": 60
+      },
+      "US10Y": {
+        "value": 5.04,
+        "observed_at_utc": "2026-09-16T00:05:20Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Financial Times/WSJ same-day reporting",
+        "freshness_minutes": 60
+      },
+      "VIX": {
+        "value": 17.1,
+        "observed_at_utc": "2026-09-16T00:05:20Z",
+        "direction": "elevated",
+        "regime": "LOW",
+        "source": "same-day market brief",
+        "freshness_minutes": 120
+      },
+      "WTI": {
+        "value": 105.0,
+        "observed_at_utc": "2026-09-16T00:05:20Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "same-day market reporting; approximate",
+        "freshness_minutes": 120
+      },
+      "BRENT": {
+        "value": 108.49,
+        "observed_at_utc": "2026-09-16T00:05:20Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "fresh Australian market wrap",
+        "freshness_minutes": 60
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418406-japan-machinery-orders-jul-2026-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 63611.83984375,
+      "reference_price_time_utc": "2026-09-15T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-15T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 1055.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T00:20:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T01:05:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T04:05:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
