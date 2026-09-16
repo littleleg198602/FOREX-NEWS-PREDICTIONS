@@ -1,0 +1,361 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418531-fomc-sep-2026-hike-m2",
+  "event_id": "ff-1418531-fomc-sep-2026-hike",
+  "event_time_utc": "2026-09-16T18:00:00+00:00",
+  "prediction_time_utc": "2026-09-16T18:27:01+00:00",
+  "evaluation_anchor_time_utc": "2026-09-16T18:27:01+00:00",
+  "prediction_latency_seconds": 1621.0,
+  "evaluated_at_utc": "2026-09-16T18:32:28.563913+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "fed",
+    "rates",
+    "fomc",
+    "data_release"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 27.0,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "The 25bp hike was heavily priced; the hawkish residual is the unanimous vote plus 12/18 officials projecting one more hike this year, while Warsh's press conference remains the dominant unresolved catalyst.",
+    "market_expectations": {
+      "source": "CME/market previews",
+      "expected_value": "25bp hike to 3.75%-4.00%",
+      "implied_probability": 0.93,
+      "distribution_notes": "The hike itself was ~93% priced; the path and Warsh framing were the real surprise channels."
+    },
+    "surprise": {
+      "actual": "25bp hike to 3.75%-4.00%; unanimous 12-0; 12/18 see one more 25bp hike in 2026",
+      "consensus": "25bp hike; market focused on whether 2026 dot implied one additional hike",
+      "previous": "3.50%-3.75%",
+      "revised_previous": null,
+      "surprise_direction": "MODESTLY_HAWKISH_PATH",
+      "components": {
+        "vote": "12-0",
+        "one_more_hike_2026": 12,
+        "two_more_hikes_2026": 4,
+        "no_more_hikes_2026": 2,
+        "end_2029_median": 3.6
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The 25bp hike was overwhelmingly priced. Only the future path carries meaningful residual information; 27 minutes have elapsed and Warsh has not yet spoken.",
+      "observed_reaction": {
+        "note": "Reliable synchronized post-release prices were not available before decision; no later information used."
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "pre_event_equities": "S&P about +0.3%, Nasdaq about +0.7%",
+        "US10Y": "~4.95%, off >5% high",
+        "oil": "Brent ~105.91 and easing",
+        "gold": "~4350 pre-event and strongly higher on day",
+        "interpretation": "Pre-event rates/oil easing and risk-on tone conflict with a simple hawkish selloff; press conference can flip direction."
+      }
+    },
+    "decision_notes": "Forecast made 27 minutes after the statement and before the 2:30pm ET press conference. It targets residual move from now, not the initial FOMC candle. Leakage-safe M2 learning used only ACTIONABLE segments; it supports neutral/MIXED treatment at 4h/next-session, while directional 5-6 segments remain only EARLY_SIGNAL."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 99.67,
+        "timestamp": "2026-09-16T12:30:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day pre-FOMC market snapshot",
+        "freshness_minutes": 357
+      },
+      "US2Y": {
+        "value": 4.63,
+        "timestamp": "2026-09-16T15:30:00Z",
+        "direction": "elevated",
+        "regime": "UNKNOWN",
+        "source": "same-day market reporting",
+        "freshness_minutes": 177
+      },
+      "US10Y": {
+        "value": 4.95,
+        "timestamp": "2026-09-16T17:30:00Z",
+        "direction": "down-from-highs",
+        "regime": "FALLING",
+        "source": "AP same-day market report",
+        "freshness_minutes": 57
+      },
+      "VIX": {
+        "value": 16.8,
+        "timestamp": "2026-09-16T12:33:00Z",
+        "direction": "contained",
+        "regime": "LOW",
+        "source": "same-day market snapshot",
+        "freshness_minutes": 354
+      },
+      "WTI": {
+        "value": 103.4,
+        "timestamp": "2026-09-16T12:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market snapshot",
+        "freshness_minutes": 357
+      },
+      "BRENT": {
+        "value": 105.91,
+        "timestamp": "2026-09-16T17:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "AP same-day market report",
+        "freshness_minutes": 57
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418531-fomc-sep-2026-hike-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29135.66796875,
+      "reference_price_time_utc": "2026-09-16T18:27:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T18:26:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 8,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T18:42:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 8
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:27:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 8
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418531-fomc-sep-2026-hike-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7606.60009765625,
+      "reference_price_time_utc": "2026-09-16T18:27:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T18:26:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 8,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T18:42:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 8
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:27:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 8
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418531-fomc-sep-2026-hike-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51999.76171875,
+      "reference_price_time_utc": "2026-09-16T18:27:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T18:26:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T18:42:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 7
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:27:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 7
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418531-fomc-sep-2026-hike-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4360.5,
+      "reference_price_time_utc": "2026-09-16T18:23:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T18:22:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 8,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T18:42:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 8
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:27:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 8
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418531-fomc-sep-2026-hike-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.37999725341797,
+      "reference_price_time_utc": "2026-09-16T18:23:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T18:22:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "VOLATILITY",
+      "predicted_confidence": 7,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T18:42:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 7
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T19:27:01+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 7
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-16T22:27:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
