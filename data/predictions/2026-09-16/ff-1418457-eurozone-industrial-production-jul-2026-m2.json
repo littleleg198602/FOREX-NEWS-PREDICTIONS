@@ -1,0 +1,66 @@
+{
+  "prediction_id": "ff-1418457-eurozone-industrial-production-jul-2026-m2",
+  "event_id": "ff-1418457-eurozone-industrial-production-jul-2026",
+  "event_cluster_id": "eurozone-july-2026-industrial-production",
+  "created_at_utc": "2026-09-16T11:56:20Z",
+  "event_time_utc": "2026-09-16T09:00:00Z",
+  "published_at_utc": "2026-09-16T09:00:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["eurozone", "industrial_production", "data_release"],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 176.3,
+    "novelty": "MEDIUM",
+    "attention": "LOW",
+    "dominant_driver": "Euro-area July industrial production fell 0.1% m/m, better than the -0.4% consensus, but Germany and France contracted and the release is delayed relative to the decision time.",
+    "market_expectations": {"source":"economist consensus reported by WSJ","expected_value":-0.4,"implied_probability":null,"distribution_notes":"Market focus is primarily on the FOMC later today."},
+    "surprise": {"actual":-0.1,"consensus":-0.4,"previous":-0.1,"revised_previous":null,"surprise_direction":"POSITIVE","components":{"Germany_mom":-1.5,"France_mom":-0.4,"intermediate_goods_mom":0.3,"energy_mom":0.9,"capital_goods_mom":0.5}},
+    "absorption": {"state":"PARTIALLY_PRICED","reason":"Release is almost three hours old and European indexes are already positive; residual forecast is from now.","observed_reaction":{"DAX_session":"positive","CAC40_session":"positive","EuroStoxx50_session":"positive"}},
+    "cross_asset_confirmation": {"verdict":"CONFLICTING","observations":{"European_equities":"positive on day","DE10Y":"3.54%, near 17-year highs","US10Y":"4.994%, high ahead of FOMC","DXY":"99.642, little changed","oil":"WTI/Brent easing but still elevated"}},
+    "decision_notes": "Delayed FF story; forecast targets residual move from 11:56 UTC decision time. M2 learning profile has no ACTIONABLE model-2 segment applicable enough to alter confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY":{"value":99.642,"observed_at_utc":"2026-09-16T11:56:20Z","direction":"little_changed","regime":"firm","source":"Barrons","freshness_minutes":45},
+      "US2Y":{"value":null,"observed_at_utc":"2026-09-16T11:56:20Z","direction":"elevated","regime":"restrictive","source":"same-day market reporting","freshness_minutes":90},
+      "US10Y":{"value":4.994,"observed_at_utc":"2026-09-16T11:56:20Z","direction":"little_changed","regime":"near_5pct","source":"Barrons","freshness_minutes":45},
+      "VIX":{"value":null,"observed_at_utc":"2026-09-16T11:56:20Z","direction":"unknown","regime":"pre_FOMC","source":"no reliable fresh quote","freshness_minutes":null},
+      "WTI":{"value":104.2,"observed_at_utc":"2026-09-16T11:56:20Z","direction":"down","regime":"elevated_geopolitical","source":"WSJ/Reuters range","freshness_minutes":60},
+      "BRENT":{"value":107.8,"observed_at_utc":"2026-09-16T11:56:20Z","direction":"down","regime":"elevated_geopolitical","source":"WSJ/Reuters range","freshness_minutes":60},
+      "DE10Y":{"value":3.54,"observed_at_utc":"2026-09-16T11:56:20Z","direction":"high","regime":"near_17y_high","source":"Reuters","freshness_minutes":60}
+    },
+    "regimes":{"europe_equities":"risk-on rebound but Fed-cautious","rates":"high","oil":"easing from highs","usd":"firm/stable"}
+  },
+  "predictions": [
+    {
+      "instrument":"GDAXI","relevance":"DIRECT",
+      "immediate":{"direction":"MIXED","confidence":5,"rationale":"Release is nearly three hours old; better headline is offset by weak Germany/France details and Fed/rates dominance."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"Fed and elevated European yields dominate the next-session setup."},
+      "horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"Most data surprise is absorbed; no clean residual edge now."},"1h":{"direction":"MIXED","confidence":5,"rationale":"Positive surprise conflicts with weak core-country production and high yields."},"4h":{"direction":"MIXED","confidence":4,"rationale":"FOMC anticipation dominates a delayed data release."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Fed outcome and rates likely dominate."}},
+      "counter_case":"Better-than-expected aggregate output plus falling Bund yields could sustain a cyclical rally.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"up/flat","trend_1h":"up","session_location":"European cash session, positive on day","extension_state":"range","market_open":true,"source":"pre-decision same-day European market reporting","observed_at_utc":"2026-09-16T11:56:20Z"}
+    },
+    {
+      "instrument":"STOXX50","relevance":"DIRECT",
+      "immediate":{"direction":"MIXED","confidence":5,"rationale":"Delayed positive surprise is largely absorbed and cross-asset confirmation is conflicting."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"Fed and rates dominate."},
+      "horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"No clean residual edge."},"1h":{"direction":"MIXED","confidence":5,"rationale":"Better output conflicts with high yields."},"4h":{"direction":"MIXED","confidence":4,"rationale":"FOMC dominates."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Fed outcome dominates."}},
+      "counter_case":"Falling yields and stronger cyclicals could extend the positive session.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"up/flat","trend_1h":"up","session_location":"European cash session, positive on day","extension_state":"range","market_open":true,"source":"pre-decision same-day European market reporting","observed_at_utc":"2026-09-16T11:56:20Z"}
+    },
+    {
+      "instrument":"FCHI40","relevance":"DIRECT",
+      "immediate":{"direction":"MIXED","confidence":5,"rationale":"France production fell 0.4%, weakening the positive aggregate surprise."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"Fed and rates dominate."},
+      "horizons":{"15m":{"direction":"MIXED","confidence":5,"rationale":"Aggregate beat is already absorbed while French output was weak."},"1h":{"direction":"MIXED","confidence":5,"rationale":"Conflicting local and regional evidence."},"4h":{"direction":"MIXED","confidence":4,"rationale":"FOMC dominates."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Fed outcome dominates."}},
+      "counter_case":"A broad European risk-on move and lower yields could outweigh weak French production.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"up/flat","trend_1h":"up","session_location":"European cash session, positive on day","extension_state":"range","market_open":true,"source":"pre-decision same-day European market reporting","observed_at_utc":"2026-09-16T11:56:20Z"}
+    }
+  ]
+}
