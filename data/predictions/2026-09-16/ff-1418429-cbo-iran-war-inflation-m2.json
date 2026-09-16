@@ -1,0 +1,274 @@
+{
+  "prediction_id": "ff-1418429-cbo-iran-war-inflation-m2",
+  "event_id": "ff-1418429-cbo-iran-war-inflation",
+  "event_cluster_id": "iran-war-inflation-2026",
+  "created_at_utc": "2026-09-16T06:20:39Z",
+  "event_time_utc": "2026-09-16T00:38:12Z",
+  "published_at_utc": "2026-09-16T00:38:12Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "geopolitics",
+    "iran",
+    "inflation",
+    "fiscal"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 342.45,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "CBO quantifies the Iran war's inflation impulse at about +0.5 percentage point in early 2027 and ongoing fiscal/munitions costs.",
+    "market_expectations": {
+      "source": "CME FedWatch via Reuters",
+      "expected_value": "25bp Fed hike",
+      "implied_probability": 0.924,
+      "distribution_notes": "Fed decision later today dominates near-term rate pricing."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The source article was published about 5h42m before decision time and markets already carried a large Iran/oil inflation premium; oil was retracing from Tuesday's highs.",
+      "observed_reaction": {
+        "WTI": "~104.94, down intraday",
+        "BRENT": "~108.18, down intraday",
+        "US10Y": "~4.993%, just below 5%",
+        "XAUUSD": "~4328, up ~0.8% in same-day Reuters report"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firm near 99.69",
+        "US2Y": "~4.75% approximate, restrictive",
+        "US10Y": "4.993%, near multiyear high but slightly lower in Asia",
+        "VIX": "17.2, elevated but not panic",
+        "WTI": "104.94, retracing",
+        "BRENT": "108.18, retracing",
+        "gold": "4328.39, +0.8% in same-day report"
+      }
+    },
+    "decision_notes": "Delayed FF surfacing of an older source article; forecast targets residual move from 06:20:39Z, not the original publication reaction. M2 learning profile has no ACTIONABLE model-2 segment applicable enough to alter confidence; EARLY_SIGNAL ignored for material adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 99.69,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "firm",
+        "regime": "near-recent-highs",
+        "source": "same-day market report",
+        "freshness_minutes": 120
+      },
+      "US2Y": {
+        "value": 4.75,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "elevated",
+        "regime": "restrictive",
+        "source": "same-day market wrap; approximate",
+        "freshness_minutes": 180
+      },
+      "US10Y": {
+        "value": 4.993,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "slightly_lower",
+        "regime": "near-2007-high",
+        "source": "WSJ Asian trade report",
+        "freshness_minutes": 120
+      },
+      "VIX": {
+        "value": 17.2,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "elevated",
+        "regime": "risk-cautious",
+        "source": "same-day ASX morning wrap",
+        "freshness_minutes": 180
+      },
+      "WTI": {
+        "value": 104.94,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "down",
+        "regime": "very-high",
+        "source": "intraday public futures feed",
+        "freshness_minutes": 30
+      },
+      "BRENT": {
+        "value": 108.18,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "down",
+        "regime": "very-high",
+        "source": "intraday public futures feed",
+        "freshness_minutes": 30
+      },
+      "XAUUSD": {
+        "value": 4328.39,
+        "observed_at_utc": "2026-09-16T06:20:39Z",
+        "direction": "up",
+        "regime": "pre-FOMC",
+        "source": "Reuters same-day report",
+        "freshness_minutes": 180
+      }
+    },
+    "regimes": {
+      "rates": "restrictive/near-cycle-highs",
+      "oil": "elevated but retracing",
+      "usd": "firm",
+      "risk": "cautious",
+      "fed": "25bp hike ~92.4% priced"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Inflation/fiscal message is bearish but delayed and substantially embedded in the existing oil/rates regime."
+      },
+      "next_session": {
+        "direction": "VOLATILITY",
+        "confidence": 6,
+        "rationale": "FOMC outcome and guidance will dominate the next session."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed incremental update has little clean residual edge."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Oil is retracing and yields are slightly off highs, offsetting the bearish inflation narrative."
+        },
+        "4h": {
+          "direction": "VOLATILITY",
+          "confidence": 5,
+          "rationale": "Pre-FOMC positioning can overwhelm the CBO story."
+        },
+        "next_session": {
+          "direction": "VOLATILITY",
+          "confidence": 6,
+          "rationale": "Fed decision/guidance is the dominant catalyst."
+        }
+      },
+      "mechanism": "War inflation and fiscal costs support higher-for-longer yields and lower equity multiples.",
+      "invalidation": "A sustained fall in oil and Treasury yields plus a dovish Fed would negate the bearish macro mechanism.",
+      "counter_case": "The CBO estimate is already priced, oil keeps retracing, and the Fed delivers a dovish hike that sparks a relief rally.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "unknown",
+        "trend_1h": "unknown",
+        "session_location": "pre-US cash / Asia-Europe transition",
+        "extension_state": "unknown",
+        "market_open": false,
+        "source": "pre-decision public market context",
+        "observed_at_utc": "2026-09-16T06:20:39Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "High-rate inflation regime is negative for duration but the story is delayed."
+      },
+      "next_session": {
+        "direction": "VOLATILITY",
+        "confidence": 6,
+        "rationale": "FOMC dominates duration-sensitive tech."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "No fresh clean residual edge after multi-hour delay."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Rate pressure conflicts with slightly lower Asian Treasury yields."
+        },
+        "4h": {
+          "direction": "VOLATILITY",
+          "confidence": 5,
+          "rationale": "FOMC positioning dominates."
+        },
+        "next_session": {
+          "direction": "VOLATILITY",
+          "confidence": 6,
+          "rationale": "Fed guidance can produce a large two-sided move."
+        }
+      },
+      "mechanism": "Higher inflation expectations sustain discount-rate pressure on long-duration equities.",
+      "invalidation": "A decisive Treasury rally and dovish Fed path would reverse the valuation pressure.",
+      "counter_case": "Yields fall further and semiconductors/AI leadership extends, overpowering the delayed inflation story.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "unknown",
+        "trend_1h": "unknown",
+        "session_location": "pre-US cash / Asia-Europe transition",
+        "extension_state": "unknown",
+        "market_open": false,
+        "source": "pre-decision public market context",
+        "observed_at_utc": "2026-09-16T06:20:39Z"
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "Inflation/geopolitical support conflicts with firm USD and near-5% US10Y."
+      },
+      "next_session": {
+        "direction": "VOLATILITY",
+        "confidence": 6,
+        "rationale": "Fed guidance and real-yield reaction dominate."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Gold already rose and the CBO story is delayed."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Inflation hedge demand conflicts with restrictive yields/USD."
+        },
+        "4h": {
+          "direction": "VOLATILITY",
+          "confidence": 5,
+          "rationale": "Pre-FOMC positioning creates two-sided risk."
+        },
+        "next_session": {
+          "direction": "VOLATILITY",
+          "confidence": 6,
+          "rationale": "Fed guidance/real yields should dominate the next session."
+        }
+      },
+      "mechanism": "War inflation can support gold as an inflation/safe-haven hedge, while high yields and USD work in the opposite direction.",
+      "invalidation": "A hawkish Fed with renewed yield/USD breakout would overwhelm the inflation-hedge bid.",
+      "counter_case": "A dovish Fed or fresh Iran escalation drives a stronger safe-haven rally despite current yield pressure.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "unknown",
+        "trend_1h": "up",
+        "session_location": "global session",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "Reuters same-day spot-gold context",
+        "observed_at_utc": "2026-09-16T06:20:39Z"
+      }
+    }
+  ]
+}
