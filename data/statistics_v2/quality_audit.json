@@ -1,9 +1,9 @@
 {
-  "generated_at_utc": "2026-09-16T19:17:30.810255+00:00",
+  "generated_at_utc": "2026-09-16T20:12:47.483988+00:00",
   "purpose": "Diagnostic audit of prediction information quality; no coefficient or scoring-threshold tuning.",
   "evaluation_files": 231,
   "eligible_prediction_events_seen": 223,
-  "directional_event_horizon_pairs": 370,
+  "directional_event_horizon_pairs": 375,
   "latency_minutes": {
     "n": 223,
     "mean": 60.08,
@@ -13,24 +13,24 @@
   },
   "directional_overall": {
     "15m": {
-      "n": 250,
-      "correct": 105,
+      "n": 260,
+      "correct": 115,
       "wrong": 145,
       "no_move": 29,
       "up_actual": 119,
-      "down_actual": 102,
-      "hit_rate_pct": 42.0,
-      "no_move_pct": 11.6
+      "down_actual": 112,
+      "hit_rate_pct": 44.23,
+      "no_move_pct": 11.15
     },
     "1h": {
-      "n": 242,
-      "correct": 98,
-      "wrong": 144,
-      "no_move": 37,
+      "n": 252,
+      "correct": 103,
+      "wrong": 149,
+      "no_move": 42,
       "up_actual": 99,
-      "down_actual": 106,
-      "hit_rate_pct": 40.5,
-      "no_move_pct": 15.29
+      "down_actual": 111,
+      "hit_rate_pct": 40.87,
+      "no_move_pct": 16.67
     },
     "4h": {
       "n": 154,
@@ -86,14 +86,14 @@
         "no_move_pct": 14.89
       },
       "30-60m": {
-        "n": 97,
-        "correct": 45,
+        "n": 107,
+        "correct": 55,
         "wrong": 52,
         "no_move": 12,
         "up_actual": 37,
-        "down_actual": 48,
-        "hit_rate_pct": 46.39,
-        "no_move_pct": 12.37
+        "down_actual": 58,
+        "hit_rate_pct": 51.4,
+        "no_move_pct": 11.21
       },
       "5-15m": {
         "n": 22,
@@ -138,24 +138,24 @@
         "no_move_pct": 16.67
       },
       "15-30m": {
-        "n": 42,
-        "correct": 15,
+        "n": 47,
+        "correct": 20,
         "wrong": 27,
         "no_move": 7,
         "up_actual": 24,
-        "down_actual": 11,
-        "hit_rate_pct": 35.71,
-        "no_move_pct": 16.67
+        "down_actual": 16,
+        "hit_rate_pct": 42.55,
+        "no_move_pct": 14.89
       },
       "30-60m": {
-        "n": 93,
+        "n": 98,
         "correct": 37,
-        "wrong": 56,
-        "no_move": 19,
+        "wrong": 61,
+        "no_move": 24,
         "up_actual": 28,
         "down_actual": 46,
-        "hit_rate_pct": 39.78,
-        "no_move_pct": 20.43
+        "hit_rate_pct": 37.76,
+        "no_move_pct": 24.49
       },
       "5-15m": {
         "n": 20,
@@ -307,48 +307,59 @@
     "15m": {
       "best": [
         {
-          "key": "XAUUSD",
-          "n": 57,
-          "correct": 32,
-          "wrong": 25,
-          "no_move": 6,
-          "up_actual": 21,
-          "down_actual": 30,
-          "hit_rate_pct": 56.14,
-          "no_move_pct": 10.53
-        },
-        {
           "key": "XAGUSD",
-          "n": 11,
-          "correct": 6,
+          "n": 13,
+          "correct": 8,
           "wrong": 5,
           "no_move": 0,
           "up_actual": 7,
-          "down_actual": 4,
-          "hit_rate_pct": 54.55,
+          "down_actual": 6,
+          "hit_rate_pct": 61.54,
           "no_move_pct": 0.0
         },
         {
+          "key": "XAUUSD",
+          "n": 59,
+          "correct": 34,
+          "wrong": 25,
+          "no_move": 6,
+          "up_actual": 21,
+          "down_actual": 32,
+          "hit_rate_pct": 57.63,
+          "no_move_pct": 10.17
+        },
+        {
           "key": "NDX",
+          "n": 31,
+          "correct": 17,
+          "wrong": 14,
+          "no_move": 2,
+          "up_actual": 14,
+          "down_actual": 15,
+          "hit_rate_pct": 54.84,
+          "no_move_pct": 6.45
+        },
+        {
+          "key": "SP500",
           "n": 29,
           "correct": 15,
           "wrong": 14,
           "no_move": 2,
-          "up_actual": 14,
-          "down_actual": 13,
+          "up_actual": 11,
+          "down_actual": 16,
           "hit_rate_pct": 51.72,
           "no_move_pct": 6.9
         },
         {
-          "key": "SP500",
-          "n": 27,
-          "correct": 13,
-          "wrong": 14,
+          "key": "WS30",
+          "n": 12,
+          "correct": 6,
+          "wrong": 6,
           "no_move": 2,
-          "up_actual": 11,
-          "down_actual": 14,
-          "hit_rate_pct": 48.15,
-          "no_move_pct": 7.41
+          "up_actual": 3,
+          "down_actual": 7,
+          "hit_rate_pct": 50.0,
+          "no_move_pct": 16.67
         },
         {
           "key": "FCHI40",
@@ -360,17 +371,6 @@
           "down_actual": 10,
           "hit_rate_pct": 43.48,
           "no_move_pct": 8.7
-        },
-        {
-          "key": "WS30",
-          "n": 10,
-          "correct": 4,
-          "wrong": 6,
-          "no_move": 2,
-          "up_actual": 3,
-          "down_actual": 5,
-          "hit_rate_pct": 40.0,
-          "no_move_pct": 20.0
         },
         {
           "key": "NI225",
@@ -441,17 +441,6 @@
           "no_move_pct": 18.18
         },
         {
-          "key": "WS30",
-          "n": 10,
-          "correct": 4,
-          "wrong": 6,
-          "no_move": 2,
-          "up_actual": 3,
-          "down_actual": 5,
-          "hit_rate_pct": 40.0,
-          "no_move_pct": 20.0
-        },
-        {
           "key": "FCHI40",
           "n": 23,
           "correct": 10,
@@ -463,48 +452,59 @@
           "no_move_pct": 8.7
         },
         {
-          "key": "SP500",
-          "n": 27,
-          "correct": 13,
-          "wrong": 14,
+          "key": "WS30",
+          "n": 12,
+          "correct": 6,
+          "wrong": 6,
           "no_move": 2,
-          "up_actual": 11,
-          "down_actual": 14,
-          "hit_rate_pct": 48.15,
-          "no_move_pct": 7.41
+          "up_actual": 3,
+          "down_actual": 7,
+          "hit_rate_pct": 50.0,
+          "no_move_pct": 16.67
         },
         {
-          "key": "NDX",
+          "key": "SP500",
           "n": 29,
           "correct": 15,
           "wrong": 14,
           "no_move": 2,
-          "up_actual": 14,
-          "down_actual": 13,
+          "up_actual": 11,
+          "down_actual": 16,
           "hit_rate_pct": 51.72,
           "no_move_pct": 6.9
         },
         {
-          "key": "XAGUSD",
-          "n": 11,
-          "correct": 6,
-          "wrong": 5,
-          "no_move": 0,
-          "up_actual": 7,
-          "down_actual": 4,
-          "hit_rate_pct": 54.55,
-          "no_move_pct": 0.0
+          "key": "NDX",
+          "n": 31,
+          "correct": 17,
+          "wrong": 14,
+          "no_move": 2,
+          "up_actual": 14,
+          "down_actual": 15,
+          "hit_rate_pct": 54.84,
+          "no_move_pct": 6.45
         },
         {
           "key": "XAUUSD",
-          "n": 57,
-          "correct": 32,
+          "n": 59,
+          "correct": 34,
           "wrong": 25,
           "no_move": 6,
           "up_actual": 21,
-          "down_actual": 30,
-          "hit_rate_pct": 56.14,
-          "no_move_pct": 10.53
+          "down_actual": 32,
+          "hit_rate_pct": 57.63,
+          "no_move_pct": 10.17
+        },
+        {
+          "key": "XAGUSD",
+          "n": 13,
+          "correct": 8,
+          "wrong": 5,
+          "no_move": 0,
+          "up_actual": 7,
+          "down_actual": 6,
+          "hit_rate_pct": 61.54,
+          "no_move_pct": 0.0
         }
       ]
     },
@@ -512,58 +512,58 @@
       "best": [
         {
           "key": "XAGUSD",
-          "n": 10,
-          "correct": 6,
+          "n": 11,
+          "correct": 7,
           "wrong": 4,
           "no_move": 0,
           "up_actual": 4,
-          "down_actual": 6,
-          "hit_rate_pct": 60.0,
+          "down_actual": 7,
+          "hit_rate_pct": 63.64,
           "no_move_pct": 0.0
         },
         {
           "key": "NDX",
-          "n": 26,
-          "correct": 14,
-          "wrong": 12,
-          "no_move": 4,
+          "n": 29,
+          "correct": 15,
+          "wrong": 14,
+          "no_move": 6,
           "up_actual": 8,
-          "down_actual": 14,
-          "hit_rate_pct": 53.85,
-          "no_move_pct": 15.38
+          "down_actual": 15,
+          "hit_rate_pct": 51.72,
+          "no_move_pct": 20.69
         },
         {
           "key": "WS30",
-          "n": 8,
-          "correct": 4,
-          "wrong": 4,
-          "no_move": 2,
+          "n": 10,
+          "correct": 5,
+          "wrong": 5,
+          "no_move": 3,
           "up_actual": 2,
-          "down_actual": 4,
+          "down_actual": 5,
           "hit_rate_pct": 50.0,
-          "no_move_pct": 25.0
+          "no_move_pct": 30.0
         },
         {
           "key": "XAUUSD",
-          "n": 60,
-          "correct": 27,
+          "n": 61,
+          "correct": 28,
           "wrong": 33,
           "no_move": 9,
           "up_actual": 26,
-          "down_actual": 25,
-          "hit_rate_pct": 45.0,
-          "no_move_pct": 15.0
+          "down_actual": 26,
+          "hit_rate_pct": 45.9,
+          "no_move_pct": 14.75
         },
         {
           "key": "SP500",
-          "n": 23,
-          "correct": 10,
-          "wrong": 13,
-          "no_move": 4,
+          "n": 26,
+          "correct": 11,
+          "wrong": 15,
+          "no_move": 6,
           "up_actual": 7,
-          "down_actual": 12,
-          "hit_rate_pct": 43.48,
-          "no_move_pct": 17.39
+          "down_actual": 13,
+          "hit_rate_pct": 42.31,
+          "no_move_pct": 23.08
         },
         {
           "key": "NI225",
@@ -657,57 +657,57 @@
         },
         {
           "key": "SP500",
-          "n": 23,
-          "correct": 10,
-          "wrong": 13,
-          "no_move": 4,
+          "n": 26,
+          "correct": 11,
+          "wrong": 15,
+          "no_move": 6,
           "up_actual": 7,
-          "down_actual": 12,
-          "hit_rate_pct": 43.48,
-          "no_move_pct": 17.39
+          "down_actual": 13,
+          "hit_rate_pct": 42.31,
+          "no_move_pct": 23.08
         },
         {
           "key": "XAUUSD",
-          "n": 60,
-          "correct": 27,
+          "n": 61,
+          "correct": 28,
           "wrong": 33,
           "no_move": 9,
           "up_actual": 26,
-          "down_actual": 25,
-          "hit_rate_pct": 45.0,
-          "no_move_pct": 15.0
+          "down_actual": 26,
+          "hit_rate_pct": 45.9,
+          "no_move_pct": 14.75
         },
         {
           "key": "WS30",
-          "n": 8,
-          "correct": 4,
-          "wrong": 4,
-          "no_move": 2,
+          "n": 10,
+          "correct": 5,
+          "wrong": 5,
+          "no_move": 3,
           "up_actual": 2,
-          "down_actual": 4,
+          "down_actual": 5,
           "hit_rate_pct": 50.0,
-          "no_move_pct": 25.0
+          "no_move_pct": 30.0
         },
         {
           "key": "NDX",
-          "n": 26,
-          "correct": 14,
-          "wrong": 12,
-          "no_move": 4,
+          "n": 29,
+          "correct": 15,
+          "wrong": 14,
+          "no_move": 6,
           "up_actual": 8,
-          "down_actual": 14,
-          "hit_rate_pct": 53.85,
-          "no_move_pct": 15.38
+          "down_actual": 15,
+          "hit_rate_pct": 51.72,
+          "no_move_pct": 20.69
         },
         {
           "key": "XAGUSD",
-          "n": 10,
-          "correct": 6,
+          "n": 11,
+          "correct": 7,
           "wrong": 4,
           "no_move": 0,
           "up_actual": 4,
-          "down_actual": 6,
-          "hit_rate_pct": 60.0,
+          "down_actual": 7,
+          "hit_rate_pct": 63.64,
           "no_move_pct": 0.0
         }
       ]
@@ -1037,6 +1037,28 @@
     "15m": {
       "best": [
         {
+          "key": "commentary",
+          "n": 10,
+          "correct": 10,
+          "wrong": 0,
+          "no_move": 0,
+          "up_actual": 0,
+          "down_actual": 10,
+          "hit_rate_pct": 100.0,
+          "no_move_pct": 0.0
+        },
+        {
+          "key": "fed",
+          "n": 18,
+          "correct": 14,
+          "wrong": 4,
+          "no_move": 0,
+          "up_actual": 4,
+          "down_actual": 14,
+          "hit_rate_pct": 77.78,
+          "no_move_pct": 0.0
+        },
+        {
           "key": "US_MACRO",
           "n": 8,
           "correct": 6,
@@ -1046,6 +1068,17 @@
           "down_actual": 1,
           "hit_rate_pct": 75.0,
           "no_move_pct": 0.0
+        },
+        {
+          "key": "inflation",
+          "n": 25,
+          "correct": 18,
+          "wrong": 7,
+          "no_move": 2,
+          "up_actual": 4,
+          "down_actual": 19,
+          "hit_rate_pct": 72.0,
+          "no_move_pct": 8.0
         },
         {
           "key": "SHIPPING",
@@ -1092,17 +1125,6 @@
           "no_move_pct": 0.0
         },
         {
-          "key": "inflation",
-          "n": 15,
-          "correct": 8,
-          "wrong": 7,
-          "no_move": 2,
-          "up_actual": 4,
-          "down_actual": 9,
-          "hit_rate_pct": 53.33,
-          "no_move_pct": 13.33
-        },
-        {
           "key": "HORMUZ",
           "n": 32,
           "correct": 16,
@@ -1123,28 +1145,6 @@
           "down_actual": 4,
           "hit_rate_pct": 50.0,
           "no_move_pct": 12.5
-        },
-        {
-          "key": "fed",
-          "n": 8,
-          "correct": 4,
-          "wrong": 4,
-          "no_move": 0,
-          "up_actual": 4,
-          "down_actual": 4,
-          "hit_rate_pct": 50.0,
-          "no_move_pct": 0.0
-        },
-        {
-          "key": "OIL",
-          "n": 31,
-          "correct": 15,
-          "wrong": 16,
-          "no_move": 6,
-          "up_actual": 12,
-          "down_actual": 13,
-          "hit_rate_pct": 48.39,
-          "no_move_pct": 19.35
         }
       ],
       "worst": [
@@ -1329,6 +1329,17 @@
           "no_move_pct": 0.0
         },
         {
+          "key": "fed",
+          "n": 15,
+          "correct": 9,
+          "wrong": 6,
+          "no_move": 6,
+          "up_actual": 0,
+          "down_actual": 9,
+          "hit_rate_pct": 60.0,
+          "no_move_pct": 40.0
+        },
+        {
           "key": "FED",
           "n": 21,
           "correct": 12,
@@ -1360,17 +1371,6 @@
           "down_actual": 20,
           "hit_rate_pct": 48.28,
           "no_move_pct": 0.0
-        },
-        {
-          "key": "RATES",
-          "n": 26,
-          "correct": 12,
-          "wrong": 14,
-          "no_move": 5,
-          "up_actual": 9,
-          "down_actual": 12,
-          "hit_rate_pct": 46.15,
-          "no_move_pct": 19.23
         }
       ],
       "worst": [
@@ -1395,17 +1395,6 @@
           "down_actual": 2,
           "hit_rate_pct": 0.0,
           "no_move_pct": 12.5
-        },
-        {
-          "key": "data_release",
-          "n": 14,
-          "correct": 1,
-          "wrong": 13,
-          "no_move": 2,
-          "up_actual": 9,
-          "down_actual": 3,
-          "hit_rate_pct": 7.14,
-          "no_move_pct": 14.29
         },
         {
           "key": "ECB",
@@ -1452,17 +1441,6 @@
           "no_move_pct": 22.22
         },
         {
-          "key": "rates",
-          "n": 21,
-          "correct": 5,
-          "wrong": 16,
-          "no_move": 4,
-          "up_actual": 12,
-          "down_actual": 5,
-          "hit_rate_pct": 23.81,
-          "no_move_pct": 19.05
-        },
-        {
           "key": "OIL_SUPPLY",
           "n": 8,
           "correct": 2,
@@ -1483,6 +1461,28 @@
           "down_actual": 3,
           "hit_rate_pct": 25.0,
           "no_move_pct": 8.33
+        },
+        {
+          "key": "inflation",
+          "n": 20,
+          "correct": 5,
+          "wrong": 15,
+          "no_move": 7,
+          "up_actual": 9,
+          "down_actual": 4,
+          "hit_rate_pct": 25.0,
+          "no_move_pct": 35.0
+        },
+        {
+          "key": "MIDDLE_EAST",
+          "n": 24,
+          "correct": 6,
+          "wrong": 18,
+          "no_move": 6,
+          "up_actual": 7,
+          "down_actual": 11,
+          "hit_rate_pct": 25.0,
+          "no_move_pct": 25.0
         }
       ]
     },
@@ -1962,24 +1962,24 @@
         "no_move_pct": 0.0
       },
       "1.1.1": {
-        "n": 214,
-        "correct": 91,
+        "n": 219,
+        "correct": 96,
         "wrong": 123,
         "no_move": 28,
         "up_actual": 93,
-        "down_actual": 93,
-        "hit_rate_pct": 42.52,
-        "no_move_pct": 13.08
+        "down_actual": 98,
+        "hit_rate_pct": 43.84,
+        "no_move_pct": 12.79
       },
       "2.0.0": {
-        "n": 21,
-        "correct": 7,
+        "n": 26,
+        "correct": 12,
         "wrong": 14,
         "no_move": 1,
         "up_actual": 13,
-        "down_actual": 7,
-        "hit_rate_pct": 33.33,
-        "no_move_pct": 4.76
+        "down_actual": 12,
+        "hit_rate_pct": 46.15,
+        "no_move_pct": 3.85
       }
     },
     "1h": {
@@ -2004,24 +2004,24 @@
         "no_move_pct": 0.0
       },
       "1.1.1": {
-        "n": 202,
-        "correct": 83,
-        "wrong": 119,
-        "no_move": 30,
+        "n": 210,
+        "correct": 88,
+        "wrong": 122,
+        "no_move": 33,
         "up_actual": 81,
-        "down_actual": 91,
-        "hit_rate_pct": 41.09,
-        "no_move_pct": 14.85
+        "down_actual": 96,
+        "hit_rate_pct": 41.9,
+        "no_move_pct": 15.71
       },
       "2.0.0": {
-        "n": 25,
+        "n": 27,
         "correct": 10,
-        "wrong": 15,
-        "no_move": 5,
+        "wrong": 17,
+        "no_move": 7,
         "up_actual": 10,
         "down_actual": 10,
-        "hit_rate_pct": 40.0,
-        "no_move_pct": 20.0
+        "hit_rate_pct": 37.04,
+        "no_move_pct": 25.93
       }
     },
     "4h": {
@@ -2122,33 +2122,33 @@
         "no_move_pct": 13.46
       },
       "5": {
-        "n": 117,
-        "correct": 52,
+        "n": 120,
+        "correct": 55,
         "wrong": 65,
         "no_move": 11,
         "up_actual": 55,
-        "down_actual": 51,
-        "hit_rate_pct": 44.44,
-        "no_move_pct": 9.4
+        "down_actual": 54,
+        "hit_rate_pct": 45.83,
+        "no_move_pct": 9.17
       },
       "6": {
-        "n": 46,
-        "correct": 23,
+        "n": 51,
+        "correct": 28,
         "wrong": 23,
         "no_move": 6,
         "up_actual": 20,
-        "down_actual": 20,
-        "hit_rate_pct": 50.0,
-        "no_move_pct": 13.04
+        "down_actual": 25,
+        "hit_rate_pct": 54.9,
+        "no_move_pct": 11.76
       },
       "7": {
-        "n": 10,
-        "correct": 1,
+        "n": 12,
+        "correct": 3,
         "wrong": 9,
         "no_move": 0,
         "up_actual": 9,
-        "down_actual": 1,
-        "hit_rate_pct": 10.0,
+        "down_actual": 3,
+        "hit_rate_pct": 25.0,
         "no_move_pct": 0.0
       },
       "8": {
@@ -2184,34 +2184,34 @@
         "no_move_pct": 22.45
       },
       "5": {
-        "n": 120,
-        "correct": 50,
-        "wrong": 70,
-        "no_move": 15,
+        "n": 123,
+        "correct": 52,
+        "wrong": 71,
+        "no_move": 16,
         "up_actual": 52,
-        "down_actual": 53,
-        "hit_rate_pct": 41.67,
-        "no_move_pct": 12.5
+        "down_actual": 55,
+        "hit_rate_pct": 42.28,
+        "no_move_pct": 13.01
       },
       "6": {
-        "n": 40,
-        "correct": 20,
-        "wrong": 20,
-        "no_move": 7,
+        "n": 46,
+        "correct": 23,
+        "wrong": 23,
+        "no_move": 10,
         "up_actual": 11,
-        "down_actual": 22,
+        "down_actual": 25,
         "hit_rate_pct": 50.0,
-        "no_move_pct": 17.5
+        "no_move_pct": 21.74
       },
       "7": {
-        "n": 10,
+        "n": 11,
         "correct": 1,
-        "wrong": 9,
-        "no_move": 2,
+        "wrong": 10,
+        "no_move": 3,
         "up_actual": 6,
         "down_actual": 2,
-        "hit_rate_pct": 10.0,
-        "no_move_pct": 20.0
+        "hit_rate_pct": 9.09,
+        "no_move_pct": 27.27
       },
       "8": {
         "n": 1,
@@ -2332,14 +2332,14 @@
   "directional_by_predicted_direction": {
     "15m": {
       "DOWN": {
-        "n": 174,
-        "correct": 71,
+        "n": 184,
+        "correct": 81,
         "wrong": 103,
         "no_move": 18,
         "up_actual": 85,
-        "down_actual": 71,
-        "hit_rate_pct": 40.8,
-        "no_move_pct": 10.34
+        "down_actual": 81,
+        "hit_rate_pct": 44.02,
+        "no_move_pct": 9.78
       },
       "UP": {
         "n": 76,
@@ -2354,14 +2354,14 @@
     },
     "1h": {
       "DOWN": {
-        "n": 166,
-        "correct": 69,
-        "wrong": 97,
-        "no_move": 27,
+        "n": 176,
+        "correct": 74,
+        "wrong": 102,
+        "no_move": 32,
         "up_actual": 70,
-        "down_actual": 69,
-        "hit_rate_pct": 41.57,
-        "no_move_pct": 16.27
+        "down_actual": 74,
+        "hit_rate_pct": 42.05,
+        "no_move_pct": 18.18
       },
       "UP": {
         "n": 76,
@@ -2421,11 +2421,11 @@
   },
   "actual_horizon_instability": {
     "15m_vs_1h": {
-      "n": 231,
-      "actual_class_changed": 92,
-      "actual_class_changed_pct": 39.83,
-      "full_up_down_reversal": 46,
-      "full_up_down_reversal_pct": 19.91
+      "n": 241,
+      "actual_class_changed": 101,
+      "actual_class_changed_pct": 41.91,
+      "full_up_down_reversal": 50,
+      "full_up_down_reversal_pct": 20.75
     },
     "1h_vs_4h": {
       "n": 150,
