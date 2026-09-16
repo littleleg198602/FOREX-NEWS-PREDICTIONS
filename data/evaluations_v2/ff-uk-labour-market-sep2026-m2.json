@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-15T06:59:03+00:00",
   "evaluation_anchor_time_utc": "2026-09-15T06:59:03+00:00",
   "prediction_latency_seconds": 3543.0,
-  "evaluated_at_utc": "2026-09-16T06:52:49.516071+00:00",
+  "evaluated_at_utc": "2026-09-16T08:04:49.811460+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -143,7 +143,7 @@
     {
       "prediction_id": "ff-uk-labour-market-sep2026-m2",
       "instrument": "UK100",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FTSE",
       "yahoo_proxy_for": null,
@@ -158,14 +158,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-15T07:14:03+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 923.05
-        },
         "1h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-15T07:59:03+00:00",
@@ -174,10 +166,33 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 923.05
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-15",
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-15T07:14:03+00:00",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 923.05
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-15",
+          "actual_price_time_utc": "2026-09-15T15:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-15T15:35:00+00:00",
+          "price": 10658.13,
+          "change_pct": -0.368682,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.784476,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.039399,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.784476,
           "forecast_source": "horizons"
         },
         "4h": {
