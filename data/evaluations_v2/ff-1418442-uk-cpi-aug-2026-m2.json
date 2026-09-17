@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T06:49:45+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T06:49:45+00:00",
   "prediction_latency_seconds": 2745.0,
-  "evaluated_at_utc": "2026-09-17T05:32:21.428955+00:00",
+  "evaluated_at_utc": "2026-09-17T07:42:05.873981+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -157,7 +157,7 @@
     {
       "prediction_id": "ff-1418442-uk-cpi-aug-2026-m2",
       "instrument": "UK100",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FTSE",
       "yahoo_proxy_for": null,
@@ -172,9 +172,9 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
-        "4h": {
+        "15m": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-16T10:49:45+00:00",
+          "target_time_utc": "2026-09-16T07:04:45+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 5,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
@@ -188,19 +188,34 @@
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 913.75
         },
-        "15m": {
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-16",
+          "actual_price_time_utc": "2026-09-16T15:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T15:35:00+00:00",
+          "price": 10688.47,
+          "change_pct": 0.284665,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.043245,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.74459,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 1.043245,
+          "forecast_source": "horizons"
+        },
+        "4h": {
           "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-16T07:04:45+00:00",
+          "target_time_utc": "2026-09-16T10:49:45+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 5,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 913.75
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-16",
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
         }
       }
     }
