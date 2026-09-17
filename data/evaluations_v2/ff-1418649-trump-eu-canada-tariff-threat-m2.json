@@ -1,0 +1,305 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
+  "event_id": "ff-1418649-trump-eu-canada-tariff-threat",
+  "event_time_utc": "2026-09-17T08:41:00+00:00",
+  "prediction_time_utc": "2026-09-17T08:45:22+00:00",
+  "evaluation_anchor_time_utc": "2026-09-17T08:45:22+00:00",
+  "prediction_latency_seconds": 262.0,
+  "evaluated_at_utc": "2026-09-17T08:48:37.449286+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "trade_policy",
+    "tariffs",
+    "europe",
+    "canada"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 4.4,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Trump newly threatened very serious tariffs or curtailed trade with Europe if the EU-Canada association plan is deemed hostile; it is a fresh but conditional trade-policy shock.",
+    "market_expectations": {
+      "source": "pre-decision market context",
+      "expected_value": "No concrete new EU tariff action was priced before the headline",
+      "implied_probability": null,
+      "distribution_notes": "Threat is conditional on Trump's assessment of EU intent."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "UNPRICED",
+      "reason": "Forex Factory posted the story only about four minutes before decision; no reliable instrument-specific reaction was yet isolated.",
+      "observed_reaction": {
+        "STOXX600_pre_headline_pct": 0.5,
+        "DAX_pre_headline_pct": 0.5
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "Europe_equities": "STOXX 600 and DAX were +0.5% on lower oil/stalled yields before/around the fresh headline",
+        "oil": "Brent 104.74 and WTI 101.60, both lower",
+        "rates": "global bond selloff paused",
+        "DXY": "firm post-FOMC",
+        "VIX": "prior close 18.38, too stale for live confirmation"
+      }
+    },
+    "decision_notes": "Fresh headline, residual forecast from 08:45 UTC. Learning: M2 mixed-neutral 4h low-confidence segment is ACTIONABLE KEEP_NEUTRAL; used only to avoid forcing medium-horizon direction amid conflicting context."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T08:40:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Reuters morning markets",
+        "freshness_minutes": 5
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T08:30:00Z",
+        "direction": "elevated",
+        "regime": "RISING",
+        "source": "Reuters morning markets",
+        "freshness_minutes": 15
+      },
+      "US10Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T08:30:00Z",
+        "direction": "flat_to_lower",
+        "regime": "FLAT",
+        "source": "Reuters Europe markets",
+        "freshness_minutes": 15
+      },
+      "VIX": {
+        "value": 18.38,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "ELEVATED",
+        "source": "prior close snapshot",
+        "freshness_minutes": 765
+      },
+      "WTI": {
+        "value": 101.6,
+        "observed_at_utc": "2026-09-17T08:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters oil",
+        "freshness_minutes": 45
+      },
+      "BRENT": {
+        "value": 104.74,
+        "observed_at_utc": "2026-09-17T08:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters oil",
+        "freshness_minutes": 45
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25660.08984375,
+      "reference_price_time_utc": "2026-09-17T08:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T08:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T12:45:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6299.509765625,
+      "reference_price_time_utc": "2026-09-17T08:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T08:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T12:45:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8157.740234375,
+      "reference_price_time_utc": "2026-09-17T08:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T08:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T12:45:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7551.81,
+      "reference_price_time_utc": "2026-09-16T20:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T20:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 733.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T12:45:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
