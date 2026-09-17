@@ -1,0 +1,266 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418629-goldman-october-fed-hike-m2",
+  "event_id": "ff-1418629-goldman-october-fed-hike",
+  "event_time_utc": "2026-09-17T05:05:00+00:00",
+  "prediction_time_utc": "2026-09-17T05:28:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-17T05:28:30+00:00",
+  "prediction_latency_seconds": 1410.0,
+  "evaluated_at_utc": "2026-09-17T05:32:56.109267+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "fed",
+    "rates",
+    "wall_street_repricing",
+    "incremental_update"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 23.5,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Goldman pulled its next Fed hike forecast forward to October after interpreting the FOMC as more hawkish than expected; this reinforces but does not originate the post-FOMC tightening repricing.",
+    "market_expectations": {
+      "source": "Reuters/CME post-FOMC pricing",
+      "expected_value": "another 25bp hike by year-end; October not fully priced",
+      "implied_probability": 0.5,
+      "distribution_notes": "Reuters reported about a 50% probability of another hike next month and about 90% by year-end."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The core hawkish Fed information was already known for hours; Goldman's forecast change is only ~23 minutes old but market pricing had already moved toward another hike.",
+      "observed_reaction": {
+        "gold_usd_oz": 4295.26,
+        "WTI": 102.1,
+        "Brent": 105.64,
+        "asia_equities": "modestly higher",
+        "US10Y": "stabilized below 5%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "strong at a seven-week high area",
+        "US2Y": "elevated/highest since mid-2024 area",
+        "US10Y": "stabilized below 5%",
+        "VIX": "18.38 at prior US close; stale",
+        "WTI_Brent": "falling",
+        "gold": "rebounding to about 4295 despite hawkish backdrop",
+        "equities": "Asian shares modestly higher"
+      }
+    },
+    "decision_notes": "Residual forecast from actual decision time. M2 learning profile: only ACTIONABLE segments may change confidence; current relevant M2 directional 5-6 segments are EARLY_SIGNAL, while low-confidence mixed-neutral 4h/next-session evidence supports keeping neutral calls conservative rather than forcing direction."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T05:15:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters Sep 17 FX report",
+        "freshness_minutes": 13
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T05:15:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters Sep 17 global markets report",
+        "freshness_minutes": 13
+      },
+      "US10Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T05:15:00Z",
+        "direction": "stable-to-lower",
+        "regime": "FLAT",
+        "source": "Reuters Sep 17 global markets report",
+        "freshness_minutes": 13
+      },
+      "VIX": {
+        "value": 18.38,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "ELEVATED",
+        "source": "prior US close snapshot",
+        "freshness_minutes": 568
+      },
+      "WTI": {
+        "value": 102.1,
+        "observed_at_utc": "2026-09-17T04:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters Sep 17 oil report",
+        "freshness_minutes": 58
+      },
+      "BRENT": {
+        "value": 105.64,
+        "observed_at_utc": "2026-09-17T04:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters Sep 17 oil report",
+        "freshness_minutes": 58
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418629-goldman-october-fed-hike-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28945.06,
+      "reference_price_time_utc": "2026-09-16T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 491.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:43:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T06:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418629-goldman-october-fed-hike-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7551.81,
+      "reference_price_time_utc": "2026-09-16T20:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T20:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 536.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:43:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T06:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418629-goldman-october-fed-hike-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4325.2998046875,
+      "reference_price_time_utc": "2026-09-17T05:23:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T05:22:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:43:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T06:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

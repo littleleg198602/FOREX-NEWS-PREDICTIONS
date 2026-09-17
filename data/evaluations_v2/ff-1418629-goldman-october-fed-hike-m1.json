@@ -1,0 +1,296 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418629-goldman-october-fed-hike-m1",
+  "event_id": "ff-1418629-goldman-october-fed-hike",
+  "event_time_utc": "2026-09-17T05:05:00+00:00",
+  "prediction_time_utc": "2026-09-17T05:28:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-17T05:28:30+00:00",
+  "prediction_latency_seconds": 1410.0,
+  "evaluated_at_utc": "2026-09-17T05:32:55.089297+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "fed",
+    "rates",
+    "wall_street_repricing",
+    "incremental_update"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-17T05:28:30+00:00",
+    "captured_for_event_time_utc": "2026-09-17T05:28:30+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.28700256347656,
+        "timestamp_utc": "2026-09-17T05:23:00+00:00",
+        "available_at_utc": "2026-09-17T05:23:00+00:00",
+        "age_minutes": 5.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.022924,
+        "change_pct_240m": -0.016947,
+        "change_abs_60m": -0.022995,
+        "raw_change_pct_60m": -0.022924,
+        "raw_change_abs_60m": -0.022995,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.92578125,
+        "timestamp_utc": "2026-09-17T05:21:00+00:00",
+        "available_at_utc": "2026-09-17T05:21:00+00:00",
+        "age_minutes": 7.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.003832,
+        "change_pct_240m": 0.003832,
+        "change_abs_60m": 0.003906,
+        "raw_change_pct_60m": -0.003832,
+        "raw_change_abs_60m": -0.003906,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "ZN=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 105.828125,
+        "timestamp_utc": "2026-09-17T05:23:00+00:00",
+        "available_at_utc": "2026-09-17T05:23:00+00:00",
+        "age_minutes": 5.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 10Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.02952,
+        "change_pct_240m": 0.059023,
+        "change_abs_60m": 0.03125,
+        "raw_change_pct_60m": -0.02952,
+        "raw_change_abs_60m": -0.03125,
+        "regime": "RISING"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 17.709999084472656,
+        "timestamp_utc": "2026-09-16T20:15:00+00:00",
+        "available_at_utc": "2026-09-16T20:15:00+00:00",
+        "age_minutes": 553.5,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.0,
+        "change_pct_240m": 0.0,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 102.2300033569336,
+        "timestamp_utc": "2026-09-17T05:23:00+00:00",
+        "available_at_utc": "2026-09-17T05:23:00+00:00",
+        "age_minutes": 5.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.185506,
+        "change_pct_240m": 0.205849,
+        "change_abs_60m": -0.189995,
+        "raw_change_pct_60m": -0.185506,
+        "raw_change_abs_60m": -0.189995,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 105.7699966430664,
+        "timestamp_utc": "2026-09-17T05:20:00+00:00",
+        "available_at_utc": "2026-09-17T05:20:00+00:00",
+        "age_minutes": 8.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.151047,
+        "change_pct_240m": 0.056757,
+        "change_abs_60m": -0.160004,
+        "raw_change_pct_60m": -0.151047,
+        "raw_change_abs_60m": -0.160004,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418629-goldman-october-fed-hike-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28945.06,
+      "reference_price_time_utc": "2026-09-16T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 491.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:43:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T06:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418629-goldman-october-fed-hike-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7551.81,
+      "reference_price_time_utc": "2026-09-16T20:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T20:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 536.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:43:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T06:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418629-goldman-october-fed-hike-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4325.2998046875,
+      "reference_price_time_utc": "2026-09-17T05:23:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T05:22:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:43:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T06:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T09:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}
