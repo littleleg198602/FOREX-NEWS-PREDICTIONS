@@ -1,0 +1,261 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m2",
+  "event_id": "ff-1418753-trump-axios-iran-crossroads",
+  "event_time_utc": "2026-09-17T16:57:00+00:00",
+  "prediction_time_utc": "2026-09-17T17:37:45+00:00",
+  "evaluation_anchor_time_utc": "2026-09-17T17:37:45+00:00",
+  "prediction_latency_seconds": 2445.0,
+  "evaluated_at_utc": "2026-09-17T17:42:00.907304+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "oil",
+    "risk_sentiment"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 40.75,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Trump shifted from war-end rhetoric to an explicit crossroads over renewed large-scale military action, but no decision has been made.",
+    "market_expectations": {
+      "source": "Axios and market context",
+      "expected_value": "no confirmed renewed strike decision",
+      "implied_probability": null,
+      "distribution_notes": "binary escalation/de-escalation risk unresolved"
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Headline is about 41 minutes old; equities were risk-on and oil remained lower.",
+      "observed_reaction": {
+        "WTI": 100.82,
+        "Brent": 103.13,
+        "US10Y": 4.951
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "still lower",
+        "US10Y": "below 5%",
+        "VIX": "lower in earlier snapshot",
+        "equities": "strongly positive earlier"
+      }
+    },
+    "decision_notes": "Residual forecast only. ACTIONABLE M2 mixed-neutral 4h learning supports MIXED; directional 5-6 is EARLY_SIGNAL only."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.13,
+        "observed_at_utc": "2026-09-17T13:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "market open snapshot",
+        "freshness_minutes": 278
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T16:45:00Z",
+        "direction": "elevated",
+        "regime": "RISING",
+        "source": "Reuters context",
+        "freshness_minutes": 53
+      },
+      "US10Y": {
+        "value": 4.951,
+        "observed_at_utc": "2026-09-17T16:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "market reports",
+        "freshness_minutes": 68
+      },
+      "VIX": {
+        "value": 15.45,
+        "observed_at_utc": "2026-09-17T13:00:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "market open snapshot",
+        "freshness_minutes": 278
+      },
+      "WTI": {
+        "value": 100.82,
+        "observed_at_utc": "2026-09-17T16:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_minutes": 68
+      },
+      "BRENT": {
+        "value": 103.13,
+        "observed_at_utc": "2026-09-17T16:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_minutes": 68
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4401.5,
+      "reference_price_time_utc": "2026-09-17T17:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T17:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T17:52:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T18:37:45+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T21:37:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7633.5498046875,
+      "reference_price_time_utc": "2026-09-17T17:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T17:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T17:52:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T18:37:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T21:37:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29425.91015625,
+      "reference_price_time_utc": "2026-09-17T17:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T17:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T17:52:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T18:37:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T21:37:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

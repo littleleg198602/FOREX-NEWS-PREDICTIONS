@@ -1,0 +1,296 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m1",
+  "event_id": "ff-1418753-trump-axios-iran-crossroads",
+  "event_time_utc": "2026-09-17T16:57:00+00:00",
+  "prediction_time_utc": "2026-09-17T17:37:45+00:00",
+  "evaluation_anchor_time_utc": "2026-09-17T17:37:45+00:00",
+  "prediction_latency_seconds": 2445.0,
+  "evaluated_at_utc": "2026-09-17T17:42:00.550220+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "oil",
+    "risk_sentiment"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-17T17:37:45+00:00",
+    "captured_for_event_time_utc": "2026-09-17T17:37:45+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.23300170898438,
+        "timestamp_utc": "2026-09-17T17:32:00+00:00",
+        "available_at_utc": "2026-09-17T17:32:00+00:00",
+        "age_minutes": 5.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.003996,
+        "change_pct_240m": 0.125865,
+        "change_abs_60m": 0.004005,
+        "raw_change_pct_60m": 0.003996,
+        "raw_change_abs_60m": 0.004005,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.98046875,
+        "timestamp_utc": "2026-09-17T17:32:00+00:00",
+        "available_at_utc": "2026-09-17T17:32:00+00:00",
+        "age_minutes": 5.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.015319,
+        "change_pct_240m": 0.034462,
+        "change_abs_60m": 0.015625,
+        "raw_change_pct_60m": -0.015319,
+        "raw_change_abs_60m": -0.015625,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 4.954999923706055,
+        "timestamp_utc": "2026-09-17T17:27:00+00:00",
+        "available_at_utc": "2026-09-17T17:27:00+00:00",
+        "age_minutes": 10.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": 0.202219,
+        "change_pct_240m": 0.080796,
+        "change_abs_60m": 0.01,
+        "raw_change_pct_60m": 0.202219,
+        "raw_change_abs_60m": 0.01,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 15.680000305175781,
+        "timestamp_utc": "2026-09-17T17:27:00+00:00",
+        "available_at_utc": "2026-09-17T17:27:00+00:00",
+        "age_minutes": 10.75,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.255754,
+        "change_pct_240m": -0.190959,
+        "change_abs_60m": 0.04,
+        "raw_change_pct_60m": 0.255754,
+        "raw_change_abs_60m": 0.04,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 102.05000305175781,
+        "timestamp_utc": "2026-09-17T17:32:00+00:00",
+        "available_at_utc": "2026-09-17T17:32:00+00:00",
+        "age_minutes": 5.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.492368,
+        "change_pct_240m": 1.330557,
+        "change_abs_60m": 0.5,
+        "raw_change_pct_60m": 0.492368,
+        "raw_change_abs_60m": 0.5,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 104.62000274658203,
+        "timestamp_utc": "2026-09-17T17:32:00+00:00",
+        "available_at_utc": "2026-09-17T17:32:00+00:00",
+        "age_minutes": 5.75,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.547813,
+        "change_pct_240m": 1.651773,
+        "change_abs_60m": 0.57,
+        "raw_change_pct_60m": 0.547813,
+        "raw_change_abs_60m": 0.57,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4401.5,
+      "reference_price_time_utc": "2026-09-17T17:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T17:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T17:52:45+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T18:37:45+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T21:37:45+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7633.5498046875,
+      "reference_price_time_utc": "2026-09-17T17:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T17:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T17:52:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T18:37:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T21:37:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418753-trump-axios-iran-crossroads-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29425.91015625,
+      "reference_price_time_utc": "2026-09-17T17:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T17:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T17:52:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T18:37:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T21:37:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

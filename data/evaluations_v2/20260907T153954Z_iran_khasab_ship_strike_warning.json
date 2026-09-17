@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-07T15:39:54+00:00",
   "evaluation_anchor_time_utc": "2026-09-07T15:39:54+00:00",
   "prediction_latency_seconds": 1620.0,
-  "evaluated_at_utc": "2026-09-17T13:43:39.764916+00:00",
+  "evaluated_at_utc": "2026-09-17T17:41:04.013500+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -167,15 +167,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-07T15:54:54+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "first_available_price_time_utc": "2026-09-07T16:01:00+00:00",
-          "market_delay_minutes": 6.1,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
         "1h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-07T16:39:54+00:00",
@@ -214,6 +205,15 @@
           "first_available_price_time_utc": "2026-09-08T07:01:00+00:00",
           "market_delay_minutes": 681.1,
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "first_available_price_time_utc": "2026-09-07T16:01:00+00:00",
+          "market_delay_minutes": 6.1,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       },
       "forecast_structure": "legacy_immediate_fallback"
@@ -235,15 +235,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-07T15:54:54+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "first_available_price_time_utc": "2026-09-08T07:01:00+00:00",
-          "market_delay_minutes": 906.1,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
         "1h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-07T16:39:54+00:00",
@@ -281,6 +272,15 @@
           "predicted_confidence": 5,
           "first_available_price_time_utc": "2026-09-08T07:01:00+00:00",
           "market_delay_minutes": 681.1,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "first_available_price_time_utc": "2026-09-08T07:01:00+00:00",
+          "market_delay_minutes": 906.1,
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       },
@@ -361,15 +361,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-07T15:54:54+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 4,
-          "first_available_price_time_utc": "2026-09-08T07:01:00+00:00",
-          "market_delay_minutes": 906.1,
-          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
-        },
         "1h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-07T16:39:54+00:00",
@@ -407,6 +398,15 @@
           "first_available_price_time_utc": "2026-09-08T07:01:00+00:00",
           "market_delay_minutes": 681.1,
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "first_available_price_time_utc": "2026-09-08T07:01:00+00:00",
+          "market_delay_minutes": 906.1,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         }
       },
       "forecast_structure": "legacy_immediate_fallback"
@@ -428,12 +428,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-07T15:54:54+00:00",
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 549.9
-        },
         "1h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-07T16:39:54+00:00",
@@ -463,6 +457,12 @@
         "4h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-07T19:39:54+00:00",
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 549.9
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-07T15:54:54+00:00",
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 549.9
         }
