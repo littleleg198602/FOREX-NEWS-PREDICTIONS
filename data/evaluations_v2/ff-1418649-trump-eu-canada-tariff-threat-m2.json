@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-17T08:45:22+00:00",
   "evaluation_anchor_time_utc": "2026-09-17T08:45:22+00:00",
   "prediction_latency_seconds": 262.0,
-  "evaluated_at_utc": "2026-09-17T08:48:37.449286+00:00",
+  "evaluated_at_utc": "2026-09-17T11:24:42.866251+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -128,132 +128,222 @@
     {
       "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25660.08984375,
-      "reference_price_time_utc": "2026-09-17T08:34:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-17T08:33:00+00:00",
+      "reference_price": 25674.220703125,
+      "reference_price_time_utc": "2026-09-17T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T08:44:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.367,
+      "reference_age_minutes": 0.367,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "session_local_date": null,
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "actual_price_time_utc": "2026-09-17T09:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T09:00:00+00:00",
+          "market_delay_minutes": 0.63,
+          "price": 25670.029296875,
+          "change_pct": -0.016325,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.144813,
+          "post_event_range_pct": 0.077861,
+          "mfe_pct": 0.043978,
+          "mae_pct": -0.033883,
+          "directional_threshold_pct": 0.014481,
+          "actual_direction_thresholded": "DOWN"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "actual_price_time_utc": "2026-09-17T09:46:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T09:45:00+00:00",
+          "market_delay_minutes": 0.63,
+          "price": 25700.740234375,
+          "change_pct": 0.103292,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.455862,
+          "post_event_range_pct": 0.231248,
+          "mfe_pct": 0.098431,
+          "mae_pct": -0.132817,
+          "directional_threshold_pct": 0.045586,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-17T12:45:22+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN",
-          "forecast_source": "horizons"
         }
       }
     },
     {
       "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6299.509765625,
-      "reference_price_time_utc": "2026-09-17T08:34:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-17T08:33:00+00:00",
+      "reference_price": 6300.56005859375,
+      "reference_price_time_utc": "2026-09-17T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T08:44:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.367,
+      "reference_age_minutes": 0.367,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "session_local_date": null,
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "actual_price_time_utc": "2026-09-17T09:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T09:00:00+00:00",
+          "market_delay_minutes": 0.63,
+          "price": 6302.35009765625,
+          "change_pct": 0.028411,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.135226,
+          "post_event_range_pct": 0.088402,
+          "mfe_pct": 0.018569,
+          "mae_pct": -0.069834,
+          "directional_threshold_pct": 0.013523,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "actual_price_time_utc": "2026-09-17T09:46:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T09:45:00+00:00",
+          "market_delay_minutes": 0.63,
+          "price": 6310.3701171875,
+          "change_pct": 0.155701,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.417428,
+          "post_event_range_pct": 0.207602,
+          "mfe_pct": 0.032696,
+          "mae_pct": -0.174905,
+          "directional_threshold_pct": 0.041743,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-17T12:45:22+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN",
-          "forecast_source": "horizons"
         }
       }
     },
     {
       "prediction_id": "ff-1418649-trump-eu-canada-tariff-threat-m2",
       "instrument": "FCHI40",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FCHI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 8157.740234375,
-      "reference_price_time_utc": "2026-09-17T08:34:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-17T08:33:00+00:00",
+      "reference_price": 8157.509765625,
+      "reference_price_time_utc": "2026-09-17T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T08:44:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 11.367,
+      "reference_age_minutes": 0.367,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "session_local_date": null,
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-17T09:00:22+00:00",
+          "actual_price_time_utc": "2026-09-17T09:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T09:00:00+00:00",
+          "market_delay_minutes": 0.63,
+          "price": 8162.43994140625,
+          "change_pct": 0.060437,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.116703,
+          "post_event_range_pct": 0.10788,
+          "mfe_pct": 0.030647,
+          "mae_pct": -0.077233,
+          "directional_threshold_pct": 0.01167,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "actual_price_time_utc": "2026-09-17T09:46:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T09:45:00+00:00",
+          "market_delay_minutes": 0.63,
+          "price": 8164.5,
+          "change_pct": 0.085691,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.368005,
+          "post_event_range_pct": 0.152377,
+          "mfe_pct": 0.030647,
+          "mae_pct": -0.12173,
+          "directional_threshold_pct": 0.0368,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-17T12:45:22+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "DOWN",
-          "forecast_source": "horizons"
         }
       }
     },
@@ -275,29 +365,33 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
+        "next_session": {
           "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-17T09:00:22+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 733.367
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-17T09:45:22+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 733.367
         },
         "4h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-17T12:45:22+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
         }
       }
     }

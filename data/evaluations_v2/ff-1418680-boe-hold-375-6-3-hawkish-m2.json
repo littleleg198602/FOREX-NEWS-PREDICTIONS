@@ -1,0 +1,184 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418680-boe-hold-375-6-3-hawkish-m2",
+  "event_id": "ff-1418680-boe-hold-375-6-3-hawkish",
+  "event_time_utc": "2026-09-17T11:00:00+00:00",
+  "prediction_time_utc": "2026-09-17T11:21:50+00:00",
+  "evaluation_anchor_time_utc": "2026-09-17T11:21:50+00:00",
+  "prediction_latency_seconds": 1310.0,
+  "evaluated_at_utc": "2026-09-17T11:24:45.376769+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "boe",
+    "rates",
+    "inflation",
+    "uk",
+    "data_release"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 21.8,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "BoE held at 3.75% as expected, but retained a 6-3 hawkish split, lifted its early-2027 inflation peak above 4%, and traders priced 38bp of hikes by year-end.",
+    "market_expectations": {
+      "source": "Reuters/FF pre-release and immediate pricing",
+      "expected_value": "3.75% hold; 6-3 vote expected",
+      "implied_probability": 0.8,
+      "distribution_notes": "Pre-release markets put >80% odds on a hold; November hike was already heavily priced."
+    },
+    "surprise": {
+      "actual": "3.75% hold; 6-3; three wanted 4.0%",
+      "consensus": "3.75% hold; 6-3 expected",
+      "previous": "3.75%; 6-3",
+      "revised_previous": null,
+      "surprise_direction": "HAWKISH_DETAILS",
+      "components": {
+        "inflation_peak": "above 4% early 2027 vs prior 3.2%",
+        "QT": "multi-year APF unwind; active sales £20bn/year"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Headline hold and vote matched expectations; new inflation projection is hawkish but November tightening was already heavily priced.",
+      "observed_reaction": {
+        "trader_pricing": "38bp of hikes by year-end",
+        "FTSE_pre_release_pct": 0.6
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "easing from seven-week peak",
+        "US_rates": "still elevated after Fed",
+        "oil": "Brent/WTI lower, supportive for UK inflation/equities",
+        "UK_rates": "hawkish BoE details and higher inflation path",
+        "FTSE": "positive before release"
+      }
+    },
+    "decision_notes": "Residual forecast only. M2 ACTIONABLE learning for low-confidence MIXED 4h supports keeping neutral; no directional confidence boost."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T11:21:50Z",
+        "direction": "down_from_seven_week_peak",
+        "regime": "FALLING",
+        "source": "Reuters Sep17 FX",
+        "freshness_minutes": 0
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T11:21:50Z",
+        "direction": "elevated",
+        "regime": "RISING",
+        "source": "Reuters Sep17 markets",
+        "freshness_minutes": 0
+      },
+      "US10Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-17T11:21:50Z",
+        "direction": "stable",
+        "regime": "FLAT",
+        "source": "Reuters Sep17 markets",
+        "freshness_minutes": 0
+      },
+      "VIX": {
+        "value": 18.38,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "ELEVATED",
+        "source": "prior close",
+        "freshness_minutes": 681
+      },
+      "WTI": {
+        "value": 101.03,
+        "observed_at_utc": "2026-09-17T07:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Sharecast London open",
+        "freshness_minutes": 232
+      },
+      "BRENT": {
+        "value": 103.93,
+        "observed_at_utc": "2026-09-17T07:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Sharecast London open",
+        "freshness_minutes": 232
+      }
+    },
+    "regimes": {
+      "DXY": "FALLING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418680-boe-hold-375-6-3-hawkish-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10755.4501953125,
+      "reference_price_time_utc": "2026-09-17T11:10:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T11:09:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.833,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T11:36:50+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T12:21:50+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T15:21:50+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
