@@ -1,0 +1,263 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418614-trump-iran-war-end-soon-m2",
+  "event_id": "ff-1418614-trump-iran-war-end-soon",
+  "event_time_utc": "2026-09-17T00:07:00+00:00",
+  "prediction_time_utc": "2026-09-17T01:28:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-17T01:28:30+00:00",
+  "prediction_latency_seconds": 4890.0,
+  "evaluated_at_utc": "2026-09-17T01:29:42.350305+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "oil",
+    "risk_sentiment"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 81.5,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Trump strengthened his war-end rhetoric, but no ceasefire or deal exists; the residual channel is lower oil/geopolitical risk premium rather than a fresh independent shock.",
+    "market_expectations": {
+      "source": "contemporaneous oil market",
+      "expected_value": "Conflict remains active; supply fears already easing on Saudi cargo workarounds",
+      "implied_probability": null,
+      "distribution_notes": "No verified ceasefire probability available."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "The comment is over an hour old and oil continued falling into early Asia, but the decline also reflects Saudi supply workarounds; only residual move from now is forecast.",
+      "observed_reaction": {
+        "WTI": 101.29,
+        "Brent": 104.59,
+        "gold_previous_close": 4240.1
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "CONFIRMED lower: WTI 101.29, Brent 104.59",
+        "DXY": "firm after Fed",
+        "US2Y": "4.738% post-Fed",
+        "US10Y": "~5.00% post-Fed",
+        "VIX": "18.38 at US close",
+        "gold": "already down >1% after Fed; cannot isolate Iran comment"
+      }
+    },
+    "decision_notes": "M2 uses only pre-decision information. ACTIONABLE mixed-neutral learning supports keeping short horizons neutral; directional M2 evidence remains too limited to boost confidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.31,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters close wrap",
+        "freshness_minutes": 328
+      },
+      "US2Y": {
+        "value": 4.738,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters close wrap",
+        "freshness_minutes": 328
+      },
+      "US10Y": {
+        "value": 5.0,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters close wrap",
+        "freshness_minutes": 328
+      },
+      "VIX": {
+        "value": 18.38,
+        "observed_at_utc": "2026-09-16T20:00:00Z",
+        "direction": "up",
+        "regime": "ELEVATED",
+        "source": "MarketWatch close report",
+        "freshness_minutes": 328
+      },
+      "WTI": {
+        "value": 101.29,
+        "observed_at_utc": "2026-09-17T00:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters early-Asia oil report",
+        "freshness_minutes": 43
+      },
+      "BRENT": {
+        "value": 104.59,
+        "observed_at_utc": "2026-09-17T00:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters early-Asia oil report",
+        "freshness_minutes": 43
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418614-trump-iran-war-end-soon-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7551.81,
+      "reference_price_time_utc": "2026-09-16T20:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T20:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 296.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T01:43:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418614-trump-iran-war-end-soon-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 28945.06,
+      "reference_price_time_utc": "2026-09-16T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-16T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 251.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T01:43:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418614-trump-iran-war-end-soon-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4342.7998046875,
+      "reference_price_time_utc": "2026-09-17T01:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T01:19:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T01:43:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:28:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T05:28:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T22:13:19+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T22:13:19+00:00",
   "prediction_latency_seconds": 4200.0,
-  "evaluated_at_utc": "2026-09-16T22:59:03.849587+00:00",
+  "evaluated_at_utc": "2026-09-17T01:29:39.570089+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -178,20 +178,6 @@
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-16T23:13:19+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-16T22:28:19+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 56.317
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
@@ -203,6 +189,22 @@
           "target_time_utc": "2026-09-17T02:13:19+00:00",
           "predicted_direction": "UP",
           "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 56.317
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 56.317
         }
       }
     },
@@ -224,20 +226,6 @@
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-16T23:13:19+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-16T22:28:19+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 101.317
-        },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
@@ -249,6 +237,22 @@
           "target_time_utc": "2026-09-17T02:13:19+00:00",
           "predicted_direction": "UP",
           "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 101.317
+        },
+        "15m": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-16T22:28:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 101.317
         }
       }
     },
@@ -270,11 +274,38 @@
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
+        "next_session": {
           "status": "PENDING",
-          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "session_local_date": "2026-09-17",
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-17T02:13:19+00:00",
           "predicted_direction": "UP",
           "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-16T23:13:19+00:00",
+          "actual_price_time_utc": "2026-09-16T23:14:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T23:13:00+00:00",
+          "market_delay_minutes": 0.68,
+          "price": 4300.2998046875,
+          "change_pct": 0.048849,
+          "actual_direction": "UP",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "forecast_source": "legacy_fallback",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.148909,
+          "post_event_range_pct": 0.453678,
+          "mfe_pct": 0.367591,
+          "mae_pct": -0.086087,
+          "directional_threshold_pct": 0.014891,
+          "actual_direction_thresholded": "UP"
         },
         "15m": {
           "status": "DONE",
@@ -296,18 +327,6 @@
           "mae_pct": -0.086087,
           "directional_threshold_pct": 0.014891,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "UP",
-          "forecast_source": "legacy_fallback"
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-17T02:13:19+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5
         }
       }
     }
