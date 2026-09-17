@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T06:20:39+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T06:20:39+00:00",
   "prediction_latency_seconds": 20547.0,
-  "evaluated_at_utc": "2026-09-17T11:24:15.389870+00:00",
+  "evaluated_at_utc": "2026-09-17T13:30:14.088258+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -132,7 +132,7 @@
     {
       "prediction_id": "ff-1418429-cbo-iran-war-inflation-m2",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -147,12 +147,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-16",
-          "predicted_direction": "VOLATILITY",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-16T07:20:39+00:00",
@@ -176,6 +170,28 @@
           "predicted_confidence": 5,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 566.65
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-16",
+          "actual_price_time_utc": "2026-09-16T20:32:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-16T20:31:00+00:00",
+          "price": 7551.81,
+          "change_pct": -0.447155,
+          "actual_direction": "DOWN",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 6,
+          "correct": true,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.587548,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.568999,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "volatility_ratio": 2.670417,
+          "volatility_ratio_threshold": 1.25,
+          "forecast_source": "horizons"
         }
       }
     },
@@ -197,12 +213,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-16",
-          "predicted_direction": "VOLATILITY",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-16T07:20:39+00:00",
@@ -226,6 +236,12 @@
           "predicted_confidence": 5,
           "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
           "reference_age_minutes": 543.65
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-16",
+          "predicted_direction": "VOLATILITY",
+          "forecast_source": "horizons"
         }
       }
     },
@@ -247,12 +263,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 5,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-17",
-          "predicted_direction": "VOLATILITY",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T07:20:39+00:00",
@@ -313,6 +323,12 @@
           "mae_pct": null,
           "volatility_ratio": 0.535924,
           "volatility_ratio_threshold": 1.25
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-17",
+          "predicted_direction": "VOLATILITY",
+          "forecast_source": "horizons"
         }
       }
     }

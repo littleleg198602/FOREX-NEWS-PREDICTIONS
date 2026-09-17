@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T16:59:08+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T16:59:08+00:00",
   "prediction_latency_seconds": 16148.0,
-  "evaluated_at_utc": "2026-09-17T11:24:23.877446+00:00",
+  "evaluated_at_utc": "2026-09-17T13:30:21.995198+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -156,12 +156,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 7,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T17:59:08+00:00",
@@ -223,6 +217,12 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 0.570707
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-17",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
         }
       }
     },
@@ -244,12 +244,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 7,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T17:59:08+00:00",
@@ -297,7 +291,15 @@
           "target_time_utc": "2026-09-16T20:59:08+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-09-17T13:31:00+00:00",
+          "market_delay_minutes": 991.87,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-17",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
         }
       }
     },
@@ -319,12 +321,6 @@
       "predicted_immediate_direction": "VOLATILITY",
       "predicted_confidence": 7,
       "evaluations": {
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-17",
-          "predicted_direction": "MIXED",
-          "forecast_source": "horizons"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-16T17:59:08+00:00",
@@ -386,6 +382,12 @@
           "mfe_pct": null,
           "mae_pct": null,
           "neutral_envelope_pct": 0.927365
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-17",
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
         }
       }
     }
