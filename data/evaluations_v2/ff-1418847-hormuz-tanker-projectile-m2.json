@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-18T07:35:27+00:00",
   "evaluation_anchor_time_utc": "2026-09-18T07:35:27+00:00",
   "prediction_latency_seconds": 1047.0,
-  "evaluated_at_utc": "2026-09-18T07:39:51.283054+00:00",
+  "evaluated_at_utc": "2026-09-18T11:19:17.297502+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -129,88 +129,147 @@
     {
       "prediction_id": "ff-1418847-hormuz-tanker-projectile-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4435.39990234375,
-      "reference_price_time_utc": "2026-09-18T07:30:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-18T07:29:00+00:00",
+      "reference_price": 4433.2001953125,
+      "reference_price_time_utc": "2026-09-18T07:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T07:34:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 5.45,
+      "reference_age_minutes": 0.45,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-18T07:50:27+00:00",
+          "actual_price_time_utc": "2026-09-18T07:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T07:50:00+00:00",
+          "market_delay_minutes": 0.55,
+          "price": 4437.2001953125,
+          "change_pct": 0.090228,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
-          "predicted_confidence": 6
+          "predicted_confidence": 6,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.133085,
+          "post_event_range_pct": 0.144363,
+          "mfe_pct": 0.096991,
+          "mae_pct": -0.047372,
+          "directional_threshold_pct": 0.013308,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-18T08:35:27+00:00",
+          "actual_price_time_utc": "2026-09-18T08:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T08:35:00+00:00",
+          "market_delay_minutes": 0.55,
+          "price": 4426.0,
+          "change_pct": -0.162415,
+          "actual_direction": "DOWN",
           "predicted_direction": "UP",
-          "predicted_confidence": 6
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T11:35:27+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 5
+          "predicted_confidence": 6,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.189477,
+          "post_event_range_pct": 0.311283,
+          "mfe_pct": 0.148868,
+          "mae_pct": -0.162415,
+          "directional_threshold_pct": 0.018948,
+          "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "UP",
           "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
         }
       }
     },
     {
       "prediction_id": "ff-1418847-hormuz-tanker-projectile-m2",
       "instrument": "XAGUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "yahoo_proxy_for": "XAGUSD",
       "yahoo_proxy_type": "COMEX silver futures",
-      "reference_price": 67.5250015258789,
-      "reference_price_time_utc": "2026-09-18T07:30:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-18T07:29:00+00:00",
+      "reference_price": 67.56500244140625,
+      "reference_price_time_utc": "2026-09-18T07:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T07:34:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 5.45,
+      "reference_age_minutes": 0.45,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-18T07:50:27+00:00",
+          "actual_price_time_utc": "2026-09-18T07:51:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T07:50:00+00:00",
+          "market_delay_minutes": 0.55,
+          "price": 67.63999938964844,
+          "change_pct": 0.111,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.296018,
+          "post_event_range_pct": 0.192403,
+          "mfe_pct": 0.111,
+          "mae_pct": -0.081404,
+          "directional_threshold_pct": 0.029602,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-18T08:35:27+00:00",
+          "actual_price_time_utc": "2026-09-18T08:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T08:35:00+00:00",
+          "market_delay_minutes": 0.55,
+          "price": 67.52999877929688,
+          "change_pct": -0.051807,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T11:35:27+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.666032,
+          "post_event_range_pct": 0.288611,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.666032
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
         }
       }
     },
@@ -233,28 +292,32 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-18T07:50:27+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 660.45
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-18T08:35:27+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T11:35:27+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 660.45
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
         }
       }
     },
@@ -277,28 +340,32 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-18T07:50:27+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 618.45
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-18T08:35:27+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 5
-        },
-        "4h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T11:35:27+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 618.45
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
         }
       }
     }
