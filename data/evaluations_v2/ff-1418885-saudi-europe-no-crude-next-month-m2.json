@@ -1,0 +1,306 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418885-saudi-europe-no-crude-next-month-m2",
+  "event_id": "ff-1418885-saudi-europe-no-crude-next-month",
+  "event_time_utc": "2026-09-18T11:31:00+00:00",
+  "prediction_time_utc": "2026-09-18T12:10:00+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T12:10:00+00:00",
+  "prediction_latency_seconds": 2340.0,
+  "evaluated_at_utc": "2026-09-18T12:10:43.961261+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "energy",
+    "saudi_arabia",
+    "oil_supply",
+    "europe",
+    "geopolitics"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 39.0,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "A Europe-specific loss of Saudi crude next month raises regional supply and inflation risk, but the wider market is simultaneously pricing improved Saudi alternative routing and pipeline repair prospects.",
+    "market_expectations": {
+      "source": "Reuters/current oil market",
+      "expected_value": "Saudi disruption partly offset by Ras Tanura/Oman routing and pipeline restoration",
+      "implied_probability": null,
+      "distribution_notes": "The new Europe-delivery detail is negative locally, while global barrels appear less constrained than feared."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The headline was ~39 minutes old at decision time and follows several days of known Saudi pipeline/export disruption; Brent and WTI were still falling.",
+      "observed_reaction": {
+        "Brent": 102.14,
+        "WTI": 99.53,
+        "European_equities": "already lower before the headline"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "Brent/WTI continued falling, contradicting an immediate global supply shock",
+        "Europe_equities": "already soft, consistent with regional caution but not event-isolated",
+        "US10Y": "near 5%, a background valuation headwind",
+        "VIX": "last close low/calm, not confirming broad risk-off"
+      }
+    },
+    "decision_notes": "Residual forecast from 12:10 UTC. Model-2 mixed-neutral 4h segment is ACTIONABLE and supports neutral treatment where cross-asset confirmation is incomplete; directional segments do not justify a confidence boost."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T12:10:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "fresh market reports",
+        "freshness_minutes": 10
+      },
+      "US2Y": {
+        "value": 4.688,
+        "observed_at_utc": "2026-09-18T06:06:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Trendonify",
+        "freshness_minutes": 364
+      },
+      "US10Y": {
+        "value": 4.95,
+        "observed_at_utc": "2026-09-18T12:10:00Z",
+        "direction": "near-flat",
+        "regime": "FLAT",
+        "source": "WSJ/current market reports",
+        "freshness_minutes": 10
+      },
+      "VIX": {
+        "value": 15.44,
+        "observed_at_utc": "2026-09-17T20:00:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "market close reference",
+        "freshness_minutes": 970
+      },
+      "WTI": {
+        "value": 99.53,
+        "observed_at_utc": "2026-09-18T11:50:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ/current oil report",
+        "freshness_minutes": 20
+      },
+      "BRENT": {
+        "value": 102.14,
+        "observed_at_utc": "2026-09-18T11:50:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ/current oil report",
+        "freshness_minutes": 20
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418885-saudi-europe-no-crude-next-month-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25457.0703125,
+      "reference_price_time_utc": "2026-09-18T11:56:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T11:55:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 14.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T12:25:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:10:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T16:10:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418885-saudi-europe-no-crude-next-month-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8101.2001953125,
+      "reference_price_time_utc": "2026-09-18T11:56:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T11:55:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 14.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T12:25:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:10:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T16:10:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418885-saudi-europe-no-crude-next-month-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6251.16015625,
+      "reference_price_time_utc": "2026-09-18T11:56:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T11:55:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 14.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T12:25:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:10:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T16:10:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418885-saudi-europe-no-crude-next-month-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10708.6201171875,
+      "reference_price_time_utc": "2026-09-18T11:56:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T11:55:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 14.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T12:25:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:10:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T16:10:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
