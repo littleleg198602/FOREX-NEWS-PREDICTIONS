@@ -1,0 +1,273 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m2",
+  "event_id": "ff-1418932-us-industrial-production-aug-2026",
+  "event_time_utc": "2026-09-18T13:15:00+00:00",
+  "prediction_time_utc": "2026-09-18T13:38:34+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T13:38:34+00:00",
+  "prediction_latency_seconds": 1414.0,
+  "evaluated_at_utc": "2026-09-18T13:43:13.732150+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US_DATA",
+    "INDUSTRIAL_PRODUCTION",
+    "GROWTH"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 19.6,
+    "novelty": "MEDIUM",
+    "attention": "LOW",
+    "dominant_driver": "US industrial production was unchanged versus +0.3% expected, with manufacturing -0.3%; the growth miss is real but low-impact and partly offset by disinflationary/rate implications.",
+    "market_expectations": {
+      "source": "Forex Factory calendar",
+      "expected_value": "Industrial production +0.3% m/m; capacity utilization 76.4%",
+      "implied_probability": null,
+      "distribution_notes": "Previous industrial production +0.2%; prior utilization 76.3%."
+    },
+    "surprise": {
+      "actual": "Industrial production 0.0%; capacity utilization 76.3%",
+      "consensus": "Industrial production +0.3%; capacity utilization 76.4%",
+      "previous": "Industrial production +0.2%; capacity utilization 76.3%",
+      "revised_previous": null,
+      "surprise_direction": "WEAKER_THAN_EXPECTED",
+      "components": {
+        "manufacturing_mom": "-0.3%",
+        "mining_mom": "+0.1%",
+        "utilities_mom": "+1.8%",
+        "industrial_yoy": "+1.4%",
+        "manufacturing_yoy": "+0.9%"
+      }
+    },
+    "absorption": {
+      "state": "NO_REACTION",
+      "reason": "About 20 minutes after the scheduled release there was no verified clean event-isolated move; US cash equities had not opened and futures remained tepid.",
+      "observed_reaction": {
+        "SP500_futures": "about +0.07% in nearby pre-open snapshot",
+        "US10Y": "about 4.976%",
+        "Brent": "down about 1%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US10Y": "elevated/rising near 4.976%, equity headwind",
+        "oil": "falling, inflation relief and equity support",
+        "equity_futures": "near flat, no strong confirmation",
+        "volatility": "expiry day raises non-macro noise"
+      }
+    },
+    "decision_notes": "M2 forecasts residual move from 13:38:34Z. Learning profile: M2 directional 5-6 is EARLY_SIGNAL only; M2 mixed-neutral 1-4 4h is ACTIONABLE KEEP_NEUTRAL, supporting neutral 4h rather than forcing direction."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T13:38:34Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Reuters/market context",
+        "freshness_minutes": 15
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T13:38:34Z",
+        "direction": "elevated",
+        "regime": "UNKNOWN",
+        "source": "Reuters/market context",
+        "freshness_minutes": 15
+      },
+      "US10Y": {
+        "value": 4.976,
+        "observed_at_utc": "2026-09-18T13:20:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 19
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T13:20:00Z",
+        "direction": "down",
+        "regime": "UNKNOWN",
+        "source": "Barrons market snapshot",
+        "freshness_minutes": 19
+      },
+      "WTI": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T13:20:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_minutes": 19
+      },
+      "BRENT": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T13:20:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_minutes": 19
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "RISING",
+      "VIX": "UNKNOWN",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7642.02001953125,
+      "reference_price_time_utc": "2026-09-18T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.567,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:53:34+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T14:38:34+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:38:34+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29546.8828125,
+      "reference_price_time_utc": "2026-09-18T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.567,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:53:34+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T14:38:34+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:38:34+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51653.73046875,
+      "reference_price_time_utc": "2026-09-18T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.567,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:53:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T14:38:34+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:38:34+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

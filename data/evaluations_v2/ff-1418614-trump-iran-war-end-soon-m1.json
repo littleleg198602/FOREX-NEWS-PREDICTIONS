@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-17T01:28:30+00:00",
   "evaluation_anchor_time_utc": "2026-09-17T01:28:30+00:00",
   "prediction_latency_seconds": 4890.0,
-  "evaluated_at_utc": "2026-09-18T12:10:21.990131+00:00",
+  "evaluated_at_utc": "2026-09-18T13:42:52.825612+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -163,7 +163,7 @@
     {
       "prediction_id": "ff-1418614-trump-iran-war-end-soon-m1",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -178,14 +178,6 @@
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-17T02:28:30+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 296.5
-        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-17T01:43:30+00:00",
@@ -203,17 +195,41 @@
           "reference_age_minutes": 296.5
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-17",
+          "actual_price_time_utc": "2026-09-17T20:35:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T20:34:00+00:00",
+          "price": 7637.76,
+          "change_pct": 1.138138,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.576046,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.464125,
+          "mfe_pct": 1.258637,
+          "mae_pct": 0.794512,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.157605,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "legacy_fallback"
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-17T02:28:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 296.5
         }
       }
     },
     {
       "prediction_id": "ff-1418614-trump-iran-war-end-soon-m1",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -228,14 +244,6 @@
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-17T02:28:30+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 251.5
-        },
         "15m": {
           "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-17T01:43:30+00:00",
@@ -253,10 +261,34 @@
           "reference_age_minutes": 251.5
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-17",
+          "actual_price_time_utc": "2026-09-17T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T21:16:00+00:00",
+          "price": 29446.98,
+          "change_pct": 1.734044,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.65801,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.641537,
+          "mfe_pct": 1.898622,
+          "mae_pct": 1.257084,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.165801,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "legacy_fallback"
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-17T02:28:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 251.5
         }
       }
     },
@@ -278,27 +310,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-17T02:28:30+00:00",
-          "actual_price_time_utc": "2026-09-17T02:29:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-17T02:28:00+00:00",
-          "market_delay_minutes": 0.5,
-          "price": 4328.60009765625,
-          "change_pct": -0.41641,
-          "actual_direction": "DOWN",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "forecast_source": "legacy_fallback",
-          "correct": true,
-          "score_type": "directional",
-          "baseline_range_pct": 0.821306,
-          "post_event_range_pct": 0.855826,
-          "mfe_pct": 0.63727,
-          "mae_pct": -0.218557,
-          "directional_threshold_pct": 0.082131,
-          "actual_direction_thresholded": "DOWN"
-        },
         "15m": {
           "status": "DONE",
           "target_time_utc": "2026-09-17T01:43:30+00:00",
@@ -346,6 +357,27 @@
           "session_local_date": "2026-09-18",
           "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
+        },
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-17T02:28:30+00:00",
+          "actual_price_time_utc": "2026-09-17T02:29:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T02:28:00+00:00",
+          "market_delay_minutes": 0.5,
+          "price": 4328.60009765625,
+          "change_pct": -0.41641,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "legacy_fallback",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.821306,
+          "post_event_range_pct": 0.855826,
+          "mfe_pct": 0.63727,
+          "mae_pct": -0.218557,
+          "directional_threshold_pct": 0.082131,
+          "actual_direction_thresholded": "DOWN"
         }
       }
     }

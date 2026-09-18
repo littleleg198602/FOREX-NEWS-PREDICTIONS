@@ -1,0 +1,295 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m1",
+  "event_id": "ff-1418932-us-industrial-production-aug-2026",
+  "event_time_utc": "2026-09-18T13:15:00+00:00",
+  "prediction_time_utc": "2026-09-18T13:38:34+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T13:38:34+00:00",
+  "prediction_latency_seconds": 1414.0,
+  "evaluated_at_utc": "2026-09-18T13:43:13.320611+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "US_DATA",
+    "INDUSTRIAL_PRODUCTION",
+    "GROWTH"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-18T13:38:34+00:00",
+    "captured_for_event_time_utc": "2026-09-18T13:38:34+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.4749984741211,
+        "timestamp_utc": "2026-09-18T13:34:00+00:00",
+        "available_at_utc": "2026-09-18T13:34:00+00:00",
+        "age_minutes": 4.57,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.018911,
+        "change_pct_240m": 0.117576,
+        "change_abs_60m": -0.019005,
+        "raw_change_pct_60m": -0.018911,
+        "raw_change_abs_60m": -0.019005,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.89453125,
+        "timestamp_utc": "2026-09-18T13:34:00+00:00",
+        "available_at_utc": "2026-09-18T13:34:00+00:00",
+        "age_minutes": 4.57,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.019164,
+        "change_pct_240m": 0.0613,
+        "change_abs_60m": 0.019531,
+        "raw_change_pct_60m": -0.019164,
+        "raw_change_abs_60m": -0.019531,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 4.98799991607666,
+        "timestamp_utc": "2026-09-18T13:29:00+00:00",
+        "available_at_utc": "2026-09-18T13:29:00+00:00",
+        "age_minutes": 9.57,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": 0.241159,
+        "change_pct_240m": 0.828783,
+        "change_abs_60m": 0.012,
+        "raw_change_pct_60m": 0.241159,
+        "raw_change_abs_60m": 0.012,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 15.430000305175781,
+        "timestamp_utc": "2026-09-18T13:26:00+00:00",
+        "available_at_utc": "2026-09-18T13:26:00+00:00",
+        "age_minutes": 12.57,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.707849,
+        "change_pct_240m": 0.915633,
+        "change_abs_60m": -0.11,
+        "raw_change_pct_60m": -0.707849,
+        "raw_change_abs_60m": -0.11,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 97.73999786376953,
+        "timestamp_utc": "2026-09-18T13:34:00+00:00",
+        "available_at_utc": "2026-09-18T13:34:00+00:00",
+        "age_minutes": 4.57,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.939787,
+        "change_pct_240m": 1.897414,
+        "change_abs_60m": 0.909996,
+        "raw_change_pct_60m": 0.939787,
+        "raw_change_abs_60m": 0.909996,
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 99.75,
+        "timestamp_utc": "2026-09-18T13:34:00+00:00",
+        "available_at_utc": "2026-09-18T13:34:00+00:00",
+        "age_minutes": 4.57,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.818675,
+        "change_pct_240m": 1.269036,
+        "change_abs_60m": 0.809998,
+        "raw_change_pct_60m": 0.818675,
+        "raw_change_abs_60m": 0.809998,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7642.02001953125,
+      "reference_price_time_utc": "2026-09-18T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.567,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:53:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T14:38:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:38:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29546.8828125,
+      "reference_price_time_utc": "2026-09-18T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.567,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:53:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T14:38:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:38:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418932-us-industrial-production-aug-2026-m1",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51653.73046875,
+      "reference_price_time_utc": "2026-09-18T13:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T13:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.567,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T13:53:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T14:38:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:38:34+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}
