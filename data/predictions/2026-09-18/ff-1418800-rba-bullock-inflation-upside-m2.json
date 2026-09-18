@@ -1,0 +1,56 @@
+{
+  "event_id": "ff-1418800-rba-bullock-inflation-upside",
+  "event_cluster_id": "rba-sep-2026-tightening",
+  "created_at_utc": "2026-09-18T00:11:42Z",
+  "event_time_utc": "2026-09-18T00:06:00Z",
+  "published_at_utc": "2026-09-18T00:06:00Z",
+  "source_time_text": "Sep 18, 2026 5:06am; observed by Forex Factory as ~9 min ago",
+  "observed_at_utc": "2026-09-18T00:11:42Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 180,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["RBA", "inflation", "rates", "Australia"],
+  "prediction_id": "ff-1418800-rba-bullock-inflation-upside-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE", "source_quality": "TIER1", "source_verified": true, "news_age_minutes": 5.7, "novelty": "MEDIUM", "attention": "MEDIUM",
+    "dominant_driver": "Bullock said the labour market remains near but slightly tighter than full employment and that upside inflation risks appear to be materialising, reinforcing an already heavily priced September RBA hike.",
+    "market_expectations": {"source": "Reuters/market reports before decision", "expected_value": "25bp September RBA hike heavily priced", "implied_probability": 0.87, "distribution_notes": "Contemporaneous reports put the September hike probability around 87-88%."},
+    "surprise": null,
+    "absorption": {"state": "PARTIALLY_PRICED", "reason": "The hawkish direction was expected: markets already priced roughly 87-88% odds of a September hike before the remarks. The specific inflation-upside wording is incremental.", "observed_reaction": {"ASX200_futures_pre_open_pct": 0.5, "AUDUSD_pre_open": 0.7112, "US10Y_prior_close": 4.947, "VIX_prior_close": 15.44, "WTI": 101.09}},
+    "cross_asset_confirmation": {"verdict": "CONFLICTING", "observations": {"RBA_pricing": "hawkish and already near-certain hike pricing", "US10Y": "fell to 4.947%, supportive for equities", "VIX": "fell to 15.44, risk-on", "WTI": "down around 1.3%, easing inflation pressure", "AUDUSD": "near 0.7112, little changed in pre-open snapshot", "ASX_lead": "futures +0.5 to +0.6% before cash open"}},
+    "decision_notes": "Residual move from actual decision time. M2 directional 5-6 segments are EARLY_SIGNAL only. ACTIONABLE mixed-neutral 4h learning supports keeping uncertain 4h calls MIXED."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 100.23, "observed_at_utc": "2026-09-17T21:00:00Z", "direction": "slightly_down", "regime": "easing after Fed rally", "source": "Reuters Sep17 close context", "freshness_minutes": 192},
+      "US2Y": {"value": null, "observed_at_utc": "2026-09-17T21:00:00Z", "direction": "down", "regime": "post-Fed easing", "source": "WSJ/Reuters Sep17 close context", "freshness_minutes": 192},
+      "US10Y": {"value": 4.947, "observed_at_utc": "2026-09-17T22:10:00Z", "direction": "down", "regime": "below 5 percent", "source": "MarketIndex overnight summary", "freshness_minutes": 122},
+      "VIX": {"value": 15.44, "observed_at_utc": "2026-09-17T22:10:00Z", "direction": "down", "regime": "two-week-low/risk-on", "source": "MarketIndex overnight summary", "freshness_minutes": 122},
+      "WTI": {"value": 101.09, "observed_at_utc": "2026-09-17T22:10:00Z", "direction": "down", "regime": "easing supply fears", "source": "MarketIndex overnight summary", "freshness_minutes": 122},
+      "BRENT": {"value": 104.16, "observed_at_utc": "2026-09-17T22:10:00Z", "direction": "down", "regime": "easing supply fears", "source": "Australian morning market reports", "freshness_minutes": 122},
+      "AUDUSD": {"value": 0.7112, "observed_at_utc": "2026-09-17T22:15:00Z", "direction": "flat_to_up", "regime": "firm", "source": "ABC/Swingfolio morning snapshot", "freshness_minutes": 117}
+    },
+    "regimes": {"RBA": "September hike ~87-88% priced", "global_risk": "risk-on overnight", "oil": "lower", "US_rates": "easing", "ASX": "cash market just opened after +0.5-0.6% futures lead"}
+  },
+  "predictions": [{
+    "instrument": "AUS200", "relevance": "DIRECT",
+    "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "The comments are hawkish but a September hike was already about 87-88% priced and the ASX entered the session with strong positive global leads."},
+    "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "If hike pricing remains near-certain or rises further, domestic rate-sensitive sectors face a modest valuation headwind."},
+    "horizons": {
+      "15m": {"direction": "MIXED", "confidence": 4, "rationale": "The comments are hawkish but a September hike was already about 87-88% priced and the ASX entered the session with strong positive global leads."},
+      "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Higher-rate risk weighs on valuations, but lower oil and US yields plus strong overnight equities offset the local policy signal."},
+      "4h": {"direction": "MIXED", "confidence": 4, "rationale": "The speech reinforces existing tightening expectations rather than creating a new policy shock."},
+      "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "If hike pricing remains near-certain or rises further, domestic rate-sensitive sectors face a modest valuation headwind."}
+    },
+    "mechanism": "Hawkish RBA guidance raises domestic discount-rate pressure, but most of the September-hike expectation was already priced and global leads are supportive.",
+    "invalidation": "A sharp rise in Australian yields/hike odds with AUS200 breaking below its opening range would make the residual view bearish sooner; falling local yields would favor upside.",
+    "counter_case": "If markets treat Bullock's remarks as confirmation rather than new information and lower oil/global yields dominate, AUS200 can continue the risk-on opening move.",
+    "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "unknown; event occurred around cash open", "trend_1h": "positive pre-open global lead", "session_location": "Australian cash market opening phase", "extension_state": "fresh open / unknown event-specific reaction", "market_open": true, "source": "Forex Factory plus pre-decision Australian morning market snapshots", "observed_at_utc": "2026-09-18T00:11:42Z"}
+  }]
+}
