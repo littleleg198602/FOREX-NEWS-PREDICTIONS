@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-16T00:05:20+00:00",
   "evaluation_anchor_time_utc": "2026-09-16T00:05:20+00:00",
   "prediction_latency_seconds": 860.0,
-  "evaluated_at_utc": "2026-09-18T00:14:50.499791+00:00",
+  "evaluated_at_utc": "2026-09-18T00:21:42.043094+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -162,7 +162,7 @@
     {
       "prediction_id": "ff-1418407-japan-trade-balance-sa-aug-2026-m1",
       "instrument": "NI225",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^N225",
       "yahoo_proxy_for": null,
@@ -197,12 +197,6 @@
           "mae_pct": -0.152766,
           "directional_threshold_pct": 0.05108,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-17",
-          "predicted_direction": "UP",
-          "forecast_source": "legacy_fallback"
         },
         "4h": {
           "status": "DONE",
@@ -245,6 +239,28 @@
           "mae_pct": -0.152766,
           "directional_threshold_pct": 0.05108,
           "actual_direction_thresholded": "UP"
+        },
+        "next_session": {
+          "status": "DONE",
+          "session_local_date": "2026-09-17",
+          "actual_price_time_utc": "2026-09-17T06:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-17T06:29:00+00:00",
+          "price": 64098.30859375,
+          "change_pct": 1.156448,
+          "actual_direction": "UP",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.040676,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.292532,
+          "mfe_pct": 2.016962,
+          "mae_pct": -0.245556,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.104068,
+          "actual_direction_thresholded": "UP",
+          "forecast_source": "legacy_fallback"
         }
       }
     }
