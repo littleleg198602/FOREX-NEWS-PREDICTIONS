@@ -1620,6 +1620,159 @@
         }
       },
       "quality_reporting_rule": "Directional accuracy must always be shown together with directional coverage; a higher hit rate caused only by replacing directional calls with MIXED is not model improvement."
+    },
+    {
+      "date_utc": "2026-09-18",
+      "generated_at_utc": "2026-09-18T00:15:22.829138+00:00",
+      "evaluation_version": "2.0.0",
+      "eligible_prediction_files": 239,
+      "directional_primary": {
+        "15m": {
+          "n": 279,
+          "correct": 121,
+          "hit_rate_pct": 43.37,
+          "mean_change_pct": 0.003543
+        },
+        "1h": {
+          "n": 274,
+          "correct": 107,
+          "hit_rate_pct": 39.05,
+          "mean_change_pct": -0.013763
+        },
+        "4h": {
+          "n": 174,
+          "correct": 70,
+          "hit_rate_pct": 40.23,
+          "mean_change_pct": 0.047828
+        },
+        "next_session": {
+          "n": 218,
+          "correct": 126,
+          "hit_rate_pct": 57.8,
+          "mean_change_pct": -0.076788
+        }
+      },
+      "overall_combined_diagnostic": {
+        "15m": {
+          "n": 407,
+          "correct": 227,
+          "hit_rate_pct": 55.77,
+          "by_score_type": {
+            "directional": {
+              "n": 279,
+              "correct": 121,
+              "hit_rate_pct": 43.37
+            },
+            "mixed_neutral": {
+              "n": 110,
+              "correct": 96,
+              "hit_rate_pct": 87.27
+            },
+            "volatility": {
+              "n": 18,
+              "correct": 10,
+              "hit_rate_pct": 55.56
+            }
+          },
+          "interpretation": "diagnostic_only_not_directional_accuracy"
+        },
+        "1h": {
+          "n": 402,
+          "correct": 210,
+          "hit_rate_pct": 52.24,
+          "by_score_type": {
+            "directional": {
+              "n": 274,
+              "correct": 107,
+              "hit_rate_pct": 39.05
+            },
+            "mixed_neutral": {
+              "n": 114,
+              "correct": 94,
+              "hit_rate_pct": 82.46
+            },
+            "volatility": {
+              "n": 14,
+              "correct": 9,
+              "hit_rate_pct": 64.29
+            }
+          },
+          "interpretation": "diagnostic_only_not_directional_accuracy"
+        },
+        "4h": {
+          "n": 282,
+          "correct": 148,
+          "hit_rate_pct": 52.48,
+          "by_score_type": {
+            "directional": {
+              "n": 174,
+              "correct": 70,
+              "hit_rate_pct": 40.23
+            },
+            "mixed_neutral": {
+              "n": 103,
+              "correct": 76,
+              "hit_rate_pct": 73.79
+            },
+            "volatility": {
+              "n": 5,
+              "correct": 2,
+              "hit_rate_pct": 40.0
+            }
+          },
+          "interpretation": "diagnostic_only_not_directional_accuracy"
+        },
+        "next_session": {
+          "n": 725,
+          "correct": 485,
+          "hit_rate_pct": 66.9,
+          "by_score_type": {
+            "directional": {
+              "n": 218,
+              "correct": 126,
+              "hit_rate_pct": 57.8
+            },
+            "mixed_neutral": {
+              "n": 499,
+              "correct": 357,
+              "hit_rate_pct": 71.54
+            },
+            "volatility": {
+              "n": 8,
+              "correct": 2,
+              "hit_rate_pct": 25.0
+            }
+          },
+          "interpretation": "diagnostic_only_not_directional_accuracy"
+        }
+      },
+      "directional_coverage": {
+        "15m": {
+          "directional_n": 279,
+          "all_scored_n": 407,
+          "coverage_pct": 68.55,
+          "non_directional_n": 128
+        },
+        "1h": {
+          "directional_n": 274,
+          "all_scored_n": 402,
+          "coverage_pct": 68.16,
+          "non_directional_n": 128
+        },
+        "4h": {
+          "directional_n": 174,
+          "all_scored_n": 282,
+          "coverage_pct": 61.7,
+          "non_directional_n": 108
+        },
+        "next_session": {
+          "directional_n": 218,
+          "all_scored_n": 725,
+          "coverage_pct": 30.07,
+          "non_directional_n": 507
+        }
+      },
+      "quality_reporting_rule": "Directional accuracy must always be shown together with directional coverage; a higher hit rate caused only by replacing directional calls with MIXED is not model improvement."
     }
   ]
 }
