@@ -1,0 +1,297 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418959-trump-us-talking-houthis-m1",
+  "event_id": "ff-1418959-trump-us-talking-houthis",
+  "event_time_utc": "2026-09-18T16:28:00+00:00",
+  "prediction_time_utc": "2026-09-18T17:10:33+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T17:10:33+00:00",
+  "prediction_latency_seconds": 2553.0,
+  "evaluated_at_utc": "2026-09-18T17:16:16.530446+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "geopolitics",
+    "houthis",
+    "middle_east",
+    "oil",
+    "diplomacy"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-18T17:10:33+00:00",
+    "captured_for_event_time_utc": "2026-09-18T17:10:33+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.26399993896484,
+        "timestamp_utc": "2026-09-18T17:07:00+00:00",
+        "available_at_utc": "2026-09-18T17:07:00+00:00",
+        "age_minutes": 3.55,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.090681,
+        "change_pct_240m": -0.19113,
+        "change_abs_60m": -0.091003,
+        "raw_change_pct_60m": -0.090681,
+        "raw_change_abs_60m": -0.091003,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.8828125,
+        "timestamp_utc": "2026-09-18T17:07:00+00:00",
+        "available_at_utc": "2026-09-18T17:07:00+00:00",
+        "age_minutes": 3.55,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.003834,
+        "change_pct_240m": 0.022999,
+        "change_abs_60m": 0.003906,
+        "raw_change_pct_60m": -0.003834,
+        "raw_change_abs_60m": -0.003906,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 5.0,
+        "timestamp_utc": "2026-09-18T17:02:00+00:00",
+        "available_at_utc": "2026-09-18T17:02:00+00:00",
+        "age_minutes": 8.55,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": 0.0,
+        "change_pct_240m": 0.321023,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 15.430000305175781,
+        "timestamp_utc": "2026-09-18T17:02:00+00:00",
+        "available_at_utc": "2026-09-18T17:02:00+00:00",
+        "age_minutes": 8.55,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.259909,
+        "change_pct_240m": 0.0,
+        "change_abs_60m": 0.04,
+        "raw_change_pct_60m": 0.259909,
+        "raw_change_abs_60m": 0.04,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 95.91000366210938,
+        "timestamp_utc": "2026-09-18T17:07:00+00:00",
+        "available_at_utc": "2026-09-18T17:07:00+00:00",
+        "age_minutes": 3.55,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.868213,
+        "change_pct_240m": -1.529772,
+        "change_abs_60m": -0.839996,
+        "raw_change_pct_60m": -0.868213,
+        "raw_change_abs_60m": -0.839996,
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 99.0,
+        "timestamp_utc": "2026-09-18T17:07:00+00:00",
+        "available_at_utc": "2026-09-18T17:07:00+00:00",
+        "age_minutes": 3.55,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.771772,
+        "change_pct_240m": -0.432465,
+        "change_abs_60m": -0.769997,
+        "raw_change_pct_60m": -0.771772,
+        "raw_change_abs_60m": -0.769997,
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418959-trump-us-talking-houthis-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4423.89990234375,
+      "reference_price_time_utc": "2026-09-18T17:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:06:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418959-trump-us-talking-houthis-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7623.75,
+      "reference_price_time_utc": "2026-09-18T17:10:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:09:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:10:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:10:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418959-trump-us-talking-houthis-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29448.58203125,
+      "reference_price_time_utc": "2026-09-18T17:10:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:09:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:10:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:10:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

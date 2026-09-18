@@ -1,0 +1,307 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
+  "event_id": "ff-1418950-schmid-inflation-above-3",
+  "event_time_utc": "2026-09-18T15:32:00+00:00",
+  "prediction_time_utc": "2026-09-18T17:10:33+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T17:10:33+00:00",
+  "prediction_latency_seconds": 5913.0,
+  "evaluated_at_utc": "2026-09-18T17:16:14.991545+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "fed",
+    "inflation",
+    "rates",
+    "central_bank_guidance"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 98.6,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Schmid reinforced the post-FOMC hawkish regime: inflation is broad and trending above 3%, labor is balanced and growth solid.",
+    "market_expectations": {
+      "source": "CME/WSJ current market coverage",
+      "expected_value": "further Fed tightening possible",
+      "implied_probability": 0.58,
+      "distribution_notes": "Market pricing showed ~58% probability of another October hike."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "By decision time the 2Y was at a multi-year high and 10Y near 5%, while major US indexes were lower.",
+      "observed_reaction": {
+        "US2Y": 4.744,
+        "US10Y": 4.998,
+        "SP500_pct": -0.3,
+        "WS30_pct": -0.5,
+        "Nasdaq_pct": -0.2
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "US2Y": "4.744%, up",
+        "US10Y": "~5%, up",
+        "equities": "major indexes lower",
+        "gold": "still up on day, conflicting locally"
+      }
+    },
+    "decision_notes": "Delayed incremental update; forecast is residual from 17:10 UTC. No M2 confidence uplift from learning without a clearly matched ACTIONABLE evidence segment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T17:10:33Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Reuters/market coverage",
+        "freshness_minutes": 10
+      },
+      "US2Y": {
+        "value": 4.744,
+        "observed_at_utc": "2026-09-18T17:10:33Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "WSJ market coverage",
+        "freshness_minutes": 10
+      },
+      "US10Y": {
+        "value": 4.998,
+        "observed_at_utc": "2026-09-18T17:10:33Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "WSJ/AP market coverage",
+        "freshness_minutes": 10
+      },
+      "VIX": {
+        "value": 15.44,
+        "observed_at_utc": "2026-09-18T05:02:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "Daily Market Report",
+        "freshness_minutes": 728
+      },
+      "WTI": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T17:10:33Z",
+        "direction": "volatile",
+        "regime": "UNKNOWN",
+        "source": "Reuters/AP current market coverage",
+        "freshness_minutes": 10
+      },
+      "BRENT": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T17:10:33Z",
+        "direction": "volatile",
+        "regime": "UNKNOWN",
+        "source": "Reuters/AP current market coverage",
+        "freshness_minutes": 10
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7623.75,
+      "reference_price_time_utc": "2026-09-18T17:10:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:09:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29448.58203125,
+      "reference_price_time_utc": "2026-09-18T17:10:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:09:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51573.30859375,
+      "reference_price_time_utc": "2026-09-18T17:10:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:09:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:10:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4423.60009765625,
+      "reference_price_time_utc": "2026-09-18T17:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:06:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:10:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:10:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
