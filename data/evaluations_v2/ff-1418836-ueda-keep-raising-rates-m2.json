@@ -1,0 +1,171 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418836-ueda-keep-raising-rates-m2",
+  "event_id": "ff-1418836-ueda-keep-raising-rates",
+  "event_time_utc": "2026-09-18T06:36:00+00:00",
+  "prediction_time_utc": "2026-09-18T07:35:27+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T07:35:27+00:00",
+  "prediction_latency_seconds": 3567.0,
+  "evaluated_at_utc": "2026-09-18T07:39:48.603549+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "boj",
+    "rates",
+    "japan",
+    "central_bank_guidance"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 59.5,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Ueda explicitly said BOJ will keep raising rates and did not rule out consecutive or >25bp moves, but framed drastic action as something BOJ hopes to avoid through pre-emptive policy.",
+    "market_expectations": {
+      "source": "post-BOJ market pricing/context",
+      "expected_value": "gradual further normalization",
+      "implied_probability": null,
+      "distribution_notes": "today's 25bp hike was almost fully priced; pace beyond today remained uncertain."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Guidance was nearly an hour old at decision time and came after Nikkei had rallied/yen weakened on the initial hike.",
+      "observed_reaction": {
+        "USDJPY": 157.085,
+        "NI225": "rallied after decision"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "yen": "remained weak after BOJ, supportive for exporters",
+        "US10Y": "below 5%, supportive for equities",
+        "BOJ_guidance": "more hawkish than initial post-decision interpretation"
+      }
+    },
+    "decision_notes": "Residual forecast only. ACTIONABLE low-confidence mixed-neutral learning supports neutral short horizons; no coefficient tuning."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T07:35:27Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "fresh web market context",
+        "freshness_minutes": 5
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T07:35:27Z",
+        "direction": "elevated",
+        "regime": "RISING",
+        "source": "fresh web market context",
+        "freshness_minutes": 5
+      },
+      "US10Y": {
+        "value": 4.946,
+        "observed_at_utc": "2026-09-18T07:35:27Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Yahoo/market web",
+        "freshness_minutes": 5
+      },
+      "VIX": {
+        "value": 15.44,
+        "observed_at_utc": "2026-09-18T02:05:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "market reference board",
+        "freshness_minutes": 330
+      },
+      "WTI": {
+        "value": 101.2,
+        "observed_at_utc": "2026-09-18T03:19:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters market report",
+        "freshness_minutes": 256
+      },
+      "BRENT": {
+        "value": 104.0,
+        "observed_at_utc": "2026-09-18T03:19:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters market report",
+        "freshness_minutes": 256
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418836-ueda-keep-raising-rates-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 65200.23828125,
+      "reference_price_time_utc": "2026-09-18T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 65.45,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T07:50:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T08:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

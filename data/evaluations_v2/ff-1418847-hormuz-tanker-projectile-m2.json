@@ -1,0 +1,306 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418847-hormuz-tanker-projectile-m2",
+  "event_id": "ff-1418847-hormuz-tanker-projectile",
+  "event_time_utc": "2026-09-18T07:18:00+00:00",
+  "prediction_time_utc": "2026-09-18T07:35:27+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T07:35:27+00:00",
+  "prediction_latency_seconds": 1047.0,
+  "evaluated_at_utc": "2026-09-18T07:39:51.283054+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "hormuz",
+    "oil",
+    "shipping"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 17.5,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "UKMTO reported a tanker hit by an unknown projectile in Hormuz, adding a fresh shipping-security incident to an already active Iran/Hormuz conflict cluster.",
+    "market_expectations": {
+      "source": "pre-headline oil/geopolitical context",
+      "expected_value": "continued but contained shipping risk",
+      "implied_probability": null,
+      "distribution_notes": "Oil had been falling for a third day as markets focused on alternative supply routes; a new strike challenges that easing-risk narrative."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The story is fresh, but Hormuz attacks are an ongoing cluster and oil had already carried a large geopolitical premium above $100.",
+      "observed_reaction": {
+        "pre_headline_Brent": 104.0,
+        "pre_headline_WTI": 101.2,
+        "gold_recent": 4365.2
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "gold": "already about +0.6% before/around headline window",
+        "US10Y": "easing below 5%, supportive for gold and equities",
+        "oil": "was falling before the strike; sustained escalation confirmation not yet available",
+        "VIX": "last reliable snapshot normal/low"
+      }
+    },
+    "decision_notes": "Residual move from 07:35 UTC. ACTIONABLE mixed-neutral learning supports MIXED where confirmation is incomplete."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T07:35:27Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "fresh web market context",
+        "freshness_minutes": 5
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-18T07:35:27Z",
+        "direction": "elevated",
+        "regime": "RISING",
+        "source": "fresh web market context",
+        "freshness_minutes": 5
+      },
+      "US10Y": {
+        "value": 4.946,
+        "observed_at_utc": "2026-09-18T07:35:27Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Yahoo/market web",
+        "freshness_minutes": 5
+      },
+      "VIX": {
+        "value": 15.44,
+        "observed_at_utc": "2026-09-18T02:05:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "market reference board",
+        "freshness_minutes": 330
+      },
+      "WTI": {
+        "value": 101.2,
+        "observed_at_utc": "2026-09-18T03:19:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters market report",
+        "freshness_minutes": 256
+      },
+      "BRENT": {
+        "value": 104.0,
+        "observed_at_utc": "2026-09-18T03:19:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters market report",
+        "freshness_minutes": 256
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418847-hormuz-tanker-projectile-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4435.39990234375,
+      "reference_price_time_utc": "2026-09-18T07:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T07:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.45,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T07:50:27+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T08:35:27+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418847-hormuz-tanker-projectile-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 67.5250015258789,
+      "reference_price_time_utc": "2026-09-18T07:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T07:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.45,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T07:50:27+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T08:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418847-hormuz-tanker-projectile-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7637.76,
+      "reference_price_time_utc": "2026-09-17T20:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T20:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 660.45,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T07:50:27+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T08:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418847-hormuz-tanker-projectile-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29446.98,
+      "reference_price_time_utc": "2026-09-17T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-17T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 618.45,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T07:50:27+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T08:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T11:35:27+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
