@@ -1,0 +1,54 @@
+{
+  "event_id": "ff-1418815-boj-hike-125-7-2",
+  "event_cluster_id": "boj-2026-09-18-policy",
+  "created_at_utc": "2026-09-18T04:04:38Z",
+  "event_time_utc": "2026-09-18T02:54:00Z",
+  "published_at_utc": "2026-09-18T02:54:00Z",
+  "source_time_text": "Sep 18, 3:54am BST",
+  "observed_at_utc": "2026-09-18T04:04:38Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["boj", "rates", "japan", "inflation", "data_release"],
+  "prediction_id": "ff-1418815-boj-hike-125-7-2-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "DATA_RELEASE", "source_quality": "PRIMARY", "source_verified": true, "news_age_minutes": 70.6, "novelty": "MEDIUM", "attention": "HIGH",
+    "dominant_driver": "BOJ delivered the expected 25bp hike to 1.25%, but a 7-2 vote with two dissenters against tightening and a weaker yen made the initial interpretation less hawkish than the headline.",
+    "market_expectations": {"source": "Reuters poll / pre-decision FF context", "expected_value": "1.25%", "implied_probability": 0.97, "distribution_notes": "66 of 68 Reuters-polled economists expected a 25bp hike; markets were almost fully priced."},
+    "surprise": {"actual": "1.25%, 7-2", "consensus": "1.25%", "previous": "1.00%", "revised_previous": null, "surprise_direction": "DOVISH_DETAILS_VS_FULLY_PRICED_HIKE", "components": {"national_core_cpi": "1.7% vs 1.8% forecast and previous", "dissent": "two members opposed the hike"}},
+    "absorption": {"state": "CONFIRMED_CONTINUATION", "reason": "By decision time the yen had weakened to about 156.75/USD and Nikkei was up about 0.8%, confirming that the expected hike was absorbed and the residual equity reaction was risk-on.", "observed_reaction": {"USDJPY": 156.75, "yen_change_pct": -0.5, "NI225_change_pct": 0.8, "US10Y": 4.936}},
+    "cross_asset_confirmation": {"verdict": "CONFIRMED", "observations": {"yen": "weaker after hike, supportive for exporters", "Nikkei": "about +0.8%", "US10Y": "eased to 4.936%", "oil": "Brent/WTI falling, supportive for risk", "DXY": "around 100.25, firm/flat"}},
+    "decision_notes": "Residual forecast from 04:04 UTC, not the original 02:54 UTC reaction. Model-2 MIXED 4h ACTIONABLE learning supports neutral 4h; directional 5-6 evidence is EARLY_SIGNAL only and does not raise confidence."
+  },
+  "market_context_at_prediction": {"series": {
+    "DXY": {"value": 100.25, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "flat", "regime": "firm after Fed hike", "source": "Reuters Sep18 FX", "freshness_minutes": 35},
+    "US2Y": {"value": null, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "elevated", "regime": "hawkish post-FOMC", "source": "Reuters Sep18 markets", "freshness_minutes": 35},
+    "US10Y": {"value": 4.936, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "down", "regime": "easing below 5%", "source": "Reuters Sep18 global markets", "freshness_minutes": 35},
+    "VIX": {"value": null, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "down", "regime": "risk-on carryover", "source": "Reuters Sep18 global markets", "freshness_minutes": 35},
+    "WTI": {"value": 101.2, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "down", "regime": "third-day decline", "source": "Reuters Sep18 oil", "freshness_minutes": 35},
+    "BRENT": {"value": 104.0, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "down", "regime": "third-day decline", "source": "Reuters Sep18 oil", "freshness_minutes": 35},
+    "USDJPY": {"value": 156.75, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "up", "regime": "yen weaker after BOJ", "source": "Reuters Sep18 global markets", "freshness_minutes": 35},
+    "NI225": {"value": null, "observed_at_utc": "2026-09-18T03:30:00Z", "direction": "up", "regime": "about +0.8% after expected BOJ hike", "source": "Reuters Sep18 global markets", "freshness_minutes": 35}
+  }, "regimes": {"Japan_rates": "BOJ 1.25%, 7-2; two dissenters opposed hike", "Japan_inflation": "core CPI 1.7% vs 1.8% expected/previous", "Japan_equities": "Nikkei +0.8% after decision", "FX": "yen weakened ~0.5% after decision", "global_risk": "Asia risk-on; oil lower; US10Y eased"}},
+  "predictions": [{
+    "instrument": "NI225", "relevance": "DIRECT",
+    "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "The hike was almost fully priced and the yen weakened rather than strengthened; residual immediate edge is weak."},
+    "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Future BOJ pace remains unresolved; the expected hike itself is absorbed."},
+    "horizons": {
+      "15m": {"direction": "MIXED", "confidence": 4, "rationale": "The hike was almost fully priced and the yen weakened rather than strengthened; residual immediate edge is weak."},
+      "1h": {"direction": "UP", "confidence": 5, "rationale": "Weaker yen and falling global yields support exporters and tech despite the higher policy rate."},
+      "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Nikkei is already up about 0.8%; Ueda's press conference can reverse the initial dovish interpretation."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Future BOJ pace remains unresolved; the expected hike itself is absorbed."}
+    },
+    "mechanism": "Fully priced BOJ hike plus dissenters, weaker yen and lower global yields support exporters in the residual window, but Ueda guidance is the next major catalyst.",
+    "invalidation": "A hawkish Ueda press conference that strengthens JPY and pushes JGB yields sharply higher would invalidate the 1h upside view.",
+    "counter_case": "If Ueda signals faster follow-up hikes, yen strength and higher JGB yields can overwhelm the exporter benefit and drive NI225 lower.",
+    "technical_state": {"reaction_since_event_pct": 0.8, "trend_5_15m": "positive/holding gains", "trend_1h": "up", "session_location": "Tokyo cash session, post-BOJ decision", "extension_state": "extended after initial reaction", "market_open": true, "source": "Reuters Sep18 global markets at/before decision", "observed_at_utc": "2026-09-18T03:30:00Z"}
+  }]
+}
