@@ -1,0 +1,297 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1418964-wh-confirms-trump-russia-sanctions-signing-m1",
+  "event_id": "ff-1418964-wh-confirms-trump-russia-sanctions-signing",
+  "event_time_utc": "2026-09-18T17:20:00+00:00",
+  "prediction_time_utc": "2026-09-18T17:36:51+00:00",
+  "evaluation_anchor_time_utc": "2026-09-18T17:36:51+00:00",
+  "prediction_latency_seconds": 1011.0,
+  "evaluated_at_utc": "2026-09-18T17:41:38.302932+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "geopolitics",
+    "russia",
+    "sanctions",
+    "energy",
+    "tariffs"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-18T17:36:51+00:00",
+    "captured_for_event_time_utc": "2026-09-18T17:36:51+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.22000122070312,
+        "timestamp_utc": "2026-09-18T17:32:00+00:00",
+        "available_at_utc": "2026-09-18T17:32:00+00:00",
+        "age_minutes": 4.85,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.084741,
+        "change_pct_240m": -0.267688,
+        "change_abs_60m": -0.084999,
+        "raw_change_pct_60m": -0.084741,
+        "raw_change_abs_60m": -0.084999,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.87890625,
+        "timestamp_utc": "2026-09-18T17:32:00+00:00",
+        "available_at_utc": "2026-09-18T17:32:00+00:00",
+        "age_minutes": 4.85,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.011501,
+        "change_pct_240m": 0.015334,
+        "change_abs_60m": 0.011719,
+        "raw_change_pct_60m": -0.011501,
+        "raw_change_abs_60m": -0.011719,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 5.0,
+        "timestamp_utc": "2026-09-18T17:27:00+00:00",
+        "available_at_utc": "2026-09-18T17:27:00+00:00",
+        "age_minutes": 9.85,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": 0.040013,
+        "change_pct_240m": 0.200396,
+        "change_abs_60m": 0.002,
+        "raw_change_pct_60m": 0.040013,
+        "raw_change_abs_60m": 0.002,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 15.369999885559082,
+        "timestamp_utc": "2026-09-18T17:27:00+00:00",
+        "available_at_utc": "2026-09-18T17:27:00+00:00",
+        "age_minutes": 9.85,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.324255,
+        "change_pct_240m": 0.326372,
+        "change_abs_60m": -0.05,
+        "raw_change_pct_60m": -0.324255,
+        "raw_change_abs_60m": -0.05,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 95.95999908447266,
+        "timestamp_utc": "2026-09-18T17:32:00+00:00",
+        "available_at_utc": "2026-09-18T17:32:00+00:00",
+        "age_minutes": 4.85,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.322008,
+        "change_pct_240m": -1.871359,
+        "change_abs_60m": -0.309998,
+        "raw_change_pct_60m": -0.322008,
+        "raw_change_abs_60m": -0.309998,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 99.05999755859375,
+        "timestamp_utc": "2026-09-18T17:32:00+00:00",
+        "available_at_utc": "2026-09-18T17:32:00+00:00",
+        "age_minutes": 4.85,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.251737,
+        "change_pct_240m": -0.761373,
+        "change_abs_60m": -0.25,
+        "raw_change_pct_60m": -0.251737,
+        "raw_change_abs_60m": -0.25,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1418964-wh-confirms-trump-russia-sanctions-signing-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4425.2001953125,
+      "reference_price_time_utc": "2026-09-18T17:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:51:51+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:36:51+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:36:51+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418964-wh-confirms-trump-russia-sanctions-signing-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7626.22998046875,
+      "reference_price_time_utc": "2026-09-18T17:36:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:35:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:51:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:36:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:36:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1418964-wh-confirms-trump-russia-sanctions-signing-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29460.634765625,
+      "reference_price_time_utc": "2026-09-18T17:36:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:35:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T17:51:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T18:36:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-18T21:36:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

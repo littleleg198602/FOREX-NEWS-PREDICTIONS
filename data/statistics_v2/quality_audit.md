@@ -1,25 +1,25 @@
 # Prediction quality audit
 
-Generated: 2026-09-18T17:20:04.419873+00:00
+Generated: 2026-09-18T17:44:59.963426+00:00
 
 ## Directional accuracy
 
-- 15m: 135/293 = 46.08%
+- 15m: 142/304 = 46.71%
 - 1h: 113/288 = 39.24%
-- 4h: 71/177 = 40.11%
+- 4h: 74/180 = 41.11%
 - next_session: 137/248 = 55.24%
 
 ## Detection latency
 
-- events with usable latency: 253
-- mean: 58.24 min; median: 39.0 min
-- >=30 min: 63.64%; >=60 min: 27.67%
+- events with usable latency: 255
+- mean: 57.92 min; median: 39.0 min
+- >=30 min: 63.14%; >=60 min: 27.45%
 
 ## Realized direction instability
 
 - 15m_vs_1h: class changed 43.8% of 274 comparable rows; full UP/DOWN reversal 21.53%
-- 1h_vs_4h: class changed 38.37% of 172 comparable rows; full UP/DOWN reversal 17.44%
-- 15m_vs_4h: class changed 44.77% of 172 comparable rows; full UP/DOWN reversal 23.26%
+- 1h_vs_4h: class changed 37.71% of 175 comparable rows; full UP/DOWN reversal 17.14%
+- 15m_vs_4h: class changed 44.0% of 175 comparable rows; full UP/DOWN reversal 22.86%
 
 ## Structural findings
 

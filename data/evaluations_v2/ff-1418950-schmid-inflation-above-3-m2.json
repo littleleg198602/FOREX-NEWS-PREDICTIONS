@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-18T17:10:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-18T17:10:33+00:00",
   "prediction_latency_seconds": 5913.0,
-  "evaluated_at_utc": "2026-09-18T17:16:14.991545+00:00",
+  "evaluated_at_utc": "2026-09-18T17:41:34.215340+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -130,7 +130,7 @@
     {
       "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -145,12 +145,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T17:25:33+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-18T18:10:33+00:00",
@@ -168,13 +162,33 @@
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "actual_price_time_utc": "2026-09-18T17:26:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T17:25:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 7625.830078125,
+          "change_pct": 0.027284,
+          "actual_direction": "UP",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.0463,
+          "post_event_range_pct": 0.060339,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.0463
         }
       }
     },
     {
       "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -189,12 +203,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T17:25:33+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-18T18:10:33+00:00",
@@ -212,13 +220,34 @@
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "actual_price_time_utc": "2026-09-18T17:26:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T17:25:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 29461.439453125,
+          "change_pct": 0.043661,
+          "actual_direction": "UP",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.073931,
+          "post_event_range_pct": 0.071496,
+          "mfe_pct": 0.025966,
+          "mae_pct": -0.045531,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "UP"
         }
       }
     },
     {
       "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
       "instrument": "WS30",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^DJI",
       "yahoo_proxy_for": null,
@@ -233,12 +262,6 @@
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T17:25:33+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-18T18:10:33+00:00",
@@ -256,33 +279,47 @@
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "actual_price_time_utc": "2026-09-18T17:26:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T17:25:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 51577.3984375,
+          "change_pct": 0.00793,
+          "actual_direction": "NO_MOVE",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.067516,
+          "post_event_range_pct": 0.060283,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.067516
         }
       }
     },
     {
       "prediction_id": "ff-1418950-schmid-inflation-above-3-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4423.60009765625,
-      "reference_price_time_utc": "2026-09-18T17:07:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-18T17:06:00+00:00",
+      "reference_price": 4424.7998046875,
+      "reference_price_time_utc": "2026-09-18T17:10:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T17:09:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 3.55,
+      "reference_age_minutes": 0.55,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
-        "15m": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-18T17:25:33+00:00",
-          "predicted_direction": "MIXED",
-          "predicted_confidence": 4
-        },
         "1h": {
           "status": "PENDING",
           "target_time_utc": "2026-09-18T18:10:33+00:00",
@@ -300,6 +337,26 @@
           "session_local_date": null,
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
+        },
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-18T17:25:33+00:00",
+          "actual_price_time_utc": "2026-09-18T17:26:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T17:25:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 4423.5,
+          "change_pct": -0.029375,
+          "actual_direction": "DOWN",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.149161,
+          "post_event_range_pct": 0.149161,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.149161
         }
       }
     }
