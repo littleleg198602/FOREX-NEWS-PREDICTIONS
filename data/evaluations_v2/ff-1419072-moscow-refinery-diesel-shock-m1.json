@@ -1,21 +1,23 @@
 {
   "evaluation_version": "2.0.0",
   "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
-  "prediction_id": "ff-1419062-stournaras-ecb-caution-m1",
-  "event_id": "ff-1419062-stournaras-ecb-caution",
-  "event_time_utc": "2026-09-20T07:34:00+00:00",
-  "prediction_time_utc": "2026-09-20T09:22:01+00:00",
-  "evaluation_anchor_time_utc": "2026-09-20T09:22:01+00:00",
-  "prediction_latency_seconds": 6481.0,
-  "evaluated_at_utc": "2026-09-20T15:25:43.273829+00:00",
+  "prediction_id": "ff-1419072-moscow-refinery-diesel-shock-m1",
+  "event_id": "ff-1419072-moscow-refinery-diesel-shock",
+  "event_time_utc": "2026-09-20T14:35:37+00:00",
+  "prediction_time_utc": "2026-09-20T15:24:00+00:00",
+  "evaluation_anchor_time_utc": "2026-09-20T15:24:00+00:00",
+  "prediction_latency_seconds": 2903.0,
+  "evaluated_at_utc": "2026-09-20T15:25:45.800175+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
   "categories": [
-    "ECB",
-    "rates",
-    "inflation",
-    "europe"
+    "geopolitics",
+    "energy",
+    "russia",
+    "ukraine",
+    "refinery",
+    "diesel"
   ],
   "evidence": null,
   "is_example": false,
@@ -24,8 +26,8 @@
   "normalization_warnings": [],
   "market_context_origin": "reconstructed_pre_decision_from_yahoo",
   "market_context": {
-    "captured_for_time_utc": "2026-09-20T09:22:01+00:00",
-    "captured_for_event_time_utc": "2026-09-20T09:22:01+00:00",
+    "captured_for_time_utc": "2026-09-20T15:24:00+00:00",
+    "captured_for_event_time_utc": "2026-09-20T15:24:00+00:00",
     "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
     "source": "yahoo",
     "series": {
@@ -36,7 +38,7 @@
         "value": 100.21499633789062,
         "timestamp_utc": "2026-09-18T21:00:00+00:00",
         "available_at_utc": "2026-09-18T21:00:00+00:00",
-        "age_minutes": 2182.02,
+        "age_minutes": 2544.0,
         "fresh": false,
         "max_staleness_minutes": 180.0,
         "proxy_for": null,
@@ -56,7 +58,7 @@
         "value": 101.87890625,
         "timestamp_utc": "2026-09-18T21:00:00+00:00",
         "available_at_utc": "2026-09-18T21:00:00+00:00",
-        "age_minutes": 2182.02,
+        "age_minutes": 2544.0,
         "fresh": false,
         "max_staleness_minutes": 180.0,
         "proxy_for": "US 2Y Treasury yield",
@@ -76,7 +78,7 @@
         "value": 105.828125,
         "timestamp_utc": "2026-09-18T21:00:00+00:00",
         "available_at_utc": "2026-09-18T21:00:00+00:00",
-        "age_minutes": 2182.02,
+        "age_minutes": 2544.0,
         "fresh": false,
         "max_staleness_minutes": 180.0,
         "proxy_for": "US 10Y Treasury yield",
@@ -96,7 +98,7 @@
         "value": 14.8100004196167,
         "timestamp_utc": "2026-09-18T20:15:00+00:00",
         "available_at_utc": "2026-09-18T20:15:00+00:00",
-        "age_minutes": 2227.02,
+        "age_minutes": 2589.0,
         "fresh": false,
         "max_staleness_minutes": 1440.0,
         "proxy_for": null,
@@ -116,7 +118,7 @@
         "value": 96.08000183105469,
         "timestamp_utc": "2026-09-18T21:00:00+00:00",
         "available_at_utc": "2026-09-18T21:00:00+00:00",
-        "age_minutes": 2182.02,
+        "age_minutes": 2544.0,
         "fresh": false,
         "max_staleness_minutes": 180.0,
         "proxy_for": null,
@@ -136,7 +138,7 @@
         "value": 99.29000091552734,
         "timestamp_utc": "2026-09-18T20:59:00+00:00",
         "available_at_utc": "2026-09-18T20:59:00+00:00",
-        "age_minutes": 2183.02,
+        "age_minutes": 2545.0,
         "fresh": false,
         "max_staleness_minutes": 180.0,
         "proxy_for": null,
@@ -161,57 +163,51 @@
   },
   "results": [
     {
-      "prediction_id": "ff-1419062-stournaras-ecb-caution-m1",
-      "instrument": "STOXX50",
+      "prediction_id": "ff-1419072-moscow-refinery-diesel-shock-m1",
+      "instrument": "XAUUSD",
       "status": "PENDING",
       "market_data_source": "yahoo",
-      "yahoo_symbol": "^STOXX50E",
-      "yahoo_proxy_for": null,
-      "yahoo_proxy_type": null,
-      "reference_price": 6230.509765625,
-      "reference_price_time_utc": "2026-09-18T15:30:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-18T15:29:00+00:00",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4424.89990234375,
+      "reference_price_time_utc": "2026-09-18T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T20:59:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2512.017,
+      "reference_age_minutes": 2544.0,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "legacy_immediate_fallback",
       "predicted_immediate_direction": "UP",
-      "predicted_confidence": 5,
+      "predicted_confidence": 6,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T10:22:01+00:00",
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T15:39:00+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2512.017
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T16:24:00+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
         },
         "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T13:22:01+00:00",
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T19:24:00+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2512.017
+          "predicted_confidence": 6
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
           "predicted_direction": "UP",
           "forecast_source": "legacy_fallback"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T09:37:01+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2512.017
         }
       }
     },
     {
-      "prediction_id": "ff-1419062-stournaras-ecb-caution-m1",
+      "prediction_id": "ff-1419072-moscow-refinery-diesel-shock-m1",
       "instrument": "GDAXI",
       "status": "PENDING",
       "market_data_source": "yahoo",
@@ -222,91 +218,123 @@
       "reference_price_time_utc": "2026-09-18T16:01:00+00:00",
       "reference_price_bar_start_utc": "2026-09-18T16:00:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2481.017,
+      "reference_age_minutes": 2843.0,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "legacy_immediate_fallback",
-      "predicted_immediate_direction": "UP",
-      "predicted_confidence": 5,
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
       "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T15:39:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T10:22:01+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2481.017
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T16:24:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
         },
         "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T13:22:01+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2481.017
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T19:24:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
-          "predicted_direction": "UP",
+          "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
-        },
-        "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T09:37:01+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2481.017
         }
       }
     },
     {
-      "prediction_id": "ff-1419062-stournaras-ecb-caution-m1",
-      "instrument": "FCHI40",
+      "prediction_id": "ff-1419072-moscow-refinery-diesel-shock-m1",
+      "instrument": "STOXX50",
       "status": "PENDING",
       "market_data_source": "yahoo",
-      "yahoo_symbol": "^FCHI",
+      "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 8053.9501953125,
+      "reference_price": 6230.509765625,
       "reference_price_time_utc": "2026-09-18T15:30:00+00:00",
       "reference_price_bar_start_utc": "2026-09-18T15:29:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2512.017,
+      "reference_age_minutes": 2874.0,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "legacy_immediate_fallback",
-      "predicted_immediate_direction": "UP",
-      "predicted_confidence": 5,
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
       "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T15:39:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
         "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T10:22:01+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2512.017
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T16:24:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
         },
         "4h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T13:22:01+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2512.017
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T19:24:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
         },
         "next_session": {
           "status": "PENDING",
           "session_local_date": null,
-          "predicted_direction": "UP",
+          "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
-        },
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419072-moscow-refinery-diesel-shock-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7650.5,
+      "reference_price_time_utc": "2026-09-18T21:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2514.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
         "15m": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-20T09:37:01+00:00",
-          "predicted_direction": "UP",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 2512.017
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T15:39:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T16:24:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T19:24:00+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
         }
       }
     }
