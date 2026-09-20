@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-18T00:11:42+00:00",
   "evaluation_anchor_time_utc": "2026-09-18T00:11:42+00:00",
   "prediction_latency_seconds": 342.0,
-  "evaluated_at_utc": "2026-09-20T19:29:32.105977+00:00",
+  "evaluated_at_utc": "2026-09-20T22:29:32.680383+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -178,26 +178,11 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
-        "1h": {
-          "status": "DONE",
-          "target_time_utc": "2026-09-18T01:11:42+00:00",
-          "actual_price_time_utc": "2026-09-18T01:12:00+00:00",
-          "actual_price_bar_start_utc": "2026-09-18T01:11:00+00:00",
-          "market_delay_minutes": 0.3,
-          "price": 8751.900390625,
-          "change_pct": -0.141476,
-          "actual_direction": "DOWN",
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
           "predicted_direction": "DOWN",
-          "predicted_confidence": 6,
-          "forecast_source": "legacy_fallback",
-          "correct": true,
-          "score_type": "directional",
-          "baseline_range_pct": 0.126657,
-          "post_event_range_pct": 0.348003,
-          "mfe_pct": 0.264712,
-          "mae_pct": -0.08329,
-          "directional_threshold_pct": 0.012666,
-          "actual_direction_thresholded": "DOWN"
+          "forecast_source": "legacy_fallback"
         },
         "15m": {
           "status": "DONE",
@@ -241,11 +226,26 @@
           "directional_threshold_pct": 0.012666,
           "actual_direction_thresholded": "DOWN"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
+        "1h": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-18T01:11:42+00:00",
+          "actual_price_time_utc": "2026-09-18T01:12:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-18T01:11:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 8751.900390625,
+          "change_pct": -0.141476,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
-          "forecast_source": "legacy_fallback"
+          "predicted_confidence": 6,
+          "forecast_source": "legacy_fallback",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.126657,
+          "post_event_range_pct": 0.348003,
+          "mfe_pct": 0.264712,
+          "mae_pct": -0.08329,
+          "directional_threshold_pct": 0.012666,
+          "actual_direction_thresholded": "DOWN"
         }
       }
     }
