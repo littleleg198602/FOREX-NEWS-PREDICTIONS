@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-17T08:45:22+00:00",
   "evaluation_anchor_time_utc": "2026-09-17T08:45:22+00:00",
   "prediction_latency_seconds": 262.0,
-  "evaluated_at_utc": "2026-09-19T23:08:19.008528+00:00",
+  "evaluated_at_utc": "2026-09-20T01:12:03.191413+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -178,6 +178,12 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-18",
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-17T09:45:22+00:00",
@@ -198,12 +204,6 @@
           "mae_pct": -0.132817,
           "directional_threshold_pct": 0.045586,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-18",
-          "predicted_direction": "DOWN",
-          "forecast_source": "legacy_fallback"
         },
         "4h": {
           "status": "DONE",
@@ -267,6 +267,12 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-18",
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-17T09:45:22+00:00",
@@ -287,12 +293,6 @@
           "mae_pct": -0.174905,
           "directional_threshold_pct": 0.041743,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-18",
-          "predicted_direction": "DOWN",
-          "forecast_source": "legacy_fallback"
         },
         "4h": {
           "status": "DONE",
@@ -356,6 +356,12 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": "2026-09-18",
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-17T09:45:22+00:00",
@@ -376,12 +382,6 @@
           "mae_pct": -0.12173,
           "directional_threshold_pct": 0.0368,
           "actual_direction_thresholded": "UP"
-        },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": "2026-09-18",
-          "predicted_direction": "DOWN",
-          "forecast_source": "legacy_fallback"
         },
         "4h": {
           "status": "DONE",
@@ -445,14 +445,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
-        "1h": {
-          "status": "MARKET_CLOSED",
-          "target_time_utc": "2026-09-17T09:45:22+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5,
-          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
-          "reference_age_minutes": 733.367
-        },
         "next_session": {
           "status": "DONE",
           "session_local_date": "2026-09-17",
@@ -474,6 +466,14 @@
           "directional_threshold_pct": 0.157605,
           "actual_direction_thresholded": "UP",
           "forecast_source": "legacy_fallback"
+        },
+        "1h": {
+          "status": "MARKET_CLOSED",
+          "target_time_utc": "2026-09-17T09:45:22+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 733.367
         },
         "4h": {
           "status": "MARKET_CLOSED",
