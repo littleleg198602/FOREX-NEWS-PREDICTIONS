@@ -1,0 +1,263 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419091-us-china-trade-talks-nyc-m2",
+  "event_id": "ff-1419091-us-china-trade-talks-nyc",
+  "event_time_utc": "2026-09-20T16:13:00+00:00",
+  "prediction_time_utc": "2026-09-20T17:08:20+00:00",
+  "evaluation_anchor_time_utc": "2026-09-20T17:08:20+00:00",
+  "prediction_latency_seconds": 3320.0,
+  "evaluated_at_utc": "2026-09-20T17:11:27.187274+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "trade",
+    "US",
+    "China",
+    "tariffs",
+    "geopolitics"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 55.3,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Bessent, Greer and He Lifeng have opened the final ministerial US-China negotiating round before the Trump-Xi summit, but no agreement, concession or breakdown has yet been reported.",
+    "market_expectations": {
+      "source": "Forex Factory/underlying report",
+      "expected_value": "Talks are intended to prepare the Sep 24 Trump-Xi summit; outcome remains unknown",
+      "implied_probability": null,
+      "distribution_notes": "The meeting itself is mildly de-escalatory, but tradable direction depends on the readout."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "UNKNOWN",
+      "reason": "US cash markets are closed on Sunday and no clean leakage-safe event reaction is available.",
+      "observed_reaction": {
+        "market_open": false
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "DXY": "stale Friday close",
+        "US2Y": "stale Friday close",
+        "US10Y": "stale Friday close",
+        "VIX": "stale Friday close",
+        "WTI": "stale Friday settlement",
+        "Brent": "stale Friday settlement",
+        "local_confirmation": "No clean open-market US equity reaction yet."
+      }
+    },
+    "decision_notes": "Residual forecast from 17:08:20Z. Leakage-safe learning: M2 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID; M2 low-confidence MIXED at 1h and 4h is ACTIONABLE KEEP_NEUTRAL. No directional confidence boost applied before an actual negotiating outcome."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.2,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "Friday close",
+        "freshness_minutes": 2708
+      },
+      "US2Y": {
+        "value": 4.76,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Friday close",
+        "freshness_minutes": 2708
+      },
+      "US10Y": {
+        "value": 5.01,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Friday close",
+        "freshness_minutes": 2708
+      },
+      "VIX": {
+        "value": 14.81,
+        "observed_at_utc": "2026-09-18T20:15:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "Friday close",
+        "freshness_minutes": 2693
+      },
+      "WTI": {
+        "value": 100.3,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Friday settlement",
+        "freshness_minutes": 2708
+      },
+      "BRENT": {
+        "value": 103.87,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Friday settlement",
+        "freshness_minutes": 2708
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419091-us-china-trade-talks-nyc-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29644.168,
+      "reference_price_time_utc": "2026-09-18T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2631.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T17:23:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T18:08:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T21:08:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419091-us-china-trade-talks-nyc-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7650.5,
+      "reference_price_time_utc": "2026-09-18T21:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2618.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T17:23:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T18:08:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T21:08:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419091-us-china-trade-talks-nyc-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51682.64,
+      "reference_price_time_utc": "2026-09-18T21:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2595.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T17:23:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T18:08:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T21:08:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
