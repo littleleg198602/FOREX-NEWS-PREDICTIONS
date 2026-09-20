@@ -1,0 +1,254 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419062-stournaras-ecb-caution-m2",
+  "event_id": "ff-1419062-stournaras-ecb-caution",
+  "event_time_utc": "2026-09-20T07:34:00+00:00",
+  "prediction_time_utc": "2026-09-20T09:22:01+00:00",
+  "evaluation_anchor_time_utc": "2026-09-20T09:22:01+00:00",
+  "prediction_latency_seconds": 6481.0,
+  "evaluated_at_utc": "2026-09-20T09:25:50.080091+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "ECB",
+    "rates",
+    "inflation",
+    "europe"
+  ],
+  "evidence": {
+    "article_role": "COMMENTARY",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 108.0,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Stournaras tempers the ECB tightening narrative by urging vigilance without rushing further hikes, but the comment is one policymaker's view and markets are closed.",
+    "market_expectations": {
+      "source": "Friday close / current ECB debate",
+      "expected_value": "ECB remains inflation-alert after two hikes; further tightening is debated",
+      "implied_probability": null,
+      "distribution_notes": "Comment marginally shifts tone dovish but does not change policy by itself."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "UNKNOWN",
+      "reason": "European cash/index markets are closed on Sunday, so no contemporaneous event reaction can be observed.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "reason": "DXY, US2Y, US10Y, VIX, WTI and Brent are all stale Friday closes; no leakage-safe Sunday confirmation exists."
+      }
+    },
+    "decision_notes": "Residual forecast from 09:22:01Z. Fixed 15m/1h/4h horizons remain MIXED because markets are closed rather than substituting Monday's open. Model-2 1h and 4h low-confidence MIXED segments are ACTIONABLE KEEP_NEUTRAL; no directional confidence boost applied."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.2,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "Friday market close",
+        "freshness_minutes": 2242
+      },
+      "US2Y": {
+        "value": 4.76,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "US Treasury Friday close",
+        "freshness_minutes": 2242
+      },
+      "US10Y": {
+        "value": 5.01,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "US Treasury Friday close",
+        "freshness_minutes": 2242
+      },
+      "VIX": {
+        "value": 14.81,
+        "observed_at_utc": "2026-09-18T20:15:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "Cboe Friday close",
+        "freshness_minutes": 2227
+      },
+      "WTI": {
+        "value": 100.3,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Friday settlement",
+        "freshness_minutes": 2242
+      },
+      "BRENT": {
+        "value": 103.87,
+        "observed_at_utc": "2026-09-18T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Friday settlement",
+        "freshness_minutes": 2242
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419062-stournaras-ecb-caution-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6230.509765625,
+      "reference_price_time_utc": "2026-09-18T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2512.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T09:37:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T10:22:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T13:22:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419062-stournaras-ecb-caution-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25304.06,
+      "reference_price_time_utc": "2026-09-18T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2481.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T09:37:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T10:22:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T13:22:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419062-stournaras-ecb-caution-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8053.9501953125,
+      "reference_price_time_utc": "2026-09-18T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2512.017,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T09:37:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T10:22:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-20T13:22:01+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
