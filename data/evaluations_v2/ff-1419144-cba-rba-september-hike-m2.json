@@ -1,0 +1,189 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419144-cba-rba-september-hike-m2",
+  "event_id": "ff-1419144-cba-rba-september-hike",
+  "event_time_utc": "2026-09-21T03:21:00+00:00",
+  "prediction_time_utc": "2026-09-21T03:49:40+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T03:49:40+00:00",
+  "prediction_latency_seconds": 1720.0,
+  "evaluated_at_utc": "2026-09-21T03:52:05.754322+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "RBA",
+    "rates",
+    "Australia",
+    "inflation",
+    "monetary_policy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 28.7,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "CBA moved its RBA hike forecast from November to the September 28-29 meeting, expecting +25bp to 4.60%; however markets already price roughly 90% odds of a September hike, so the residual equity shock is smaller than the headline.",
+    "market_expectations": {
+      "source": "CBA",
+      "expected_value": "~90% market-implied probability of September hike",
+      "implied_probability": 0.9,
+      "distribution_notes": "Timing, not the existence of further tightening, is the main incremental surprise."
+    },
+    "surprise": {
+      "actual": "CBA now forecasts Sep 29 +25bp to 4.60%",
+      "consensus": "Markets already ~90% priced for September; several banks already hawkish",
+      "previous": "CBA expected November hike",
+      "revised_previous": null,
+      "surprise_direction": "HAWKISH",
+      "components": {
+        "oil": "Brent had risen above $100, but is falling sharply today",
+        "data": "inflation and GDP stronger than RBA expected",
+        "RBA_guidance": "upside inflation risks materialising"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "September hike is already about 90% priced and ASX 200 was reported around -0.49% during the session; residual move should be smaller than a fresh repricing shock.",
+      "observed_reaction": {
+        "AUS200_session_pct": -0.49
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "AUS200": "about -0.49% during session, bearish confirmation",
+        "AUDUSD": "around 0.7117 early Asia, only slightly firmer",
+        "AU3Y": "4.93% early reference",
+        "DXY": "100.24",
+        "US2Y": "4.76%, elevated",
+        "US10Y": "~5.00%, elevated",
+        "VIX": "14.81 Friday close, stale",
+        "WTI": "$98.36, sharply lower",
+        "Brent": "$101.69, sharply lower",
+        "interpretation": "Equity weakness and high global yields confirm tightening pressure, but falling oil reduces the inflation impulse behind the CBA shift."
+      }
+    },
+    "decision_notes": "Forecast is from 03:49:40Z and targets residual move only. Leakage-safe learning profile: M2 directional confidence 5-6 at 1h is ACTIONABLE REDUCE_OR_AVOID; M2 low-confidence MIXED at 1h is ACTIONABLE KEEP_NEUTRAL, so 1h is kept MIXED 4/10."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.24,
+        "observed_at_utc": "2026-09-21T03:35:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "contemporaneous Asia market report",
+        "freshness_minutes": 15
+      },
+      "US2Y": {
+        "value": 4.76,
+        "observed_at_utc": "2026-09-21T01:10:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters Asia market report",
+        "freshness_minutes": 160
+      },
+      "US10Y": {
+        "value": 5.0,
+        "observed_at_utc": "2026-09-21T03:35:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "contemporaneous Asia market report",
+        "freshness_minutes": 15
+      },
+      "VIX": {
+        "value": 14.81,
+        "observed_at_utc": "2026-09-18T20:15:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "Cboe Friday close",
+        "freshness_minutes": 3335
+      },
+      "WTI": {
+        "value": 98.36,
+        "observed_at_utc": "2026-09-21T03:35:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "contemporaneous Asia market report",
+        "freshness_minutes": 15
+      },
+      "BRENT": {
+        "value": 101.69,
+        "observed_at_utc": "2026-09-21T03:35:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "contemporaneous Asia market report",
+        "freshness_minutes": 15
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419144-cba-rba-september-hike-m2",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8730.400390625,
+      "reference_price_time_utc": "2026-09-21T03:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T03:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 17.667,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T04:04:40+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T04:49:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T07:49:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
