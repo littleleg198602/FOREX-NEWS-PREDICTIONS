@@ -1,0 +1,252 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419311-us-china-trade-truce-six-months-m1",
+  "event_id": "ff-1419311-us-china-trade-truce-six-months",
+  "event_time_utc": "2026-09-21T14:25:00+00:00",
+  "prediction_time_utc": "2026-09-21T16:45:41+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T16:45:41+00:00",
+  "prediction_latency_seconds": 8441.0,
+  "evaluated_at_utc": "2026-09-21T16:51:19.520934+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "US-China",
+    "trade",
+    "tariffs",
+    "geopolitics"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-21T16:45:41+00:00",
+    "captured_for_event_time_utc": "2026-09-21T16:45:41+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.38600158691406,
+        "timestamp_utc": "2026-09-21T16:42:00+00:00",
+        "available_at_utc": "2026-09-21T16:42:00+00:00",
+        "age_minutes": 3.68,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.01693,
+        "change_pct_240m": 0.137659,
+        "change_abs_60m": -0.016998,
+        "raw_change_pct_60m": -0.01693,
+        "raw_change_abs_60m": -0.016998,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.9140625,
+        "timestamp_utc": "2026-09-21T16:42:00+00:00",
+        "available_at_utc": "2026-09-21T16:42:00+00:00",
+        "age_minutes": 3.68,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.0115,
+        "change_pct_240m": 0.015329,
+        "change_abs_60m": -0.011719,
+        "raw_change_pct_60m": 0.0115,
+        "raw_change_abs_60m": 0.011719,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 4.954999923706055,
+        "timestamp_utc": "2026-09-21T16:37:00+00:00",
+        "available_at_utc": "2026-09-21T16:37:00+00:00",
+        "age_minutes": 8.68,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": -0.120944,
+        "change_pct_240m": -0.040344,
+        "change_abs_60m": -0.006,
+        "raw_change_pct_60m": -0.120944,
+        "raw_change_abs_60m": -0.006,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 15.100000381469727,
+        "timestamp_utc": "2026-09-21T16:37:00+00:00",
+        "available_at_utc": "2026-09-21T16:37:00+00:00",
+        "age_minutes": 8.68,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 1.410343,
+        "change_pct_240m": 1.889343,
+        "change_abs_60m": 0.21,
+        "raw_change_pct_60m": 1.410343,
+        "raw_change_abs_60m": 0.21,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 91.38999938964844,
+        "timestamp_utc": "2026-09-21T16:42:00+00:00",
+        "available_at_utc": "2026-09-21T16:42:00+00:00",
+        "age_minutes": 3.68,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.7709,
+        "change_pct_240m": -1.593629,
+        "change_abs_60m": -0.709999,
+        "raw_change_pct_60m": -0.7709,
+        "raw_change_abs_60m": -0.709999,
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 95.25,
+        "timestamp_utc": "2026-09-21T16:42:00+00:00",
+        "available_at_utc": "2026-09-21T16:42:00+00:00",
+        "age_minutes": 3.68,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.853544,
+        "change_pct_240m": -5.271012,
+        "change_abs_60m": -0.82,
+        "raw_change_pct_60m": -0.853544,
+        "raw_change_abs_60m": -0.82,
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419311-us-china-trade-truce-six-months-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30370.35546875,
+      "reference_price_time_utc": "2026-09-21T16:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T16:44:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T17:00:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T17:45:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T20:45:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419311-us-china-trade-truce-six-months-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7750.41015625,
+      "reference_price_time_utc": "2026-09-21T16:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T16:44:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T17:00:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T17:45:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T20:45:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}
