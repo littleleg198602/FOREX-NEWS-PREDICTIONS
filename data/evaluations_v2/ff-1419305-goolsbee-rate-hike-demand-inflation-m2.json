@@ -1,0 +1,268 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419305-goolsbee-rate-hike-demand-inflation-m2",
+  "event_id": "ff-1419305-goolsbee-rate-hike-demand-inflation",
+  "event_time_utc": "2026-09-21T14:00:00+00:00",
+  "prediction_time_utc": "2026-09-21T15:29:44+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T15:29:44+00:00",
+  "prediction_latency_seconds": 5384.0,
+  "evaluated_at_utc": "2026-09-21T15:35:42.144167+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Fed",
+    "inflation",
+    "rates",
+    "monetary_policy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 89.7,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Goolsbee says the rate hike is not simply reversing 2025 cuts, services inflation may persist, demand may be overheating, and Fed projections are insufficient if inflation is demand-driven.",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch cited by Reuters",
+      "expected_value": "Markets price 88% probability of a December Fed hike; hawkish rhetoric is therefore substantially anticipated.",
+      "implied_probability": 0.88,
+      "distribution_notes": "The incremental Goolsbee comments reinforce an already-hawkish policy path rather than create a new one."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "NO_REACTION",
+      "reason": "By 10:24 ET, after the 10:00 ET remarks, Dow +0.47%, S&P 500 +0.92%, Nasdaq +1.48%, while Treasury yields were easing.",
+      "observed_reaction": {
+        "Dow": "+0.47%",
+        "SP500": "+0.92%",
+        "NasdaqComposite": "+1.48%",
+        "US2Y": "~4.74%, lower",
+        "US10Y": "~4.97%, lower",
+        "gold": "~$4,361.96, -0.3% at 9:20 ET before the latest remarks"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "100.39, firm",
+        "US2Y": "4.74%, lower",
+        "US10Y": "4.97%, lower",
+        "VIX": "14.94 earlier/stale",
+        "WTI": "down >3%",
+        "Brent": "~101.2 earlier, down ~2.6%",
+        "equities": "S&P +0.92%, Nasdaq +1.48% at 10:24 ET",
+        "interpretation": "Dollar/gold channel is hawkish, but yields and equities reject an immediate broad risk-off response."
+      }
+    },
+    "decision_notes": "This is an incremental update in the same Goolsbee inflation-demand cluster, not a fresh independent macro shock. Leakage-safe M2 learning says 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID; 1h MIXED 1-4 is ACTIONABLE KEEP_NEUTRAL, so 1h stays MIXED."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.39,
+        "observed_at_utc": "2026-09-21T14:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters FX report",
+        "freshness_minutes": 90
+      },
+      "US2Y": {
+        "value": 4.74,
+        "observed_at_utc": "2026-09-21T14:16:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ market report",
+        "freshness_minutes": 74
+      },
+      "US10Y": {
+        "value": 4.97,
+        "observed_at_utc": "2026-09-21T14:16:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ market report",
+        "freshness_minutes": 74
+      },
+      "VIX": {
+        "value": 14.94,
+        "observed_at_utc": "2026-09-21T09:53:00Z",
+        "direction": "flat",
+        "regime": "LOW",
+        "source": "earlier market snapshot",
+        "freshness_minutes": 337
+      },
+      "WTI": {
+        "value": null,
+        "observed_at_utc": "2026-09-21T14:24:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters Wall Street report",
+        "freshness_minutes": 66
+      },
+      "BRENT": {
+        "value": 101.2,
+        "observed_at_utc": "2026-09-21T12:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters global markets report",
+        "freshness_minutes": 210
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419305-goolsbee-rate-hike-demand-inflation-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30280.0234375,
+      "reference_price_time_utc": "2026-09-21T15:29:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T15:28:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.733,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:44:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T16:29:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T19:29:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419305-goolsbee-rate-hike-demand-inflation-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7728.4599609375,
+      "reference_price_time_utc": "2026-09-21T15:29:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T15:28:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.733,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:44:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T16:29:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T19:29:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419305-goolsbee-rate-hike-demand-inflation-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4390.2001953125,
+      "reference_price_time_utc": "2026-09-21T15:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T15:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.733,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:44:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T16:29:44+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T19:29:44+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
