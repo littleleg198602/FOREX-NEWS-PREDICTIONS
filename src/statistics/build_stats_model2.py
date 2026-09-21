@@ -60,6 +60,7 @@ def _counting_audit() -> tuple[dict, dict]:
                         "pending": 0,
                         "provider_error": 0,
                         "no_reference_price": 0,
+                        "missing": 0,
                         "other": 0,
                     }
                     for horizon in HORIZONS
@@ -95,11 +96,11 @@ def _counting_audit() -> tuple[dict, dict]:
             evaluations = result.get("evaluations", {})
             for horizon in HORIZONS:
                 item = evaluations.get(horizon, {})
-                if not isinstance(item, dict) or not item:
-                    continue
-
                 horizon_counts = bucket["horizons"][horizon]
                 horizon_counts["items_total"] += 1
+                if not isinstance(item, dict) or not item:
+                    horizon_counts["missing"] += 1
+                    continue
                 status = str(item.get("status") or "UNKNOWN").upper()
 
                 if status == "DONE":
