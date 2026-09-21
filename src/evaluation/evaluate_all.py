@@ -61,7 +61,19 @@ def _merge_result(existing: dict | None, new: dict) -> dict:
     old_evaluations = existing.get("evaluations", {})
     new_evaluations = new.get("evaluations", {})
     combined: dict[str, dict] = {}
-    for horizon in set(old_evaluations) | set(new_evaluations):
+
+    # Preserve the existing JSON key order so retries never turn unchanged DONE
+    # blocks into noisy remove/add diffs. New horizons are appended in the
+    # configured canonical order, followed by any future/unknown extensions.
+    horizon_order: list[str] = list(old_evaluations)
+    for horizon in REQUIRED_HORIZONS:
+        if horizon in new_evaluations and horizon not in horizon_order:
+            horizon_order.append(horizon)
+    for horizon in new_evaluations:
+        if horizon not in horizon_order:
+            horizon_order.append(horizon)
+
+    for horizon in horizon_order:
         old_item = old_evaluations.get(horizon)
         new_item = new_evaluations.get(horizon)
         if isinstance(old_item, dict) and old_item.get("status") in TERMINAL_HORIZON_STATES:
@@ -111,7 +123,9 @@ def _merge_evaluation(existing: dict | None, new: dict) -> dict:
         if isinstance(item, dict) and item.get("instrument")
     }
     order: list[str] = []
-    for item in new.get("results", []) + existing.get("results", []):
+    # Existing instrument order is authoritative. A provider retry may return
+    # the same instruments in a different order; that must not rewrite the file.
+    for item in existing.get("results", []) + new.get("results", []):
         instrument = item.get("instrument") if isinstance(item, dict) else None
         if instrument and instrument not in order:
             order.append(instrument)
@@ -125,6 +139,15 @@ def _merge_evaluation(existing: dict | None, new: dict) -> dict:
         elif new_item is not None:
             merged_results.append(_merge_result(old_item, new_item))
     merged["results"] = merged_results
+
+    # evaluated_at_utc describes a meaningful evaluation update, not a retry
+    # heartbeat. If nothing except this timestamp changed, keep the old value so
+    # Git history remains append-like and unchanged evaluations stay unchanged.
+    old_comparable = {key: value for key, value in existing.items() if key != "evaluated_at_utc"}
+    new_comparable = {key: value for key, value in merged.items() if key != "evaluated_at_utc"}
+    if old_comparable == new_comparable and existing.get("evaluated_at_utc"):
+        merged["evaluated_at_utc"] = existing["evaluated_at_utc"]
+
     return merged
 
 
@@ -197,7 +220,10 @@ def main() -> int:
             existing = _load_json(out_path)
             output = _evaluate_with_retry(path)
             merged = _merge_evaluation(existing, output)
-            _atomic_write_json(out_path, merged)
+            if existing != merged:
+                _atomic_write_json(out_path, merged)
+            else:
+                print(f"[UNCHANGED] {path}: retry produced no new scoreable information")
 
             done = sum(
                 1
