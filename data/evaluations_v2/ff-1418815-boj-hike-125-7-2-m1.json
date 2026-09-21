@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-18T04:04:38+00:00",
   "evaluation_anchor_time_utc": "2026-09-18T04:04:38+00:00",
   "prediction_latency_seconds": 4238.0,
-  "evaluated_at_utc": "2026-09-21T03:51:45.975450+00:00",
+  "evaluated_at_utc": "2026-09-21T05:38:13.511779+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -179,13 +179,6 @@
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 6,
       "evaluations": {
-        "4h": {
-          "status": "DATA_GAP",
-          "target_time_utc": "2026-09-18T08:04:38+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 6,
-          "reason": "no complete traded bar available at/after target"
-        },
         "1h": {
           "status": "DONE",
           "target_time_utc": "2026-09-18T05:04:38+00:00",
@@ -207,11 +200,12 @@
           "directional_threshold_pct": 0.036939,
           "actual_direction_thresholded": "DOWN"
         },
-        "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
+        "4h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-18T08:04:38+00:00",
           "predicted_direction": "DOWN",
-          "forecast_source": "legacy_fallback"
+          "predicted_confidence": 6,
+          "reason": "no complete traded bar available at/after target"
         },
         "15m": {
           "status": "DONE",
@@ -233,6 +227,12 @@
           "mae_pct": -0.063755,
           "directional_threshold_pct": 0.016983,
           "actual_direction_thresholded": "DOWN"
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
         }
       }
     }

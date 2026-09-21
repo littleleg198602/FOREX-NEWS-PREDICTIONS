@@ -1,0 +1,179 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419152-yen-rate-check-intervention-watch-m2",
+  "event_id": "ff-1419152-yen-rate-check-intervention-watch",
+  "event_time_utc": "2026-09-21T05:16:00+00:00",
+  "prediction_time_utc": "2026-09-21T05:36:10+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T05:36:10+00:00",
+  "prediction_latency_seconds": 1210.0,
+  "evaluated_at_utc": "2026-09-21T05:38:59.347138+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Japan",
+    "JPY",
+    "intervention",
+    "rate_check",
+    "liquidity"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 20.2,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Reports of Japanese official rate checks materially escalate the existing intervention-watch cluster beyond generic holiday speculation; USD/JPY is around 156.64-156.85 but Tokyo cash remains closed.",
+    "market_expectations": {
+      "source": "Reuters/Forex Factory",
+      "expected_value": "Rate checks are commonly interpreted as a possible precursor to FX intervention, but no intervention is confirmed.",
+      "implied_probability": null,
+      "distribution_notes": "Two-way risk remains large because the US-Japan rate gap still supports USD/JPY while official action could cause a sharp yen rally."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The yen has firmed modestly to roughly 156.64-156.85 after last week's 2% fall, but there is no open NI225 cash market to measure equity absorption.",
+      "observed_reaction": {
+        "USDJPY": 156.64,
+        "NI225": "cash closed"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "about 100.23, steady",
+        "US2Y": "elevated around 4.76%",
+        "US10Y": "near 5%, elevated",
+        "VIX": "latest cash close stale",
+        "WTI": "about $98.15, down ~2.1%",
+        "Brent": "about $101.71, down ~2.1%",
+        "USDJPY": "156.64-156.85, modestly firmer yen",
+        "US_equity_futures": "S&P futures about +0.3-0.4%; Nasdaq futures about +0.4-0.6%",
+        "local_rates": "JGB cash market closed",
+        "interpretation": "Yen firmness confirms some intervention concern, while lower oil and positive global equity futures support risk appetite and oppose a clean bearish NI225 call."
+      }
+    },
+    "decision_notes": "Residual forecast from 05:36:10Z only. This is a substantive update to the existing intervention cluster because rate checks are reported. Leakage-safe M2 learning: 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID; 1h low-confidence MIXED is ACTIONABLE KEEP_NEUTRAL, so 1h remains MIXED 4/10."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.23,
+        "observed_at_utc": "2026-09-21T05:20:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "Reuters",
+        "freshness_minutes": 16
+      },
+      "US2Y": {
+        "value": 4.76,
+        "observed_at_utc": "2026-09-21T01:10:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 266
+      },
+      "US10Y": {
+        "value": 5.0,
+        "observed_at_utc": "2026-09-21T05:20:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "Reuters/global markets",
+        "freshness_minutes": 16
+      },
+      "VIX": {
+        "value": 14.81,
+        "observed_at_utc": "2026-09-18T20:15:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "Cboe Friday close",
+        "freshness_minutes": 3441
+      },
+      "WTI": {
+        "value": 98.15,
+        "observed_at_utc": "2026-09-21T05:20:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_minutes": 16
+      },
+      "BRENT": {
+        "value": 101.71,
+        "observed_at_utc": "2026-09-21T05:20:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness_minutes": 16
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419152-yen-rate-check-intervention-watch-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 65200.23828125,
+      "reference_price_time_utc": "2026-09-18T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4266.167,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T05:51:10+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T06:36:10+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T09:36:10+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
