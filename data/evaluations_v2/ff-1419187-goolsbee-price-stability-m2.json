@@ -1,0 +1,266 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419187-goolsbee-price-stability-m2",
+  "event_id": "ff-1419187-goolsbee-price-stability",
+  "event_time_utc": "2026-09-21T10:32:00+00:00",
+  "prediction_time_utc": "2026-09-21T11:15:03+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T11:15:03+00:00",
+  "prediction_latency_seconds": 2583.0,
+  "evaluated_at_utc": "2026-09-21T11:19:55.335018+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Fed",
+    "inflation",
+    "rates",
+    "monetary_policy"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 43.1,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Goolsbee says restoring price stability will not be painless, strong demand may be adding to inflation, and persistent supply shocks must be incorporated into monetary policy.",
+    "market_expectations": {
+      "source": "contemporaneous Treasury/equity pricing",
+      "expected_value": "Hawkish Fed rhetoric would normally push yields up and equities down; observed yields instead eased and futures stayed positive.",
+      "implied_probability": null,
+      "distribution_notes": "Post-FOMC policy remains restrictive; speech is hawkish but cross-asset reaction is not confirming."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "NO_REACTION",
+      "reason": "By decision time US2Y/US10Y were lower and S&P/Nasdaq futures remained positive.",
+      "observed_reaction": {
+        "US2Y": 4.721,
+        "US10Y": 4.957,
+        "SP500_futures": "~+0.6%",
+        "NDX_futures": "~+1.0%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": 100.262,
+        "US2Y": 4.721,
+        "US10Y": 4.957,
+        "VIX": 14.94,
+        "WTI": 98.11,
+        "Brent": 101.7,
+        "equity_futures": "positive",
+        "reason": "Hawkish words conflict with easing yields, falling oil and risk-on futures."
+      }
+    },
+    "decision_notes": "Residual forecast from 11:15 UTC. M2 learning profile: 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID, while 1h low-confidence MIXED is ACTIONABLE KEEP_NEUTRAL; therefore no 1h directional call."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.262,
+        "observed_at_utc": "2026-09-21T11:00:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "WSJ",
+        "freshness_minutes": 15
+      },
+      "US2Y": {
+        "value": 4.721,
+        "observed_at_utc": "2026-09-21T11:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 15
+      },
+      "US10Y": {
+        "value": 4.957,
+        "observed_at_utc": "2026-09-21T11:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 15
+      },
+      "VIX": {
+        "value": 14.94,
+        "observed_at_utc": "2026-09-21T09:53:00Z",
+        "direction": "flat",
+        "regime": "LOW",
+        "source": "YieldCove market snapshot",
+        "freshness_minutes": 82
+      },
+      "WTI": {
+        "value": 98.11,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Barron's market report",
+        "freshness_minutes": 95
+      },
+      "BRENT": {
+        "value": 101.7,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Barron's market report",
+        "freshness_minutes": 95
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419187-goolsbee-price-stability-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29644.168,
+      "reference_price_time_utc": "2026-09-18T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3718.05,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T11:30:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T12:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:15:03+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419187-goolsbee-price-stability-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7650.5,
+      "reference_price_time_utc": "2026-09-18T21:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3705.05,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T11:30:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T12:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:15:03+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419187-goolsbee-price-stability-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51682.64,
+      "reference_price_time_utc": "2026-09-18T21:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3682.05,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T11:30:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T12:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

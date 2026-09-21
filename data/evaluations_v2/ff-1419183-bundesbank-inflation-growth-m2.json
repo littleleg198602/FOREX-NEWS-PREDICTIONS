@@ -1,0 +1,232 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419183-bundesbank-inflation-growth-m2",
+  "event_id": "ff-1419183-bundesbank-inflation-growth",
+  "event_time_utc": "2026-09-21T10:01:00+00:00",
+  "prediction_time_utc": "2026-09-21T11:15:03+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T11:15:03+00:00",
+  "prediction_latency_seconds": 4443.0,
+  "evaluated_at_utc": "2026-09-21T11:19:53.335842+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Germany",
+    "Bundesbank",
+    "inflation",
+    "growth",
+    "rates"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 74.0,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Bundesbank says German inflation should remain elevated because of energy and healthcare costs while Q3 growth is only slight, but it still expects recovery in Q4 on manufacturing, fiscal and infrastructure support.",
+    "market_expectations": {
+      "source": "Bundesbank/Reuters",
+      "expected_value": "Mixed outlook: persistent inflation but late-year recovery.",
+      "implied_probability": null,
+      "distribution_notes": "The report is not a single surprise print; it combines inflation persistence with improving forward activity."
+    },
+    "surprise": {
+      "actual": "Inflation elevated; slight Q3 growth; Q4 recovery expected",
+      "consensus": null,
+      "previous": null,
+      "revised_previous": null,
+      "surprise_direction": "MIXED",
+      "components": {
+        "inflation": "August 2.9%; healthcare reform may temporarily add ~0.5pp in H1 2027",
+        "growth": "weak exports/consumption/drought in Q3; manufacturing/fiscal/infrastructure support Q4"
+      }
+    },
+    "absorption": {
+      "state": "NO_REACTION",
+      "reason": "DAX and STOXX 600 remained firmly higher after publication, led by tech and helped by lower oil.",
+      "observed_reaction": {
+        "DAX_pct": 0.76,
+        "STOXX600_pct": 0.8
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": 100.262,
+        "US2Y": 4.721,
+        "US10Y": 4.957,
+        "VIX": 14.94,
+        "WTI": 98.11,
+        "Brent": 101.7,
+        "DAX": "+0.76%",
+        "STOXX600": "+0.8%",
+        "reason": "Inflation persistence is hawkish, but falling energy prices and rising European equities oppose a bearish index call."
+      }
+    },
+    "decision_notes": "Residual forecast from 11:15 UTC; article is ~74 minutes old and the market has not confirmed a negative reaction. ACTIONABLE M2 1h learning favors low-confidence MIXED over directional 5-6."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.262,
+        "observed_at_utc": "2026-09-21T11:00:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "WSJ",
+        "freshness_minutes": 15
+      },
+      "US2Y": {
+        "value": 4.721,
+        "observed_at_utc": "2026-09-21T11:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 15
+      },
+      "US10Y": {
+        "value": 4.957,
+        "observed_at_utc": "2026-09-21T11:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 15
+      },
+      "VIX": {
+        "value": 14.94,
+        "observed_at_utc": "2026-09-21T09:53:00Z",
+        "direction": "flat",
+        "regime": "LOW",
+        "source": "YieldCove market snapshot",
+        "freshness_minutes": 82
+      },
+      "WTI": {
+        "value": 98.11,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Barron's market report",
+        "freshness_minutes": 95
+      },
+      "BRENT": {
+        "value": 101.7,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Barron's market report",
+        "freshness_minutes": 95
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419183-bundesbank-inflation-growth-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25568.98046875,
+      "reference_price_time_utc": "2026-09-21T11:05:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T11:04:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.05,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T11:30:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T12:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419183-bundesbank-inflation-growth-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6316.93017578125,
+      "reference_price_time_utc": "2026-09-21T11:05:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T11:04:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.05,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T11:30:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T12:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T15:15:03+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
