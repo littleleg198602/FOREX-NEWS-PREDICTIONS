@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-21T05:36:10+00:00",
   "evaluation_anchor_time_utc": "2026-09-21T05:36:10+00:00",
   "prediction_latency_seconds": 1210.0,
-  "evaluated_at_utc": "2026-09-21T06:54:16.020795+00:00",
+  "evaluated_at_utc": "2026-09-21T09:55:29.144005+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -156,10 +156,12 @@
           "forecast_source": "horizons"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-21T09:36:10+00:00",
           "predicted_direction": "VOLATILITY",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 4266.167
         },
         "1h": {
           "status": "MARKET_CLOSED",

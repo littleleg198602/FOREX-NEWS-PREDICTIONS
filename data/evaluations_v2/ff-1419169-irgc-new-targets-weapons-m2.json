@@ -1,0 +1,213 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419169-irgc-new-targets-weapons-m2",
+  "event_id": "ff-1419169-irgc-new-targets-weapons",
+  "event_time_utc": "2026-09-21T08:07:00+00:00",
+  "prediction_time_utc": "2026-09-21T09:50:11+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T09:50:11+00:00",
+  "prediction_latency_seconds": 6191.0,
+  "evaluated_at_utc": "2026-09-21T09:55:32.936502+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "Iran",
+    "US",
+    "Middle_East",
+    "safe_haven"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 103,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Iran's Revolutionary Guards warn they will hit new targets and introduce new weapons if the US launches further attacks.",
+    "absorption": {
+      "state": "NO_REACTION",
+      "reason": "By decision time oil was down ~2.1-2.2%, US equity futures were higher and gold was below its prior close; expected risk-off confirmation was absent.",
+      "observed_reaction": {
+        "gold": "lower",
+        "silver": "earlier +0.8%",
+        "WTI_pct": -2.2,
+        "Brent_pct": -2.1,
+        "SP500_futures_pct": 0.6,
+        "NDX_futures_pct": 1.0
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "~100.20 flat",
+        "US2Y": "4.735%, lower",
+        "US10Y": "4.966%, lower",
+        "VIX": "14.81 Friday close, stale",
+        "WTI": "$98.11, -2.2%",
+        "Brent": "$101.70, -2.1%",
+        "gold": "$4,355.30 latest verified snapshot, -0.5%",
+        "silver": "$66.75 earlier snapshot, +0.8%",
+        "US_futures": "S&P +0.6%, Nasdaq +1.0%"
+      }
+    },
+    "decision_notes": "Delayed by about 103 minutes; residual move from 09:50 UTC. M2 low-confidence MIXED 1h is ACTIONABLE KEEP_NEUTRAL; directional 5-6 1h is ACTIONABLE REDUCE_OR_AVOID."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.2,
+        "observed_at_utc": "2026-09-21T09:45:00Z",
+        "direction": "flat",
+        "source": "market snapshot",
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "value": 4.735,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "source": "Tradeweb via Barron's",
+        "regime": "FALLING"
+      },
+      "US10Y": {
+        "value": 4.966,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "source": "Tradeweb via Barron's",
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "value": 14.81,
+        "observed_at_utc": "2026-09-18T20:15:00Z",
+        "direction": "down",
+        "source": "Cboe Friday close",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 98.11,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "source": "Barron's",
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "value": 101.7,
+        "observed_at_utc": "2026-09-21T09:40:00Z",
+        "direction": "down",
+        "source": "Barron's",
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419169-irgc-new-targets-weapons-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4385.89990234375,
+      "reference_price_time_utc": "2026-09-21T09:46:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T09:45:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.183,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T10:05:11+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T10:50:11+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T13:50:11+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419169-irgc-new-targets-weapons-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 66.71499633789062,
+      "reference_price_time_utc": "2026-09-21T09:46:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T09:45:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.183,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T10:05:11+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T10:50:11+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T13:50:11+00:00",
+          "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
