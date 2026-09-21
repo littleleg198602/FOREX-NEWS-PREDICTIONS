@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-21T05:36:10+00:00",
   "evaluation_anchor_time_utc": "2026-09-21T05:36:10+00:00",
   "prediction_latency_seconds": 1210.0,
-  "evaluated_at_utc": "2026-09-21T06:24:17.788120+00:00",
+  "evaluated_at_utc": "2026-09-21T06:54:16.020795+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -162,10 +162,12 @@
           "predicted_confidence": 5
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-21T06:36:10+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 4266.167
         },
         "15m": {
           "status": "MARKET_CLOSED",
