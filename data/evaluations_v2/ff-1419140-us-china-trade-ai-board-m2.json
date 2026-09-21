@@ -1,0 +1,265 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419140-us-china-trade-ai-board-m2",
+  "event_id": "ff-1419140-us-china-trade-ai-board",
+  "event_time_utc": "2026-09-20T22:54:00+00:00",
+  "prediction_time_utc": "2026-09-21T01:27:23+00:00",
+  "evaluation_anchor_time_utc": "2026-09-21T01:27:23+00:00",
+  "prediction_latency_seconds": 9203.0,
+  "evaluated_at_utc": "2026-09-21T01:31:36.268622+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "trade",
+    "US",
+    "China",
+    "AI",
+    "tariffs"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 153.4,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "The negotiating round moved from merely meeting to a constructive readout: Bessent called engagement very successful, the Board of Trade became operational, and both sides agreed to continue AI dialogue; however, no comprehensive tariff or strategic-tech settlement was announced.",
+    "market_expectations": {
+      "source": "FT/Reuters/Forex Factory contemporaneous reporting",
+      "expected_value": "Markets expected preparatory talks before Trump-Xi; concrete procedural progress is mildly better than a no-result meeting.",
+      "implied_probability": null,
+      "distribution_notes": "Positive procedural surprise, but strategic disputes and the trade-truce expiry remain unresolved."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "US futures were already positive after publication: S&P futures about +0.25% and Nasdaq futures about +0.42%; the residual forecast therefore discounts the initial risk-on move.",
+      "observed_reaction": {
+        "SP500_futures_pct": 0.25,
+        "NDX_futures_pct": 0.42
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "little changed",
+        "US2Y": "4.76%, elevated",
+        "US10Y": "~4.995%, elevated",
+        "VIX": "14.81 Friday close, stale",
+        "WTI": "$100.02, slightly lower",
+        "Brent": "$103.68, slightly lower",
+        "US_equity_futures": "positive after publication",
+        "interpretation": "Equity futures and softer oil confirm mild risk-on; elevated yields cap conviction."
+      }
+    },
+    "decision_notes": "Delayed by about 153 minutes; forecast targets residual move from 01:27:23Z, not the original reaction. Leakage-safe learning materially affects 1h: model-2 directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID, while low-confidence MIXED at 1h is ACTIONABLE KEEP_NEUTRAL; therefore 1h is MIXED 4/10 despite constructive evidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-21T01:20:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "Bloomberg/market report",
+        "freshness_minutes": 7
+      },
+      "US2Y": {
+        "value": 4.76,
+        "observed_at_utc": "2026-09-21T01:10:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters Asia market report",
+        "freshness_minutes": 17
+      },
+      "US10Y": {
+        "value": 4.995,
+        "observed_at_utc": "2026-09-21T00:30:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "Investor's Business Daily Sunday futures report",
+        "freshness_minutes": 57
+      },
+      "VIX": {
+        "value": 14.81,
+        "observed_at_utc": "2026-09-18T20:15:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "Friday Cboe close",
+        "freshness_minutes": 3192
+      },
+      "WTI": {
+        "value": 100.02,
+        "observed_at_utc": "2026-09-21T01:10:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters Asia market report",
+        "freshness_minutes": 17
+      },
+      "BRENT": {
+        "value": 103.68,
+        "observed_at_utc": "2026-09-21T01:10:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters Asia market report",
+        "freshness_minutes": 17
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419140-us-china-trade-ai-board-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 29644.168,
+      "reference_price_time_utc": "2026-09-18T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3130.383,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T01:42:23+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T02:27:23+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T05:27:23+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419140-us-china-trade-ai-board-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7650.5,
+      "reference_price_time_utc": "2026-09-18T21:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3117.383,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T01:42:23+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T02:27:23+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T05:27:23+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419140-us-china-trade-ai-board-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51682.64,
+      "reference_price_time_utc": "2026-09-18T21:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T21:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3094.383,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T01:42:23+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T02:27:23+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-21T05:27:23+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
