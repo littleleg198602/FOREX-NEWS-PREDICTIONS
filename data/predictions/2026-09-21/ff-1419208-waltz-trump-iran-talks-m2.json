@@ -1,0 +1,39 @@
+{
+  "event_id": "ff-1419208-waltz-trump-iran-talks",
+  "event_cluster_id": "iran-us-war-diplomacy-sep-2026",
+  "created_at_utc": "2026-09-21T12:15:30Z",
+  "event_time_utc": "2026-09-21T11:43:00Z",
+  "published_at_utc": "2026-09-21T11:45:00Z",
+  "source_time_text": "Sep 21, 2026 12:43pm source / 12:45pm Forex Factory (BST)",
+  "observed_at_utc": "2026-09-21T12:15:19Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["geopolitics", "Iran", "US", "diplomacy", "Middle_East"],
+  "prediction_id": "ff-1419208-waltz-trump-iran-talks-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 32.3,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Waltz says Trump remains open to talks but Iran must come to the table, adding a concrete diplomatic option to an ongoing escalation cluster.",
+    "market_expectations": {"source":"contemporaneous Reuters/AP/WSJ pricing","expected_value":"Diplomatic progress should lower oil/safe-haven premia and support equities; much of that bundle was already visible before the headline.","implied_probability":null,"distribution_notes":"No confirmed negotiation or ceasefire; this is an incremental diplomatic signal."},
+    "surprise": null,
+    "absorption": {"state":"PARTIALLY_PRICED","reason":"Before and around the headline oil was already down sharply, US equity futures were higher and gold was lower; the story reinforces rather than creates the prevailing de-escalation/risk-on tape.","observed_reaction":{"XAUUSD":"~4350, -0.52% on day in latest snapshot","SP500_futures":"roughly +0.6% to +0.7%","WTI":"~$98.11, -2.2% earlier snapshot","Brent":"~$101.70, -2.1% earlier snapshot"}},
+    "cross_asset_confirmation": {"verdict":"CONFIRMED","observations":{"DXY":"100.262, roughly stable","US2Y":"4.721%, lower","US10Y":"4.957%, lower","VIX":"14.94, low but stale","WTI":"~$98.11, sharply lower","Brent":"~$101.70, sharply lower","gold":"~$4350, lower","US_equity_futures":"higher","interpretation":"The broader basket is consistent with easing geopolitical/energy risk, though much of it predates the Waltz headline."}},
+    "decision_notes": "Residual forecast from 12:15 UTC. Leakage-safe M2 learning: 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID; 1h low-confidence MIXED is ACTIONABLE KEEP_NEUTRAL, so the candidate stays MIXED at 1h."
+  },
+  "market_context_at_prediction": {"series":{"DXY":{"value":100.262,"observed_at_utc":"2026-09-21T11:00:00Z","direction":"flat","regime":"stable","source":"WSJ","freshness_minutes":75},"US2Y":{"value":4.721,"observed_at_utc":"2026-09-21T11:00:00Z","direction":"down","regime":"easing","source":"WSJ","freshness_minutes":75},"US10Y":{"value":4.957,"observed_at_utc":"2026-09-21T11:00:00Z","direction":"down","regime":"below 5%","source":"WSJ","freshness_minutes":75},"VIX":{"value":14.94,"observed_at_utc":"2026-09-21T09:53:00Z","direction":"flat","regime":"low but stale","source":"YieldCove","freshness_minutes":142},"WTI":{"value":98.11,"observed_at_utc":"2026-09-21T09:40:00Z","direction":"down","regime":"about -2.2%","source":"Barron's","freshness_minutes":155},"BRENT":{"value":101.7,"observed_at_utc":"2026-09-21T09:40:00Z","direction":"down","regime":"about -2.1%","source":"Barron's","freshness_minutes":155},"XAUUSD":{"value":4350.07,"observed_at_utc":"2026-09-21T12:10:00Z","direction":"down","regime":"about -0.52% on day","source":"Myfxbook snapshot","freshness_minutes":5},"SP500_FUT":{"value":null,"observed_at_utc":"2026-09-21T11:30:00Z","direction":"up","regime":"roughly +0.6% to +0.7%","source":"Reuters/AP market reports","freshness_minutes":45}},"regimes":{"risk":"risk-on; US futures higher before cash open","rates":"Treasury yields easing","energy":"oil sharply lower on supply/diplomacy relief","metals":"gold lower; geopolitical premium partly compressed"}},
+  "predictions": [
+    {"instrument":"XAUUSD","relevance":"DIRECT","immediate":{"direction":"MIXED","confidence":4,"rationale":"The headline is already about 30 minutes old and gold was already lower before it; residual de-escalation edge is limited."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Without confirmed talks or a ceasefire, the geopolitical premium can rebuild quickly."},"horizons":{"15m":{"direction":"MIXED","confidence":4,"rationale":"The headline is already about 30 minutes old and gold was already lower before it; residual de-escalation edge is limited."},"1h":{"direction":"MIXED","confidence":4,"rationale":"Talks are only an option, not an agreement; lower yields offset part of the bearish safe-haven effect."},"4h":{"direction":"DOWN","confidence":5,"rationale":"If the diplomatic opening persists into the US session, some remaining geopolitical premium can bleed from gold."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"Without confirmed talks or a ceasefire, the geopolitical premium can rebuild quickly."}},"mechanism":"Diplomatic progress can reduce geopolitical safe-haven demand, but lower Treasury yields support non-yielding gold.","invalidation":"Fresh US/Iran military escalation, rising oil/VIX, or explicit rejection of talks would invalidate the 4h downside view.","counter_case":"Iran may reject the condition or fresh attacks may revive the safe-haven premium faster than diplomacy can compress it.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"unknown/soft","trend_1h":"down/soft","session_location":"European/US premarket overlap; below prior close","extension_state":"partially extended lower","market_open":true,"source":"Myfxbook plus contemporaneous market reports","observed_at_utc":"2026-09-21T12:15:30Z"}},
+    {"instrument":"SP500","relevance":"SECONDARY","immediate":{"direction":"MIXED","confidence":4,"rationale":"US futures were already higher before the headline, so much of the risk-on impulse was pre-priced."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"The benefit depends on actual Iran-US diplomatic follow-through and oil staying lower."},"horizons":{"15m":{"direction":"MIXED","confidence":4,"rationale":"US futures were already higher before the headline, so much of the risk-on impulse was pre-priced."},"1h":{"direction":"MIXED","confidence":4,"rationale":"Diplomatic language is supportive but not enough to separate from the existing oil/AI-led risk-on move."},"4h":{"direction":"UP","confidence":5,"rationale":"Sustained de-escalation language plus cheaper oil can support broad equities after cash open."},"next_session":{"direction":"MIXED","confidence":4,"rationale":"The benefit depends on actual Iran-US diplomatic follow-through and oil staying lower."}},"mechanism":"Lower geopolitical and energy risk reduces inflation/tail-risk pressure and supports broad equity risk appetite.","invalidation":"A renewed oil spike, escalation headline, or reversal in Treasury yields would weaken the 4h upside case.","counter_case":"The market may refocus on restrictive Fed policy and elevated yields once the already-priced diplomacy relief is exhausted.","technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"firm futures","trend_1h":"up futures","session_location":"US premarket; futures above Friday settlement","extension_state":"partially extended","market_open":false,"source":"Reuters/AP contemporaneous futures reports","observed_at_utc":"2026-09-21T12:15:30Z"}}
+  ]
+}
