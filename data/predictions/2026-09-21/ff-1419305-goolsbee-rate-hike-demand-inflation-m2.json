@@ -1,0 +1,128 @@
+{
+  "event_id": "ff-1419305-goolsbee-rate-hike-demand-inflation",
+  "event_cluster_id": "fed-goolsbee-2026-09-21-inflation-demand",
+  "created_at_utc": "2026-09-21T15:29:44Z",
+  "event_time_utc": "2026-09-21T14:00:00Z",
+  "published_at_utc": "2026-09-21T14:01:00Z",
+  "source_time_text": "Sep 21, 2026 3:00pm source / 3:01pm Forex Factory (BST)",
+  "observed_at_utc": "2026-09-21T15:29:44Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["Fed", "inflation", "rates", "monetary_policy"],
+  "prediction_id": "ff-1419305-goolsbee-rate-hike-demand-inflation-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 89.7,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Goolsbee says the rate hike is not simply reversing 2025 cuts, services inflation may persist, demand may be overheating, and Fed projections are insufficient if inflation is demand-driven.",
+    "market_expectations": {
+      "source": "Reuters/CME FedWatch cited by Reuters",
+      "expected_value": "Markets price 88% probability of a December Fed hike; hawkish rhetoric is therefore substantially anticipated.",
+      "implied_probability": 0.88,
+      "distribution_notes": "The incremental Goolsbee comments reinforce an already-hawkish policy path rather than create a new one."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "NO_REACTION",
+      "reason": "By 10:24 ET, after the 10:00 ET remarks, Dow +0.47%, S&P 500 +0.92%, Nasdaq +1.48%, while Treasury yields were easing.",
+      "observed_reaction": {
+        "Dow": "+0.47%",
+        "SP500": "+0.92%",
+        "NasdaqComposite": "+1.48%",
+        "US2Y": "~4.74%, lower",
+        "US10Y": "~4.97%, lower",
+        "gold": "~$4,361.96, -0.3% at 9:20 ET before the latest remarks"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "100.39, firm",
+        "US2Y": "4.74%, lower",
+        "US10Y": "4.97%, lower",
+        "VIX": "14.94 earlier/stale",
+        "WTI": "down >3%",
+        "Brent": "~101.2 earlier, down ~2.6%",
+        "equities": "S&P +0.92%, Nasdaq +1.48% at 10:24 ET",
+        "interpretation": "Dollar/gold channel is hawkish, but yields and equities reject an immediate broad risk-off response."
+      }
+    },
+    "decision_notes": "This is an incremental update in the same Goolsbee inflation-demand cluster, not a fresh independent macro shock. Leakage-safe M2 learning says 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID; 1h MIXED 1-4 is ACTIONABLE KEEP_NEUTRAL, so 1h stays MIXED."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 100.39, "observed_at_utc": "2026-09-21T14:00:00Z", "direction": "up", "regime": "firm/two-month-high area", "source": "Reuters FX report", "freshness_minutes": 90},
+      "US2Y": {"value": 4.74, "observed_at_utc": "2026-09-21T14:16:00Z", "direction": "down", "regime": "easing", "source": "WSJ market report", "freshness_minutes": 74},
+      "US10Y": {"value": 4.97, "observed_at_utc": "2026-09-21T14:16:00Z", "direction": "down", "regime": "below 5%", "source": "WSJ market report", "freshness_minutes": 74},
+      "VIX": {"value": 14.94, "observed_at_utc": "2026-09-21T09:53:00Z", "direction": "flat", "regime": "low/stale", "source": "earlier market snapshot", "freshness_minutes": 337},
+      "WTI": {"value": null, "observed_at_utc": "2026-09-21T14:24:00Z", "direction": "down", "regime": "more than -3%, 11-day low", "source": "Reuters Wall Street report", "freshness_minutes": 66},
+      "BRENT": {"value": 101.2, "observed_at_utc": "2026-09-21T12:00:00Z", "direction": "down", "regime": "about -2.6% earlier", "source": "Reuters global markets report", "freshness_minutes": 210}
+    },
+    "regimes": {
+      "US_equities": "risk-on; at 10:24 ET Dow +0.47%, S&P 500 +0.92%, Nasdaq Composite +1.48%",
+      "rates": "Treasury yields easing despite hawkish Fed rhetoric",
+      "energy": "crude down more than 3%, easing inflation impulse",
+      "gold": "spot gold about -0.3%; December hike probability reported at 88%"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "Nasdaq is already strongly higher and has absorbed the hawkish remarks without reversal."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Further Fed speakers or a yield reversal are needed for a cleaner directional edge."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "Nasdaq is already strongly higher and has absorbed the hawkish remarks without reversal."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "AI momentum and lower yields conflict with Goolsbee's inflation warning."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "A late rate repricing could hurt tech, but current cross-asset confirmation is absent."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Further Fed speakers or a yield reversal are needed for a cleaner directional edge."}
+      },
+      "mechanism": "Persistent services/demand inflation can raise expected Fed rates and discount rates; gold also faces dollar/carry pressure.",
+      "invalidation": "Continued yield declines with strong equity breadth invalidate a near-term equity bearish thesis; for gold, a weaker dollar or renewed geopolitical stress invalidates the 4h downside case.",
+      "counter_case": "Falling oil and Treasury yields may dominate the hawkish rhetoric, supporting equities and limiting gold downside.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "risk-on equities / soft gold", "trend_1h": "equities up; gold soft", "session_location": "US cash session", "extension_state": "equities extended higher; gold mildly lower", "market_open": true, "source": "Reuters/WSJ contemporaneous reports", "observed_at_utc": "2026-09-21T15:29:44Z"}
+    },
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "S&P 500 remains firmly higher after the remarks, showing no immediate bearish confirmation."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Next-session direction depends on whether rate pricing or lower-energy/risk-on forces dominate."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "S&P 500 remains firmly higher after the remarks, showing no immediate bearish confirmation."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Lower oil and yields offset the hawkish demand-inflation message."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "Risk-on breadth versus tighter-policy risk leaves the residual direction balanced."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Next-session direction depends on whether rate pricing or lower-energy/risk-on forces dominate."}
+      },
+      "mechanism": "Persistent services/demand inflation can raise expected Fed rates and discount rates; gold also faces dollar/carry pressure.",
+      "invalidation": "Continued yield declines with strong equity breadth invalidate a near-term equity bearish thesis; for gold, a weaker dollar or renewed geopolitical stress invalidates the 4h downside case.",
+      "counter_case": "Falling oil and Treasury yields may dominate the hawkish rhetoric, supporting equities and limiting gold downside.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "risk-on equities / soft gold", "trend_1h": "equities up; gold soft", "session_location": "US cash session", "extension_state": "equities extended higher; gold mildly lower", "market_open": true, "source": "Reuters/WSJ contemporaneous reports", "observed_at_utc": "2026-09-21T15:29:44Z"}
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "Headline is ~90 minutes old; gold was already soft and the residual move is unclear."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Geopolitical safe-haven demand and falling yields can offset tighter-policy pressure."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "Headline is ~90 minutes old; gold was already soft and the residual move is unclear."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Hawkish Fed/dollar pressure conflicts with easing Treasury yields; learning disfavors medium-confidence 1h directional calls."},
+        "4h": {"direction": "DOWN", "confidence": 5, "rationale": "An 88% priced December-hike probability and firm dollar can keep pressure on gold if rate expectations persist."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "Geopolitical safe-haven demand and falling yields can offset tighter-policy pressure."}
+      },
+      "mechanism": "Persistent services/demand inflation can raise expected Fed rates and discount rates; gold also faces dollar/carry pressure.",
+      "invalidation": "Continued yield declines with strong equity breadth invalidate a near-term equity bearish thesis; for gold, a weaker dollar or renewed geopolitical stress invalidates the 4h downside case.",
+      "counter_case": "Falling oil and Treasury yields may dominate the hawkish rhetoric, supporting equities and limiting gold downside.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "risk-on equities / soft gold", "trend_1h": "equities up; gold soft", "session_location": "US cash session", "extension_state": "equities extended higher; gold mildly lower", "market_open": true, "source": "Reuters/WSJ contemporaneous reports", "observed_at_utc": "2026-09-21T15:29:44Z"}
+    }
+  ]
+}
