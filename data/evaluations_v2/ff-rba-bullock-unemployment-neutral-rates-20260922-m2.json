@@ -1,0 +1,173 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-rba-bullock-unemployment-neutral-rates-20260922-m2",
+  "event_id": "ff-rba-bullock-unemployment-neutral-rates-20260922",
+  "event_time_utc": "2026-09-22T03:45:26+00:00",
+  "prediction_time_utc": "2026-09-22T04:41:26+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T04:41:26+00:00",
+  "prediction_latency_seconds": 3360.0,
+  "evaluated_at_utc": "2026-09-22T04:45:28.489964+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "RBA",
+    "inflation",
+    "rates",
+    "Australia"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 56,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Bullock says unemployment at 4.5%-5.0% could ease inflation pressure, rising global neutral rates are lifting real yields, and she is not indicating a policy shift; the board decides policy.",
+    "market_expectations": {
+      "source": "recent Australian market reporting",
+      "expected_value": "A September RBA hike is already priced at roughly 90-95%.",
+      "implied_probability": 0.95,
+      "distribution_notes": "This follow-up does not materially increase the already-high hike probability."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The RBA hike theme was already heavily priced before the follow-up; AUS200/SPI entered the session slightly higher and AUD was little changed.",
+      "observed_reaction": {
+        "SPI200": "+0.3% pre/open context",
+        "AUDUSD": "~0.7119 little changed",
+        "AU3Y": "4.97%, +3.8bp prior snapshot"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firm near seven-week high",
+        "US2Y": "little changed/easing context",
+        "US10Y": "~4.95%, lower prior session",
+        "VIX": "risk-on/low-volatility carryover; no fresh exact print",
+        "WTI": "~95.8, stabilized after sharp fall",
+        "Brent": "~100.2-100.5 after sharp fall",
+        "AUDUSD": "~0.7120 steady",
+        "AU3Y": "~4.97%, elevated",
+        "AUS200": "roughly +0.3% early context",
+        "interpretation": "Local rates remain restrictive/hawkish, but equities and AUD show no fresh risk-off confirmation and lower oil/global yields offset the rate channel."
+      }
+    },
+    "decision_notes": "Leakage-safe M2 learning: low-confidence MIXED is ACTIONABLE and strong at 15m/1h; 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID. This supports staying neutral rather than forcing a directional call."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.39,
+        "observed_at_utc": "2026-09-22T04:41:26Z",
+        "direction": "firm",
+        "source": "Reuters/market context",
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.75,
+        "observed_at_utc": "2026-09-22T04:41:26Z",
+        "direction": "flat",
+        "source": "WSJ context",
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "value": 4.9531,
+        "observed_at_utc": "2026-09-22T04:41:26Z",
+        "direction": "down",
+        "source": "Perpetual CT Markets",
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-22T04:41:26Z",
+        "direction": "down/risk-on",
+        "source": "market context",
+        "regime": "UNKNOWN"
+      },
+      "WTI": {
+        "value": 95.8,
+        "observed_at_utc": "2026-09-22T04:41:26Z",
+        "direction": "slightly up",
+        "source": "WSJ",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 100.22,
+        "observed_at_utc": "2026-09-22T04:41:26Z",
+        "direction": "stable",
+        "source": "Reuters",
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "FALLING",
+      "VIX": "UNKNOWN",
+      "WTI": "RISING",
+      "BRENT": "FLAT"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-rba-bullock-unemployment-neutral-rates-20260922-m2",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8750.099609375,
+      "reference_price_time_utc": "2026-09-22T04:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T04:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 15.433,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T04:56:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T05:41:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T08:41:26+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
