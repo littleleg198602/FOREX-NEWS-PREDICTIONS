@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-21T23:22:08+00:00",
   "evaluation_anchor_time_utc": "2026-09-21T23:22:08+00:00",
   "prediction_latency_seconds": 7028.0,
-  "evaluated_at_utc": "2026-09-21T23:28:18.527504+00:00",
+  "evaluated_at_utc": "2026-09-22T01:49:03.810687+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -54,9 +54,9 @@
         "source": "yahoo",
         "interval": "1m",
         "value": 101.8984375,
-        "timestamp_utc": "2026-09-21T23:19:00+00:00",
-        "available_at_utc": "2026-09-21T23:19:00+00:00",
-        "age_minutes": 3.13,
+        "timestamp_utc": "2026-09-21T23:22:00+00:00",
+        "available_at_utc": "2026-09-21T23:22:00+00:00",
+        "age_minutes": 0.13,
         "fresh": true,
         "max_staleness_minutes": 180.0,
         "proxy_for": "US 2Y Treasury yield",
@@ -73,20 +73,20 @@
         "symbol": "ZN=F",
         "source": "yahoo",
         "interval": "1m",
-        "value": 106.125,
-        "timestamp_utc": "2026-09-21T23:19:00+00:00",
-        "available_at_utc": "2026-09-21T23:19:00+00:00",
-        "age_minutes": 3.13,
+        "value": 106.109375,
+        "timestamp_utc": "2026-09-21T23:22:00+00:00",
+        "available_at_utc": "2026-09-21T23:22:00+00:00",
+        "age_minutes": 0.13,
         "fresh": true,
         "max_staleness_minutes": 180.0,
         "proxy_for": "US 10Y Treasury yield",
         "inverse_to_role": true,
         "trend_metric": "pct",
-        "change_pct_60m": -0.014725,
-        "change_pct_240m": -0.07367,
-        "change_abs_60m": -0.015625,
-        "raw_change_pct_60m": 0.014725,
-        "raw_change_abs_60m": 0.015625,
+        "change_pct_60m": -0.0,
+        "change_pct_240m": -0.058936,
+        "change_abs_60m": -0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
         "regime": "FLAT"
       },
       "VIX": {
@@ -113,40 +113,40 @@
         "symbol": "CL=F",
         "source": "yahoo",
         "interval": "1m",
-        "value": 92.12000274658203,
-        "timestamp_utc": "2026-09-21T23:18:00+00:00",
-        "available_at_utc": "2026-09-21T23:18:00+00:00",
-        "age_minutes": 4.13,
+        "value": 92.19000244140625,
+        "timestamp_utc": "2026-09-21T23:22:00+00:00",
+        "available_at_utc": "2026-09-21T23:22:00+00:00",
+        "age_minutes": 0.13,
         "fresh": true,
         "max_staleness_minutes": 180.0,
         "proxy_for": null,
         "inverse_to_role": false,
         "trend_metric": null,
-        "change_pct_60m": 0.217585,
-        "change_pct_240m": -0.389274,
-        "change_abs_60m": 0.200005,
-        "raw_change_pct_60m": 0.217585,
-        "raw_change_abs_60m": 0.200005,
+        "change_pct_60m": 0.293738,
+        "change_pct_240m": -0.313582,
+        "change_abs_60m": 0.270004,
+        "raw_change_pct_60m": 0.293738,
+        "raw_change_abs_60m": 0.270004,
         "regime": "FLAT"
       },
       "BRENT": {
         "symbol": "BZ=F",
         "source": "yahoo",
         "interval": "1m",
-        "value": 96.16000366210938,
-        "timestamp_utc": "2026-09-21T23:15:00+00:00",
-        "available_at_utc": "2026-09-21T23:15:00+00:00",
-        "age_minutes": 7.13,
+        "value": 96.20999908447266,
+        "timestamp_utc": "2026-09-21T23:22:00+00:00",
+        "available_at_utc": "2026-09-21T23:22:00+00:00",
+        "age_minutes": 0.13,
         "fresh": true,
         "max_staleness_minutes": 180.0,
         "proxy_for": null,
         "inverse_to_role": false,
         "trend_metric": null,
-        "change_pct_60m": 0.302494,
-        "change_pct_240m": -0.331675,
-        "change_abs_60m": 0.290001,
-        "raw_change_pct_60m": 0.302494,
-        "raw_change_abs_60m": 0.290001,
+        "change_pct_60m": 0.354643,
+        "change_pct_240m": -0.279855,
+        "change_abs_60m": 0.339996,
+        "raw_change_pct_60m": 0.354643,
+        "raw_change_abs_60m": 0.339996,
         "regime": "FLAT"
       }
     },
@@ -179,16 +179,20 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-21T23:37:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.133
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-22T00:22:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.133
         },
         "4h": {
           "status": "PENDING",
@@ -223,16 +227,20 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-21T23:37:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 441.133
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-22T00:22:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 441.133
         },
         "4h": {
           "status": "PENDING",
@@ -267,16 +275,20 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-21T23:37:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.133
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-22T00:22:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.133
         },
         "4h": {
           "status": "PENDING",
@@ -311,16 +323,20 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-21T23:37:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.133
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-22T00:22:08+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 472.133
         },
         "4h": {
           "status": "PENDING",

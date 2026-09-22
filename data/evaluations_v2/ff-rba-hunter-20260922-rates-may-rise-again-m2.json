@@ -1,0 +1,178 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-rba-hunter-20260922-rates-may-rise-again-m2",
+  "event_id": "ff-rba-hunter-20260922-rates-may-rise-again",
+  "event_time_utc": "2026-09-21T23:39:00+00:00",
+  "prediction_time_utc": "2026-09-22T01:44:10+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T01:44:10+00:00",
+  "prediction_latency_seconds": 7510.0,
+  "evaluated_at_utc": "2026-09-22T01:49:06.318522+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "RBA",
+    "inflation",
+    "rates",
+    "Australia"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 125.2,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "RBA Assistant Governor Sarah Hunter says upside inflation risks could require another hike, but the podcast was recorded on Sep 7 and markets now price about a 95% chance of a Sep 29 hike, making this mainly confirmation.",
+    "market_expectations": {
+      "source": "contemporaneous market reporting",
+      "expected_value": "~95% probability of 25bp hike to 4.60% on Sep 29; peak around 4.85% early 2027",
+      "implied_probability": 0.95,
+      "distribution_notes": "Hawkish RBA path is already heavily priced."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The content was recorded Sep 7 and repeats the existing hawkish RBA message. After publication, AUS200 was about +0.1% near 8738, so no clean bearish residual reaction appeared.",
+      "observed_reaction": {
+        "AUS200": "~8738, +0.1% around 11:30 AEST",
+        "AUDUSD": "~0.7110-0.7120, narrow range",
+        "rate_hike_pricing": "~95% Sep 29 hike"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firm/steady after hawkish Fed",
+        "US2Y": "~4.751%, little changed",
+        "US10Y": "~4.962%, slightly lower",
+        "VIX": "low/risk-on into US close; exact fresh value unavailable",
+        "WTI": "~95 area after sharp prior-session fall",
+        "Brent": "~99-100 after sharp prior-session fall",
+        "AUDUSD": "~0.7110-0.7120, narrow",
+        "AUS200": "~+0.1% after open",
+        "interpretation": "RBA hawkishness is confirmed by rate pricing, but cheaper oil, strong US equities and a non-negative AUS200 reaction oppose a fresh equity short."
+      }
+    },
+    "decision_notes": "Residual forecast from 01:44 UTC. Learning profile M2 mixed_neutral confidence 1-4 is ACTIONABLE/BOOST_CONFIDENCE at 15m and 1h; therefore no forced directional call against the observed absorption."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-22T00:30:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "WSJ/market close context",
+        "freshness_minutes": 74
+      },
+      "US2Y": {
+        "value": 4.751,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "WSJ",
+        "freshness_minutes": 344
+      },
+      "US10Y": {
+        "value": 4.962,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 344
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "down",
+        "regime": "UNKNOWN",
+        "source": "US market close context",
+        "freshness_minutes": 344
+      },
+      "WTI": {
+        "value": 95.15,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Barrons",
+        "freshness_minutes": 344
+      },
+      "BRENT": {
+        "value": 99.34,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Barrons",
+        "freshness_minutes": 344
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "FALLING",
+      "VIX": "UNKNOWN",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-rba-hunter-20260922-rates-may-rise-again-m2",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8737.900390625,
+      "reference_price_time_utc": "2026-09-22T01:29:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T01:28:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 15.167,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T01:59:10+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T02:44:10+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T05:44:10+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

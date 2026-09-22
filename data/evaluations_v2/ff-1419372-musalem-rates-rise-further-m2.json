@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-21T19:53:20+00:00",
   "evaluation_anchor_time_utc": "2026-09-21T19:53:20+00:00",
   "prediction_latency_seconds": 5600.0,
-  "evaluated_at_utc": "2026-09-21T23:19:31.195755+00:00",
+  "evaluated_at_utc": "2026-09-22T01:49:02.197734+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -191,10 +191,11 @@
           "neutral_envelope_pct": 0.286413
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-21T23:53:20+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
@@ -250,10 +251,11 @@
           "reason": "no complete traded bar available at/after target"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-21T23:53:20+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
@@ -322,14 +324,29 @@
           "neutral_envelope_pct": 0.262318
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-21T23:53:20+00:00",
+          "actual_price_time_utc": "2026-09-21T23:54:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-21T23:53:00+00:00",
+          "market_delay_minutes": 0.67,
+          "price": 4403.7001953125,
+          "change_pct": 0.449366,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.456204,
+          "post_event_range_pct": 0.713967,
+          "mfe_pct": 0.152833,
+          "mae_pct": -0.561134,
+          "directional_threshold_pct": 0.04562,
+          "actual_direction_thresholded": "UP"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-22",
           "predicted_direction": "DOWN",
           "forecast_source": "horizons"
         }
