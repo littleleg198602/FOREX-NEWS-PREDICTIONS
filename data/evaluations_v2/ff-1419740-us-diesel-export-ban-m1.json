@@ -1,0 +1,296 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419740-us-diesel-export-ban-m1",
+  "event_id": "ff-1419740-us-diesel-export-ban",
+  "event_time_utc": "2026-09-22T16:51:00+00:00",
+  "prediction_time_utc": "2026-09-22T18:43:19+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T18:43:19+00:00",
+  "prediction_latency_seconds": 6739.0,
+  "evaluated_at_utc": "2026-09-22T18:49:08.277289+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "US_policy",
+    "energy",
+    "diesel",
+    "inflation"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-22T18:43:19+00:00",
+    "captured_for_event_time_utc": "2026-09-22T18:43:19+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.60800170898438,
+        "timestamp_utc": "2026-09-22T18:40:00+00:00",
+        "available_at_utc": "2026-09-22T18:40:00+00:00",
+        "age_minutes": 3.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.061584,
+        "change_pct_240m": 0.036792,
+        "change_abs_60m": -0.061996,
+        "raw_change_pct_60m": -0.061584,
+        "raw_change_abs_60m": -0.061996,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.87890625,
+        "timestamp_utc": "2026-09-22T18:40:00+00:00",
+        "available_at_utc": "2026-09-22T18:40:00+00:00",
+        "age_minutes": 3.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.015339,
+        "change_pct_240m": 0.003834,
+        "change_abs_60m": -0.015625,
+        "raw_change_pct_60m": 0.015339,
+        "raw_change_abs_60m": 0.015625,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 4.965000152587891,
+        "timestamp_utc": "2026-09-22T18:35:00+00:00",
+        "available_at_utc": "2026-09-22T18:35:00+00:00",
+        "age_minutes": 8.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": -0.221055,
+        "change_pct_240m": 0.040295,
+        "change_abs_60m": -0.011,
+        "raw_change_pct_60m": -0.221055,
+        "raw_change_abs_60m": -0.011,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 14.270000457763672,
+        "timestamp_utc": "2026-09-22T18:35:00+00:00",
+        "available_at_utc": "2026-09-22T18:35:00+00:00",
+        "age_minutes": 8.32,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.210679,
+        "change_pct_240m": -1.45027,
+        "change_abs_60m": 0.030001,
+        "raw_change_pct_60m": 0.210679,
+        "raw_change_abs_60m": 0.030001,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 90.55000305175781,
+        "timestamp_utc": "2026-09-22T18:40:00+00:00",
+        "available_at_utc": "2026-09-22T18:40:00+00:00",
+        "age_minutes": 3.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.319235,
+        "change_pct_240m": -1.340157,
+        "change_abs_60m": -0.289993,
+        "raw_change_pct_60m": -0.319235,
+        "raw_change_abs_60m": -0.289993,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 99.30999755859375,
+        "timestamp_utc": "2026-09-22T18:40:00+00:00",
+        "available_at_utc": "2026-09-22T18:40:00+00:00",
+        "age_minutes": 3.32,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.361193,
+        "change_pct_240m": -1.292121,
+        "change_abs_60m": -0.360001,
+        "raw_change_pct_60m": -0.361193,
+        "raw_change_abs_60m": -0.360001,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419740-us-diesel-export-ban-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7770.9599609375,
+      "reference_price_time_utc": "2026-09-22T18:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T18:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:58:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T19:43:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T22:43:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419740-us-diesel-export-ban-m1",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51880.19921875,
+      "reference_price_time_utc": "2026-09-22T18:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T18:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:58:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T19:43:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T22:43:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419740-us-diesel-export-ban-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30686.37109375,
+      "reference_price_time_utc": "2026-09-22T18:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T18:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:58:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T19:43:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T22:43:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

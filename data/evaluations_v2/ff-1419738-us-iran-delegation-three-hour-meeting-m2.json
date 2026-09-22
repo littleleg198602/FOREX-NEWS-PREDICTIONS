@@ -1,0 +1,269 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419738-us-iran-delegation-three-hour-meeting-m2",
+  "event_id": "ff-1419738-us-iran-delegation-three-hour-meeting",
+  "event_time_utc": "2026-09-22T17:53:00+00:00",
+  "prediction_time_utc": "2026-09-22T18:43:19+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T18:43:19+00:00",
+  "prediction_latency_seconds": 3019.0,
+  "evaluated_at_utc": "2026-09-22T18:49:06.943882+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "Iran",
+    "US",
+    "diplomacy",
+    "energy"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 50.3,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Trump said US officials met an Iranian delegation for three hours, upgrading the diplomacy cluster from possible talks to reported direct engagement.",
+    "market_expectations": {
+      "source": "same-day diplomacy coverage",
+      "expected_value": "Markets had priced de-escalation hopes; a completed meeting is more concrete but lacks an announced agreement.",
+      "implied_probability": null,
+      "distribution_notes": "Incrementally lowers escalation risk; outcome remains unknown."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Oil and equities had already moved strongly on prior diplomacy hopes.",
+      "observed_reaction": {
+        "SP500": "strong near highs",
+        "NDX": "strong near records",
+        "WTI": "~92.78",
+        "Brent": "~96.98",
+        "gold": "weak",
+        "VIX": "low"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "firm",
+        "US2Y": "lower",
+        "US10Y": "lower",
+        "VIX": "low",
+        "WTI": "low",
+        "Brent": "below $100",
+        "equities": "strong",
+        "gold": "weak"
+      }
+    },
+    "decision_notes": "Continuation of Iran-US diplomacy cluster; residual forecast only. Learning profile empty."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.44,
+        "observed_at_utc": "2026-09-22T18:35:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "contemporaneous market reporting",
+        "freshness_minutes": 8
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T18:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Treasury market reporting",
+        "freshness_minutes": 13
+      },
+      "US10Y": {
+        "value": 4.935,
+        "observed_at_utc": "2026-09-22T18:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Treasury market reporting",
+        "freshness_minutes": 13
+      },
+      "VIX": {
+        "value": 14.87,
+        "observed_at_utc": "2026-09-22T18:30:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "market snapshot",
+        "freshness_minutes": 13
+      },
+      "WTI": {
+        "value": 92.78,
+        "observed_at_utc": "2026-09-22T18:35:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "delayed futures feed",
+        "freshness_minutes": 8
+      },
+      "BRENT": {
+        "value": 96.98,
+        "observed_at_utc": "2026-09-22T18:35:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "market snapshot",
+        "freshness_minutes": 8
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419738-us-iran-delegation-three-hour-meeting-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7770.9599609375,
+      "reference_price_time_utc": "2026-09-22T18:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T18:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:58:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T19:43:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T22:43:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419738-us-iran-delegation-three-hour-meeting-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30686.37109375,
+      "reference_price_time_utc": "2026-09-22T18:43:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T18:42:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:58:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T19:43:19+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T22:43:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419738-us-iran-delegation-three-hour-meeting-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4389.0,
+      "reference_price_time_utc": "2026-09-22T18:40:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T18:39:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:58:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T19:43:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T22:43:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
