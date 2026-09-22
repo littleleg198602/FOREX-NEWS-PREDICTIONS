@@ -1,0 +1,269 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419726-fed-barkin-why-hike-m2",
+  "event_id": "ff-1419726-fed-barkin-why-hike",
+  "event_time_utc": "2026-09-22T15:51:00+00:00",
+  "prediction_time_utc": "2026-09-22T17:50:38+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T17:50:38+00:00",
+  "prediction_latency_seconds": 7178.0,
+  "evaluated_at_utc": "2026-09-22T17:56:06.382980+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Fed",
+    "inflation",
+    "rates",
+    "monetary_policy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 118.6,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Richmond Fed President Tom Barkin says the Fed hiked because inflation risks outweigh employment risks, economic conditions are firming, and tariff/energy shocks are not fading.",
+    "market_expectations": {
+      "source": "Reuters contemporaneous pricing",
+      "expected_value": "Another Fed hike remained a live scenario; Barkin reinforces rather than originates the hawkish regime.",
+      "implied_probability": 0.531,
+      "distribution_notes": "Reuters reported about 53.1% odds of another hike at the next meeting."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Nearly two hours elapsed. Nasdaq stayed near record highs and Treasury yields fell with oil, while gold/dollar reflected more of the hawkish message.",
+      "observed_reaction": {
+        "Nasdaq": "intraday record area",
+        "US10Y": "~4.932%, lower",
+        "DXY": "~100.48, firm",
+        "Brent": "~99.92, lower",
+        "WTI": "~95.33, lower",
+        "gold": "down about 0.4% on the day"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firm",
+        "US2Y": "lower/easing",
+        "US10Y": "~4.932%, lower",
+        "VIX": "no broad risk-off confirmation",
+        "WTI": "~95.33, down",
+        "Brent": "~99.92, down",
+        "equities": "Nasdaq record-area strength",
+        "gold": "lower",
+        "interpretation": "Dollar/gold confirm hawkishness, but yields, oil and tech equities reject an immediate broad risk-off call."
+      }
+    },
+    "decision_notes": "Residual forecast from decision time; learning_profile.json is empty, so no learning adjustment applied."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.48,
+        "observed_at_utc": "2026-09-22T17:30:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Reuters Sep 22",
+        "freshness_minutes": 21
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-22T17:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters/market coverage",
+        "freshness_minutes": 21
+      },
+      "US10Y": {
+        "value": 4.932,
+        "observed_at_utc": "2026-09-22T17:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "MarketWatch",
+        "freshness_minutes": 21
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-22T17:30:00Z",
+        "direction": "flat",
+        "regime": "HIGH",
+        "source": "US market coverage",
+        "freshness_minutes": 21
+      },
+      "WTI": {
+        "value": 95.33,
+        "observed_at_utc": "2026-09-22T17:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters global markets",
+        "freshness_minutes": 21
+      },
+      "BRENT": {
+        "value": 99.92,
+        "observed_at_utc": "2026-09-22T17:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Reuters global markets",
+        "freshness_minutes": 21
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "HIGH",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419726-fed-barkin-why-hike-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30644.666015625,
+      "reference_price_time_utc": "2026-09-22T17:50:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T17:49:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.633,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:05:38+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:50:38+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:50:38+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419726-fed-barkin-why-hike-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7764.58984375,
+      "reference_price_time_utc": "2026-09-22T17:50:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T17:49:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.633,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:05:38+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:50:38+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:50:38+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419726-fed-barkin-why-hike-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4376.60009765625,
+      "reference_price_time_utc": "2026-09-22T17:47:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T17:46:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.633,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:05:38+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:50:38+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:50:38+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
