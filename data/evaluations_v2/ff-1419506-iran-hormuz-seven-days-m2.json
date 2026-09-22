@@ -1,0 +1,271 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419506-iran-hormuz-seven-days-m2",
+  "event_id": "ff-1419506-iran-hormuz-seven-days",
+  "event_time_utc": "2026-09-22T08:42:00+00:00",
+  "prediction_time_utc": "2026-09-22T11:26:31+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T11:26:31+00:00",
+  "prediction_latency_seconds": 9871.0,
+  "evaluated_at_utc": "2026-09-22T11:30:33.889163+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "Iran",
+    "US",
+    "Hormuz",
+    "energy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 164.5,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Iran says it can reopen the Strait of Hormuz within seven days if the US eases military pressure and lifts its blockade, creating a concrete but conditional de-escalation path.",
+    "market_expectations": {
+      "source": "Reuters/WSJ contemporaneous coverage",
+      "expected_value": "Markets already carried diplomacy hopes, but a seven-day conditional reopening proposal is more concrete and pushed crude sharply lower.",
+      "implied_probability": null,
+      "distribution_notes": "No agreement is signed; US acceptance is required."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "By decision time crude had fallen materially below $100, Treasury yields had eased and equity futures/European shares were firmer; gold was lower.",
+      "observed_reaction": {
+        "Brent": "~$98.50 to $97.76, roughly -2% to -2.6%",
+        "WTI": "~$92.78 to $93.20, roughly -2.7% to -3.1%",
+        "US10Y": "~4.928%-4.932%, lower",
+        "US2Y": "~4.714%",
+        "gold": "~$4,327.74, -0.4%",
+        "European_equities": "modestly higher",
+        "US_futures": "firmer/steady"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "~100.37, firm",
+        "US2Y": "~4.714%",
+        "US10Y": "~4.928%, lower",
+        "VIX": "risk-on/low; exact fresh print unavailable",
+        "WTI": "~$93, sharply lower",
+        "Brent": "~$98, sharply lower",
+        "gold": "~$4,327.7, lower",
+        "equities": "European shares modestly higher; US futures supported",
+        "interpretation": "Oil, yields, equities and gold broadly confirm a de-escalation impulse, though the dollar remains firm."
+      }
+    },
+    "decision_notes": "Residual forecast ~164 minutes after derived FF publication time. Headline reaction is already substantially absorbed. learning_profile.json is empty, so no learning adjustment is applied."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.37,
+        "observed_at_utc": "2026-09-22T10:50:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "market brief",
+        "freshness_minutes": 36
+      },
+      "US2Y": {
+        "value": 4.714,
+        "observed_at_utc": "2026-09-22T11:00:00Z",
+        "direction": "down",
+        "regime": "FLAT",
+        "source": "Barron's",
+        "freshness_minutes": 26
+      },
+      "US10Y": {
+        "value": 4.928,
+        "observed_at_utc": "2026-09-22T11:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Barron's",
+        "freshness_minutes": 26
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-22T11:00:00Z",
+        "direction": "down",
+        "regime": "UNKNOWN",
+        "source": "market coverage",
+        "freshness_minutes": 26
+      },
+      "WTI": {
+        "value": 93.2,
+        "observed_at_utc": "2026-09-22T11:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 26
+      },
+      "BRENT": {
+        "value": 97.76,
+        "observed_at_utc": "2026-09-22T11:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ",
+        "freshness_minutes": 26
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "FALLING",
+      "VIX": "UNKNOWN",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419506-iran-hormuz-seven-days-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7764.7,
+      "reference_price_time_utc": "2026-09-21T20:52:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T20:51:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 874.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T11:41:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T12:26:31+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T15:26:31+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419506-iran-hormuz-seven-days-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6340.7001953125,
+      "reference_price_time_utc": "2026-09-22T11:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T11:15:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T11:41:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T12:26:31+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T15:26:31+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419506-iran-hormuz-seven-days-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4349.7998046875,
+      "reference_price_time_utc": "2026-09-22T11:21:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T11:20:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T11:41:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T12:26:31+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T15:26:31+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
