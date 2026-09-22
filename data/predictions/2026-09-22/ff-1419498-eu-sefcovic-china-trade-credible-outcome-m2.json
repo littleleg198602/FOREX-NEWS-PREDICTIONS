@@ -1,0 +1,80 @@
+{
+  "event_id": "ff-1419498-eu-sefcovic-china-trade-credible-outcome",
+  "event_cluster_id": "eu-china-trade-rare-earths-2026",
+  "created_at_utc": "2026-09-22T08:13:40Z",
+  "event_time_utc": "2026-09-22T08:01:00Z",
+  "published_at_utc": "2026-09-22T08:01:00Z",
+  "source_time_text": "12 min ago",
+  "observed_at_utc": "2026-09-22T08:13:05Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "source_url": "https://www.forexfactory.com/news/1419498-eus-sefcovic-credible-outcome-in-trade-talks-with",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["trade", "EU", "China", "rare_earths"],
+  "prediction_id": "ff-1419498-eu-sefcovic-china-trade-credible-outcome-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 12.1,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "EU trade commissioner Sefcovic described a credible outcome in China talks, with European market access and rare-earth export controls under discussion ahead of an Oct. 8-9 China visit.",
+    "market_expectations": {"source":"contemporaneous European market coverage","expected_value":"Markets already carried optimism around major-power trade talks; this EU-China update improves tone but contains no signed agreement.","implied_probability":null,"distribution_notes":"Positive dialogue is incremental; implementation and rare-earth concessions remain unresolved."},
+    "surprise": null,
+    "absorption": {"state":"PARTIALLY_PRICED","reason":"European markets were already trading with a constructive global risk backdrop; STOXX 600 was only modestly positive and DAX slightly negative, so the headline has not produced a clear index-level breakout.","observed_reaction":{"STOXX600":"about +0.2% around the open","DAX":"about -0.1% around the open","CAC40":"about +0.05%","IBEX35":"roughly flat"}},
+    "cross_asset_confirmation": {"verdict":"NEUTRAL","observations":{"DXY":"100.4242, firm","US2Y":"4.7376%, slightly lower","US10Y":"4.9449%, lower","VIX":"14.87, low","WTI":"96.85, rebounding","Brent":"101.74, rebounding","Europe":"mixed/flat opening","interpretation":"Low volatility and lower yields are supportive, but European index price action does not yet confirm a trade-headline breakout."}},
+    "decision_notes": "Fresh Forex Factory item observed as '12 min ago'; publication time derived from observed age with ±120s uncertainty. Empty leakage-safe learning_profile.json means no learning adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY":{"value":100.4242,"observed_at_utc":"2026-09-22T07:50:00Z","direction":"up","regime":"firm on Fed hike expectations","source":"Sep 22 macro market snapshot","freshness_minutes":24},
+      "US2Y":{"value":4.7376,"observed_at_utc":"2026-09-22T07:50:00Z","direction":"down","regime":"slightly lower from prior session","source":"Sep 22 macro market snapshot","freshness_minutes":24},
+      "US10Y":{"value":4.9449,"observed_at_utc":"2026-09-22T07:50:00Z","direction":"down","regime":"lower after prior risk-on session","source":"Sep 22 macro market snapshot","freshness_minutes":24},
+      "VIX":{"value":14.87,"observed_at_utc":"2026-09-22T07:50:00Z","direction":"flat","regime":"low-volatility risk-on","source":"Sep 22 macro market snapshot","freshness_minutes":24},
+      "WTI":{"value":96.85,"observed_at_utc":"2026-09-22T07:30:00Z","direction":"up","regime":"rebound after multi-session decline","source":"European morning briefing Sep 22","freshness_minutes":44},
+      "BRENT":{"value":101.74,"observed_at_utc":"2026-09-22T07:30:00Z","direction":"up","regime":"rebound after multi-session decline","source":"European morning briefing Sep 22","freshness_minutes":44},
+      "STOXX50":{"value":null,"observed_at_utc":"2026-09-22T08:10:00Z","direction":"flat_to_up","regime":"Europe opened muted after Monday rally","source":"Reuters/WSJ Europe open Sep 22","freshness_minutes":4},
+      "GDAXI":{"value":null,"observed_at_utc":"2026-09-22T08:10:00Z","direction":"slightly_down","regime":"DAX about -0.1% at European open","source":"WSJ Europe open Sep 22","freshness_minutes":4}
+    },
+    "regimes":{"risk":"low VIX and strong prior US/Asian tech rally, but Europe opened muted","energy":"oil rebounding after several days of declines","rates":"US Treasury yields lower from prior session","dollar":"firm","europe":"STOXX 600 roughly flat/+0.2%; DAX slightly lower; trade headlines not producing an obvious broad breakout"}
+  },
+  "predictions": [
+    {
+      "instrument":"STOXX50","relevance":"DIRECT",
+      "immediate":{"direction":"MIXED","confidence":4,"rationale":"The constructive headline is fresh but Europe was already open and broad indices show no clear breakout; residual impact is likely small."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"The October visit is still ahead and no binding agreement was announced, so the benefit may fade without concrete measures."},
+      "horizons":{
+        "15m":{"direction":"MIXED","confidence":4,"rationale":"The constructive headline is fresh but Europe was already open and broad indices show no clear breakout; residual impact is likely small."},
+        "1h":{"direction":"UP","confidence":5,"rationale":"Improved EU-China market-access prospects and rare-earth dialogue modestly reduce trade-risk premium."},
+        "4h":{"direction":"UP","confidence":5,"rationale":"If constructive trade messaging persists, exporters and cyclicals can support the euro-area benchmark."},
+        "next_session":{"direction":"MIXED","confidence":4,"rationale":"The October visit is still ahead and no binding agreement was announced, so the benefit may fade without concrete measures."}
+      },
+      "mechanism":"Lower EU-China trade-friction risk can support exporters, industrials and cyclicals across the euro area.",
+      "invalidation":"A reversal in EU-China rhetoric, new export restrictions, or a broad European risk-off break would invalidate the 1h/4h upside view.",
+      "counter_case":"The comments may be diplomatic signaling without concrete concessions; oil's rebound and unresolved rare-earth restrictions can dominate and keep the index flat or lower.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"mixed/flat","trend_1h":"slightly positive broad Europe","session_location":"early European cash session","extension_state":"range after prior-session rally","market_open":true,"source":"Reuters/WSJ European open Sep 22","observed_at_utc":"2026-09-22T08:13:40Z"}
+    },
+    {
+      "instrument":"GDAXI","relevance":"DIRECT",
+      "immediate":{"direction":"MIXED","confidence":4,"rationale":"DAX was slightly lower around the European open despite the constructive backdrop, so immediate confirmation is weak."},
+      "next_session":{"direction":"MIXED","confidence":4,"rationale":"No signed deal exists and trade disputes remain unresolved, limiting confidence beyond the current session."},
+      "horizons":{
+        "15m":{"direction":"MIXED","confidence":4,"rationale":"DAX was slightly lower around the European open despite the constructive backdrop, so immediate confirmation is weak."},
+        "1h":{"direction":"UP","confidence":5,"rationale":"Germany has relatively direct China/export exposure, making credible market-access and rare-earth talks mildly supportive."},
+        "4h":{"direction":"UP","confidence":5,"rationale":"A lower perceived EU-China trade-friction risk can help autos and industrials if price action confirms."},
+        "next_session":{"direction":"MIXED","confidence":4,"rationale":"No signed deal exists and trade disputes remain unresolved, limiting confidence beyond the current session."}
+      },
+      "mechanism":"German autos and industrial exporters have material China exposure and benefit from lower market-access and rare-earth supply risk.",
+      "invalidation":"Continued DAX weakness despite stable broader Europe, or renewed EU-China restrictions, would invalidate the 1h/4h upside view.",
+      "counter_case":"German autos remain exposed to Chinese competition and trade disputes; a diplomatic headline without binding measures may not offset those structural pressures.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"slightly down/uncertain","trend_1h":"slightly down at open","session_location":"early European cash session","extension_state":"range/rejection after prior-session gain","market_open":true,"source":"WSJ European open Sep 22","observed_at_utc":"2026-09-22T08:13:40Z"}
+    }
+  ]
+}
