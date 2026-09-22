@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T03:53:19+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T03:53:19+00:00",
   "prediction_latency_seconds": 2719.0,
-  "evaluated_at_utc": "2026-09-22T05:00:46.599297+00:00",
+  "evaluated_at_utc": "2026-09-22T06:58:35.997336+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -201,11 +201,25 @@
           "actual_direction_thresholded": "DOWN"
         },
         "1h": {
-          "status": "DATA_GAP",
+          "status": "DONE",
           "target_time_utc": "2026-09-22T04:53:19+00:00",
+          "actual_price_time_utc": "2026-09-22T04:54:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-22T04:53:00+00:00",
+          "market_delay_minutes": 0.68,
+          "price": 8755.7001953125,
+          "change_pct": 0.101756,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
           "predicted_confidence": 6,
-          "reason": "no complete traded bar available at/after target"
+          "forecast_source": "legacy_fallback",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.179485,
+          "post_event_range_pct": 0.177208,
+          "mfe_pct": 0.041153,
+          "mae_pct": -0.136054,
+          "directional_threshold_pct": 0.017949,
+          "actual_direction_thresholded": "UP"
         },
         "4h": {
           "status": "PENDING",

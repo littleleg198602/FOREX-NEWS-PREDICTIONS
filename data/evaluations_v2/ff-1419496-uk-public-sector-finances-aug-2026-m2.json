@@ -1,0 +1,189 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419496-uk-public-sector-finances-aug-2026-m2",
+  "event_id": "ff-1419496-uk-public-sector-finances-aug-2026",
+  "event_time_utc": "2026-09-22T06:01:00+00:00",
+  "prediction_time_utc": "2026-09-22T06:54:45+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T06:54:45+00:00",
+  "prediction_latency_seconds": 3225.0,
+  "evaluated_at_utc": "2026-09-22T06:58:37.117521+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "UK",
+    "public_finances",
+    "fiscal_policy",
+    "data_release"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 53.75,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "August UK public-sector borrowing was £18.3bn, above the £15.5bn Reuters consensus and above every economist forecast, leaving April-August borrowing £8.1bn above the OBR path ahead of the October budget.",
+    "market_expectations": {
+      "source": "Reuters poll / OBR",
+      "expected_value": "£15.5bn Reuters consensus; £14.8bn OBR monthly forecast",
+      "implied_probability": null,
+      "distribution_notes": "Actual £18.3bn exceeded all Reuters-polled forecasts; year-to-date £77.3bn is £8.1bn above OBR projection."
+    },
+    "surprise": {
+      "actual": "£18.3bn",
+      "consensus": "£15.5bn",
+      "previous": "£23.3bn prior calendar reference",
+      "revised_previous": null,
+      "surprise_direction": "worse fiscal deficit than expected",
+      "components": {
+        "year_on_year": "£2.9bn more borrowing than Aug 2025",
+        "financial_year_to_date": "£77.3bn",
+        "vs_OBR_ytd": "+£8.1bn",
+        "current_budget_deficit": "£51.9bn vs OBR £47.1bn"
+      }
+    },
+    "absorption": {
+      "state": "UNKNOWN",
+      "reason": "Release occurred before the London cash open. UK100 has no valid post-event cash-index reaction yet; GBP remained in a narrow range.",
+      "observed_reaction": {
+        "GBPUSD": "about 1.3373, narrow 1.3362-1.3376 day range",
+        "UK100": "cash market closed at decision time"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "NEUTRAL",
+      "observations": {
+        "DXY": "100.41, flat/firm",
+        "US2Y": "4.775%, +2.2bp",
+        "US10Y": "4.982%, +1.9bp",
+        "VIX": "14.87 prior close; stale",
+        "WTI": "93.73, +1.47%",
+        "Brent": "102.12, +1.77%",
+        "GBPUSD": "~1.3373, no disorderly fiscal selloff",
+        "UK10Y": "latest available prior close 5.2065%; no reliable post-release live gilt print before decision",
+        "interpretation": "The fiscal data is clearly worse than expected, but pre-open local market confirmation is absent and GBP is stable."
+      }
+    },
+    "decision_notes": "Fixed 15m/1h horizons are not substituted with the later London open. learning_profile.json is currently empty, so no M2 learning adjustment is applied."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.41,
+        "observed_at_utc": "2026-09-22T06:04:28Z",
+        "direction": "flat",
+        "regime": "FLAT",
+        "source": "Investing.com",
+        "freshness_minutes": 50
+      },
+      "US2Y": {
+        "value": 4.775,
+        "observed_at_utc": "2026-09-22T06:38:37Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com",
+        "freshness_minutes": 16
+      },
+      "US10Y": {
+        "value": 4.982,
+        "observed_at_utc": "2026-09-22T06:38:04Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com",
+        "freshness_minutes": 17
+      },
+      "VIX": {
+        "value": 14.87,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "flat",
+        "regime": "LOW",
+        "source": "Investing.com",
+        "freshness_minutes": 655
+      },
+      "WTI": {
+        "value": 93.73,
+        "observed_at_utc": "2026-09-22T06:32:38Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com Nov-26 future",
+        "freshness_minutes": 22
+      },
+      "BRENT": {
+        "value": 102.12,
+        "observed_at_utc": "2026-09-22T06:27:04Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com Nov-26 future",
+        "freshness_minutes": 28
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419496-uk-public-sector-finances-aug-2026-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10739.01,
+      "reference_price_time_utc": "2026-09-21T15:36:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-21T15:35:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 918.75,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T07:09:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T07:54:45+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T10:54:45+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

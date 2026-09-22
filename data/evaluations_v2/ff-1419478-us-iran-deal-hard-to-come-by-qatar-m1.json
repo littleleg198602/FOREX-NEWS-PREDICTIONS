@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T02:49:30+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T02:49:30+00:00",
   "prediction_latency_seconds": 6090.0,
-  "evaluated_at_utc": "2026-09-22T04:45:25.770762+00:00",
+  "evaluated_at_utc": "2026-09-22T06:58:33.733879+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -222,10 +222,11 @@
           "actual_direction_thresholded": "DOWN"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T06:49:30+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
@@ -270,10 +271,12 @@
           "reference_age_minutes": 357.5
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-22T06:49:30+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 357.5
         },
         "next_session": {
           "status": "PENDING",
