@@ -1,0 +1,180 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419488-bullock-supply-shocks-ai-demand-m2",
+  "event_id": "ff-1419488-bullock-supply-shocks-ai-demand",
+  "event_time_utc": "2026-09-22T03:08:00+00:00",
+  "prediction_time_utc": "2026-09-22T03:53:19+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T03:53:19+00:00",
+  "prediction_latency_seconds": 2719.0,
+  "evaluated_at_utc": "2026-09-22T03:57:46.444240+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "RBA",
+    "inflation",
+    "rates",
+    "supply_shock",
+    "AI_demand"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 45.3,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Bullock says supply shocks complicate monetary policy, policy must prevent second-round inflation effects, and the AI investment boom is adding excess demand to the Australian economy.",
+    "market_expectations": {
+      "source": "Reuters/market coverage before the speech",
+      "expected_value": "A September 29 RBA hike was already heavily priced, with estimates around 90-95%; all four major Australian banks expected a 25bp hike.",
+      "implied_probability": 0.95,
+      "distribution_notes": "The remarks reinforce an already-hawkish path rather than introduce a wholly new hike scenario."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The hike itself was already close to fully priced before Bullock spoke. A reliable post-event AUS200 print was not available at decision time, so only the policy-pricing component can be judged as absorbed.",
+      "observed_reaction": {
+        "AUS200_pre_event": "8746.7 (+0.17%) at 02:31 UTC, before the 03:08 UTC remarks",
+        "session_high_pre_event": "8780.8",
+        "AUDUSD_pre_event": "around 0.7120",
+        "oil_context": "Brent had been falling, easing part of the inflation impulse"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "about 100.39 earlier, firm",
+        "US2Y": "cash Treasury market limited in Asia due Japan holiday; prior-session yields eased",
+        "US10Y": "prior-session yields eased",
+        "VIX": "fresh reliable value unavailable; risk-on equity context",
+        "WTI": "lower/soft in broader session context",
+        "Brent": "down materially earlier, easing inflation pressure",
+        "AUS200": "pre-event +0.17%; no reliable post-event print at decision",
+        "AUDUSD": "near 0.7120 before event",
+        "interpretation": "Bullock is hawkish, but global risk-on/tech strength and lower energy prices offset part of the equity-negative rates impulse."
+      }
+    },
+    "decision_notes": "Forecast is from the actual decision time, ~45 minutes after the first Bullock headline. Leakage-safe model-2 learning marks low-confidence MIXED at 15m/1h ACTIONABLE BOOST_CONFIDENCE and 1h directional confidence 5-6 ACTIONABLE REDUCE_OR_AVOID; this supports neutral short horizons without changing the 4h/next-session thesis."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.39,
+        "observed_at_utc": "2026-09-22T00:37:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "live DXY market page",
+        "freshness_minutes": 196
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "global market wrap",
+        "freshness_minutes": 473
+      },
+      "US10Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "global market wrap",
+        "freshness_minutes": 473
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-21T20:00:00Z",
+        "direction": "down",
+        "regime": "UNKNOWN",
+        "source": "US market close context",
+        "freshness_minutes": 473
+      },
+      "WTI": {
+        "value": null,
+        "observed_at_utc": "2026-09-22T02:40:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Asian market coverage",
+        "freshness_minutes": 73
+      },
+      "BRENT": {
+        "value": 101.65,
+        "observed_at_utc": "2026-09-22T02:41:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Bloomberg-syndicated Asian market report",
+        "freshness_minutes": 72
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "UNKNOWN",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419488-bullock-supply-shocks-ai-demand-m2",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8740.099609375,
+      "reference_price_time_utc": "2026-09-22T03:38:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T03:37:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 15.317,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T04:08:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T04:53:19+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T07:53:19+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
