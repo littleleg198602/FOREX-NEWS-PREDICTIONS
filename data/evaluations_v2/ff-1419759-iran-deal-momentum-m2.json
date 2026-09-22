@@ -1,0 +1,270 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419759-iran-deal-momentum-m2",
+  "event_id": "ff-1419759-iran-deal-momentum",
+  "event_time_utc": "2026-09-22T19:58:33+00:00",
+  "prediction_time_utc": "2026-09-22T20:18:33+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T20:18:33+00:00",
+  "prediction_latency_seconds": 1200.0,
+  "evaluated_at_utc": "2026-09-22T20:24:02.216973+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "Iran",
+    "US",
+    "diplomacy",
+    "energy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 20.0,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Trump said there is 'a lot of momentum' for an Iran deal and expects Iran to 'do something good', reinforcing the same-day direct-talks de-escalation cluster without announcing an agreement.",
+    "market_expectations": {
+      "source": "same-day US-Iran diplomacy and oil pricing",
+      "expected_value": "Markets already priced substantial de-escalation through lower oil, lower yields and strong tech; the new remarks strengthen the probability of continued talks but do not establish a deal.",
+      "implied_probability": null,
+      "distribution_notes": "Incremental confirmation, not an independent shock."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The update arrived after oil had already fallen below $100 Brent and Nasdaq had reached an intraday record on diplomacy hopes; residual move should therefore be smaller.",
+      "observed_reaction": {
+        "SP500": "near record area",
+        "NDX": "intraday record earlier in session",
+        "WS30": "lagging on bank weakness",
+        "XAUUSD": "second daily decline / near support",
+        "WTI": "below $90 area",
+        "Brent": "~97.76"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "firm near 100.43",
+        "US2Y": "~4.73 and lower",
+        "US10Y": "~4.932 and lower",
+        "VIX": "~14.6 and subdued",
+        "WTI": "below $90 area",
+        "Brent": "~97.76",
+        "equities": "Nasdaq strong, S&P near record",
+        "gold": "lower for second session",
+        "interpretation": "Oil, yields, volatility and gold broadly confirm de-escalation/risk-on, though much predates this incremental quote."
+      }
+    },
+    "decision_notes": "Residual forecast only. Learning profile ACTIONABLE model-2 directional 1h confidence 5-6 is REDUCE_OR_AVOID, so otherwise-5/10 1h directional calls were capped at 4/10; no direction was changed by learning."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.43,
+        "observed_at_utc": "2026-09-22T20:10:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 9
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day Treasury reporting",
+        "freshness_minutes": 34
+      },
+      "US10Y": {
+        "value": 4.932,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day Treasury reporting",
+        "freshness_minutes": 34
+      },
+      "VIX": {
+        "value": 14.6,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "LOW",
+        "source": "same-day market board",
+        "freshness_minutes": 34
+      },
+      "WTI": {
+        "value": 89.9,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 34
+      },
+      "BRENT": {
+        "value": 97.76,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 34
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419759-iran-deal-momentum-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7764.64,
+      "reference_price_time_utc": "2026-09-22T20:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T20:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T20:33:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:18:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T00:18:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419759-iran-deal-momentum-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30732.396,
+      "reference_price_time_utc": "2026-09-22T20:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T20:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T20:33:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:18:33+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T00:18:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419759-iran-deal-momentum-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4397.2998046875,
+      "reference_price_time_utc": "2026-09-22T20:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T20:13:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.55,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T20:33:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:18:33+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T00:18:33+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
