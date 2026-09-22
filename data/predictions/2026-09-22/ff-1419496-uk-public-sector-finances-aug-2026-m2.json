@@ -1,0 +1,65 @@
+{
+  "event_id": "ff-1419496-uk-public-sector-finances-aug-2026",
+  "event_cluster_id": "uk-fiscal-budget-2026",
+  "created_at_utc": "2026-09-22T06:54:45Z",
+  "event_time_utc": "2026-09-22T06:01:00Z",
+  "published_at_utc": "2026-09-22T06:01:00Z",
+  "source_time_text": "Sep 22, 7:01am Forex Factory (BST)",
+  "observed_at_utc": "2026-09-22T06:54:16Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["UK", "public_finances", "fiscal_policy", "data_release"],
+  "prediction_id": "ff-1419496-uk-public-sector-finances-aug-2026-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 53.75,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "August UK public-sector borrowing was £18.3bn, above the £15.5bn Reuters consensus and above every economist forecast, leaving April-August borrowing £8.1bn above the OBR path ahead of the October budget.",
+    "market_expectations": {"source": "Reuters poll / OBR", "expected_value": "£15.5bn Reuters consensus; £14.8bn OBR monthly forecast", "implied_probability": null, "distribution_notes": "Actual £18.3bn exceeded all Reuters-polled forecasts; year-to-date £77.3bn is £8.1bn above OBR projection."},
+    "surprise": {"actual": "£18.3bn", "consensus": "£15.5bn", "previous": "£23.3bn prior calendar reference", "revised_previous": null, "surprise_direction": "worse fiscal deficit than expected", "components": {"year_on_year": "£2.9bn more borrowing than Aug 2025", "financial_year_to_date": "£77.3bn", "vs_OBR_ytd": "+£8.1bn", "current_budget_deficit": "£51.9bn vs OBR £47.1bn"}},
+    "absorption": {"state": "UNKNOWN", "reason": "Release occurred before the London cash open. UK100 has no valid post-event cash-index reaction yet; GBP remained in a narrow range.", "observed_reaction": {"GBPUSD": "about 1.3373, narrow 1.3362-1.3376 day range", "UK100": "cash market closed at decision time"}},
+    "cross_asset_confirmation": {"verdict": "NEUTRAL", "observations": {"DXY": "100.41, flat/firm", "US2Y": "4.775%, +2.2bp", "US10Y": "4.982%, +1.9bp", "VIX": "14.87 prior close; stale", "WTI": "93.73, +1.47%", "Brent": "102.12, +1.77%", "GBPUSD": "~1.3373, no disorderly fiscal selloff", "UK10Y": "latest available prior close 5.2065%; no reliable post-release live gilt print before decision", "interpretation": "The fiscal data is clearly worse than expected, but pre-open local market confirmation is absent and GBP is stable."}},
+    "decision_notes": "Fixed 15m/1h horizons are not substituted with the later London open. learning_profile.json is currently empty, so no M2 learning adjustment is applied."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 100.41, "observed_at_utc": "2026-09-22T06:04:28Z", "direction": "flat", "regime": "firm near multi-week high", "source": "Investing.com", "freshness_minutes": 50},
+      "US2Y": {"value": 4.775, "observed_at_utc": "2026-09-22T06:38:37Z", "direction": "up", "regime": "near 52-week high", "source": "Investing.com", "freshness_minutes": 16},
+      "US10Y": {"value": 4.982, "observed_at_utc": "2026-09-22T06:38:04Z", "direction": "up", "regime": "near 5%", "source": "Investing.com", "freshness_minutes": 17},
+      "VIX": {"value": 14.87, "observed_at_utc": "2026-09-21T20:00:00Z", "direction": "flat", "regime": "low; prior US close, stale", "source": "Investing.com", "freshness_minutes": 655},
+      "WTI": {"value": 93.73, "observed_at_utc": "2026-09-22T06:32:38Z", "direction": "up", "regime": "+1.47%, rebound", "source": "Investing.com Nov-26 future", "freshness_minutes": 22},
+      "BRENT": {"value": 102.12, "observed_at_utc": "2026-09-22T06:27:04Z", "direction": "up", "regime": "+1.77%, rebound", "source": "Investing.com Nov-26 future", "freshness_minutes": 28},
+      "GBPUSD": {"value": 1.3373, "observed_at_utc": "2026-09-22T06:50:00Z", "direction": "flat_to_up", "regime": "inside narrow 1.3362-1.3376 range", "source": "Investing.com", "freshness_minutes": 4},
+      "UK10Y": {"value": 5.2065, "observed_at_utc": "2026-09-21T18:57:00Z", "direction": "down", "regime": "prior close; fresh Sep-22 live print unavailable before decision", "source": "Investing.com", "freshness_minutes": 718}
+    },
+    "regimes": {"global_risk": "risk-on carryover from record Nasdaq/AI rally", "rates": "US yields firmer this morning", "energy": "oil rebounding after four-session decline", "uk_fiscal": "borrowing overshoot increases pressure ahead of Oct 28 budget", "uk_equities": "cash market not yet open at decision time"}
+  },
+  "predictions": [
+    {
+      "instrument": "UK100",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "The FTSE cash market is still closed, so there is no valid 15-minute post-release UK100 reaction to confirm direction."},
+      "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "Persistent fiscal overshoot ahead of the October budget can keep a modest negative risk premium on UK equities if gilts cheapen."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "The FTSE cash market is still closed, so there is no valid 15-minute post-release UK100 reaction to confirm direction."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "The fiscal miss is negative, but before the cash open the direct index reaction is unavailable and GBP is not showing a disorderly move."},
+        "4h": {"direction": "DOWN", "confidence": 5, "rationale": "Once London cash trading opens, the larger-than-expected borrowing gap can pressure domestic/rate-sensitive UK equities through fiscal-risk and future-tax expectations."},
+        "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "Persistent fiscal overshoot ahead of the October budget can keep a modest negative risk premium on UK equities if gilts cheapen."}
+      },
+      "mechanism": "Worse borrowing raises UK fiscal-risk, gilt-supply and potential future tax-tightening concerns, which can weigh on domestic and rate-sensitive equities.",
+      "invalidation": "If London opens with gilt yields stable/falling and UK100 holds above the prior close despite the fiscal miss, the 4h/next-session bearish thesis weakens materially.",
+      "counter_case": "The miss may be treated as budget-specific rather than a growth shock; a strong global risk-on tape and the FTSE's multinational earnings mix can overwhelm domestic fiscal concerns.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "cash market closed", "trend_1h": "cash market closed", "session_location": "pre-London cash open", "extension_state": "unknown", "market_open": false, "source": "Forex Factory/ONS release plus contemporaneous Investing.com cross-asset data", "observed_at_utc": "2026-09-22T06:54:45Z"}
+    }
+  ]
+}
