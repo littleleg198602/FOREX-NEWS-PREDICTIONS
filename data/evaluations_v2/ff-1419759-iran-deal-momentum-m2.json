@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T20:18:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T20:18:33+00:00",
   "prediction_latency_seconds": 1200.0,
-  "evaluated_at_utc": "2026-09-22T20:24:02.216973+00:00",
+  "evaluated_at_utc": "2026-09-22T22:13:14.907278+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -137,7 +137,7 @@
     {
       "prediction_id": "ff-1419759-iran-deal-momentum-m2",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -153,16 +153,32 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-22T20:33:33+00:00",
+          "actual_price_time_utc": "2026-09-22T20:37:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-22T20:36:00+00:00",
+          "market_delay_minutes": 3.45,
+          "price": 7764.64,
+          "change_pct": 0.0,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.002576,
+          "post_event_range_pct": 0.0,
+          "mfe_pct": 0.0,
+          "mae_pct": 0.0,
+          "directional_threshold_pct": 0.01,
+          "actual_direction_thresholded": "NO_MOVE"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T21:18:33+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "4h": {
           "status": "PENDING",
@@ -181,7 +197,7 @@
     {
       "prediction_id": "ff-1419759-iran-deal-momentum-m2",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -197,16 +213,31 @@
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-22T20:33:33+00:00",
+          "actual_price_time_utc": "2026-09-22T20:34:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-22T20:33:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 30732.396,
+          "change_pct": 0.0,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.225021,
+          "post_event_range_pct": 0.0,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.225021
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T21:18:33+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "4h": {
           "status": "PENDING",
@@ -225,32 +256,50 @@
     {
       "prediction_id": "ff-1419759-iran-deal-momentum-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4397.2998046875,
-      "reference_price_time_utc": "2026-09-22T20:14:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-22T20:13:00+00:00",
+      "reference_price": 4397.7998046875,
+      "reference_price_time_utc": "2026-09-22T20:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T20:17:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 4.55,
+      "reference_age_minutes": 0.55,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-22T20:33:33+00:00",
+          "actual_price_time_utc": "2026-09-22T20:34:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-22T20:33:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 4397.10009765625,
+          "change_pct": -0.01591,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.122786,
+          "post_event_range_pct": 0.052306,
+          "mfe_pct": 0.031832,
+          "mae_pct": -0.020474,
+          "directional_threshold_pct": 0.012279,
+          "actual_direction_thresholded": "DOWN"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T21:18:33+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "first_available_price_time_utc": "2026-09-22T22:01:00+00:00",
+          "market_delay_minutes": 42.45,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "4h": {
           "status": "PENDING",
