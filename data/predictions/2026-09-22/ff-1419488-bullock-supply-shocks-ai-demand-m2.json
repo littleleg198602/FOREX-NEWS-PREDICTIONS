@@ -1,0 +1,63 @@
+{
+  "event_id": "ff-1419488-bullock-supply-shocks-ai-demand",
+  "event_cluster_id": "rba-hawkish-inflation-sep-2026",
+  "created_at_utc": "2026-09-22T03:53:19Z",
+  "event_time_utc": "2026-09-22T03:08:00Z",
+  "published_at_utc": "2026-09-22T03:08:00Z",
+  "source_time_text": "Sep 22, 2026 4:08am Forex Factory/FirstSquawk (Europe/London)",
+  "observed_at_utc": "2026-09-22T03:53:19Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["RBA", "inflation", "rates", "supply_shock", "AI_demand"],
+  "prediction_id": "ff-1419488-bullock-supply-shocks-ai-demand-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 45.3,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Bullock says supply shocks complicate monetary policy, policy must prevent second-round inflation effects, and the AI investment boom is adding excess demand to the Australian economy.",
+    "market_expectations": {"source": "Reuters/market coverage before the speech", "expected_value": "A September 29 RBA hike was already heavily priced, with estimates around 90-95%; all four major Australian banks expected a 25bp hike.", "implied_probability": 0.95, "distribution_notes": "The remarks reinforce an already-hawkish path rather than introduce a wholly new hike scenario."},
+    "surprise": null,
+    "absorption": {"state": "PARTIALLY_PRICED", "reason": "The hike itself was already close to fully priced before Bullock spoke. A reliable post-event AUS200 print was not available at decision time, so only the policy-pricing component can be judged as absorbed.", "observed_reaction": {"AUS200_pre_event": "8746.7 (+0.17%) at 02:31 UTC, before the 03:08 UTC remarks", "session_high_pre_event": "8780.8", "AUDUSD_pre_event": "around 0.7120", "oil_context": "Brent had been falling, easing part of the inflation impulse"}},
+    "cross_asset_confirmation": {"verdict": "CONFLICTING", "observations": {"DXY": "about 100.39 earlier, firm", "US2Y": "cash Treasury market limited in Asia due Japan holiday; prior-session yields eased", "US10Y": "prior-session yields eased", "VIX": "fresh reliable value unavailable; risk-on equity context", "WTI": "lower/soft in broader session context", "Brent": "down materially earlier, easing inflation pressure", "AUS200": "pre-event +0.17%; no reliable post-event print at decision", "AUDUSD": "near 0.7120 before event", "interpretation": "Bullock is hawkish, but global risk-on/tech strength and lower energy prices offset part of the equity-negative rates impulse."}},
+    "decision_notes": "Forecast is from the actual decision time, ~45 minutes after the first Bullock headline. Leakage-safe model-2 learning marks low-confidence MIXED at 15m/1h ACTIONABLE BOOST_CONFIDENCE and 1h directional confidence 5-6 ACTIONABLE REDUCE_OR_AVOID; this supports neutral short horizons without changing the 4h/next-session thesis."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 100.39, "observed_at_utc": "2026-09-22T00:37:00Z", "direction": "firm", "regime": "near recent highs", "source": "live DXY market page", "freshness_minutes": 196},
+      "US2Y": {"value": null, "observed_at_utc": "2026-09-21T20:00:00Z", "direction": "down", "regime": "prior-session easing; Asia cash data constrained by Japan holiday", "source": "global market wrap", "freshness_minutes": 473},
+      "US10Y": {"value": null, "observed_at_utc": "2026-09-21T20:00:00Z", "direction": "down", "regime": "prior-session easing", "source": "global market wrap", "freshness_minutes": 473},
+      "VIX": {"value": null, "observed_at_utc": "2026-09-21T20:00:00Z", "direction": "down", "regime": "risk-on carryover; stale", "source": "US market close context", "freshness_minutes": 473},
+      "WTI": {"value": null, "observed_at_utc": "2026-09-22T02:40:00Z", "direction": "down", "regime": "soft after multi-day decline", "source": "Asian market coverage", "freshness_minutes": 73},
+      "BRENT": {"value": 101.65, "observed_at_utc": "2026-09-22T02:41:00Z", "direction": "down", "regime": "about -2.1% in early Asia coverage", "source": "Bloomberg-syndicated Asian market report", "freshness_minutes": 72},
+      "AUS200": {"value": 8746.7, "observed_at_utc": "2026-09-22T02:31:14Z", "direction": "up", "regime": "+0.17% pre-event; day range 8725.7-8780.8", "source": "Investing.com AU", "freshness_minutes": 82},
+      "AUDUSD": {"value": 0.712, "observed_at_utc": "2026-09-22T00:52:00Z", "direction": "flat", "regime": "steady before speech", "source": "Reuters FX report", "freshness_minutes": 181}
+    },
+    "regimes": {"Australia_equities": "risk-on before Bullock; post-event reaction unavailable", "rates": "RBA hike already heavily priced", "energy": "oil lower, partly offsetting inflation concern", "global_risk": "Asian tech and US futures positive"}
+  },
+  "predictions": [{
+    "instrument": "AUS200",
+    "relevance": "DIRECT",
+    "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "The remarks are about 45 minutes old and a September hike was already heavily priced; no reliable post-event index reaction is available to justify chasing a short."},
+    "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "If Australian yields/AUD reprice higher into the RBA meeting, valuation pressure should remain a headwind for AUS200."},
+    "horizons": {
+      "15m": {"direction": "MIXED", "confidence": 4, "rationale": "The remarks are about 45 minutes old and a September hike was already heavily priced; no reliable post-event index reaction is available to justify chasing a short."},
+      "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Hawkish inflation language conflicts with the session's strong global tech/risk-on lead and lower oil backdrop."},
+      "4h": {"direction": "DOWN", "confidence": 5, "rationale": "Explicit concern about second-round effects and AI-driven excess demand strengthens the case for restrictive policy and can weigh on rate-sensitive Australian equities."},
+      "next_session": {"direction": "DOWN", "confidence": 5, "rationale": "If Australian yields/AUD reprice higher into the RBA meeting, valuation pressure should remain a headwind for AUS200."}
+    },
+    "mechanism": "More persistent inflation and AI-driven excess demand increase the probability/duration of restrictive RBA policy, raising discount rates and pressuring domestic rate-sensitive sectors.",
+    "invalidation": "AUS200 holding/breaking the session high while Australian yields and AUD fail to rise would invalidate the 4h downside thesis; a materially dovish clarification would also invalidate it.",
+    "counter_case": "The September hike is already nearly fully priced, lower oil reduces the inflation impulse, and global AI/tech risk appetite can dominate the local rates headwind.",
+    "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "unknown post-event", "trend_1h": "pre-event up/firm; post-event incomplete", "session_location": "Australian cash session, pre-event below session high", "extension_state": "range/unknown post-event", "market_open": true, "source": "Investing.com AU pre-event snapshot + Forex Factory event time", "observed_at_utc": "2026-09-22T03:53:19Z"}
+  }]
+}
