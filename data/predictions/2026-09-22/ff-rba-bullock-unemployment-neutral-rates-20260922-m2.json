@@ -1,0 +1,65 @@
+{
+  "event_id": "ff-rba-bullock-unemployment-neutral-rates-20260922",
+  "event_cluster_id": "rba-bullock-sep22-2026",
+  "created_at_utc": "2026-09-22T04:41:26Z",
+  "event_time_utc": "2026-09-22T03:45:26Z",
+  "published_at_utc": "2026-09-22T03:45:26Z",
+  "source_time_text": "56 min ago",
+  "observed_at_utc": "2026-09-22T04:41:26Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["RBA", "inflation", "rates", "Australia"],
+  "prediction_id": "ff-rba-bullock-unemployment-neutral-rates-20260922-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 56,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Bullock says unemployment at 4.5%-5.0% could ease inflation pressure, rising global neutral rates are lifting real yields, and she is not indicating a policy shift; the board decides policy.",
+    "market_expectations": {"source": "recent Australian market reporting", "expected_value": "A September RBA hike is already priced at roughly 90-95%.", "implied_probability": 0.95, "distribution_notes": "This follow-up does not materially increase the already-high hike probability."},
+    "surprise": null,
+    "absorption": {"state": "PARTIALLY_PRICED", "reason": "The RBA hike theme was already heavily priced before the follow-up; AUS200/SPI entered the session slightly higher and AUD was little changed.", "observed_reaction": {"SPI200": "+0.3% pre/open context", "AUDUSD": "~0.7119 little changed", "AU3Y": "4.97%, +3.8bp prior snapshot"}},
+    "cross_asset_confirmation": {"verdict": "CONFLICTING", "observations": {"DXY": "firm near seven-week high", "US2Y": "little changed/easing context", "US10Y": "~4.95%, lower prior session", "VIX": "risk-on/low-volatility carryover; no fresh exact print", "WTI": "~95.8, stabilized after sharp fall", "Brent": "~100.2-100.5 after sharp fall", "AUDUSD": "~0.7120 steady", "AU3Y": "~4.97%, elevated", "AUS200": "roughly +0.3% early context", "interpretation": "Local rates remain restrictive/hawkish, but equities and AUD show no fresh risk-off confirmation and lower oil/global yields offset the rate channel."}},
+    "decision_notes": "Leakage-safe M2 learning: low-confidence MIXED is ACTIONABLE and strong at 15m/1h; 1h directional confidence 5-6 is ACTIONABLE REDUCE_OR_AVOID. This supports staying neutral rather than forcing a directional call."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 100.39, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "firm", "source": "Reuters/market context"},
+      "US2Y": {"value": 4.75, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "flat", "source": "WSJ context"},
+      "US10Y": {"value": 4.9531, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "down", "source": "Perpetual CT Markets"},
+      "VIX": {"value": null, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "down/risk-on", "source": "market context"},
+      "WTI": {"value": 95.8, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "slightly up", "source": "WSJ"},
+      "BRENT": {"value": 100.22, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "stable", "source": "Reuters"},
+      "AUDUSD": {"value": 0.712, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "flat", "source": "Reuters"},
+      "AU3Y": {"value": 4.97, "observed_at_utc": "2026-09-22T04:41:26Z", "direction": "up", "source": "Perpetual CT Markets"}
+    },
+    "regimes": {"Australia_equities": "AUS200/SPI slightly higher", "rates": "local yields elevated; US yields eased", "energy": "oil stabilizing after sharp decline", "risk": "Asia risk-on"}
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "relevance": "DIRECT",
+      "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "The follow-up is nearly an hour old and explicitly denies a policy shift; the residual impulse is weak."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The new remarks soften the earlier hawkish interpretation without clearly changing the expected RBA decision."},
+      "horizons": {
+        "15m": {"direction": "MIXED", "confidence": 4, "rationale": "The follow-up is nearly an hour old and explicitly denies a policy shift; the residual impulse is weak."},
+        "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Higher neutral rates are hawkish, but higher unemployment would ease inflation and Bullock says the board decides next week."},
+        "4h": {"direction": "MIXED", "confidence": 4, "rationale": "RBA hike risk is already heavily priced while lower oil/global yields support equities."},
+        "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The new remarks soften the earlier hawkish interpretation without clearly changing the expected RBA decision."}
+      },
+      "mechanism": "Higher neutral rates can pressure valuations, while a softer labor market could reduce inflation and future tightening needs.",
+      "invalidation": "A sharp rise in Australian front-end yields with AUD strength and AUS200 breaking session support would shift the balance bearish; a clear dovish repricing would shift it bullish.",
+      "counter_case": "If markets interpret the unemployment comment as a meaningful path to lower inflation, rate-hike expectations could ease and support equities.",
+      "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "flat/slightly positive", "trend_1h": "range", "session_location": "early Australian cash session", "extension_state": "range", "market_open": true, "source": "Reuters/Perpetual CT Markets context", "observed_at_utc": "2026-09-22T04:41:26Z"}
+    }
+  ]
+}
