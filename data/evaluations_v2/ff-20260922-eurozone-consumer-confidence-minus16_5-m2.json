@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T15:16:39+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T15:16:39+00:00",
   "prediction_latency_seconds": 4599.0,
-  "evaluated_at_utc": "2026-09-22T15:22:33.065253+00:00",
+  "evaluated_at_utc": "2026-09-22T17:23:49.046056+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -133,27 +133,29 @@
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 6336.009765625,
-      "reference_price_time_utc": "2026-09-22T15:08:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-22T15:07:00+00:00",
+      "reference_price": 6336.75,
+      "reference_price_time_utc": "2026-09-22T15:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T15:15:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 8.65,
+      "reference_age_minutes": 0.65,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T15:31:39+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T16:16:39+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "4h": {
           "status": "PENDING",
@@ -177,27 +179,31 @@
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 25616.08984375,
-      "reference_price_time_utc": "2026-09-22T15:08:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-22T15:07:00+00:00",
+      "reference_price": 25627.16015625,
+      "reference_price_time_utc": "2026-09-22T15:16:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T15:15:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 8.65,
+      "reference_age_minutes": 0.65,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T15:31:39+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "first_available_price_time_utc": "2026-09-22T16:01:00+00:00",
+          "market_delay_minutes": 29.35,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-22T16:16:39+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "4h": {
           "status": "PENDING",

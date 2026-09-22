@@ -1,0 +1,271 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419639-fed-collins-inflation-risks-m2",
+  "event_id": "ff-1419639-fed-collins-inflation-risks",
+  "event_time_utc": "2026-09-22T15:11:00+00:00",
+  "prediction_time_utc": "2026-09-22T17:22:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-22T17:22:30+00:00",
+  "prediction_latency_seconds": 7890.0,
+  "evaluated_at_utc": "2026-09-22T17:23:46.850092+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Fed",
+    "inflation",
+    "rates",
+    "monetary_policy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 130.5,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Boston Fed President Susan Collins backed last week's rate hike, sees increased risk inflation stays notably above 2%, says labor conditions are stronger, and argues policy can refocus on timely price stability.",
+    "market_expectations": {
+      "source": "contemporaneous Fed/market reporting",
+      "expected_value": "Further Fed tightening was already an active market scenario after last week's hike; Collins reinforces rather than originates that path.",
+      "implied_probability": null,
+      "distribution_notes": "No new policy decision; incremental confirmation of a hawkish post-meeting regime."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "By decision time the story was ~130 minutes old. Nasdaq/S&P remained strongly higher and Treasury yields were lower, while gold and the dollar behaved more consistently with the hawkish message.",
+      "observed_reaction": {
+        "Nasdaq": "strongly higher / record-area session",
+        "SP500": "about +1.5%",
+        "US2Y": "~4.73%, lower",
+        "US10Y": "~4.935%, lower",
+        "DXY": "~100.44, firm",
+        "XAUUSD": "~4333, weak",
+        "WTI": "~92.94, sharply lower",
+        "Brent": "~96.98"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firm around 100.44",
+        "US2Y": "~4.73%, lower",
+        "US10Y": "~4.935%, lower",
+        "VIX": "~14.87, low",
+        "WTI": "~92.94, sharply lower",
+        "Brent": "~96.98",
+        "equities": "S&P and Nasdaq strongly higher",
+        "gold": "weak around $4.33k",
+        "interpretation": "Dollar/gold support the hawkish signal, but falling yields, collapsing oil and strong equities reject an immediate broad risk-off call."
+      }
+    },
+    "decision_notes": "Residual forecast from actual decision time. Learning profile is empty, so no confidence adjustment is applied."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.44,
+        "observed_at_utc": "2026-09-22T17:04:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing DXY live snapshot",
+        "freshness_minutes": 18
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T16:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ Treasury market report",
+        "freshness_minutes": 52
+      },
+      "US10Y": {
+        "value": 4.935,
+        "observed_at_utc": "2026-09-22T16:30:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ Treasury market report",
+        "freshness_minutes": 52
+      },
+      "VIX": {
+        "value": 14.87,
+        "observed_at_utc": "2026-09-22T17:00:00Z",
+        "direction": "flat",
+        "regime": "LOW",
+        "source": "market snapshot",
+        "freshness_minutes": 22
+      },
+      "WTI": {
+        "value": 92.94,
+        "observed_at_utc": "2026-09-22T17:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "EnergyRiskIQ/market snapshot",
+        "freshness_minutes": 22
+      },
+      "BRENT": {
+        "value": 96.98,
+        "observed_at_utc": "2026-09-22T17:16:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Convex live market data",
+        "freshness_minutes": 6
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419639-fed-collins-inflation-risks-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30636.685546875,
+      "reference_price_time_utc": "2026-09-22T17:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T17:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T17:37:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:22:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:22:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419639-fed-collins-inflation-risks-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7762.080078125,
+      "reference_price_time_utc": "2026-09-22T17:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T17:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T17:37:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:22:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:22:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419639-fed-collins-inflation-risks-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4377.0,
+      "reference_price_time_utc": "2026-09-22T17:14:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T17:13:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T17:37:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T18:22:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-22T21:22:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
