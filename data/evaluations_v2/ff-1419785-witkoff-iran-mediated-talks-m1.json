@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-23T00:04:13+00:00",
   "evaluation_anchor_time_utc": "2026-09-23T00:04:13+00:00",
   "prediction_latency_seconds": 660.0,
-  "evaluated_at_utc": "2026-09-23T00:37:32.111458+00:00",
+  "evaluated_at_utc": "2026-09-23T06:01:42.337987+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -188,16 +188,20 @@
           "reference_age_minutes": 207.217
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-23T01:04:13+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 207.217
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-23T04:04:13+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 207.217
         },
         "next_session": {
           "status": "PENDING",
@@ -234,16 +238,20 @@
           "reference_age_minutes": 167.217
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-23T01:04:13+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 167.217
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-23T04:04:13+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 167.217
         },
         "next_session": {
           "status": "PENDING",
@@ -293,16 +301,46 @@
           "actual_direction_thresholded": "DOWN"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-23T01:04:13+00:00",
+          "actual_price_time_utc": "2026-09-23T01:05:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T01:04:00+00:00",
+          "market_delay_minutes": 0.78,
+          "price": 4388.39990234375,
+          "change_pct": -0.406234,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "legacy_fallback",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.251914,
+          "post_event_range_pct": 0.426657,
+          "mfe_pct": 0.424386,
+          "mae_pct": -0.002272,
+          "directional_threshold_pct": 0.025191,
+          "actual_direction_thresholded": "DOWN"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-23T04:04:13+00:00",
+          "actual_price_time_utc": "2026-09-23T04:05:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T04:04:00+00:00",
+          "market_delay_minutes": 0.78,
+          "price": 4381.5,
+          "change_pct": -0.562826,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "legacy_fallback",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.317727,
+          "post_event_range_pct": 0.826088,
+          "mfe_pct": 0.823816,
+          "mae_pct": -0.002272,
+          "directional_threshold_pct": 0.031773,
+          "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
           "status": "PENDING",
