@@ -1,0 +1,196 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1426303-uk-september-flash-pmi-m2",
+  "event_id": "ff-1426303-uk-september-flash-pmi",
+  "event_time_utc": "2026-09-23T08:30:00+00:00",
+  "prediction_time_utc": "2026-09-23T10:12:31+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T10:12:31+00:00",
+  "prediction_latency_seconds": 6151.0,
+  "evaluated_at_utc": "2026-09-23T10:17:16.264384+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "United Kingdom",
+    "PMI",
+    "growth",
+    "inflation",
+    "BoE"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 86,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "UK services PMI fell to 51.7 from 52.5 versus 52.0 consensus; overall growth cooled while input-price inflation accelerated to the highest since June, creating a mildly stagflationary mix.",
+    "market_expectations": {
+      "source": "Reuters poll / Forex Factory calendar",
+      "expected_value": {
+        "services": 52.0,
+        "manufacturing": 51.5
+      },
+      "implied_probability": null,
+      "distribution_notes": "Services missed consensus; the report emphasized weaker momentum in both sectors."
+    },
+    "surprise": {
+      "actual": {
+        "services": 51.7
+      },
+      "consensus": {
+        "services": 52.0,
+        "manufacturing": 51.5
+      },
+      "previous": {
+        "services": 52.5,
+        "manufacturing": 51.7
+      },
+      "revised_previous": null,
+      "surprise_direction": "negative_growth_surprise_with_hotter_costs",
+      "components": {
+        "output": "third month of expansion but slowest in that run",
+        "input_costs": "highest since June",
+        "drivers": "energy, fuel and raw materials",
+        "services": "three-month low"
+      }
+    },
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "The story is about 86 minutes old and a 08:40 UTC FTSE 100 snapshot showed 10,730.86 with strong-sell technical state, consistent with a continuing weak residual tone rather than an unpriced headline.",
+      "observed_reaction": {
+        "UK100": "10,730.86 at 08:40 UTC, strong-sell technical snapshot"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "UK100": "short-term weakness",
+        "oil": "lower oil is a countervailing disinflationary force",
+        "GBP": "fresh exact GBP snapshot unavailable",
+        "UK_rates": "fresh gilt snapshot unavailable",
+        "DXY": "firm backdrop"
+      }
+    },
+    "decision_notes": "Residual forecast from 10:12 UTC; no learning adjustment because learning_profile.json is empty."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T10:12:31Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "current web market coverage",
+        "freshness_minutes": 0
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ market coverage",
+        "freshness_minutes": 852
+      },
+      "US10Y": {
+        "value": 4.935,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ market coverage",
+        "freshness_minutes": 852
+      },
+      "VIX": {
+        "value": 14.6,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "prior US market board",
+        "freshness_minutes": 852
+      },
+      "WTI": {
+        "value": 88.97,
+        "observed_at_utc": "2026-09-23T07:25:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-morning market snapshot",
+        "freshness_minutes": 168
+      },
+      "BRENT": {
+        "value": 95.91,
+        "observed_at_utc": "2026-09-23T07:35:49Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-morning market snapshot",
+        "freshness_minutes": 157
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1426303-uk-september-flash-pmi-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10720.8203125,
+      "reference_price_time_utc": "2026-09-23T10:03:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T10:02:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T10:27:31+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:12:31+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T14:12:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

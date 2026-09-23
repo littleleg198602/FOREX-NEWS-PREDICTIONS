@@ -1,0 +1,287 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1426286-euro-area-september-flash-pmi-m2",
+  "event_id": "ff-1426286-euro-area-september-flash-pmi",
+  "event_time_utc": "2026-09-23T08:00:00+00:00",
+  "prediction_time_utc": "2026-09-23T10:12:31+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T10:12:31+00:00",
+  "prediction_latency_seconds": 7951.0,
+  "evaluated_at_utc": "2026-09-23T10:17:14.882559+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Eurozone",
+    "PMI",
+    "growth",
+    "inflation",
+    "ECB"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 116,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "Euro-zone composite PMI jumped to 53.1 from 52.0 versus 51.7 consensus, fastest growth since April 2023, while both services and manufacturing expanded and price inflation was the strongest since May.",
+    "market_expectations": {
+      "source": "Reuters poll / Forex Factory calendar",
+      "expected_value": {
+        "composite": 51.7,
+        "manufacturing": 52.6,
+        "services": 51.4
+      },
+      "implied_probability": null,
+      "distribution_notes": "Composite exceeded even the highest Reuters forecast of 52.6."
+    },
+    "surprise": {
+      "actual": {
+        "composite": 53.1
+      },
+      "consensus": {
+        "composite": 51.7,
+        "manufacturing": 52.6,
+        "services": 51.4
+      },
+      "previous": {
+        "composite": 52.0
+      },
+      "revised_previous": null,
+      "surprise_direction": "strong_positive_growth_surprise_with_inflation_caveat",
+      "components": {
+        "output": "fastest since April 2023",
+        "new_orders": "solid expansion",
+        "employment": "muted job creation",
+        "confidence": "three-month low",
+        "prices": "input and output inflation strongest since May"
+      }
+    },
+    "absorption": {
+      "state": "FADED",
+      "reason": "The release is about 116 minutes old; Euro Stoxx technical snapshots shifted from strong-buy earlier in the morning to strong-sell by 09:30-09:36 UTC, so the residual forecast cannot treat the headline as unpriced.",
+      "observed_reaction": {
+        "STOXX50": "short-term technical state strong-sell at ~09:30-09:36 UTC after earlier strong-buy readings",
+        "EURUSD": "earlier ~1.1425 and soft"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "STOXX50": "short-term momentum faded",
+        "EURUSD": "did not strongly confirm the growth beat",
+        "oil": "Brent/WTI lower, supportive for inflation but not enough to sustain equity reaction",
+        "rates": "fresh European rates unavailable",
+        "DXY": "firm backdrop"
+      }
+    },
+    "decision_notes": "Residual forecast from 10:12 UTC; no learning adjustment because learning_profile.json is empty."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T10:12:31Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "current web market coverage",
+        "freshness_minutes": 0
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ market coverage",
+        "freshness_minutes": 852
+      },
+      "US10Y": {
+        "value": 4.935,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "WSJ market coverage",
+        "freshness_minutes": 852
+      },
+      "VIX": {
+        "value": 14.6,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "prior US market board",
+        "freshness_minutes": 852
+      },
+      "WTI": {
+        "value": 88.97,
+        "observed_at_utc": "2026-09-23T07:25:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-morning market snapshot",
+        "freshness_minutes": 168
+      },
+      "BRENT": {
+        "value": 95.91,
+        "observed_at_utc": "2026-09-23T07:35:49Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-morning market snapshot",
+        "freshness_minutes": 157
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1426286-euro-area-september-flash-pmi-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6313.0400390625,
+      "reference_price_time_utc": "2026-09-23T10:02:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T10:01:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T10:27:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:12:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T14:12:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1426286-euro-area-september-flash-pmi-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25466.75,
+      "reference_price_time_utc": "2026-09-23T10:03:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T10:02:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T10:27:31+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:12:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T14:12:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1426286-euro-area-september-flash-pmi-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8150.669921875,
+      "reference_price_time_utc": "2026-09-23T10:02:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T10:01:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T10:27:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:12:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T14:12:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
