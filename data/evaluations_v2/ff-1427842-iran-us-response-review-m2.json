@@ -1,0 +1,305 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1427842-iran-us-response-review-m2",
+  "event_id": "ff-1427842-iran-us-response-review",
+  "event_time_utc": "2026-09-23T15:14:00+00:00",
+  "prediction_time_utc": "2026-09-23T15:54:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T15:54:30+00:00",
+  "prediction_latency_seconds": 2430.0,
+  "evaluated_at_utc": "2026-09-23T15:58:24.257566+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "IRAN",
+    "US",
+    "HORMUZ",
+    "DIPLOMACY"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 40.5,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Iran is reviewing the US response to its proposal to end hostilities; Hormuz reopening and lifting the US blockade were discussed, but substantial differences remain and Rubio called the meeting positive but explicitly not a breakthrough.",
+    "market_expectations": {
+      "source": "prior Reuters/Forex Factory coverage",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "Markets had already been pricing some US-Iran diplomacy and possible Hormuz reopening before this update."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The diplomacy theme was already known and oil was near two-week lows. FF live comments describe a quick headline-driven bounce that stalled/reversed, so the residual move is smaller than the original shock.",
+      "observed_reaction": {
+        "gold": "brief headline volatility/bounce reported by live FF participants, then stalled",
+        "oil": "WTI 91.17 and Brent 100.58 at 13:03Z, near two-week lows before the headline"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "de-escalation/supply hopes had already pushed crude toward two-week lows",
+        "gold": "firm dollar/yields remain a headwind while geopolitical de-escalation has ambiguous safe-haven vs inflation effects",
+        "equities": "de-escalation supportive, but strong US PMI and hawkish Fed rhetoric keep yields restrictive",
+        "Rubio_followup": "positive meeting but not a breakthrough, reducing confidence in continuation"
+      }
+    },
+    "decision_notes": "Rubio follow-up is treated as same event-cluster evidence, not an independent sample. No learning adjustment because learning_profile.json is empty."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T15:54:30Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Forex Factory/market coverage",
+        "freshness_minutes": 0
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T15:54:30Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day macro coverage",
+        "freshness_minutes": 0
+      },
+      "US10Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T15:54:30Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day market coverage",
+        "freshness_minutes": 0
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T15:54:30Z",
+        "direction": "subdued",
+        "regime": "HIGH",
+        "source": "same-day market coverage",
+        "freshness_minutes": 0
+      },
+      "WTI": {
+        "value": 91.17,
+        "observed_at_utc": "2026-09-23T13:03:00Z",
+        "direction": "up_from_lows",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 171
+      },
+      "BRENT": {
+        "value": 100.58,
+        "observed_at_utc": "2026-09-23T13:03:00Z",
+        "direction": "up_from_lows",
+        "regime": "RISING",
+        "source": "Reuters",
+        "freshness_minutes": 171
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "HIGH",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1427842-iran-us-response-review-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4319.2001953125,
+      "reference_price_time_utc": "2026-09-23T15:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T15:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:09:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:54:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T19:54:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427842-iran-us-response-review-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 65.04000091552734,
+      "reference_price_time_utc": "2026-09-23T15:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T15:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:09:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:54:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T19:54:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427842-iran-us-response-review-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30445.287109375,
+      "reference_price_time_utc": "2026-09-23T15:54:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T15:53:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:09:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:54:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T19:54:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427842-iran-us-response-review-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7715.14990234375,
+      "reference_price_time_utc": "2026-09-23T15:54:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T15:53:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:09:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T16:54:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T19:54:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
