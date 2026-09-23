@@ -1,0 +1,302 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20260923T203722Z-ecb-lane-future-rate-decisions-m2",
+  "event_id": "ff-1427995-ecb-lane-future-rate-decisions",
+  "event_time_utc": "2026-09-23T20:37:22+00:00",
+  "prediction_time_utc": "2026-09-23T20:40:22+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T20:40:22+00:00",
+  "prediction_latency_seconds": 180.0,
+  "evaluated_at_utc": "2026-09-23T20:45:50.873703+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "ECB",
+    "rates",
+    "Eurozone",
+    "energy_inflation",
+    "monetary_policy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 3.0,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "ECB Chief Economist Philip Lane said future rate decisions may be less straightforward after September's 25bp hike, balancing a persistent energy shock and stronger activity against limited second-round effects and tighter financial conditions.",
+    "market_expectations": {
+      "source": "Lane remarks as reported by Econostream via Forex Factory",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No fresh OIS probability was available pre-decision; the key change is less certainty around a mechanically hawkish path."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "UNPRICED",
+      "reason": "The story was only about three minutes old at decision time, but European cash indices were already closed, so there was no clean cash-index reaction to observe.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "EURUSD": "available reference quote is stale",
+        "EU_rates": "no sufficiently fresh Bund/OIS quote found pre-decision",
+        "oil": "energy remains elevated/volatile and is relevant to Lane's inflation concern",
+        "US10Y": "high US yields reinforce global discount-rate pressure but are not a direct ECB confirmation"
+      }
+    },
+    "decision_notes": "Forecast is from 20:40:22 UTC using only information available then. European cash markets are closed; fixed short horizons may evaluate as MARKET_CLOSED. learning_profile.json is empty, so M2 confidence was not adjusted by learning."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T20:40:22Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Forex Factory/market coverage",
+        "freshness_minutes": 0
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T20:40:22Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "current market coverage",
+        "freshness_minutes": 0
+      },
+      "US10Y": {
+        "value": 5.058,
+        "observed_at_utc": "2026-09-23T18:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "CNBC-derived market coverage",
+        "freshness_minutes": 160
+      },
+      "VIX": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T20:40:22Z",
+        "direction": "unknown",
+        "regime": "UNKNOWN",
+        "source": "unavailable",
+        "freshness_minutes": null
+      },
+      "WTI": {
+        "value": 91.69,
+        "observed_at_utc": "2026-09-23T18:03:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "crudeoilprices.today",
+        "freshness_minutes": 157
+      },
+      "BRENT": {
+        "value": 102.46,
+        "observed_at_utc": "2026-09-23T18:03:00Z",
+        "direction": "volatile_up",
+        "regime": "UNKNOWN",
+        "source": "crudeoilprices.today",
+        "freshness_minutes": 157
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "UNKNOWN",
+      "WTI": "FALLING",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20260923T203722Z-ecb-lane-future-rate-decisions-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6304.7099609375,
+      "reference_price_time_utc": "2026-09-23T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 310.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T20:55:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T21:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T00:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260923T203722Z-ecb-lane-future-rate-decisions-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25410.63,
+      "reference_price_time_utc": "2026-09-23T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 279.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T20:55:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T21:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T00:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260923T203722Z-ecb-lane-future-rate-decisions-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8125.56982421875,
+      "reference_price_time_utc": "2026-09-23T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 310.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T20:55:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T21:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T00:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20260923T203722Z-ecb-lane-future-rate-decisions-m2",
+      "instrument": "SPA35",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^IBEX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 19634.5,
+      "reference_price_time_utc": "2026-09-23T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 310.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T20:55:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T21:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T00:40:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
