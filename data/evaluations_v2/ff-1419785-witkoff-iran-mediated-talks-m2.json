@@ -1,0 +1,259 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419785-witkoff-iran-mediated-talks-m2",
+  "event_id": "ff-1419785-witkoff-iran-mediated-talks",
+  "event_time_utc": "2026-09-22T23:53:13+00:00",
+  "prediction_time_utc": "2026-09-23T00:04:13+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T00:04:13+00:00",
+  "prediction_latency_seconds": 660.0,
+  "evaluated_at_utc": "2026-09-23T00:09:14.222131+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "Iran",
+    "US",
+    "diplomacy",
+    "energy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 11,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Witkoff personally confirmed lengthy mediated talks with Iran and said mediators will continue, adding process detail to the existing diplomacy cluster.",
+    "market_expectations": {
+      "source": "same-day diplomacy cluster",
+      "expected_value": "Markets already expected negotiations after earlier Trump statements; this confirms talks continued through mediators but announces no agreement.",
+      "implied_probability": null,
+      "distribution_notes": "Incremental confirmation, not a fresh independent shock."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Oil, gold and US equities had already moved materially on earlier diplomacy headlines before this update.",
+      "observed_reaction": {
+        "oil": "already below $100 Brent",
+        "US_equities": "cash session already closed near records",
+        "gold": "already softer on prior de-escalation"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "reason": "Latest reliable DXY/yields/VIX/oil snapshots available to this run are several hours old after the US cash close; they were directionally consistent with de-escalation but are too stale to claim fresh confirmation."
+      }
+    },
+    "decision_notes": "Residual forecast only; leakage-safe learning_profile.json is empty, so no learning adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.43,
+        "observed_at_utc": "2026-09-22T20:10:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 234
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day Treasury reporting",
+        "freshness_minutes": 259
+      },
+      "US10Y": {
+        "value": 4.932,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day Treasury reporting",
+        "freshness_minutes": 259
+      },
+      "VIX": {
+        "value": 14.6,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "same-day market board",
+        "freshness_minutes": 259
+      },
+      "WTI": {
+        "value": 90.42,
+        "observed_at_utc": "2026-09-22T21:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 184
+      },
+      "BRENT": {
+        "value": 97.44,
+        "observed_at_utc": "2026-09-22T21:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 184
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419785-witkoff-iran-mediated-talks-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7764.64,
+      "reference_price_time_utc": "2026-09-22T20:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T20:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 207.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T00:19:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T01:04:13+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T04:04:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419785-witkoff-iran-mediated-talks-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30732.396,
+      "reference_price_time_utc": "2026-09-22T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 167.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T00:19:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T01:04:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T04:04:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419785-witkoff-iran-mediated-talks-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4401.7998046875,
+      "reference_price_time_utc": "2026-09-23T00:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T23:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T00:19:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T01:04:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T04:04:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

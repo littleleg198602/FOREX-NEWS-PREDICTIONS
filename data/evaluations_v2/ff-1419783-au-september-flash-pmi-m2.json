@@ -1,0 +1,199 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419783-au-september-flash-pmi-m2",
+  "event_id": "ff-1419783-au-september-flash-pmi",
+  "event_time_utc": "2026-09-22T23:16:13+00:00",
+  "prediction_time_utc": "2026-09-23T00:04:13+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T00:04:13+00:00",
+  "prediction_latency_seconds": 2880.0,
+  "evaluated_at_utc": "2026-09-23T00:09:12.486800+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Australia",
+    "PMI",
+    "growth",
+    "inflation",
+    "RBA"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 48,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "September Australian activity slowed sharply while price pressure firmed: composite 50.8 vs 52.7 prior, services 51.4 vs 53.2, manufacturing 49.3 vs 52.0, manufacturing output 46.4 vs 49.6; input inflation rose to a three-month high and job losses appeared for the first time since May.",
+    "market_expectations": {
+      "source": "pre-release calendar/major-bank RBA expectations",
+      "expected_value": "Consensus references around 52.0 composite, 51.7 manufacturing and 52.5 services; all four major banks expected a 25bp RBA hike to 4.60% on Sep 29.",
+      "implied_probability": null,
+      "distribution_notes": "Activity missed expectations, but stronger price pressure prevents a clean dovish interpretation."
+    },
+    "surprise": {
+      "actual": {
+        "composite": 50.8,
+        "manufacturing": 49.3,
+        "services": 51.4,
+        "manufacturing_output": 46.4
+      },
+      "consensus": {
+        "composite": 52.0,
+        "manufacturing": 51.7,
+        "services": 52.5
+      },
+      "previous": {
+        "composite": 52.7,
+        "manufacturing": 52.0,
+        "services": 53.2,
+        "manufacturing_output": 49.6
+      },
+      "revised_previous": null,
+      "surprise_direction": "growth_negative_inflation_mixed_hawkish",
+      "components": {
+        "exports": "fresh fall",
+        "employment": "first job losses since May",
+        "input_prices": "highest inflation in three months",
+        "output_charges": "strong rise"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Release is about 48 minutes old; AUD/USD around 0.7109 was soft and short-term technicals were sell-biased, but a clean AUS200 reaction was not available.",
+      "observed_reaction": {
+        "AUDUSD": "~0.7109, about -0.13%; short-term technicals sell-biased",
+        "AUS200": "current reaction unavailable"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "AUDUSD": "soft, confirming weaker-growth read",
+        "RBA_channel": "price pressures argue against a strongly dovish rates reaction",
+        "global_oil": "lower, supportive for inflation but stale",
+        "US_yields": "lower earlier, stale"
+      }
+    },
+    "decision_notes": "Residual forecast after a 48-minute delay. Learning profile is empty; no learning adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.43,
+        "observed_at_utc": "2026-09-22T20:10:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 234
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day Treasury reporting",
+        "freshness_minutes": 259
+      },
+      "US10Y": {
+        "value": 4.932,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day Treasury reporting",
+        "freshness_minutes": 259
+      },
+      "VIX": {
+        "value": 14.6,
+        "observed_at_utc": "2026-09-22T19:45:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "same-day market board",
+        "freshness_minutes": 259
+      },
+      "WTI": {
+        "value": 90.42,
+        "observed_at_utc": "2026-09-22T21:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 184
+      },
+      "BRENT": {
+        "value": 97.44,
+        "observed_at_utc": "2026-09-22T21:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-day market reporting",
+        "freshness_minutes": 184
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419783-au-september-flash-pmi-m2",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8757.7998046875,
+      "reference_price_time_utc": "2026-09-22T06:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-22T06:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 1072.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T00:19:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T01:04:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T04:04:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
