@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-23T07:31:22+00:00",
   "evaluation_anchor_time_utc": "2026-09-23T07:31:22+00:00",
   "prediction_latency_seconds": 982.0,
-  "evaluated_at_utc": "2026-09-23T08:49:06.123188+00:00",
+  "evaluated_at_utc": "2026-09-23T11:41:49.733673+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -222,10 +222,11 @@
           "actual_direction_thresholded": "DOWN"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-23T11:31:22+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 6
+          "predicted_confidence": 6,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
@@ -296,10 +297,11 @@
           "actual_direction_thresholded": "DOWN"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-23T11:31:22+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
