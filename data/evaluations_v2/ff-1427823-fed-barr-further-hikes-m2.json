@@ -1,0 +1,256 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1427823-fed-barr-further-hikes-m2",
+  "event_id": "ff-1427823-fed-barr-further-hikes",
+  "event_time_utc": "2026-09-23T14:05:00+00:00",
+  "prediction_time_utc": "2026-09-23T14:29:09+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T14:29:09+00:00",
+  "prediction_latency_seconds": 1449.0,
+  "evaluated_at_utc": "2026-09-23T14:36:10.155419+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "United States",
+    "Federal Reserve",
+    "rates",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 23.2,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Fed Governor Barr said further rate hikes are likely needed; inflation risks increased and labor-market risks receded.",
+    "market_expectations": {
+      "source": "current context",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "Confirms existing hawkish repricing after PMI."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Remarks follow the PMI-driven selloff and confirm the same rate narrative.",
+      "observed_reaction": {
+        "DXY": "firm",
+        "US10Y": "near 5%",
+        "XAUUSD": "already sold off",
+        "NDX": "already sold off"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "firm",
+        "US10Y": "4.958%",
+        "VIX": "subdued",
+        "US2Y": "fresh exact unavailable"
+      }
+    },
+    "decision_notes": "Incremental update in hawkish cluster; learning profile empty."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.555,
+        "timestamp": "2026-09-23T14:25:00Z",
+        "direction": "UP",
+        "source": "Investing.com",
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": null,
+        "timestamp": "2026-09-23T14:29:09Z",
+        "direction": "UNKNOWN",
+        "source": "fresh value unavailable",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 4.958,
+        "timestamp": "2026-09-23T14:25:00Z",
+        "direction": "UP",
+        "source": "Investing.com",
+        "regime": "RISING"
+      },
+      "VIX": {
+        "value": 14.14,
+        "timestamp": "2026-09-23T14:25:00Z",
+        "direction": "DOWN",
+        "source": "Investing.com",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 90.08,
+        "timestamp": "2026-09-23T14:25:00Z",
+        "direction": "DOWN",
+        "source": "Investing.com",
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "value": 99.57,
+        "timestamp": "2026-09-23T14:25:00Z",
+        "direction": "UP_SLIGHT",
+        "source": "Investing.com",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1427823-fed-barr-further-hikes-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4316.7001953125,
+      "reference_price_time_utc": "2026-09-23T14:27:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T14:26:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2.15,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T14:44:09+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T15:29:09+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T18:29:09+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427823-fed-barr-further-hikes-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30389.6328125,
+      "reference_price_time_utc": "2026-09-23T14:29:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T14:28:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.15,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T14:44:09+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T15:29:09+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T18:29:09+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427823-fed-barr-further-hikes-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7717.1201171875,
+      "reference_price_time_utc": "2026-09-23T14:29:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T14:28:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.15,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T14:44:09+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T15:29:09+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T18:29:09+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
