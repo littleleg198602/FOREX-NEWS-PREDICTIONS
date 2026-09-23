@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-23T00:04:13+00:00",
   "evaluation_anchor_time_utc": "2026-09-23T00:04:13+00:00",
   "prediction_latency_seconds": 660.0,
-  "evaluated_at_utc": "2026-09-23T00:09:14.222131+00:00",
+  "evaluated_at_utc": "2026-09-23T00:37:32.744615+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -142,10 +142,12 @@
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-23T00:19:13+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 207.217
         },
         "1h": {
           "status": "PENDING",
@@ -186,10 +188,12 @@
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-23T00:19:13+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 167.217
         },
         "1h": {
           "status": "PENDING",
@@ -214,26 +218,41 @@
     {
       "prediction_id": "ff-1419785-witkoff-iran-mediated-talks-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4401.7998046875,
-      "reference_price_time_utc": "2026-09-23T00:00:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-22T23:59:00+00:00",
+      "reference_price": 4406.2998046875,
+      "reference_price_time_utc": "2026-09-23T00:04:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T00:03:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 4.217,
+      "reference_age_minutes": 0.217,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-23T00:19:13+00:00",
+          "actual_price_time_utc": "2026-09-23T00:20:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T00:19:00+00:00",
+          "market_delay_minutes": 0.78,
+          "price": 4401.2998046875,
+          "change_pct": -0.113474,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.251914,
+          "post_event_range_pct": 0.158863,
+          "mfe_pct": 0.156592,
+          "mae_pct": -0.002272,
+          "directional_threshold_pct": 0.025191,
+          "actual_direction_thresholded": "DOWN"
         },
         "1h": {
           "status": "PENDING",

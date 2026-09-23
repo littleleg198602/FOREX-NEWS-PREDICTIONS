@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T20:18:33+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T20:18:33+00:00",
   "prediction_latency_seconds": 1200.0,
-  "evaluated_at_utc": "2026-09-22T22:13:14.907278+00:00",
+  "evaluated_at_utc": "2026-09-23T00:37:18.794084+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -181,10 +181,11 @@
           "reason": "no complete traded bar available at/after target"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-23T00:18:33+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
@@ -240,10 +241,11 @@
           "reason": "no complete traded bar available at/after target"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-23T00:18:33+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
@@ -302,14 +304,28 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-23T00:18:33+00:00",
+          "actual_price_time_utc": "2026-09-23T00:19:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T00:18:00+00:00",
+          "market_delay_minutes": 0.45,
+          "price": 4401.5,
+          "change_pct": 0.084137,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.107376,
+          "post_event_range_pct": 0.318341,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 1.107376
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-23",
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
         }

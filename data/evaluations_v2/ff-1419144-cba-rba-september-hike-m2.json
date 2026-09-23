@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-21T03:49:40+00:00",
   "evaluation_anchor_time_utc": "2026-09-21T03:49:40+00:00",
   "prediction_latency_seconds": 1720.0,
-  "evaluated_at_utc": "2026-09-22T01:48:46.409237+00:00",
+  "evaluated_at_utc": "2026-09-23T00:36:26.821400+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -160,9 +160,25 @@
       "predicted_confidence": 5,
       "evaluations": {
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-22",
+          "actual_price_time_utc": "2026-09-22T06:12:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-22T06:11:00+00:00",
+          "price": 8757.7998046875,
+          "change_pct": 0.31155,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.634554,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.631109,
+          "mfe_pct": 0.092773,
+          "mae_pct": -0.574991,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.063455,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "horizons"
         },
         "4h": {
@@ -170,8 +186,8 @@
           "target_time_utc": "2026-09-21T07:49:40+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 4,
-          "first_available_price_time_utc": "2026-09-22T00:01:00+00:00",
-          "market_delay_minutes": 971.33,
+          "first_available_price_time_utc": "2026-09-22T00:00:00+00:00",
+          "market_delay_minutes": 970.33,
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "1h": {
