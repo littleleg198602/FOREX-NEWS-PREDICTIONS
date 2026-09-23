@@ -1,0 +1,250 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419819-germany-september-flash-pmi-m2",
+  "event_id": "ff-1419819-germany-september-flash-pmi",
+  "event_time_utc": "2026-09-23T07:30:00+00:00",
+  "prediction_time_utc": "2026-09-23T08:45:51+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T08:45:51+00:00",
+  "prediction_latency_seconds": 4551.0,
+  "evaluated_at_utc": "2026-09-23T08:49:08.203003+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Germany",
+    "PMI",
+    "growth",
+    "inflation",
+    "ECB"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 75.9,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "Germany's composite PMI rose to 53.8 from 51.8, strongest since October 2025; services jumped to 52.9 from 49.7 and ended five months of contraction, while manufacturing eased to 53.8 from 54.3 and input costs accelerated on fuel/energy.",
+    "market_expectations": {
+      "source": "Forex Factory calendar / contemporaneous release coverage",
+      "expected_value": {
+        "manufacturing": 54.1,
+        "services": 49.9,
+        "composite_reuters": 51.8
+      },
+      "implied_probability": null,
+      "distribution_notes": "Services/composite delivered a large upside surprise; manufacturing was a small miss."
+    },
+    "surprise": {
+      "actual": {
+        "manufacturing": 53.8,
+        "services": 52.9,
+        "composite": 53.8
+      },
+      "consensus": {
+        "manufacturing": 54.1,
+        "services": 49.9,
+        "composite": 51.8
+      },
+      "previous": {
+        "manufacturing": 54.3,
+        "services": 49.7,
+        "composite": 51.8
+      },
+      "revised_previous": null,
+      "surprise_direction": "strong_services_and_composite_positive_with_small_manufacturing_miss",
+      "components": {
+        "new_orders": "fastest growth since Feb 2022",
+        "employment": "second monthly rise; fastest job creation in more than three years",
+        "input_costs": "fastest rise in four months, fuel/energy cited",
+        "output_prices": "fastest rise since May"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Forecast is roughly 76 minutes after the 07:30 UTC event; DAX was only about +0.08% and EUR/USD about -0.22% in a contemporaneous snapshot, indicating muted/absorbed reaction rather than an unpriced growth shock.",
+      "observed_reaction": {
+        "GDAXI": "25598.77, about +0.08%",
+        "STOXX50_proxy": "6341.52, about -0.16%",
+        "EURUSD": "1.1425, about -0.22%",
+        "BRENT": "95.91, about -4.45%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "GDAXI": "only slightly positive",
+        "STOXX50": "regional proxy slightly negative",
+        "EURUSD": "soft despite growth beat",
+        "BRENT": "sharply lower, supportive for future inflation but contradicts survey fuel-cost pressure",
+        "DXY": "firm but snapshot less fresh",
+        "US2Y_US10Y_VIX": "prior-US-close only and too stale for fresh confirmation",
+        "local_rates": "no sufficiently fresh pre-decision Bund/German rate snapshot"
+      }
+    },
+    "decision_notes": "Residual forecast only; learning_profile.json is empty, so no learning adjustment. Delayed release means no attempt to forecast the original PMI reaction."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.72,
+        "observed_at_utc": "2026-09-23T06:30:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-morning market brief",
+        "freshness_minutes": 136
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "prior US close",
+        "freshness_minutes": 766
+      },
+      "US10Y": {
+        "value": 4.935,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "prior US close",
+        "freshness_minutes": 766
+      },
+      "VIX": {
+        "value": 14.6,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "prior US close",
+        "freshness_minutes": 766
+      },
+      "WTI": {
+        "value": 88.97,
+        "observed_at_utc": "2026-09-23T07:25:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-morning snapshot",
+        "freshness_minutes": 81
+      },
+      "BRENT": {
+        "value": 95.91,
+        "observed_at_utc": "2026-09-23T07:35:49Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "Infront/tagesschau snapshot",
+        "freshness_minutes": 70
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419819-germany-september-flash-pmi-m2",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25524.560546875,
+      "reference_price_time_utc": "2026-09-23T08:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T08:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T09:00:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T09:45:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T12:45:51+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419819-germany-september-flash-pmi-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6332.72021484375,
+      "reference_price_time_utc": "2026-09-23T08:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T08:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T09:00:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T09:45:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T12:45:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
