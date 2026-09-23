@@ -1,0 +1,247 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419814-france-september-flash-pmi-m2",
+  "event_id": "ff-1419814-france-september-flash-pmi",
+  "event_time_utc": "2026-09-23T07:15:00+00:00",
+  "prediction_time_utc": "2026-09-23T07:31:22+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T07:31:22+00:00",
+  "prediction_latency_seconds": 982.0,
+  "evaluated_at_utc": "2026-09-23T07:35:03.663519+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "France",
+    "PMI",
+    "growth",
+    "inflation",
+    "ECB"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 16.4,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "French services PMI jumped to 51.4 versus 48.3 consensus and 48.0 prior, returning services to expansion; manufacturing slipped to 50.3 versus 50.9 consensus and 51.1 prior, while the S&P report said overall activity expanded at the fastest pace in over two years and price pressures were the strongest since May.",
+    "market_expectations": {
+      "source": "Forex Factory calendar immediately after release",
+      "expected_value": {
+        "manufacturing": 50.9,
+        "services": 48.3
+      },
+      "implied_probability": null,
+      "distribution_notes": "Services delivered a very large positive surprise; manufacturing was a modest negative surprise. German and euro-area PMIs were still pending at decision time."
+    },
+    "surprise": {
+      "actual": {
+        "manufacturing": 50.3,
+        "services": 51.4
+      },
+      "consensus": {
+        "manufacturing": 50.9,
+        "services": 48.3
+      },
+      "previous": {
+        "manufacturing": 51.1,
+        "services": 48.0
+      },
+      "revised_previous": null,
+      "surprise_direction": "strong_services_positive_mixed_with_manufacturing_miss",
+      "components": {
+        "demand": "improved, led by service-sector sales",
+        "employment": "continued to decline",
+        "business_optimism": "weakened further",
+        "input_costs": "fastest inflation since May",
+        "output_charges": "fastest inflation since May"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The decision is about 16 minutes after the 07:15 UTC release; CAC 40 was already around +0.20% and Euro Stoxx 50 around +0.10%, so part of the positive growth surprise had time to enter prices.",
+      "observed_reaction": {
+        "FCHI40": "~8154.91, +0.20% snapshot",
+        "STOXX50": "~6324.72, +0.10% snapshot",
+        "EURUSD": "~1.1426 in a firm-dollar backdrop"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "NEUTRAL",
+      "observations": {
+        "FCHI40": "slightly positive",
+        "STOXX50": "slightly positive",
+        "EURUSD": "soft rather than strongly confirming",
+        "WTI": "~88.97, lower",
+        "BRENT": "~98.14, lower",
+        "DXY": "~100.72 firm",
+        "US_yields_VIX": "latest reliable values are prior-US-close and too stale for fresh confirmation",
+        "local_rates": "no sufficiently fresh pre-decision French/Bund snapshot available"
+      }
+    },
+    "decision_notes": "Residual forecast from 07:31 UTC. learning_profile.json is empty, so no learning adjustment. German/euro-area PMIs were still pending, which materially reduces 1h/4h confidence."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.72,
+        "observed_at_utc": "2026-09-23T06:30:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-morning market brief",
+        "freshness_minutes": 61
+      },
+      "US2Y": {
+        "value": 4.73,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "prior US close / WSJ",
+        "freshness_minutes": 691
+      },
+      "US10Y": {
+        "value": 4.935,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "prior US close / WSJ",
+        "freshness_minutes": 691
+      },
+      "VIX": {
+        "value": 14.6,
+        "observed_at_utc": "2026-09-22T20:00:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "prior US close market board",
+        "freshness_minutes": 691
+      },
+      "WTI": {
+        "value": 88.97,
+        "observed_at_utc": "2026-09-23T07:25:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-morning market snapshot",
+        "freshness_minutes": 6
+      },
+      "BRENT": {
+        "value": 98.14,
+        "observed_at_utc": "2026-09-23T07:25:00Z",
+        "direction": "down",
+        "regime": "FALLING",
+        "source": "same-morning market snapshot",
+        "freshness_minutes": 6
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419814-france-september-flash-pmi-m2",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8181.7998046875,
+      "reference_price_time_utc": "2026-09-23T07:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T07:19:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T07:46:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T08:31:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:31:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419814-france-september-flash-pmi-m2",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6341.72021484375,
+      "reference_price_time_utc": "2026-09-23T07:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T07:19:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T07:46:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T08:31:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:31:22+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

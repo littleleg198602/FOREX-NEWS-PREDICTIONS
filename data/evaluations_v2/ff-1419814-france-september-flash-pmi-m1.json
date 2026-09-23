@@ -1,0 +1,253 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1419814-france-september-flash-pmi-m1",
+  "event_id": "ff-1419814-france-september-flash-pmi",
+  "event_time_utc": "2026-09-23T07:15:00+00:00",
+  "prediction_time_utc": "2026-09-23T07:31:22+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T07:31:22+00:00",
+  "prediction_latency_seconds": 982.0,
+  "evaluated_at_utc": "2026-09-23T07:35:03.450900+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "France",
+    "PMI",
+    "growth",
+    "inflation",
+    "ECB"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-23T07:31:22+00:00",
+    "captured_for_event_time_utc": "2026-09-23T07:31:22+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.74500274658203,
+        "timestamp_utc": "2026-09-23T07:26:00+00:00",
+        "available_at_utc": "2026-09-23T07:26:00+00:00",
+        "age_minutes": 5.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.000992,
+        "change_pct_240m": 0.065557,
+        "change_abs_60m": -0.000999,
+        "raw_change_pct_60m": -0.000992,
+        "raw_change_abs_60m": -0.000999,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.8984375,
+        "timestamp_utc": "2026-09-23T07:25:00+00:00",
+        "available_at_utc": "2026-09-23T07:25:00+00:00",
+        "age_minutes": 6.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.011499,
+        "change_pct_240m": 0.019164,
+        "change_abs_60m": 0.011719,
+        "raw_change_pct_60m": -0.011499,
+        "raw_change_abs_60m": -0.011719,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "ZN=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 106.078125,
+        "timestamp_utc": "2026-09-23T07:25:00+00:00",
+        "available_at_utc": "2026-09-23T07:25:00+00:00",
+        "age_minutes": 6.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 10Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.073594,
+        "change_pct_240m": 0.117699,
+        "change_abs_60m": 0.078125,
+        "raw_change_pct_60m": -0.073594,
+        "raw_change_abs_60m": -0.078125,
+        "regime": "RISING"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 14.170000076293945,
+        "timestamp_utc": "2026-09-23T07:21:00+00:00",
+        "available_at_utc": "2026-09-23T07:21:00+00:00",
+        "age_minutes": 10.37,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.281492,
+        "change_pct_240m": -0.281492,
+        "change_abs_60m": -0.04,
+        "raw_change_pct_60m": -0.281492,
+        "raw_change_abs_60m": -0.04,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 89.98999786376953,
+        "timestamp_utc": "2026-09-23T07:26:00+00:00",
+        "available_at_utc": "2026-09-23T07:26:00+00:00",
+        "age_minutes": 5.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.671214,
+        "change_pct_240m": 0.525024,
+        "change_abs_60m": 0.599998,
+        "raw_change_pct_60m": 0.671214,
+        "raw_change_abs_60m": 0.599998,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 99.44999694824219,
+        "timestamp_utc": "2026-09-23T07:25:00+00:00",
+        "available_at_utc": "2026-09-23T07:25:00+00:00",
+        "age_minutes": 6.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.974717,
+        "change_pct_240m": 0.903003,
+        "change_abs_60m": 0.959999,
+        "raw_change_pct_60m": 0.974717,
+        "raw_change_abs_60m": 0.959999,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "RISING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1419814-france-september-flash-pmi-m1",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8181.7998046875,
+      "reference_price_time_utc": "2026-09-23T07:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T07:19:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T07:46:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T08:31:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:31:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1419814-france-september-flash-pmi-m1",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6341.72021484375,
+      "reference_price_time_utc": "2026-09-23T07:20:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T07:19:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 11.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T07:46:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T08:31:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T11:31:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

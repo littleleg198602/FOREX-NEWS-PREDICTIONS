@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T06:54:45+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T06:54:45+00:00",
   "prediction_latency_seconds": 3225.0,
-  "evaluated_at_utc": "2026-09-22T11:30:30.550562+00:00",
+  "evaluated_at_utc": "2026-09-23T07:34:45.488632+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -163,7 +163,7 @@
     {
       "prediction_id": "ff-1419496-uk-public-sector-finances-aug-2026-m1",
       "instrument": "UK100",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FTSE",
       "yahoo_proxy_for": null,
@@ -203,9 +203,25 @@
           "reference_age_minutes": 918.75
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-22",
+          "actual_price_time_utc": "2026-09-22T15:36:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-22T15:35:00+00:00",
+          "price": 10708.33,
+          "change_pct": -0.285687,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.097406,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.589809,
+          "mfe_pct": 0.285967,
+          "mae_pct": -0.303842,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.109741,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "legacy_fallback"
         }
       }
