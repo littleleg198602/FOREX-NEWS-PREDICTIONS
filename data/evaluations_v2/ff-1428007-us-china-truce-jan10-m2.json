@@ -1,0 +1,260 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428007-us-china-truce-jan10-m2",
+  "event_id": "ff-1428007-us-china-truce-jan10",
+  "event_time_utc": "2026-09-23T22:06:00+00:00",
+  "prediction_time_utc": "2026-09-23T22:09:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T22:09:30+00:00",
+  "prediction_latency_seconds": 210.0,
+  "evaluated_at_utc": "2026-09-23T22:12:26.400988+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US-China",
+    "trade",
+    "tariffs",
+    "geopolitics"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 3.5,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Bessent said the US and China agreed to extend the Busan trade truce to Jan. 10, reducing near-term tariff/escalation tail risk ahead of the Trump-Xi meeting.",
+    "market_expectations": {
+      "source": "prior market coverage",
+      "expected_value": "some extension was already anticipated, with discussion of roughly 3-6 months",
+      "implied_probability": null,
+      "distribution_notes": "The extension direction was partly expected; the Jan. 10 date is new confirmation."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Markets had already been trading on expectations of an extension and a Trump-Xi meeting; the new information confirms the deal/date rather than creating the idea from scratch.",
+      "observed_reaction": {
+        "US_cash": "closed before the headline; no valid cash reaction available at decision time"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US10Y": "5.11%, sharply higher on the day",
+        "US2Y": "4.85%, sharply higher",
+        "VIX": "15.18, higher at close",
+        "Brent": "103.27, elevated",
+        "US_equities": "closed lower before headline; no clean post-headline cash confirmation"
+      }
+    },
+    "decision_notes": "Forecast is residual from 22:09:30 UTC. Learning profile is empty, so no learning adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T22:09:30Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Forex Factory/market coverage",
+        "freshness_minutes": 0
+      },
+      "US2Y": {
+        "value": 4.85,
+        "observed_at_utc": "2026-09-23T20:22:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "US Treasury close via market wrap",
+        "freshness_minutes": 107
+      },
+      "US10Y": {
+        "value": 5.11,
+        "observed_at_utc": "2026-09-23T20:22:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "US Treasury close via market wrap",
+        "freshness_minutes": 107
+      },
+      "VIX": {
+        "value": 15.18,
+        "observed_at_utc": "2026-09-23T20:22:00Z",
+        "direction": "up",
+        "regime": "LOW",
+        "source": "Cboe close via market wrap",
+        "freshness_minutes": 107
+      },
+      "WTI": {
+        "value": 92.38,
+        "observed_at_utc": "2026-09-23T19:03:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "market wrap",
+        "freshness_minutes": 186
+      },
+      "BRENT": {
+        "value": 103.27,
+        "observed_at_utc": "2026-09-23T19:03:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "market wrap",
+        "freshness_minutes": 186
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428007-us-china-truce-jan10-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30470.293,
+      "reference_price_time_utc": "2026-09-23T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 52.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T22:24:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T23:09:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T02:09:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428007-us-china-truce-jan10-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7706.03,
+      "reference_price_time_utc": "2026-09-23T20:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T20:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 92.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T22:24:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T23:09:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T02:09:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428007-us-china-truce-jan10-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 65200.23828125,
+      "reference_price_time_utc": "2026-09-18T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-18T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8139.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T22:24:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T23:09:30+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T02:09:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
