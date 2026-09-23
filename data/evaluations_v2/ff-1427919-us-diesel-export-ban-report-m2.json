@@ -1,0 +1,219 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1427919-us-diesel-export-ban-report-m2",
+  "event_id": "ff-1427919-us-diesel-export-ban-report",
+  "event_time_utc": "2026-09-23T16:59:00+00:00",
+  "prediction_time_utc": "2026-09-23T17:12:00+00:00",
+  "evaluation_anchor_time_utc": "2026-09-23T17:12:00+00:00",
+  "prediction_latency_seconds": 780.0,
+  "evaluated_at_utc": "2026-09-23T17:12:10.784622+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US policy",
+    "diesel",
+    "energy",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": false,
+    "news_age_minutes": 13,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Politico report that the Trump administration is preparing a possible 90-day US diesel export ban; diesel cracks immediately fell $12.70 to $97.85/bbl while gasoline cracks rose about $2 to $47.41/bbl, showing a large but internally conflicting product-market shock.",
+    "market_expectations": {
+      "source": "Forex Factory/Walter Bloomberg market reaction",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No scheduled consensus; White House reportedly denied the report, materially lowering policy certainty."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Product cracks reacted immediately before the forecast decision; the residual call starts after that first move.",
+      "observed_reaction": {
+        "US_diesel_crack": "-12.70 to $97.85/bbl",
+        "US_gasoline_crack": "+$2 to $47.41/bbl",
+        "European_gasoil_cracks": "rose on reduced-US-export expectations"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "product_markets": "strong immediate confirmation",
+        "WTI": "near $90/two-week low, not a clean crude-price confirmation",
+        "DXY": "firm earlier",
+        "US2Y_US10Y": "firm/high-rate backdrop",
+        "VIX": "subdued earlier, no broad panic confirmation",
+        "gold": "already weak after PMI, not a clean diesel-policy signal"
+      }
+    },
+    "decision_notes": "Learning profile: M2 mixed_neutral 1-4 horizons is ACTIONABLE with strong historical calibration, supporting MIXED rather than forcing a weak directional call; no coefficient/threshold tuning."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.96,
+        "observed_at_utc": "2026-09-23T13:11:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Charles Schwab morning snapshot",
+        "freshness_minutes": 241
+      },
+      "US2Y": {
+        "value": 4.79,
+        "observed_at_utc": "2026-09-23T16:00:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "VT Markets US-hours report",
+        "freshness_minutes": 72
+      },
+      "US10Y": {
+        "value": 4.98,
+        "observed_at_utc": "2026-09-23T13:46:00Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "current Sep-23 market-implied snapshot",
+        "freshness_minutes": 206
+      },
+      "VIX": {
+        "value": 14.31,
+        "observed_at_utc": "2026-09-23T13:11:00Z",
+        "direction": "low",
+        "regime": "LOW",
+        "source": "Charles Schwab morning snapshot",
+        "freshness_minutes": 241
+      },
+      "WTI": {
+        "value": 90.0,
+        "observed_at_utc": "2026-09-23T16:00:00Z",
+        "direction": "up_from_low",
+        "regime": "RISING",
+        "source": "VT Markets US-hours report",
+        "freshness_minutes": 72
+      },
+      "BRENT": {
+        "value": null,
+        "observed_at_utc": "2026-09-23T16:59:00Z",
+        "direction": "unknown",
+        "regime": "UNKNOWN",
+        "source": "current news context",
+        "freshness_minutes": 13
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1427919-us-diesel-export-ban-report-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7698.47021484375,
+      "reference_price_time_utc": "2026-09-23T17:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T17:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T17:27:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T18:12:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T21:12:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427919-us-diesel-export-ban-report-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51507.01171875,
+      "reference_price_time_utc": "2026-09-23T17:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T17:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.0,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T17:27:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T18:12:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-23T21:12:00+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
