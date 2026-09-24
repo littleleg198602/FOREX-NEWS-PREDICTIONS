@@ -1,0 +1,203 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428029-australia-august-labour-force-m2",
+  "event_id": "ff-1428029-australia-august-labour-force",
+  "event_time_utc": "2026-09-24T01:30:00+00:00",
+  "prediction_time_utc": "2026-09-24T02:33:02+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T02:33:02+00:00",
+  "prediction_latency_seconds": 3782.0,
+  "evaluated_at_utc": "2026-09-24T02:37:41.483912+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Australia",
+    "employment",
+    "unemployment",
+    "RBA"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 61.0,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Mixed Australian labour report: employment +39.5K beat +20K consensus, but unemployment rose to 4.6% vs 4.5% expected and full-time employment fell 6.3K while part-time rose 45.8K.",
+    "market_expectations": {
+      "source": "Forex Factory/InvestingLive preview",
+      "expected_value": {
+        "employment_change_k": 20.0,
+        "unemployment_rate_pct": 4.5
+      },
+      "implied_probability": null,
+      "distribution_notes": "RBA already hawkish; markets had been pricing a high probability of another hike, making labour composition important."
+    },
+    "surprise": {
+      "actual": {
+        "employment_change_k": 39.5,
+        "unemployment_rate_pct": 4.6,
+        "full_time_change_k": -6.3,
+        "part_time_change_k": 45.8,
+        "participation_rate_pct": 67.1
+      },
+      "consensus": {
+        "employment_change_k": 20.0,
+        "unemployment_rate_pct": 4.5
+      },
+      "previous": {
+        "employment_change_k": -15.8,
+        "unemployment_rate_pct": 4.5
+      },
+      "revised_previous": {
+        "employment_change_k": -15.9
+      },
+      "surprise_direction": "mixed_headline_beat_but_labour_quality_softened",
+      "components": {
+        "full_time": "-6.3K",
+        "part_time": "+45.8K",
+        "participation": "67.1% from 66.9%"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "About 61 minutes elapsed. AUD/USD initially hit a fresh low near 0.7025 after the mixed report but lacked follow-through; ASX was already deeply weak before the release, so forecast targets residual movement only.",
+      "observed_reaction": {
+        "AUDUSD": "fresh low around 0.7025 after release, then no follow-through",
+        "AUS200": "already down about 1.2% around 00:10 UTC before the 01:30 UTC release; exact clean post-release index move not reliably isolated"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "AUS200": "pre-release risk-off, >3-month low",
+        "AUDUSD": "weak after mixed jobs but selling lacked follow-through",
+        "US10Y": "5.114% prior close, major valuation headwind",
+        "VIX": "15.18 prior close, +6.83%",
+        "Brent": "above $103 before Australia open",
+        "DXY": "101.12 prior snapshot, firm",
+        "RBA": "inflation risks flagged; next policy meeting Sep 29"
+      }
+    },
+    "decision_notes": "Residual forecast from 02:33:02 UTC. learning_profile.json is empty, so no learning confidence adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.12,
+        "observed_at_utc": "2026-09-23T21:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Swingfolio morning snapshot",
+        "freshness_minutes": 333
+      },
+      "US2Y": {
+        "value": 4.85,
+        "observed_at_utc": "2026-09-23T20:22:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "market close context",
+        "freshness_minutes": 371
+      },
+      "US10Y": {
+        "value": 5.114,
+        "observed_at_utc": "2026-09-23T21:00:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Swingfolio morning snapshot",
+        "freshness_minutes": 333
+      },
+      "VIX": {
+        "value": 15.18,
+        "observed_at_utc": "2026-09-23T21:00:00Z",
+        "direction": "up",
+        "regime": "LOW",
+        "source": "Swingfolio morning snapshot",
+        "freshness_minutes": 333
+      },
+      "WTI": {
+        "value": 92.22,
+        "observed_at_utc": "2026-09-23T19:11:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "market snapshot",
+        "freshness_minutes": 442
+      },
+      "BRENT": {
+        "value": 103.0,
+        "observed_at_utc": "2026-09-23T21:00:00Z",
+        "direction": "up",
+        "regime": "FLAT",
+        "source": "Swingfolio morning snapshot",
+        "freshness_minutes": 333
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "FLAT"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428029-australia-august-labour-force-m2",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8697.2998046875,
+      "reference_price_time_utc": "2026-09-24T02:18:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T02:17:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 15.033,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T02:48:02+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T03:33:02+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T06:33:02+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
