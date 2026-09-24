@@ -1,0 +1,279 @@
+{
+  "event_id": "ff-1428114-williams-another-hike-year-end",
+  "event_cluster_id": "fed-williams-sep24-guidance",
+  "created_at_utc": "2026-09-24T14:53:51Z",
+  "event_time_utc": "2026-09-24T13:05:51Z",
+  "published_at_utc": "2026-09-24T13:05:51Z",
+  "source_time_text": "Forex Factory: 1 hr 48 min ago",
+  "observed_at_utc": "2026-09-24T14:53:51Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 180,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "US",
+    "Fed",
+    "rates",
+    "inflation"
+  ],
+  "prediction_id": "ff-1428114-williams-another-hike-year-end-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 108,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Williams said another rate hike by year-end is a reasonable expectation.",
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "This extends his earlier inflation warning; yields remained very high and equities lower.",
+      "observed_reaction": {
+        "US10Y": "~5.14%",
+        "SP500": "-0.21%",
+        "NASDAQ": "-0.55%",
+        "gold": "weak near $4,295"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "US10Y": "~5.14%",
+        "SP500": "-0.21%",
+        "NASDAQ": "-0.55%",
+        "gold": "weak near $4,295"
+      }
+    },
+    "decision_notes": "Residual forecast from 2026-09-24T14:53:51Z only. Leakage-safe learning profile is empty; no confidence adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.239,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "firm",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "US2Y": {
+        "value": 4.947,
+        "observed_at_utc": "2026-09-24T12:00:00Z",
+        "direction": "UP",
+        "regime": "restrictive",
+        "source": "same-day market coverage",
+        "freshness_minutes": 174
+      },
+      "US10Y": {
+        "value": 5.14,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "highest area since 2007",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      },
+      "VIX": {
+        "value": 15.65,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "UP",
+        "regime": "elevated but not stressed",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "WTI": {
+        "value": 93.08,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "elevated",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "BRENT": {
+        "value": 105.49,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "energy inflation pressure",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      },
+      "SP500": {
+        "value": 7690.09,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "DOWN",
+        "regime": "-0.21%",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "NASDAQ": {
+        "value": 26787.29,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "DOWN",
+        "regime": "-0.55%",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "XAUUSD": {
+        "value": 4295,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "DOWN",
+        "regime": "weak under high yields",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      }
+    },
+    "regimes": {
+      "rates": "restrictive, US10Y around 5.14%",
+      "risk": "US equities lower",
+      "energy": "Brent above $105",
+      "learning": "INSUFFICIENT: learning_profile.json empty; no confidence adjustment"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Much of the hawkish repricing is already visible."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Needs fresh yield/dollar confirmation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Much of the hawkish repricing is already visible."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "High yields and firm dollar keep residual pressure."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "The move is already extended and offsets remain."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Needs fresh yield/dollar confirmation."
+        }
+      },
+      "counter_case": "Geopolitical escalation or a yield reversal can lift gold.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "weak/extended",
+        "trend_1h": "down",
+        "session_location": "US morning",
+        "extension_state": "extended",
+        "market_open": true,
+        "source": "same-run contemporaneous market snapshots",
+        "observed_at_utc": "2026-09-24T14:05:00Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Hawkish guidance reinforces the rate headwind."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Next session depends on yields."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Hawkish guidance reinforces the rate headwind."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "US10Y near 5.14% is a valuation drag."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Some hawkishness is priced."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Next session depends on yields."
+        }
+      },
+      "counter_case": "US-China détente and resilient earnings can offset rates.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "down",
+        "trend_1h": "down",
+        "session_location": "US cash morning",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "same-run contemporaneous market snapshots",
+        "observed_at_utc": "2026-09-24T14:05:00Z"
+      }
+    },
+    {
+      "instrument": "SP500",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Hawkish guidance reinforces the rate headwind."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Next session depends on yields."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Hawkish guidance reinforces the rate headwind."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "US10Y near 5.14% is a valuation drag."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Some hawkishness is priced."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Next session depends on yields."
+        }
+      },
+      "counter_case": "Strong growth can support earnings if yields stop rising.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "down",
+        "trend_1h": "down",
+        "session_location": "US cash morning",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "same-run contemporaneous market snapshots",
+        "observed_at_utc": "2026-09-24T14:05:00Z"
+      }
+    }
+  ]
+}
