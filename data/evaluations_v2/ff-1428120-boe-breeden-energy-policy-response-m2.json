@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T14:53:51+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T14:53:51+00:00",
   "prediction_latency_seconds": 3660.0,
-  "evaluated_at_utc": "2026-09-24T15:10:55.251682+00:00",
+  "evaluated_at_utc": "2026-09-24T17:30:59.030485+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -121,7 +121,7 @@
     {
       "prediction_id": "ff-1428120-boe-breeden-energy-policy-response-m2",
       "instrument": "UK100",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^FTSE",
       "yahoo_proxy_for": null,
@@ -137,17 +137,32 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "DATA_GAP",
+          "status": "DONE",
           "target_time_utc": "2026-09-24T15:08:51+00:00",
+          "actual_price_time_utc": "2026-09-24T15:09:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T15:08:00+00:00",
+          "market_delay_minutes": 0.15,
+          "price": 10694.16015625,
+          "change_pct": -0.180609,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.145233,
+          "post_event_range_pct": 0.209359,
+          "mfe_pct": 0.205904,
+          "mae_pct": -0.003455,
+          "directional_threshold_pct": 0.014523,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "1h": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-24T15:53:51+00:00",
           "predicted_direction": "DOWN",
           "predicted_confidence": 5,
           "reason": "no complete traded bar available at/after target"
-        },
-        "1h": {
-          "status": "PENDING",
-          "target_time_utc": "2026-09-24T15:53:51+00:00",
-          "predicted_direction": "DOWN",
-          "predicted_confidence": 5
         },
         "4h": {
           "status": "PENDING",

@@ -1,0 +1,348 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428182-us-iran-phased-hormuz-deal-m2",
+  "event_id": "ff-1428182-us-iran-phased-hormuz-deal",
+  "event_time_utc": "2026-09-24T16:20:00+00:00",
+  "prediction_time_utc": "2026-09-24T17:26:05+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T17:26:05+00:00",
+  "prediction_latency_seconds": 3965.0,
+  "evaluated_at_utc": "2026-09-24T17:31:02.237602+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "US_IRAN",
+    "HORMUZ",
+    "ENERGY",
+    "RISK_SENTIMENT"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 66.1,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Reuters reported a phased US-Iran path in which Iran could reopen Hormuz and Washington could lift its economic blockade.",
+    "market_expectations": {
+      "source": "Reuters",
+      "expected_value": null,
+      "implied_probability": 0.3,
+      "distribution_notes": "Former US negotiator Dennis Ross estimated a 30% chance of agreement before the midterms."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Crude had already pared gains after the report by 12:32pm EDT.",
+      "observed_reaction": {
+        "BRENT": "about 104.89, +1.57%",
+        "WTI": "about 93.91, +1.97%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "confirmed de-escalation reaction by paring gains",
+        "rates": "restrictive US yield backdrop remains a counter-driver",
+        "deal_status": "exploratory, not signed"
+      }
+    },
+    "decision_notes": "Residual forecast from 17:26:05Z. No learning adjustment was applied."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "timestamp": "2026-09-24T17:26:05Z",
+        "direction": "UNKNOWN",
+        "regime": "RISING",
+        "source": "same-day public market coverage",
+        "freshness": "current value unavailable"
+      },
+      "US2Y": {
+        "value": null,
+        "timestamp": "2026-09-24T17:26:05Z",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN",
+        "source": "same-day public market coverage",
+        "freshness": "current value unavailable"
+      },
+      "US10Y": {
+        "value": null,
+        "timestamp": "2026-09-24T17:26:05Z",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN",
+        "source": "same-day public market coverage",
+        "freshness": "current value unavailable"
+      },
+      "VIX": {
+        "value": null,
+        "timestamp": "2026-09-24T17:26:05Z",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN",
+        "source": "same-day public market coverage",
+        "freshness": "current value unavailable"
+      },
+      "WTI": {
+        "value": 93.91,
+        "timestamp": "2026-09-24T16:32:00Z",
+        "direction": "DOWN_FROM_HEADLINE_SPIKE",
+        "regime": "FALLING",
+        "source": "Reuters/MarketScreener",
+        "freshness": "54m"
+      },
+      "BRENT": {
+        "value": 104.89,
+        "timestamp": "2026-09-24T16:32:00Z",
+        "direction": "DOWN_FROM_HEADLINE_SPIKE",
+        "regime": "FALLING",
+        "source": "Reuters/MarketScreener",
+        "freshness": "54m"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "UNKNOWN",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428182-us-iran-phased-hormuz-deal-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4299.7001953125,
+      "reference_price_time_utc": "2026-09-24T17:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T17:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:41:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:26:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T21:26:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428182-us-iran-phased-hormuz-deal-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.05999755859375,
+      "reference_price_time_utc": "2026-09-24T17:21:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T17:20:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:41:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:26:05+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T21:26:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428182-us-iran-phased-hormuz-deal-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7701.509765625,
+      "reference_price_time_utc": "2026-09-24T17:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T17:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:41:05+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:26:05+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T21:26:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428182-us-iran-phased-hormuz-deal-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30435.32421875,
+      "reference_price_time_utc": "2026-09-24T17:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T17:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:41:05+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:26:05+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T21:26:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428182-us-iran-phased-hormuz-deal-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51331.73046875,
+      "reference_price_time_utc": "2026-09-24T17:26:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T17:25:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.083,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:41:05+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:26:05+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T21:26:05+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
