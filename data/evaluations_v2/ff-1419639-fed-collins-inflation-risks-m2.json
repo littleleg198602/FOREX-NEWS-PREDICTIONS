@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T17:22:30+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T17:22:30+00:00",
   "prediction_latency_seconds": 7890.0,
-  "evaluated_at_utc": "2026-09-24T02:07:04.425415+00:00",
+  "evaluated_at_utc": "2026-09-24T13:39:05.386396+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -203,9 +203,25 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-23",
+          "actual_price_time_utc": "2026-09-23T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T21:16:00+00:00",
+          "price": 30470.293,
+          "change_pct": -0.543115,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.856669,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.116111,
+          "mfe_pct": 0.921606,
+          "mae_pct": -0.434299,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.085667,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "horizons"
         }
       }
@@ -278,9 +294,25 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-23",
+          "actual_price_time_utc": "2026-09-23T20:37:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T20:36:00+00:00",
+          "price": 7706.03,
+          "change_pct": -0.722101,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.334062,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.863812,
+          "mfe_pct": 0.865618,
+          "mae_pct": -0.220687,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.033406,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "horizons"
         }
       }

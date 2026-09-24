@@ -1,0 +1,288 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-us-jobless-claims-2026-09-24-m2",
+  "event_id": "ff-us-jobless-claims-2026-09-24",
+  "event_time_utc": "2026-09-24T12:30:00+00:00",
+  "prediction_time_utc": "2026-09-24T13:35:20+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T13:35:20+00:00",
+  "prediction_latency_seconds": 3920.0,
+  "evaluated_at_utc": "2026-09-24T13:40:29.962697+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US",
+    "labor",
+    "jobless_claims",
+    "Fed"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 65.3,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "US initial claims were 197K versus 201K expected; prior 196K was revised to 198K. Continuing claims were 1.719M versus 1.745M expected, with prior revised to 1.717M, confirming a still-resilient labor market.",
+    "market_expectations": {
+      "source": "Forex Factory calendar / market consensus",
+      "expected_value": {
+        "initial_claims_k": 201,
+        "continuing_claims_k": 1745
+      },
+      "implied_probability": null,
+      "distribution_notes": "A small initial-claims beat, strengthened by lower-than-expected continuing claims; not a large macro shock."
+    },
+    "surprise": {
+      "actual": {
+        "initial_claims_k": 197,
+        "continuing_claims_k": 1719
+      },
+      "consensus": {
+        "initial_claims_k": 201,
+        "continuing_claims_k": 1745
+      },
+      "previous": {
+        "initial_claims_k": 196,
+        "continuing_claims_k": 1730
+      },
+      "revised_previous": {
+        "initial_claims_k": 198,
+        "continuing_claims_k": 1717
+      },
+      "surprise_direction": "labor_stronger_than_expected",
+      "components": {
+        "initial_claims": "4K below consensus",
+        "continuing_claims": "26K below consensus"
+      }
+    },
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "The release reinforced an already hawkish rates/dollar regime. Gold traded below $4,300 after the claims while US futures were already weak before the print.",
+      "observed_reaction": {
+        "XAUUSD": "fell below $4,300 in post-release coverage",
+        "NDX_futures": "already about -1% pre-release; no clean isolated post-release percentage available",
+        "US10Y": "remained around 5.13%, near multi-decade highs"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "firm near recent highs",
+        "US10Y": "~5.13%",
+        "VIX": "~16.4 and elevated",
+        "WTI": "~$93.9 and higher",
+        "Brent": "~$104.8 and elevated",
+        "gold": "below $4,300 after release"
+      }
+    },
+    "decision_notes": "Residual forecast from 13:35:20 UTC, roughly 65 minutes after the release. No learning adjustment because learning_profile.json is empty."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.29,
+        "observed_at_utc": "2026-09-24T10:48:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "same-day premarket market board",
+        "freshness_minutes": 167
+      },
+      "US2Y": {
+        "value": null,
+        "observed_at_utc": "2026-09-24T13:35:20Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "same-run web scan",
+        "freshness_minutes": 0
+      },
+      "US10Y": {
+        "value": 5.13,
+        "observed_at_utc": "2026-09-24T13:20:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "same-day market coverage",
+        "freshness_minutes": 15
+      },
+      "VIX": {
+        "value": 16.4,
+        "observed_at_utc": "2026-09-24T10:48:00Z",
+        "direction": "up",
+        "regime": "LOW",
+        "source": "same-day premarket market board",
+        "freshness_minutes": 167
+      },
+      "WTI": {
+        "value": 93.9,
+        "observed_at_utc": "2026-09-24T10:48:00Z",
+        "direction": "up",
+        "regime": "FLAT",
+        "source": "same-day premarket market board",
+        "freshness_minutes": 167
+      },
+      "BRENT": {
+        "value": 104.8,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "same-day market overview",
+        "freshness_minutes": 164
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-us-jobless-claims-2026-09-24-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4309.89990234375,
+      "reference_price_time_utc": "2026-09-24T13:31:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T13:30:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T13:50:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T14:35:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:35:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-us-jobless-claims-2026-09-24-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30249.73046875,
+      "reference_price_time_utc": "2026-09-24T13:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T13:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T13:50:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T14:35:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:35:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-us-jobless-claims-2026-09-24-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7676.72998046875,
+      "reference_price_time_utc": "2026-09-24T13:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T13:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.333,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T13:50:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T14:35:20+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T17:35:20+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

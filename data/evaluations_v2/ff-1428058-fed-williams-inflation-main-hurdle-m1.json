@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T09:07:43+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T09:07:43+00:00",
   "prediction_latency_seconds": 3043.0,
-  "evaluated_at_utc": "2026-09-24T11:14:29.607435+00:00",
+  "evaluated_at_utc": "2026-09-24T13:40:18.340030+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -221,10 +221,25 @@
           "actual_direction_thresholded": "DOWN"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-24T13:07:43+00:00",
+          "actual_price_time_utc": "2026-09-24T13:08:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T13:07:00+00:00",
+          "market_delay_minutes": 0.28,
+          "price": 4312.5,
+          "change_pct": 0.388756,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 6
+          "predicted_confidence": 6,
+          "forecast_source": "legacy_fallback",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.868285,
+          "post_event_range_pct": 0.97072,
+          "mfe_pct": 0.407375,
+          "mae_pct": -0.563346,
+          "directional_threshold_pct": 0.086829,
+          "actual_direction_thresholded": "UP"
         },
         "next_session": {
           "status": "PENDING",
@@ -269,14 +284,16 @@
           "reference_age_minutes": 710.717
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-24T13:07:43+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 6
+          "predicted_confidence": 6,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 710.717
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-24",
           "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
         }
@@ -317,14 +334,16 @@
           "reference_age_minutes": 750.717
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-24T13:07:43+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 750.717
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-24",
           "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
         }
