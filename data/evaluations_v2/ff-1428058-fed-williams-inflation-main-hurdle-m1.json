@@ -1,0 +1,296 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428058-fed-williams-inflation-main-hurdle-m1",
+  "event_id": "ff-1428058-fed-williams-inflation-main-hurdle",
+  "event_time_utc": "2026-09-24T08:17:00+00:00",
+  "prediction_time_utc": "2026-09-24T09:07:43+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T09:07:43+00:00",
+  "prediction_latency_seconds": 3043.0,
+  "evaluated_at_utc": "2026-09-24T09:14:22.656946+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "US",
+    "Fed",
+    "inflation",
+    "rates"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-24T09:07:43+00:00",
+    "captured_for_event_time_utc": "2026-09-24T09:07:43+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.19599914550781,
+        "timestamp_utc": "2026-09-24T09:05:00+00:00",
+        "available_at_utc": "2026-09-24T09:05:00+00:00",
+        "age_minutes": 2.72,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.173227,
+        "change_pct_240m": 0.117728,
+        "change_abs_60m": 0.174995,
+        "raw_change_pct_60m": 0.173227,
+        "raw_change_abs_60m": 0.174995,
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.6484375,
+        "timestamp_utc": "2026-09-24T09:04:00+00:00",
+        "available_at_utc": "2026-09-24T09:04:00+00:00",
+        "age_minutes": 3.72,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.011527,
+        "change_pct_240m": 0.007685,
+        "change_abs_60m": 0.011719,
+        "raw_change_pct_60m": -0.011527,
+        "raw_change_abs_60m": -0.011719,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "ZN=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 104.953125,
+        "timestamp_utc": "2026-09-24T09:05:00+00:00",
+        "available_at_utc": "2026-09-24T09:05:00+00:00",
+        "age_minutes": 2.72,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 10Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.044643,
+        "change_pct_240m": 0.133809,
+        "change_abs_60m": 0.046875,
+        "raw_change_pct_60m": -0.044643,
+        "raw_change_abs_60m": -0.046875,
+        "regime": "RISING"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 16.280000686645508,
+        "timestamp_utc": "2026-09-24T09:00:00+00:00",
+        "available_at_utc": "2026-09-24T09:00:00+00:00",
+        "age_minutes": 7.72,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 1.622973,
+        "change_pct_240m": 7.317077,
+        "change_abs_60m": 0.26,
+        "raw_change_pct_60m": 1.622973,
+        "raw_change_abs_60m": 0.26,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 94.08999633789062,
+        "timestamp_utc": "2026-09-24T09:05:00+00:00",
+        "available_at_utc": "2026-09-24T09:05:00+00:00",
+        "age_minutes": 2.72,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.760333,
+        "change_pct_240m": 2.898068,
+        "change_abs_60m": 0.709999,
+        "raw_change_pct_60m": 0.760333,
+        "raw_change_abs_60m": 0.709999,
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.38999938964844,
+        "timestamp_utc": "2026-09-24T09:05:00+00:00",
+        "available_at_utc": "2026-09-24T09:05:00+00:00",
+        "age_minutes": 2.72,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.93505,
+        "change_pct_240m": 3.027501,
+        "change_abs_60m": 0.93,
+        "raw_change_pct_60m": 0.93505,
+        "raw_change_abs_60m": 0.93,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428058-fed-williams-inflation-main-hurdle-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4294.60009765625,
+      "reference_price_time_utc": "2026-09-24T09:05:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T09:04:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 2.717,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T09:22:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T10:07:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T13:07:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428058-fed-williams-inflation-main-hurdle-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30470.293,
+      "reference_price_time_utc": "2026-09-23T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 710.717,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T09:22:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T10:07:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T13:07:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428058-fed-williams-inflation-main-hurdle-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7706.03,
+      "reference_price_time_utc": "2026-09-23T20:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-23T20:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 750.717,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T09:22:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T10:07:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T13:07:43+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}
