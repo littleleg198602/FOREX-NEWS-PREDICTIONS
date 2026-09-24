@@ -1,0 +1,183 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428065-uk-cbi-retail-september-m2",
+  "event_id": "ff-1428065-uk-cbi-retail-september",
+  "event_time_utc": "2026-09-24T10:42:40+00:00",
+  "prediction_time_utc": "2026-09-24T11:08:40+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T11:08:40+00:00",
+  "prediction_latency_seconds": 1560.0,
+  "evaluated_at_utc": "2026-09-24T11:14:41.343720+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "UK",
+    "retail",
+    "growth",
+    "CBI"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 26,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "CBI reported faster declines in September retail volumes, the fastest online-sales decline in nearly three years and the quickest cut in retailer order volumes since the survey began in 1983.",
+    "market_expectations": {
+      "source": "CBI release",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No reliable consensus was supplied; the signal comes from deterioration in breadth/components and record order cuts."
+    },
+    "surprise": {
+      "actual": null,
+      "consensus": null,
+      "previous": null,
+      "revised_previous": null,
+      "surprise_direction": "negative_growth_components",
+      "components": {
+        "retail_sales_volumes": "fell more rapidly y/y",
+        "online_sales": "fastest decline in nearly three years",
+        "orders": "quickest reduction since survey began in 1983",
+        "next_month": "strong decline still expected, though slower"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The release was 26 minutes old and FTSE remained only slightly lower; the market did not show a large index-level break.",
+      "observed_reaction": {
+        "UK100": "around 10,694, roughly -0.1% on the day"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "UK100": "only slightly lower",
+        "UK10Y": "still high, limiting dovish relief",
+        "Brent": "above $105, supporting FTSE energy constituents but raising inflation risk",
+        "Dhingra": "contemporaneous dovish BoE comments provide an offset to weak growth"
+      }
+    },
+    "decision_notes": "Residual forecast from 11:08:40 UTC. Empty leakage-safe learning profile; no adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.87,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "US2Y": {
+        "value": 4.897,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "flat_up",
+        "regime": "FLAT",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "US10Y": {
+        "value": 5.138,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "VIX": {
+        "value": 16.21,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "LOW",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "WTI": {
+        "value": 94.1,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "FLAT",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "BRENT": {
+        "value": 105.55,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428065-uk-cbi-retail-september-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10715.240234375,
+      "reference_price_time_utc": "2026-09-24T11:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T10:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.667,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T11:23:40+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T12:08:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T15:08:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428064-boe-dhingra-financial-conditions-m2",
+  "event_id": "ff-1428064-boe-dhingra-financial-conditions",
+  "event_time_utc": "2026-09-24T10:15:40+00:00",
+  "prediction_time_utc": "2026-09-24T11:08:40+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T11:08:40+00:00",
+  "prediction_latency_seconds": 3180.0,
+  "evaluated_at_utc": "2026-09-24T11:14:37.825724+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "UK",
+    "BoE",
+    "rates",
+    "inflation",
+    "labour"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 53,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Dhingra said financial conditions have already done substantial tightening work, pricing is encouraging and the labour market looks weak, providing a dovish counterweight to Lombardelli's earlier energy-inflation warning.",
+    "market_expectations": {
+      "source": "prior same-day BoE commentary",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "Earlier Lombardelli remarks leaned hawkish if elevated energy prices persist; Dhingra highlights the opposing weak-demand/labour channel."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The remarks were about 53 minutes old at decision time and FTSE was only slightly lower; no clean large post-speech move remained.",
+      "observed_reaction": {
+        "UK100": "around 10,694, roughly -0.1% on the day"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "UK100": "slightly lower rather than clearly rallying",
+        "UK10Y": "5.3728%, still high and rising",
+        "Brent": "$105.55, elevated and inflationary",
+        "GBPUSD": "mildly softer in the latest available same-day snapshot"
+      }
+    },
+    "decision_notes": "Residual forecast from 11:08:40 UTC. Empty leakage-safe learning profile; no adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 100.87,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "firm",
+        "regime": "RISING",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "US2Y": {
+        "value": 4.897,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "flat_up",
+        "regime": "FLAT",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "US10Y": {
+        "value": 5.138,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "VIX": {
+        "value": 16.21,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "LOW",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "WTI": {
+        "value": 94.1,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "FLAT",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      },
+      "BRENT": {
+        "value": 105.55,
+        "observed_at_utc": "2026-09-24T11:08:40Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Investing.com live board",
+        "freshness_minutes": 1
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428064-boe-dhingra-financial-conditions-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10715.2802734375,
+      "reference_price_time_utc": "2026-09-24T11:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T10:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.667,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T11:23:40+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T12:08:40+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T15:08:40+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
