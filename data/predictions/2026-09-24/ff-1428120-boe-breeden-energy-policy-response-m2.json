@@ -1,0 +1,184 @@
+{
+  "event_id": "ff-1428120-boe-breeden-energy-policy-response",
+  "event_cluster_id": "boe-september-energy-inflation-guidance",
+  "created_at_utc": "2026-09-24T14:53:51Z",
+  "event_time_utc": "2026-09-24T13:52:51Z",
+  "published_at_utc": "2026-09-24T13:52:51Z",
+  "source_time_text": "Forex Factory: 1 hr 1 min ago",
+  "observed_at_utc": "2026-09-24T14:53:51Z",
+  "time_source": "forex_factory_relative",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 180,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "UK",
+    "BoE",
+    "energy",
+    "inflation",
+    "rates"
+  ],
+  "prediction_id": "ff-1428120-boe-breeden-energy-policy-response-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 61,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Breeden warned a larger and longer energy shock raises the chance policy must respond.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Energy/rate risk was already a major same-day theme.",
+      "observed_reaction": {
+        "Brent": "~$105.49",
+        "UK100": "no clean isolated reaction",
+        "US10Y": "~5.14%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "Brent": "~$105.49",
+        "UK100": "no clean isolated reaction",
+        "US10Y": "~5.14%"
+      }
+    },
+    "decision_notes": "Residual forecast from 2026-09-24T14:53:51Z only. Leakage-safe learning profile is empty; no confidence adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.239,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "firm",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "US2Y": {
+        "value": 4.947,
+        "observed_at_utc": "2026-09-24T12:00:00Z",
+        "direction": "UP",
+        "regime": "restrictive",
+        "source": "same-day market coverage",
+        "freshness_minutes": 174
+      },
+      "US10Y": {
+        "value": 5.14,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "highest area since 2007",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      },
+      "VIX": {
+        "value": 15.65,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "UP",
+        "regime": "elevated but not stressed",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "WTI": {
+        "value": 93.08,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "elevated",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "BRENT": {
+        "value": 105.49,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "energy inflation pressure",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      },
+      "SP500": {
+        "value": 7690.09,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "DOWN",
+        "regime": "-0.21%",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "NASDAQ": {
+        "value": 26787.29,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "DOWN",
+        "regime": "-0.55%",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "XAUUSD": {
+        "value": 4295,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "DOWN",
+        "regime": "weak under high yields",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      }
+    },
+    "regimes": {
+      "rates": "restrictive, US10Y around 5.14%",
+      "risk": "US equities lower",
+      "energy": "Brent above $105",
+      "learning": "INSUFFICIENT: learning_profile.json empty; no confidence adjustment"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "UK100",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Energy-driven tightening risk is a headwind."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Meeting-by-meeting guidance limits conviction."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Energy-driven tightening risk is a headwind."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Brent above $105 keeps the policy concern live."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Slack and limited pass-through temper the signal."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Meeting-by-meeting guidance limits conviction."
+        }
+      },
+      "counter_case": "If energy falls or UK slack dominates, the BoE may not tighten.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "soft",
+        "trend_1h": "range",
+        "session_location": "European afternoon",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "same-run contemporaneous market snapshots",
+        "observed_at_utc": "2026-09-24T14:05:00Z"
+      }
+    }
+  ]
+}
