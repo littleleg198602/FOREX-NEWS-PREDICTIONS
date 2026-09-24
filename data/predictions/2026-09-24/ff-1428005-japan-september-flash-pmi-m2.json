@@ -1,0 +1,40 @@
+{
+  "event_id": "ff-1428005-japan-september-flash-pmi",
+  "event_cluster_id": "japan-september-2026-flash-pmi",
+  "created_at_utc": "2026-09-24T02:02:30Z",
+  "event_time_utc": "2026-09-23T23:30:00Z",
+  "published_at_utc": "2026-09-23T23:32:00Z",
+  "source_time_text": "Sep 23, 7:32pm Forex Factory (site time; absolute story timestamp)",
+  "observed_at_utc": "2026-09-24T02:02:30Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["Japan", "PMI", "growth", "inflation", "BoJ"],
+  "prediction_id": "ff-1428005-japan-september-flash-pmi-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role":"DATA_RELEASE","source_quality":"PRIMARY","source_verified":true,"news_age_minutes":150.5,"novelty":"HIGH","attention":"MEDIUM",
+    "dominant_driver":"Japan's September flash PMI showed broad growth cooling: manufacturing PMI fell to 54.1 from 54.9, output growth slowed to a three-month low and new-order growth to a four-month low; services and overall activity also softened while inflation remained intense.",
+    "market_expectations":{"source":"Forex Factory/S&P Global","expected_value":null,"implied_probability":null,"distribution_notes":"No reliable consensus value was available in the scanned story; forecast therefore uses the change versus August and underlying components, not a fabricated consensus surprise."},
+    "surprise":{"actual":{"manufacturing_pmi":54.1},"consensus":null,"previous":{"manufacturing_pmi":54.9},"revised_previous":null,"surprise_direction":"growth_momentum_slowed_but_remained_expansionary","components":{"manufacturing_output":"slowest growth in three months","new_orders":"weakest growth in four months","services":"slower output/new-order growth","prices":"input/output inflation still rapid; output-price inflation only slightly below August record"}},
+    "absorption":{"state":"REVERSED","reason":"The release was about 150 minutes old at decision time. Rather than falling on the softer PMI, the Nikkei cash market opened higher and by 10:00 JST was up 1.77%, showing the PMI growth-negative impulse had been overwhelmed by catch-up buying, weak-yen support and tech strength.","observed_reaction":{"NI225":"66,167.10 at 10:00 JST, +1,148.15 / +1.77% versus previous close; opened +457.49"}},
+    "cross_asset_confirmation":{"verdict":"CONFLICTING","observations":{"NI225":"strongly higher despite softer PMI","USDJPY":"around 158.29 before the open, yen weakness supportive for exporters","JGB10Y":"2.978% in the latest pre-open market snapshot","US10Y":"5.104%, sharply higher and a valuation headwind","US2Y":"4.891%, sharply higher","VIX":"about 15.17, higher but not stressed","WTI":"about 92.22, higher","US_tech":"Nasdaq -1.13% and SOX -1.23% at US close, but Japanese semiconductor leaders were strong after Tokyo reopened"}},
+    "decision_notes":"Residual forecast from 02:02:30 UTC only. The leakage-safe learning_profile.json is empty, so learning made no confidence adjustment."
+  },
+  "market_context_at_prediction":{"series":{"DXY":{"value":101.114,"observed_at_utc":"2026-09-23T23:09:00Z","direction":"up","regime":"firm dollar","source":"same-morning Japan market analysis","freshness_minutes":173},"US2Y":{"value":4.891,"observed_at_utc":"2026-09-23T19:11:00Z","direction":"up","regime":"+13.8bp","source":"Minkabu/Kabutan NY market snapshot","freshness_minutes":411},"US10Y":{"value":5.104,"observed_at_utc":"2026-09-23T19:11:00Z","direction":"up","regime":"+14.3bp; high-yield backdrop","source":"Minkabu/Kabutan NY market snapshot","freshness_minutes":411},"VIX":{"value":15.17,"observed_at_utc":"2026-09-23T23:09:00Z","direction":"up","regime":"higher but not stressed","source":"same-morning Japan market analysis","freshness_minutes":173},"WTI":{"value":92.22,"observed_at_utc":"2026-09-23T19:11:00Z","direction":"up","regime":"+1.88%","source":"Minkabu/Kabutan NY market snapshot","freshness_minutes":411},"BRENT":{"value":null,"observed_at_utc":"2026-09-24T02:02:30Z","direction":"unknown","regime":"no sufficiently fresh reliable value found in the pre-decision scan","source":"web scan","freshness_minutes":0},"USDJPY":{"value":158.29,"observed_at_utc":"2026-09-23T23:09:00Z","direction":"up","regime":"weak yen / exporter support","source":"Japan morning market coverage","freshness_minutes":173},"JGB10Y":{"value":2.978,"observed_at_utc":"2026-09-23T19:11:00Z","direction":"flat","regime":"latest reliable pre-open snapshot","source":"Minkabu/Kabutan","freshness_minutes":411},"NI225":{"value":66167.1,"observed_at_utc":"2026-09-24T01:00:01Z","direction":"up","regime":"+1.77%, broad advance","source":"Kabutan 10:00 JST snapshot","freshness_minutes":62}},"regimes":{"japan_equities":"strong catch-up rally after multi-day holiday closure","rates":"global yields elevated; US10Y above 5%","fx":"yen weak near 158.3 per dollar","learning":"INSUFFICIENT: learning_profile.json empty"}},
+  "predictions": [{
+    "instrument":"NI225","relevance":"DIRECT",
+    "immediate":{"direction":"MIXED","confidence":4,"rationale":"The PMI signal has been overwhelmed by a strong cash-session rally; after a large opening advance, residual PMI direction is weak."},
+    "next_session":{"direction":"DOWN","confidence":4,"rationale":"If the catch-up rally fades, slower activity/new orders plus still-intense inflation can become a mild next-session headwind."},
+    "horizons":{"15m":{"direction":"MIXED","confidence":4,"rationale":"The PMI signal has been overwhelmed by a strong cash-session rally; after a large opening advance, residual PMI direction is weak."},"1h":{"direction":"MIXED","confidence":4,"rationale":"Weak PMI growth conflicts with strong price action, weak-yen support and catch-up buying after the holiday closure."},"4h":{"direction":"MIXED","confidence":4,"rationale":"The softer activity signal may cap gains, but current market confirmation is opposite and the index is already extended higher."},"next_session":{"direction":"DOWN","confidence":4,"rationale":"If the catch-up rally fades, slower activity/new orders plus still-intense inflation can become a mild next-session headwind."}},
+    "mechanism":"Softer domestic activity/new orders are equity-negative at the margin, but weak-yen exporter support and holiday catch-up flows are dominating current price action.",
+    "invalidation":"A sustained break to fresh session highs with broadening breadth would further invalidate the residual bearish PMI thesis; conversely, a loss of the opening range would strengthen it.",
+    "counter_case":"The PMI remains expansionary at 54.1, overseas demand is solid, and the weak yen plus catch-up demand can keep Japanese equities rising despite slower month-on-month momentum.",
+    "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"up but extended after sharp opening advance","trend_1h":"strong up","session_location":"near morning session highs after holiday reopen","extension_state":"extended","market_open":true,"source":"Kabutan 10:00 JST cash-market snapshot","observed_at_utc":"2026-09-24T01:00:01Z"}
+  }]
+}
