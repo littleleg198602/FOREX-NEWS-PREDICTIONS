@@ -1,0 +1,80 @@
+{
+  "event_id": "ff-1427996-gold-futures-hawkish-fed",
+  "event_cluster_id": "fed-hawkish-repricing-sep-2026",
+  "created_at_utc": "2026-09-24T05:23:30Z",
+  "event_time_utc": "2026-09-24T04:13:00Z",
+  "published_at_utc": "2026-09-24T04:13:00Z",
+  "source_time_text": "Sep 24, 12:13am (Forex Factory site time)",
+  "observed_at_utc": "2026-09-24T05:23:30Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 60,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["Gold", "Silver", "Federal Reserve", "USD", "rates"],
+  "prediction_id": "ff-1427996-gold-futures-hawkish-fed-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "source_url": "https://www.forexfactory.com/news/1427996-gold-futures-extend-slide-as-us-dollar-rises",
+  "evidence": {
+    "article_role": "MARKET_RECAP",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 70.5,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "Hawkish Fed repricing and a fourth straight session of dollar strength are extending the precious-metals selloff; however, most of the initial move occurred before this recap was posted.",
+    "market_expectations": {"source":"CME/Forex Factory recap","expected_value":null,"implied_probability":0.5,"distribution_notes":"CME recap says future Fed policy probabilities have moved toward roughly 50-50."},
+    "surprise": null,
+    "absorption": {"state":"PARTIALLY_PRICED","reason":"This is a recap of an already-running rates/USD move. Gold had already fallen more than 1% and is now consolidating near $4,290, so the forecast targets only residual movement from decision time.","observed_reaction":{"XAUUSD":"around $4,292, near the lower part of the recent range after a >1% slide","XAGUSD":"around $64.2 after a much sharper prior decline"}},
+    "cross_asset_confirmation": {"verdict":"CONFIRMED","observations":{"DXY":"101.14, firm near two-month high","US10Y":"5.114%, elevated","VIX":"15.18, not stressed","WTI":"91.31, easing","BRENT":"~97.51, easing","gold":"still near recent lows"}},
+    "decision_notes": "Residual forecast from 05:23:30 UTC. learning_profile.json is empty, so no learning adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY":{"value":101.14,"observed_at_utc":"2026-09-24T04:10:00Z","direction":"UP","regime":"two-month high / firm","source":"JasonWheel market pulse","freshness_minutes":73},
+      "US2Y":{"value":4.89,"observed_at_utc":"2026-09-23T20:00:00Z","direction":"UP","regime":"elevated after hawkish repricing","source":"prior close / market coverage","freshness_minutes":563},
+      "US10Y":{"value":5.114,"observed_at_utc":"2026-09-24T04:10:00Z","direction":"UP","regime":"19-year-high area / restrictive","source":"JasonWheel market pulse","freshness_minutes":73},
+      "VIX":{"value":15.18,"observed_at_utc":"2026-09-24T04:10:00Z","direction":"FLAT","regime":"moderate, not stressed","source":"JasonWheel market pulse","freshness_minutes":73},
+      "WTI":{"value":91.31,"observed_at_utc":"2026-09-24T04:10:00Z","direction":"DOWN","regime":"easing after prior rise","source":"JasonWheel market pulse","freshness_minutes":73},
+      "BRENT":{"value":97.508,"observed_at_utc":"2026-09-24T03:38:00Z","direction":"DOWN","regime":"easing","source":"ExchangeRates commodity snapshot","freshness_minutes":105},
+      "XAUUSD":{"value":4292.0,"observed_at_utc":"2026-09-24T05:20:00Z","direction":"FLAT","regime":"consolidating after >1% selloff","source":"contemporaneous market coverage","freshness_minutes":3},
+      "XAGUSD":{"value":64.2,"observed_at_utc":"2026-09-24T05:20:00Z","direction":"DOWN","regime":"weak after sharp prior decline","source":"contemporaneous market coverage","freshness_minutes":3}
+    },
+    "regimes":{"rates":"restrictive; US10Y above 5.1%","usd":"firm near two-month high","precious_metals":"bearish but extended","learning":"INSUFFICIENT: learning_profile.json empty"}
+  },
+  "predictions": [
+    {
+      "instrument":"XAUUSD","relevance":"DIRECT",
+      "immediate":{"direction":"MIXED","confidence":4,"rationale":"The bearish macro driver is established, but gold is consolidating near the lows after a large prior decline."},
+      "next_session":{"direction":"DOWN","confidence":5,"rationale":"Unless yields and the dollar retreat, the high real-rate/opportunity-cost regime remains a headwind."},
+      "horizons":{
+        "15m":{"direction":"MIXED","confidence":4,"rationale":"The bearish macro driver is established, but gold is consolidating near the lows after a large prior decline."},
+        "1h":{"direction":"DOWN","confidence":5,"rationale":"DXY near a two-month high and US10Y above 5.1% keep downside pressure, though extension risk limits conviction."},
+        "4h":{"direction":"MIXED","confidence":4,"rationale":"Further downside is possible, but the move is already extended and Chinese/geopolitical demand can trigger mean reversion."},
+        "next_session":{"direction":"DOWN","confidence":5,"rationale":"Unless yields and the dollar retreat, the high real-rate/opportunity-cost regime remains a headwind."}
+      },
+      "mechanism":"Higher Treasury yields and a stronger dollar raise the opportunity cost of holding gold.",
+      "invalidation":"A decisive fall in DXY/yields or a fresh geopolitical shock that restores safe-haven demand would invalidate the bearish residual bias.",
+      "counter_case":"The selloff is already extended, Chinese demand remains supportive, and geopolitical risk can produce a sharp rebound even with yields high.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"sideways-to-soft near lows","trend_1h":"down","session_location":"near lower end of overnight range","extension_state":"extended","market_open":true,"source":"contemporaneous gold quotes and FF recap","observed_at_utc":"2026-09-24T05:23:30Z"}
+    },
+    {
+      "instrument":"XAGUSD","relevance":"SECONDARY",
+      "immediate":{"direction":"MIXED","confidence":4,"rationale":"Silver has already suffered a sharp selloff, raising bounce risk despite the bearish dollar/rates backdrop."},
+      "next_session":{"direction":"DOWN","confidence":5,"rationale":"The rates/USD regime remains a mild bearish residual driver if it persists."},
+      "horizons":{
+        "15m":{"direction":"MIXED","confidence":4,"rationale":"Silver has already suffered a sharp selloff, raising bounce risk despite the bearish dollar/rates backdrop."},
+        "1h":{"direction":"DOWN","confidence":5,"rationale":"A firm dollar and restrictive yields remain negative for precious metals."},
+        "4h":{"direction":"MIXED","confidence":4,"rationale":"Industrial-demand support and oversold/extension risk can offset further monetary-policy pressure."},
+        "next_session":{"direction":"DOWN","confidence":5,"rationale":"The rates/USD regime remains a mild bearish residual driver if it persists."}
+      },
+      "mechanism":"Silver shares the USD/rates headwind with gold, amplified by higher beta.",
+      "invalidation":"A dollar/yield reversal or strong industrial-metals rebound would weaken the bearish residual setup.",
+      "counter_case":"The prior silver decline is already severe and industrial demand can drive a faster rebound than gold.",
+      "technical_state":{"reaction_since_event_pct":null,"trend_5_15m":"weak/volatile","trend_1h":"down","session_location":"near recent lows","extension_state":"extended","market_open":true,"source":"contemporaneous silver quotes and FF recap","observed_at_utc":"2026-09-24T05:23:30Z"}
+    }
+  ]
+}
