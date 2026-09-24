@@ -1,0 +1,63 @@
+{
+  "event_id": "ff-1428029-australia-august-labour-force",
+  "event_cluster_id": "australia-august-2026-labour-force",
+  "created_at_utc": "2026-09-24T02:33:02Z",
+  "event_time_utc": "2026-09-24T01:30:00Z",
+  "published_at_utc": "2026-09-24T01:32:00Z",
+  "source_time_text": "Sep 24, 2026 2:32am Forex Factory",
+  "observed_at_utc": "2026-09-24T02:33:02Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 120,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": ["Australia", "employment", "unemployment", "RBA"],
+  "prediction_id": "ff-1428029-australia-august-labour-force-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 61.0,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Mixed Australian labour report: employment +39.5K beat +20K consensus, but unemployment rose to 4.6% vs 4.5% expected and full-time employment fell 6.3K while part-time rose 45.8K.",
+    "market_expectations": {"source": "Forex Factory/InvestingLive preview", "expected_value": {"employment_change_k": 20.0, "unemployment_rate_pct": 4.5}, "implied_probability": null, "distribution_notes": "RBA already hawkish; markets had been pricing a high probability of another hike, making labour composition important."},
+    "surprise": {"actual": {"employment_change_k": 39.5, "unemployment_rate_pct": 4.6, "full_time_change_k": -6.3, "part_time_change_k": 45.8, "participation_rate_pct": 67.1}, "consensus": {"employment_change_k": 20.0, "unemployment_rate_pct": 4.5}, "previous": {"employment_change_k": -15.8, "unemployment_rate_pct": 4.5}, "revised_previous": {"employment_change_k": -15.9}, "surprise_direction": "mixed_headline_beat_but_labour_quality_softened", "components": {"full_time": "-6.3K", "part_time": "+45.8K", "participation": "67.1% from 66.9%"}},
+    "absorption": {"state": "PARTIALLY_PRICED", "reason": "About 61 minutes elapsed. AUD/USD initially hit a fresh low near 0.7025 after the mixed report but lacked follow-through; ASX was already deeply weak before the release, so forecast targets residual movement only.", "observed_reaction": {"AUDUSD": "fresh low around 0.7025 after release, then no follow-through", "AUS200": "already down about 1.2% around 00:10 UTC before the 01:30 UTC release; exact clean post-release index move not reliably isolated"}},
+    "cross_asset_confirmation": {"verdict": "CONFLICTING", "observations": {"AUS200": "pre-release risk-off, >3-month low", "AUDUSD": "weak after mixed jobs but selling lacked follow-through", "US10Y": "5.114% prior close, major valuation headwind", "VIX": "15.18 prior close, +6.83%", "Brent": "above $103 before Australia open", "DXY": "101.12 prior snapshot, firm", "RBA": "inflation risks flagged; next policy meeting Sep 29"}},
+    "decision_notes": "Residual forecast from 02:33:02 UTC. learning_profile.json is empty, so no learning confidence adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {"value": 101.12, "observed_at_utc": "2026-09-23T21:00:00Z", "direction": "up", "regime": "+0.51% prior US session", "source": "Swingfolio morning snapshot", "freshness_minutes": 333},
+      "US2Y": {"value": 4.85, "observed_at_utc": "2026-09-23T20:22:00Z", "direction": "up", "regime": "sharply higher prior US session", "source": "market close context", "freshness_minutes": 371},
+      "US10Y": {"value": 5.114, "observed_at_utc": "2026-09-23T21:00:00Z", "direction": "up", "regime": "+14.6bp; highest since 2007", "source": "Swingfolio morning snapshot", "freshness_minutes": 333},
+      "VIX": {"value": 15.18, "observed_at_utc": "2026-09-23T21:00:00Z", "direction": "up", "regime": "+6.83% prior close", "source": "Swingfolio morning snapshot", "freshness_minutes": 333},
+      "WTI": {"value": 92.22, "observed_at_utc": "2026-09-23T19:11:00Z", "direction": "up", "regime": "elevated on geopolitical risk", "source": "market snapshot", "freshness_minutes": 442},
+      "BRENT": {"value": 103.0, "observed_at_utc": "2026-09-23T21:00:00Z", "direction": "up", "regime": "above $103; inflation headwind", "source": "Swingfolio morning snapshot", "freshness_minutes": 333},
+      "AUDUSD": {"value": 0.7025, "observed_at_utc": "2026-09-24T01:45:00Z", "direction": "down", "regime": "fresh Aug-7 low after jobs, limited follow-through", "source": "FXStreet", "freshness_minutes": 48},
+      "AUS200": {"value": 8658.10, "observed_at_utc": "2026-09-24T00:10:00Z", "direction": "down", "regime": "-1.2%, >3-month low before jobs", "source": "Reuters", "freshness_minutes": 143}
+    },
+    "regimes": {"australia_equities": "risk-off; oil/inflation and global yields dominant", "rates": "global yields very high; RBA hawkish risk", "fx": "AUD weak but mixed jobs did not produce sustained fresh selling", "learning": "INSUFFICIENT: learning_profile.json empty"}
+  },
+  "predictions": [{
+    "instrument": "AUS200",
+    "relevance": "DIRECT",
+    "immediate": {"direction": "MIXED", "confidence": 4, "rationale": "The release is already about an hour old and its components conflict: headline jobs beat but unemployment and full-time jobs weakened."},
+    "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The labour report marginally reduces overheating evidence, but next week's RBA decision and global yield/oil risk dominate."},
+    "horizons": {
+      "15m": {"direction": "MIXED", "confidence": 4, "rationale": "The release is already about an hour old and its components conflict: headline jobs beat but unemployment and full-time jobs weakened."},
+      "1h": {"direction": "MIXED", "confidence": 4, "rationale": "Labour detail is ambiguous and the index was already under strong global rates/oil pressure before the release."},
+      "4h": {"direction": "DOWN", "confidence": 5, "rationale": "Higher unemployment and a full-time jobs decline weaken labour quality, while high yields/oil and an already bearish ASX regime remain headwinds."},
+      "next_session": {"direction": "MIXED", "confidence": 4, "rationale": "The labour report marginally reduces overheating evidence, but next week's RBA decision and global yield/oil risk dominate."}
+    },
+    "mechanism": "Higher unemployment and weaker full-time employment reduce labour-market quality and may temper RBA tightening pressure, but the index remains dominated by high global yields and oil-driven inflation concerns.",
+    "invalidation": "A sustained recovery above the pre-release/opening range with falling Australian/global yields would invalidate the residual downside bias.",
+    "counter_case": "The +39.5K headline employment beat and higher participation show labour demand is not collapsing; if yields fall on the softer unemployment/full-time detail, equities could rebound.",
+    "technical_state": {"reaction_since_event_pct": null, "trend_5_15m": "unknown/mixed after release", "trend_1h": "bearish broader session", "session_location": "near multi-month lows; already extended lower before release", "extension_state": "extended", "market_open": true, "source": "Reuters pre-release ASX snapshot plus post-release AUD reaction; exact clean ASX post-event print unavailable", "observed_at_utc": "2026-09-24T02:33:02Z"}
+  }]
+}
