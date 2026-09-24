@@ -1,0 +1,286 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428114-williams-another-hike-year-end-m2",
+  "event_id": "ff-1428114-williams-another-hike-year-end",
+  "event_time_utc": "2026-09-24T13:05:51+00:00",
+  "prediction_time_utc": "2026-09-24T14:53:51+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T14:53:51+00:00",
+  "prediction_latency_seconds": 6480.0,
+  "evaluated_at_utc": "2026-09-24T15:10:53.433340+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US",
+    "Fed",
+    "rates",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 108,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Williams said another rate hike by year-end is a reasonable expectation.",
+    "absorption": {
+      "state": "CONFIRMED_CONTINUATION",
+      "reason": "This extends his earlier inflation warning; yields remained very high and equities lower.",
+      "observed_reaction": {
+        "US10Y": "~5.14%",
+        "SP500": "-0.21%",
+        "NASDAQ": "-0.55%",
+        "gold": "weak near $4,295"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "US10Y": "~5.14%",
+        "SP500": "-0.21%",
+        "NASDAQ": "-0.55%",
+        "gold": "weak near $4,295"
+      }
+    },
+    "decision_notes": "Residual forecast from 2026-09-24T14:53:51Z only. Leakage-safe learning profile is empty; no confidence adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.239,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "US2Y": {
+        "value": 4.947,
+        "observed_at_utc": "2026-09-24T12:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "same-day market coverage",
+        "freshness_minutes": 174
+      },
+      "US10Y": {
+        "value": 5.14,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      },
+      "VIX": {
+        "value": 15.65,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "WTI": {
+        "value": 93.08,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "BRENT": {
+        "value": 105.49,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "FLAT",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "FLAT"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428114-williams-another-hike-year-end-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4295.60009765625,
+      "reference_price_time_utc": "2026-09-24T14:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T14:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-24T15:08:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T15:53:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:53:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428114-williams-another-hike-year-end-m2",
+      "instrument": "NDX",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30289.0625,
+      "reference_price_time_utc": "2026-09-24T14:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T14:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-24T15:08:51+00:00",
+          "actual_price_time_utc": "2026-09-24T15:09:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T15:08:00+00:00",
+          "market_delay_minutes": 0.15,
+          "price": 30248.470703125,
+          "change_pct": -0.134015,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.131738,
+          "post_event_range_pct": 0.161433,
+          "mfe_pct": 0.175135,
+          "mae_pct": 0.013703,
+          "directional_threshold_pct": 0.013174,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T15:53:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:53:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1428114-williams-another-hike-year-end-m2",
+      "instrument": "SP500",
+      "status": "PARTIAL",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7680.08984375,
+      "reference_price_time_utc": "2026-09-24T14:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T14:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DONE",
+          "target_time_utc": "2026-09-24T15:08:51+00:00",
+          "actual_price_time_utc": "2026-09-24T15:09:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T15:08:00+00:00",
+          "market_delay_minutes": 0.15,
+          "price": 7672.18017578125,
+          "change_pct": -0.102989,
+          "actual_direction": "DOWN",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.142318,
+          "post_event_range_pct": 0.137105,
+          "mfe_pct": 0.132807,
+          "mae_pct": -0.004298,
+          "directional_threshold_pct": 0.014232,
+          "actual_direction_thresholded": "DOWN"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T15:53:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:53:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

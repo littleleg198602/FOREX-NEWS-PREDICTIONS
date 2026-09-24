@@ -1,0 +1,167 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428120-boe-breeden-energy-policy-response-m2",
+  "event_id": "ff-1428120-boe-breeden-energy-policy-response",
+  "event_time_utc": "2026-09-24T13:52:51+00:00",
+  "prediction_time_utc": "2026-09-24T14:53:51+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T14:53:51+00:00",
+  "prediction_latency_seconds": 3660.0,
+  "evaluated_at_utc": "2026-09-24T15:10:55.251682+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "UK",
+    "BoE",
+    "energy",
+    "inflation",
+    "rates"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 61,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Breeden warned a larger and longer energy shock raises the chance policy must respond.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Energy/rate risk was already a major same-day theme.",
+      "observed_reaction": {
+        "Brent": "~$105.49",
+        "UK100": "no clean isolated reaction",
+        "US10Y": "~5.14%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "Brent": "~$105.49",
+        "UK100": "no clean isolated reaction",
+        "US10Y": "~5.14%"
+      }
+    },
+    "decision_notes": "Residual forecast from 2026-09-24T14:53:51Z only. Leakage-safe learning profile is empty; no confidence adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.239,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "US2Y": {
+        "value": 4.947,
+        "observed_at_utc": "2026-09-24T12:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "same-day market coverage",
+        "freshness_minutes": 174
+      },
+      "US10Y": {
+        "value": 5.14,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      },
+      "VIX": {
+        "value": 15.65,
+        "observed_at_utc": "2026-09-24T14:05:00Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "Vestelio live market",
+        "freshness_minutes": 49
+      },
+      "WTI": {
+        "value": 93.08,
+        "observed_at_utc": "2026-09-24T10:51:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Hyperdash market snapshot",
+        "freshness_minutes": 243
+      },
+      "BRENT": {
+        "value": 105.49,
+        "observed_at_utc": "2026-09-24T13:51:00Z",
+        "direction": "UP",
+        "regime": "FLAT",
+        "source": "TipRanks market update",
+        "freshness_minutes": 63
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "FLAT"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428120-boe-breeden-energy-policy-response-m2",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10713.509765625,
+      "reference_price_time_utc": "2026-09-24T14:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T14:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.85,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "DATA_GAP",
+          "target_time_utc": "2026-09-24T15:08:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T15:53:51+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T18:53:51+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
