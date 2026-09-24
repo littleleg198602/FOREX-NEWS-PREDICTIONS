@@ -1,0 +1,192 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1428005-japan-september-flash-pmi-m2",
+  "event_id": "ff-1428005-japan-september-flash-pmi",
+  "event_time_utc": "2026-09-23T23:30:00+00:00",
+  "prediction_time_utc": "2026-09-24T02:02:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T02:02:30+00:00",
+  "prediction_latency_seconds": 9150.0,
+  "evaluated_at_utc": "2026-09-24T02:07:41.342407+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Japan",
+    "PMI",
+    "growth",
+    "inflation",
+    "BoJ"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 150.5,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "Japan's September flash PMI showed broad growth cooling: manufacturing PMI fell to 54.1 from 54.9, output growth slowed to a three-month low and new-order growth to a four-month low; services and overall activity also softened while inflation remained intense.",
+    "market_expectations": {
+      "source": "Forex Factory/S&P Global",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No reliable consensus value was available in the scanned story; forecast therefore uses the change versus August and underlying components, not a fabricated consensus surprise."
+    },
+    "surprise": {
+      "actual": {
+        "manufacturing_pmi": 54.1
+      },
+      "consensus": null,
+      "previous": {
+        "manufacturing_pmi": 54.9
+      },
+      "revised_previous": null,
+      "surprise_direction": "growth_momentum_slowed_but_remained_expansionary",
+      "components": {
+        "manufacturing_output": "slowest growth in three months",
+        "new_orders": "weakest growth in four months",
+        "services": "slower output/new-order growth",
+        "prices": "input/output inflation still rapid; output-price inflation only slightly below August record"
+      }
+    },
+    "absorption": {
+      "state": "REVERSED",
+      "reason": "The release was about 150 minutes old at decision time. Rather than falling on the softer PMI, the Nikkei cash market opened higher and by 10:00 JST was up 1.77%, showing the PMI growth-negative impulse had been overwhelmed by catch-up buying, weak-yen support and tech strength.",
+      "observed_reaction": {
+        "NI225": "66,167.10 at 10:00 JST, +1,148.15 / +1.77% versus previous close; opened +457.49"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "NI225": "strongly higher despite softer PMI",
+        "USDJPY": "around 158.29 before the open, yen weakness supportive for exporters",
+        "JGB10Y": "2.978% in the latest pre-open market snapshot",
+        "US10Y": "5.104%, sharply higher and a valuation headwind",
+        "US2Y": "4.891%, sharply higher",
+        "VIX": "about 15.17, higher but not stressed",
+        "WTI": "about 92.22, higher",
+        "US_tech": "Nasdaq -1.13% and SOX -1.23% at US close, but Japanese semiconductor leaders were strong after Tokyo reopened"
+      }
+    },
+    "decision_notes": "Residual forecast from 02:02:30 UTC only. The leakage-safe learning_profile.json is empty, so learning made no confidence adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.114,
+        "observed_at_utc": "2026-09-23T23:09:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "same-morning Japan market analysis",
+        "freshness_minutes": 173
+      },
+      "US2Y": {
+        "value": 4.891,
+        "observed_at_utc": "2026-09-23T19:11:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Minkabu/Kabutan NY market snapshot",
+        "freshness_minutes": 411
+      },
+      "US10Y": {
+        "value": 5.104,
+        "observed_at_utc": "2026-09-23T19:11:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Minkabu/Kabutan NY market snapshot",
+        "freshness_minutes": 411
+      },
+      "VIX": {
+        "value": 15.17,
+        "observed_at_utc": "2026-09-23T23:09:00Z",
+        "direction": "up",
+        "regime": "LOW",
+        "source": "same-morning Japan market analysis",
+        "freshness_minutes": 173
+      },
+      "WTI": {
+        "value": 92.22,
+        "observed_at_utc": "2026-09-23T19:11:00Z",
+        "direction": "up",
+        "regime": "RISING",
+        "source": "Minkabu/Kabutan NY market snapshot",
+        "freshness_minutes": 411
+      },
+      "BRENT": {
+        "value": null,
+        "observed_at_utc": "2026-09-24T02:02:30Z",
+        "direction": "unknown",
+        "regime": "UNKNOWN",
+        "source": "web scan",
+        "freshness_minutes": 0
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1428005-japan-september-flash-pmi-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 65968.7265625,
+      "reference_price_time_utc": "2026-09-24T01:53:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T01:52:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T02:17:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T03:02:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T06:02:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

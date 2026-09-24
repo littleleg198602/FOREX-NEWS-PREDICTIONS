@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T02:49:30+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T02:49:30+00:00",
   "prediction_latency_seconds": 6090.0,
-  "evaluated_at_utc": "2026-09-23T14:35:43.843946+00:00",
+  "evaluated_at_utc": "2026-09-24T02:06:57.066761+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -136,7 +136,7 @@
     {
       "prediction_id": "ff-1419478-us-iran-deal-hard-to-come-by-qatar-m2",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -213,9 +213,24 @@
           "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-23",
+          "actual_price_time_utc": "2026-09-24T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T23:59:00+00:00",
+          "price": 4323.7998046875,
+          "change_pct": -1.341676,
+          "actual_direction": "DOWN",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.973714,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.20873,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 1.973714,
           "forecast_source": "horizons"
         }
       }

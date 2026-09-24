@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T15:16:39+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T15:16:39+00:00",
   "prediction_latency_seconds": 2319.0,
-  "evaluated_at_utc": "2026-09-23T14:35:57.582312+00:00",
+  "evaluated_at_utc": "2026-09-24T02:07:16.156291+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -253,7 +253,7 @@
     {
       "prediction_id": "ff-20260922-trump-unga-iran-pressure-deal-m1",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -332,9 +332,25 @@
           "actual_direction_thresholded": "UP"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-23",
+          "actual_price_time_utc": "2026-09-24T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T23:59:00+00:00",
+          "price": 4323.7998046875,
+          "change_pct": -1.215449,
+          "actual_direction": "DOWN",
           "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.976239,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.211556,
+          "mfe_pct": 0.744805,
+          "mae_pct": -1.514732,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.197624,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "legacy_fallback"
         }
       }

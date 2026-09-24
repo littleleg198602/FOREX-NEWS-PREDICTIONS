@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-22T18:43:19+00:00",
   "evaluation_anchor_time_utc": "2026-09-22T18:43:19+00:00",
   "prediction_latency_seconds": 3019.0,
-  "evaluated_at_utc": "2026-09-23T14:35:51.874958+00:00",
+  "evaluated_at_utc": "2026-09-24T02:07:07.867784+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -318,7 +318,7 @@
     {
       "prediction_id": "ff-1419738-us-iran-delegation-three-hour-meeting-m1",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -397,9 +397,25 @@
           "actual_direction_thresholded": "UP"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-23",
+          "actual_price_time_utc": "2026-09-24T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-23T23:59:00+00:00",
+          "price": 4323.7998046875,
+          "change_pct": -1.481043,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.970926,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.20561,
+          "mfe_pct": 1.779521,
+          "mae_pct": -0.47394,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.197093,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "legacy_fallback"
         }
       }
