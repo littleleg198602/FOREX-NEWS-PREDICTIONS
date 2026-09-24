@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T09:07:43+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T09:07:43+00:00",
   "prediction_latency_seconds": 3043.0,
-  "evaluated_at_utc": "2026-09-24T09:14:23.476795+00:00",
+  "evaluated_at_utc": "2026-09-24T10:04:27.530386+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -84,26 +84,40 @@
     {
       "prediction_id": "ff-1428058-fed-williams-inflation-main-hurdle-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4294.60009765625,
-      "reference_price_time_utc": "2026-09-24T09:05:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-24T09:04:00+00:00",
+      "reference_price": 4295.7998046875,
+      "reference_price_time_utc": "2026-09-24T09:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T09:06:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2.717,
+      "reference_age_minutes": 0.717,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-24T09:22:43+00:00",
+          "actual_price_time_utc": "2026-09-24T09:23:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T09:22:00+00:00",
+          "market_delay_minutes": 0.28,
+          "price": 4295.89990234375,
+          "change_pct": 0.00233,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "forecast_source": "horizons",
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.207177,
+          "post_event_range_pct": 0.104753,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "neutral_envelope_pct": 0.207177
         },
         "1h": {
           "status": "PENDING",
@@ -144,10 +158,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-24T09:22:43+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 710.717
         },
         "1h": {
           "status": "PENDING",
@@ -188,10 +204,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-24T09:22:43+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 750.717
         },
         "1h": {
           "status": "PENDING",

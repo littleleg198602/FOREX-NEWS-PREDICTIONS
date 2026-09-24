@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T09:07:43+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T09:07:43+00:00",
   "prediction_latency_seconds": 2023.0,
-  "evaluated_at_utc": "2026-09-24T09:14:28.885265+00:00",
+  "evaluated_at_utc": "2026-09-24T10:04:29.492196+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -85,26 +85,41 @@
     {
       "prediction_id": "ff-1428060-iran-conflict-could-expand-indian-ocean-m2",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4294.60009765625,
-      "reference_price_time_utc": "2026-09-24T09:05:00+00:00",
-      "reference_price_bar_start_utc": "2026-09-24T09:04:00+00:00",
+      "reference_price": 4295.7998046875,
+      "reference_price_time_utc": "2026-09-24T09:07:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T09:06:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 2.717,
+      "reference_age_minutes": 0.717,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "UP",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-24T09:22:43+00:00",
+          "actual_price_time_utc": "2026-09-24T09:23:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T09:22:00+00:00",
+          "market_delay_minutes": 0.28,
+          "price": 4295.89990234375,
+          "change_pct": 0.00233,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "UP",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.207177,
+          "post_event_range_pct": 0.104753,
+          "mfe_pct": 0.093114,
+          "mae_pct": -0.011639,
+          "directional_threshold_pct": 0.020718,
+          "actual_direction_thresholded": "NO_MOVE"
         },
         "1h": {
           "status": "PENDING",
@@ -145,10 +160,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-24T09:22:43+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 750.717
         },
         "1h": {
           "status": "PENDING",
@@ -189,10 +206,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-09-24T09:22:43+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 710.717
         },
         "1h": {
           "status": "PENDING",
