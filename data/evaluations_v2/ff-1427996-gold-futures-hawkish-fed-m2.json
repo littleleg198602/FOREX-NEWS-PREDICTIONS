@@ -1,0 +1,219 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1427996-gold-futures-hawkish-fed-m2",
+  "event_id": "ff-1427996-gold-futures-hawkish-fed",
+  "event_time_utc": "2026-09-24T04:13:00+00:00",
+  "prediction_time_utc": "2026-09-24T05:23:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T05:23:30+00:00",
+  "prediction_latency_seconds": 4230.0,
+  "evaluated_at_utc": "2026-09-24T05:26:53.604763+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "Gold",
+    "Silver",
+    "Federal Reserve",
+    "USD",
+    "rates"
+  ],
+  "evidence": {
+    "article_role": "MARKET_RECAP",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 70.5,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "Hawkish Fed repricing and a fourth straight session of dollar strength are extending the precious-metals selloff; however, most of the initial move occurred before this recap was posted.",
+    "market_expectations": {
+      "source": "CME/Forex Factory recap",
+      "expected_value": null,
+      "implied_probability": 0.5,
+      "distribution_notes": "CME recap says future Fed policy probabilities have moved toward roughly 50-50."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "This is a recap of an already-running rates/USD move. Gold had already fallen more than 1% and is now consolidating near $4,290, so the forecast targets only residual movement from decision time.",
+      "observed_reaction": {
+        "XAUUSD": "around $4,292, near the lower part of the recent range after a >1% slide",
+        "XAGUSD": "around $64.2 after a much sharper prior decline"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "101.14, firm near two-month high",
+        "US10Y": "5.114%, elevated",
+        "VIX": "15.18, not stressed",
+        "WTI": "91.31, easing",
+        "BRENT": "~97.51, easing",
+        "gold": "still near recent lows"
+      }
+    },
+    "decision_notes": "Residual forecast from 05:23:30 UTC. learning_profile.json is empty, so no learning adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.14,
+        "observed_at_utc": "2026-09-24T04:10:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "JasonWheel market pulse",
+        "freshness_minutes": 73
+      },
+      "US2Y": {
+        "value": 4.89,
+        "observed_at_utc": "2026-09-23T20:00:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "prior close / market coverage",
+        "freshness_minutes": 563
+      },
+      "US10Y": {
+        "value": 5.114,
+        "observed_at_utc": "2026-09-24T04:10:00Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "JasonWheel market pulse",
+        "freshness_minutes": 73
+      },
+      "VIX": {
+        "value": 15.18,
+        "observed_at_utc": "2026-09-24T04:10:00Z",
+        "direction": "FLAT",
+        "regime": "LOW",
+        "source": "JasonWheel market pulse",
+        "freshness_minutes": 73
+      },
+      "WTI": {
+        "value": 91.31,
+        "observed_at_utc": "2026-09-24T04:10:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "JasonWheel market pulse",
+        "freshness_minutes": 73
+      },
+      "BRENT": {
+        "value": 97.508,
+        "observed_at_utc": "2026-09-24T03:38:00Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "ExchangeRates commodity snapshot",
+        "freshness_minutes": 105
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1427996-gold-futures-hawkish-fed-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4321.10009765625,
+      "reference_price_time_utc": "2026-09-24T05:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T05:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T05:38:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T06:23:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T09:23:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427996-gold-futures-hawkish-fed-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.54000091552734,
+      "reference_price_time_utc": "2026-09-24T05:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T05:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T05:38:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T06:23:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T09:23:30+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

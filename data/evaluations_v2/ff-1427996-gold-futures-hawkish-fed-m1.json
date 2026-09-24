@@ -1,0 +1,253 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1427996-gold-futures-hawkish-fed-m1",
+  "event_id": "ff-1427996-gold-futures-hawkish-fed",
+  "event_time_utc": "2026-09-24T04:13:00+00:00",
+  "prediction_time_utc": "2026-09-24T05:23:30+00:00",
+  "evaluation_anchor_time_utc": "2026-09-24T05:23:30+00:00",
+  "prediction_latency_seconds": 4230.0,
+  "evaluated_at_utc": "2026-09-24T05:26:53.321781+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "Gold",
+    "Silver",
+    "Federal Reserve",
+    "USD",
+    "rates"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-24T05:23:30+00:00",
+    "captured_for_event_time_utc": "2026-09-24T05:23:30+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.09300231933594,
+        "timestamp_utc": "2026-09-24T05:17:00+00:00",
+        "available_at_utc": "2026-09-24T05:17:00+00:00",
+        "age_minutes": 6.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.03263,
+        "change_pct_240m": -0.033618,
+        "change_abs_60m": -0.032997,
+        "raw_change_pct_60m": -0.03263,
+        "raw_change_abs_60m": -0.032997,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.65234375,
+        "timestamp_utc": "2026-09-24T05:16:00+00:00",
+        "available_at_utc": "2026-09-24T05:16:00+00:00",
+        "age_minutes": 7.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.007685,
+        "change_pct_240m": 0.007685,
+        "change_abs_60m": 0.007812,
+        "raw_change_pct_60m": -0.007685,
+        "raw_change_abs_60m": -0.007812,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "ZN=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 105.0625,
+        "timestamp_utc": "2026-09-24T05:17:00+00:00",
+        "available_at_utc": "2026-09-24T05:17:00+00:00",
+        "age_minutes": 6.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 10Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.01487,
+        "change_pct_240m": 0.01487,
+        "change_abs_60m": 0.015625,
+        "raw_change_pct_60m": -0.01487,
+        "raw_change_abs_60m": -0.015625,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 15.170000076293945,
+        "timestamp_utc": "2026-09-23T20:15:00+00:00",
+        "available_at_utc": "2026-09-23T20:15:00+00:00",
+        "age_minutes": 548.5,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.0,
+        "change_pct_240m": 0.0,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 91.44999694824219,
+        "timestamp_utc": "2026-09-24T05:17:00+00:00",
+        "available_at_utc": "2026-09-24T05:17:00+00:00",
+        "age_minutes": 6.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.0,
+        "change_pct_240m": 0.01093,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 97.47000122070312,
+        "timestamp_utc": "2026-09-24T05:17:00+00:00",
+        "available_at_utc": "2026-09-24T05:17:00+00:00",
+        "age_minutes": 6.5,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.061593,
+        "change_pct_240m": 0.205618,
+        "change_abs_60m": 0.059998,
+        "raw_change_pct_60m": 0.061593,
+        "raw_change_abs_60m": 0.059998,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1427996-gold-futures-hawkish-fed-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4321.10009765625,
+      "reference_price_time_utc": "2026-09-24T05:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T05:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T05:38:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T06:23:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T09:23:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1427996-gold-futures-hawkish-fed-m1",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 64.54000091552734,
+      "reference_price_time_utc": "2026-09-24T05:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-24T05:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 6.5,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T05:38:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T06:23:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-24T09:23:30+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}
