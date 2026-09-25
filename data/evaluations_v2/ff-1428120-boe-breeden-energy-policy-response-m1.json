@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T14:53:51+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T14:53:51+00:00",
   "prediction_latency_seconds": 3660.0,
-  "evaluated_at_utc": "2026-09-24T19:14:16.455557+00:00",
+  "evaluated_at_utc": "2026-09-25T07:52:18.698429+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -205,18 +205,22 @@
           "target_time_utc": "2026-09-24T15:53:51+00:00",
           "predicted_direction": "DOWN",
           "predicted_confidence": 6,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-09-25T07:01:00+00:00",
+          "market_delay_minutes": 907.15,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "4h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-24T18:53:51+00:00",
           "predicted_direction": "DOWN",
           "predicted_confidence": 6,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-09-25T07:01:00+00:00",
+          "market_delay_minutes": 727.15,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-25",
           "predicted_direction": "DOWN",
           "forecast_source": "legacy_fallback"
         }
