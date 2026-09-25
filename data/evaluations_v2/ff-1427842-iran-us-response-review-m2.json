@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-23T15:54:30+00:00",
   "evaluation_anchor_time_utc": "2026-09-23T15:54:30+00:00",
   "prediction_latency_seconds": 2430.0,
-  "evaluated_at_utc": "2026-09-25T01:34:02.391661+00:00",
+  "evaluated_at_utc": "2026-09-25T13:50:56.437566+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -332,7 +332,7 @@
     {
       "prediction_id": "ff-1427842-iran-us-response-review-m2",
       "instrument": "NDX",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -408,9 +408,25 @@
           "neutral_envelope_pct": 1.123128
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-24",
+          "actual_price_time_utc": "2026-09-24T21:17:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T21:16:00+00:00",
+          "price": 30478.855,
+          "change_pct": 0.110256,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.123128,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.054504,
+          "mfe_pct": 0.276104,
+          "mae_pct": -0.778401,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.112313,
+          "actual_direction_thresholded": "NO_MOVE",
           "forecast_source": "horizons"
         }
       }
@@ -418,7 +434,7 @@
     {
       "prediction_id": "ff-1427842-iran-us-response-review-m2",
       "instrument": "SP500",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -495,9 +511,25 @@
           "neutral_envelope_pct": 0.635241
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-24",
+          "actual_price_time_utc": "2026-09-24T20:37:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T20:36:00+00:00",
+          "price": 7704.13,
+          "change_pct": -0.142835,
+          "actual_direction": "DOWN",
           "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.869067,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.731547,
+          "mfe_pct": 0.0617,
+          "mae_pct": -0.681517,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.086907,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "horizons"
         }
       }
