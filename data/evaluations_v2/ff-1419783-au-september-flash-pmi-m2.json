@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-23T00:04:13+00:00",
   "evaluation_anchor_time_utc": "2026-09-23T00:04:13+00:00",
   "prediction_latency_seconds": 2880.0,
-  "evaluated_at_utc": "2026-09-24T02:07:22.232342+00:00",
+  "evaluated_at_utc": "2026-09-25T01:33:49.534787+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -154,7 +154,7 @@
     {
       "prediction_id": "ff-1419783-au-september-flash-pmi-m2",
       "instrument": "AUS200",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^AXJO",
       "yahoo_proxy_for": null,
@@ -231,9 +231,25 @@
           "neutral_envelope_pct": 0.188903
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-24",
+          "actual_price_time_utc": "2026-09-24T06:12:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T06:11:00+00:00",
+          "price": 8702.0,
+          "change_pct": -0.977485,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 0.559863,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.736242,
+          "mfe_pct": 1.618136,
+          "mae_pct": -0.045517,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.055986,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "horizons"
         }
       }

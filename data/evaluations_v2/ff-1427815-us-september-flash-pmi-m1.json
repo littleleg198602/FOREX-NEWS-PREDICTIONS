@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-23T14:29:09+00:00",
   "evaluation_anchor_time_utc": "2026-09-23T14:29:09+00:00",
   "prediction_latency_seconds": 2649.0,
-  "evaluated_at_utc": "2026-09-24T13:39:47.307959+00:00",
+  "evaluated_at_utc": "2026-09-25T01:33:58.250251+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -164,7 +164,7 @@
     {
       "prediction_id": "ff-1427815-us-september-flash-pmi-m1",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -243,9 +243,25 @@
           "actual_direction_thresholded": "UP"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-24",
+          "actual_price_time_utc": "2026-09-25T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T23:59:00+00:00",
+          "price": 4300.10009765625,
+          "change_pct": -0.4007,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 6,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 2.242086,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.382781,
+          "mfe_pct": 0.90564,
+          "mae_pct": -0.477141,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.224209,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "legacy_fallback"
         }
       }
@@ -431,7 +447,7 @@
     {
       "prediction_id": "ff-1427815-us-september-flash-pmi-m1",
       "instrument": "XAGUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "yahoo_proxy_for": "XAGUSD",
@@ -510,9 +526,25 @@
           "actual_direction_thresholded": "NO_MOVE"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-24",
+          "actual_price_time_utc": "2026-09-24T23:58:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-24T23:57:00+00:00",
+          "price": 64.05000305175781,
+          "change_pct": -1.552405,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 5.14141,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.244075,
+          "mfe_pct": 2.390096,
+          "mae_pct": -0.561029,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.514141,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "legacy_fallback"
         }
       }

@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T02:33:02+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T02:33:02+00:00",
   "prediction_latency_seconds": 3782.0,
-  "evaluated_at_utc": "2026-09-24T07:24:19.052028+00:00",
+  "evaluated_at_utc": "2026-09-25T01:34:10.327058+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -225,11 +225,13 @@
           "target_time_utc": "2026-09-24T06:33:02+00:00",
           "predicted_direction": "UP",
           "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-09-25T00:01:00+00:00",
+          "market_delay_minutes": 1047.97,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-25",
           "predicted_direction": "MIXED",
           "forecast_source": "legacy_fallback"
         }
