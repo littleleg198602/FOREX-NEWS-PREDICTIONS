@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T09:07:43+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T09:07:43+00:00",
   "prediction_latency_seconds": 2023.0,
-  "evaluated_at_utc": "2026-09-25T13:51:16.025830+00:00",
+  "evaluated_at_utc": "2026-09-28T00:50:04.338446+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -85,7 +85,7 @@
     {
       "prediction_id": "ff-1428060-iran-conflict-could-expand-indian-ocean-m2",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -162,9 +162,25 @@
           "neutral_envelope_pct": 0.868285
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-25",
+          "actual_price_time_utc": "2026-09-25T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-25T20:59:00+00:00",
+          "price": 4321.2001953125,
+          "change_pct": 0.591284,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.389734,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.452579,
+          "mfe_pct": 1.29895,
+          "mae_pct": -0.407375,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.138973,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "horizons"
         }
       }

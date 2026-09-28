@@ -1,13 +1,13 @@
 # Prediction quality audit
 
-Generated: 2026-09-27T22:19:49.233063+00:00
+Generated: 2026-09-28T00:55:07.084364+00:00
 
 ## Directional accuracy
 
 - 15m: 188/435 = 43.22%
 - 1h: 166/431 = 38.52%
 - 4h: 101/263 = 38.4%
-- next_session: 220/432 = 50.93%
+- next_session: 222/446 = 49.78%
 
 ## Detection latency
 

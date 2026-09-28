@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-24T17:26:05+00:00",
   "evaluation_anchor_time_utc": "2026-09-24T17:26:05+00:00",
   "prediction_latency_seconds": 3965.0,
-  "evaluated_at_utc": "2026-09-25T13:51:23.620860+00:00",
+  "evaluated_at_utc": "2026-09-28T00:50:12.526239+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -193,9 +193,25 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-25",
+          "actual_price_time_utc": "2026-09-25T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-25T20:59:00+00:00",
+          "price": 4321.2001953125,
+          "change_pct": 0.563188,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 5,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.389346,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.452174,
+          "mfe_pct": 0.181517,
+          "mae_pct": -1.270656,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.138935,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "horizons"
         }
       }
@@ -269,9 +285,24 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-25",
+          "actual_price_time_utc": "2026-09-25T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-25T20:59:00+00:00",
+          "price": 64.8010025024414,
+          "change_pct": 1.338655,
+          "actual_direction": "UP",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 2.283205,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.689808,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 2.283205,
           "forecast_source": "horizons"
         }
       }
