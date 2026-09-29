@@ -1,0 +1,263 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1429107-williams-one-more-hike-late-2026-m2",
+  "event_id": "ff-1429107-williams-one-more-hike-late-2026",
+  "event_time_utc": "2026-09-29T18:00:00+00:00",
+  "prediction_time_utc": "2026-09-29T20:04:31+00:00",
+  "evaluation_anchor_time_utc": "2026-09-29T20:04:31+00:00",
+  "prediction_latency_seconds": 7471.0,
+  "evaluated_at_utc": "2026-09-29T20:09:25.475420+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "FED",
+    "US_RATES",
+    "INFLATION"
+  ],
+  "evidence": {
+    "article_role": "COMMENTARY",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 124.5,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Williams still sees one more 2026 hike as likely but explicitly says there is no urgency, pushing back against strong market odds of an October hike.",
+    "market_expectations": {
+      "source": "Reuters contemporaneous futures commentary",
+      "expected_value": "strong chance of October hike before speech",
+      "implied_probability": null,
+      "distribution_notes": "Speech is less hawkish on timing than market pricing even though another hike remains base case."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "By decision time the speech was about two hours old; gold had rebounded and risk assets were mixed while long yields stayed elevated.",
+      "observed_reaction": {
+        "XAUUSD": "around 4171, +1.36% day in later snapshot",
+        "SP500": "about -0.14%",
+        "NDX": "about +0.26%",
+        "DXY": "101.11, +0.18%"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "firm",
+        "US10Y": "still near 5.26%",
+        "VIX": "15.98 and slightly lower",
+        "WTI": "89.38, -2.5%",
+        "BRENT": "102.59, -2.5%",
+        "gold": "rebounded despite high yields"
+      }
+    },
+    "decision_notes": "No learning confidence adjustment: retrieved learning_profile content did not expose an ACTIONABLE segment in this run."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.11,
+        "timestamp": "2026-09-29T20:04:31Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Investing/TradingKey snapshot",
+        "freshness": "current"
+      },
+      "US2Y": {
+        "value": 4.92,
+        "timestamp": "2026-09-29T20:04:31Z",
+        "direction": "MIXED",
+        "regime": "FLAT",
+        "source": "WSJ market snapshot",
+        "freshness": "same-day"
+      },
+      "US10Y": {
+        "value": 5.26,
+        "timestamp": "2026-09-29T20:04:31Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "AP/FT market snapshot",
+        "freshness": "same-day"
+      },
+      "VIX": {
+        "value": 15.98,
+        "timestamp": "2026-09-29T20:04:31Z",
+        "direction": "DOWN",
+        "regime": "LOW",
+        "source": "Investing snapshot",
+        "freshness": "current"
+      },
+      "WTI": {
+        "value": 89.38,
+        "timestamp": "2026-09-29T20:04:31Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness": "same-day close"
+      },
+      "BRENT": {
+        "value": 102.59,
+        "timestamp": "2026-09-29T20:04:31Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters",
+        "freshness": "same-day close"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "FLAT",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1429107-williams-one-more-hike-late-2026-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4207.0,
+      "reference_price_time_utc": "2026-09-29T20:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T19:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T20:19:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T21:04:31+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T00:04:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429107-williams-one-more-hike-late-2026-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30339.332,
+      "reference_price_time_utc": "2026-09-29T20:04:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T20:03:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T20:19:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T21:04:31+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T00:04:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429107-williams-one-more-hike-late-2026-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7671.08,
+      "reference_price_time_utc": "2026-09-29T20:04:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T20:03:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.517,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T20:19:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T21:04:31+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T00:04:31+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
