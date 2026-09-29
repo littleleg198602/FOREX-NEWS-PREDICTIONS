@@ -1,0 +1,340 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1429132-api-crude-build-20260929-m1",
+  "event_id": "ff-1429132-api-crude-build-20260929",
+  "event_time_utc": "2026-09-29T20:46:00+00:00",
+  "prediction_time_utc": "2026-09-29T21:52:22+00:00",
+  "evaluation_anchor_time_utc": "2026-09-29T21:52:22+00:00",
+  "prediction_latency_seconds": 3982.0,
+  "evaluated_at_utc": "2026-09-29T21:56:36.317965+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "US_OIL_INVENTORIES",
+    "ENERGY",
+    "INFLATION",
+    "RISK_SENTIMENT"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-29T21:52:22+00:00",
+    "captured_for_event_time_utc": "2026-09-29T21:52:22+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.37899780273438,
+        "timestamp_utc": "2026-09-29T21:47:00+00:00",
+        "available_at_utc": "2026-09-29T21:47:00+00:00",
+        "age_minutes": 5.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.002965,
+        "change_pct_240m": -0.196896,
+        "change_abs_60m": -0.003006,
+        "raw_change_pct_60m": -0.002965,
+        "raw_change_abs_60m": -0.003006,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.6796875,
+        "timestamp_utc": "2026-09-29T21:00:00+00:00",
+        "available_at_utc": "2026-09-29T21:00:00+00:00",
+        "age_minutes": 52.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": 0.003842,
+        "change_pct_240m": -0.103834,
+        "change_abs_60m": 0.003906,
+        "raw_change_pct_60m": -0.003842,
+        "raw_change_abs_60m": -0.003906,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 5.255000114440918,
+        "timestamp_utc": "2026-09-29T19:00:00+00:00",
+        "available_at_utc": "2026-09-29T19:00:00+00:00",
+        "age_minutes": 172.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": 0.0,
+        "change_pct_240m": -0.492331,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 16.030000686645508,
+        "timestamp_utc": "2026-09-29T20:15:00+00:00",
+        "available_at_utc": "2026-09-29T20:15:00+00:00",
+        "age_minutes": 97.37,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.0,
+        "change_pct_240m": -1.716731,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 88.94000244140625,
+        "timestamp_utc": "2026-09-29T21:00:00+00:00",
+        "available_at_utc": "2026-09-29T21:00:00+00:00",
+        "age_minutes": 52.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.033718,
+        "change_pct_240m": -1.276495,
+        "change_abs_60m": -0.029999,
+        "raw_change_pct_60m": -0.033718,
+        "raw_change_abs_60m": -0.029999,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 95.66999816894531,
+        "timestamp_utc": "2026-09-29T21:00:00+00:00",
+        "available_at_utc": "2026-09-29T21:00:00+00:00",
+        "age_minutes": 52.37,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.020905,
+        "change_pct_240m": -0.931968,
+        "change_abs_60m": -0.020004,
+        "raw_change_pct_60m": -0.020905,
+        "raw_change_abs_60m": -0.020004,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1429132-api-crude-build-20260929-m1",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7670.84,
+      "reference_price_time_utc": "2026-09-29T20:39:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T20:38:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 73.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:07:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T01:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429132-api-crude-build-20260929-m1",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30339.332,
+      "reference_price_time_utc": "2026-09-29T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 35.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:07:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T01:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429132-api-crude-build-20260929-m1",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51349.92,
+      "reference_price_time_utc": "2026-09-29T20:39:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T20:38:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 73.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:07:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T01:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429132-api-crude-build-20260929-m1",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4215.0,
+      "reference_price_time_utc": "2026-09-29T21:00:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T20:59:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 52.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "legacy_immediate_fallback",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:07:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T22:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T01:52:22+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "legacy_fallback"
+        }
+      }
+    }
+  ]
+}

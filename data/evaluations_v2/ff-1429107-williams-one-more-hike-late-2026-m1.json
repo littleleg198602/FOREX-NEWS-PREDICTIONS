@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-29T20:04:31+00:00",
   "evaluation_anchor_time_utc": "2026-09-29T20:04:31+00:00",
   "prediction_latency_seconds": 7471.0,
-  "evaluated_at_utc": "2026-09-29T20:50:20.844304+00:00",
+  "evaluated_at_utc": "2026-09-29T21:56:34.732050+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -199,10 +199,11 @@
           "actual_direction_thresholded": "DOWN"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-29T21:04:31+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 6
+          "predicted_confidence": 6,
+          "reason": "no complete traded bar available at/after target"
         },
         "4h": {
           "status": "PENDING",
@@ -258,10 +259,25 @@
           "actual_direction_thresholded": "NO_MOVE"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-09-29T21:04:31+00:00",
+          "actual_price_time_utc": "2026-09-29T21:05:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-29T21:04:00+00:00",
+          "market_delay_minutes": 0.48,
+          "price": 30339.332,
+          "change_pct": 0.0,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 6
+          "predicted_confidence": 6,
+          "forecast_source": "legacy_fallback",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.201748,
+          "post_event_range_pct": 0.0,
+          "mfe_pct": -0.0,
+          "mae_pct": -0.0,
+          "directional_threshold_pct": 0.020175,
+          "actual_direction_thresholded": "NO_MOVE"
         },
         "4h": {
           "status": "PENDING",
@@ -317,10 +333,11 @@
           "actual_direction_thresholded": "NO_MOVE"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-09-29T21:04:31+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         },
         "4h": {
           "status": "PENDING",
