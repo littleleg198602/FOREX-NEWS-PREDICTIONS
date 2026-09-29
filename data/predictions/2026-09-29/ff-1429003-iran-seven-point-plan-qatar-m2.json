@@ -1,0 +1,369 @@
+{
+  "event_id": "ff-1429003-iran-seven-point-plan-qatar",
+  "event_cluster_id": "us-iran-hormuz-diplomacy-sep2026",
+  "created_at_utc": "2026-09-29T11:53:41Z",
+  "event_time_utc": "2026-09-29T09:41:00Z",
+  "published_at_utc": "2026-09-29T09:41:00Z",
+  "source_time_text": "Forex Factory source post: Sep 29, 2026 5:41am (FF displayed timezone at observation)",
+  "observed_at_utc": "2026-09-29T11:53:41Z",
+  "time_source": "forex_factory_absolute",
+  "time_is_derived": false,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 300,
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "GEOPOLITICS",
+    "US_IRAN",
+    "HORMUZ",
+    "DIPLOMACY",
+    "ENERGY"
+  ],
+  "prediction_id": "ff-1429003-iran-seven-point-plan-qatar-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 132.7,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Iran says a specific seven-point plan was transmitted to Washington through Qatar and is awaiting an official US response, moving the process from general mediation to a concrete proposal but not yet an agreement.",
+    "market_expectations": {
+      "source": "same-day market pricing and reporting",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "Oil remained elevated but was easing; US yields and dollar stayed near multi-year/two-month highs, so markets were not pricing a completed diplomatic breakthrough."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The story was over two hours old at decision time and oil was easing, while yields/dollar remained firm; part of the diplomacy relief had already entered prices.",
+      "observed_reaction": {
+        "WTI": "about 92.24, easing at Reuters snapshot",
+        "BRENT": "about 105.04, easing but elevated",
+        "XAUUSD": "about 4140, modest rebound after prior sharp selloff",
+        "DXY": "about 101.5, firm",
+        "US10Y": "about 5.246%, near multi-decade high"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "easing supports diplomacy/risk relief",
+        "DXY": "firm, contrary to broad risk-relief transmission",
+        "US10Y": "still extremely high, limiting equity/gold relief",
+        "gold": "small technical rebound after severe selloff, not a clean haven signal",
+        "equity_futures": "roughly flat/mixed before US cash open"
+      }
+    },
+    "decision_notes": "Residual-move forecast from decision time. learning_profile.json retrieved empty, so no ACTIONABLE learning adjustment."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.5,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "two-month high / firm",
+        "source": "Reuters/market reports Sep 29",
+        "freshness": "same-day"
+      },
+      "US2Y": {
+        "value": null,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "September surge near multi-year highs; exact current value unavailable",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      },
+      "US10Y": {
+        "value": 5.246,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "near multi-decade high",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      },
+      "VIX": {
+        "value": 16,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "above 16 in premarket context",
+        "source": "same-day market report",
+        "freshness": "same-day"
+      },
+      "WTI": {
+        "value": 92.24,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "DOWN",
+        "regime": "easing after prior rise",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      },
+      "BRENT": {
+        "value": 105.04,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "DOWN",
+        "regime": "easing but elevated",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      }
+    },
+    "regimes": {
+      "geopolitics": "concrete proposal transmitted, official US response pending",
+      "rates": "restrictive / near multi-decade highs",
+      "risk": "mixed, headline-sensitive",
+      "energy": "elevated but easing"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Diplomatic plan is constructive, but partly priced and yields/dollar remain strong."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "Direction depends on the official US response and whether oil/yields ease."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Diplomatic plan is constructive, but partly priced and yields/dollar remain strong."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "If Washington engages, residual geopolitical premium can fade; high yields remain a gold headwind."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "US response is binary headline risk; rejection would reverse the diplomatic impulse."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Direction depends on the official US response and whether oil/yields ease."
+        }
+      },
+      "mechanism": "Diplomatic progress reduces haven premium, while high yields/dollar independently pressure gold.",
+      "invalidation": "US rejects the plan or conflict escalates materially, especially if oil spikes again.",
+      "counter_case": "Gold can rise despite diplomacy if the market focuses on conflict tail risk or yields reverse lower.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "rebound/mixed",
+        "trend_1h": "rebound from seven-week low",
+        "session_location": "near 4140 after 4110.55 prior-session low",
+        "extension_state": "rejection",
+        "market_open": true,
+        "source": "same-day public market context available by decision time",
+        "observed_at_utc": "2026-09-29T11:53:41Z"
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Diplomacy is mildly negative for haven demand but silver also has cyclical exposure."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "US response determines whether risk relief persists."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Diplomacy is mildly negative for haven demand but silver also has cyclical exposure."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "High yields/dollar and lower geopolitical premium are near-term headwinds."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Industrial-risk relief offsets part of the haven/rates drag."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "US response determines whether risk relief persists."
+        }
+      },
+      "mechanism": "Haven premium can fade, but cyclical relief partly offsets while yields remain restrictive.",
+      "invalidation": "Renewed escalation or sharp USD/yield reversal lower.",
+      "counter_case": "Improved growth/risk sentiment can support silver's industrial component.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "weak/mixed",
+        "trend_1h": "DOWN",
+        "session_location": "around 60.66 in same-day Reuters snapshot",
+        "extension_state": "extended",
+        "market_open": true,
+        "source": "same-day public market context available by decision time",
+        "observed_at_utc": "2026-09-29T11:53:41Z"
+      }
+    },
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "A formal seven-point plan awaiting response is incremental risk relief, though not a deal."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "A constructive response would support equities; rejection restores oil/rates pressure."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "A formal seven-point plan awaiting response is incremental risk relief, though not a deal."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Oil easing after the headline supports a modest residual risk-on impulse."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "High Treasury yields remain a major offset and the US can reject the plan."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "A constructive response would support equities; rejection restores oil/rates pressure."
+        }
+      },
+      "mechanism": "A credible diplomatic channel can lower oil/inflation tail risk and improve risk appetite.",
+      "invalidation": "US rejection, renewed attacks, or oil/yields surge.",
+      "counter_case": "Treasury yields near multi-decade highs can overwhelm geopolitical relief and compress equity multiples.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "flat/mixed",
+        "trend_1h": "MIXED",
+        "session_location": "futures roughly flat before cash open",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "same-day public market context available by decision time",
+        "observed_at_utc": "2026-09-29T11:53:41Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Easing oil risk is helpful, but 10Y yields near 5.25% cap the upside."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "Needs both constructive diplomacy and yield stabilization for sustained upside."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Easing oil risk is helpful, but 10Y yields near 5.25% cap the upside."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Diplomatic relief conflicts with still-restrictive long yields."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Tech remains highly sensitive to rates even if geopolitical risk eases."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Needs both constructive diplomacy and yield stabilization for sustained upside."
+        }
+      },
+      "mechanism": "Lower oil risk helps rate expectations, but tech remains especially exposed to high long yields.",
+      "invalidation": "US10Y pushes decisively above recent highs or US rejects proposal.",
+      "counter_case": "Even successful diplomacy may not lift tech if rates remain around 5.25% or higher.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "slightly firm/mixed",
+        "trend_1h": "MIXED",
+        "session_location": "Nasdaq futures around flat/slightly positive",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "same-day public market context available by decision time",
+        "observed_at_utc": "2026-09-29T11:53:41Z"
+      }
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Broad risk relief helps cyclicals, although energy names may lose some oil premium."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "US response remains the dominant binary catalyst."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Broad risk relief helps cyclicals, although energy names may lose some oil premium."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Lower oil tail risk supports the macro backdrop."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "High yields and sector offsets reduce conviction."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "US response remains the dominant binary catalyst."
+        }
+      },
+      "mechanism": "Reduced conflict risk supports cyclicals, offset by potential energy-sector giveback and high yields.",
+      "invalidation": "Proposal rejected or energy prices spike anew.",
+      "counter_case": "Energy constituents can lose oil premium while high yields weigh on industrial financing conditions.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "slightly weak/mixed",
+        "trend_1h": "MIXED",
+        "session_location": "Dow futures slightly lower",
+        "extension_state": "range",
+        "market_open": true,
+        "source": "same-day public market context available by decision time",
+        "observed_at_utc": "2026-09-29T11:53:41Z"
+      }
+    }
+  ]
+}
