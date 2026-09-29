@@ -1,0 +1,353 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1429003-iran-seven-point-plan-qatar-m2",
+  "event_id": "ff-1429003-iran-seven-point-plan-qatar",
+  "event_time_utc": "2026-09-29T09:41:00+00:00",
+  "prediction_time_utc": "2026-09-29T11:53:41+00:00",
+  "evaluation_anchor_time_utc": "2026-09-29T11:53:41+00:00",
+  "prediction_latency_seconds": 7961.0,
+  "evaluated_at_utc": "2026-09-29T11:58:37.051077+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "GEOPOLITICS",
+    "US_IRAN",
+    "HORMUZ",
+    "DIPLOMACY",
+    "ENERGY"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 132.7,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Iran says a specific seven-point plan was transmitted to Washington through Qatar and is awaiting an official US response, moving the process from general mediation to a concrete proposal but not yet an agreement.",
+    "market_expectations": {
+      "source": "same-day market pricing and reporting",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "Oil remained elevated but was easing; US yields and dollar stayed near multi-year/two-month highs, so markets were not pricing a completed diplomatic breakthrough."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The story was over two hours old at decision time and oil was easing, while yields/dollar remained firm; part of the diplomacy relief had already entered prices.",
+      "observed_reaction": {
+        "WTI": "about 92.24, easing at Reuters snapshot",
+        "BRENT": "about 105.04, easing but elevated",
+        "XAUUSD": "about 4140, modest rebound after prior sharp selloff",
+        "DXY": "about 101.5, firm",
+        "US10Y": "about 5.246%, near multi-decade high"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "oil": "easing supports diplomacy/risk relief",
+        "DXY": "firm, contrary to broad risk-relief transmission",
+        "US10Y": "still extremely high, limiting equity/gold relief",
+        "gold": "small technical rebound after severe selloff, not a clean haven signal",
+        "equity_futures": "roughly flat/mixed before US cash open"
+      }
+    },
+    "decision_notes": "Residual-move forecast from decision time. learning_profile.json retrieved empty, so no ACTIONABLE learning adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.5,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters/market reports Sep 29",
+        "freshness": "same-day"
+      },
+      "US2Y": {
+        "value": null,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      },
+      "US10Y": {
+        "value": 5.246,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "RISING",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      },
+      "VIX": {
+        "value": 16,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "UP",
+        "regime": "LOW",
+        "source": "same-day market report",
+        "freshness": "same-day"
+      },
+      "WTI": {
+        "value": 92.24,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      },
+      "BRENT": {
+        "value": 105.04,
+        "timestamp": "2026-09-29T11:53:41Z",
+        "direction": "DOWN",
+        "regime": "FALLING",
+        "source": "Reuters Sep 29",
+        "freshness": "same-day"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "RISING",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1429003-iran-seven-point-plan-qatar-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4182.7001953125,
+      "reference_price_time_utc": "2026-09-29T11:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T11:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:08:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:53:41+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T15:53:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429003-iran-seven-point-plan-qatar-m2",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 61.20000076293945,
+      "reference_price_time_utc": "2026-09-29T11:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T11:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:08:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:53:41+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T15:53:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429003-iran-seven-point-plan-qatar-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7683.69,
+      "reference_price_time_utc": "2026-09-28T20:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-28T20:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 916.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:08:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:53:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T15:53:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429003-iran-seven-point-plan-qatar-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30276.81,
+      "reference_price_time_utc": "2026-09-28T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-28T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 876.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:08:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:53:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T15:53:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1429003-iran-seven-point-plan-qatar-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51481.51,
+      "reference_price_time_utc": "2026-09-28T20:37:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-28T20:36:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 916.683,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:08:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T12:53:41+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-29T15:53:41+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
