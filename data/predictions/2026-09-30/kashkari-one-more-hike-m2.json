@@ -1,0 +1,313 @@
+{
+  "prediction_id": "m2-ff-1429375-1429376-kashkari-20260930",
+  "event_id": "ff-1429375-1429376-kashkari-20260930",
+  "event_cluster_id": "fed-kashkari-20260930",
+  "created_at_utc": "2026-09-30T23:18:35Z",
+  "event_time_utc": "2026-09-30T22:02:00Z",
+  "published_at_utc": "2026-09-30T22:03:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "FED",
+    "RATES",
+    "INFLATION"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 76,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Kashkari still expects one more 2026 rate increase despite softer PCE",
+    "market_expectations": {
+      "source": "Reuters/CME context",
+      "expected_value": null,
+      "implied_probability": 0.37,
+      "distribution_notes": "Earlier post-PCE reporting put October hike odds near 37%; Kashkari argues one more hike this year, not necessarily October."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "US cash market closed; long yields ended elevated and comments followed earlier PCE repricing.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "101.47 around US close",
+        "US2Y": "4.885% close",
+        "US10Y": "5.292% close",
+        "VIX": "not reliably captured at decision time",
+        "WTI": "90.42 close",
+        "BRENT": "103.50 close"
+      }
+    },
+    "decision_notes": "Deduplicated two Forex Factory Kashkari headlines into one event. No ACTIONABLE learning-profile rule was available to alter confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": 101.47,
+      "US2Y": 4.885,
+      "US10Y": 5.292,
+      "VIX": null,
+      "WTI": 90.42,
+      "BRENT": 103.5
+    },
+    "regimes": {
+      "rates": "elevated",
+      "oil": "elevated",
+      "cross_asset": "conflicting"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Hawkish Fed path supports real yields/USD"
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "PCE softness offsets Kashkari"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "hawkish rates impulse"
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "yield pressure"
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "conflict with softer PCE"
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "policy path still uncertain"
+        }
+      },
+      "mechanism": "Higher expected policy path is a headwind for gold.",
+      "invalidation": "US yields and DXY fall despite comments.",
+      "counter_case": "Softer PCE dominates and safe-haven demand offsets rates.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash session closed; residual overnight/futures move",
+        "extension_state": "UNKNOWN",
+        "market_open": false,
+        "source": "decision-time web context",
+        "observed_at_utc": "2026-09-30T23:18:35Z"
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "rates/USD headwind"
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "industrial/risk factors offset"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "hawkish rates impulse"
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "yield pressure"
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "mixed macro drivers"
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "conflicting monetary and industrial drivers"
+        }
+      },
+      "mechanism": "Higher yields/USD pressure precious metals.",
+      "invalidation": "Yields/DXY reverse lower.",
+      "counter_case": "Risk appetite and softer inflation support silver.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash session closed; residual overnight/futures move",
+        "extension_state": "UNKNOWN",
+        "market_open": false,
+        "source": "decision-time web context",
+        "observed_at_utc": "2026-09-30T23:18:35Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "higher-for-longer valuation pressure"
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "long yields already elevated"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "hawkish repricing"
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "duration sensitivity"
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "5.29% 10Y is a valuation headwind"
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "one more 2026 hike remains a headwind"
+        }
+      },
+      "mechanism": "Higher expected rates and long yields compress growth-equity multiples.",
+      "invalidation": "US2Y/US10Y fall and futures absorb comments.",
+      "counter_case": "Softer PCE and strong tech earnings dominate.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash session closed; residual overnight/futures move",
+        "extension_state": "UNKNOWN",
+        "market_open": false,
+        "source": "decision-time web context",
+        "observed_at_utc": "2026-09-30T23:18:35Z"
+      }
+    },
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "higher rates headwind"
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "growth and softer PCE offset"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "hawkish repricing"
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "yield pressure"
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "macro conflict"
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "balanced growth/rates effects"
+        }
+      },
+      "mechanism": "Higher yields pressure multiples.",
+      "invalidation": "Rates fall despite comments.",
+      "counter_case": "Softer PCE dominates and earnings support risk.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash session closed; residual overnight/futures move",
+        "extension_state": "UNKNOWN",
+        "market_open": false,
+        "source": "decision-time web context",
+        "observed_at_utc": "2026-09-30T23:18:35Z"
+      }
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "rates headwind"
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "less duration-sensitive"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "hawkish repricing"
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "yield pressure"
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "sector offsets"
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "balanced macro effects"
+        }
+      },
+      "mechanism": "Higher rates modestly pressure equities.",
+      "invalidation": "Rates reverse lower.",
+      "counter_case": "Cyclicals benefit from resilient growth.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash session closed; residual overnight/futures move",
+        "extension_state": "UNKNOWN",
+        "market_open": false,
+        "source": "decision-time web context",
+        "observed_at_utc": "2026-09-30T23:18:35Z"
+      }
+    }
+  ]
+}
