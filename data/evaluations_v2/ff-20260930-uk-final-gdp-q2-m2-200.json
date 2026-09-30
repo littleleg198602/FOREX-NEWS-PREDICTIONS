@@ -1,0 +1,240 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-20260930-uk-final-gdp-q2-m2-200",
+  "event_id": "ff-20260930-uk-final-gdp-q2",
+  "event_time_utc": "2026-09-30T06:00:00+00:00",
+  "prediction_time_utc": "2026-09-30T06:17:49+00:00",
+  "evaluation_anchor_time_utc": "2026-09-30T06:17:49+00:00",
+  "prediction_latency_seconds": 1069.0,
+  "evaluated_at_utc": "2026-09-30T06:21:42.241425+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "UK_GDP",
+    "MACRO"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 17.8,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "UK Q2 GDP revised up to 0.5% q/q versus 0.4% expected, with current-account deficit narrower than expected.",
+    "surprise": {
+      "actual": "0.5% q/q",
+      "consensus": "0.4% q/q",
+      "previous": "0.4% q/q",
+      "revised_previous": null,
+      "surprise_direction": "POSITIVE",
+      "components": {
+        "current_account_actual": "-19.9B",
+        "current_account_consensus": "-25.6B",
+        "business_investment_qoq": "1.8%"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Decision is ~18 minutes after release; initial FX/equity reaction may already be partly incorporated.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US10Y": "~5.23% in latest Reuters global-markets context",
+        "DXY": "recently near 101.49/two-month high; not a same-minute quote",
+        "oil": "elevated Middle-East risk remains a UK100 energy-sector offset"
+      }
+    },
+    "decision_notes": "Residual-move forecast from decision time; stronger domestic data can support GBP but a firmer pound and high yields can offset benefits for multinational-heavy UK100."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-09-30T06:17:49+00:00",
+    "captured_for_event_time_utc": "2026-09-30T06:17:49+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.28600311279297,
+        "timestamp_utc": "2026-09-30T06:12:00+00:00",
+        "available_at_utc": "2026-09-30T06:12:00+00:00",
+        "age_minutes": 5.82,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.128182,
+        "change_pct_240m": -0.061172,
+        "change_abs_60m": -0.129997,
+        "raw_change_pct_60m": -0.128182,
+        "raw_change_abs_60m": -0.129997,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.6875,
+        "timestamp_utc": "2026-09-30T06:12:00+00:00",
+        "available_at_utc": "2026-09-30T06:12:00+00:00",
+        "age_minutes": 5.82,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.030741,
+        "change_pct_240m": -0.011526,
+        "change_abs_60m": -0.03125,
+        "raw_change_pct_60m": 0.030741,
+        "raw_change_abs_60m": 0.03125,
+        "regime": "FALLING"
+      },
+      "US10Y": {
+        "symbol": "ZN=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 104.625,
+        "timestamp_utc": "2026-09-30T06:12:00+00:00",
+        "available_at_utc": "2026-09-30T06:12:00+00:00",
+        "age_minutes": 5.82,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 10Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.104649,
+        "change_pct_240m": -0.059773,
+        "change_abs_60m": -0.109375,
+        "raw_change_pct_60m": 0.104649,
+        "raw_change_abs_60m": 0.109375,
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 16.030000686645508,
+        "timestamp_utc": "2026-09-29T20:15:00+00:00",
+        "available_at_utc": "2026-09-29T20:15:00+00:00",
+        "age_minutes": 602.82,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.0,
+        "change_pct_240m": 0.0,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 89.31999969482422,
+        "timestamp_utc": "2026-09-30T06:12:00+00:00",
+        "available_at_utc": "2026-09-30T06:12:00+00:00",
+        "age_minutes": 5.82,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.434733,
+        "change_pct_240m": 0.011199,
+        "change_abs_60m": -0.389999,
+        "raw_change_pct_60m": -0.434733,
+        "raw_change_abs_60m": -0.389999,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 95.94000244140625,
+        "timestamp_utc": "2026-09-30T06:12:00+00:00",
+        "available_at_utc": "2026-09-30T06:12:00+00:00",
+        "age_minutes": 5.82,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.580308,
+        "change_pct_240m": -0.093717,
+        "change_abs_60m": -0.559998,
+        "raw_change_pct_60m": -0.580308,
+        "raw_change_abs_60m": -0.559998,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FALLING",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-20260930-uk-final-gdp-q2-m2-200",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10636.71,
+      "reference_price_time_utc": "2026-09-29T15:36:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-29T15:35:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 881.817,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T06:32:49+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T07:17:49+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-09-30T10:17:49+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
