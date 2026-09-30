@@ -1,0 +1,116 @@
+{
+  "prediction_id": "ff-20260930-uk-final-gdp-q2-m2-200",
+  "event_id": "ff-20260930-uk-final-gdp-q2",
+  "created_at_utc": "2026-09-30T06:17:49Z",
+  "event_time_utc": "2026-09-30T06:00:00Z",
+  "published_at_utc": "2026-09-30T06:00:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "UK_GDP",
+    "MACRO"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 17.8,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "UK Q2 GDP revised up to 0.5% q/q versus 0.4% expected, with current-account deficit narrower than expected.",
+    "surprise": {
+      "actual": "0.5% q/q",
+      "consensus": "0.4% q/q",
+      "previous": "0.4% q/q",
+      "revised_previous": null,
+      "surprise_direction": "POSITIVE",
+      "components": {
+        "current_account_actual": "-19.9B",
+        "current_account_consensus": "-25.6B",
+        "business_investment_qoq": "1.8%"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Decision is ~18 minutes after release; initial FX/equity reaction may already be partly incorporated.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US10Y": "~5.23% in latest Reuters global-markets context",
+        "DXY": "recently near 101.49/two-month high; not a same-minute quote",
+        "oil": "elevated Middle-East risk remains a UK100 energy-sector offset"
+      }
+    },
+    "decision_notes": "Residual-move forecast from decision time; stronger domestic data can support GBP but a firmer pound and high yields can offset benefits for multinational-heavy UK100."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": 101.49,
+      "US2Y": null,
+      "US10Y": 5.23,
+      "VIX": null,
+      "WTI": null,
+      "BRENT": null
+    },
+    "regimes": {
+      "rates": "HIGH",
+      "usd": "FIRM",
+      "oil": "ELEVATED"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "UK100",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Positive growth revision conflicts with stronger-GBP/high-yield headwinds for FTSE multinationals."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Initial positive macro surprise is partly priced and GBP translation effects can offset."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Better GDP/current account versus high UK/global yields is conflicting."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Macro resilience helps cyclicals but tighter-rate expectations and GBP strength cap index upside."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Needs confirmation from UK yields, GBP and broader European risk tone."
+        }
+      },
+      "mechanism": "Stronger UK activity supports domestic cyclicals but can lift sterling/rate expectations, which can weigh on multinational-heavy UK100.",
+      "invalidation": "Clear fall in UK yields plus stable/weaker GBP with broad European risk-on would tilt UK100 upward; sharp yield/GBP rise would tilt downward.",
+      "counter_case": "The upward GDP revision may already be stale/anticipated and stronger sterling can reduce overseas earnings translation.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "European pre/open transition",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Forex Factory/ONS + Reuters context",
+        "observed_at_utc": "2026-09-30T06:17:49Z"
+      }
+    }
+  ]
+}
