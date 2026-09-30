@@ -1,0 +1,311 @@
+{
+  "prediction_id": "ff-20260930-hormuz-crude-flows-prewar-m2-200",
+  "event_id": "ff-20260930-hormuz-crude-flows-prewar",
+  "created_at_utc": "2026-09-30T19:40:49Z",
+  "event_time_utc": "2026-09-30T18:42:00Z",
+  "published_at_utc": "2026-09-30T18:42:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "IRAN_HORMUZ",
+    "OIL_SUPPLY",
+    "GEOPOLITICS"
+  ],
+  "source_time_text": "58 min ago",
+  "observed_at_utc": "2026-09-30T19:40:49Z",
+  "time_source": "Forex Factory relative timestamp derived at observation",
+  "time_is_derived": true,
+  "time_uncertainty_minutes": 10,
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 58.8,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Kpler data reported by CNBC show Hormuz crude flows at a seven-day average 13.5 mb/d, back to the prewar baseline, reducing immediate crude-supply risk premium despite continuing fuel constraints and security risk.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Story is about 59 minutes old and oil had already eased earlier as Middle-East exports recovered.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "~101.4 same-day context, not same-minute",
+        "US2Y": "~4.9% same-day context; elevated",
+        "US10Y": "~5.24% same-day context; elevated",
+        "VIX": "mid-teens recent context; exact same-minute unavailable",
+        "WTI": "~$89-92 same-day range",
+        "BRENT": "~$99-103 same-day range",
+        "local_confirmation": "Hormuz crude flow 13.5 mb/d; refined products only 0.677 mb/d vs 3.6 mb/d prewar"
+      }
+    },
+    "decision_notes": "Residual move only. No ACTIONABLE learning rule present."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": 101.4,
+      "US2Y": 4.9,
+      "US10Y": 5.24,
+      "VIX": null,
+      "WTI": 90,
+      "BRENT": 102
+    },
+    "regimes": {
+      "rates": "HIGH",
+      "usd": "FIRM",
+      "oil": "ELEVATED_BUT_SUPPLY_NORMALIZING"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Lower crude-supply tail risk modestly supports risk sentiment; partly priced."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Sustained normalized flows modestly reduce energy-risk premium."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Lower crude-supply tail risk modestly supports risk sentiment; partly priced."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Supply normalization supportive, offset by elevated yields."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Oil relief competes with rates and unresolved Iran risk."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Sustained normalized flows modestly reduce energy-risk premium."
+        }
+      },
+      "mechanism": "Lower oil-supply risk eases inflation/geopolitical premia.",
+      "invalidation": "Renewed tanker attacks or sharp oil rebound.",
+      "counter_case": "Fuel constraints and security incidents can keep Brent high.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US late cash session / metals active",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Forex Factory/CNBC/Kpler + same-day market context",
+        "observed_at_utc": "2026-09-30T19:40:49Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Lower energy/inflation tail risk modestly supportive."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Sustained oil normalization modestly reduces inflation risk."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Lower energy/inflation tail risk modestly supportive."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Oil normalization helps, but 5%+ long yields cap conviction."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Rate sensitivity can overwhelm oil relief."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Sustained oil normalization modestly reduces inflation risk."
+        }
+      },
+      "mechanism": "Lower energy-risk premium helps growth if yields do not rise.",
+      "invalidation": "US10Y acceleration or renewed oil spike.",
+      "counter_case": "High yields can dominate.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US late cash session / metals active",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Forex Factory/CNBC/Kpler + same-day market context",
+        "observed_at_utc": "2026-09-30T19:40:49Z"
+      }
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Reduced supply-tail risk supports broad cyclicals."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Broader de-risking is mildly supportive."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Reduced supply-tail risk supports broad cyclicals."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Oil normalization lowers macro shock risk."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Energy weakness and high yields offset."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Broader de-risking is mildly supportive."
+        }
+      },
+      "mechanism": "Lower macro shock risk supports cyclicals.",
+      "invalidation": "Renewed Hormuz disruption.",
+      "counter_case": "Energy components can lag; geopolitics can reprice.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US late cash session / metals active",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Forex Factory/CNBC/Kpler + same-day market context",
+        "observed_at_utc": "2026-09-30T19:40:49Z"
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Lower Hormuz supply risk trims safe-haven premium."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "Caught between softer Fed pricing and lower geopolitical tail risk."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Lower Hormuz supply risk trims safe-haven premium."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Supply normalization modestly reduces hedging demand."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Softer PCE/rate expectations support gold against this signal."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Caught between softer Fed pricing and lower geopolitical tail risk."
+        }
+      },
+      "mechanism": "Reduced disruption risk lowers safe-haven demand.",
+      "invalidation": "Confirmed escalation or sharp fall in yields/DXY.",
+      "counter_case": "Fresh escalation or falling yields/DXY can dominate.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US late cash session / metals active",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Forex Factory/CNBC/Kpler + same-day market context",
+        "observed_at_utc": "2026-09-30T19:40:49Z"
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Safe-haven easing negative but risk-on industrial channel positive."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "USD/yields dominate this story."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Safe-haven easing negative but risk-on industrial channel positive."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Opposing channels offset."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "No clean cross-asset confirmation."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "USD/yields dominate this story."
+        }
+      },
+      "mechanism": "Opposing safe-haven and industrial channels.",
+      "invalidation": "Decisive DXY/yield move or renewed escalation.",
+      "counter_case": "Risk-on demand can offset reduced haven demand.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US late cash session / metals active",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Forex Factory/CNBC/Kpler + same-day market context",
+        "observed_at_utc": "2026-09-30T19:40:49Z"
+      }
+    }
+  ]
+}
