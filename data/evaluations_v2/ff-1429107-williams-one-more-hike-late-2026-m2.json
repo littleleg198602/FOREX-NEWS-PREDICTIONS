@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-29T20:04:31+00:00",
   "evaluation_anchor_time_utc": "2026-09-29T20:04:31+00:00",
   "prediction_latency_seconds": 7471.0,
-  "evaluated_at_utc": "2026-09-30T00:30:07.127979+00:00",
+  "evaluated_at_utc": "2026-09-30T13:47:12.086370+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -266,11 +266,13 @@
           "target_time_utc": "2026-09-30T00:04:31+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-09-30T13:31:00+00:00",
+          "market_delay_minutes": 806.48,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-30",
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
         }
@@ -319,18 +321,22 @@
           "target_time_utc": "2026-09-29T21:04:31+00:00",
           "predicted_direction": "UP",
           "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-09-30T13:31:00+00:00",
+          "market_delay_minutes": 986.48,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "4h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-09-30T00:04:31+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-09-30T13:31:00+00:00",
+          "market_delay_minutes": 806.48,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-09-30",
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
         }
