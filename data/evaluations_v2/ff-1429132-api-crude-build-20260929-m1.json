@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-09-29T21:52:22+00:00",
   "evaluation_anchor_time_utc": "2026-09-29T21:52:22+00:00",
   "prediction_latency_seconds": 3982.0,
-  "evaluated_at_utc": "2026-09-30T13:47:13.759176+00:00",
+  "evaluated_at_utc": "2026-10-01T05:57:19.045578+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -313,7 +313,7 @@
     {
       "prediction_id": "ff-1429132-api-crude-build-20260929-m1",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -353,9 +353,24 @@
           "reference_age_minutes": 52.367
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-09-30",
+          "actual_price_time_utc": "2026-10-01T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-09-30T23:59:00+00:00",
+          "price": 4186.2001953125,
+          "change_pct": -0.683269,
+          "actual_direction": "DOWN",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.767497,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.729535,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 1.767497,
           "forecast_source": "legacy_fallback"
         }
       }
