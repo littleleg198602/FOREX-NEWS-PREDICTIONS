@@ -1,0 +1,273 @@
+{
+  "prediction_id": "ff-20261001-eu-diesel-release-m2",
+  "event_id": "ff-20261001-eu-diesel-release",
+  "created_at_utc": "2026-10-01T08:54:16Z",
+  "event_time_utc": "2026-10-01T07:50:00Z",
+  "published_at_utc": "2026-10-01T07:50:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "ENERGY",
+    "GEOPOLITICS",
+    "EQUITIES",
+    "METALS"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 64,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "Reported US request for EU release of 120m barrels of diesel over six months could reduce refined-product scarcity and inflation risk.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Oil was already falling on recovering Gulf exports and higher US inventories; request itself was not confirmed as implemented.",
+      "observed_reaction": {
+        "WTI": "around 89-90.5",
+        "Brent": "around 96.8-98.3"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US10Y": "5.3168% remains extremely high",
+        "DXY": 101.777,
+        "oil": "falling",
+        "europe_equities": "lower"
+      }
+    },
+    "decision_notes": "Source is a single-source report ('one of the sources'), so confidence is capped. learning_profile contained no actionable rule."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.777,
+        "source": "WSJ/current-day"
+      },
+      "US2Y": {
+        "value": 4.9,
+        "source": "approx current-day market context"
+      },
+      "US10Y": {
+        "value": 5.3168,
+        "source": "Reuters/current-day"
+      },
+      "VIX": {
+        "value": null,
+        "source": "not reliably available at decision time"
+      },
+      "WTI": {
+        "value": 89.1,
+        "source": "Reuters/current-day"
+      },
+      "BRENT": {
+        "value": 96.81,
+        "source": "Reuters/current-day"
+      }
+    },
+    "regimes": {
+      "rates": "VERY_HIGH",
+      "dollar": "FIRM",
+      "oil": "ELEVATED_BUT_FALLING",
+      "risk": "RISK_OFF_EUROPE"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Lower energy-risk impulse, but unconfirmed policy."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Implementation uncertain."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Lower energy-risk impulse, but unconfirmed policy."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Oil decline helps margins/inflation."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Very high yields can dominate."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Implementation uncertain."
+        }
+      },
+      "mechanism": "Potential diesel supply relief lowers inflation tail risk.",
+      "counter_case": "EU does not agree or Iran/Hormuz shock reverses oil lower move.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash market not yet open; Europe trading risk-off",
+        "extension_state": "UNCONFIRMED POLICY HEADLINE",
+        "market_open": false,
+        "source": "Forex Factory + Reuters current-day context",
+        "observed_at_utc": "2026-10-01T08:54:16Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Lower inflation impulse helps duration assets."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Needs yields to ease."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Lower inflation impulse helps duration assets."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Oil decline supportive."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "5.3%+ US10Y is a major counter-driver."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Needs yields to ease."
+        }
+      },
+      "mechanism": "Lower energy inflation versus high yields.",
+      "counter_case": "Yields keep rising or oil rebounds.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash market not yet open; Europe trading risk-off",
+        "extension_state": "UNCONFIRMED POLICY HEADLINE",
+        "market_open": false,
+        "source": "Forex Factory + Reuters current-day context",
+        "observed_at_utc": "2026-10-01T08:54:16Z"
+      }
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Broad risk relief."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Policy not implemented yet."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Broad risk relief."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Energy cost relief."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Rates conflict."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Policy not implemented yet."
+        }
+      },
+      "mechanism": "Energy-cost relief.",
+      "counter_case": "Oil/geopolitical reversal.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash market not yet open; Europe trading risk-off",
+        "extension_state": "UNCONFIRMED POLICY HEADLINE",
+        "market_open": false,
+        "source": "Forex Factory + Reuters current-day context",
+        "observed_at_utc": "2026-10-01T08:54:16Z"
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Less energy/geopolitical premium."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Unconfirmed release and Iran risk cap conviction."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Less energy/geopolitical premium."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Oil decline reduces inflation hedge demand."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "High yields negative but geopolitical uncertainty remains."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Unconfirmed release and Iran risk cap conviction."
+        }
+      },
+      "mechanism": "Reduced inflation/safe-haven premium.",
+      "counter_case": "Escalation in Iran/Hormuz or failure of EU release request.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US cash market not yet open; Europe trading risk-off",
+        "extension_state": "UNCONFIRMED POLICY HEADLINE",
+        "market_open": false,
+        "source": "Forex Factory + Reuters current-day context",
+        "observed_at_utc": "2026-10-01T08:54:16Z"
+      }
+    }
+  ]
+}
