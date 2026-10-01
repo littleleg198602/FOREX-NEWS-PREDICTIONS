@@ -1,0 +1,366 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-20261001-eu-diesel-release-m2",
+  "event_id": "ff-20261001-eu-diesel-release",
+  "event_time_utc": "2026-10-01T07:50:00+00:00",
+  "prediction_time_utc": "2026-10-01T08:54:16+00:00",
+  "evaluation_anchor_time_utc": "2026-10-01T08:54:16+00:00",
+  "prediction_latency_seconds": 3856.0,
+  "evaluated_at_utc": "2026-10-01T08:58:06.643862+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "ENERGY",
+    "GEOPOLITICS",
+    "EQUITIES",
+    "METALS"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "SECONDARY",
+    "source_verified": false,
+    "news_age_minutes": 64,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "Reported US request for EU release of 120m barrels of diesel over six months could reduce refined-product scarcity and inflation risk.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Oil was already falling on recovering Gulf exports and higher US inventories; request itself was not confirmed as implemented.",
+      "observed_reaction": {
+        "WTI": "around 89-90.5",
+        "Brent": "around 96.8-98.3"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US10Y": "5.3168% remains extremely high",
+        "DXY": 101.777,
+        "oil": "falling",
+        "europe_equities": "lower"
+      }
+    },
+    "decision_notes": "Source is a single-source report ('one of the sources'), so confidence is capped. learning_profile contained no actionable rule."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-10-01T08:54:16+00:00",
+    "captured_for_event_time_utc": "2026-10-01T08:54:16+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.822998046875,
+        "timestamp_utc": "2026-10-01T08:49:00+00:00",
+        "available_at_utc": "2026-10-01T08:49:00+00:00",
+        "age_minutes": 5.27,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.136698,
+        "change_pct_240m": 0.198774,
+        "change_abs_60m": 0.139,
+        "raw_change_pct_60m": 0.136698,
+        "raw_change_abs_60m": 0.139,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.61328125,
+        "timestamp_utc": "2026-10-01T08:49:00+00:00",
+        "available_at_utc": "2026-10-01T08:49:00+00:00",
+        "age_minutes": 5.27,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.007689,
+        "change_pct_240m": 0.05763,
+        "change_abs_60m": -0.007812,
+        "raw_change_pct_60m": 0.007689,
+        "raw_change_abs_60m": 0.007812,
+        "regime": "FLAT"
+      },
+      "US10Y": {
+        "symbol": "ZN=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 104.0,
+        "timestamp_utc": "2026-10-01T08:49:00+00:00",
+        "available_at_utc": "2026-10-01T08:49:00+00:00",
+        "age_minutes": 5.27,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 10Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.030057,
+        "change_pct_240m": 0.299581,
+        "change_abs_60m": -0.03125,
+        "raw_change_pct_60m": 0.030057,
+        "raw_change_abs_60m": 0.03125,
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 16.760000228881836,
+        "timestamp_utc": "2026-10-01T08:44:00+00:00",
+        "available_at_utc": "2026-10-01T08:44:00+00:00",
+        "age_minutes": 10.27,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.660664,
+        "change_pct_240m": 2.696082,
+        "change_abs_60m": 0.110001,
+        "raw_change_pct_60m": 0.660664,
+        "raw_change_abs_60m": 0.110001,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 92.5199966430664,
+        "timestamp_utc": "2026-10-01T08:49:00+00:00",
+        "available_at_utc": "2026-10-01T08:49:00+00:00",
+        "age_minutes": 5.27,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.63084,
+        "change_pct_240m": 3.721973,
+        "change_abs_60m": 0.579994,
+        "raw_change_pct_60m": 0.63084,
+        "raw_change_abs_60m": 0.579994,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 100.33999633789062,
+        "timestamp_utc": "2026-10-01T08:49:00+00:00",
+        "available_at_utc": "2026-10-01T08:49:00+00:00",
+        "age_minutes": 5.27,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.844217,
+        "change_pct_240m": 3.485971,
+        "change_abs_60m": 0.839996,
+        "raw_change_pct_60m": 0.844217,
+        "raw_change_abs_60m": 0.839996,
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FLAT",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "RISING"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-20261001-eu-diesel-release-m2",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7651.54,
+      "reference_price_time_utc": "2026-09-30T20:39:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-30T20:38:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 735.267,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:09:16+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:54:16+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T12:54:16+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261001-eu-diesel-release-m2",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30408.502,
+      "reference_price_time_utc": "2026-09-30T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-30T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 697.267,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:09:16+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:54:16+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T12:54:16+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261001-eu-diesel-release-m2",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 50906.05,
+      "reference_price_time_utc": "2026-09-30T20:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-09-30T20:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 725.267,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:09:16+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:54:16+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T12:54:16+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261001-eu-diesel-release-m2",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4182.5,
+      "reference_price_time_utc": "2026-10-01T08:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-01T08:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.267,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:09:16+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T09:54:16+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-01T12:54:16+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
