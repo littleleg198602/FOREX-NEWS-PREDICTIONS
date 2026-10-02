@@ -1,6 +1,6 @@
 # Prediction quality audit
 
-Generated: 2026-10-02T02:25:33.289011+00:00
+Generated: 2026-10-02T09:54:12.978032+00:00
 
 ## Directional accuracy
 
