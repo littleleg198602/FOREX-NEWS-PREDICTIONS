@@ -1,0 +1,146 @@
+{
+  "prediction_id": "ff-1429848-20261005-kihara-oil-reserves-m2-200",
+  "event_id": "ff-1429848-20261005-kihara-oil-reserves",
+  "event_cluster_id": "g7-oil-reserve-release-20261002",
+  "created_at_utc": "2026-10-05T05:10:54Z",
+  "event_time_utc": "2026-10-05T01:18:00Z",
+  "published_at_utc": "2026-10-05T01:18:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "energy",
+    "japan",
+    "strategic_reserves"
+  ],
+  "source_time_text": "Oct 5, 2026 2:18am Forex Factory (Europe/London)",
+  "observed_at_utc": "2026-10-05T05:10:54Z",
+  "time_source": "FOREX_FACTORY_ABSOLUTE",
+  "time_is_derived": false,
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 232.9,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Japan will not add a new reserve release beyond releases already under way, leaving a marginally tighter domestic energy buffer while Brent remains above $100.",
+    "market_expectations": {
+      "source": "G7 100m-barrel coordinated release context",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "The market already knew Japan was participating in earlier IEA releases; the new information is specifically that Tokyo has no plan for an additional release."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The story is almost four hours old and NI225 is already about +2.5%, showing the Japan-specific energy headwind is being overwhelmed by broader risk-on drivers.",
+      "observed_reaction": {
+        "NI225": "~+2.5% Monday session per Reuters global-markets report",
+        "Brent": "~$101.52/bbl"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "USD broadly +0.6% per Reuters; exact index level unavailable in verified source",
+        "US2Y": "exact live level unavailable in verified source at decision time",
+        "US10Y": "yields remain high/near multi-year highs per Reuters; exact live level unavailable",
+        "VIX": "exact live level unavailable in verified source at decision time",
+        "WTI": "oil edged lower; exact decision-time level unavailable in verified source",
+        "Brent": "~$101.52/bbl",
+        "local_confirmation": "NI225 ~+2.5%, yen slightly weaker; this conflicts with a clean bearish equity reaction"
+      }
+    },
+    "decision_notes": "Delayed residual forecast only. learning_profile.json contained no ACTIONABLE leakage-safe adjustment, so confidence was not altered by learning."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": null,
+        "state": "USD stronger ~0.6% broadly",
+        "source": "Reuters 2026-10-05"
+      },
+      "US2Y": {
+        "value": null,
+        "state": "unverified exact level"
+      },
+      "US10Y": {
+        "value": null,
+        "state": "high/near multi-year highs",
+        "source": "Reuters 2026-10-05"
+      },
+      "VIX": {
+        "value": null,
+        "state": "unverified exact level"
+      },
+      "WTI": {
+        "value": null,
+        "state": "edged lower",
+        "source": "Reuters 2026-10-05"
+      },
+      "BRENT": {
+        "value": 101.52,
+        "unit": "USD/bbl",
+        "source": "Reuters 2026-10-05"
+      }
+    },
+    "regimes": {
+      "risk": "risk-on Asia",
+      "oil": "elevated above $100 Brent"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3,
+        "rationale": "Story is delayed and NI225 is already strongly higher; no clean residual bearish confirmation."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "No additional reserve release marginally raises Japan's imported-energy/inflation risk if oil remains above $100 Brent."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Story is delayed and NI225 is already strongly higher; no clean residual bearish confirmation."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Japan-specific energy headwind conflicts with strong equity risk-on tape."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Higher imported-energy risk remains, but current market absorption is conflicting."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "No additional reserve release marginally raises Japan's imported-energy/inflation risk if oil remains above $100 Brent."
+        }
+      },
+      "mechanism": "No incremental Japanese reserve supply leaves more exposure to imported-energy inflation and margin pressure.",
+      "invalidation": "Brent continues falling toward/below $100 while NI225 holds the strong risk-on advance.",
+      "counter_case": "Weaker US hike odds, AI/tech strength and broader risk-on flows continue to dominate Japan's energy headwind.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": "UP",
+        "session_location": "NI225 about +2.5% in Monday Asian session",
+        "extension_state": "STRONG_RISK_ON_CONFLICT",
+        "market_open": true,
+        "source": "Reuters global markets 2026-10-05",
+        "observed_at_utc": "2026-10-05T05:10:54Z"
+      }
+    }
+  ]
+}
