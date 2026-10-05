@@ -1,0 +1,160 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1429848-20261005-kihara-oil-reserves-m2-200",
+  "event_id": "ff-1429848-20261005-kihara-oil-reserves",
+  "event_time_utc": "2026-10-05T01:18:00+00:00",
+  "prediction_time_utc": "2026-10-05T05:10:54+00:00",
+  "evaluation_anchor_time_utc": "2026-10-05T05:10:54+00:00",
+  "prediction_latency_seconds": 13974.0,
+  "evaluated_at_utc": "2026-10-05T05:15:31.010363+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "energy",
+    "japan",
+    "strategic_reserves"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 232.9,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Japan will not add a new reserve release beyond releases already under way, leaving a marginally tighter domestic energy buffer while Brent remains above $100.",
+    "market_expectations": {
+      "source": "G7 100m-barrel coordinated release context",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "The market already knew Japan was participating in earlier IEA releases; the new information is specifically that Tokyo has no plan for an additional release."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The story is almost four hours old and NI225 is already about +2.5%, showing the Japan-specific energy headwind is being overwhelmed by broader risk-on drivers.",
+      "observed_reaction": {
+        "NI225": "~+2.5% Monday session per Reuters global-markets report",
+        "Brent": "~$101.52/bbl"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "USD broadly +0.6% per Reuters; exact index level unavailable in verified source",
+        "US2Y": "exact live level unavailable in verified source at decision time",
+        "US10Y": "yields remain high/near multi-year highs per Reuters; exact live level unavailable",
+        "VIX": "exact live level unavailable in verified source at decision time",
+        "WTI": "oil edged lower; exact decision-time level unavailable in verified source",
+        "Brent": "~$101.52/bbl",
+        "local_confirmation": "NI225 ~+2.5%, yen slightly weaker; this conflicts with a clean bearish equity reaction"
+      }
+    },
+    "decision_notes": "Delayed residual forecast only. learning_profile.json contained no ACTIONABLE leakage-safe adjustment, so confidence was not altered by learning."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "missing_or_unusable_context_ineligible_record",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "state": "USD stronger ~0.6% broadly",
+        "source": "Reuters 2026-10-05",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": null,
+        "state": "unverified exact level",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": null,
+        "state": "high/near multi-year highs",
+        "source": "Reuters 2026-10-05",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": null,
+        "state": "unverified exact level",
+        "regime": "UNKNOWN"
+      },
+      "WTI": {
+        "value": null,
+        "state": "edged lower",
+        "source": "Reuters 2026-10-05",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 101.52,
+        "unit": "USD/bbl",
+        "source": "Reuters 2026-10-05",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "UNKNOWN",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1429848-20261005-kihara-oil-reserves-m2-200",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 69703.453125,
+      "reference_price_time_utc": "2026-10-05T05:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-05T05:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-05T05:25:54+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-05T06:10:54+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-05T09:10:54+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1429848-20261005-kihara-oil-reserves-m1-111",
+  "event_id": "ff-1429848-20261005-kihara-oil-reserves",
+  "event_time_utc": "2026-10-05T01:18:00+00:00",
+  "prediction_time_utc": "2026-10-05T05:10:54+00:00",
+  "evaluation_anchor_time_utc": "2026-10-05T05:10:54+00:00",
+  "prediction_latency_seconds": 13974.0,
+  "evaluated_at_utc": "2026-10-05T05:15:30.834335+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "energy",
+    "japan",
+    "strategic_reserves"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "missing_or_unusable_context_ineligible_record",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "US2Y": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "US10Y": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "VIX": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "WTI": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "BRENT": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "UNKNOWN",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": true
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1429848-20261005-kihara-oil-reserves-m1-111",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 69703.453125,
+      "reference_price_time_utc": "2026-10-05T05:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-05T05:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.9,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-05T05:25:54+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-05T06:10:54+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-05T09:10:54+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
