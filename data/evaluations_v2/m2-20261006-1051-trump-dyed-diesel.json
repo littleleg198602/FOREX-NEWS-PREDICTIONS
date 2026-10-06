@@ -1,0 +1,241 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "m2-20261006-1051-trump-dyed-diesel",
+  "event_id": "ff-20261006-trump-dyed-diesel",
+  "event_time_utc": "2026-10-06T10:51:00+00:00",
+  "prediction_time_utc": "2026-10-06T11:48:21+00:00",
+  "evaluation_anchor_time_utc": "2026-10-06T11:48:21+00:00",
+  "prediction_latency_seconds": 3441.0,
+  "evaluated_at_utc": "2026-10-06T11:53:00.774308+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US_POLICY",
+    "ENERGY",
+    "INFLATION"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 57.35,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Temporary expansion of tax-exempt dyed diesel use lowers effective trucking/farm fuel costs at the margin while crude prices are already falling.",
+    "market_expectations": {
+      "source": "Reuters market context",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No clean consensus; policy was signed Monday evening, so residual surprise is limited."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Underlying executive order was signed Monday evening; US futures were already higher while oil and yields were lower before this FF story.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "BRENT": "~98.6 and falling >1%",
+        "WTI": "~87.6 and falling ~2%",
+        "US_equity_futures": "higher",
+        "DXY": "~102.16 earlier session",
+        "US10Y": "easing from recent highs",
+        "US2Y": "not reliably refreshed in decision window",
+        "VIX": "not reliably refreshed in decision window"
+      }
+    },
+    "decision_notes": "Backfilled/ineligible for hit-rate because underlying policy action predates the FF article. Residual forecast only; no hindsight learning applied."
+  },
+  "is_example": false,
+  "backfilled": true,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "missing_or_unusable_context_ineligible_record",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 102.16,
+        "source": "Reuters intraday context",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": null,
+        "source": "not reliably refreshed",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": null,
+        "source": "Reuters: yields lower",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": null,
+        "source": "not reliably refreshed",
+        "regime": "UNKNOWN"
+      },
+      "WTI": {
+        "value": 87.6,
+        "source": "Reuters",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 98.62,
+        "source": "Reuters",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "UNKNOWN",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "m2-20261006-1051-trump-dyed-diesel",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7773.95,
+      "reference_price_time_utc": "2026-10-05T20:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-05T20:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 899.35,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T12:03:21+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T12:48:21+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T15:48:21+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "m2-20261006-1051-trump-dyed-diesel",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 51267.9,
+      "reference_price_time_utc": "2026-10-05T20:49:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-05T20:48:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 899.35,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T12:03:21+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T12:48:21+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T15:48:21+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "m2-20261006-1051-trump-dyed-diesel",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 31076.441,
+      "reference_price_time_utc": "2026-10-05T21:17:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-05T21:16:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 871.35,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T12:03:21+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T12:48:21+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-06T15:48:21+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
