@@ -1,0 +1,131 @@
+{
+  "prediction_id": "m2-20261006-0732-ueda-policy-normalization",
+  "event_id": "ff-20261006-0732-ueda-policy-normalization",
+  "event_cluster_id": "boj-20261006-policy-guidance",
+  "created_at_utc": "2026-10-06T08:24:59Z",
+  "event_time_utc": "2026-10-06T06:32:00Z",
+  "published_at_utc": "2026-10-06T06:32:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "BOJ",
+    "rates",
+    "Japan"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 113,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "Ueda explicitly reaffirmed further rate increases as economy and inflation evolve while saying financial conditions remain accommodative.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "The conditional hiking path was already expected and the speech did not accelerate timing; initial market response was limited.",
+      "observed_reaction": {
+        "USDJPY": "around 158.2 during speech; no clear yen strengthening",
+        "NI225": "remained positive"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US10Y": "about 5.29-5.31%, elevated",
+        "DXY": "about 102.2, firm",
+        "VIX": "about 15.5, subdued",
+        "WTI": "around $89-90, softer",
+        "Brent": "around $100-101, softer",
+        "local": "JGB yields remain historically high; NI225 positive"
+      }
+    },
+    "decision_notes": "No ACTIONABLE leakage-safe learning profile content was available to alter confidence. Residual-move target from decision time; story delayed/partly priced."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 102.2,
+        "approximate": true
+      },
+      "US2Y": {
+        "value": 4.8,
+        "approximate": true
+      },
+      "US10Y": {
+        "value": 5.29,
+        "approximate": true
+      },
+      "VIX": {
+        "value": 15.5,
+        "approximate": true
+      },
+      "WTI": {
+        "value": 89.7,
+        "approximate": true
+      },
+      "BRENT": {
+        "value": 101,
+        "approximate": true
+      }
+    },
+    "regimes": {
+      "rates": "elevated",
+      "risk": "risk-on but yield-constrained",
+      "oil": "softening"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Hawkish continuation guidance, but no accelerated timetable and market reaction was limited."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Higher-for-longer BOJ path is a valuation headwind if JGB yields stay elevated."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Speech is already partly absorbed; no clear immediate equity confirmation."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Hawkish language offset by no timing acceleration and supportive risk tone."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Persistent normalization raises discount-rate pressure."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Residual risk from higher Japanese rates if local yields remain firm."
+        }
+      },
+      "mechanism": "BOJ normalization -> higher domestic discount rates / potential yen support -> equity valuation headwind.",
+      "invalidation": "JGB yields fall and NI225 extends higher despite the speech.",
+      "counter_case": "Ueda repeated a conditional path rather than signaling an October hike; strong global risk-on and lower oil can dominate.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "mixed",
+        "trend_1h": "up",
+        "session_location": "NI225 remained positive on the day",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "Reuters/Forex Factory; market snapshot around decision time",
+        "observed_at_utc": "2026-10-06T08:24:59Z"
+      }
+    }
+  ]
+}
