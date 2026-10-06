@@ -1,0 +1,256 @@
+{
+  "prediction_id": "us-trade-202608-m2-20261006T134250Z",
+  "event_id": "us-trade-balance-2026-08",
+  "event_cluster_id": "us-trade-2026-08",
+  "created_at_utc": "2026-10-06T13:42:50Z",
+  "event_time_utc": "2026-10-06T12:30:00Z",
+  "published_at_utc": "2026-10-06T12:30:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": true,
+  "backfilled": false,
+  "categories": [
+    "US_MACRO",
+    "TRADE_BALANCE"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 72.8,
+    "novelty": "LOW",
+    "attention": "MEDIUM",
+    "dominant_driver": "US trade deficit widened to $105.6B vs $102.0B consensus; much of goods deterioration was pre-signaled Sep 30.",
+    "market_expectations": {
+      "source": "Reuters poll",
+      "expected_value": "-$102.0B",
+      "implied_probability": null,
+      "distribution_notes": "Actual -$105.6B; July revised -$92.8B."
+    },
+    "surprise": {
+      "actual": "-$105.6B",
+      "consensus": "-$102.0B",
+      "previous": "-$88.6B initial",
+      "revised_previous": "-$92.8B",
+      "surprise_direction": "WIDER_DEFICIT",
+      "components": {
+        "exports": "+1.4% to $315.2B",
+        "imports": "+4.3% to $420.8B"
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Sep 30 advance goods report already showed sharp August widening.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": "~102.1-102.2 earlier",
+        "US2Y": "exact value unavailable",
+        "US10Y": "retreating from recent highs",
+        "VIX": "mid-teens context",
+        "WTI": "~$87-88 earlier",
+        "BRENT": "~$98 earlier",
+        "equities": "US futures positive near record highs",
+        "gold": "~$4,170 and higher earlier"
+      }
+    },
+    "decision_notes": "No ACTIONABLE learning adjustment; learning_profile had no actionable payload. Residual forecast only; low novelty."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": "~102.1-102.2"
+      },
+      "US2Y": {
+        "value": null
+      },
+      "US10Y": {
+        "value": null,
+        "regime": "retreating"
+      },
+      "VIX": {
+        "value": "mid-teens"
+      },
+      "WTI": {
+        "value": "~87-88"
+      },
+      "BRENT": {
+        "value": "~98"
+      }
+    },
+    "regimes": {
+      "risk": "risk-on",
+      "rates": "easing intraday",
+      "oil": "falling"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3
+        }
+      },
+      "counter_case": "Yield spike plus equity reversal would restore bearish interpretation.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US pre-open / cash-open window",
+        "extension_state": "unknown",
+        "market_open": null,
+        "source": "FF/Reuters; exact instrument reaction unavailable",
+        "observed_at_utc": "2026-10-06T13:42:50Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3
+        }
+      },
+      "counter_case": "Higher yields and broad tech selling would make downside credible.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US pre-open / cash-open window",
+        "extension_state": "unknown",
+        "market_open": null,
+        "source": "FF/Reuters; exact instrument reaction unavailable",
+        "observed_at_utc": "2026-10-06T13:42:50Z"
+      }
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 4
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3
+        }
+      },
+      "counter_case": "Falling yields plus cyclical participation would invalidate 4h downside.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US pre-open / cash-open window",
+        "extension_state": "unknown",
+        "market_open": null,
+        "source": "FF/Reuters; exact instrument reaction unavailable",
+        "observed_at_utc": "2026-10-06T13:42:50Z"
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 3
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 3
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3
+        }
+      },
+      "counter_case": "Sustained DXY and real-yield rise negates gold-positive channel.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US pre-open / cash-open window",
+        "extension_state": "unknown",
+        "market_open": null,
+        "source": "FF/Reuters; exact instrument reaction unavailable",
+        "observed_at_utc": "2026-10-06T13:42:50Z"
+      }
+    }
+  ]
+}
