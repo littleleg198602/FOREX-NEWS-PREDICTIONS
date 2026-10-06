@@ -1,0 +1,239 @@
+{
+  "prediction_id": "m2-20261006-1051-trump-dyed-diesel",
+  "event_id": "ff-20261006-trump-dyed-diesel",
+  "event_cluster_id": "us-diesel-cost-relief-20261005",
+  "created_at_utc": "2026-10-06T11:48:21Z",
+  "event_time_utc": "2026-10-06T10:51:00Z",
+  "published_at_utc": "2026-10-06T10:51:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": false,
+  "backfilled": true,
+  "categories": [
+    "US_POLICY",
+    "ENERGY",
+    "INFLATION"
+  ],
+  "source_time_text": "31 min ago at FF observation ~12:22 BST",
+  "observed_at_utc": "2026-10-06T11:48:21Z",
+  "time_source": "FOREX_FACTORY_RELATIVE",
+  "time_is_derived": true,
+  "time_uncertainty_minutes": 5,
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 57.35,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Temporary expansion of tax-exempt dyed diesel use lowers effective trucking/farm fuel costs at the margin while crude prices are already falling.",
+    "market_expectations": {
+      "source": "Reuters market context",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No clean consensus; policy was signed Monday evening, so residual surprise is limited."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Underlying executive order was signed Monday evening; US futures were already higher while oil and yields were lower before this FF story.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "BRENT": "~98.6 and falling >1%",
+        "WTI": "~87.6 and falling ~2%",
+        "US_equity_futures": "higher",
+        "DXY": "~102.16 earlier session",
+        "US10Y": "easing from recent highs",
+        "US2Y": "not reliably refreshed in decision window",
+        "VIX": "not reliably refreshed in decision window"
+      }
+    },
+    "decision_notes": "Backfilled/ineligible for hit-rate because underlying policy action predates the FF article. Residual forecast only; no hindsight learning applied."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 102.16,
+        "source": "Reuters intraday context"
+      },
+      "US2Y": {
+        "value": null,
+        "source": "not reliably refreshed"
+      },
+      "US10Y": {
+        "value": null,
+        "source": "Reuters: yields lower"
+      },
+      "VIX": {
+        "value": null,
+        "source": "not reliably refreshed"
+      },
+      "WTI": {
+        "value": 87.6,
+        "source": "Reuters"
+      },
+      "BRENT": {
+        "value": 98.62,
+        "source": "Reuters"
+      }
+    },
+    "regimes": {
+      "oil": "falling",
+      "rates": "easing from highs",
+      "equities": "risk-on premarket"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Mildly supportive but stale/absorbed."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": null
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Delayed story."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Cost/inflation relief aligns with falling oil and higher futures."
+        },
+        "4h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Supportive if oil stays below $100 Brent and yields do not rebound."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Modest residual positive."
+        }
+      },
+      "mechanism": "Lower diesel tax burden -> lower freight input costs/inflation pressure -> mild equity support.",
+      "invalidation": "Oil/yields reverse sharply higher or futures fade.",
+      "counter_case": "Tax relief is only about 24 cents/gal and distribution constraints may limit impact.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "positive premarket context",
+        "trend_1h": "positive premarket context",
+        "session_location": "US premarket near recent highs",
+        "extension_state": "already risk-on / partly priced",
+        "market_open": false,
+        "source": "Reuters market wrap",
+        "observed_at_utc": "2026-10-06T11:48:21Z"
+      }
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Transport/industrial cost relief is marginally favorable."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": null
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Delayed catalyst."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Industrials benefit modestly."
+        },
+        "4h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Falling oil/yields confirm."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Low-confidence continuation."
+        }
+      },
+      "mechanism": "Lower freight and fuel costs support industrial margins.",
+      "invalidation": "Oil or yields rebound and Dow futures lose gains.",
+      "counter_case": "Policy scope/logistics may be too small to matter.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "positive premarket context",
+        "trend_1h": "positive premarket context",
+        "session_location": "US premarket",
+        "extension_state": "partly priced",
+        "market_open": false,
+        "source": "Reuters market wrap",
+        "observed_at_utc": "2026-10-06T11:48:21Z"
+      }
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3,
+        "rationale": "Rates matter more than diesel."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 3,
+        "rationale": null
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "No direct catalyst."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Secondary to rates/AI momentum."
+        },
+        "4h": {
+          "direction": "UP",
+          "confidence": 3,
+          "rationale": "Lower yields/oil supportive."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 3,
+          "rationale": "Weak residual support."
+        }
+      },
+      "mechanism": "Indirect via inflation/rates and broad risk sentiment.",
+      "invalidation": "Treasury yields rebound or tech leadership reverses.",
+      "counter_case": "Tech earnings/rates dominate; diesel policy has negligible direct effect.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "positive premarket context",
+        "trend_1h": "positive premarket context",
+        "session_location": "US premarket near record",
+        "extension_state": "extended",
+        "market_open": false,
+        "source": "Reuters market wrap",
+        "observed_at_utc": "2026-10-06T11:48:21Z"
+      }
+    }
+  ]
+}
