@@ -1,0 +1,520 @@
+{
+  "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+  "event_id": "ff-20261007-1144-iran-hormuz-routes",
+  "created_at_utc": "2026-10-07T14:31:13Z",
+  "event_time_utc": "2026-10-07T10:44:00Z",
+  "published_at_utc": "2026-10-07T10:44:00Z",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "eligible_for_hit_rate": false,
+  "backfilled": true,
+  "categories": [
+    "geopolitics",
+    "iran",
+    "hormuz",
+    "oil",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 227.2,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Iran reiterated Hormuz will stay closed until demands are met and said it will soon block 'illegal' routes.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "By decision time Brent was ~102.24, WTI ~90.64 and equities had weakened.",
+      "observed_reaction": {
+        "BRENT": "~102.24",
+        "WTI": "~90.64",
+        "US10Y": "~5.35%",
+        "SP500": "~ -0.5% reported intraday"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "~102 area",
+        "US2Y": "~4.82%",
+        "US10Y": "~5.35%",
+        "VIX": "~15-16",
+        "WTI": "~90.64",
+        "BRENT": "~102.24",
+        "equities": "US and European equities lower"
+      }
+    },
+    "decision_notes": "Absolute FF timestamp. Residual forecast from decision time. Backfilled/ineligible due age. learning_profile.json had no ACTIONABLE payload, so learning did not alter confidence."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": "~102"
+      },
+      "US2Y": {
+        "value": "~4.82%"
+      },
+      "US10Y": {
+        "value": "~5.35%"
+      },
+      "VIX": {
+        "value": "~15-16"
+      },
+      "WTI": {
+        "value": "~90.64"
+      },
+      "BRENT": {
+        "value": "~102.24"
+      }
+    },
+    "regimes": {
+      "rates": "very high/rising long-end",
+      "oil": "geopolitical supply-risk premium",
+      "risk": "risk-off, not panic"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Safe-haven demand supports metals, but high yields cap conviction."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Rising real yields/USD can overwhelm safe-haven demand.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US session; safe-haven/rates conflict",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "XAGUSD",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Growth concerns and high yields can offset geopolitical demand.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US session; dual precious/industrial exposure",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "GDAXI",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Oil reversal or rapid diplomacy removes the shock.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Europe; already under pressure",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "FCHI40",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Oil reversal plus French bond stabilization can rebound.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Europe; fiscal and oil headwinds",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "STOXX50",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Lower oil/yields reduces the macro shock.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Europe; broad risk-off",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "UK100",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Energy-heavy composition can cushion weakness.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Europe; energy weight offsets",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "SPA35",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Energy relief and lower yields neutralize signal.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Europe; secondary exposure",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 6,
+        "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 6,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 6,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Strong Treasury auction or de-escalation can squeeze tech higher.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US; most rate-sensitive",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "Energy gains/lower yields can offset pressure.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US; cyclical inflation shock",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    },
+    {
+      "instrument": "SP500",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Oil/inflation shock plus elevated long yields pressure equities."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Delayed/partly priced; residual move needs fresh confirmation."
+        }
+      },
+      "counter_case": "De-escalation plus yield reversal can restore risk-on.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "US; broad risk-off",
+        "extension_state": "partly absorbed",
+        "market_open": true,
+        "source": "FF + Reuters/market reports available at decision time",
+        "observed_at_utc": "2026-10-07T14:31:13Z"
+      },
+      "mechanism": "Hormuz escalation raises oil/inflation risk; yields pressure equities; metals face safe-haven versus real-yield conflict.",
+      "invalidation": "Credible Hormuz de-escalation/reopening with oil and yields reversing lower."
+    }
+  ]
+}
