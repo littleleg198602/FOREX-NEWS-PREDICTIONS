@@ -1,0 +1,156 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20261007-jp-real-wages-m2-035239",
+  "event_id": "2026-10-07-jp-real-wages-aug",
+  "event_time_utc": "2026-10-06T23:30:00+00:00",
+  "prediction_time_utc": "2026-10-07T03:52:39+00:00",
+  "evaluation_anchor_time_utc": "2026-10-07T03:52:39+00:00",
+  "prediction_latency_seconds": 15759.0,
+  "evaluated_at_utc": "2026-10-07T03:58:35.434986+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "JPY",
+    "BOJ",
+    "WAGES",
+    "NI225"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 262,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Osmý růst reálných mezd podporuje další zvyšování sazeb BOJ, ale tempo zpomalilo proti červenci.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Data jsou několik hodin stará; NI225 již v asijské seanci klesal.",
+      "observed_reaction": {
+        "NI225_pct": -0.86,
+        "USDJPY": 158.43
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "DXY": 101.94,
+        "US10Y_pct": 5.3,
+        "WTI": 90.38,
+        "BRENT": 101.65,
+        "US2Y": null,
+        "VIX": null,
+        "local_USDJPY": 158.43
+      }
+    },
+    "decision_notes": "FF source time absent; event time anchored to customary Japanese release window and marked backfilled/ineligible. No actionable learning adjustment."
+  },
+  "is_example": false,
+  "backfilled": true,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "missing_or_unusable_context_ineligible_record",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "US2Y": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "US10Y": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "VIX": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "WTI": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      },
+      "BRENT": {
+        "value": null,
+        "timestamp_utc": null,
+        "regime": "UNKNOWN",
+        "source": null
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "UNKNOWN",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20261007-jp-real-wages-m2-035239",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 70149.78125,
+      "reference_price_time_utc": "2026-10-07T03:44:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T03:43:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 8.65,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T04:07:39+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T04:52:39+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T07:52:39+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
