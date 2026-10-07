@@ -1,0 +1,384 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1430393-20261007-us10y-535-m1-141218",
+  "event_id": "ff-1430393-20261007-us10y-535",
+  "event_time_utc": "2026-10-07T13:11:00+00:00",
+  "prediction_time_utc": "2026-10-07T14:12:18+00:00",
+  "evaluation_anchor_time_utc": "2026-10-07T14:12:18+00:00",
+  "prediction_latency_seconds": 3678.0,
+  "evaluated_at_utc": "2026-10-07T14:18:19.003578+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy",
+  "categories": [
+    "rates",
+    "US_Treasury",
+    "bond_auction",
+    "risk_off"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "reconstructed_pre_decision_from_yahoo",
+  "market_context": {
+    "captured_for_time_utc": "2026-10-07T14:12:18+00:00",
+    "captured_for_event_time_utc": "2026-10-07T14:12:18+00:00",
+    "information_cutoff": "only_bars_complete_at_or_before_prediction_decision_time",
+    "source": "yahoo",
+    "series": {
+      "DXY": {
+        "symbol": "DX-Y.NYB",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 102.38600158691406,
+        "timestamp_utc": "2026-10-07T14:09:00+00:00",
+        "available_at_utc": "2026-10-07T14:09:00+00:00",
+        "age_minutes": 3.3,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.022454,
+        "change_pct_240m": 0.093851,
+        "change_abs_60m": -0.022995,
+        "raw_change_pct_60m": -0.022454,
+        "raw_change_abs_60m": -0.022995,
+        "regime": "FLAT"
+      },
+      "US2Y": {
+        "symbol": "ZT=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.84765625,
+        "timestamp_utc": "2026-10-07T14:09:00+00:00",
+        "available_at_utc": "2026-10-07T14:09:00+00:00",
+        "age_minutes": 3.3,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": "US 2Y Treasury yield",
+        "inverse_to_role": true,
+        "trend_metric": "pct",
+        "change_pct_60m": -0.076767,
+        "change_pct_240m": -0.038369,
+        "change_abs_60m": -0.078125,
+        "raw_change_pct_60m": 0.076767,
+        "raw_change_abs_60m": 0.078125,
+        "regime": "FALLING"
+      },
+      "US10Y": {
+        "symbol": "^TNX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 5.324000358581543,
+        "timestamp_utc": "2026-10-07T14:04:00+00:00",
+        "available_at_utc": "2026-10-07T14:04:00+00:00",
+        "age_minutes": 8.3,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": "abs",
+        "change_pct_60m": -0.485973,
+        "change_pct_240m": 1.043847,
+        "change_abs_60m": -0.026,
+        "raw_change_pct_60m": -0.485973,
+        "raw_change_abs_60m": -0.026,
+        "regime": "FLAT"
+      },
+      "VIX": {
+        "symbol": "^VIX",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 15.729999542236328,
+        "timestamp_utc": "2026-10-07T14:04:00+00:00",
+        "available_at_utc": "2026-10-07T14:04:00+00:00",
+        "age_minutes": 8.3,
+        "fresh": true,
+        "max_staleness_minutes": 1440.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.316858,
+        "change_pct_240m": 1.287829,
+        "change_abs_60m": -0.05,
+        "raw_change_pct_60m": -0.316858,
+        "raw_change_abs_60m": -0.05,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "symbol": "CL=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 89.94000244140625,
+        "timestamp_utc": "2026-10-07T14:09:00+00:00",
+        "available_at_utc": "2026-10-07T14:09:00+00:00",
+        "age_minutes": 3.3,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": -0.033343,
+        "change_pct_240m": -0.099963,
+        "change_abs_60m": -0.029999,
+        "raw_change_pct_60m": -0.033343,
+        "raw_change_abs_60m": -0.029999,
+        "regime": "FLAT"
+      },
+      "BRENT": {
+        "symbol": "BZ=F",
+        "source": "yahoo",
+        "interval": "1m",
+        "value": 101.7300033569336,
+        "timestamp_utc": "2026-10-07T14:09:00+00:00",
+        "available_at_utc": "2026-10-07T14:09:00+00:00",
+        "age_minutes": 3.3,
+        "fresh": true,
+        "max_staleness_minutes": 180.0,
+        "proxy_for": null,
+        "inverse_to_role": false,
+        "trend_metric": null,
+        "change_pct_60m": 0.0,
+        "change_pct_240m": -0.206003,
+        "change_abs_60m": 0.0,
+        "raw_change_pct_60m": 0.0,
+        "raw_change_abs_60m": 0.0,
+        "regime": "FLAT"
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT",
+      "US2Y": "FALLING",
+      "US10Y": "FLAT",
+      "VIX": "LOW",
+      "WTI": "FLAT",
+      "BRENT": "FLAT"
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1430393-20261007-us10y-535-m1-141218",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4121.60009765625,
+      "reference_price_time_utc": "2026-10-07T14:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:08:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430393-20261007-us10y-535-m1-141218",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 59.834999084472656,
+      "reference_price_time_utc": "2026-10-07T14:09:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:08:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430393-20261007-us10y-535-m1-141218",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 30964.0859375,
+      "reference_price_time_utc": "2026-10-07T14:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430393-20261007-us10y-535-m1-141218",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7769.6298828125,
+      "reference_price_time_utc": "2026-10-07T14:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430393-20261007-us10y-535-m1-141218",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 50989.19921875,
+      "reference_price_time_utc": "2026-10-07T14:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.3,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:12:18+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
