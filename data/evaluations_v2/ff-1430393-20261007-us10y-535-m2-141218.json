@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-07T14:12:18+00:00",
   "evaluation_anchor_time_utc": "2026-10-07T14:12:18+00:00",
   "prediction_latency_seconds": 3678.0,
-  "evaluated_at_utc": "2026-10-07T14:18:20.190411+00:00",
+  "evaluated_at_utc": "2026-10-07T14:36:52.098890+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -114,21 +114,22 @@
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4121.7998046875,
-      "reference_price_time_utc": "2026-10-07T14:09:00+00:00",
-      "reference_price_bar_start_utc": "2026-10-07T14:08:00+00:00",
+      "reference_price": 4125.5,
+      "reference_price_time_utc": "2026-10-07T14:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:11:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 3.3,
+      "reference_age_minutes": 0.3,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-10-07T14:27:18+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         },
         "1h": {
           "status": "PENDING",
@@ -158,21 +159,22 @@
       "yahoo_symbol": "SI=F",
       "yahoo_proxy_for": "XAGUSD",
       "yahoo_proxy_type": "COMEX silver futures",
-      "reference_price": 59.834999084472656,
-      "reference_price_time_utc": "2026-10-07T14:09:00+00:00",
-      "reference_price_bar_start_utc": "2026-10-07T14:08:00+00:00",
+      "reference_price": 59.875,
+      "reference_price_time_utc": "2026-10-07T14:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:11:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 3.3,
+      "reference_age_minutes": 0.3,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-10-07T14:27:18+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "no complete traded bar available at/after target"
         },
         "1h": {
           "status": "PENDING",
@@ -197,7 +199,7 @@
     {
       "prediction_id": "ff-1430393-20261007-us10y-535-m2-141218",
       "instrument": "NDX",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^NDX",
       "yahoo_proxy_for": null,
@@ -213,10 +215,25 @@
       "predicted_confidence": 6,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "actual_price_time_utc": "2026-10-07T14:28:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-07T14:27:00+00:00",
+          "market_delay_minutes": 0.7,
+          "price": 31009.365234375,
+          "change_pct": 0.146232,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 6
+          "predicted_confidence": 6,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.159617,
+          "post_event_range_pct": 0.264224,
+          "mfe_pct": 0.017321,
+          "mae_pct": -0.246903,
+          "directional_threshold_pct": 0.015962,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
           "status": "PENDING",
@@ -241,7 +258,7 @@
     {
       "prediction_id": "ff-1430393-20261007-us10y-535-m2-141218",
       "instrument": "SP500",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GSPC",
       "yahoo_proxy_for": null,
@@ -257,10 +274,25 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "actual_price_time_utc": "2026-10-07T14:28:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-07T14:27:00+00:00",
+          "market_delay_minutes": 0.7,
+          "price": 7772.52001953125,
+          "change_pct": 0.037198,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.11532,
+          "post_event_range_pct": 0.128706,
+          "mfe_pct": 0.022524,
+          "mae_pct": -0.106183,
+          "directional_threshold_pct": 0.011532,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
           "status": "PENDING",
@@ -285,7 +317,7 @@
     {
       "prediction_id": "ff-1430393-20261007-us10y-535-m2-141218",
       "instrument": "WS30",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^DJI",
       "yahoo_proxy_for": null,
@@ -301,10 +333,25 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-10-07T14:27:18+00:00",
+          "actual_price_time_utc": "2026-10-07T14:28:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-07T14:27:00+00:00",
+          "market_delay_minutes": 0.7,
+          "price": 50987.48828125,
+          "change_pct": -0.003355,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "forecast_source": "horizons",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.122514,
+          "post_event_range_pct": 0.142463,
+          "mfe_pct": 0.053596,
+          "mae_pct": -0.088867,
+          "directional_threshold_pct": 0.012251,
+          "actual_direction_thresholded": "NO_MOVE"
         },
         "1h": {
           "status": "PENDING",

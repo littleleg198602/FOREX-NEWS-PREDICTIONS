@@ -1,0 +1,554 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+  "event_id": "ff-20261007-1144-iran-hormuz-routes",
+  "event_time_utc": "2026-10-07T10:44:00+00:00",
+  "prediction_time_utc": "2026-10-07T14:31:13+00:00",
+  "evaluation_anchor_time_utc": "2026-10-07T14:31:13+00:00",
+  "prediction_latency_seconds": 13633.0,
+  "evaluated_at_utc": "2026-10-07T14:36:47.222230+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "geopolitics",
+    "iran",
+    "hormuz",
+    "oil",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 227.2,
+    "novelty": "HIGH",
+    "attention": "HIGH",
+    "dominant_driver": "Iran reiterated Hormuz will stay closed until demands are met and said it will soon block 'illegal' routes.",
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "By decision time Brent was ~102.24, WTI ~90.64 and equities had weakened.",
+      "observed_reaction": {
+        "BRENT": "~102.24",
+        "WTI": "~90.64",
+        "US10Y": "~5.35%",
+        "SP500": "~ -0.5% reported intraday"
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": "~102 area",
+        "US2Y": "~4.82%",
+        "US10Y": "~5.35%",
+        "VIX": "~15-16",
+        "WTI": "~90.64",
+        "BRENT": "~102.24",
+        "equities": "US and European equities lower"
+      }
+    },
+    "decision_notes": "Absolute FF timestamp. Residual forecast from decision time. Backfilled/ineligible due age. learning_profile.json had no ACTIONABLE payload, so learning did not alter confidence."
+  },
+  "is_example": false,
+  "backfilled": true,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [
+    "XAUUSD next_session adapted from horizons.next_session",
+    "XAGUSD next_session adapted from horizons.next_session",
+    "GDAXI next_session adapted from horizons.next_session",
+    "FCHI40 next_session adapted from horizons.next_session",
+    "STOXX50 next_session adapted from horizons.next_session",
+    "UK100 next_session adapted from horizons.next_session",
+    "SPA35 next_session adapted from horizons.next_session",
+    "NDX next_session adapted from horizons.next_session",
+    "WS30 next_session adapted from horizons.next_session",
+    "SP500 next_session adapted from horizons.next_session"
+  ],
+  "market_context_origin": "missing_or_unusable_context_ineligible_record",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": "~102",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": "~4.82%",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": "~5.35%",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": "~15-16",
+        "regime": "UNKNOWN"
+      },
+      "WTI": {
+        "value": "~90.64",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": "~102.24",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "UNKNOWN",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4123.2998046875,
+      "reference_price_time_utc": "2026-10-07T14:27:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:26:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "XAGUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "SI=F",
+      "yahoo_proxy_for": "XAGUSD",
+      "yahoo_proxy_type": "COMEX silver futures",
+      "reference_price": 59.869998931884766,
+      "reference_price_time_utc": "2026-10-07T14:27:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:26:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25061.609375,
+      "reference_price_time_utc": "2026-10-07T14:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7762.8798828125,
+      "reference_price_time_utc": "2026-10-07T14:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6169.43994140625,
+      "reference_price_time_utc": "2026-10-07T14:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10458.66015625,
+      "reference_price_time_utc": "2026-10-07T14:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "SPA35",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^IBEX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 19083.80078125,
+      "reference_price_time_utc": "2026-10-07T14:22:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:21:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 9.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "NDX",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^NDX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 31002.251953125,
+      "reference_price_time_utc": "2026-10-07T14:31:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:30:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 6,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 6
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 50977.390625,
+      "reference_price_time_utc": "2026-10-07T14:31:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:30:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-20261007-1144-iran-hormuz-routes-m2-200",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7770.1201171875,
+      "reference_price_time_utc": "2026-10-07T14:31:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T14:30:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 0.217,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T14:46:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T15:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T18:31:13+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
