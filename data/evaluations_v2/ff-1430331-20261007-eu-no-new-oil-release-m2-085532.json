@@ -1,0 +1,376 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m2-085532",
+  "event_id": "ff-1430331-20261007-eu-no-new-oil-release",
+  "event_time_utc": "2026-10-07T07:52:00+00:00",
+  "prediction_time_utc": "2026-10-07T08:55:32+00:00",
+  "evaluation_anchor_time_utc": "2026-10-07T08:55:32+00:00",
+  "prediction_latency_seconds": 3812.0,
+  "evaluated_at_utc": "2026-10-07T08:59:29.511716+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "energy",
+    "G7",
+    "EU",
+    "oil_supply"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 63.5,
+    "novelty": "MEDIUM",
+    "attention": "HIGH",
+    "dominant_driver": "EU states do not expect additional oil-release obligations beyond the G7 pact, reducing the prospect of incremental supply relief while oil is already above $100 Brent.",
+    "market_expectations": {
+      "source": "Reuters/Forex Factory",
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No clean consensus; market was already pricing G7/IEA reserve-release support."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Brent and WTI were already up about 1% amid supply risks before/around the headline; European equities were already lower.",
+      "observed_reaction": {
+        "Brent": 101.58,
+        "WTI": 90.19
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFIRMED",
+      "observations": {
+        "DXY": 102.076,
+        "US2Y": null,
+        "US10Y": 5.307,
+        "VIX": 15.01,
+        "WTI": 90.19,
+        "BRENT": 101.58,
+        "STOXX600_pct": -0.45,
+        "gold": 4138.62
+      }
+    },
+    "decision_notes": "US2Y live value unavailable from a sufficiently reliable timestamped source in this run; recorded null rather than inferred. No actionable learning-profile adjustment."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": true,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 102.076,
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": null,
+        "status": "unavailable_reliable_live",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.307,
+        "unit": "pct",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 15.01,
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 90.19,
+        "unit": "USD/bbl",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 101.58,
+        "unit": "USD/bbl",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m2-085532",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25342.740234375,
+      "reference_price_time_utc": "2026-10-07T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T08:44:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:10:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T12:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m2-085532",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7839.7099609375,
+      "reference_price_time_utc": "2026-10-07T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T08:44:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:10:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T12:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m2-085532",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6231.5,
+      "reference_price_time_utc": "2026-10-07T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T08:44:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:10:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T12:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m2-085532",
+      "instrument": "UK100",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FTSE",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 10532.2998046875,
+      "reference_price_time_utc": "2026-10-07T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T08:44:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:10:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T12:55:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m2-085532",
+      "instrument": "SPA35",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^IBEX",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 19365.099609375,
+      "reference_price_time_utc": "2026-10-07T08:45:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T08:44:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:10:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:55:32+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T12:55:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m2-085532",
+      "instrument": "XAUUSD",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "GC=F",
+      "yahoo_proxy_for": "XAUUSD",
+      "yahoo_proxy_type": "COMEX gold futures",
+      "reference_price": 4152.5,
+      "reference_price_time_utc": "2026-10-07T08:50:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-07T08:49:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 5.533,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 4,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:10:32+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T09:55:32+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-07T12:55:32+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
