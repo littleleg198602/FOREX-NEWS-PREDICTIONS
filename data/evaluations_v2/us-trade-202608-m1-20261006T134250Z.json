@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-06T13:42:50+00:00",
   "evaluation_anchor_time_utc": "2026-10-06T13:42:50+00:00",
   "prediction_latency_seconds": 4370.0,
-  "evaluated_at_utc": "2026-10-07T14:18:11.244635+00:00",
+  "evaluated_at_utc": "2026-10-08T01:59:16.759120+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": null,
@@ -433,7 +433,7 @@
     {
       "prediction_id": "us-trade-202608-m1-20261006T134250Z",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -512,9 +512,25 @@
           "actual_direction_thresholded": "UP"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-07",
+          "actual_price_time_utc": "2026-10-08T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-07T23:59:00+00:00",
+          "price": 4133.0,
+          "change_pct": -1.233095,
+          "actual_direction": "DOWN",
           "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.95239,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.535484,
+          "mfe_pct": 0.664336,
+          "mae_pct": -2.231997,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.195239,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "horizons"
         }
       }
