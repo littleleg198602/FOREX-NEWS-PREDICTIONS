@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-07T08:55:32+00:00",
   "evaluation_anchor_time_utc": "2026-10-07T08:55:32+00:00",
   "prediction_latency_seconds": 3812.0,
-  "evaluated_at_utc": "2026-10-08T09:01:28.614046+00:00",
+  "evaluated_at_utc": "2026-10-09T02:13:58.821141+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy",
@@ -608,7 +608,7 @@
     {
       "prediction_id": "ff-1430331-20261007-eu-no-new-oil-release-m1-085532",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -687,9 +687,25 @@
           "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-08",
+          "actual_price_time_utc": "2026-10-09T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-08T23:59:00+00:00",
+          "price": 4169.2001953125,
+          "change_pct": 0.450553,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
+          "predicted_confidence": 5,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 2.556315,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.99988,
+          "mfe_pct": 0.486693,
+          "mae_pct": -1.428745,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.255631,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "horizons"
         }
       }
