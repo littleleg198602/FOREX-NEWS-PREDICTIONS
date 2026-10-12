@@ -1,0 +1,315 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20261012T0519Z_ff1430973_china_cpca_september_auto_sales_m1_111",
+  "event_id": "ff-1430973-china-cpca-september-passenger-car-sales-20261012",
+  "event_time_utc": "2026-10-12T05:07:00+00:00",
+  "prediction_time_utc": "2026-10-12T05:19:17.483000+00:00",
+  "evaluation_anchor_time_utc": "2026-10-12T05:19:17.483000+00:00",
+  "prediction_latency_seconds": 737.483,
+  "evaluated_at_utc": "2026-10-12T05:23:15.748762+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "categories": [
+    "CHINA",
+    "AUTOMOTIVE",
+    "ECONOMIC_DATA",
+    "DEMAND"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 102.17,
+        "unit": "index",
+        "source": "Reuters Asia market report Oct 12, quote timestamp not specified",
+        "observed_at_utc": null,
+        "freshness": "SAME_DAY_UNSYNCHRONIZED",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.789,
+        "unit": "percent",
+        "source": "Oct 9 last reported snapshot",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_STALE_US_HOLIDAY",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.243,
+        "unit": "percent",
+        "source": "Oct 9 last reported snapshot",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_STALE_US_HOLIDAY",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 14.84,
+        "unit": "index",
+        "source": "Oct 9 last reported close",
+        "observed_at_utc": "2026-10-09T20:00:00Z",
+        "freshness": "FRIDAY_CLOSE_STALE",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 90.29,
+        "unit": "USD_per_barrel",
+        "source": "Reuters Oct 12 Asia market report, intraday quote timestamp not specified",
+        "observed_at_utc": null,
+        "freshness": "SAME_DAY_UNSYNCHRONIZED",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 103.38,
+        "unit": "USD_per_barrel",
+        "source": "Reuters Oct 12 Asia market report, intraday quote timestamp not specified",
+        "observed_at_utc": null,
+        "freshness": "SAME_DAY_UNSYNCHRONIZED",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20261012T0519Z_ff1430973_china_cpca_september_auto_sales_m1_111",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8780.0,
+      "reference_price_time_utc": "2026-10-12T05:03:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-12T05:02:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 16.291,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20261012T0519Z_ff1430973_china_cpca_september_auto_sales_m1_111",
+      "instrument": "GDAXI",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GDAXI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 25087.27,
+      "reference_price_time_utc": "2026-10-09T16:01:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-09T16:00:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3678.291,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20261012T0519Z_ff1430973_china_cpca_september_auto_sales_m1_111",
+      "instrument": "STOXX50",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^STOXX50E",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 6176.93017578125,
+      "reference_price_time_utc": "2026-10-09T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-09T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3709.291,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20261012T0519Z_ff1430973_china_cpca_september_auto_sales_m1_111",
+      "instrument": "FCHI40",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^FCHI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7804.240234375,
+      "reference_price_time_utc": "2026-10-09T15:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-09T15:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 3709.291,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20261012T0519Z_ff1430973_china_cpca_september_auto_sales_m1_111",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 69039.203125,
+      "reference_price_time_utc": "2026-10-09T06:30:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-09T06:29:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 4249.291,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "DOWN",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
+          "predicted_direction": "DOWN",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "DOWN",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
