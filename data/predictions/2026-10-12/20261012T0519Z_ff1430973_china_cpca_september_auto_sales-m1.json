@@ -1,0 +1,283 @@
+{
+  "event_id": "ff-1430973-china-cpca-september-passenger-car-sales-20261012",
+  "event_cluster_id": "china-cpca-2026-09-domestic-passenger-sales-export-growth",
+  "created_at_utc": "2026-10-12T05:19:17.483Z",
+  "event_time_utc": "2026-10-12T05:07:00Z",
+  "published_at_utc": "2026-10-12T05:07:00Z",
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "CHINA",
+    "AUTOMOTIVE",
+    "ECONOMIC_DATA",
+    "DEMAND"
+  ],
+  "headline": "China CPCA: September domestic passenger-car sales -28.1% y/y to 1.63m; August -23.7%; car exports +73.2% y/y to 923k",
+  "source_url": "https://www.forexfactory.com/news/1430973-china-auto-industry-body-cpca-september-passenger-car",
+  "corroboration_urls": [
+    "https://www.reuters.com/business/autos-transportation/china-home-car-sales-downturn-continues-exports-retain-momentum-2026-10-12/"
+  ],
+  "source_time_text": "Reuters absolute published Oct 12, 2026 05:07 UTC. FF Latest Stories showed '8 min ago' in contemporaneous page snapshot; FF display timezone/clock not assumed.",
+  "observed_at_utc": "2026-10-12T05:19:17.483Z",
+  "time_source": "REUTERS_ABSOLUTE_PUBLICATION",
+  "time_is_derived": false,
+  "time_uncertainty_seconds": 60,
+  "event_age_minutes": 12.29,
+  "learning_v2": {
+    "material_confidence_adjustment": false,
+    "reason": "Frozen control: no learning permitted"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 102.17,
+        "unit": "index",
+        "source": "Reuters Asia market report Oct 12, quote timestamp not specified",
+        "observed_at_utc": null,
+        "freshness": "SAME_DAY_UNSYNCHRONIZED"
+      },
+      "US2Y": {
+        "value": 4.789,
+        "unit": "percent",
+        "source": "Oct 9 last reported snapshot",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_STALE_US_HOLIDAY"
+      },
+      "US10Y": {
+        "value": 5.243,
+        "unit": "percent",
+        "source": "Oct 9 last reported snapshot",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_STALE_US_HOLIDAY"
+      },
+      "VIX": {
+        "value": 14.84,
+        "unit": "index",
+        "source": "Oct 9 last reported close",
+        "observed_at_utc": "2026-10-09T20:00:00Z",
+        "freshness": "FRIDAY_CLOSE_STALE"
+      },
+      "WTI": {
+        "value": 90.29,
+        "unit": "USD_per_barrel",
+        "source": "Reuters Oct 12 Asia market report, intraday quote timestamp not specified",
+        "observed_at_utc": null,
+        "freshness": "SAME_DAY_UNSYNCHRONIZED"
+      },
+      "BRENT": {
+        "value": 103.38,
+        "unit": "USD_per_barrel",
+        "source": "Reuters Oct 12 Asia market report, intraday quote timestamp not specified",
+        "observed_at_utc": null,
+        "freshness": "SAME_DAY_UNSYNCHRONIZED"
+      }
+    },
+    "regimes": {
+      "usd": "FIRM",
+      "rates": "ELEVATED_STALE_US_HOLIDAY",
+      "volatility": "FRIDAY_VIX_STALE",
+      "energy": "ELEVATED_BUT_OIL_SOFTENING",
+      "market_session": "ASX_CASH_CLOSED_EU_PREOPEN_JAPAN_HOLIDAY"
+    },
+    "local_confirmation": {
+      "AUS200": "ASX +0.61% in pre-release early-session reporting; cash market closed by Reuters 05:07 UTC data time (16:07 Sydney AEDT). Cannot infer event reaction.",
+      "GDAXI": "DAX futures reportedly +0.6% in Reuters Asia market wrap; quote timing unverified, cash pre-open.",
+      "STOXX50": "Euro Stoxx 50 futures reportedly +0.5% in Reuters Asia market wrap; quote timing unverified, cash pre-open.",
+      "FCHI40": "French cash market pre-open; no verified auto-sector reaction.",
+      "NI225": "Japanese cash market closed for public holiday; no local reaction.",
+      "AUDUSD": "Australian dollar quoted around 0.6978 in Oct 12 pre-market overview; no synchronized CPCA reaction.",
+      "CNY": "No synchronized CNY quote available."
+    }
+  },
+  "prediction_id": "20261012T0519Z_ff1430973_china_cpca_september_auto_sales_m1_111",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy continuation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand mapping."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy persistence."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy continuation."
+        }
+      },
+      "mechanism": "Legacy M1: sharp Chinese demand contraction -> DOWN for China-exposed equity indices, without absorption or market-hours override.",
+      "invalidation": "Positive market absorption, China export resilience or unrelated risk-on factors."
+    },
+    {
+      "instrument": "GDAXI",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy continuation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand mapping."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy persistence."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy continuation."
+        }
+      },
+      "mechanism": "Legacy M1: sharp Chinese demand contraction -> DOWN for China-exposed equity indices, without absorption or market-hours override.",
+      "invalidation": "Positive market absorption, China export resilience or unrelated risk-on factors."
+    },
+    {
+      "instrument": "STOXX50",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy continuation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand mapping."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy persistence."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy continuation."
+        }
+      },
+      "mechanism": "Legacy M1: sharp Chinese demand contraction -> DOWN for China-exposed equity indices, without absorption or market-hours override.",
+      "invalidation": "Positive market absorption, China export resilience or unrelated risk-on factors."
+    },
+    {
+      "instrument": "FCHI40",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy continuation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand mapping."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy persistence."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy continuation."
+        }
+      },
+      "mechanism": "Legacy M1: sharp Chinese demand contraction -> DOWN for China-exposed equity indices, without absorption or market-hours override.",
+      "invalidation": "Positive market absorption, China export resilience or unrelated risk-on factors."
+    },
+    {
+      "instrument": "NI225",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy continuation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand index bearish mapping."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1 weak-China-demand mapping."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy persistence."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy continuation."
+        }
+      },
+      "mechanism": "Legacy M1: sharp Chinese demand contraction -> DOWN for China-exposed equity indices, without absorption or market-hours override.",
+      "invalidation": "Positive market absorption, China export resilience or unrelated risk-on factors."
+    }
+  ]
+}
