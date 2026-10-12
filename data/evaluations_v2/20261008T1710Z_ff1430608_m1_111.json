@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-08T17:10:47.898000+00:00",
   "evaluation_anchor_time_utc": "2026-10-08T17:10:47.898000+00:00",
   "prediction_latency_seconds": 14027.898,
-  "evaluated_at_utc": "2026-10-12T00:36:10.047410+00:00",
+  "evaluated_at_utc": "2026-10-12T07:25:39.225893+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -82,7 +82,7 @@
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4155.39990234375,
+      "reference_price": 4155.7001953125,
       "reference_price_time_utc": "2026-10-08T17:10:00+00:00",
       "reference_price_bar_start_utc": "2026-10-08T17:09:00+00:00",
       "reference_bar_interval_minutes": 1,
@@ -504,7 +504,7 @@
     {
       "prediction_id": "20261008T1710Z_ff1430608_m1_111",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
@@ -544,9 +544,24 @@
           "reference_age_minutes": 69.798
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-09",
+          "actual_price_time_utc": "2026-10-09T16:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-09T16:00:00+00:00",
+          "price": 25087.27,
+          "change_pct": 1.129924,
+          "actual_direction": "UP",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.824247,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.842623,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.824247,
           "forecast_source": "horizons"
         }
       }
@@ -554,7 +569,7 @@
     {
       "prediction_id": "20261008T1710Z_ff1430608_m1_111",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
@@ -594,9 +609,24 @@
           "reference_age_minutes": 100.798
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-09",
+          "actual_price_time_utc": "2026-10-09T15:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-09T15:29:00+00:00",
+          "price": 6176.93017578125,
+          "change_pct": 0.701676,
+          "actual_direction": "UP",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 1.232984,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.224188,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 1.232984,
           "forecast_source": "horizons"
         }
       }

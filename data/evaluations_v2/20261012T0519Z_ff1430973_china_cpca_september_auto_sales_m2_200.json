@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-12T05:19:17.483000+00:00",
   "evaluation_anchor_time_utc": "2026-10-12T05:19:17.483000+00:00",
   "prediction_latency_seconds": 737.483,
-  "evaluated_at_utc": "2026-10-12T05:23:16.702948+00:00",
+  "evaluated_at_utc": "2026-10-12T07:25:50.798788+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -141,27 +141,29 @@
       "yahoo_symbol": "^AXJO",
       "yahoo_proxy_for": null,
       "yahoo_proxy_type": null,
-      "reference_price": 8780.0,
-      "reference_price_time_utc": "2026-10-12T05:03:00+00:00",
-      "reference_price_bar_start_utc": "2026-10-12T05:02:00+00:00",
+      "reference_price": 8783.2001953125,
+      "reference_price_time_utc": "2026-10-12T05:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-12T05:11:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 16.291,
+      "reference_age_minutes": 7.291,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "explicit_horizons",
       "predicted_immediate_direction": "MIXED",
       "predicted_confidence": 2,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "no complete traded bar available at/after target"
         },
         "1h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "no complete traded bar available at/after target"
         },
         "4h": {
           "status": "PENDING",
@@ -196,16 +198,20 @@
       "predicted_confidence": 2,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3678.291
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3678.291
         },
         "4h": {
           "status": "PENDING",
@@ -215,7 +221,7 @@
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-10-12",
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
         }
@@ -240,16 +246,20 @@
       "predicted_confidence": 2,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3709.291
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3709.291
         },
         "4h": {
           "status": "PENDING",
@@ -259,7 +269,7 @@
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-10-12",
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
         }
@@ -284,16 +294,20 @@
       "predicted_confidence": 2,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3709.291
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3709.291
         },
         "4h": {
           "status": "PENDING",
@@ -303,7 +317,7 @@
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-10-12",
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
         }
@@ -328,16 +342,20 @@
       "predicted_confidence": 2,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T05:34:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 4249.291
         },
         "1h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T06:19:17.483000+00:00",
           "predicted_direction": "MIXED",
-          "predicted_confidence": 2
+          "predicted_confidence": 2,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 4249.291
         },
         "4h": {
           "status": "PENDING",
