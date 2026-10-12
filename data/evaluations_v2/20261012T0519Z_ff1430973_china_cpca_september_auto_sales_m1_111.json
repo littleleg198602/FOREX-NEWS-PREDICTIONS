@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-12T05:19:17.483000+00:00",
   "evaluation_anchor_time_utc": "2026-10-12T05:19:17.483000+00:00",
   "prediction_latency_seconds": 737.483,
-  "evaluated_at_utc": "2026-10-12T07:25:49.479964+00:00",
+  "evaluated_at_utc": "2026-10-12T17:59:36.900383+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -124,10 +124,11 @@
           "reason": "no complete traded bar available at/after target"
         },
         "4h": {
-          "status": "PENDING",
+          "status": "DATA_GAP",
           "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "no complete traded bar available at/after target"
         },
         "next_session": {
           "status": "PENDING",
@@ -172,10 +173,12 @@
           "reference_age_minutes": 3678.291
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3678.291
         },
         "next_session": {
           "status": "PENDING",
@@ -220,10 +223,12 @@
           "reference_age_minutes": 3709.291
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3709.291
         },
         "next_session": {
           "status": "PENDING",
@@ -268,10 +273,12 @@
           "reference_age_minutes": 3709.291
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 3709.291
         },
         "next_session": {
           "status": "PENDING",
@@ -316,10 +323,12 @@
           "reference_age_minutes": 4249.291
         },
         "4h": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-12T09:19:17.483000+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 4249.291
         },
         "next_session": {
           "status": "PENDING",
