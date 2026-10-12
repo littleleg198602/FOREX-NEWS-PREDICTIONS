@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-08T17:10:47.898000+00:00",
   "evaluation_anchor_time_utc": "2026-10-08T17:10:47.898000+00:00",
   "prediction_latency_seconds": 14027.898,
-  "evaluated_at_utc": "2026-10-11T20:21:19.485723+00:00",
+  "evaluated_at_utc": "2026-10-12T00:36:10.047410+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -82,7 +82,7 @@
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4155.7001953125,
+      "reference_price": 4155.39990234375,
       "reference_price_time_utc": "2026-10-08T17:10:00+00:00",
       "reference_price_bar_start_utc": "2026-10-08T17:09:00+00:00",
       "reference_bar_interval_minutes": 1,
@@ -144,9 +144,24 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-09",
+          "actual_price_time_utc": "2026-10-09T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-09T20:59:00+00:00",
+          "price": 4216.2998046875,
+          "change_pct": 1.465561,
+          "actual_direction": "UP",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 0.998701,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.619586,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 0.998701,
           "forecast_source": "horizons"
         }
       }
@@ -221,9 +236,24 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-09",
+          "actual_price_time_utc": "2026-10-09T21:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-09T20:59:00+00:00",
+          "price": 61.04800033569336,
+          "change_pct": 3.05199,
+          "actual_direction": "UP",
           "predicted_direction": "MIXED",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "mixed_neutral",
+          "baseline_range_pct": 3.561784,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.895004,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "neutral_envelope_pct": 3.561784,
           "forecast_source": "horizons"
         }
       }

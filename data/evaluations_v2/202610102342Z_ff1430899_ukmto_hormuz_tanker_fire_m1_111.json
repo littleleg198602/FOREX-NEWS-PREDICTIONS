@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-10T23:42:40.625000+00:00",
   "evaluation_anchor_time_utc": "2026-10-10T23:42:40.625000+00:00",
   "prediction_latency_seconds": 15760.625,
-  "evaluated_at_utc": "2026-10-11T08:56:21.562582+00:00",
+  "evaluated_at_utc": "2026-10-12T00:36:12.788587+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -94,7 +94,7 @@
     {
       "prediction_id": "202610102342Z_ff1430899_ukmto_hormuz_tanker_fire_m1_111",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -134,9 +134,25 @@
           "reference_age_minutes": 1602.677
         },
         "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
+          "status": "DONE",
+          "session_local_date": "2026-10-11",
+          "actual_price_time_utc": "2026-10-12T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-11T23:59:00+00:00",
+          "price": 4215.5,
+          "change_pct": -0.018969,
+          "actual_direction": "NO_MOVE",
           "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 1.596193,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.362873,
+          "mfe_pct": 0.192114,
+          "mae_pct": -0.170759,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.159619,
+          "actual_direction_thresholded": "NO_MOVE",
           "forecast_source": "horizons"
         }
       }
@@ -144,7 +160,7 @@
     {
       "prediction_id": "202610102342Z_ff1430899_ukmto_hormuz_tanker_fire_m1_111",
       "instrument": "XAGUSD",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "SI=F",
       "yahoo_proxy_for": "XAGUSD",
@@ -184,9 +200,25 @@
           "reference_age_minutes": 1602.677
         },
         "next_session": {
-          "status": "PENDING",
-          "session_local_date": null,
+          "status": "DONE",
+          "session_local_date": "2026-10-11",
+          "actual_price_time_utc": "2026-10-12T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-11T23:59:00+00:00",
+          "price": 61.22999954223633,
+          "change_pct": 0.298125,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 2.809265,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.450468,
+          "mfe_pct": 0.478312,
+          "mae_pct": 0.027844,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.280927,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "horizons"
         }
       }
