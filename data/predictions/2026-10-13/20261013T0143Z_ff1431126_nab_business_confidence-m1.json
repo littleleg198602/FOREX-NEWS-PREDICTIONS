@@ -1,0 +1,133 @@
+{
+  "event_id": "ff-1431126-nab-september-2026-confidence",
+  "event_cluster_id": "nab-monthly-business-confidence-2026-09",
+  "created_at_utc": "2026-10-13T01:44:14.578Z",
+  "event_time_utc": "2026-10-13T01:30:00Z",
+  "published_at_utc": "2026-10-13T01:35:00Z",
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "AUSTRALIA",
+    "DATA_RELEASE",
+    "BUSINESS_CONFIDENCE"
+  ],
+  "headline": "NAB September business confidence fell to -13 from revised -9, under higher rates, fuel costs and uncertainty",
+  "source_url": "https://www.forexfactory.com/news/1431126-triple-squeeze-hits-business-confidence-nab-monthly",
+  "corroboration_urls": [
+    "https://www.forexfactory.com/calendar/323-au-nab-business-confidence",
+    "https://www.myfxbook.com/forex-economic-calendar/australia/nab-business-confidence"
+  ],
+  "source_time_text": "NAB scheduled release Oct 12 2026 8:30pm Forex Factory timezone (= Oct 13 01:30 UTC); FF Latest Stories '6 min ago' observed at ~01:41 UTC, derived story posting ~01:35 UTC",
+  "observed_at_utc": "2026-10-13T01:44:14.578Z",
+  "time_source": "FF_CALENDAR_ABSOLUTE_RELEASE_AND_FF_RELATIVE_ARTICLE",
+  "time_is_derived": true,
+  "time_uncertainty_seconds": 240,
+  "event_age_minutes": 14.242966666666666,
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 102.57,
+        "unit": "index",
+        "source": "ICE DXY Oct 12 prior close; cached prior-run market context",
+        "observed_at_utc": "2026-10-12T20:15:00Z",
+        "freshness": "PRIOR_SESSION"
+      },
+      "US2Y": {
+        "value": 4.789,
+        "unit": "percent",
+        "source": "US Treasury prior trading day Oct 9, Oct 12 holiday; cached prior-run context",
+        "observed_at_utc": "2026-10-09T20:00:00Z",
+        "freshness": "STALE"
+      },
+      "US10Y": {
+        "value": 5.243,
+        "unit": "percent",
+        "source": "US Treasury prior trading day Oct 9; cached prior-run context",
+        "observed_at_utc": "2026-10-09T20:00:00Z",
+        "freshness": "STALE"
+      },
+      "VIX": {
+        "value": 15.21,
+        "unit": "index",
+        "source": "CBOE Oct 12 close; cached prior-run context",
+        "observed_at_utc": "2026-10-12T20:15:00Z",
+        "freshness": "PRIOR_SESSION"
+      },
+      "WTI": {
+        "value": 93.74,
+        "unit": "USD/barrel",
+        "source": "Oct 12 prior-run quote; timestamp unavailable",
+        "observed_at_utc": null,
+        "freshness": "STALE_UNSYNCHRONIZED"
+      },
+      "BRENT": {
+        "value": 106.65,
+        "unit": "USD/barrel",
+        "source": "Oct 12 prior-run quote; timestamp unavailable",
+        "observed_at_utc": null,
+        "freshness": "STALE_UNSYNCHRONIZED"
+      }
+    },
+    "regimes": {
+      "DXY": "FIRM",
+      "US2Y": "STALE_HIGH",
+      "US10Y": "STALE_HIGH",
+      "VIX": "LOW_MID",
+      "WTI": "ELEVATED",
+      "BRENT": "ELEVATED"
+    },
+    "local_confirmation": {
+      "AUS200": "Oct 12 ASX200 cash close 8783.17; pre-release Oct 13 SPI futures +0.1% from morning commentary, not a post-release confirmation. No reliable completed post-release bars.",
+      "AUDUSD": "Oct 13 morning AUDUSD 0.6957 per Perpetual CT Markets, timing not verified against release; no confirmed post-release move.",
+      "AU_RATES": "RBA cash 4.60%, September meeting minutes already published; no synchronized Australian bond-yield reaction."
+    }
+  },
+  "prediction_id": "20261013T0143Z_ff1431126_nab_business_confidence_m1_111",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "2.0.0",
+  "learning_v2": {
+    "material_confidence_adjustment": false,
+    "reason": "Frozen control, no cross-model learning"
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 5,
+        "rationale": "Frozen M1.1.1 legacy sign mapping: weaker Australian business confidence -> bearish Australian equities; no M2 absorption/technical/learning overrides."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen M1.1.1 legacy sign mapping: weaker Australian business confidence -> bearish Australian equities; no M2 absorption/technical/learning overrides."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1.1.1 legacy sign mapping: weaker Australian business confidence -> bearish Australian equities; no M2 absorption/technical/learning overrides."
+        },
+        "1h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1.1.1 legacy sign mapping: weaker Australian business confidence -> bearish Australian equities; no M2 absorption/technical/learning overrides."
+        },
+        "4h": {
+          "direction": "DOWN",
+          "confidence": 5,
+          "rationale": "Frozen M1.1.1 legacy sign mapping: weaker Australian business confidence -> bearish Australian equities; no M2 absorption/technical/learning overrides."
+        },
+        "next_session": {
+          "direction": "DOWN",
+          "confidence": 4,
+          "rationale": "Frozen M1.1.1 legacy sign mapping: weaker Australian business confidence -> bearish Australian equities; no M2 absorption/technical/learning overrides."
+        }
+      },
+      "mechanism": "Weaker local business confidence implies weaker expected hiring/investment and corporate profits, bearish index in legacy mapping.",
+      "invalidation": "Rate-cut repricing, commodity rally or bank resilience offsets growth weakness."
+    }
+  ]
+}
