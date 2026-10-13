@@ -1,0 +1,177 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20261013T0143Z_ff1431126_nab_business_confidence_m2_200",
+  "event_id": "ff-1431126-nab-september-2026-confidence",
+  "event_time_utc": "2026-10-13T01:30:00+00:00",
+  "prediction_time_utc": "2026-10-13T01:44:37.255000+00:00",
+  "evaluation_anchor_time_utc": "2026-10-13T01:44:37.255000+00:00",
+  "prediction_latency_seconds": 877.255,
+  "evaluated_at_utc": "2026-10-13T01:48:22.264919+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "AUSTRALIA",
+    "DATA_RELEASE",
+    "BUSINESS_CONFIDENCE"
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 14.620916666666666,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "NAB business confidence fell to -13 from revised -9, weaker than the pre-release -9 consensus.",
+    "market_expectations": {
+      "source": "Myfxbook pre-release consensus",
+      "expected_value": -9
+    },
+    "surprise": {
+      "actual": -13,
+      "consensus": -9,
+      "previous": -8,
+      "revised_previous": -9,
+      "surprise_direction": "NEGATIVE",
+      "components": {
+        "difference": -4
+      }
+    },
+    "absorption": {
+      "state": "UNKNOWN",
+      "reason": "No synchronized completed local bars available."
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "DXY": "Prior close 102.57",
+        "US2Y": "Stale 4.789%",
+        "US10Y": "Stale 5.243%",
+        "VIX": "Prior close 15.21",
+        "WTI": "Prior quote 93.74",
+        "BRENT": "Prior quote 106.65",
+        "AUS200": "Prior close 8783.17, no confirmed post-release bars"
+      }
+    },
+    "decision_notes": "Independent residual forecasts from decision time; unverified market reaction excludes hit rate."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 102.57,
+        "unit": "index",
+        "source": "ICE DXY Oct 12 prior close; cached prior-run market context",
+        "observed_at_utc": "2026-10-12T20:15:00Z",
+        "freshness": "PRIOR_SESSION",
+        "regime": "RISING"
+      },
+      "US2Y": {
+        "value": 4.789,
+        "unit": "percent",
+        "source": "US Treasury prior trading day Oct 9, Oct 12 holiday; cached prior-run context",
+        "observed_at_utc": "2026-10-09T20:00:00Z",
+        "freshness": "STALE",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.243,
+        "unit": "percent",
+        "source": "US Treasury prior trading day Oct 9; cached prior-run context",
+        "observed_at_utc": "2026-10-09T20:00:00Z",
+        "freshness": "STALE",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 15.21,
+        "unit": "index",
+        "source": "CBOE Oct 12 close; cached prior-run context",
+        "observed_at_utc": "2026-10-12T20:15:00Z",
+        "freshness": "PRIOR_SESSION",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 93.74,
+        "unit": "USD/barrel",
+        "source": "Oct 12 prior-run quote; timestamp unavailable",
+        "observed_at_utc": null,
+        "freshness": "STALE_UNSYNCHRONIZED",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 106.65,
+        "unit": "USD/barrel",
+        "source": "Oct 12 prior-run quote; timestamp unavailable",
+        "observed_at_utc": null,
+        "freshness": "STALE_UNSYNCHRONIZED",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "RISING",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20261013T0143Z_ff1431126_nab_business_confidence_m2_200",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8751.7998046875,
+      "reference_price_time_utc": "2026-10-13T01:29:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-13T01:28:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 15.621,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 3,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-13T01:59:37.255000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-13T02:44:37.255000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-13T05:44:37.255000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 4
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
