@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-10T23:42:40.625000+00:00",
   "evaluation_anchor_time_utc": "2026-10-10T23:42:40.625000+00:00",
   "prediction_latency_seconds": 15760.625,
-  "evaluated_at_utc": "2026-10-13T16:03:44.014320+00:00",
+  "evaluated_at_utc": "2026-10-14T00:23:54.363820+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "2.0.0",
@@ -556,7 +556,7 @@
     {
       "prediction_id": "202610102342Z_ff1430899_ukmto_hormuz_tanker_fire_m1_111",
       "instrument": "NI225",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^N225",
       "yahoo_proxy_for": null,
@@ -596,9 +596,25 @@
           "reference_age_minutes": 2472.677
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-13",
+          "actual_price_time_utc": "2026-10-13T06:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-13T06:29:00+00:00",
+          "price": 67821.8984375,
+          "change_pct": -1.763208,
+          "actual_direction": "DOWN",
           "predicted_direction": "DOWN",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.438936,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 2.393466,
+          "mfe_pct": 2.868864,
+          "mae_pct": 0.475398,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.143894,
+          "actual_direction_thresholded": "DOWN",
           "forecast_source": "horizons"
         }
       }
