@@ -1,0 +1,315 @@
+{
+  "event_id": "ff-1431383-iea-oil-oct-2026",
+  "event_cluster_id": "iea-oil-market-report-2026-10",
+  "created_at_utc": "2026-10-14T09:51:49.849Z",
+  "event_time_utc": "2026-10-14T08:01:00Z",
+  "published_at_utc": "2026-10-14T08:03:00Z",
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "ENERGY",
+    "IEA",
+    "DATA_RELEASE",
+    "EUROPE"
+  ],
+  "headline": "IEA projects 2026 oil demand -2.6 mb/d and supply -5.8 mb/d; diesel shortage into 2027",
+  "source_url": "https://www.forexfactory.com/news/1431383-iea-forecasts-world-oil-demand-to-fall-by",
+  "corroboration_urls": [
+    "https://www.iea.org/reports/oil-market-report-october-2026",
+    "https://www.reuters.com/business/energy/diesel-shortages-could-persist-well-into-2027-iea-says-2026-10-14/"
+  ],
+  "source_time_text": "Forex Factory Added at Oct 14 2026 9:03am BST; social source posted 9:01am BST",
+  "observed_at_utc": "2026-10-14T09:51:49.849Z",
+  "time_source": "FOREX_FACTORY_ABSOLUTE_BST",
+  "time_is_derived": false,
+  "time_uncertainty_seconds": 120,
+  "event_age_minutes": 108.83081666666666,
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 102.2,
+        "unit": "index",
+        "source": "Oct 13 close, Closelook cross-asset summary",
+        "observed_at_utc": "2026-10-13T22:00:00Z",
+        "freshness": "PRIOR_SESSION"
+      },
+      "US2Y": {
+        "value": null,
+        "unit": "percent",
+        "source": "No verified as-of timestamp/value available before prediction",
+        "observed_at_utc": null,
+        "freshness": "UNAVAILABLE"
+      },
+      "US10Y": {
+        "value": 5.189,
+        "unit": "percent",
+        "source": "Oct 13 prior session, Financial Express / US Treasuries report",
+        "observed_at_utc": null,
+        "freshness": "PRIOR_SESSION_UNSYNCHRONIZED"
+      },
+      "VIX": {
+        "value": 15.27,
+        "unit": "index",
+        "source": "Oct 13 close, Closelook cross-asset summary",
+        "observed_at_utc": "2026-10-13T22:00:00Z",
+        "freshness": "PRIOR_SESSION"
+      },
+      "WTI": {
+        "value": 94.14,
+        "unit": "USD/barrel",
+        "source": "Oct 13 close, WSJ oil market recap",
+        "observed_at_utc": null,
+        "freshness": "PRIOR_SESSION"
+      },
+      "BRENT": {
+        "value": 105.69,
+        "unit": "USD/barrel",
+        "source": "Oct 13 close, WSJ oil market recap",
+        "observed_at_utc": null,
+        "freshness": "PRIOR_SESSION"
+      }
+    },
+    "regimes": {
+      "DXY": "PRIOR_SESSION_SOFT",
+      "US2Y": "UNKNOWN",
+      "US10Y": "HIGH_STALE",
+      "VIX": "LOW_MID_PRIOR_SESSION",
+      "WTI": "ELEVATED_STALE",
+      "BRENT": "ELEVATED_STALE"
+    },
+    "local_confirmation": {
+      "EU_EQUITIES": "Reuters Oct 14: STOXX600 +0.4% amid chip recovery; not isolated to IEA or mine; no verified completed 5/15m post-event bars for GDAXI/STOXX50.",
+      "OIL": "Reuters Oct 14: Brent near $106.5 earlier in session, with multiple geopolitical drivers; not an isolated post-event response.",
+      "GOLD": "Reuters Oct 14: spot gold near $4151.51 earlier in day ahead of CPI; independent mine-related move not confirmed.",
+      "EU_RATES": "No synchronous German/French/UK bond-yield moves validated at decision time."
+    }
+  },
+  "prediction_id": "20261014T0803Z_ff1431383_iea_oil_market_october_m2_200",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "learning_v2": {
+    "profile_generated_at_utc": "2026-10-14T06:13:44.543199+00:00",
+    "material_confidence_adjustment": true,
+    "source_segment": "DATA_RELEASE",
+    "adjustments": {
+      "15m": {
+        "delta": 1,
+        "n": 36,
+        "unique_events": 20,
+        "weighted_hit_rate_pct": 90
+      },
+      "1h": {
+        "delta": 1,
+        "n": 32,
+        "unique_events": 16,
+        "weighted_hit_rate_pct": 88.54
+      },
+      "4h": {
+        "delta": 1,
+        "n": 47,
+        "unique_events": 22,
+        "weighted_hit_rate_pct": 79.17
+      },
+      "next_session": {
+        "delta": 1,
+        "n": 61,
+        "unique_events": 25,
+        "weighted_hit_rate_pct": 81.67
+      }
+    },
+    "reason": "Only ACTIONABLE M2 mixed-neutral evidence; +1 where matching sample is actionable. No learning used for M1."
+  },
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 108.83081666666666,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "IEA revised 2026 demand contraction to 2.6 from 2.5 mb/d and supply contraction to 5.8 from 5.7 mb/d; diesel supply tightness persists into 2027.",
+    "market_expectations": null,
+    "surprise": {
+      "actual": {
+        "demand_change_2026_mbpd": -2.6,
+        "supply_change_2026_mbpd": -5.8
+      },
+      "consensus": null,
+      "previous": {
+        "demand_change_2026_mbpd": -2.5,
+        "supply_change_2026_mbpd": -5.7
+      },
+      "revised_previous": null,
+      "surprise_direction": "NEGATIVE_DEMAND_AND_SUPPLY",
+      "components": {
+        "diesel_share_of_demand_drop_pct": 25,
+        "global_stocks_below_february_mb": 509
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Oil demand deterioration and diesel shortages widely known; report has modest forecast revision and fresh stock/refinery detail.",
+      "observed_reaction": {
+        "verified": false
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "Brent": "Oct 13 105.69 close; Oct 14 Reuters near 106.5 with mixed drivers",
+        "Gold": "Oct 14 Reuters earlier broadly stable near 4151; no event-specific reaction",
+        "EuropeanEquities": "Oct 14 Reuters STOXX600 +0.4% on tech recovery, no event-specific attribution"
+      }
+    },
+    "decision_notes": "Forecasts target residual movement from actual decision time, not the published time. No completed synchronized price bars; exclude from hit rate. No hindsight or source claim verification."
+  },
+  "predictions": [
+    {
+      "instrument": "GDAXI",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3,
+        "rationale": "Industrial transport costs and constrained diesel stocks weigh on margins; softer demand and possible rate relief offset. Immediate reaction not isolated."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Industrial transport costs and constrained diesel stocks weigh on margins; softer demand and possible rate relief offset. Persistent macro drivers can offset headline."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Industrial transport costs and constrained diesel stocks weigh on margins; softer demand and possible rate relief offset. Immediate reaction not isolated."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Industrial transport costs and constrained diesel stocks weigh on margins; softer demand and possible rate relief offset. Oil, equities and rates not synchronously confirmed."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Industrial transport costs and constrained diesel stocks weigh on margins; softer demand and possible rate relief offset. CPI and independent sector moves may dominate."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Industrial transport costs and constrained diesel stocks weigh on margins; softer demand and possible rate relief offset. Persistent macro drivers can offset headline."
+        }
+      },
+      "mechanism": "Industrial transport costs and constrained diesel stocks weigh on margins; softer demand and possible rate relief offset.",
+      "counter_case": "Prolonged diesel shortage could depress industrial margins; a demand-driven oil-price drop could instead help costs.",
+      "invalidation": "Sustained synchronized diesel/oil and European bond repricing with broad index confirmation.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Cash EU markets open where applicable; no verified completed event-linked price bars.",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Reuters Oct 14 qualitative cross-market context only; no synchronized candle feed",
+        "observed_at_utc": null
+      }
+    },
+    {
+      "instrument": "STOXX50",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3,
+        "rationale": "Higher European diesel costs versus slower global demand; technology recovery and rates offset. Immediate reaction not isolated."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Higher European diesel costs versus slower global demand; technology recovery and rates offset. Persistent macro drivers can offset headline."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Higher European diesel costs versus slower global demand; technology recovery and rates offset. Immediate reaction not isolated."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Higher European diesel costs versus slower global demand; technology recovery and rates offset. Oil, equities and rates not synchronously confirmed."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Higher European diesel costs versus slower global demand; technology recovery and rates offset. CPI and independent sector moves may dominate."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Higher European diesel costs versus slower global demand; technology recovery and rates offset. Persistent macro drivers can offset headline."
+        }
+      },
+      "mechanism": "Higher European diesel costs versus slower global demand; technology recovery and rates offset.",
+      "counter_case": "Prolonged diesel shortage could depress industrial margins; a demand-driven oil-price drop could instead help costs.",
+      "invalidation": "Sustained synchronized diesel/oil and European bond repricing with broad index confirmation.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Cash EU markets open where applicable; no verified completed event-linked price bars.",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Reuters Oct 14 qualitative cross-market context only; no synchronized candle feed",
+        "observed_at_utc": null
+      }
+    },
+    {
+      "instrument": "UK100",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 3,
+        "rationale": "Energy-sector earnings can benefit from tight fuel markets, while consumer and industrial margins suffer. Immediate reaction not isolated."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Energy-sector earnings can benefit from tight fuel markets, while consumer and industrial margins suffer. Persistent macro drivers can offset headline."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Energy-sector earnings can benefit from tight fuel markets, while consumer and industrial margins suffer. Immediate reaction not isolated."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Energy-sector earnings can benefit from tight fuel markets, while consumer and industrial margins suffer. Oil, equities and rates not synchronously confirmed."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Energy-sector earnings can benefit from tight fuel markets, while consumer and industrial margins suffer. CPI and independent sector moves may dominate."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Energy-sector earnings can benefit from tight fuel markets, while consumer and industrial margins suffer. Persistent macro drivers can offset headline."
+        }
+      },
+      "mechanism": "Energy-sector earnings can benefit from tight fuel markets, while consumer and industrial margins suffer.",
+      "counter_case": "Prolonged diesel shortage could depress industrial margins; a demand-driven oil-price drop could instead help costs.",
+      "invalidation": "Sustained synchronized diesel/oil and European bond repricing with broad index confirmation.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Cash EU markets open where applicable; no verified completed event-linked price bars.",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Reuters Oct 14 qualitative cross-market context only; no synchronized candle feed",
+        "observed_at_utc": null
+      }
+    }
+  ]
+}
