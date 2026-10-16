@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-16T00:35:23.059000+00:00",
   "evaluation_anchor_time_utc": "2026-10-16T00:35:23.059000+00:00",
   "prediction_latency_seconds": 15263.059,
-  "evaluated_at_utc": "2026-10-16T00:38:47.692447+00:00",
+  "evaluated_at_utc": "2026-10-16T01:23:59.909339+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control-frozen",
@@ -110,10 +110,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-16T00:50:23.059000+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 240.384
         },
         "1h": {
           "status": "PENDING",
@@ -154,10 +156,12 @@
       "predicted_confidence": 5,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-16T00:50:23.059000+00:00",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 5
+          "predicted_confidence": 5,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 241.384
         },
         "1h": {
           "status": "PENDING",
