@@ -1,0 +1,216 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20261016T0034Z_ff1431742_us_mexico_trade_m2_200",
+  "event_id": "ff-1431742-us-mexico-trade-stall-20261015",
+  "event_time_utc": "2026-10-15T20:21:00+00:00",
+  "prediction_time_utc": "2026-10-16T00:35:23.059000+00:00",
+  "evaluation_anchor_time_utc": "2026-10-16T00:35:23.059000+00:00",
+  "prediction_latency_seconds": 15263.059,
+  "evaluated_at_utc": "2026-10-16T00:38:47.964189+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "US_MEXICO_TRADE",
+    "TARIFFS",
+    "POLICY_UNCERTAINTY",
+    "EQUITIES"
+  ],
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 254.38,
+    "novelty": "MEDIUM",
+    "attention": "LOW",
+    "dominant_driver": "WSJ reports US-Mexico negotiations over tariff reductions have stalled because Commerce Secretary Lutnick opposed lower US duties on Mexican autos, steel and aluminium; deal is not officially canceled.",
+    "market_expectations": {
+      "source": null,
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No measurable tariff-deal probability or market consensus; trade friction had been known but a fresh negotiation obstacle is incremental."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "UNKNOWN",
+      "reason": "Story is over four hours old and cash markets closed; prior risk-off/rebound driven by inflation and AI concerns. Cannot establish event-specific absorption without completed timestamped futures bars.",
+      "observed_reaction": {
+        "verified": false
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "USD_MXN": "Unavailable",
+        "US_AUTO_STEEL": "Unavailable",
+        "US_INDEX_FUTURES": "Unavailable",
+        "DXY": "Unavailable",
+        "US10Y": "US session yield fell; unrelated drivers dominate"
+      }
+    },
+    "decision_notes": "Forecasts are residual from actual creation timestamp; never backdated. No market-aligned completed futures bars; eligible_for_hit_rate=false. No directional trade signal. Report itself verified by WSJ; tariff policy change not officially confirmed."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "unit": "index",
+        "source": "ICE DXY not verified at decision time; WSJ Dollar Index is not interchangeable",
+        "observed_at_utc": null,
+        "freshness": "UNAVAILABLE",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.82,
+        "unit": "percent",
+        "source": "US Treasury Oct 14 close, stale; no verified Oct 15 timestamped 2Y value",
+        "observed_at_utc": null,
+        "freshness": "STALE_OCT14",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.086,
+        "unit": "percent",
+        "source": "WSJ Oct 15 US cash-session close, not a synchronized live quote",
+        "observed_at_utc": null,
+        "freshness": "PRIOR_US_SESSION_CLOSE",
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "value": 16.46,
+        "unit": "index",
+        "source": "Oct 15 US session close, secondary market-data recap",
+        "observed_at_utc": null,
+        "freshness": "PRIOR_US_SESSION_CLOSE",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 97.97,
+        "unit": "USD/barrel",
+        "source": "Reuters Oct 15 oil report, exact quote timestamp not verified",
+        "observed_at_utc": null,
+        "freshness": "OCT15_UNSYNCHRONIZED",
+        "regime": "UNKNOWN"
+      },
+      "BRENT": {
+        "value": 105.92,
+        "unit": "USD/barrel",
+        "source": "Reuters Oct 15 oil report, exact quote timestamp not verified",
+        "observed_at_utc": null,
+        "freshness": "OCT15_UNSYNCHRONIZED",
+        "regime": "UNKNOWN"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FALLING",
+      "VIX": "LOW",
+      "WTI": "UNKNOWN",
+      "BRENT": "UNKNOWN"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20261016T0034Z_ff1431742_us_mexico_trade_m2_200",
+      "instrument": "WS30",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^DJI",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 52177.69,
+      "reference_price_time_utc": "2026-10-15T20:35:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-15T20:34:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 240.384,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 2,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-16T00:50:23.059000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 2
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-16T01:35:23.059000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 2
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-16T04:35:23.059000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20261016T0034Z_ff1431742_us_mexico_trade_m2_200",
+      "instrument": "SP500",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^GSPC",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 7744.06,
+      "reference_price_time_utc": "2026-10-15T20:34:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-15T20:33:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 241.384,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 2,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-16T00:50:23.059000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 2
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-16T01:35:23.059000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 2
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-16T04:35:23.059000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}

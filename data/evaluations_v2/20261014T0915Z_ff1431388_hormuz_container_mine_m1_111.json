@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-14T09:51:49.849000+00:00",
   "evaluation_anchor_time_utc": "2026-10-14T09:51:49.849000+00:00",
   "prediction_latency_seconds": 2329.849,
-  "evaluated_at_utc": "2026-10-15T09:57:48.081197+00:00",
+  "evaluated_at_utc": "2026-10-16T00:38:44.461345+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control-frozen",
@@ -94,7 +94,7 @@
     {
       "prediction_id": "20261014T0915Z_ff1431388_hormuz_container_mine_m1_111",
       "instrument": "XAUUSD",
-      "status": "PARTIAL",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
@@ -173,9 +173,25 @@
           "actual_direction_thresholded": "DOWN"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-15",
+          "actual_price_time_utc": "2026-10-16T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-15T23:59:00+00:00",
+          "price": 4176.89990234375,
+          "change_pct": 0.266458,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 2.364492,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.577133,
+          "mfe_pct": 0.765769,
+          "mae_pct": -1.699549,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.236449,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "horizons"
         }
       }
