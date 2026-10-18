@@ -1,0 +1,339 @@
+{
+  "event_id": "ff-1431991-st-petersburg-oil-terminal-20261018",
+  "event_cluster_id": "ukraine-russian-energy-infrastructure-oct2026",
+  "created_at_utc": "2026-10-18T16:16:16.127Z",
+  "event_time_utc": "2026-10-18T14:07:00Z",
+  "published_at_utc": "2026-10-18T14:07:00Z",
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "GEOPOLITICS",
+    "RUSSIAN_OIL_INFRASTRUCTURE",
+    "ENERGY_SUPPLY_RISK",
+    "WEEKEND_RISK"
+  ],
+  "headline": "Ukraine drone attack causes fires at St Petersburg oil terminal and Ruchyi oil depot",
+  "source_url": "https://www.forexfactory.com/news/1431991-ukraine-strikes-oil-facility-in-st-petersburg-as",
+  "corroboration_urls": [
+    "https://apnews.com/article/f813d3725b8b5f23958a68a95729fd0d",
+    "https://www.ft.com/content/734dad42-2eef-4a70-8947-c73997e49fd1"
+  ],
+  "source_time_text": "Forex Factory Story Stats Oct 18 10:07am (site timezone unverified); Sunday-morning attack preceded publication. 14:07Z assumes America/New_York EDT; uncertainty +/-2h.",
+  "observed_at_utc": "2026-10-18T16:16:16.127Z",
+  "time_source": "FOREX_FACTORY_ABSOLUTE_CLOCK_TZ_INFERRED",
+  "time_is_derived": true,
+  "time_uncertainty_seconds": 7200,
+  "event_age_minutes": 129.3,
+  "decision_time_utc": "2026-10-18T16:16:16.127Z",
+  "learning_v2": {
+    "material_confidence_adjustment": false,
+    "profile_sha": "ed03f893fbbb15ff7803186850bd948fe2355465",
+    "profile_generated_at_utc": "2026-10-18T14:38:05.165240+00:00",
+    "reason": "ACTIONABLE M2 learning segments exist, but none validates Sunday market-closed fixed horizons or this specific weekend oil-terminal shock; no confidence adjustment."
+  },
+  "prediction_id": "20261018T1616Z_ff1431991_oilterminal_m2_200",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "NEW_CATALYST",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 129.3,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Fresh drone strikes ignited fires at St Petersburg oil export terminal and Ruchyi depot, raising Russian export reliability risk; damage and lost volumes not yet verified.",
+    "market_expectations": {
+      "source": null,
+      "expected_value": null,
+      "implied_probability": null,
+      "distribution_notes": "No quantified expectations; repeated Russian energy strikes known, this specific terminal attack is a new physical event."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "UNKNOWN",
+      "reason": "Weekend markets closed; Friday oil risk premium predates Sunday's attack. Cannot infer that this new event is priced.",
+      "observed_reaction": {
+        "verified": false,
+        "market_closed": true
+      }
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "DXY": "Friday close only",
+        "US2Y": "Friday close only",
+        "US10Y": "Friday close only",
+        "VIX": "Friday close only",
+        "WTI": "Friday settlement predates strike",
+        "BRENT": "Friday settlement predates strike",
+        "XAUUSD": "Weekend closed; no completed post-event bars",
+        "UK100": "Weekend closed; no completed post-event bars",
+        "GDAXI": "Weekend closed; no completed post-event bars",
+        "STOXX50": "Weekend closed; no completed post-event bars"
+      }
+    },
+    "decision_notes": "Only data known by decision time. AP and FT confirm fires; throughput loss unverified. Sunday fixed horizons are closed and excluded from hit-rate, not silently shifted to Monday. Next-session forecast is separate and remains ineligible absent event-aligned predecision candles. FF timezone inferred +/-120m."
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.658,
+        "unit": "index",
+        "source": "Investing.com historical DXY close 2026-10-16",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_CLOSE_2026-10-16_NOT_EVENT_REACTION"
+      },
+      "US2Y": {
+        "value": 4.74,
+        "unit": "percent",
+        "source": "US Treasury daily par yield 2026-10-16 via Treasury Rate Watch",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_CLOSE_2026-10-16_NOT_EVENT_REACTION"
+      },
+      "US10Y": {
+        "value": 5.09,
+        "unit": "percent",
+        "source": "US Treasury daily par yield 2026-10-16 via Treasury Rate Watch",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_CLOSE_2026-10-16_NOT_EVENT_REACTION"
+      },
+      "VIX": {
+        "value": 19.99,
+        "unit": "index",
+        "source": "2026-10-16 Friday close via Portfolio Terminal/Cboe historical",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_CLOSE_2026-10-16_NOT_EVENT_REACTION"
+      },
+      "WTI": {
+        "value": 101.41,
+        "unit": "USD/barrel",
+        "source": "Reuters Friday 2026-10-16 November WTI settlement",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_CLOSE_2026-10-16_NOT_EVENT_REACTION"
+      },
+      "BRENT": {
+        "value": 109.86,
+        "unit": "USD/barrel",
+        "source": "Reuters Friday 2026-10-16 Brent settlement",
+        "observed_at_utc": null,
+        "freshness": "FRIDAY_CLOSE_2026-10-16_NOT_EVENT_REACTION"
+      }
+    },
+    "regimes": {
+      "DXY": "FRIDAY_WEAKER",
+      "US2Y": "FRIDAY_YIELD_LOWER_VS_PRIOR_WEEK",
+      "US10Y": "FRIDAY_YIELD_LOWER_VS_PRIOR_WEEK",
+      "VIX": "FRIDAY_ELEVATED",
+      "WTI": "FRIDAY_RISING_MIDDLE_EAST_SUPPLY_RISK",
+      "BRENT": "FRIDAY_RISING_MIDDLE_EAST_SUPPLY_RISK"
+    },
+    "local_confirmation": {
+      "RUSSIAN_OIL": "AP/FT corroborate St Petersburg terminal and Ruchyi depot fires; independent verified damage volume/export halt not available.",
+      "BRENT_WTI": "Sunday market closed; Friday prices predate strike and must not be used as confirmation.",
+      "XAUUSD": "Sunday spot/futures closed; Friday gold 4200.80 USD/oz reported by Barron's is pre-event and not an event response.",
+      "UK100": "UK cash market closed Sunday; energy heavyweight exposure potentially supportive, but no event-specific oil reaction.",
+      "GDAXI": "German cash market closed Sunday; oil input cost risk conditional on export disruption.",
+      "STOXX50": "European cash market closed Sunday; no event-specific futures confirmation.",
+      "EURUSD": "No event-aligned EUR/USD response; FX liquidity limited Sunday."
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "XAUUSD",
+      "relevance": "SECONDARY",
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "next_session": {
+          "direction": "VOLATILITY",
+          "confidence": 4,
+          "rationale": "New Monday-open gap risk if strike damages export flows; no confirmed direction."
+        }
+      },
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 1,
+        "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+      },
+      "next_session": {
+        "direction": "VOLATILITY",
+        "confidence": 4,
+        "rationale": "New Monday-open gap risk if strike damages export flows; no confirmed direction."
+      },
+      "mechanism": "Escalation could support gold as a haven; effect competes with USD and real-rate repricing.",
+      "counter_case": "No verified oil export halt and de-escalation or higher US yields could overwhelm the safe-haven bid.",
+      "invalidation": "Sustained liquid-session gold decline while yields and dollar rise; safe-haven premise weakens.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Sunday weekend closure; next regular cash session Monday Oct 19",
+        "extension_state": "UNKNOWN_NO_EVENT_ALIGNED_BARS",
+        "market_open": false,
+        "source": "No synchronized post-article OHLC; Friday close predates event",
+        "observed_at_utc": null
+      }
+    },
+    {
+      "instrument": "UK100",
+      "relevance": "SECONDARY",
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Conflicting oil-price, sector and risk-sentiment effects; no verified Monday-open direction."
+        }
+      },
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 1,
+        "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Conflicting oil-price, sector and risk-sentiment effects; no verified Monday-open direction."
+      },
+      "mechanism": "UK oil majors may benefit from higher Brent, but consumers and wider market may be pressured by inflation.",
+      "counter_case": "Russian exports may continue, while elevated oil was already driven by Middle East risk; broader risk-off may offset energy gains.",
+      "invalidation": "Confirmed Brent decline and weakness in UK energy stocks at next open.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Sunday weekend closure; next regular cash session Monday Oct 19",
+        "extension_state": "UNKNOWN_NO_EVENT_ALIGNED_BARS",
+        "market_open": false,
+        "source": "No synchronized post-article OHLC; Friday close predates event",
+        "observed_at_utc": null
+      }
+    },
+    {
+      "instrument": "GDAXI",
+      "relevance": "TERTIARY",
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "next_session": {
+          "direction": "VOLATILITY",
+          "confidence": 3,
+          "rationale": "New Monday-open gap risk if strike damages export flows; no confirmed direction."
+        }
+      },
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 1,
+        "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+      },
+      "next_session": {
+        "direction": "VOLATILITY",
+        "confidence": 3,
+        "rationale": "New Monday-open gap risk if strike damages export flows; no confirmed direction."
+      },
+      "mechanism": "Higher energy prices and geopolitical risk can pressure German cyclicals, conditional on actual export disruption.",
+      "counter_case": "No oil-flow disruption, stronger earnings, or de-escalation may neutralize the risk premium.",
+      "invalidation": "Verified German futures rally with Brent stable or falling on reopen.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Sunday weekend closure; next regular cash session Monday Oct 19",
+        "extension_state": "UNKNOWN_NO_EVENT_ALIGNED_BARS",
+        "market_open": false,
+        "source": "No synchronized post-article OHLC; Friday close predates event",
+        "observed_at_utc": null
+      }
+    },
+    {
+      "instrument": "STOXX50",
+      "relevance": "TERTIARY",
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Conflicting oil-price, sector and risk-sentiment effects; no verified Monday-open direction."
+        }
+      },
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 1,
+        "rationale": "Market closed Sunday; fixed horizon from decision time has no tradable completed bars and is ineligible for scoring."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Conflicting oil-price, sector and risk-sentiment effects; no verified Monday-open direction."
+      },
+      "mechanism": "Supply disruption fears may raise energy input costs and European risk premium, while energy constituents offset.",
+      "counter_case": "Unchanged export flow, energy-sector strength and positive earnings may offset geopolitical risks.",
+      "invalidation": "European futures rally with Brent stable and no escalation.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "Sunday weekend closure; next regular cash session Monday Oct 19",
+        "extension_state": "UNKNOWN_NO_EVENT_ALIGNED_BARS",
+        "market_open": false,
+        "source": "No synchronized post-article OHLC; Friday close predates event",
+        "observed_at_utc": null
+      }
+    }
+  ]
+}
