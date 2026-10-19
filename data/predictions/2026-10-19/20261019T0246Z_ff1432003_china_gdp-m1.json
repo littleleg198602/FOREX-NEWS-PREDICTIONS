@@ -1,0 +1,179 @@
+{
+  "event_id": "ff-1432003-china-q3-gdp-september-activity-20261019",
+  "event_cluster_id": "china-q3-2026-growth-sep-activity",
+  "created_at_utc": "2026-10-19T02:45:26.468Z",
+  "event_time_utc": "2026-10-19T02:00:00Z",
+  "published_at_utc": "2026-10-19T02:00:00Z",
+  "observed_at_utc": "2026-10-19T02:45:26.468Z",
+  "source_time_text": "NBS 2026-10-19 10:00 Beijing (02:00 UTC); FF story stats 03:03 Europe/London (02:03 UTC)",
+  "time_source": "NBS_PRIMARY_ABSOLUTE_BEIJING",
+  "time_is_derived": false,
+  "time_uncertainty_seconds": 0,
+  "event_age_minutes": 45.44113333333333,
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "GDP_GROWTH",
+    "INDUSTRIAL_PRODUCTION",
+    "RETAIL_CONSUMPTION",
+    "CHINA_MACRO"
+  ],
+  "headline": "China Q3 GDP 4.5% y/y vs 4.4% forecast; September retail sales 1.1% vs FF 0.5%; weak property investment",
+  "headline_cs": "Čínské HDP překonalo očekávání, domácí poptávka je stále slabá",
+  "summary_cs": "HDP +4,5 % meziročně vs 4,4 % odhad, předtím 4,3 %. Maloobchod +1,1 % vs FF 0,5 %, průmysl +5,5 % vs FF 5,4 %. Fixní investice -7,2 %, reality -20,6 %.",
+  "source_section": "Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1432003-china-national-economy-was-generally-stable-with-new",
+  "corroboration_urls": [
+    "https://www.stats.gov.cn/english/PressRelease/202610/t20261019_1965619.html",
+    "https://www.reuters.com/world/china/chinas-economic-growth-picks-up-third-quarter-beating-expectations-2026-10-19/",
+    "https://www.forexfactory.com/calendar?day=oct19.2026"
+  ],
+  "prediction_id": "20261019T0246Z_ff1432003_china_gdp_m1_111",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy-control-frozen",
+  "learning_v2": {
+    "material_confidence_adjustment": false,
+    "reason": "Frozen M1, no learning"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": null,
+        "unit": "index",
+        "freshness": "NO_TIMESTAMPED_PRE_DECISION_QUOTE",
+        "source": "Unavailable",
+        "observed_at_utc": null
+      },
+      "US2Y": {
+        "value": 4.74,
+        "unit": "percent",
+        "freshness": "FRIDAY_STALE",
+        "source": "Oct 16 prior US close",
+        "observed_at_utc": null
+      },
+      "US10Y": {
+        "value": 5.0525,
+        "unit": "percent",
+        "freshness": "UNSYNCHRONIZED",
+        "source": "Reuters Oct 19 Asian report, quote time not given",
+        "observed_at_utc": null
+      },
+      "VIX": {
+        "value": 19.99,
+        "unit": "index",
+        "freshness": "FRIDAY_STALE",
+        "source": "Oct 16 US close",
+        "observed_at_utc": null
+      },
+      "WTI": {
+        "value": 100.62,
+        "unit": "USD/barrel",
+        "freshness": "UNSYNCHRONIZED",
+        "source": "Reuters Oct 19 Asian report",
+        "observed_at_utc": null
+      },
+      "BRENT": {
+        "value": 107.95,
+        "unit": "USD/barrel",
+        "freshness": "UNSYNCHRONIZED",
+        "source": "Reuters Oct 19 Asian report",
+        "observed_at_utc": null
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "STALE",
+      "US10Y": "FALLING_NOT_EVENT_ATTRIBUTABLE",
+      "VIX": "STALE",
+      "WTI": "FALLING_RUSSIA_SANCTIONS",
+      "BRENT": "FALLING_RUSSIA_SANCTIONS"
+    },
+    "local_confirmation": {
+      "CHINA": "NBS GDP 4.5%, retail 1.1%, industrial 5.5%, fixed investment -7.2%, property investment -20.6%",
+      "CSI300": "Reuters -0.2%, losses pared after data; no timestamped bars",
+      "AUS200": "Australian session open, no verified event-aligned bars; RBA Kent earlier discussed restrictive policy",
+      "NI225": "Reuters Nikkei -1.2%, AI technology selloff dominates; no isolated GDP effect",
+      "AUDUSD": "No aligned AUDUSD or iron ore quote",
+      "USDJPY": "Reuters 157.89, not aligned to release"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Frozen M1 legacy positive GDP surprise supports China-exposed Australian miners."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy positive GDP surprise supports China-exposed Australian miners."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports China-exposed Australian miners."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports China-exposed Australian miners."
+        },
+        "4h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports China-exposed Australian miners."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports China-exposed Australian miners."
+        }
+      },
+      "mechanism": "Frozen M1 legacy positive GDP surprise supports China-exposed Australian miners.",
+      "invalidation": "Chinese property weakness or global risk-off overwhelms the small GDP beat."
+    },
+    {
+      "instrument": "NI225",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Frozen M1 legacy positive GDP surprise supports Asian growth sentiment."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy positive GDP surprise supports Asian growth sentiment."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports Asian growth sentiment."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports Asian growth sentiment."
+        },
+        "4h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports Asian growth sentiment."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy positive GDP surprise supports Asian growth sentiment."
+        }
+      },
+      "mechanism": "Frozen M1 legacy positive GDP surprise supports Asian growth sentiment.",
+      "invalidation": "Chinese property weakness or global risk-off overwhelms the small GDP beat."
+    }
+  ]
+}
