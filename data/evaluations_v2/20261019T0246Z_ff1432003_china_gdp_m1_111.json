@@ -1,0 +1,183 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "20261019T0246Z_ff1432003_china_gdp_m1_111",
+  "event_id": "ff-1432003-china-q3-gdp-september-activity-20261019",
+  "event_time_utc": "2026-10-19T02:00:00+00:00",
+  "prediction_time_utc": "2026-10-19T02:45:26.468000+00:00",
+  "evaluation_anchor_time_utc": "2026-10-19T02:45:26.468000+00:00",
+  "prediction_latency_seconds": 2726.468,
+  "evaluated_at_utc": "2026-10-19T02:48:09.689977+00:00",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy-control-frozen",
+  "categories": [
+    "GDP_GROWTH",
+    "INDUSTRIAL_PRODUCTION",
+    "RETAIL_CONSUMPTION",
+    "CHINA_MACRO"
+  ],
+  "evidence": null,
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": null,
+        "unit": "index",
+        "freshness": "NO_TIMESTAMPED_PRE_DECISION_QUOTE",
+        "source": "Unavailable",
+        "observed_at_utc": null,
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.74,
+        "unit": "percent",
+        "freshness": "FRIDAY_STALE",
+        "source": "Oct 16 prior US close",
+        "observed_at_utc": null,
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.0525,
+        "unit": "percent",
+        "freshness": "UNSYNCHRONIZED",
+        "source": "Reuters Oct 19 Asian report, quote time not given",
+        "observed_at_utc": null,
+        "regime": "FALLING"
+      },
+      "VIX": {
+        "value": 19.99,
+        "unit": "index",
+        "freshness": "FRIDAY_STALE",
+        "source": "Oct 16 US close",
+        "observed_at_utc": null,
+        "regime": "ELEVATED"
+      },
+      "WTI": {
+        "value": 100.62,
+        "unit": "USD/barrel",
+        "freshness": "UNSYNCHRONIZED",
+        "source": "Reuters Oct 19 Asian report",
+        "observed_at_utc": null,
+        "regime": "FALLING"
+      },
+      "BRENT": {
+        "value": 107.95,
+        "unit": "USD/barrel",
+        "freshness": "UNSYNCHRONIZED",
+        "source": "Reuters Oct 19 Asian report",
+        "observed_at_utc": null,
+        "regime": "FALLING"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "FALLING",
+      "VIX": "ELEVATED",
+      "WTI": "FALLING",
+      "BRENT": "FALLING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "20261019T0246Z_ff1432003_china_gdp_m1_111",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8831.5,
+      "reference_price_time_utc": "2026-10-19T02:28:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-19T02:27:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 17.441,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-19T03:00:26.468000+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-19T03:45:26.468000+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-19T06:45:26.468000+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    },
+    {
+      "prediction_id": "20261019T0246Z_ff1432003_china_gdp_m1_111",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 64534.03125,
+      "reference_price_time_utc": "2026-10-19T02:31:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-19T02:30:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 14.441,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "UP",
+      "predicted_confidence": 5,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-19T03:00:26.468000+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-19T03:45:26.468000+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-19T06:45:26.468000+00:00",
+          "predicted_direction": "UP",
+          "predicted_confidence": 5
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "UP",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
