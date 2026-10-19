@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-16T19:50:29.715000+00:00",
   "evaluation_anchor_time_utc": "2026-10-16T19:50:29.715000+00:00",
   "prediction_latency_seconds": 12689.715,
-  "evaluated_at_utc": "2026-10-18T23:16:34.963044+00:00",
+  "evaluated_at_utc": "2026-10-19T01:21:34.097688+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control-frozen",
@@ -161,9 +161,25 @@
           "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-18",
+          "actual_price_time_utc": "2026-10-19T00:00:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-18T23:59:00+00:00",
+          "price": 4206.0,
+          "change_pct": 0.369884,
+          "actual_direction": "UP",
           "predicted_direction": "UP",
+          "predicted_confidence": 4,
+          "correct": true,
+          "score_type": "directional",
+          "baseline_range_pct": 1.262377,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 0.381816,
+          "mfe_pct": 0.396136,
+          "mae_pct": -0.224315,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "directional_threshold_pct": 0.126238,
+          "actual_direction_thresholded": "UP",
           "forecast_source": "horizons"
         }
       }
