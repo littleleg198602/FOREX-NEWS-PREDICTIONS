@@ -1,0 +1,293 @@
+{
+  "event_id": "ff-1432102-us-nahb-hmi-october-2026",
+  "event_cluster_id": "us-housing-nahb-october-2026",
+  "created_at_utc": "2026-10-19T15:25:39.294Z",
+  "event_time_utc": "2026-10-19T14:00:00Z",
+  "published_at_utc": "2026-10-19T14:03:00Z",
+  "observed_at_utc": "2026-10-19T15:25:39.294Z",
+  "source_time_text": "NAHB Housing Market Index release: 2026-10-19 10:00 EDT (14:00 UTC); Forex Factory story stats Oct 19 4:03pm in a local-time display (interpreted 16:03 CEST)",
+  "time_source": "PRIMARY_SCHEDULED_RELEASE_10AM_EDT; FF_STORY_LOCAL_TIME_DERIVED",
+  "time_is_derived": true,
+  "time_uncertainty_seconds": 3600,
+  "event_age_minutes": 82.13333333333334,
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "US_HOUSING",
+    "NAHB_HMI",
+    "BUSINESS_SURVEY"
+  ],
+  "headline": "US NAHB housing market index falls to 29 in October vs FF consensus 31 and previous 32; 14-year low",
+  "headline_cs": "Důvěra amerických stavitelů klesla na 14leté minimum",
+  "summary_cs": "NAHB HMI v říjnu 29 bodů vs očekávaných 31 a předchozích 32; nejnižší od června 2012. Slabší poptávka, sazby hypoték přes 7 %, vyšší ceny energií a materiálů.",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1432102-us-builder-sentiment-falls-on-rising-rates",
+  "corroboration_urls": [
+    "https://www.nahb.org/news-and-economics/press-releases/2026/10/builder-sentiment-falls-on-rising-rates",
+    "https://www.forexfactory.com/calendar?day=oct19.2026",
+    "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/"
+  ],
+  "prediction_id": "20261019T1525Z_ff1432102_nahb_m2_200",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "learning_v2": {
+    "material_confidence_adjustment": true,
+    "confidence_adjustment_by_horizon": {
+      "15m": 1,
+      "1h": 1,
+      "4h": 1,
+      "next_session": 1
+    },
+    "reason": "ACTIONABLE M2 DATA_RELEASE mixed-neutral segments; maximum one-point increase per horizon"
+  },
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.888,
+        "unit": "index",
+        "freshness": "UNSYNCHRONIZED_MONDAY_PRE_DECISION",
+        "source": "Barron's Oct 19, quote time unspecified",
+        "observed_at_utc": null
+      },
+      "US2Y": {
+        "value": 4.74,
+        "unit": "percent",
+        "freshness": "FRIDAY_STALE",
+        "source": "Oct 16 last cited close; no verified intraday quote",
+        "observed_at_utc": null
+      },
+      "US10Y": {
+        "value": 5.076,
+        "unit": "percent",
+        "freshness": "UNSYNCHRONIZED_MONDAY_PRE_DECISION",
+        "source": "Barron's Oct 19, quote time unspecified",
+        "observed_at_utc": null
+      },
+      "VIX": {
+        "value": 19.99,
+        "unit": "index",
+        "freshness": "FRIDAY_STALE",
+        "source": "Oct 16 last cited close; no verified intraday quote",
+        "observed_at_utc": null
+      },
+      "WTI": {
+        "value": 97.25,
+        "unit": "USD/barrel",
+        "freshness": "EARLIER_MONDAY_STALE",
+        "source": "WSJ early European trading Oct 19; no timestamped aligned quote",
+        "observed_at_utc": null
+      },
+      "BRENT": {
+        "value": 107.69,
+        "unit": "USD/barrel",
+        "freshness": "EARLIER_MONDAY_STALE",
+        "source": "WSJ early European trading Oct 19; no timestamped aligned quote",
+        "observed_at_utc": null
+      }
+    },
+    "regimes": {
+      "DXY": "FLAT_TO_FIRM_UNCONFIRMED",
+      "US2Y": "STALE",
+      "US10Y": "EASING_EARLIER",
+      "VIX": "STALE",
+      "WTI": "FALLING_RUSSIA_SANCTIONS",
+      "BRENT": "FALLING_RUSSIA_SANCTIONS"
+    },
+    "local_confirmation": {
+      "NAHB": "HMI 29 vs FF 31; Reuters consensus 31; previous 32; current sales 33 (-2); future sales 32 (-5); buyer traffic 18 (-5); 43% cutting prices",
+      "MORTGAGE": "30y fixed around 7.40% last week per Reuters; pre-decision background, not event reaction",
+      "SP500": "Reuters market opening +0.57%, before the NAHB release; no event-aligned intraday bars",
+      "WS30": "Reuters market opening -0.05%, before the NAHB release; no event-aligned intraday bars",
+      "NDX": "Nasdaq Composite opening +0.98% before NAHB release; NDX-specific event-aligned quote unavailable",
+      "HOUSING_EQUITIES": "No verified synchronized XHB/homebuilder shares reaction to 14:00Z release"
+    }
+  },
+  "predictions": [
+    {
+      "instrument": "SP500",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Release partly priced; no aligned bars"
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "Macro surprise may fade by next session"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Release partly priced; no aligned bars"
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Weak housing vs risk-on tech"
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Mixed rates/earnings drivers"
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Macro surprise may fade by next session"
+        }
+      },
+      "counter_case": "AI rally and lower yields may offset housing weakness.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "UNKNOWN",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": null,
+        "observed_at_utc": null
+      },
+      "mechanism": "Housing survey surprise negative, but broad index sensitivity is diluted.",
+      "invalidation": "Broad US equity selloff confirmed alongside housing sector weakness."
+    },
+    {
+      "instrument": "WS30",
+      "relevance": "SECONDARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Release partly priced; no aligned bars"
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "Macro surprise may fade by next session"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Release partly priced; no aligned bars"
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Weak housing vs risk-on tech"
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Mixed rates/earnings drivers"
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Macro surprise may fade by next session"
+        }
+      },
+      "counter_case": "AI rally and lower yields may offset housing weakness.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "UNKNOWN",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": null,
+        "observed_at_utc": null
+      },
+      "mechanism": "Housing survey surprise negative, but broad index sensitivity is diluted.",
+      "invalidation": "Broad US equity selloff confirmed alongside housing sector weakness."
+    },
+    {
+      "instrument": "NDX",
+      "relevance": "TERTIARY",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Release partly priced; no aligned bars"
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 5,
+        "rationale": "Macro surprise may fade by next session"
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Release partly priced; no aligned bars"
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Weak housing vs risk-on tech"
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Mixed rates/earnings drivers"
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 5,
+          "rationale": "Macro surprise may fade by next session"
+        }
+      },
+      "counter_case": "AI rally and lower yields may offset housing weakness.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": null,
+        "trend_1h": null,
+        "session_location": "UNKNOWN",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": null,
+        "observed_at_utc": null
+      },
+      "mechanism": "Housing survey surprise negative, but broad index sensitivity is diluted.",
+      "invalidation": "Broad US equity selloff confirmed alongside housing sector weakness."
+    }
+  ],
+  "evidence": {
+    "article_role": "DATA_RELEASE",
+    "source_quality": "PRIMARY",
+    "source_verified": true,
+    "news_age_minutes": 82.6549,
+    "novelty": "HIGH",
+    "attention": "MEDIUM",
+    "dominant_driver": "US NAHB HMI 29 vs consensus 31, prior 32; 14-year low due to mortgage rates and housing affordability.",
+    "market_expectations": {
+      "source": "Forex Factory",
+      "expected_value": 31
+    },
+    "surprise": {
+      "actual": 29,
+      "consensus": 31,
+      "previous": 32,
+      "surprise_direction": "NEGATIVE",
+      "components": {
+        "future_sales": 32,
+        "buyer_traffic": 18,
+        "price_cuts_pct": 43
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Over one hour old; no event-aligned OHLC to verify actual absorption."
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "US_INDEXES": "S&P and Nasdaq opened higher before release on AI rebound; Dow flat",
+        "DXY": "101.888 earlier; unsynchronized",
+        "US10Y": "5.076 earlier; unsynchronized",
+        "WTI": "97.25 earlier; sanctions relief, not NAHB"
+      }
+    },
+    "decision_notes": "Residual forecasts from decision time only. Not eligible for hit rate without synchronized OHLC."
+  }
+}
