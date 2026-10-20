@@ -1,0 +1,145 @@
+{
+  "event_id": "ff-1432178-uk-labour-october-2026",
+  "event_cluster_id": "uk-labour-october-2026",
+  "created_at_utc": "2026-10-20T07:18:33.639Z",
+  "event_time_utc": "2026-10-20T06:00:00Z",
+  "published_at_utc": "2026-10-20T06:01:00Z",
+  "observed_at_utc": "2026-10-20T07:18:33.639Z",
+  "source_time_text": "ONS 20 October 2026 07:00 BST; FF story Oct 19 11:01pm in PDT localized display",
+  "time_source": "ONS 07:00 BST scheduled release (06:00 UTC); FF story time localized/derived",
+  "time_is_derived": true,
+  "time_uncertainty_seconds": 120,
+  "event_age_minutes": 77.56065,
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "categories": [
+    "UK_LABOUR",
+    "BOE",
+    "DATA_RELEASE"
+  ],
+  "headline": "UK unemployment unexpectedly falls to 4.7%; claimant count and pay mixed",
+  "headline_cs": "Britská nezaměstnanost překvapivě klesla na 4,7 %",
+  "summary_cs": "Nezaměstnanost 4,7 % proti očekávaným 4,9 %, ale růst celkových mezd 3,7 % místo 3,8 % a počet žádostí o podporu +30,3 tisíce proti +19,4 tisíce. Volná místa klesla na 691 tisíc.",
+  "source_section": "Hot Stories; Latest Stories",
+  "source_url": "https://www.forexfactory.com/news/1432178-labour-market-overview-uk-october-2026",
+  "corroboration_urls": [
+    "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/october2026",
+    "https://www.forexfactory.com/calendar?day=oct20.2026"
+  ],
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.63,
+        "unit": "index",
+        "freshness": "2026-10-20 intraday table, no verified quote timestamp",
+        "source": "Investing.com DXY historical daily table; retrieved before prediction",
+        "observed_at_utc": null
+      },
+      "US2Y": {
+        "value": 4.77,
+        "unit": "percent",
+        "freshness": "PREVIOUS_US_SESSION_2026-10-19",
+        "source": "US Treasury daily par yield Oct 19 via Treasury Rate Watch",
+        "observed_at_utc": null
+      },
+      "US10Y": {
+        "value": 5.15,
+        "unit": "percent",
+        "freshness": "PREVIOUS_US_SESSION_2026-10-19",
+        "source": "US Treasury daily par yield Oct 19 via Treasury Rate Watch",
+        "observed_at_utc": null
+      },
+      "VIX": {
+        "value": 18.44,
+        "unit": "index",
+        "freshness": "PREVIOUS_US_SESSION_2026-10-19_CLOSE",
+        "source": "ChartExchange CBOE VIX 19 Oct 16:00 EDT",
+        "observed_at_utc": "2026-10-19T20:00:00Z"
+      },
+      "WTI": {
+        "value": 98.8,
+        "unit": "USD/barrel",
+        "contract": "DECEMBER_2026",
+        "freshness": "PRE_DECISION_2026-10-20T06:28:00Z",
+        "source": "Reuters Oct 20 oil 06:28 GMT",
+        "observed_at_utc": "2026-10-20T06:28:00Z"
+      },
+      "BRENT": {
+        "value": 110.07,
+        "unit": "USD/barrel",
+        "contract": "DECEMBER_2026",
+        "freshness": "PRE_DECISION_2026-10-20T06:28:00Z",
+        "source": "Reuters Oct 20 oil 06:28 GMT",
+        "observed_at_utc": "2026-10-20T06:28:00Z"
+      }
+    },
+    "regimes": {
+      "DXY": "SOFT_INTRADAY_UNTIMED",
+      "US2Y": "PRIOR_CLOSE",
+      "US10Y": "PRIOR_CLOSE",
+      "VIX": "PRIOR_CLOSE",
+      "WTI": "OIL_RISK_PREMIUM",
+      "BRENT": "OIL_RISK_PREMIUM"
+    },
+    "data_quality": "NOT_SYNCHRONIZED; no instrument OHLC reaction; prices are context not trade signals",
+    "context_source_urls": [
+      "https://es.investing.com/currencies/us-dollar-index-historical-data/",
+      "https://treasuryratewatch.com/daily/treasury-yield-curve",
+      "https://chartexchange.com/symbol/index-vix/historical/",
+      "https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/"
+    ],
+    "local_confirmation": {
+      "GBPUSD": "Pre-release 00:01Z GBPUSD 1.33113, not event reaction",
+      "UK100": "FTSE futures -0.48% at 04:37Z before release; no verified post-release FTSE 100 OHLC",
+      "BOE": "Potential November rate increase; unemployment surprise positive but pay and vacancies weaker"
+    }
+  },
+  "prediction_id": "202610200718Z_ff1432178_uk_labour_m1_111",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy-control-frozen",
+  "learning_v2": {
+    "material_confidence_adjustment": false,
+    "reason": "Frozen M1; no learning"
+  },
+  "predictions": [
+    {
+      "instrument": "UK100",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "UP",
+        "confidence": 5,
+        "rationale": "Frozen M1 legacy: map macro surprise or policy tightening headline directly to equity direction."
+      },
+      "next_session": {
+        "direction": "UP",
+        "confidence": 4,
+        "rationale": "Frozen M1 legacy: map macro surprise or policy tightening headline directly to equity direction."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy: map macro surprise or policy tightening headline directly to equity direction."
+        },
+        "1h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy: map macro surprise or policy tightening headline directly to equity direction."
+        },
+        "4h": {
+          "direction": "UP",
+          "confidence": 5,
+          "rationale": "Frozen M1 legacy: map macro surprise or policy tightening headline directly to equity direction."
+        },
+        "next_session": {
+          "direction": "UP",
+          "confidence": 4,
+          "rationale": "Frozen M1 legacy: map macro surprise or policy tightening headline directly to equity direction."
+        }
+      },
+      "mechanism": "Frozen M1 legacy baseline signal from headline",
+      "invalidation": "Verified FTSE 100 and GBP/rates alignment after data could establish directional move."
+    }
+  ]
+}
