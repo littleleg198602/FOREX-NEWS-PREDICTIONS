@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-16T19:50:29.715000+00:00",
   "evaluation_anchor_time_utc": "2026-10-16T19:50:29.715000+00:00",
   "prediction_latency_seconds": 12689.715,
-  "evaluated_at_utc": "2026-10-19T07:49:29.440441+00:00",
+  "evaluated_at_utc": "2026-10-20T11:42:04.593055+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -220,7 +220,7 @@
     {
       "prediction_id": "20261016T1950Z_ff1431850_nato_blacksea_m2_200",
       "instrument": "STOXX50",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^STOXX50E",
       "yahoo_proxy_for": null,
@@ -260,9 +260,25 @@
           "reference_age_minutes": 260.495
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-19",
+          "actual_price_time_utc": "2026-10-19T15:30:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-19T15:29:00+00:00",
+          "price": 6140.43994140625,
+          "change_pct": -1.012691,
+          "actual_direction": "DOWN",
           "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 3,
+          "correct": true,
+          "score_type": "volatility",
+          "baseline_range_pct": 0.89244,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.209845,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "volatility_ratio": 1.35566,
+          "volatility_ratio_threshold": 1.25,
           "forecast_source": "horizons"
         }
       }
@@ -270,7 +286,7 @@
     {
       "prediction_id": "20261016T1950Z_ff1431850_nato_blacksea_m2_200",
       "instrument": "GDAXI",
-      "status": "PENDING",
+      "status": "DONE",
       "market_data_source": "yahoo",
       "yahoo_symbol": "^GDAXI",
       "yahoo_proxy_for": null,
@@ -310,9 +326,25 @@
           "reference_age_minutes": 229.495
         },
         "next_session": {
-          "status": "PENDING",
+          "status": "DONE",
           "session_local_date": "2026-10-19",
+          "actual_price_time_utc": "2026-10-19T16:01:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-19T16:00:00+00:00",
+          "price": 25319.77,
+          "change_pct": -1.181925,
+          "actual_direction": "DOWN",
           "predicted_direction": "VOLATILITY",
+          "predicted_confidence": 3,
+          "correct": false,
+          "score_type": "volatility",
+          "baseline_range_pct": 1.214831,
+          "baseline_definition": "previous_relevant_local_trading_session_range",
+          "post_event_range_pct": 1.334408,
+          "mfe_pct": null,
+          "mae_pct": null,
+          "evaluation_method": "last_complete_bar_of_next_relevant_local_trading_date_confirmed_by_later_trading_date",
+          "volatility_ratio": 1.098431,
+          "volatility_ratio_threshold": 1.25,
           "forecast_source": "horizons"
         }
       }
