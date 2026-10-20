@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-19T02:45:26.468000+00:00",
   "evaluation_anchor_time_utc": "2026-10-19T02:45:26.468000+00:00",
   "prediction_latency_seconds": 2726.468,
-  "evaluated_at_utc": "2026-10-19T07:49:29.915063+00:00",
+  "evaluated_at_utc": "2026-10-20T00:24:44.536672+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control-frozen",
@@ -156,11 +156,13 @@
           "target_time_utc": "2026-10-19T06:45:26.468000+00:00",
           "predicted_direction": "UP",
           "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-10-19T23:01:00+00:00",
+          "market_delay_minutes": 975.56,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-10-20",
           "predicted_direction": "UP",
           "forecast_source": "horizons"
         }
@@ -219,11 +221,13 @@
           "target_time_utc": "2026-10-19T06:45:26.468000+00:00",
           "predicted_direction": "UP",
           "predicted_confidence": 5,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-10-20T00:01:00+00:00",
+          "market_delay_minutes": 1035.56,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-10-20",
           "predicted_direction": "UP",
           "forecast_source": "horizons"
         }
