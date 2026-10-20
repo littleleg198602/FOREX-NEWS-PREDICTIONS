@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-20T19:40:42.220000+00:00",
   "evaluation_anchor_time_utc": "2026-10-20T19:40:42.220000+00:00",
   "prediction_latency_seconds": 4962.22,
-  "evaluated_at_utc": "2026-10-20T19:46:45.185490+00:00",
+  "evaluated_at_utc": "2026-10-20T20:40:27.210455+00:00",
   "model_version": "1.1.1",
   "prediction_model_version": "1.1.1",
   "methodology_version": "legacy-control-frozen",
@@ -96,26 +96,41 @@
     {
       "prediction_id": "ff-1432391-ukraine-us-russia-trilateral-summit-proposal-m1",
       "instrument": "XAUUSD",
-      "status": "PENDING",
+      "status": "PARTIAL",
       "market_data_source": "yahoo",
       "yahoo_symbol": "GC=F",
       "yahoo_proxy_for": "XAUUSD",
       "yahoo_proxy_type": "COMEX gold futures",
-      "reference_price": 4138.89990234375,
-      "reference_price_time_utc": "2026-10-20T19:37:00+00:00",
-      "reference_price_bar_start_utc": "2026-10-20T19:36:00+00:00",
+      "reference_price": 4138.0,
+      "reference_price_time_utc": "2026-10-20T19:40:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-20T19:39:00+00:00",
       "reference_bar_interval_minutes": 1,
-      "reference_age_minutes": 3.704,
+      "reference_age_minutes": 0.704,
       "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
       "forecast_structure": "legacy_immediate_fallback",
       "predicted_immediate_direction": "DOWN",
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "DONE",
           "target_time_utc": "2026-10-20T19:55:42.220000+00:00",
+          "actual_price_time_utc": "2026-10-20T19:56:00+00:00",
+          "actual_price_bar_start_utc": "2026-10-20T19:55:00+00:00",
+          "market_delay_minutes": 0.3,
+          "price": 4139.89990234375,
+          "change_pct": 0.045914,
+          "actual_direction": "UP",
           "predicted_direction": "DOWN",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "forecast_source": "legacy_fallback",
+          "correct": false,
+          "score_type": "directional",
+          "baseline_range_pct": 0.103922,
+          "post_event_range_pct": 0.101503,
+          "mfe_pct": 0.012083,
+          "mae_pct": -0.08942,
+          "directional_threshold_pct": 0.010392,
+          "actual_direction_thresholded": "UP"
         },
         "1h": {
           "status": "PENDING",
@@ -156,10 +171,12 @@
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-20T19:55:42.220000+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 219.704
         },
         "1h": {
           "status": "PENDING",
@@ -200,10 +217,12 @@
       "predicted_confidence": 4,
       "evaluations": {
         "15m": {
-          "status": "PENDING",
+          "status": "MARKET_CLOSED",
           "target_time_utc": "2026-10-20T19:55:42.220000+00:00",
           "predicted_direction": "UP",
-          "predicted_confidence": 4
+          "predicted_confidence": 4,
+          "reason": "reference price was stale at decision time; fixed clock-time reaction is not scoreable",
+          "reference_age_minutes": 250.704
         },
         "1h": {
           "status": "PENDING",
