@@ -1,0 +1,181 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1432444-boj-himino-inflation-tightening-parliament-m2",
+  "event_id": "ff-1432444-boj-himino-inflation-tightening-parliament",
+  "event_time_utc": "2026-10-21T04:29:00+00:00",
+  "prediction_time_utc": "2026-10-21T05:42:11.665000+00:00",
+  "evaluation_anchor_time_utc": "2026-10-21T05:42:11.665000+00:00",
+  "prediction_latency_seconds": 4391.665,
+  "evaluated_at_utc": "2026-10-21T05:46:10.978952+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "central_bank",
+    "japan",
+    "boj",
+    "rates",
+    "inflation",
+    "monetary_policy"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 73,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Deputy BOJ Governor Himino warned that delaying monetary tightening risks future inflation overshoot; underlying inflation near 2%, real rates still accommodative. Hawkish but December hike was already expected.",
+    "market_expectations": {
+      "source": "Reuters poll reported Oct 21 prior to Himino comments",
+      "expected_value": "Majority (69%) expects 25bp December BOJ hike to 1.50%",
+      "implied_probability": null,
+      "distribution_notes": "Economist survey, not traded market-implied odds; avoid interpreting 69% as swap probability."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Hawkish BOJ trajectory already widely expected in the Reuters poll and prior speeches; cannot establish event-specific price absorption without post-news candles.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "NI225": "Reuters Asia market article Oct 21 02:10Z showed Nikkei +1.3% BEFORE Himino's 04:27Z remarks, driven by earnings and risk sentiment; no verified post-event candle.",
+        "USDJPY": "Reuters early Asia report USDJPY 158.33, yen slightly weaker before the remarks; no verified post-event yen response.",
+        "JGB": "No timestamp-verified Japanese 2Y/10Y response after remarks.",
+        "DXY": "Previous-session unsynchronized DXY 101.71; not a confirmation.",
+        "US2Y": "Previous-session 4.74%; stale.",
+        "US10Y": "Reuters pre-event 5.123%; high global yields.",
+        "VIX": "Oct 20 close 17.31; not live.",
+        "WTI": "Reuters pre-event 03:50Z 99.18 USD; energy inflation headwind.",
+        "BRENT": "Reuters pre-event 03:50Z 110.38 USD; energy inflation headwind."
+      }
+    },
+    "local_confirmation": {
+      "BOJ": "Reuters verified Himino's parliamentary remarks on inflation near target and still-accommodative conditions.",
+      "finance_minister": "Katayama said wages increasingly drive inflation and government policy aligned with BOJ; Reuters Oct 21; incremental context, not a separate surprise.",
+      "NI225": "Nikkei +1.3% and USDJPY 158.33 in Reuters early Asia report before the event; does not prove market response."
+    },
+    "decision_notes": "Residual forecasts start at actual created_at_utc, not the earlier source time. 15m/1h/4h horizons remain fixed. No ACTIONABLE learning because learning_profile.json is empty. Price reaction not verified, so excluded from hit rate."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.71,
+        "timestamp_utc": null,
+        "source": "Reuters Oct 20 US afternoon (previous-session unsynchronized DXY, not WSJ Dollar Index)",
+        "freshness": "previous_session_unsynchronized",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.74,
+        "timestamp_utc": "2026-10-20T14:40:00Z",
+        "source": "WSJ Treasury market talk Oct 20 10:40 ET; stale",
+        "freshness": "previous_session",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.123,
+        "timestamp_utc": null,
+        "source": "Reuters Asia markets Oct 21 02:10Z article; quote minute not specified, before event",
+        "freshness": "same_day_pre_event",
+        "direction": "UP",
+        "regime": "RISING"
+      },
+      "VIX": {
+        "value": 17.31,
+        "timestamp_utc": "2026-10-20T20:15:00Z",
+        "source": "Yahoo Finance ^VIX Oct 20 close",
+        "freshness": "previous_session_close",
+        "direction": "DOWN",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 99.18,
+        "timestamp_utc": "2026-10-21T03:50:00Z",
+        "source": "Reuters oil Oct 21, 03:50 GMT",
+        "freshness": "pre_event_39m",
+        "direction": "UP",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 110.38,
+        "timestamp_utc": "2026-10-21T03:50:00Z",
+        "source": "Reuters oil Oct 21, 03:50 GMT",
+        "freshness": "pre_event_39m",
+        "direction": "UP",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "RISING",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1432444-boj-himino-inflation-tightening-parliament-m2",
+      "instrument": "NI225",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^N225",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 64812.75,
+      "reference_price_time_utc": "2026-10-21T05:32:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-21T05:31:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 10.194,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 2,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-21T05:57:11.665000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 2
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-21T06:42:11.665000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-21T09:42:11.665000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 3
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
