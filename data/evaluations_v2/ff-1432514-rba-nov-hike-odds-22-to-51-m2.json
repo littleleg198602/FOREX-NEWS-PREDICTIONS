@@ -1,0 +1,193 @@
+{
+  "evaluation_version": "2.0.0",
+  "evaluation_config_hash": "1a718d36900792dcb3fc6142b898f93817bad806cb84fdbee5553b3663693d14",
+  "prediction_id": "ff-1432514-rba-nov-hike-odds-22-to-51-m2",
+  "event_id": "ff-1432514-rba-nov-hike-odds-22-to-51",
+  "event_time_utc": "2026-10-21T08:11:00+00:00",
+  "prediction_time_utc": "2026-10-21T08:43:22.050000+00:00",
+  "evaluation_anchor_time_utc": "2026-10-21T08:43:22.050000+00:00",
+  "prediction_latency_seconds": 1942.05,
+  "evaluated_at_utc": "2026-10-21T08:46:36.269094+00:00",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "categories": [
+    "central_bank",
+    "australia",
+    "rba",
+    "rates",
+    "market_pricing",
+    "inflation"
+  ],
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 217,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Australian OIS-implied probability of a November 25bp RBA hike repriced to approximately 51% from 22% on Tuesday after Hauser's hawkish inflation warning; Goldman Sachs changed its November call from hold to hike. This market repricing is incremental information beyond the already-covered speech.",
+    "market_expectations": {
+      "source": "Investing.com syndicated on Yahoo Oct 21 and Guardian independent contemporaneous account",
+      "expected_value": "25bp hike to 4.85% on Nov 3",
+      "implied_probability": 0.51,
+      "distribution_notes": "RateProbability OIS estimate ~51% vs 22% prior day; Guardian cited ~45% vs 30% at another snapshot. Probabilities are dynamic and are not synchronized across sources."
+    },
+    "surprise": {
+      "actual": "RBA Nov hike implied probability ~51%",
+      "consensus": "~22% Tuesday pricing",
+      "previous": "~22%",
+      "revised_previous": null,
+      "surprise_direction": "HAWKISH_REPRICING",
+      "components": {
+        "probability_change_percentage_points": 29,
+        "Goldman_Sachs": "hold_to_25bp_hike",
+        "RBA_rate_now_pct": 4.6,
+        "RBA_rate_if_hike_pct": 4.85
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Original Investing.com story was published approximately 217 minutes before decision, and Hauser's remarks occurred on prior day. FF repost at 08:11Z is not the first dissemination. ASX cash market closed at 05:00Z; post-FF cash reaction impossible; no verified futures candles.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "AUS200": "Cash market had already closed before FF posting; report of 8,831.30 (+0.16%) close is not an isolated reaction to the FF article. Futures response unavailable.",
+        "AUDUSD": "Some contemporary coverage notes AUD above USD 0.70, but no timestamp-synchronized quote after FF publication was verified.",
+        "AU_RATES": "OIS-implied probability ~51% (22% Tuesday) is direct rate-path repricing, not independent equity confirmation.",
+        "DXY": "101.71 from prior-day stored context, stale, not confirmation.",
+        "US2Y": "4.79% Oct 20 US Treasury close, stale.",
+        "US10Y": "5.12% Oct 20 US Treasury close, stale.",
+        "VIX": "17.31 Oct 20 close, stale.",
+        "WTI": "99.27 USD Reuters 06:30Z, before FF post; oil-inflation headwind.",
+        "BRENT": "110.40 USD Reuters 06:30Z, before FF post; oil-inflation headwind."
+      }
+    },
+    "local_confirmation": {
+      "RBA": "Hauser inflation comments independently reported by Reuters Oct 20; no actual new RBA decision.",
+      "market_pricing": "Investing.com/RateProbability ~51% vs 22%; Guardian independently reports ~45% vs 30% at a different snapshot; Goldman Sachs hold-to-hike revision in Investing.com.",
+      "AUS200": "Australian cash session closed at 05:00Z; +0.16% close at 8,831.30 from local news, not event-specific confirmation."
+    },
+    "decision_notes": "Residual forecasts start at created_at_utc, not the original 05:06Z report nor 08:11Z FF repost. Fixed 15m/1h/4h horizons stay fixed and fall outside cash session. No ACTIONABLE learning: learning_profile.json is an empty file. Cross-asset data is asynchronous; neutral forecasts are deliberately low confidence. No hindsight updates."
+  },
+  "is_example": false,
+  "backfilled": false,
+  "eligible_for_hit_rate": false,
+  "normalization_warnings": [],
+  "market_context_origin": "captured_at_prediction_normalized",
+  "market_context": {
+    "captured_for_time_utc": null,
+    "information_cutoff": null,
+    "source": null,
+    "series": {
+      "DXY": {
+        "value": 101.71,
+        "timestamp_utc": null,
+        "source": "Oct 20 Reuters DXY proxy previously recorded in same repository; stale, not independently re-verified for this run",
+        "freshness": "previous_session_unsynchronized",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.79,
+        "timestamp_utc": null,
+        "source": "US Treasury Oct 20 daily par yield, https://www.portfolio-terminal.com/markets/treasury-yields",
+        "freshness": "previous_session_daily",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.12,
+        "timestamp_utc": null,
+        "source": "US Treasury Oct 20 daily par yield, https://www.portfolio-terminal.com/markets/treasury-yields",
+        "freshness": "previous_session_daily",
+        "direction": "UNKNOWN",
+        "regime": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 17.31,
+        "timestamp_utc": "2026-10-20T20:15:00Z",
+        "source": "CBOE Oct 20 close via Yahoo Finance ^VIX",
+        "freshness": "previous_session_close",
+        "direction": "DOWN",
+        "regime": "LOW"
+      },
+      "WTI": {
+        "value": 99.27,
+        "timestamp_utc": "2026-10-21T06:30:00Z",
+        "source": "Reuters Oct 21 oil article, 06:30 GMT quote",
+        "freshness": "same_day_pre_prediction",
+        "direction": "UP",
+        "regime": "RISING"
+      },
+      "BRENT": {
+        "value": 110.4,
+        "timestamp_utc": "2026-10-21T06:30:00Z",
+        "source": "Reuters Oct 21 oil article, 06:30 GMT quote",
+        "freshness": "same_day_pre_prediction",
+        "direction": "UP",
+        "regime": "RISING"
+      }
+    },
+    "regimes": {
+      "DXY": "UNKNOWN",
+      "US2Y": "UNKNOWN",
+      "US10Y": "UNKNOWN",
+      "VIX": "LOW",
+      "WTI": "RISING",
+      "BRENT": "RISING"
+    },
+    "normalization": {
+      "schema": "market_context_v2",
+      "adapted_from_legacy_shape": false
+    }
+  },
+  "results": [
+    {
+      "prediction_id": "ff-1432514-rba-nov-hike-odds-22-to-51-m2",
+      "instrument": "AUS200",
+      "status": "PENDING",
+      "market_data_source": "yahoo",
+      "yahoo_symbol": "^AXJO",
+      "yahoo_proxy_for": null,
+      "yahoo_proxy_type": null,
+      "reference_price": 8831.2998046875,
+      "reference_price_time_utc": "2026-10-21T05:12:00+00:00",
+      "reference_price_bar_start_utc": "2026-10-21T05:11:00+00:00",
+      "reference_bar_interval_minutes": 1,
+      "reference_age_minutes": 211.367,
+      "reference_rule": "last_bar_whose_close_was_available_at_or_before_prediction_decision",
+      "forecast_structure": "explicit_horizons",
+      "predicted_immediate_direction": "MIXED",
+      "predicted_confidence": 1,
+      "evaluations": {
+        "15m": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-21T08:58:22.050000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 1
+        },
+        "1h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-21T09:43:22.050000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 1
+        },
+        "4h": {
+          "status": "PENDING",
+          "target_time_utc": "2026-10-21T12:43:22.050000+00:00",
+          "predicted_direction": "MIXED",
+          "predicted_confidence": 1
+        },
+        "next_session": {
+          "status": "PENDING",
+          "session_local_date": null,
+          "predicted_direction": "MIXED",
+          "forecast_source": "horizons"
+        }
+      }
+    }
+  ]
+}
