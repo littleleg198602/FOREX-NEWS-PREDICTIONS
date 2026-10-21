@@ -1,0 +1,181 @@
+{
+  "event_id": "ff-1432444-boj-himino-inflation-tightening-parliament",
+  "event_cluster_id": "japan-boj-rate-path-oct-2026",
+  "created_at_utc": "2026-10-21T05:42:11.665Z",
+  "event_time_utc": "2026-10-21T04:29:00Z",
+  "published_at_utc": "2026-10-21T04:29:00Z",
+  "source_time_text": "Forex Factory: Oct 21, 12:29am (site display, inferred America/New_York EDT); FinancialJuice source Oct 21, 12:27am EDT",
+  "observed_at_utc": "2026-10-21T05:42:11.665Z",
+  "time_source": "forex_factory_absolute_time_america_new_york_inferred_crosschecked_reuters_0451z",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 900,
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "eligibility_reason": "Delayed roughly 72 minutes; no complete synchronized post-event NI225 price bars or verified event-isolated response; excluded from hit-rate pending safe data availability.",
+  "categories": [
+    "central_bank",
+    "japan",
+    "boj",
+    "rates",
+    "inflation",
+    "monetary_policy"
+  ],
+  "source_url": "https://www.forexfactory.com/news/1432444-bojs-himino-underlying-inflation-likely-to-align-with",
+  "original_source_url": "https://www.reuters.com/world/asia-pacific/bojs-himino-signals-readiness-raise-borrowing-costs-2026-10-21/",
+  "headline": "BOJ's Himino: Underlying inflation likely to align with Bank of Japan target",
+  "source_verification_urls": [
+    "https://www.reuters.com/world/asia-pacific/bojs-himino-signals-readiness-raise-borrowing-costs-2026-10-21/",
+    "https://www.forexfactory.com/news/1432433-japan-shifting-to-wage-driven-inflation-phase-finance-minister"
+  ],
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.71,
+        "timestamp_utc": null,
+        "source": "Reuters Oct 20 US afternoon (previous-session unsynchronized DXY, not WSJ Dollar Index)",
+        "freshness": "previous_session_unsynchronized",
+        "direction": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.74,
+        "timestamp_utc": "2026-10-20T14:40:00Z",
+        "source": "WSJ Treasury market talk Oct 20 10:40 ET; stale",
+        "freshness": "previous_session",
+        "direction": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.123,
+        "timestamp_utc": null,
+        "source": "Reuters Asia markets Oct 21 02:10Z article; quote minute not specified, before event",
+        "freshness": "same_day_pre_event",
+        "direction": "UP"
+      },
+      "VIX": {
+        "value": 17.31,
+        "timestamp_utc": "2026-10-20T20:15:00Z",
+        "source": "Yahoo Finance ^VIX Oct 20 close",
+        "freshness": "previous_session_close",
+        "direction": "DOWN"
+      },
+      "WTI": {
+        "value": 99.18,
+        "timestamp_utc": "2026-10-21T03:50:00Z",
+        "source": "Reuters oil Oct 21, 03:50 GMT",
+        "freshness": "pre_event_39m",
+        "direction": "UP"
+      },
+      "BRENT": {
+        "value": 110.38,
+        "timestamp_utc": "2026-10-21T03:50:00Z",
+        "source": "Reuters oil Oct 21, 03:50 GMT",
+        "freshness": "pre_event_39m",
+        "direction": "UP"
+      }
+    },
+    "regimes": {
+      "usd": "STALE_DXY_NOT_SYNCHRONIZED",
+      "us_rates": "HIGH_STALE_2Y_10Y_ABOVE_5",
+      "volatility": "VIX_PREVIOUS_CLOSE_17_31",
+      "oil": "ELEVATED_RISING_BEFORE_EVENT",
+      "japan_cash": "OPEN",
+      "risk_sentiment": "JAPAN_EQUITIES_UP_BEFORE_EVENT"
+    }
+  },
+  "prediction_id": "ff-1432444-boj-himino-inflation-tightening-parliament-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "TIER1",
+    "source_verified": true,
+    "news_age_minutes": 73,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Deputy BOJ Governor Himino warned that delaying monetary tightening risks future inflation overshoot; underlying inflation near 2%, real rates still accommodative. Hawkish but December hike was already expected.",
+    "market_expectations": {
+      "source": "Reuters poll reported Oct 21 prior to Himino comments",
+      "expected_value": "Majority (69%) expects 25bp December BOJ hike to 1.50%",
+      "implied_probability": null,
+      "distribution_notes": "Economist survey, not traded market-implied odds; avoid interpreting 69% as swap probability."
+    },
+    "surprise": null,
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Hawkish BOJ trajectory already widely expected in the Reuters poll and prior speeches; cannot establish event-specific price absorption without post-news candles.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "CONFLICTING",
+      "observations": {
+        "NI225": "Reuters Asia market article Oct 21 02:10Z showed Nikkei +1.3% BEFORE Himino's 04:27Z remarks, driven by earnings and risk sentiment; no verified post-event candle.",
+        "USDJPY": "Reuters early Asia report USDJPY 158.33, yen slightly weaker before the remarks; no verified post-event yen response.",
+        "JGB": "No timestamp-verified Japanese 2Y/10Y response after remarks.",
+        "DXY": "Previous-session unsynchronized DXY 101.71; not a confirmation.",
+        "US2Y": "Previous-session 4.74%; stale.",
+        "US10Y": "Reuters pre-event 5.123%; high global yields.",
+        "VIX": "Oct 20 close 17.31; not live.",
+        "WTI": "Reuters pre-event 03:50Z 99.18 USD; energy inflation headwind.",
+        "BRENT": "Reuters pre-event 03:50Z 110.38 USD; energy inflation headwind."
+      }
+    },
+    "local_confirmation": {
+      "BOJ": "Reuters verified Himino's parliamentary remarks on inflation near target and still-accommodative conditions.",
+      "finance_minister": "Katayama said wages increasingly drive inflation and government policy aligned with BOJ; Reuters Oct 21; incremental context, not a separate surprise.",
+      "NI225": "Nikkei +1.3% and USDJPY 158.33 in Reuters early Asia report before the event; does not prove market response."
+    },
+    "decision_notes": "Residual forecasts start at actual created_at_utc, not the earlier source time. 15m/1h/4h horizons remain fixed. No ACTIONABLE learning because learning_profile.json is empty. Price reaction not verified, so excluded from hit rate."
+  },
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 2,
+        "rationale": "Roughly 72-minute-old incremental remarks; no post-event price confirmation."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Rate pressure competes with strong earnings, exports, yen weakness and oil costs."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 2,
+          "rationale": "Late article and unverified absorption; no reliable fresh catalyst edge."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "BOJ tightening expectation largely established; yen confirmation absent."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 3,
+          "rationale": "Potential hawkish pressure offsets pre-existing equity rebound; no validated trend/candles."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "December BOJ rate path versus earnings and import energy risks remain competing drivers."
+        }
+      },
+      "mechanism": "Higher expected BOJ rates and possible stronger yen hurt exporters/valuations, while rising bank margins and AI-linked demand may cushion Nikkei.",
+      "invalidation": "A confirmed new BOJ policy timing signal together with yen and JGB yield breakout, or a clear NI225 post-news move, would invalidate the neutral assumption.",
+      "counter_case": "Nikkei could continue rising on earnings and semiconductor/export demand despite the hawkish BOJ message; conversely sudden yen strength could drive index losses.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "UNKNOWN",
+        "trend_1h": "UNKNOWN",
+        "session_location": "UNKNOWN",
+        "extension_state": "UNKNOWN",
+        "market_open": true,
+        "source": "Reuters pre-event +1.3% Nikkei and USDJPY 158.33; post-event candles unavailable.",
+        "observed_at_utc": "2026-10-21T05:42:11.665Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "event_id": "ff-1432444-boj-himino-inflation-tightening-parliament",
+  "event_cluster_id": "japan-boj-rate-path-oct-2026",
+  "created_at_utc": "2026-10-21T05:42:11.665Z",
+  "event_time_utc": "2026-10-21T04:29:00Z",
+  "published_at_utc": "2026-10-21T04:29:00Z",
+  "source_time_text": "Forex Factory: Oct 21, 12:29am (site display, inferred America/New_York EDT); FinancialJuice source Oct 21, 12:27am EDT",
+  "observed_at_utc": "2026-10-21T05:42:11.665Z",
+  "time_source": "forex_factory_absolute_time_america_new_york_inferred_crosschecked_reuters_0451z",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 900,
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "eligibility_reason": "Delayed roughly 72 minutes; no complete synchronized post-event NI225 price bars or verified event-isolated response; excluded from hit-rate pending safe data availability.",
+  "categories": [
+    "central_bank",
+    "japan",
+    "boj",
+    "rates",
+    "inflation",
+    "monetary_policy"
+  ],
+  "source_url": "https://www.forexfactory.com/news/1432444-bojs-himino-underlying-inflation-likely-to-align-with",
+  "original_source_url": "https://www.reuters.com/world/asia-pacific/bojs-himino-signals-readiness-raise-borrowing-costs-2026-10-21/",
+  "headline": "BOJ's Himino: Underlying inflation likely to align with Bank of Japan target",
+  "source_verification_urls": [
+    "https://www.reuters.com/world/asia-pacific/bojs-himino-signals-readiness-raise-borrowing-costs-2026-10-21/",
+    "https://www.forexfactory.com/news/1432433-japan-shifting-to-wage-driven-inflation-phase-finance-minister"
+  ],
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.71,
+        "timestamp_utc": null,
+        "source": "Reuters Oct 20 US afternoon (previous-session unsynchronized DXY, not WSJ Dollar Index)",
+        "freshness": "previous_session_unsynchronized",
+        "direction": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.74,
+        "timestamp_utc": "2026-10-20T14:40:00Z",
+        "source": "WSJ Treasury market talk Oct 20 10:40 ET; stale",
+        "freshness": "previous_session",
+        "direction": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.123,
+        "timestamp_utc": null,
+        "source": "Reuters Asia markets Oct 21 02:10Z article; quote minute not specified, before event",
+        "freshness": "same_day_pre_event",
+        "direction": "UP"
+      },
+      "VIX": {
+        "value": 17.31,
+        "timestamp_utc": "2026-10-20T20:15:00Z",
+        "source": "Yahoo Finance ^VIX Oct 20 close",
+        "freshness": "previous_session_close",
+        "direction": "DOWN"
+      },
+      "WTI": {
+        "value": 99.18,
+        "timestamp_utc": "2026-10-21T03:50:00Z",
+        "source": "Reuters oil Oct 21, 03:50 GMT",
+        "freshness": "pre_event_39m",
+        "direction": "UP"
+      },
+      "BRENT": {
+        "value": 110.38,
+        "timestamp_utc": "2026-10-21T03:50:00Z",
+        "source": "Reuters oil Oct 21, 03:50 GMT",
+        "freshness": "pre_event_39m",
+        "direction": "UP"
+      }
+    },
+    "regimes": {
+      "usd": "STALE_DXY_NOT_SYNCHRONIZED",
+      "us_rates": "HIGH_STALE_2Y_10Y_ABOVE_5",
+      "volatility": "VIX_PREVIOUS_CLOSE_17_31",
+      "oil": "ELEVATED_RISING_BEFORE_EVENT",
+      "japan_cash": "OPEN",
+      "risk_sentiment": "JAPAN_EQUITIES_UP_BEFORE_EVENT"
+    }
+  },
+  "prediction_id": "ff-1432444-boj-himino-inflation-tightening-parliament-m1",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy-control-frozen",
+  "predictions": [
+    {
+      "instrument": "NI225",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen legacy mapping: hawkish BOJ comments and higher expected rates weigh on Japanese equities and exporters."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Higher rates and potential yen strength may weigh on exporters at the next cash session."
+      },
+      "mechanism": "BOJ hawkish guidance increases discount-rate and yen-appreciation headwinds for Japanese equities.",
+      "invalidation": "Yen stays weak and Nikkei rally on earnings/export strength dominates monetary-policy remarks."
+    }
+  ]
+}
