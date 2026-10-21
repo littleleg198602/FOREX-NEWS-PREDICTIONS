@@ -1,0 +1,196 @@
+{
+  "event_id": "ff-1432514-rba-nov-hike-odds-22-to-51",
+  "event_cluster_id": "australia-rba-nov-2026-rate-repricing-hauser",
+  "created_at_utc": "2026-10-21T08:43:22.050Z",
+  "event_time_utc": "2026-10-21T08:11:00Z",
+  "published_at_utc": "2026-10-21T05:06:00Z",
+  "source_time_text": "Forex Factory Oct 21 9:11am (BST page timezone; 10:11 CEST); Investing.com via Yahoo Oct 21 1:06am EDT (07:06 CEST), original syndicated story",
+  "observed_at_utc": "2026-10-21T08:43:22.050Z",
+  "time_source": "forex_factory_absolute_BST_and_original_yahoo_EDT",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 900,
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "eligibility_reason": "Original market repricing report already approximately 217 minutes old; FF repost is more recent. ASX200 cash closed before FF posting; no timestamp-verified post-event price bars or futures reaction. Exclude from hit rate.",
+  "categories": [
+    "central_bank",
+    "australia",
+    "rba",
+    "rates",
+    "market_pricing",
+    "inflation"
+  ],
+  "source_url": "https://www.forexfactory.com/news/1432514-rba-nov-rate-hike-bets-surge-to-over",
+  "original_source_url": "https://finance.yahoo.com/economy/policy/articles/rba-nov-rate-hike-bets-050600030.html",
+  "headline": "RBA Nov rate hike bets surge to over 50% after Hauser warning on inflation",
+  "source_verification_urls": [
+    "https://finance.yahoo.com/economy/policy/articles/rba-nov-rate-hike-bets-050600030.html",
+    "https://au.investing.com/news/economy-news/rba-nov-rate-hike-bets-surge-to-over-50-after-hauser-warning-on-inflation-4703116",
+    "https://www.reuters.com/world/asia-pacific/australia-central-banker-says-policy-working-inflation-outlook-worse-2026-10-20/",
+    "https://www.theguardian.com/australia-news/2026/oct/21/odds-of-fifth-interest-rate-hike-this-year-likely-to-shorten-as-rba-deputy-warns-inflation-outlook-worsening"
+  ],
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.71,
+        "timestamp_utc": null,
+        "source": "Oct 20 Reuters DXY proxy previously recorded in same repository; stale, not independently re-verified for this run",
+        "freshness": "previous_session_unsynchronized",
+        "direction": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.79,
+        "timestamp_utc": null,
+        "source": "US Treasury Oct 20 daily par yield, https://www.portfolio-terminal.com/markets/treasury-yields",
+        "freshness": "previous_session_daily",
+        "direction": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.12,
+        "timestamp_utc": null,
+        "source": "US Treasury Oct 20 daily par yield, https://www.portfolio-terminal.com/markets/treasury-yields",
+        "freshness": "previous_session_daily",
+        "direction": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 17.31,
+        "timestamp_utc": "2026-10-20T20:15:00Z",
+        "source": "CBOE Oct 20 close via Yahoo Finance ^VIX",
+        "freshness": "previous_session_close",
+        "direction": "DOWN"
+      },
+      "WTI": {
+        "value": 99.27,
+        "timestamp_utc": "2026-10-21T06:30:00Z",
+        "source": "Reuters Oct 21 oil article, 06:30 GMT quote",
+        "freshness": "same_day_pre_prediction",
+        "direction": "UP"
+      },
+      "BRENT": {
+        "value": 110.4,
+        "timestamp_utc": "2026-10-21T06:30:00Z",
+        "source": "Reuters Oct 21 oil article, 06:30 GMT quote",
+        "freshness": "same_day_pre_prediction",
+        "direction": "UP"
+      }
+    },
+    "regimes": {
+      "global_rates": "US_YIELDS_HIGH_PREVIOUS_CLOSE",
+      "usd": "DXY_STALE_NOT_SYNCHRONIZED",
+      "volatility": "VIX_PREVIOUS_CLOSE_17_31",
+      "energy": "BRENT_ABOVE_110_WTI_NEAR_99",
+      "australia_cash": "CLOSED_SINCE_05_00Z",
+      "rba": "NOVEMBER_HIKE_PROBABILITY_REPRICED_22_TO_51_PERCENT",
+      "cross_asset_synchronization": "UNAVAILABLE"
+    }
+  },
+  "prediction_id": "ff-1432514-rba-nov-hike-odds-22-to-51-m2",
+  "model_version": "2.0.0",
+  "prediction_model_version": "2.0.0",
+  "methodology_version": "3.0.0",
+  "evidence": {
+    "article_role": "INCREMENTAL_UPDATE",
+    "source_quality": "SECONDARY",
+    "source_verified": true,
+    "news_age_minutes": 217,
+    "novelty": "MEDIUM",
+    "attention": "MEDIUM",
+    "dominant_driver": "Australian OIS-implied probability of a November 25bp RBA hike repriced to approximately 51% from 22% on Tuesday after Hauser's hawkish inflation warning; Goldman Sachs changed its November call from hold to hike. This market repricing is incremental information beyond the already-covered speech.",
+    "market_expectations": {
+      "source": "Investing.com syndicated on Yahoo Oct 21 and Guardian independent contemporaneous account",
+      "expected_value": "25bp hike to 4.85% on Nov 3",
+      "implied_probability": 0.51,
+      "distribution_notes": "RateProbability OIS estimate ~51% vs 22% prior day; Guardian cited ~45% vs 30% at another snapshot. Probabilities are dynamic and are not synchronized across sources."
+    },
+    "surprise": {
+      "actual": "RBA Nov hike implied probability ~51%",
+      "consensus": "~22% Tuesday pricing",
+      "previous": "~22%",
+      "revised_previous": null,
+      "surprise_direction": "HAWKISH_REPRICING",
+      "components": {
+        "probability_change_percentage_points": 29,
+        "Goldman_Sachs": "hold_to_25bp_hike",
+        "RBA_rate_now_pct": 4.6,
+        "RBA_rate_if_hike_pct": 4.85
+      }
+    },
+    "absorption": {
+      "state": "PARTIALLY_PRICED",
+      "reason": "Original Investing.com story was published approximately 217 minutes before decision, and Hauser's remarks occurred on prior day. FF repost at 08:11Z is not the first dissemination. ASX cash market closed at 05:00Z; post-FF cash reaction impossible; no verified futures candles.",
+      "observed_reaction": {}
+    },
+    "cross_asset_confirmation": {
+      "verdict": "UNKNOWN",
+      "observations": {
+        "AUS200": "Cash market had already closed before FF posting; report of 8,831.30 (+0.16%) close is not an isolated reaction to the FF article. Futures response unavailable.",
+        "AUDUSD": "Some contemporary coverage notes AUD above USD 0.70, but no timestamp-synchronized quote after FF publication was verified.",
+        "AU_RATES": "OIS-implied probability ~51% (22% Tuesday) is direct rate-path repricing, not independent equity confirmation.",
+        "DXY": "101.71 from prior-day stored context, stale, not confirmation.",
+        "US2Y": "4.79% Oct 20 US Treasury close, stale.",
+        "US10Y": "5.12% Oct 20 US Treasury close, stale.",
+        "VIX": "17.31 Oct 20 close, stale.",
+        "WTI": "99.27 USD Reuters 06:30Z, before FF post; oil-inflation headwind.",
+        "BRENT": "110.40 USD Reuters 06:30Z, before FF post; oil-inflation headwind."
+      }
+    },
+    "local_confirmation": {
+      "RBA": "Hauser inflation comments independently reported by Reuters Oct 20; no actual new RBA decision.",
+      "market_pricing": "Investing.com/RateProbability ~51% vs 22%; Guardian independently reports ~45% vs 30% at a different snapshot; Goldman Sachs hold-to-hike revision in Investing.com.",
+      "AUS200": "Australian cash session closed at 05:00Z; +0.16% close at 8,831.30 from local news, not event-specific confirmation."
+    },
+    "decision_notes": "Residual forecasts start at created_at_utc, not the original 05:06Z report nor 08:11Z FF repost. Fixed 15m/1h/4h horizons stay fixed and fall outside cash session. No ACTIONABLE learning: learning_profile.json is an empty file. Cross-asset data is asynchronous; neutral forecasts are deliberately low confidence. No hindsight updates."
+  },
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "relevance": "DIRECT",
+      "immediate": {
+        "direction": "MIXED",
+        "confidence": 1,
+        "rationale": "Australian cash market closed, report syndicated hours after first publication, no verified futures response."
+      },
+      "next_session": {
+        "direction": "MIXED",
+        "confidence": 4,
+        "rationale": "Hawkish OIS repricing pressures rate-sensitive stocks, but banks/earnings and already-absorbed information can offset; next cash open awaits confirmation."
+      },
+      "horizons": {
+        "15m": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Cash closed; 15m fixed horizon is not a tradable cash signal and futures reaction unavailable."
+        },
+        "1h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Cash closed; already-distributed information, no synchronized futures trend."
+        },
+        "4h": {
+          "direction": "MIXED",
+          "confidence": 1,
+          "rationale": "Cash remains closed; cannot substitute next market open for fixed 4h horizon."
+        },
+        "next_session": {
+          "direction": "MIXED",
+          "confidence": 4,
+          "rationale": "Higher rate probability can weigh on equities but banks and corporate earnings may offset; wait for next-session cash and AUD confirmation."
+        }
+      },
+      "mechanism": "More likely November 25bp RBA hike raises discount rates and financing costs for property/consumption, while banks may benefit from margins and sector rotation.",
+      "invalidation": "Fresh RBA reversal or CPI surprise changes rate pricing materially, or next-session AUS200 and AUD/rate futures show synchronized directional breakout.",
+      "counter_case": "Australian banks and other sectors can rise despite tighter policy expectations; alternatively stronger AUD and higher domestic yields can deepen index losses.",
+      "technical_state": {
+        "reaction_since_event_pct": null,
+        "trend_5_15m": "UNKNOWN",
+        "trend_1h": "UNKNOWN",
+        "session_location": "ASX200_CASH_CLOSED_AT_DECISION",
+        "extension_state": "UNKNOWN",
+        "market_open": false,
+        "source": "ASX cash close 8831.30 +0.16% at approximately 05:00Z before FF repost; no verified post-FF futures bars.",
+        "observed_at_utc": "2026-10-21T08:43:22.050Z"
+      }
+    }
+  ]
+}

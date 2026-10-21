@@ -1,0 +1,109 @@
+{
+  "event_id": "ff-1432514-rba-nov-hike-odds-22-to-51",
+  "event_cluster_id": "australia-rba-nov-2026-rate-repricing-hauser",
+  "created_at_utc": "2026-10-21T08:43:22.050Z",
+  "event_time_utc": "2026-10-21T08:11:00Z",
+  "published_at_utc": "2026-10-21T05:06:00Z",
+  "source_time_text": "Forex Factory Oct 21 9:11am (BST page timezone; 10:11 CEST); Investing.com via Yahoo Oct 21 1:06am EDT (07:06 CEST), original syndicated story",
+  "observed_at_utc": "2026-10-21T08:43:22.050Z",
+  "time_source": "forex_factory_absolute_BST_and_original_yahoo_EDT",
+  "time_is_derived": true,
+  "time_precision_seconds": 60,
+  "time_uncertainty_seconds": 900,
+  "eligible_for_hit_rate": false,
+  "backfilled": false,
+  "eligibility_reason": "Original market repricing report already approximately 217 minutes old; FF repost is more recent. ASX200 cash closed before FF posting; no timestamp-verified post-event price bars or futures reaction. Exclude from hit rate.",
+  "categories": [
+    "central_bank",
+    "australia",
+    "rba",
+    "rates",
+    "market_pricing",
+    "inflation"
+  ],
+  "source_url": "https://www.forexfactory.com/news/1432514-rba-nov-rate-hike-bets-surge-to-over",
+  "original_source_url": "https://finance.yahoo.com/economy/policy/articles/rba-nov-rate-hike-bets-050600030.html",
+  "headline": "RBA Nov rate hike bets surge to over 50% after Hauser warning on inflation",
+  "source_verification_urls": [
+    "https://finance.yahoo.com/economy/policy/articles/rba-nov-rate-hike-bets-050600030.html",
+    "https://au.investing.com/news/economy-news/rba-nov-rate-hike-bets-surge-to-over-50-after-hauser-warning-on-inflation-4703116",
+    "https://www.reuters.com/world/asia-pacific/australia-central-banker-says-policy-working-inflation-outlook-worse-2026-10-20/",
+    "https://www.theguardian.com/australia-news/2026/oct/21/odds-of-fifth-interest-rate-hike-this-year-likely-to-shorten-as-rba-deputy-warns-inflation-outlook-worsening"
+  ],
+  "market_context_at_prediction": {
+    "series": {
+      "DXY": {
+        "value": 101.71,
+        "timestamp_utc": null,
+        "source": "Oct 20 Reuters DXY proxy previously recorded in same repository; stale, not independently re-verified for this run",
+        "freshness": "previous_session_unsynchronized",
+        "direction": "UNKNOWN"
+      },
+      "US2Y": {
+        "value": 4.79,
+        "timestamp_utc": null,
+        "source": "US Treasury Oct 20 daily par yield, https://www.portfolio-terminal.com/markets/treasury-yields",
+        "freshness": "previous_session_daily",
+        "direction": "UNKNOWN"
+      },
+      "US10Y": {
+        "value": 5.12,
+        "timestamp_utc": null,
+        "source": "US Treasury Oct 20 daily par yield, https://www.portfolio-terminal.com/markets/treasury-yields",
+        "freshness": "previous_session_daily",
+        "direction": "UNKNOWN"
+      },
+      "VIX": {
+        "value": 17.31,
+        "timestamp_utc": "2026-10-20T20:15:00Z",
+        "source": "CBOE Oct 20 close via Yahoo Finance ^VIX",
+        "freshness": "previous_session_close",
+        "direction": "DOWN"
+      },
+      "WTI": {
+        "value": 99.27,
+        "timestamp_utc": "2026-10-21T06:30:00Z",
+        "source": "Reuters Oct 21 oil article, 06:30 GMT quote",
+        "freshness": "same_day_pre_prediction",
+        "direction": "UP"
+      },
+      "BRENT": {
+        "value": 110.4,
+        "timestamp_utc": "2026-10-21T06:30:00Z",
+        "source": "Reuters Oct 21 oil article, 06:30 GMT quote",
+        "freshness": "same_day_pre_prediction",
+        "direction": "UP"
+      }
+    },
+    "regimes": {
+      "global_rates": "US_YIELDS_HIGH_PREVIOUS_CLOSE",
+      "usd": "DXY_STALE_NOT_SYNCHRONIZED",
+      "volatility": "VIX_PREVIOUS_CLOSE_17_31",
+      "energy": "BRENT_ABOVE_110_WTI_NEAR_99",
+      "australia_cash": "CLOSED_SINCE_05_00Z",
+      "rba": "NOVEMBER_HIKE_PROBABILITY_REPRICED_22_TO_51_PERCENT",
+      "cross_asset_synchronization": "UNAVAILABLE"
+    }
+  },
+  "prediction_id": "ff-1432514-rba-nov-hike-odds-22-to-51-m1",
+  "model_version": "1.1.1",
+  "prediction_model_version": "1.1.1",
+  "methodology_version": "legacy-control-frozen",
+  "predictions": [
+    {
+      "instrument": "AUS200",
+      "immediate": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "Frozen legacy hawkish-RBA mapping: higher anticipated policy rate raises discount rate and tightens domestic financial conditions, weighing on equities."
+      },
+      "next_session": {
+        "direction": "DOWN",
+        "confidence": 4,
+        "rationale": "More likely November RBA tightening raises funding costs and may weigh on rate-sensitive equities."
+      },
+      "mechanism": "Hawkish RBA rate repricing increases discount-rate and domestic demand headwinds for Australian equities.",
+      "invalidation": "Rate repricing fully absorbed, banks support the index, and next session rallies despite hawkish guidance."
+    }
+  ]
+}
