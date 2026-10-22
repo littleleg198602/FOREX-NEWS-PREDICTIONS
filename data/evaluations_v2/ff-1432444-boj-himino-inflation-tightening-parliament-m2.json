@@ -7,7 +7,7 @@
   "prediction_time_utc": "2026-10-21T05:42:11.665000+00:00",
   "evaluation_anchor_time_utc": "2026-10-21T05:42:11.665000+00:00",
   "prediction_latency_seconds": 4391.665,
-  "evaluated_at_utc": "2026-10-21T10:13:36.029813+00:00",
+  "evaluated_at_utc": "2026-10-22T04:50:25.248999+00:00",
   "model_version": "2.0.0",
   "prediction_model_version": "2.0.0",
   "methodology_version": "3.0.0",
@@ -176,18 +176,22 @@
           "target_time_utc": "2026-10-21T06:42:11.665000+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 3,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-10-22T00:01:00+00:00",
+          "market_delay_minutes": 1038.81,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "4h": {
           "status": "DATA_GAP",
           "target_time_utc": "2026-10-21T09:42:11.665000+00:00",
           "predicted_direction": "MIXED",
           "predicted_confidence": 3,
-          "reason": "no complete traded bar available at/after target"
+          "first_available_price_time_utc": "2026-10-22T00:01:00+00:00",
+          "market_delay_minutes": 858.81,
+          "reason": "first complete traded price is too delayed; next open is never substituted for a fixed horizon"
         },
         "next_session": {
           "status": "PENDING",
-          "session_local_date": null,
+          "session_local_date": "2026-10-22",
           "predicted_direction": "MIXED",
           "forecast_source": "horizons"
         }
